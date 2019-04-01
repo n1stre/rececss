@@ -1,10 +1,15 @@
-@mixin font-face($name, $file) {
-   @font-face {
-   font-family: "#{$name}";
-   src: url("../fonts/#{$file}.eot");
-   src: url("../fonts/#{$file}.eot?#iefix") format("embedded-opentype"),
-   url("../fonts/#{$file}.woff") format("woff"),
-   url("../fonts/#{$file}.ttf") format("truetype"),
-   url("../fonts/#{$file}.svg?#webfont") format("svg");
+@mixin font-face($font-name, $file-name, $weight: normal, $style: normal) { 
+  @font-face {
+    font-family: quote($font-name);
+    src: url($file-name + '.eot');
+    src: url($file-name + '.eot?#iefix')  format('embedded-opentype'),
+         url($file-name + '.woff') format('woff'),
+         url($file-name + '.ttf')  format('truetype'),
+         url($file-name + '.svg##{$font-name}')  format('svg');
+    font-weight: $weight;
+    font-style: $style;
+  }
  }
-}
+
+
+// @include font-face('gotham', '/fonts/gotham');

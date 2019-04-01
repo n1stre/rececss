@@ -1,0 +1,18 @@
+$SPACING_STEP: 5;
+$SPACING_MAX_VALUE: 50;
+
+@for $i from 1 through ($SPACING_MAX_VALUE / $SPACING_STEP) {
+  $val: $i * $SPACING_STEP;
+
+  // offsets
+  .u-t#{$val} { top: $val + px !important; }
+  .u-b#{$val} { bottom: $val + px !important; }
+  .u-r#{$val} { right: $val + px !important; }
+  .u-l#{$val} { left: $val + px !important; }
+
+  // negative offsets
+  .u-t-#{$val} { top: -$val + px !important; }
+  .u-b-#{$val} { bottom: -$val + px !important; }
+  .u-r-#{$val} { right: -$val + px !important; }
+  .u-l-#{$val} { left: -$val + px !important; }
+}

@@ -5,14 +5,14 @@ $SPACING_MAX_VALUE: 50;
   $val: $i * $SPACING_STEP;
 
   // offsets
-  .u-t#{$val} { top: $val + px !important; }
-  .u-b#{$val} { bottom: $val + px !important; }
-  .u-r#{$val} { right: $val + px !important; }
-  .u-l#{$val} { left: $val + px !important; }
+  .u-t_#{$val} { top: $val + px !important; }
+  .u-b_#{$val} { bottom: $val + px !important; }
+  .u-r_#{$val} { right: $val + px !important; }
+  .u-l_#{$val} { left: $val + px !important; }
 
   // negative offsets
-  .u-t-#{$val} { top: -$val + px !important; }
-  .u-b-#{$val} { bottom: -$val + px !important; }
-  .u-r-#{$val} { right: -$val + px !important; }
-  .u-l-#{$val} { left: -$val + px !important; }
+  .u-tn_#{$val} { top: -$val + px !important; }
+  .u-bn_#{$val} { bottom: -$val + px !important; }
+  .u-rn_#{$val} { right: -$val + px !important; }
+  .u-ln_#{$val} { left: -$val + px !important; }  
 }

@@ -1,0 +1,24 @@
+$SPACING_STEP: 5;
+$SPACING_MAX_VALUE: 50;
+
+@for $i from 1 through ($SPACING_MAX_VALUE / $SPACING_STEP) {
+  $val: $i * $SPACING_STEP;
+
+  // margins
+  .u-mt#{$val} { margin-top: $val + px !important; }
+  .u-mb#{$val} { margin-bottom: $val + px !important; }
+  .u-mr#{$val} { margin-right: $val + px !important; }
+  .u-ml#{$val} { margin-left: $val + px !important; }
+
+  // negative margins
+  .u-mt-#{$val} { margin-top: -$val + px !important; }
+  .u-mb-#{$val} { margin-bottom: -$val + px !important; }
+  .u-mr-#{$val} { margin-right: -$val + px !important; }
+  .u-ml-#{$val} { margin-left: -$val + px !important; }
+
+  // paddings
+  .u-pt#{$val} { padding-top: $val + px !important; }
+  .u-pb#{$val} { padding-bottom: $val + px !important; }
+  .u-pr#{$val} { padding-right: $val + px !important; }
+  .u-pl#{$val} { padding-left: $val + px !important; }
+}

@@ -5,20 +5,20 @@ $SPACING_MAX_VALUE: 50;
   $val: $i * $SPACING_STEP;
 
   // margins
-  .u-mt#{$val} { margin-top: $val + px !important; }
-  .u-mb#{$val} { margin-bottom: $val + px !important; }
-  .u-mr#{$val} { margin-right: $val + px !important; }
-  .u-ml#{$val} { margin-left: $val + px !important; }
+  .u-mt_#{$val} { margin-top: $val + px !important; }
+  .u-mb_#{$val} { margin-bottom: $val + px !important; }
+  .u-mr_#{$val} { margin-right: $val + px !important; }
+  .u-ml_#{$val} { margin-left: $val + px !important; }
 
   // negative margins
-  .u-mt-#{$val} { margin-top: -$val + px !important; }
-  .u-mb-#{$val} { margin-bottom: -$val + px !important; }
-  .u-mr-#{$val} { margin-right: -$val + px !important; }
-  .u-ml-#{$val} { margin-left: -$val + px !important; }
+  .u-mtn_#{$val} { margin-top: -$val + px !important; }
+  .u-mbn_#{$val} { margin-bottom: -$val + px !important; }
+  .u-mrn_#{$val} { margin-right: -$val + px !important; }
+  .u-mln_#{$val} { margin-left: -$val + px !important; }
 
   // paddings
-  .u-pt#{$val} { padding-top: $val + px !important; }
-  .u-pb#{$val} { padding-bottom: $val + px !important; }
-  .u-pr#{$val} { padding-right: $val + px !important; }
-  .u-pl#{$val} { padding-left: $val + px !important; }
+  .u-pt_#{$val} { padding-top: $val + px !important; }
+  .u-pb_#{$val} { padding-bottom: $val + px !important; }
+  .u-pr_#{$val} { padding-right: $val + px !important; }
+  .u-pl_#{$val} { padding-left: $val + px !important; }
 }

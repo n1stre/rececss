@@ -1,0 +1,27 @@
+
+.u-bxz { box-sizing:border-box; }
+.u-bxz_cb { box-sizing:content-box; }
+.u-bxz_bb { box-sizing:border-box; }
+.u-bxsh_n { box-shadow:none; }
+.u-w_a { width:auto; }
+.u-h_a { height:auto; }
+.u-maw_n { max-width:none; }
+.u-mah_n { max-height:none; }
+.u-miw_0 { min-width: 0; }
+.u-mih_0 { min-height: 0; }
+.u-miw_u { min-width: unset; }
+.u-mih_u { min-height: unset; }
+
+
+$SPACING_STEP: 5;
+$SPACING_MAX_VALUE: 50;
+@for $i from 1 through ($SPACING_MAX_VALUE / $SPACING_STEP) {
+  $val: $i * $SPACING_STEP;
+
+  .u-w_#{$val} { width: $val + px; }
+  .u-h_#{$val} { height: $val + px; }
+  .u-maw_#{$val} { max-width: $val + px; }
+  .u-mah_#{$val} { max-height: $val + px; }
+  .u-miw_#{$val} { min-width: $val + px; }
+  .u-mih_#{$val} { min-height: $val + px; }
+}

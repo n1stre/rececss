@@ -1,0 +1,6 @@
+@function darkest( $color ) 	{ @return darken($color,20%); }
+@function darker( $color ) 		{ @return darken($color,13.333%); }
+@function dark( $color ) 		  { @return darken($color,6.667%); }
+@function light( $color ) 		{ @return lighten($color,16.667%); }
+@function lighter( $color ) 	{ @return lighten($color,33.333%); }
+@function lightest( $color ) 	{ @return lighten($color,50%); }

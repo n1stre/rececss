@@ -1,0 +1,7 @@
+@mixin user-select-none {
+  user-select: none;
+  -webkit-user-select: none; /* Safari */
+  -webkit-touch-callout: none; /* Safari IOS */
+  -moz-user-select: none; /* Old firefox */
+  -ms-user-select: none; /* IE, Edge */
+}

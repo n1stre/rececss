@@ -1,19 +1,19 @@
-.d_n { display: none;}
-.d_b { display: block; }
-.d_f { display: flex; }
-.d_if { display: inline-flex;}
-.d_i { display: inline; }
-.d_ib { display: inline-block; }
-.d_li { display: list-item; }
-.d_ri { display: run-in; }
-.d_cp { display: compact; }
-.d_tb { display: table; }
-.d_itb { display: inline-table; }
-.d_tbcp { display: table-caption; }
-.d_tbcl { display: table-column; }
-.d_tbclg { display: table-column-group; }
-.d_tbhg { display: table-header-group; }
-.d_tbfg { display: table-footer-group; }
-.d_tbr { display: table-row; }
-.d_tbrg { display: table-row-group; }
-.d_tbc { display: table-cell; }
+@include each_breakpoint("d_n") { display: none;}
+@include each_breakpoint("d_b") { display: block; }
+@include each_breakpoint("d_f") { display: flex; }
+@include each_breakpoint("d_if") { display: inline-flex;}
+@include each_breakpoint("d_i") { display: inline; }
+@include each_breakpoint("d_ib") { display: inline-block; }
+@include each_breakpoint("d_li") { display: list-item; }
+@include each_breakpoint("d_ri") { display: run-in; }
+@include each_breakpoint("d_cp") { display: compact; }
+@include each_breakpoint("d_tb") { display: table; }
+@include each_breakpoint("d_itb") { display: inline-table; }
+@include each_breakpoint("d_tbcp") { display: table-caption; }
+@include each_breakpoint("d_tbcl") { display: table-column; }
+@include each_breakpoint("d_tbclg") { display: table-column-group; }
+@include each_breakpoint("d_tbhg") { display: table-header-group; }
+@include each_breakpoint("d_tbfg") { display: table-footer-group; }
+@include each_breakpoint("d_tbr") { display: table-row; }
+@include each_breakpoint("d_tbrg") { display: table-row-group; }
+@include each_breakpoint("d_tbc") { display: table-cell; }

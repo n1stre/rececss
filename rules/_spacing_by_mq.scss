@@ -9,8 +9,6 @@
   @include each_breakpoint("ml_#{$val}") { margin-left: $val + px; }
   @include each_breakpoint("mr_#{$val}") { margin-right: $val + px; }
   @include each_breakpoint("mlr_#{$val}") { margin-left: $val + px; margin-right: $val + px; }
-
-  // negative margins
   @include each_breakpoint("mt_-#{$val}") { margin-top: -$val + px; }
   @include each_breakpoint("mb_-#{$val}") { margin-bottom: -$val + px; }
   @include each_breakpoint("mr_-#{$val}") { margin-right: -$val + px; }

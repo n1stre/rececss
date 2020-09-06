@@ -14,42 +14,42 @@
 //   }
 // }
 
-@mixin each_breakpoint($selector) {
-  @media only screen and (min-width: $BREAKPOINT_XS) {
-    .mq-xs\:#{$selector} {
-      @content;
-    }
-  }
-  @media only screen and (min-width: $BREAKPOINT_SM) {
-    .mq-sm\:#{$selector} {
-      @content;
-    }
-  }
-  @media only screen and (min-width: $BREAKPOINT_MD) {
-    .mq-md\:#{$selector} {
-      @content;
-    }
-  }
-  @media only screen and (min-width: $BREAKPOINT_LG) {
-    .mq-lg\:#{$selector} {
-      @content;
-    }
-  }
-  @media only screen and (min-width: $BREAKPOINT_XL) {
-    .mq-xl\:#{$selector} {
-      @content;
-    }
-  }
-  @media only screen and (min-width: $BREAKPOINT_XXL) {
-    .mq-xxl\:#{$selector} {
-      @content;
-    }
-  }
-}
-
 // @include breakpoint(large) {
 //   div {
 //      font-size: 2rem;
 //      line-height: 1.4;
 //   }
 // }
+
+@mixin each_breakpoint($selector) {
+  @media only screen and (min-width: $BREAKPOINT_XS) {
+    .xs\:#{$selector} {
+      @content;
+    }
+  }
+  @media only screen and (min-width: $BREAKPOINT_SM) {
+    .sm\:#{$selector} {
+      @content;
+    }
+  }
+  @media only screen and (min-width: $BREAKPOINT_MD) {
+    .md\:#{$selector} {
+      @content;
+    }
+  }
+  @media only screen and (min-width: $BREAKPOINT_LG) {
+    .lg\:#{$selector} {
+      @content;
+    }
+  }
+  @media only screen and (min-width: $BREAKPOINT_XL) {
+    .xl\:#{$selector} {
+      @content;
+    }
+  }
+  @media only screen and (min-width: $BREAKPOINT_XXL) {
+    .xxl\:#{$selector} {
+      @content;
+    }
+  }
+}

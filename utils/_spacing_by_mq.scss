@@ -1,0 +1,27 @@
+@for $i from 1 through ($SPACING_MAX / $SPACING_STEP) {
+  $val: $i * $SPACING_STEP;
+
+  // margins
+  @include each_breakpoint("m_#{$val}") { margin: $val + px; }
+  @include each_breakpoint("mt_#{$val}") { margin-top: $val + px; }
+  @include each_breakpoint("mb_#{$val}") { margin-bottom: $val + px; }
+  @include each_breakpoint("mtb_#{$val}") { margin-top: $val + px; margin-bottom: $val + px; }
+  @include each_breakpoint("ml_#{$val}") { margin-left: $val + px; }
+  @include each_breakpoint("mr_#{$val}") { margin-right: $val + px; }
+  @include each_breakpoint("mlr_#{$val}") { margin-left: $val + px; margin-right: $val + px; }
+
+  // negative margins
+  @include each_breakpoint("mt_-#{$val}") { margin-top: -$val + px; }
+  @include each_breakpoint("mb_-#{$val}") { margin-bottom: -$val + px; }
+  @include each_breakpoint("mr_-#{$val}") { margin-right: -$val + px; }
+  @include each_breakpoint("ml_-#{$val}") { margin-left: -$val + px; }
+
+  // paddings
+  @include each_breakpoint("p_#{$val}") { padding: $val + px; }
+  @include each_breakpoint("pt_#{$val}") { padding-top: $val + px; }
+  @include each_breakpoint("pb_#{$val}") { padding-bottom: $val + px; }
+  @include each_breakpoint("ptb_#{$val}") { padding-top: $val + px; padding-bottom: $val + px; }
+  @include each_breakpoint("pl_#{$val}") { padding-left: $val + px; }
+  @include each_breakpoint("pr_#{$val}") { padding-right: $val + px; }
+  @include each_breakpoint("plr_#{$val}") { padding-left: $val + px; padding-right: $val + px; }
+}

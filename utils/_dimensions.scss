@@ -1,0 +1,22 @@
+.w_a { width: auto; }
+.w_100vw { width: 100vw; }
+.h_a { height: auto; }
+.h_100vh { height: 100vh; }
+
+.maw_n { max-width: none; }
+.mah_n { max-height: none; }
+.miw_0 { min-width: 0; }
+.mih_0 { min-height: 0; }
+.miw_u { min-width: unset; }
+.mih_u { min-height: unset; }
+
+@for $i from 1 through ($DIMENSIONS_MAX / $DIMENSIONS_STEP) {
+  $val: $i * $DIMENSIONS_STEP;
+
+  .w_#{$val} { width: $val + px; }
+  .h_#{$val} { height: $val + px; }
+  .maw_#{$val} { max-width: $val + px; }
+  .mah_#{$val} { max-height: $val + px; }
+  .miw_#{$val} { min-width: $val + px; }
+  .mih_#{$val} { min-height: $val + px; }
+}

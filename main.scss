@@ -5,6 +5,13 @@ $SPACING_STEP: 5;
 $OFFSET_MAX: 50;
 $OFFSET_STEP: 5;
 
+$BREAKPOINT_XS: 400px;
+$BREAKPOINT_SM: 560px;
+$BREAKPOINT_MD: 768px;
+$BREAKPOINT_LG: 1024px;
+$BREAKPOINT_XL: 1248px;
+$BREAKPOINT_XXL: 1440px;
+
 @import "./functions/color";
 @import "./functions/path";
 

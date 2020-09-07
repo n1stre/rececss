@@ -1,19 +1,19 @@
 // todo
 // .fx flex:;
 // .fxb flex-basis:;
-// .fxd flex-direction:;
 // .fxf flex-flow:;
 // .fxg flex-grow:;
 // .fxsh flex-shrink:;
-// .fxw flex-wrap: ;
 
 .fxd_c { flex-direction: column; }
 .fxd_cr { flex-direction: column-reverse; }
 .fxd_r { flex-direction: row; }
 .fxd_rr { flex-direction: row-reverse; }
+
 .fxw_n { flex-wrap: nowrap; }
 .fxw_w { flex-wrap: wrap; }
 .fxw_wr { flex-wrap: wrap-reverse; }
+
 .jc_c { justify-content: center; }
 .jc_fe { justify-content: flex-end; }
 .jc_fs { justify-content: flex-start; }

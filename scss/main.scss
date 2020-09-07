@@ -1,15 +1,15 @@
-$DIMENSIONS_MAX: 1000;
-$DIMENSIONS_STEP: 20;
-$SPACING_MAX: 100;
-$SPACING_STEP: 5;
-$OFFSET_MAX: 50;
-$OFFSET_STEP: 5;
-$BREAKPOINT_XS: 400px;
-$BREAKPOINT_SM: 560px;
-$BREAKPOINT_MD: 768px;
-$BREAKPOINT_LG: 1024px;
-$BREAKPOINT_XL: 1248px;
-$BREAKPOINT_XXL: 1440px;
+$DIMENSIONS_MAX: 1000 !default;
+$DIMENSIONS_STEP: 20 !default;
+$SPACING_MAX: 100 !default;
+$SPACING_STEP: 5 !default;
+$OFFSET_MAX: 50 !default;
+$OFFSET_STEP: 5 !default;
+$BREAKPOINT_XS: 400px !default;
+$BREAKPOINT_SM: 560px !default;
+$BREAKPOINT_MD: 768px !default;
+$BREAKPOINT_LG: 1024px !default;
+$BREAKPOINT_XL: 1248px !default;
+$BREAKPOINT_XXL: 1440px !default;
 
 @import "./functions/color";
 @import "./functions/path";

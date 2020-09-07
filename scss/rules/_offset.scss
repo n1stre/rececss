@@ -1,13 +1,11 @@
 @for $i from 1 through ($OFFSET_MAX / $OFFSET_STEP) {
   $val: $i * $OFFSET_STEP;
 
-  // offsets
   .t_#{$val} { top: $val + px; }
   .b_#{$val} { bottom: $val + px; }
   .r_#{$val} { right: $val + px; }
   .l_#{$val} { left: $val + px; }
 
-  // negative offsets
   .t_-#{$val} { top: -$val + px; }
   .b_-#{$val} { bottom: -$val + px; }
   .r_-#{$val} { right: -$val + px; }

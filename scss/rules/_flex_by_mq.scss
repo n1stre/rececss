@@ -1,0 +1,21 @@
+// todo
+// .fx flex:;
+// .fxb flex-basis:;
+// .fxf flex-flow:;
+// .fxg flex-grow:;
+// .fxsh flex-shrink:;
+
+@include each_breakpoint("fxd_c") { flex-direction: column; }
+@include each_breakpoint("fxd_cr") { flex-direction: column-reverse; }
+@include each_breakpoint("fxd_r") { flex-direction: row; }
+@include each_breakpoint("fxd_rr") { flex-direction: row-reverse; }
+
+@include each_breakpoint("fxw_n") { flex-wrap: nowrap; }
+@include each_breakpoint("fxw_w") { flex-wrap: wrap; }
+@include each_breakpoint("fxw_wr") { flex-wrap: wrap-reverse; }
+
+@include each_breakpoint("jc_c") { justify-content: center; }
+@include each_breakpoint("jc_fe") { justify-content: flex-end; }
+@include each_breakpoint("jc_fs") { justify-content: flex-start; }
+@include each_breakpoint("jc_sa") { justify-content: space-around; }
+@include each_breakpoint("jc_sb") { justify-content: space-between; }

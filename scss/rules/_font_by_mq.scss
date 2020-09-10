@@ -1,0 +1,22 @@
+@include each_breakpoint("fw_n") { font-weight: normal; }
+@include each_breakpoint("fw_b") { font-weight: bold; }
+@include each_breakpoint("fw_br") { font-weight: bolder; }
+@include each_breakpoint("fw_lr") { font-weight: lighter; }
+@include each_breakpoint("fw_100") { font-weight: 100; }
+@include each_breakpoint("fw_200") { font-weight: 200; }
+@include each_breakpoint("fw_300") { font-weight: 300; }
+@include each_breakpoint("fw_400") { font-weight: 400; }
+@include each_breakpoint("fw_500") { font-weight: 500; }
+@include each_breakpoint("fw_600") { font-weight: 600; }
+@include each_breakpoint("fw_700") { font-weight: 700; }
+@include each_breakpoint("fw_800") { font-weight: 800; }
+@include each_breakpoint("fw_900") { font-weight: 900; }
+
+@include each_breakpoint("fs_n") { font-style: normal; }
+@include each_breakpoint("fs_i") { font-style: italic; }
+@include each_breakpoint("fs_o") { font-style: oblique; }
+
+@each $val in $FONT_SIZES_IN_PX {
+  @include each_breakpoint("fz_#{$val}") { font-size: $val + px; }
+  @include each_breakpoint("fz_#{$val}--i") { font-size: $val + px !important; }
+}

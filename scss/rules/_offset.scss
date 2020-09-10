@@ -1,4 +1,9 @@
-@for $i from 1 through ($OFFSET_MAX / $OFFSET_STEP) {
+.t_u { top: unset; }
+.b_u { bottom: unset; }
+.r_u { right: unset; }
+.l_u { left: unset;  }
+
+@for $i from 0 through ($OFFSET_MAX / $OFFSET_STEP) {
   $val: $i * $OFFSET_STEP;
 
   .t_#{$val} { top: $val + px; }

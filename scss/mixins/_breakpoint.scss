@@ -23,7 +23,7 @@
 
 @mixin each_breakpoint($selector) {
   @media only screen and (min-width: $BREAKPOINT_XS) {
-    .xs\:#{$selector} {
+    .xs\:#{quote($selector)} {
       @content;
     }
   }

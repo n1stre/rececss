@@ -5,6 +5,8 @@
 // .fxg flex-grow:;
 // .fxsh flex-shrink:;
 
+@include each_breakpoint("fx_1") { flex: 1; }
+
 @include each_breakpoint("fxd_c") { flex-direction: column; }
 @include each_breakpoint("fxd_cr") { flex-direction: column-reverse; }
 @include each_breakpoint("fxd_r") { flex-direction: row; }
@@ -19,3 +21,16 @@
 @include each_breakpoint("jc_fs") { justify-content: flex-start; }
 @include each_breakpoint("jc_sa") { justify-content: space-around; }
 @include each_breakpoint("jc_sb") { justify-content: space-between; }
+
+@include each_breakpoint("ac_c") { align-content: center; }
+@include each_breakpoint("ac_fe") { align-content: flex-end; }
+@include each_breakpoint("ac_fs") { align-content: flex-start; }
+@include each_breakpoint("ac_s") { align-content: stretch; }
+@include each_breakpoint("ac_sa") { align-content: space-around; }
+@include each_breakpoint("ac_sb") { align-content: space-between; }
+
+@include each_breakpoint("ai_b") { align-items: baseline; }
+@include each_breakpoint("ai_c") { align-items: center; }
+@include each_breakpoint("ai_fe") { align-items: flex-end; }
+@include each_breakpoint("ai_fs") { align-items: flex-start; }
+@include each_breakpoint("ai_s") { align-items: stretch; }

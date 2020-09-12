@@ -1,10 +1,13 @@
 $DIMENSIONS_MAX: 1000 !default;
-$DIMENSIONS_STEP: 20 !default;
-$SPACING_MAX: 100 !default;
+$DIMENSIONS_STEP: 5 !default;
+$SPACING_MAX: 200 !default;
 $SPACING_STEP: 5 !default;
-$OFFSET_MAX: 100 !default;
+$OFFSET_MAX: 200 !default;
 $OFFSET_STEP: 5 !default;
 $FONT_SIZES_IN_PX: 10, 12, 14, 16, 18, 20, 48, 54 !default;
+
+$FLEX_GRID_SIZES: 1, 2, 4 !default;
+$FLEX_GRID_GUTTERS_IN_PX: 20, 40 !default;
 
 $BREAKPOINT_XS: 400px !default;
 $BREAKPOINT_SM: 560px !default;
@@ -13,23 +16,25 @@ $BREAKPOINT_LG: 1024px !default;
 $BREAKPOINT_XL: 1248px !default;
 $BREAKPOINT_XXL: 1440px !default;
 
-@import "./functions/color";
-@import "./functions/path";
+@import "./abstracts/functions/color";
+@import "./abstracts/functions/path";
+@import "./abstracts/mixins/absolute_center";
+@import "./abstracts/mixins/arrow";
+@import "./abstracts/mixins/breakpoint";
+@import "./abstracts/mixins/clearfix";
+@import "./abstracts/mixins/ellipsis";
+@import "./abstracts/mixins/flex_grid";
+@import "./abstracts/mixins/font_face";
+@import "./abstracts/mixins/font_size";
+@import "./abstracts/mixins/gradient";
+@import "./abstracts/mixins/hover";
+@import "./abstracts/mixins/input_placeholder";
+@import "./abstracts/mixins/mq";
+@import "./abstracts/mixins/retina";
+@import "./abstracts/mixins/scrollbar";
+@import "./abstracts/mixins/user_select_none";
 
-@import "./mixins/absolute_center";
-@import "./mixins/arrow";
-@import "./mixins/breakpoint";
-@import "./mixins/clearfix";
-@import "./mixins/ellipsis";
-@import "./mixins/font_face";
-@import "./mixins/font_size";
-@import "./mixins/gradient";
-@import "./mixins/hover";
-@import "./mixins/input_placeholder";
-@import "./mixins/mq";
-@import "./mixins/retina";
-@import "./mixins/scrollbar";
-@import "./mixins/user_select_none";
+@import "./components/flex_grid";
 
 @import "./rules/box";
 @import "./rules/box_by_mq";

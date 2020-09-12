@@ -16,3 +16,19 @@
   .r_-#{$val} { right: -$val + px; }
   .l_-#{$val} { left: -$val + px; }
 }
+
+
+@for $i from 1 through 20 {
+  $val: $i * 5;
+
+  .t_#{$val}p { top: unquote($val + "%"); }
+  .b_#{$val}p { bottom: unquote($val + "%"); }
+  .r_#{$val}p { right: unquote($val + "%"); }
+  .l_#{$val}p { left: unquote($val + "%"); }
+
+  .t_-#{$val}p { top: unquote(-$val + "%"); }
+  .b_-#{$val}p { bottom: unquote(-$val + "%"); }
+  .r_-#{$val}p { right: unquote(-$val + "%"); }
+  .l_-#{$val}p { left: unquote(-$val + "%"); }
+
+}

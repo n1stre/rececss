@@ -6,6 +6,12 @@
 // .fxsh flex-shrink:;
 
 @include each_breakpoint("fx_1") { flex: 1; }
+@include each_breakpoint("fx_00a") { flex: 0 0 auto; }
+
+@for $i from 1 through 20 {
+  $val: $i * 5;
+  @include each_breakpoint("fxb_#{$val}") { flex-basis: unquote($val + "%"); }
+}
 
 @include each_breakpoint("fxd_c") { flex-direction: column; }
 @include each_breakpoint("fxd_cr") { flex-direction: column-reverse; }

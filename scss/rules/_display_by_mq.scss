@@ -17,3 +17,7 @@
 @include each_breakpoint("d_tbr") { display: table-row; }
 @include each_breakpoint("d_tbrg") { display: table-row-group; }
 @include each_breakpoint("d_tbc") { display: table-cell; }
+
+@include each_breakpoint("v_v") { visibility: visible; }
+@include each_breakpoint("v_h") { visibility: hidden; }
+@include each_breakpoint("v_c") { visibility: collapse; }

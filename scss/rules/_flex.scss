@@ -6,6 +6,12 @@
 // .fxsh flex-shrink:;
 
 .fx_1 { flex: 1; }
+.fx_00a { flex: 0 0 auto; }
+
+@for $i from 1 through 20 {
+  $val: $i * 5;
+  .fxb_#{$val}p { flex-basis: unquote($val + "%"); }
+}
 
 .fxd_c { flex-direction: column; }
 .fxd_cr { flex-direction: column-reverse; }

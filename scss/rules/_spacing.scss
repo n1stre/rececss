@@ -1,3 +1,5 @@
+.m_0a { margin: 0 auto; }
+
 @for $i from 0 through ($SPACING_MAX / $SPACING_STEP) {
   $val: $i * $SPACING_STEP;
 

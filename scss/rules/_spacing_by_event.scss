@@ -1,26 +1,22 @@
-// prettier-ignore
-@for $i from 1 through ($SPACING_MAX / $SPACING_STEP) {
-  $val: $i * $SPACING_STEP;
+// @for $i from 1 through ($SPACING_MAX / $SPACING_STEP) {
+//   $val: $i * $SPACING_STEP;
 
-  // margins
-  .m_#{$val} { margin: $val + px; }
-  .mt_#{$val} { margin-top: $val + px; }
-  .mb_#{$val} { margin-bottom: $val + px; }
-  .mr_#{$val} { margin-right: $val + px; }
-  .ml_#{$val} { margin-left: $val + px; }
+//   .m_#{$val} { margin: $val + px; }
+//   .mt_#{$val} { margin-top: $val + px; }
+//   .mb_#{$val} { margin-bottom: $val + px; }
+//   .mr_#{$val} { margin-right: $val + px; }
+//   .ml_#{$val} { margin-left: $val + px; }
+//   .mt_-#{$val} { margin-top: -$val + px; }
+//   .mb_-#{$val} { margin-bottom: -$val + px; }
+//   .mr_-#{$val} { margin-right: -$val + px; }
+//   .ml_-#{$val} { margin-left: -$val + px; }
 
-  // negative margins
-  .mt_-#{$val} { margin-top: -$val + px; }
-  .mb_-#{$val} { margin-bottom: -$val + px; }
-  .mr_-#{$val} { margin-right: -$val + px; }
-  .ml_-#{$val} { margin-left: -$val + px; }
 
-  // paddings
-  .p_#{$val} { padding: $val + px; }
-  .pt_#{$val} { padding-top: $val + px; }
-  .pb_#{$val} { padding-bottom: $val + px; }
-  .ptb_#{$val} { padding-top: $val + px; padding-bottom: $val + px; }
-  .pl_#{$val} { padding-left: $val + px; }
-  .pr_#{$val} { padding-right: $val + px; }
-  .plr_#{$val} { padding-left: $val + px; padding-right: $val + px; }
-}
+//   .p_#{$val} { padding: $val + px; }
+//   .pt_#{$val} { padding-top: $val + px; }
+//   .pb_#{$val} { padding-bottom: $val + px; }
+//   .ptb_#{$val} { padding-top: $val + px; padding-bottom: $val + px; }
+//   .pl_#{$val} { padding-left: $val + px; }
+//   .pr_#{$val} { padding-right: $val + px; }
+//   .plr_#{$val} { padding-left: $val + px; padding-right: $val + px; }
+// }

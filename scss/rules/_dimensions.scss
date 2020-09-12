@@ -1,16 +1,22 @@
 .w_a { width: auto; }
 .w_100vw { width: 100vw; }
 .w_100p { width: 100%; }
+
 .h_a { height: auto; }
 .h_100vh { height: 100vh; }
 .h_100p { height: 100%; }
 
 .maw_n { max-width: none; }
-.mah_n { max-height: none; }
+.maw_100vh { max-width: 100vw; }
 .miw_0 { min-width: 0; }
-.mih_0 { min-height: 0; }
 .miw_u { min-width: unset; }
+.miw_100vh { min-width: 100vw; }
+
+.mah_n { max-height: none; }
+.mah_100vh { max-height: 100vh; }
+.mih_0 { min-height: 0; }
 .mih_u { min-height: unset; }
+.mih_100vh { min-height: 100vh; }
 
 @for $i from 1 through ($DIMENSIONS_MAX / $DIMENSIONS_STEP) {
   $val: $i * $DIMENSIONS_STEP;
@@ -21,4 +27,15 @@
   .mah_#{$val} { max-height: $val + px; }
   .miw_#{$val} { min-width: $val + px; }
   .mih_#{$val} { min-height: $val + px; }
+}
+
+@for $i from 1 through 20 {
+  $val: $i * 5;
+
+  .w_#{$val}p { width: unquote($val + "%"); }
+  .h_#{$val}p { height: unquote($val + "%"); }
+  .maw_#{$val}p { max-width: unquote($val + "%"); }
+  .mah_#{$val}p { max-height: unquote($val + "%"); }
+  .miw_#{$val}p { min-width: unquote($val + "%"); }
+  .mih_#{$val}p { min-height: unquote($val + "%"); }
 }

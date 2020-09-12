@@ -1,0 +1,23 @@
+@each $size in $FLEX_GRID_SIZES {
+  @each $gutter in $FLEX_GRID_GUTTERS_IN_PX {
+    $spacing: $gutter / 2;
+
+    .grid_#{$size}_#{$gutter} {
+      @include flex-grid($spacing);
+      @for $col from 1 through $size {
+        .col_#{$col} {
+          @include flex-grid-col($col / $size * 100%, $spacing);
+        }
+      }
+    }
+
+    @include each_breakpoint("grid_#{$size}_#{$gutter}") {
+      @include flex-grid($spacing);
+      @for $col from 1 through $size {
+        .col_#{$col} {
+          @include flex-grid-col($col / $size * 100%, $spacing);
+        }
+      }
+    }
+  }
+}

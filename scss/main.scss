@@ -7,7 +7,13 @@ $OFFSET_STEP: 5 !default;
 $FONT_SIZES_IN_PX: 10, 12, 14, 16, 18, 20, 48, 54 !default;
 
 $FLEX_GRID_SIZES: 1, 2, 4 !default;
-$FLEX_GRID_GUTTERS_IN_PX: 20, 40 !default;
+$FLEX_GRID_GUTTERS_IN_PX: 0, 20, 40 !default;
+
+$TRANSFORM_ROTATION_DEG_STEP: 15;
+$TRANSFORM_TRANSLATE_STEP: 15;
+
+$CLR_BG_PALLETE: #e5e5e5, #ffffff !default;
+$CLR_TEXT_PALLETE: #1a1a1a, #df5541 !default;
 
 $BREAKPOINT_XS: 400px !default;
 $BREAKPOINT_SM: 560px !default;
@@ -33,31 +39,22 @@ $BREAKPOINT_XXL: 1440px !default;
 @import "./abstracts/mixins/retina";
 @import "./abstracts/mixins/scrollbar";
 @import "./abstracts/mixins/user_select_none";
+@import "./abstracts/mixins/rule";
 
 @import "./components/flex_grid";
 
 @import "./rules/box";
-@import "./rules/box_by_mq";
 @import "./rules/cursor";
 @import "./rules/dimensions";
-@import "./rules/dimensions_by_mq";
 @import "./rules/display";
-@import "./rules/display_by_event";
-@import "./rules/display_by_mq";
 @import "./rules/flex";
-@import "./rules/flex_by_mq";
 @import "./rules/font";
-@import "./rules/font_by_mq";
 @import "./rules/list";
 @import "./rules/offset";
-@import "./rules/offset_by_mq";
 @import "./rules/overflow";
 @import "./rules/opacity";
 @import "./rules/position";
-@import "./rules/position_by_mq";
 @import "./rules/print";
 @import "./rules/spacing";
-@import "./rules/spacing_by_event";
-@import "./rules/spacing_by_mq";
 @import "./rules/text";
-@import "./rules/text_by_mq";
+@import "./rules/transform";

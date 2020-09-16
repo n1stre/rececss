@@ -1,4 +1,0 @@
-@include each_breakpoint("bxz") { box-sizing: border-box; }
-@include each_breakpoint("bxz_cb") { box-sizing: content-box; }
-@include each_breakpoint("bxz_bb") { box-sizing: border-box; }
-@include each_breakpoint("bxsh_n") { box-shadow: none; }

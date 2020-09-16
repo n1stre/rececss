@@ -1,8 +1,8 @@
-.cur_a { cursor: auto; }
-.cur_d { cursor: default; }
-.cur_c { cursor: crosshair; }
-.cur_ha { cursor: hand; }
-.cur_he { cursor: help; }
-.cur_m { cursor: move; }
-.cur_p { cursor: pointer; }
-.cur_t { cursor: text; }
+@include rule("cur_a") { cursor: auto; }
+@include rule("cur_d") { cursor: default; }
+@include rule("cur_c") { cursor: crosshair; }
+@include rule("cur_ha") { cursor: hand; }
+@include rule("cur_he") { cursor: help; }
+@include rule("cur_m") { cursor: move; }
+@include rule("cur_p") { cursor: pointer; }
+@include rule("cur_t") { cursor: text; }

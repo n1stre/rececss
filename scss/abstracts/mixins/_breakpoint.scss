@@ -22,33 +22,35 @@
 // }
 
 @mixin each_breakpoint($selector) {
+  // dublicate classnames to increase specificity
+
   @media only screen and (min-width: $BREAKPOINT_XS) {
-    .xs\:#{quote($selector)} {
+    .xs\:#{$selector} {
       @content;
     }
   }
   @media only screen and (min-width: $BREAKPOINT_SM) {
-    .sm\:#{$selector} {
+    .sm\:#{$selector}.sm\:#{$selector} {
       @content;
     }
   }
   @media only screen and (min-width: $BREAKPOINT_MD) {
-    .md\:#{$selector} {
+    .md\:#{$selector}.md\:#{$selector}.md\:#{$selector} {
       @content;
     }
   }
   @media only screen and (min-width: $BREAKPOINT_LG) {
-    .lg\:#{$selector} {
+    .lg\:#{$selector}.lg\:#{$selector}.lg\:#{$selector}.lg\:#{$selector} {
       @content;
     }
   }
   @media only screen and (min-width: $BREAKPOINT_XL) {
-    .xl\:#{$selector} {
+    .xl\:#{$selector}.xl\:#{$selector}.xl\:#{$selector}.xl\:#{$selector}.xl\:#{$selector} {
       @content;
     }
   }
   @media only screen and (min-width: $BREAKPOINT_XXL) {
-    .xxl\:#{$selector} {
+    .xxl\:#{$selector}.xxl\:#{$selector}.xxl\:#{$selector}.xxl\:#{$selector}.xxl\:#{$selector}.xxl\:#{$selector} {
       @content;
     }
   }

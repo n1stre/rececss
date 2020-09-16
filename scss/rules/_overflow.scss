@@ -1,12 +1,12 @@
-.ov_v { overflow: visible; }
-.ov_h { overflow: hidden; }
-.ov_s { overflow: scroll; }
-.ov_a { overflow: auto; }
-.ovx_v { overflow-x: visible; }
-.ovx_h { overflow-x: hidden; }
-.ovx_s { overflow-x: scroll; }
-.ovx_a { overflow-x: auto; }
-.ovy_v { overflow-y: visible; }
-.ovy_h { overflow-y: hidden; }
-.ovy_s { overflow-y: scroll; }
-.ovy_a { overflow-y: auto; }
+@include rule("ov_v") { overflow: visible; }
+@include rule("ov_h") { overflow: hidden; }
+@include rule("ov_s") { overflow: scroll; }
+@include rule("ov_a") { overflow: auto; }
+@include rule("ovx_v") { overflow-x: visible; }
+@include rule("ovx_h") { overflow-x: hidden; }
+@include rule("ovx_s") { overflow-x: scroll; }
+@include rule("ovx_a") { overflow-x: auto; }
+@include rule("ovy_v") { overflow-y: visible; }
+@include rule("ovy_h") { overflow-y: hidden; }
+@include rule("ovy_s") { overflow-y: scroll; }
+@include rule("ovy_a") { overflow-y: auto; }

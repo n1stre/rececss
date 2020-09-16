@@ -1,5 +1,5 @@
-.pos_s { position: static; }
-.pos_a { position: absolute; }
-.pos_r { position: relative; }
-.pos_f { position: fixed; }
+@include rule("pos_s") { position: static; }
+@include rule("pos_a") { position: absolute; }
+@include rule("pos_r") { position: relative; }
+@include rule("pos_f") { position: fixed; }
 

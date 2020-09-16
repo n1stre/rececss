@@ -1,0 +1,8 @@
+@mixin rule($selector) {
+  .#{$selector} {
+    @content;
+  }
+  @include each_breakpoint($selector) {
+    @content;
+  }
+}

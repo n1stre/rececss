@@ -1,4 +1,0 @@
-@include each_breakpoint("pos_s") { position: static; }
-@include each_breakpoint("pos_a") { position: absolute; }
-@include each_breakpoint("pos_r") { position: relative; }
-@include each_breakpoint("pos_f") { position: fixed; }

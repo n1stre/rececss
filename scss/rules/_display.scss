@@ -1,23 +1,23 @@
-.d_n { display: none; }
-.d_b { display: block; }
-.d_f { display: flex; }
-.d_if { display: inline-flex; }
-.d_i { display: inline; }
-.d_ib { display: inline-block; }
-.d_li { display: list-item; }
-.d_ri { display: run-in; }
-.d_cp { display: compact; }
-.d_tb { display: table; }
-.d_itb { display: inline-table; }
-.d_tbcp { display: table-caption; }
-.d_tbcl { display: table-column; }
-.d_tbclg { display: table-column-group; }
-.d_tbhg { display: table-header-group; }
-.d_tbfg { display: table-footer-group; }
-.d_tbr { display: table-row; }
-.d_tbrg { display: table-row-group; }
-.d_tbc { display: table-cell; }
+@include rule("d_n") { display: none; }
+@include rule("d_b") { display: block; }
+@include rule("d_f") { display: flex; }
+@include rule("d_if") { display: inline-flex; }
+@include rule("d_i") { display: inline; }
+@include rule("d_ib") { display: inline-block; }
+@include rule("d_li") { display: list-item; }
+@include rule("d_ri") { display: run-in; }
+@include rule("d_cp") { display: compact; }
+@include rule("d_tb") { display: table; }
+@include rule("d_itb") { display: inline-table; }
+@include rule("d_tbcp") { display: table-caption; }
+@include rule("d_tbcl") { display: table-column; }
+@include rule("d_tbclg") { display: table-column-group; }
+@include rule("d_tbhg") { display: table-header-group; }
+@include rule("d_tbfg") { display: table-footer-group; }
+@include rule("d_tbr") { display: table-row; }
+@include rule("d_tbrg") { display: table-row-group; }
+@include rule("d_tbc") { display: table-cell; }
 
-.v_v { visibility: visible; }
-.v_h { visibility: hidden; }
-.v_c { visibility: collapse; }
+@include rule("v_v") { visibility: visible; }
+@include rule("v_h") { visibility: hidden; }
+@include rule("v_c") { visibility: collapse; }

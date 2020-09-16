@@ -1,0 +1,28 @@
+@include rule("bg_n") { background:none; }
+
+@include rule("bgc_u") { background-color: unset; }
+@include rule("bgc_t") { background-color: transparent; }
+@include rule("bgi_n") { background-image: none; }
+
+@include rule("bgr_n") { background-repeat: no-repeat; }
+@include rule("bgr_x") { background-repeat: repeat-x; }
+@include rule("bgr_y") { background-repeat: repeat-y; }
+@include rule("bgr_sp") { background-repeat: space; }
+@include rule("bgr_rd") { background-repeat: round; }
+
+@include rule("bga_f") { background-attachment: fixed; }
+@include rule("bga_s") { background-attachment: scroll; }
+@include rule("bgp_0_0") { background-position: 0 0; }
+
+@include rule("bgcp_bb") { background-clip:border-box; }
+@include rule("bgcp_pb") { background-clip:padding-box; }
+@include rule("bgcp_cb") { background-clip:content-box; }
+@include rule("bgcp_nc") { background-clip:no-clip; }
+
+@include rule("bgo_pb") { background-origin:padding-box; }
+@include rule("bgo_bb") { background-origin:border-box; }
+@include rule("bgo_cb") { background-origin:content-box; }
+
+@include rule("bgsz_a") { background-size:auto; }
+@include rule("bgsz_ct") { background-size:contain; }
+@include rule("bgsz_cv") { background-size:cover; }

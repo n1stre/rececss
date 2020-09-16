@@ -1,54 +1,66 @@
-.va_sup { vertical-align: super; }
-.va_t { vertical-align: top; }
-.va_tt { vertical-align: text-top; }
-.va_m { vertical-align: middle; }
-.va_bl { vertical-align: baseline; }
-.va_b { vertical-align: bottom; }
-.va_tb { vertical-align: text-bottom; }
-.va_sub { vertical-align: sub; }
+@include rule("va_sup") { vertical-align: super; }
+@include rule("va_t") { vertical-align: top; }
+@include rule("va_tt") { vertical-align: text-top; }
+@include rule("va_m") { vertical-align: middle; }
+@include rule("va_bl") { vertical-align: baseline; }
+@include rule("va_b") { vertical-align: bottom; }
+@include rule("va_tb") { vertical-align: text-bottom; }
+@include rule("va_sub") { vertical-align: sub; }
 
-.ta_l { text-align: left; }
-.ta_c { text-align: center; }
-.ta_r { text-align: right; }
-.ta_j { text-align: justify; }
+@include rule("ta_l") { text-align: left; }
+@include rule("ta_c") { text-align: center; }
+@include rule("ta_r") { text-align: right; }
+@include rule("ta_j") { text-align: justify; }
 
-.tal_a { text-align-last: auto; }
-.tal_l { text-align-last: left; }
-.tal_c { text-align-last: center; }
-.tal_r { text-align-last: right; }
+@include rule("tal_a") { text-align-last: auto; }
+@include rule("tal_l") { text-align-last: left; }
+@include rule("tal_c") { text-align-last: center; }
+@include rule("tal_r") { text-align-last: right; }
 
-.td_n { text-decoration: none; }
-.td_u { text-decoration: underline; }
-.td_o { text-decoration: overline; }
-.td_l { text-decoration: line-through; }
 
-.te_n { text-emphasis: none; }
-.te_ac { text-emphasis: accent; }
-.te_dt { text-emphasis: dot; }
-.te_c { text-emphasis: circle; }
-.te_ds { text-emphasis: disc; }
-.te_b { text-emphasis: before; }
-.te_a { text-emphasis: after; }
+@include rule("td_n") { text-decoration: none; }
+@include rule("td_u") { text-decoration: underline; }
+@include rule("td_o") { text-decoration: overline; }
+@include rule("td_l") { text-decoration: line-through; }
 
-.tt_n { text-transform: none; }
-.tt_c { text-transform: capitalize; }
-.tt_u { text-transform: uppercase; }
-.tt_l { text-transform: lowercase; }
+@include rule("te_n") { text-emphasis: none; }
+@include rule("te_ac") { text-emphasis: accent; }
+@include rule("te_dt") { text-emphasis: dot; }
+@include rule("te_c") { text-emphasis: circle; }
+@include rule("te_ds") { text-emphasis: disc; }
+@include rule("te_b") { text-emphasis: before; }
+@include rule("te_a") { text-emphasis: after; }
 
-.whs_n { white-space: normal; }
-.whs_p { white-space: pre; }
-.whs_nw { white-space: nowrap; }
-.whs_pw { white-space: pre-wrap; }
-.whs_pl { white-space: pre-line; }
+@include rule("tt_n") { text-transform: none; }
+@include rule("tt_c") { text-transform: capitalize; }
+@include rule("tt_u") { text-transform: uppercase; }
+@include rule("tt_l") { text-transform: lowercase; }
 
-.lh_0p5 { line-height: 0.5; }
-.lh_0p6 { line-height: 0.6; }
-.lh_0p7 { line-height: 0.7; }
-.lh_0p8 { line-height: 0.8; }
-.lh_0p9 { line-height: 0.9; }
-.lh_1 { line-height: 1; }
-.lh_1p1 { line-height: 1.1; }
-.lh_1p2 { line-height: 1.2; }
-.lh_1p3 { line-height: 1.3; }
-.lh_1p4 { line-height: 1.4; }
-.lh_1p5 { line-height: 1.5; }
+@include rule("whs_n") { white-space: normal; }
+@include rule("whs_p") { white-space: pre; }
+@include rule("whs_nw") { white-space: nowrap; }
+@include rule("whs_pw") { white-space: pre-wrap; }
+@include rule("whs_pl") { white-space: pre-line; }
+
+@include rule("lh_0p5") { line-height: 0.5; }
+@include rule("lh_0p6") { line-height: 0.6; }
+@include rule("lh_0p7") { line-height: 0.7; }
+@include rule("lh_0p8") { line-height: 0.8; }
+@include rule("lh_0p9") { line-height: 0.9; }
+@include rule("lh_1") { line-height: 1; }
+@include rule("lh_1p1") { line-height: 1.1; }
+@include rule("lh_1p2") { line-height: 1.2; }
+@include rule("lh_1p3") { line-height: 1.3; }
+@include rule("lh_1p4") { line-height: 1.4; }
+@include rule("lh_1p5") { line-height: 1.5; }
+
+
+
+
+
+
+
+
+
+
+

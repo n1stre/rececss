@@ -2,6 +2,10 @@
 
 @include rule("bgc_u") { background-color: unset; }
 @include rule("bgc_t") { background-color: transparent; }
+@each $name, $color in $CLR_BG_PALLETE {
+  @include rule("bg_#{$name}") { background-color: $color; }
+}
+
 @include rule("bgi_n") { background-image: none; }
 
 @include rule("bgr_n") { background-repeat: no-repeat; }

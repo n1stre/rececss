@@ -12,8 +12,29 @@ $FLEX_GRID_GUTTERS_IN_PX: 0, 20, 40 !default;
 $TRANSFORM_ROTATION_DEG_STEP: 15;
 $TRANSFORM_TRANSLATE_STEP: 15;
 
-$CLR_BG_PALLETE: #e5e5e5, #ffffff !default;
-$CLR_TEXT_PALLETE: #1a1a1a, #df5541 !default;
+$CLR_BG_PALLETE: (
+  grey: #e5e5e5,
+  white: #ffffff,
+  red: #df5541,
+  green: #9fe8b4,
+  yellow: #fffcbe,
+) !default;
+
+$CLR_TEXT_PALLETE: (
+  dark: #1a1a1a,
+  white: #ffffff,
+  red: #df5541,
+  green: #9fe8b4,
+) !default;
+
+$MQ_BREAKPOINTS: (
+  xs: 400px,
+  sm: 560px,
+  md: 768px,
+  lg: 1024px,
+  xl: 1248px,
+  xxl: 1440px,
+) !default;
 
 $BREAKPOINT_XS: 400px !default;
 $BREAKPOINT_SM: 560px !default;

@@ -5,38 +5,38 @@
 // .fxg flex-grow:;
 // .fxsh flex-shrink:;
 
-@include rule("fx_1") { flex: 1; }
-@include rule("fx_00a") { flex: 0 0 auto; }
+@include class("fx_1") { flex: 1; }
+@include class("fx_00a") { flex: 0 0 auto; }
 
 @for $i from 1 through 20 {
   $val: $i * 5;
-  @include rule("fxb_#{$val}p") { flex-basis: unquote($val + "%"); }
+  @include class("fxb_#{$val}p") { flex-basis: unquote($val + "%"); }
 }
 
-@include rule("fxd_c") { flex-direction: column; }
-@include rule("fxd_cr") { flex-direction: column-reverse; }
-@include rule("fxd_r") { flex-direction: row; }
-@include rule("fxd_rr") { flex-direction: row-reverse; }
+@include class("fxd_c") { flex-direction: column; }
+@include class("fxd_cr") { flex-direction: column-reverse; }
+@include class("fxd_r") { flex-direction: row; }
+@include class("fxd_rr") { flex-direction: row-reverse; }
 
-@include rule("fxw_n") { flex-wrap: nowrap; }
-@include rule("fxw_w") { flex-wrap: wrap; }
-@include rule("fxw_wr") { flex-wrap: wrap-reverse; }
+@include class("fxw_n") { flex-wrap: nowrap; }
+@include class("fxw_w") { flex-wrap: wrap; }
+@include class("fxw_wr") { flex-wrap: wrap-reverse; }
 
-@include rule("jc_c") { justify-content: center; }
-@include rule("jc_fe") { justify-content: flex-end; }
-@include rule("jc_fs") { justify-content: flex-start; }
-@include rule("jc_sa") { justify-content: space-around; }
-@include rule("jc_sb") { justify-content: space-between; }
+@include class("jc_c") { justify-content: center; }
+@include class("jc_fe") { justify-content: flex-end; }
+@include class("jc_fs") { justify-content: flex-start; }
+@include class("jc_sa") { justify-content: space-around; }
+@include class("jc_sb") { justify-content: space-between; }
 
-@include rule("ac_c") { align-content: center; }
-@include rule("ac_fe") { align-content: flex-end; }
-@include rule("ac_fs") { align-content: flex-start; }
-@include rule("ac_s") { align-content: stretch; }
-@include rule("ac_sa") { align-content: space-around; }
-@include rule("ac_sb") { align-content: space-between; }
+@include class("ac_c") { align-content: center; }
+@include class("ac_fe") { align-content: flex-end; }
+@include class("ac_fs") { align-content: flex-start; }
+@include class("ac_s") { align-content: stretch; }
+@include class("ac_sa") { align-content: space-around; }
+@include class("ac_sb") { align-content: space-between; }
 
-@include rule("ai_b") { align-items: baseline; }
-@include rule("ai_c") { align-items: center; }
-@include rule("ai_fe") { align-items: flex-end; }
-@include rule("ai_fs") { align-items: flex-start; }
-@include rule("ai_s") { align-items: stretch; }
+@include class("ai_b") { align-items: baseline; }
+@include class("ai_c") { align-items: center; }
+@include class("ai_fe") { align-items: flex-end; }
+@include class("ai_fs") { align-items: flex-start; }
+@include class("ai_s") { align-items: stretch; }

@@ -1,0 +1,11 @@
+@mixin class($name, $breakpoints: true, $hover: true) {
+  .#{$name} {
+    @content;
+  }
+
+  @if ($breakpoints) {
+    @include each_breakpoint($name) {
+      @content;
+    }
+  }
+}

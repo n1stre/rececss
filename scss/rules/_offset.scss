@@ -1,20 +1,20 @@
-@include rule("t_u") { top: unset; }
-@include rule("b_u") { bottom: unset; }
-@include rule("r_u") { right: unset; }
-@include rule("l_u") { left: unset;  }
+@include class("t_u") { top: unset; }
+@include class("b_u") { bottom: unset; }
+@include class("r_u") { right: unset; }
+@include class("l_u") { left: unset;  }
 
 @for $i from 0 through ($OFFSET_MAX / $OFFSET_STEP) {
   $val: $i * $OFFSET_STEP;
 
-  @include rule("t_#{$val}") { top: $val + px; }
-  @include rule("b_#{$val}") { bottom: $val + px; }
-  @include rule("r_#{$val}") { right: $val + px; }
-  @include rule("l_#{$val}") { left: $val + px; }
+  @include class("t_#{$val}") { top: $val + px; }
+  @include class("b_#{$val}") { bottom: $val + px; }
+  @include class("r_#{$val}") { right: $val + px; }
+  @include class("l_#{$val}") { left: $val + px; }
 
-  @include rule("t_-#{$val}") { top: -$val + px; }
-  @include rule("b_-#{$val}") { bottom: -$val + px; }
-  @include rule("r_-#{$val}") { right: -$val + px; }
-  @include rule("l_-#{$val}") { left: -$val + px; }
+  @include class("t_-#{$val}") { top: -$val + px; }
+  @include class("b_-#{$val}") { bottom: -$val + px; }
+  @include class("r_-#{$val}") { right: -$val + px; }
+  @include class("l_-#{$val}") { left: -$val + px; }
 }
 
 

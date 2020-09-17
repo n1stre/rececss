@@ -1,11 +1,11 @@
-@include rule("op_0") { opacity: 0; }
-@include rule("op_0p1") { opacity: 0.1; }
-@include rule("op_0p2") { opacity: 0.2; }
-@include rule("op_0p3") { opacity: 0.3; }
-@include rule("op_0p4") { opacity: 0.4; }
-@include rule("op_0p5") { opacity: 0.5; }
-@include rule("op_0p6") { opacity: 0.6; }
-@include rule("op_0p7") { opacity: 0.7; }
-@include rule("op_0p8") { opacity: 0.8; }
-@include rule("op_0p9") { opacity: 0.9; }
-@include rule("op_1") { opacity: 1;}
+@include class("op_0") { opacity: 0; }
+@include class("op_0p1") { opacity: 0.1; }
+@include class("op_0p2") { opacity: 0.2; }
+@include class("op_0p3") { opacity: 0.3; }
+@include class("op_0p4") { opacity: 0.4; }
+@include class("op_0p5") { opacity: 0.5; }
+@include class("op_0p6") { opacity: 0.6; }
+@include class("op_0p7") { opacity: 0.7; }
+@include class("op_0p8") { opacity: 0.8; }
+@include class("op_0p9") { opacity: 0.9; }
+@include class("op_1") { opacity: 1;}

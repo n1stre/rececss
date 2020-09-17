@@ -1,58 +1,58 @@
-@include rule("va_sup") { vertical-align: super; }
-@include rule("va_t") { vertical-align: top; }
-@include rule("va_tt") { vertical-align: text-top; }
-@include rule("va_m") { vertical-align: middle; }
-@include rule("va_bl") { vertical-align: baseline; }
-@include rule("va_b") { vertical-align: bottom; }
-@include rule("va_tb") { vertical-align: text-bottom; }
-@include rule("va_sub") { vertical-align: sub; }
+@include class("va_sup") { vertical-align: super; }
+@include class("va_t") { vertical-align: top; }
+@include class("va_tt") { vertical-align: text-top; }
+@include class("va_m") { vertical-align: middle; }
+@include class("va_bl") { vertical-align: baseline; }
+@include class("va_b") { vertical-align: bottom; }
+@include class("va_tb") { vertical-align: text-bottom; }
+@include class("va_sub") { vertical-align: sub; }
 
-@include rule("ta_l") { text-align: left; }
-@include rule("ta_c") { text-align: center; }
-@include rule("ta_r") { text-align: right; }
-@include rule("ta_j") { text-align: justify; }
+@include class("ta_l") { text-align: left; }
+@include class("ta_c") { text-align: center; }
+@include class("ta_r") { text-align: right; }
+@include class("ta_j") { text-align: justify; }
 
-@include rule("tal_a") { text-align-last: auto; }
-@include rule("tal_l") { text-align-last: left; }
-@include rule("tal_c") { text-align-last: center; }
-@include rule("tal_r") { text-align-last: right; }
+@include class("tal_a") { text-align-last: auto; }
+@include class("tal_l") { text-align-last: left; }
+@include class("tal_c") { text-align-last: center; }
+@include class("tal_r") { text-align-last: right; }
 
 
-@include rule("td_n") { text-decoration: none; }
-@include rule("td_u") { text-decoration: underline; }
-@include rule("td_o") { text-decoration: overline; }
-@include rule("td_l") { text-decoration: line-through; }
+@include class("td_n") { text-decoration: none; }
+@include class("td_u") { text-decoration: underline; }
+@include class("td_o") { text-decoration: overline; }
+@include class("td_l") { text-decoration: line-through; }
 
-@include rule("te_n") { text-emphasis: none; }
-@include rule("te_ac") { text-emphasis: accent; }
-@include rule("te_dt") { text-emphasis: dot; }
-@include rule("te_c") { text-emphasis: circle; }
-@include rule("te_ds") { text-emphasis: disc; }
-@include rule("te_b") { text-emphasis: before; }
-@include rule("te_a") { text-emphasis: after; }
+@include class("te_n") { text-emphasis: none; }
+@include class("te_ac") { text-emphasis: accent; }
+@include class("te_dt") { text-emphasis: dot; }
+@include class("te_c") { text-emphasis: circle; }
+@include class("te_ds") { text-emphasis: disc; }
+@include class("te_b") { text-emphasis: before; }
+@include class("te_a") { text-emphasis: after; }
 
-@include rule("tt_n") { text-transform: none; }
-@include rule("tt_c") { text-transform: capitalize; }
-@include rule("tt_u") { text-transform: uppercase; }
-@include rule("tt_l") { text-transform: lowercase; }
+@include class("tt_n") { text-transform: none; }
+@include class("tt_c") { text-transform: capitalize; }
+@include class("tt_u") { text-transform: uppercase; }
+@include class("tt_l") { text-transform: lowercase; }
 
-@include rule("whs_n") { white-space: normal; }
-@include rule("whs_p") { white-space: pre; }
-@include rule("whs_nw") { white-space: nowrap; }
-@include rule("whs_pw") { white-space: pre-wrap; }
-@include rule("whs_pl") { white-space: pre-line; }
+@include class("whs_n") { white-space: normal; }
+@include class("whs_p") { white-space: pre; }
+@include class("whs_nw") { white-space: nowrap; }
+@include class("whs_pw") { white-space: pre-wrap; }
+@include class("whs_pl") { white-space: pre-line; }
 
-@include rule("lh_0p5") { line-height: 0.5; }
-@include rule("lh_0p6") { line-height: 0.6; }
-@include rule("lh_0p7") { line-height: 0.7; }
-@include rule("lh_0p8") { line-height: 0.8; }
-@include rule("lh_0p9") { line-height: 0.9; }
-@include rule("lh_1") { line-height: 1; }
-@include rule("lh_1p1") { line-height: 1.1; }
-@include rule("lh_1p2") { line-height: 1.2; }
-@include rule("lh_1p3") { line-height: 1.3; }
-@include rule("lh_1p4") { line-height: 1.4; }
-@include rule("lh_1p5") { line-height: 1.5; }
+@include class("lh_0p5") { line-height: 0.5; }
+@include class("lh_0p6") { line-height: 0.6; }
+@include class("lh_0p7") { line-height: 0.7; }
+@include class("lh_0p8") { line-height: 0.8; }
+@include class("lh_0p9") { line-height: 0.9; }
+@include class("lh_1") { line-height: 1; }
+@include class("lh_1p1") { line-height: 1.1; }
+@include class("lh_1p2") { line-height: 1.2; }
+@include class("lh_1p3") { line-height: 1.3; }
+@include class("lh_1p4") { line-height: 1.4; }
+@include class("lh_1p5") { line-height: 1.5; }
 
 
 

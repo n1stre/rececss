@@ -1,28 +1,28 @@
-@include rule("m_0a") { margin: 0 auto; }
+@include class("m_0a") { margin: 0 auto; }
 
 @for $i from 0 through ($SPACING_MAX / $SPACING_STEP) {
   $val: $i * $SPACING_STEP;
 
-  @include rule("m_#{$val}") { margin: $val + px; }
-  @include rule("mt_#{$val}") { margin-top: $val + px; }
-  @include rule("mb_#{$val}") { margin-bottom: $val + px; }
-  @include rule("mtb_#{$val}") { margin-top: $val + px; margin-bottom: $val + px; }
-  @include rule("ml_#{$val}") { margin-left: $val + px; }
-  @include rule("mr_#{$val}") { margin-right: $val + px; }
-  @include rule("mlr_#{$val}") { margin-left: $val + px; margin-right: $val + px; }
-  @include rule("mt_-#{$val}") { margin-top: -$val + px; }
-  @include rule("mb_-#{$val}") { margin-bottom: -$val + px; }
-  @include rule("ml_-#{$val}") { margin-left: -$val + px; }
-  @include rule("mr_-#{$val}") { margin-right: -$val + px; }
-  @include rule("mlr_-#{$val}") { margin-left: -$val + px; margin-right: -$val + px; }
+  @include class("m_#{$val}") { margin: $val + px; }
+  @include class("mt_#{$val}") { margin-top: $val + px; }
+  @include class("mb_#{$val}") { margin-bottom: $val + px; }
+  @include class("mtb_#{$val}") { margin-top: $val + px; margin-bottom: $val + px; }
+  @include class("ml_#{$val}") { margin-left: $val + px; }
+  @include class("mr_#{$val}") { margin-right: $val + px; }
+  @include class("mlr_#{$val}") { margin-left: $val + px; margin-right: $val + px; }
+  @include class("mt_-#{$val}") { margin-top: -$val + px; }
+  @include class("mb_-#{$val}") { margin-bottom: -$val + px; }
+  @include class("ml_-#{$val}") { margin-left: -$val + px; }
+  @include class("mr_-#{$val}") { margin-right: -$val + px; }
+  @include class("mlr_-#{$val}") { margin-left: -$val + px; margin-right: -$val + px; }
 
-  @include rule("p_#{$val}") { padding: $val + px; }
-  @include rule("pt_#{$val}") { padding-top: $val + px; }
-  @include rule("pb_#{$val}") { padding-bottom: $val + px; }
-  @include rule("ptb_#{$val}") { padding-top: $val + px; padding-bottom: $val + px; }
-  @include rule("pl_#{$val}") { padding-left: $val + px; }
-  @include rule("pr_#{$val}") { padding-right: $val + px; }
-  @include rule("plr_#{$val}") { padding-left: $val + px; padding-right: $val + px; }
+  @include class("p_#{$val}") { padding: $val + px; }
+  @include class("pt_#{$val}") { padding-top: $val + px; }
+  @include class("pb_#{$val}") { padding-bottom: $val + px; }
+  @include class("ptb_#{$val}") { padding-top: $val + px; padding-bottom: $val + px; }
+  @include class("pl_#{$val}") { padding-left: $val + px; }
+  @include class("pr_#{$val}") { padding-right: $val + px; }
+  @include class("plr_#{$val}") { padding-left: $val + px; padding-right: $val + px; }
 }
 
 

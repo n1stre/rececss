@@ -1,4 +1,4 @@
-@include rule("bxz") { box-sizing: border-box; }
-@include rule("bxz_cb") { box-sizing: content-box; }
-@include rule("bxz_bb") { box-sizing: border-box; }
-@include rule("bxsh_n") { box-shadow: none; }
+@include class("bxz") { box-sizing: border-box; }
+@include class("bxz_cb") { box-sizing: content-box; }
+@include class("bxz_bb") { box-sizing: border-box; }
+@include class("bxsh_n") { box-shadow: none; }

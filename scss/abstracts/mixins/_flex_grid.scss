@@ -8,5 +8,6 @@
   flex: 0 0 auto;
   flex-basis: $width;
   max-width: $width;
-  padding: 0 ($spacing + px);
+  padding-left: ($spacing + px);
+  padding-right: ($spacing + px);
 }

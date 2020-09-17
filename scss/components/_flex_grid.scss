@@ -1,21 +1,24 @@
-@each $size in $FLEX_GRID_SIZES {
-  @each $gutter in $FLEX_GRID_GUTTERS_IN_PX {
+@each $cols, $gutters in $FLEX_GRID_LAYOUTS {
+  @each $gutter in $gutters {
     $spacing: $gutter / 2;
 
-    .grid_#{$size}_#{$gutter} {
-      @include flex-grid($spacing);
-      @for $col from 1 through $size {
-        .col_#{$col} {
-          @include flex-grid-col($col / $size * 100%, $spacing);
-        }
-      }
-    }
+    @include class("fx_grid_#{$cols}_#{$gutter}") {
+      display: flex;
+      margin-left: -$spacing + px;
+      margin-right: -$spacing + px;
 
-    @include each_breakpoint("grid_#{$size}_#{$gutter}") {
-      @include flex-grid($spacing);
-      @for $col from 1 through $size {
+      [class*="col_"] {
+        flex: 0 0 auto;
+        padding-left: ($spacing + px);
+        padding-right: ($spacing + px);
+      }
+
+      @for $col from 1 through $cols {
+        $width: $col / $cols * 100%;
+
         .col_#{$col} {
-          @include flex-grid-col($col / $size * 100%, $spacing);
+          flex-basis: $width;
+          max-width: $width;
         }
       }
     }

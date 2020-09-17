@@ -1,0 +1,7 @@
+@function string-repeat($target, $times) {
+  $result: "";
+  @for $i from 1 through $times {
+    $result: $result + $target;
+  }
+  @return $result;
+}

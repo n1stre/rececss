@@ -5,15 +5,12 @@ $SPACING_STEP: 5 !default;
 $OFFSET_MAX: 200 !default;
 $OFFSET_STEP: 5 !default;
 $FONT_SIZES_IN_PX: 10, 12, 14, 16, 18, 20, 48, 54 !default;
-
-$FLEX_GRID_SIZES: 1, 2, 4 !default;
-$FLEX_GRID_GUTTERS_IN_PX: 0, 20, 40 !default;
-
 $TRANSFORM_ROTATION_DEG_STEP: 15;
 $TRANSFORM_TRANSLATE_STEP: 15;
+$FLEX_GRID_LAYOUTS: 1 (0, 20, 40), 2 (0, 20, 40), 4 (0, 40) !default;
 
 $CLR_BG_PALLETE: (
-  grey: #e5e5e5,
+  grey: #f6f6f6,
   white: #ffffff,
   red: #df5541,
   green: #9fe8b4,
@@ -28,23 +25,18 @@ $CLR_TEXT_PALLETE: (
 ) !default;
 
 $MQ_BREAKPOINTS: (
-  xs: 400px,
-  sm: 560px,
+  // xs: 400px,
+  // sm: 560px,
   md: 768px,
   lg: 1024px,
-  xl: 1248px,
-  xxl: 1440px,
+  // xl: 1248px,
+  // xxl: 1440px
 ) !default;
-
-$BREAKPOINT_XS: 400px !default;
-$BREAKPOINT_SM: 560px !default;
-$BREAKPOINT_MD: 768px !default;
-$BREAKPOINT_LG: 1024px !default;
-$BREAKPOINT_XL: 1248px !default;
-$BREAKPOINT_XXL: 1440px !default;
 
 @import "./abstracts/functions/color";
 @import "./abstracts/functions/path";
+@import "./abstracts/functions/string_repeat";
+
 @import "./abstracts/mixins/absolute_center";
 @import "./abstracts/mixins/arrow";
 @import "./abstracts/mixins/breakpoint";
@@ -60,10 +52,11 @@ $BREAKPOINT_XXL: 1440px !default;
 @import "./abstracts/mixins/retina";
 @import "./abstracts/mixins/scrollbar";
 @import "./abstracts/mixins/user_select_none";
-@import "./abstracts/mixins/rule";
+@import "./abstracts/mixins/class";
 
 @import "./components/flex_grid";
 
+@import "./rules/background";
 @import "./rules/box";
 @import "./rules/cursor";
 @import "./rules/dimensions";

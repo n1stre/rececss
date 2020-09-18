@@ -4,10 +4,10 @@ $SPACING_MAX: 200 !default;
 $SPACING_STEP: 5 !default;
 $OFFSET_MAX: 200 !default;
 $OFFSET_STEP: 5 !default;
-$FONT_SIZES_IN_PX: 10, 12, 14, 16, 18, 20, 48, 54 !default;
+$FONT_SIZES_IN_PX: 10, 12, 14, 16, 18, 20, 24, 32, 48, 54 !default;
 $TRANSFORM_ROTATION_DEG_STEP: 15;
 $TRANSFORM_TRANSLATE_STEP: 15;
-$FLEX_GRID_LAYOUTS: 1 (0, 20, 40), 2 (0, 20, 40), 4 (0, 40) !default;
+$FLEX_GRID_LAYOUTS: 1 (0, 20, 40), 2 (0, 20, 40), 4 (0, 10, 40) !default;
 
 $CLR_BG_PALLETE: (
   grey: #f6f6f6,
@@ -15,6 +15,7 @@ $CLR_BG_PALLETE: (
   red: #df5541,
   green: #9fe8b4,
   yellow: #fffcbe,
+  dark: #1a1a1a,
 ) !default;
 
 $CLR_TEXT_PALLETE: (
@@ -24,12 +25,17 @@ $CLR_TEXT_PALLETE: (
   green: #9fe8b4,
 ) !default;
 
+$BORDER_RADIUSES_IN_PX: 5;
+$BORDERS: (
+  thingrey: 1px solid transparentize(#1a1a1a, 0.9),
+);
+
 $MQ_BREAKPOINTS: (
   // xs: 400px,
   // sm: 560px,
   md: 768px,
   lg: 1024px,
-  // xl: 1248px,
+  xl: 1248px,
   // xxl: 1440px
 ) !default;
 
@@ -49,6 +55,7 @@ $MQ_BREAKPOINTS: (
 @import "./abstracts/mixins/hover";
 @import "./abstracts/mixins/input_placeholder";
 @import "./abstracts/mixins/mq";
+@import "./abstracts/mixins/nth_child";
 @import "./abstracts/mixins/retina";
 @import "./abstracts/mixins/scrollbar";
 @import "./abstracts/mixins/user_select_none";
@@ -57,6 +64,7 @@ $MQ_BREAKPOINTS: (
 @import "./components/flex_grid";
 
 @import "./rules/background";
+@import "./rules/border";
 @import "./rules/box";
 @import "./rules/cursor";
 @import "./rules/dimensions";

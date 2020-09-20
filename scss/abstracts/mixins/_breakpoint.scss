@@ -10,7 +10,7 @@ $BP_COUNT: list.length($BP_NAMES);
     $bp_name: list.nth($BP_NAMES, $i);
     $bp_value: list.nth($BP_VALUES, $i);
     // selector repeat needs to be done to increase specificity
-    $selector: string-repeat(".#{$bp_name}\\:#{$classname}", $i + 1);
+    $selector: string-repeat(".#{$bp_name}--#{$classname}", $i + 1);
 
     @media only screen and (min-width: $bp_value) {
       #{unquote($selector)} {

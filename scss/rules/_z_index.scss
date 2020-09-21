@@ -1,0 +1,10 @@
+.z_a { z-index: auto; }
+
+@each $zStart, $zEnd, $zStep in $Z_INDEXES {
+  .z_#{$zStart} { z-index: $zStart;}
+  @for $i from $zStart through $zEnd {
+    $value: $i + $zStep;
+    .z_#{$value} { z-index: $value;}
+  }
+}
+

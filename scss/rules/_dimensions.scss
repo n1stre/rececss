@@ -34,6 +34,8 @@
 
   @include class("w_#{$val}p") { width: unquote($val + "%"); }
   @include class("h_#{$val}p") { height: unquote($val + "%"); }
+  @include class("w_#{$val}vw") { width: $val + vw; }
+  @include class("h_#{$val}vh") { height: $val + vh; }
   @include class("maw_#{$val}p") { max-width: unquote($val + "%"); }
   @include class("mah_#{$val}p") { max-height: unquote($val + "%"); }
   @include class("miw_#{$val}p") { min-width: unquote($val + "%"); }

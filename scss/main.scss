@@ -5,8 +5,9 @@ $SPACING_STEP: 5 !default;
 $OFFSET_MAX: 200 !default;
 $OFFSET_STEP: 5 !default;
 $FONT_SIZES_IN_PX: 10, 12, 14, 16, 18, 20, 24, 32, 48, 54 !default;
-$TRANSFORM_ROTATION_DEG_STEP: 15;
-$TRANSFORM_TRANSLATE_STEP: 15;
+$Z_INDEXES: 1 10 1, 100 900 100 !default;
+$TRANSFORM_ROTATION_DEG_STEP: 15 !default;
+$TRANSFORM_TRANSLATE_STEP: 15 !default;
 $FLEX_GRID_LAYOUTS: 1 (0, 20, 40), 2 (0, 20, 40), 4 (0, 10, 40) !default;
 
 $CLR_BG_PALLETE: (
@@ -25,10 +26,10 @@ $CLR_TEXT_PALLETE: (
   green: #9fe8b4,
 ) !default;
 
-$BORDER_RADIUSES_IN_PX: 5;
+$BORDER_RADIUSES_IN_PX: 5 !default;
 $BORDERS: (
   thingrey: 1px solid transparentize(#1a1a1a, 0.9),
-);
+) !default;
 
 $MQ_BREAKPOINTS: (
   // xs: 400px,
@@ -72,6 +73,7 @@ $MQ_BREAKPOINTS: (
 @import "./rules/flex";
 @import "./rules/font";
 @import "./rules/list";
+@import "./rules/object_fit";
 @import "./rules/offset";
 @import "./rules/overflow";
 @import "./rules/opacity";
@@ -80,3 +82,4 @@ $MQ_BREAKPOINTS: (
 @import "./rules/spacing";
 @import "./rules/text";
 @import "./rules/transform";
+@import "./rules/z_index";

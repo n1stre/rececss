@@ -1,9 +1,3 @@
-// todo
-// .fx flex:;
-// .fxb flex-basis:;
-// .fxf flex-flow:;
-// .fxg flex-grow:;
-// .fxsh flex-shrink:;
 
 @include class("fx_1") { flex: 1; }
 @include class("fx_00a") { flex: 0 0 auto; }
@@ -22,6 +16,7 @@
 @include class("fxw_w") { flex-wrap: wrap; }
 @include class("fxw_wr") { flex-wrap: wrap-reverse; }
 
+@include class("jc_u") { justify-content: unset; }
 @include class("jc_c") { justify-content: center; }
 @include class("jc_fe") { justify-content: flex-end; }
 @include class("jc_fs") { justify-content: flex-start; }

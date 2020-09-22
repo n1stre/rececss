@@ -1,19 +1,16 @@
-@mixin class($name, $breakpoints: true, $hover: false, $child: false) {
+@mixin class($name, $hover: false, $breakpoints: true) {
   .#{$name} {
     @content;
   }
 
-  @if ($breakpoints) {
-    @include each_breakpoint($name) {
+  @if ($hover) {
+    .hv--#{$name}:hover {
       @content;
     }
   }
 
-  @if ($child) {
-    @include first_child($name) {
-      @content;
-    }
-    @include last_child($name) {
+  @if ($breakpoints) {
+    @include each_breakpoint($name) {
       @content;
     }
   }

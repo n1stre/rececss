@@ -18,10 +18,10 @@
 @include class("tal_r") { text-align-last: right; }
 
 
-@include class("td_n") { text-decoration: none; }
-@include class("td_u") { text-decoration: underline; }
-@include class("td_o") { text-decoration: overline; }
-@include class("td_l") { text-decoration: line-through; }
+@include class("td_n", true) { text-decoration: none; }
+@include class("td_u", true) { text-decoration: underline; }
+@include class("td_o", true) { text-decoration: overline; }
+@include class("td_l", true) { text-decoration: line-through; }
 
 @include class("te_n") { text-emphasis: none; }
 @include class("te_ac") { text-emphasis: accent; }

@@ -19,3 +19,7 @@
 @each $val in $FONT_SIZES_IN_PX {
   @include class("fz_#{$val}") { font-size: $val + px; }
 }
+
+@each $name, $val in $FONT_FAMILIES {
+  @include class("ff_#{$name}") { font-family: $val; }
+}

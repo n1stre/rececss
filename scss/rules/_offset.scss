@@ -21,14 +21,14 @@
 @for $i from 1 through 20 {
   $val: $i * 5;
 
-  .t_#{$val}p { top: unquote($val + "%"); }
-  .b_#{$val}p { bottom: unquote($val + "%"); }
-  .r_#{$val}p { right: unquote($val + "%"); }
-  .l_#{$val}p { left: unquote($val + "%"); }
+  @include class("t_#{$val}p") { top: unquote($val + "%"); }
+  @include class("b_#{$val}p") { bottom: unquote($val + "%"); }
+  @include class("r_#{$val}p") { right: unquote($val + "%"); }
+  @include class("l_#{$val}p") { left: unquote($val + "%"); }
 
-  .t_-#{$val}p { top: unquote(-$val + "%"); }
-  .b_-#{$val}p { bottom: unquote(-$val + "%"); }
-  .r_-#{$val}p { right: unquote(-$val + "%"); }
-  .l_-#{$val}p { left: unquote(-$val + "%"); }
+  @include class("t_-#{$val}p") { top: unquote(-$val + "%"); }
+  @include class("b_-#{$val}p") { bottom: unquote(-$val + "%"); }
+  @include class("r_-#{$val}p") { right: unquote(-$val + "%"); }
+  @include class("l_-#{$val}p") { left: unquote(-$val + "%"); }
 
 }

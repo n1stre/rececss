@@ -4,11 +4,22 @@ $SPACING_MAX: 200 !default;
 $SPACING_STEP: 5 !default;
 $OFFSET_MAX: 200 !default;
 $OFFSET_STEP: 5 !default;
-$FONT_SIZES_IN_PX: 10, 12, 14, 16, 18, 20, 24, 32, 48, 54 !default;
 $Z_INDEXES: 1 10 1, 100 900 100 !default;
 $TRANSFORM_ROTATION_DEG_STEP: 15 !default;
 $TRANSFORM_TRANSLATE_STEP: 15 !default;
-$FLEX_GRID_LAYOUTS: 1 (0, 20, 40), 2 (0, 20, 40), 4 (0, 10, 40) !default;
+$FLEX_GRID_LAYOUTS: 1 (0, 20, 40), 2 (0, 20, 40), 3 (20), 4 (0, 10, 40) !default;
+
+$FONT_SIZES_IN_PX: 10, 12, 14, 16, 18, 20, 24, 32, 40, 48, 54 !default;
+$FONT_FAMILIES: (
+  // prettier-ignore
+  pri: ("Inter", sans-serif),
+  sec: ("Spectral", serif)
+);
+
+$BORDER_RADIUSES_IN_PX: 5 !default;
+$BORDERS: (
+  thingrey: 1px solid transparentize(#1a1a1a, 0.9),
+) !default;
 
 $CLR_BG_PALLETE: (
   grey: #f6f6f6,
@@ -24,11 +35,6 @@ $CLR_TEXT_PALLETE: (
   white: #ffffff,
   red: #df5541,
   green: #9fe8b4,
-) !default;
-
-$BORDER_RADIUSES_IN_PX: 5 !default;
-$BORDERS: (
-  thingrey: 1px solid transparentize(#1a1a1a, 0.9),
 ) !default;
 
 $MQ_BREAKPOINTS: (
@@ -67,6 +73,7 @@ $MQ_BREAKPOINTS: (
 @import "./rules/background";
 @import "./rules/border";
 @import "./rules/box";
+@import "./rules/color";
 @import "./rules/cursor";
 @import "./rules/dimensions";
 @import "./rules/display";

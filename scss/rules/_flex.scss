@@ -35,3 +35,6 @@
 @include class("ai_fe") { align-items: flex-end; }
 @include class("ai_fs") { align-items: flex-start; }
 @include class("ai_s") { align-items: stretch; }
+
+@include class("ord_u") { order: unset; }
+@include class("ord_-1") { order: -1; }

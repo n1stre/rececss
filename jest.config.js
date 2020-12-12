@@ -5,12 +5,16 @@ module.exports = {
   transform: {
     "^.+\\.tsx?$": "ts-jest",
   },
+  moduleNameMapper: {
+    "^@mocks/(.*)$": "<rootDir>/__tests__/mocks/$1",
+    "^@shared/(.*)$": "<rootDir>/src/shared/$1",
+  },
 
   testEnvironment: "node",
   testMatch: ["**/*.(test|spec).(js|ts|tsx)"],
   testPathIgnorePatterns: ["/node_modules/"],
 
-  collectCoverage: false,
+  collectCoverage: true,
   collectCoverageFrom: ["src/**/*.ts*"],
   coverageDirectory: "tests/coverage",
   coveragePathIgnorePatterns: ["/node_modules/"],

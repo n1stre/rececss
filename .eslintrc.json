@@ -4,5 +4,8 @@
     "prettier",
     "prettier/@typescript-eslint"
   ],
-  "parser": "@typescript-eslint/parser"
+  "parser": "@typescript-eslint/parser",
+  "rules": {
+    "ban-ts-comment": false
+  }
 }

@@ -1,3 +1,3 @@
-import buildConfigAdapterV1 from "./V1/ConfigAdapterV1";
+import buildConfigAdapterV1 from "./V1";
 
 export default buildConfigAdapterV1;

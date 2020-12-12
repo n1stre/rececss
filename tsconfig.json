@@ -10,8 +10,16 @@
     "experimentalDecorators": true,
     "allowSyntheticDefaultImports": true,
     "declaration": true,
-    "outDir": "dist"
+    "outDir": "dist",
+    "typeRoots": ["./**/__types__", "./node_modules/@types"],
+    "baseUrl": ".",
+    "paths": {
+      "*": ["node_modules/*"],
+      "@fixtures/*": ["__tests__/fixtures/*"],
+      "@mocks/*": ["__tests__/mocks/*"],
+      "@shared/*": ["src/shared/*"]
+    }
   },
-  "include": ["src"],
+  "include": ["src", "__types__/index.d.ts"],
   "exclude": ["node_modules", "**/*.spec.ts"]
 }

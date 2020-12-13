@@ -16,7 +16,7 @@ module.exports = {
 
   collectCoverage: true,
   collectCoverageFrom: ["src/**/*.ts*"],
-  coverageDirectory: "tests/coverage",
+  coverageDirectory: "__tests__/coverage",
   coveragePathIgnorePatterns: ["/node_modules/"],
   coverageReporters: ["json", "lcov", "text", "text-summary"],
   coverageThreshold: {

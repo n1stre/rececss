@@ -47,13 +47,10 @@ export default (d: {
     }) {
       if (!params.data) return null;
 
-      const result: any = {};
+      const result: Record<string, any[]> = {};
 
       Object.entries(params.data).forEach(([unit, data]) => {
-        if (!data) {
-          return;
-        }
-
+        if (!data) return;
         if (params.unitValidators?.some((fn) => !fn(unit))) {
           return params.onUnitError?.(unit);
         }

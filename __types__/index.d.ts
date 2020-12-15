@@ -21,7 +21,7 @@ declare interface Config {
 }
 
 declare interface ConfigInstance {
-  getPaddings: () => Partial<Record<CSSUnit, number[]>>;
+  getPaddings: () => Partial<Record<CSSUnit, number[]>> | null;
   // getMargins: () => Partial<Record<CSSUnit, number[]>>;
   // getOffsets: () => Record<CSSUnit, number[]>;
   // getZIndexes: () => Record<CSSUnit, number[]>;

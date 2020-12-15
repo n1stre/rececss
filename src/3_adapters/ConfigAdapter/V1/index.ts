@@ -1,5 +1,6 @@
 export default (d: {
-  logWarning: (s: string) => void;
+  onUnitError: (p: string, u: unknown) => void;
+  onValueError: (p: string, v: unknown, unit?: string) => void;
   isArray: (v: unknown) => boolean;
   isNumber: (v: unknown) => boolean;
   rangeInclusive: (start: number, stop: number, step: number) => number[];
@@ -10,16 +11,24 @@ export default (d: {
 
     return Object.freeze({
       getPaddings: () => {
-        return parseValuesByUnit({
-          property: "padding",
+        return parseUnitsValues({
           data: config.paddings,
-          unitValidators: [isLengthUnit],
+          unitValidators: [oneOf("px", "em", "%")],
           valueValidators: [utils.isNumber, isNonNegative],
+          onUnitError: (u) => utils.onUnitError("padding", u),
+          onValueError: (v, u) => utils.onValueError("padding", v, u),
         });
       },
+
       // getMargins: () => {},
       // getOffsets: () => {},
-      // getZIndexes: () => {},
+      // getZIndexes: () => {
+      //   return parseValues({
+      //     data: config.zIndexes,
+      //     validators: [utils.isNumber],
+      //     onError: (value) => utils.onValueError("zIndex", { value }),
+      //   });
+      // },
       // getFontSizes: () => {},
       // getFontFamilies: () => {},
       // getBorders: () => {},
@@ -29,29 +38,28 @@ export default (d: {
       // getMediaBreakpoints: () => {},
     });
 
-    function parseValuesByUnit(params: {
-      property: string;
-      data: Record<string, unknown[]>;
+    function parseUnitsValues(params: {
+      data?: Partial<Record<string, any[]>>;
       unitValidators?: ((s: string) => boolean)[];
       valueValidators?: ((v: unknown) => boolean)[];
+      onUnitError?: (u: unknown) => void;
+      onValueError?: (v: unknown, u: string) => void;
     }) {
       if (!params.data) return null;
 
-      const unitValidators = params.unitValidators || [];
-      const valueValidators = params.valueValidators || [];
-      const entries = Object.entries(params.data);
-      const result = {};
+      const result: Record<string, any[]> = {};
 
-      entries.forEach(([unit, values]) => {
-        if (unitValidators.some((fn) => !fn(unit))) {
-          return invalidUnitWarning(unit, params.property);
+      Object.entries(params.data).forEach(([unit, data]) => {
+        if (!data) return;
+        if (params.unitValidators?.some((fn) => !fn(unit))) {
+          return params.onUnitError?.(unit);
         }
 
-        const unitValues = values
-          .map((v) => (isRange(v) ? utils.rangeInclusive(v[0], v[1], v[2]) : v))
-          .flat()
-          .filter(makeValidateValue(valueValidators, unit, params.property))
-          .sort((a, b) => Number(a) - Number(b));
+        const unitValues = parseValues({
+          data,
+          validators: params.valueValidators,
+          onError: (v: any) => params.onValueError?.(v, unit),
+        });
 
         if (unitValues.length) {
           result[unit] = unitValues;
@@ -61,20 +69,31 @@ export default (d: {
       return Object.keys(result).length ? result : null;
     }
 
+    function parseValues(params: {
+      data: any[];
+      validators?: ((v: unknown) => boolean)[];
+      onError?: (v: unknown) => void;
+    }) {
+      return params.data
+        .map((v) => (isRange(v) ? utils.rangeInclusive(v[0], v[1], v[2]) : v))
+        .flat()
+        .filter(makeValidateValue(params.validators, params.onError))
+        .sort((a, b) => Number(a) - Number(b));
+    }
+
     function makeValidateValue(
-      validators: ((v: unknown) => boolean)[],
-      unit: string,
-      property: string,
+      validators?: ((v: unknown) => boolean)[],
+      onError?: (v: unknown) => void,
     ) {
-      return (value) => {
-        const hasError = !!validators.some((fn) => !fn(value));
+      return (value: any) => {
+        const hasError = !!validators?.some((fn) => !fn(value));
         const isValid = !hasError;
-        if (hasError) invalidValueWarning(value, unit, property);
+        if (hasError) onError?.(value);
         return isValid;
       };
     }
 
-    function isRange(v: unknown) {
+    function isRange(v: any[]): v is number[] {
       return (
         utils.isArray(v) &&
         utils.isNumber(v[0]) &&
@@ -83,22 +102,12 @@ export default (d: {
       );
     }
 
-    function isLengthUnit(v) {
-      return ["px", "em", "%"].includes(v);
+    function oneOf(...args: any[]) {
+      return (v: any) => args.includes(v);
     }
 
-    function isNonNegative(v) {
+    function isNonNegative(v: number) {
       return v >= 0;
-    }
-
-    function invalidUnitWarning(unit, property) {
-      return utils.logWarning(`Invalid unit for ${property}: ${unit}`);
-    }
-
-    function invalidValueWarning(value, unit, property) {
-      return utils.logWarning(
-        `Invalid value for ${property} in ${unit} unit: ${value}`,
-      );
     }
   };
 };

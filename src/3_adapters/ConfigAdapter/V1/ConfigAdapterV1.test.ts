@@ -2,7 +2,8 @@ import * as utils from "@shared/utils";
 import buildConfigAdapter from "./index";
 
 const makeConfigAdapter = buildConfigAdapter({
-  logWarning: console.log,
+  onUnitError: (p, u) => console.warn(`Invalid unit for ${p}: ${u}`),
+  onValueError: (p, v, u) => console.warn(`Invalid value for ${p} ${u}: ${v}`),
   isArray: utils.isArray,
   isNumber: utils.isNumber,
   rangeInclusive: utils.rangeInclusive,

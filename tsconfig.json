@@ -19,6 +19,8 @@
       "*": ["node_modules/*"],
       "@fixtures/*": ["__tests__/fixtures/*"],
       "@mocks/*": ["__tests__/mocks/*"],
+      "@entities/*": ["src/1_entities/*"],
+      "@usecases/*": ["src/2_usecases/*"],
       "@shared/*": ["src/shared/*"]
     }
   },

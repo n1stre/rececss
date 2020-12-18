@@ -1,5 +1,17 @@
+export type CSSUnit = CSSAbsoluteUnit | CSSRelativeUnit;
+export type CSSAbsoluteUnit = "cm" | "mm" | "in" | "px" | "pt" | "pc";
+export type CSSRelativeUnit =
+  | "em"
+  | "ex"
+  | "ch"
+  | "rem"
+  | "vw"
+  | "vh"
+  | "vmin"
+  | "vmax"
+  | "%";
+
 export type CSSProperty = string;
-type CSSUnit = string;
 type CSSValue = string | number;
 
 export type CSSDeclarationDTO = {

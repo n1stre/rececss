@@ -1,16 +1,3 @@
-declare type CSSUnit = CSSAbsoluteUnit | CSSRelativeUnit;
-declare type CSSAbsoluteUnit = "cm" | "mm" | "in" | "px" | "pt" | "pc";
-declare type CSSRelativeUnit =
-  | "em"
-  | "ex"
-  | "ch"
-  | "rem"
-  | "vw"
-  | "vh"
-  | "vmin"
-  | "vmax"
-  | "%";
-
 declare type ConfigLengthUnitRange = [number, number, number]; // [min, max, step]
 declare type ConfigLengthUnitValue = number | ConfigLengthUnitRange;
 declare interface Config {

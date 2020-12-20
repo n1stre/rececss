@@ -3,7 +3,7 @@
 <html lang="en">
 
 <head>
-    <title>Code coverage report for shared/utils/index.ts</title>
+    <title>Code coverage report for 3_adapters/ClassnamesMapper/ClassnamesMapper.ts</title>
     <meta charset="utf-8" />
     <link rel="stylesheet" href="../../prettify.css" />
     <link rel="stylesheet" href="../../base.css" />
@@ -19,34 +19,34 @@
 <body>
 <div class='wrapper'>
     <div class='pad1'>
-        <h1><a href="../../index.html">All files</a> / <a href="index.html">shared/utils</a> index.ts</h1>
+        <h1><a href="../../index.html">All files</a> / <a href="index.html">3_adapters/ClassnamesMapper</a> ClassnamesMapper.ts</h1>
         <div class='clearfix'>
             
             <div class='fl pad1y space-right2'>
                 <span class="strong">100% </span>
                 <span class="quiet">Statements</span>
-                <span class='fraction'>13/13</span>
+                <span class='fraction'>7/7</span>
             </div>
         
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">50% </span>
+                <span class="strong">75% </span>
                 <span class="quiet">Branches</span>
-                <span class='fraction'>2/4</span>
+                <span class='fraction'>3/4</span>
             </div>
         
             
             <div class='fl pad1y space-right2'>
                 <span class="strong">100% </span>
                 <span class="quiet">Functions</span>
-                <span class='fraction'>5/5</span>
+                <span class='fraction'>4/4</span>
             </div>
         
             
             <div class='fl pad1y space-right2'>
                 <span class="strong">100% </span>
                 <span class="quiet">Lines</span>
-                <span class='fraction'>9/9</span>
+                <span class='fraction'>7/7</span>
             </div>
         
             
@@ -74,51 +74,39 @@
 <a name='L15'></a><a href='#L15'>15</a>
 <a name='L16'></a><a href='#L16'>16</a>
 <a name='L17'></a><a href='#L17'>17</a>
-<a name='L18'></a><a href='#L18'>18</a>
-<a name='L19'></a><a href='#L19'>19</a>
-<a name='L20'></a><a href='#L20'>20</a>
-<a name='L21'></a><a href='#L21'>21</a>
-<a name='L22'></a><a href='#L22'>22</a></td><td class="line-coverage quiet"><span class="cline-any cline-yes">1x</span>
-<span class="cline-any cline-yes">55x</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-yes">1x</span>
-<span class="cline-any cline-yes">28x</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-yes">1x</span>
-<span class="cline-any cline-yes">3x</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-yes">21x</span>
+<a name='L18'></a><a href='#L18'>18</a></td><td class="line-coverage quiet"><span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">20x</span>
+<span class="cline-any cline-yes">20x</span>
+<span class="cline-any cline-yes">20x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-yes">3x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span></td><td class="text"><pre class="prettyprint lang-js">export const isNumber = (v: unknown): boolean =&gt; {
-  return typeof v === "number" &amp;&amp; !isNaN(v);
-};
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span></td><td class="text"><pre class="prettyprint lang-js">interface _ProxyConstructor {
+  new &lt;T, H extends object&gt;(target: T, handler: ProxyHandler&lt;H&gt;): H;
+}
+const _Proxy = Proxy as _ProxyConstructor;
 &nbsp;
-export const isArray = (v: unknown): boolean =&gt; {
-  return Array.isArray(v);
-};
-&nbsp;
-export const range = (start: number, stop: number, step = <span class="branch-0 cbranch-no" title="branch not covered" >1)</span>: number[] =&gt; {
-  return Array(Math.ceil((stop - start) / step))
-    .fill(start)
-    .map((x, y) =&gt; parseFloat((x + y * step).toFixed(5)));
-};
-&nbsp;
-export const rangeInclusive = (
-  start: number,
-  stop: number,
-  step = <span class="branch-0 cbranch-no" title="branch not covered" >1,</span>
-): number[] =&gt; {
-  return range(start, stop + step, step);
+export default (p: { valueSymbol: string }) =&gt; {
+  return function makeClassnamesMapper(map: Record&lt;string, string&gt; = {}) {
+    return new _Proxy&lt;typeof map, Record&lt;string, (v?: string) =&gt; string&gt;&gt;(map, {
+      get(_, name: string) {
+        return (val: string = "") =&gt; {
+          const mapValue = name in map ? <span class="branch-0 cbranch-no" title="branch not covered" >map[name] </span>: `${name}_${val}`;
+          return mapValue.replace(p.valueSymbol, val);
+        };
+      },
+    });
+  };
 };
 &nbsp;</pre></td></tr></table></pre>
 
@@ -127,7 +115,7 @@ export const rangeInclusive = (
             <div class='footer quiet pad2 space-top1 center small'>
                 Code coverage generated by
                 <a href="https://istanbul.js.org/" target="_blank">istanbul</a>
-                at Tue Dec 15 2020 22:21:09 GMT+0200 (Eastern European Standard Time)
+                at Mon Dec 21 2020 01:41:29 GMT+0200 (Eastern European Standard Time)
             </div>
         </div>
         <script src="../../prettify.js"></script>

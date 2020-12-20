@@ -4,7 +4,7 @@ import {
 } from "@entities/CssRuleset/CssRuleset.interface";
 
 export interface CssRulesetsInteractor {
-  createSizeRulesets: (dto: Record<CSSUnit, number[]>) => CSSRulesetDTO[];
+  createSizeRulesets: (dto: string[]) => CSSRulesetDTO[];
   createPaddingRulesets: (dto: Record<CSSUnit, number[]>) => CSSRulesetDTO[];
   createMarginRulesets: (dto: Record<CSSUnit, number[]>) => CSSRulesetDTO[];
   createOffsetRulesets: (dto: Record<CSSUnit, number[]>) => CSSRulesetDTO[];

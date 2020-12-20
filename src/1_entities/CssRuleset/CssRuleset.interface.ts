@@ -14,11 +14,7 @@ export type CSSRelativeUnit =
 export type CSSProperty = string;
 type CSSValue = string | number;
 
-export type CSSDeclarationDTO = {
-  property: CSSProperty;
-  value: CSSValue;
-};
-
+export type CSSDeclarationDTO = [CSSProperty, CSSValue] | string[];
 export type CSSRulesetDTO = {
   selector?: string | null;
   declarations?: CSSDeclarationDTO[];

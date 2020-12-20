@@ -1,10 +1,11 @@
+import { CSSDeclarationDTO } from "./CssRuleset.interface";
 import CSSRuleset from "./index";
 
 const basic = {
   selector: ".cn",
   declarations: [
-    { property: "width", value: "20px" },
-    { property: "background", value: "red" },
+    ["width", "20px"],
+    ["background", "red"],
   ],
 };
 
@@ -17,8 +18,8 @@ describe("CSSRuleset", () => {
   it("should read declarations", () => {
     const rs = CSSRuleset.make(basic);
     expect(rs.getDeclarations()).toEqual([
-      { property: "width", value: "20px" },
-      { property: "background", value: "red" },
+      ["width", "20px"],
+      ["background", "red"],
     ]);
   });
 
@@ -40,7 +41,7 @@ describe("CSSRuleset", () => {
 
   it("should add declaration", () => {
     const rs = CSSRuleset.make(basic);
-    const d = { property: "color", value: "blue" };
+    const d = ["color", "blue"];
     expect(rs.getDeclarationValue("color")).toBe(null);
     expect(rs.addDeclaration(d).getDeclarationValue("color")).toBe("blue");
   });
@@ -54,10 +55,7 @@ describe("CSSRuleset", () => {
 
   it("should find declaration by property", () => {
     const rs = CSSRuleset.make(basic);
-    expect(rs.getDeclaration("width")).toEqual({
-      property: "width",
-      value: "20px",
-    });
+    expect(rs.getDeclaration("width")).toEqual(["width", "20px"]);
   });
 
   it("should be represented as CSS string", () => {

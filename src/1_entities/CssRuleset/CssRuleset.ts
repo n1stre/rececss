@@ -17,7 +17,7 @@ export default (p: {}) => {
       getDeclarations: () => dto.declarations,
       getDeclaration: (property: CSSProperty) => findDeclaration(property),
       getDeclarationValue: (property: CSSProperty) => {
-        return findDeclaration(property)?.value || null;
+        return findDeclaration(property)?.[1] || null;
       },
       setSelector(selector: string) {
         dto.selector = selector;
@@ -32,9 +32,7 @@ export default (p: {}) => {
         return this;
       },
       removeDeclaration(property: CSSProperty) {
-        dto.declarations = dto.declarations.filter(
-          (d) => d.property !== property,
-        );
+        dto.declarations = dto.declarations.filter((d) => d[0] !== property);
         return this;
       },
       toString: () => {
@@ -45,13 +43,11 @@ export default (p: {}) => {
     });
 
     function declarationsToString() {
-      return dto.declarations
-        .map((d) => `${d.property}: ${d.value};`)
-        .join(" ");
+      return dto.declarations.map((d) => `${d[0]}: ${d[1]};`).join(" ");
     }
 
     function findDeclaration(property: CSSProperty) {
-      return dto.declarations.find((d) => d.property === property) || null;
+      return dto.declarations.find((d) => d[0] === property) || null;
     }
   };
 };

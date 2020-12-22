@@ -9,6 +9,17 @@ const interactor = CssRulesetsInteractor.prebuild({
 
 describe("CssRulesetsInteractor", () => {
   it("should create size rulesets", () => {
+    function sizeSet(val: string) {
+      return [
+        CssRuleset.fromArgs(cnm.width(val), ["width", val]).toDTO(),
+        CssRuleset.fromArgs(cnm.maxWidth(val), ["max-width", val]).toDTO(),
+        CssRuleset.fromArgs(cnm.minWidth(val), ["min-width", val]).toDTO(),
+        CssRuleset.fromArgs(cnm.height(val), ["height", val]).toDTO(),
+        CssRuleset.fromArgs(cnm.maxHeight(val), ["max-height", val]).toDTO(),
+        CssRuleset.fromArgs(cnm.minHeight(val), ["min-height", val]).toDTO(),
+      ];
+    }
+
     expect(
       interactor.createSizeRulesets([
         { length: 10, unit: "px" },
@@ -19,57 +30,123 @@ describe("CssRulesetsInteractor", () => {
     ).toEqual([
       CssRuleset.fromArgs(cnm.widthAuto(), ["width", "auto"]).toDTO(),
       CssRuleset.fromArgs(cnm.heightAuto(), ["height", "auto"]).toDTO(),
-      CssRuleset.fromArgs(cnm.width("10px"), ["width", "10px"]).toDTO(),
-      CssRuleset.fromArgs(cnm.height("10px"), ["height", "10px"]).toDTO(),
-      CssRuleset.fromArgs(cnm.width("20px"), ["width", "20px"]).toDTO(),
-      CssRuleset.fromArgs(cnm.height("20px"), ["height", "20px"]).toDTO(),
-      CssRuleset.fromArgs(cnm.width("1em"), ["width", "1em"]).toDTO(),
-      CssRuleset.fromArgs(cnm.height("1em"), ["height", "1em"]).toDTO(),
-      CssRuleset.fromArgs(cnm.width("2em"), ["width", "2em"]).toDTO(),
-      CssRuleset.fromArgs(cnm.height("2em"), ["height", "2em"]).toDTO(),
+      ...sizeSet("10px"),
+      ...sizeSet("20px"),
+      ...sizeSet("1em"),
+      ...sizeSet("2em"),
     ]);
+  });
 
-    // @include class("w_a") { width: auto; }
-    // @include class("w_100p") { width: 100%; }
+  it("should create padding rulesets", () => {
+    function paddingSet(val: string) {
+      // prettier-ignore
+      return [
+        CssRuleset.fromArgs(cnm.padding(val), ["padding", val]).toDTO(),
+        CssRuleset.fromArgs(cnm.paddingTop(val), ["padding-top", val]).toDTO(),
+        CssRuleset.fromArgs(cnm.paddingBottom(val), ["padding-bottom", val]).toDTO(),
+        CssRuleset.fromArgs(cnm.paddingVertical(val), ["padding-top", val], ["padding-bottom", val]).toDTO(),
+        CssRuleset.fromArgs(cnm.paddingLeft(val), ["padding-left", val]).toDTO(),
+        CssRuleset.fromArgs(cnm.paddingRight(val), ["padding-right", val]).toDTO(),
+        CssRuleset.fromArgs(cnm.paddingHorizontal(val), ["padding-left", val], ["padding-right", val]).toDTO(),
+      ]
+    }
 
-    // @include class("h_a") { height: auto; }
-    // @include class("h_100vh") { height: 100vh; }
-    // @include class("h_100p") { height: 100%; }
+    expect(
+      interactor.createPaddingRulesets([
+        { length: 5, unit: "px" },
+        { length: 10, unit: "px" },
+        { length: 20, unit: "em" },
+      ]),
+    ).toEqual([
+      ...paddingSet("5px"),
+      ...paddingSet("10px"),
+      ...paddingSet("20em"),
+    ]);
+  });
 
-    // @include class("maw_n") { max-width: none; }
-    // @include class("maw_100vh") { max-width: 100vw; }
-    // @include class("miw_0") { min-width: 0; }
-    // @include class("miw_u") { min-width: unset; }
-    // @include class("miw_100vh") { min-width: 100vw; }
+  it("should create margin rulesets", () => {
+    function marginSet(val: string) {
+      // prettier-ignore
+      return [
+        CssRuleset.fromArgs(cnm.margin(val), ["margin", val]).toDTO(),
+        CssRuleset.fromArgs(cnm.marginTop(val), ["margin-top", val]).toDTO(),
+        CssRuleset.fromArgs(cnm.marginBottom(val), ["margin-bottom", val]).toDTO(),
+        CssRuleset.fromArgs(cnm.marginVertical(val), ["margin-top", val], ["margin-bottom", val]).toDTO(),
+        CssRuleset.fromArgs(cnm.marginLeft(val), ["margin-left", val]).toDTO(),
+        CssRuleset.fromArgs(cnm.marginRight(val), ["margin-right", val]).toDTO(),
+        CssRuleset.fromArgs(cnm.marginHorizontal(val), ["margin-left", val], ["margin-right", val]).toDTO(),
+      ]
+    }
 
-    // @include class("mah_n") { max-height: none; }
-    // @include class("mah_100vh") { max-height: 100vh; }
-    // @include class("mih_0") { min-height: 0; }
-    // @include class("mih_u") { min-height: unset; }
-    // @include class("mih_100vh") { min-height: 100vh; }
+    expect(
+      interactor.createMarginRulesets([
+        { length: -5, unit: "px" },
+        { length: 10, unit: "px" },
+        { length: 20, unit: "em" },
+      ]),
+    ).toEqual([
+      ...marginSet("-5px"),
+      ...marginSet("10px"),
+      ...marginSet("20em"),
+    ]);
+  });
 
-    // @for $i from 1 through ($DIMENSIONS_MAX / $DIMENSIONS_STEP) {
-    //   $val: $i * $DIMENSIONS_STEP;
+  it("should create offset rulesets", () => {
+    function offsetSet(val: string) {
+      // prettier-ignore
+      return [
+        CssRuleset.fromArgs(cnm.top(val), ["top", val]).toDTO(),
+        CssRuleset.fromArgs(cnm.bottom(val), ["bottom", val]).toDTO(),
+        CssRuleset.fromArgs(cnm.left(val), ["left", val]).toDTO(),
+        CssRuleset.fromArgs(cnm.right(val), ["right", val]).toDTO(),
+        CssRuleset.fromArgs(cnm.topLeft(val), ["top", val], ["left", val]).toDTO(),
+        CssRuleset.fromArgs(cnm.topRight(val), ["top", val], ["right", val]).toDTO(),
+        CssRuleset.fromArgs(cnm.bottomLeft(val), ["bottom", val], ["left", val]).toDTO(),
+        CssRuleset.fromArgs(cnm.bottomRight(val), ["bottom", val], ["right", val]).toDTO(),
+      ]
+    }
 
-    //   @include class("w_#{$val}") { width: $val + px; }
-    //   @include class("h_#{$val}") { height: $val + px; }
-    //   @include class("maw_#{$val}") { max-width: $val + px; }
-    //   @include class("mah_#{$val}") { max-height: $val + px; }
-    //   @include class("miw_#{$val}") { min-width: $val + px; }
-    //   @include class("mih_#{$val}") { min-height: $val + px; }
-    // }
+    expect(
+      interactor.createOffsetRulesets([
+        { length: 10, unit: "px" },
+        { length: 20, unit: "em" },
+      ]),
+    ).toEqual([...offsetSet("10px"), ...offsetSet("20em")]);
+  });
 
-    // @for $i from 1 through 20 {
-    //   $val: $i * 5;
+  it("should create z-index rulesets", () => {
+    expect(interactor.createZIndexRulesets([10, 20, 100, 999])).toEqual([
+      CssRuleset.fromArgs(cnm.zIndex(10), ["z-index", 10]).toDTO(),
+      CssRuleset.fromArgs(cnm.zIndex(20), ["z-index", 20]).toDTO(),
+      CssRuleset.fromArgs(cnm.zIndex(100), ["z-index", 100]).toDTO(),
+      CssRuleset.fromArgs(cnm.zIndex(999), ["z-index", 999]).toDTO(),
+    ]);
+  });
 
-    //   @include class("w_#{$val}p") { width: unquote($val + "%"); }
-    //   @include class("h_#{$val}p") { height: unquote($val + "%"); }
-    //   @include class("w_#{$val}vw") { width: $val + vw; }
-    //   @include class("h_#{$val}vh") { height: $val + vh; }
-    //   @include class("maw_#{$val}p") { max-width: unquote($val + "%"); }
-    //   @include class("mah_#{$val}p") { max-height: unquote($val + "%"); }
-    //   @include class("miw_#{$val}p") { min-width: unquote($val + "%"); }
-    //   @include class("mih_#{$val}p") { min-height: unquote($val + "%"); }
-    // }
+  it("should create font-size rulesets", () => {
+    expect(
+      interactor.createFontSizeRulesets([
+        { length: 10, unit: "px" },
+        { length: 20, unit: "px" },
+        { length: 2, unit: "em" },
+      ]),
+    ).toEqual([
+      CssRuleset.fromArgs(cnm.fontSize("10px"), ["font-size", "10px"]).toDTO(),
+      CssRuleset.fromArgs(cnm.fontSize("20px"), ["font-size", "20px"]).toDTO(),
+      CssRuleset.fromArgs(cnm.fontSize("2em"), ["font-size", "2em"]).toDTO(),
+    ]);
+  });
+
+  it("should create font-family rulesets", () => {
+    // prettier-ignore
+    expect(
+      interactor.createFontFamilyRulesets({
+        primary: "Arial, sans-serif",
+        secondary: "Helvetica, serif",
+      }),
+    ).toEqual([
+      CssRuleset.fromArgs(cnm.fontFamily("primary"), ["font-family", "Arial, sans-serif"]).toDTO(),
+      CssRuleset.fromArgs(cnm.fontFamily("secondary"), ["font-family", "Helvetica, serif"]).toDTO(),
+    ]);
   });
 });

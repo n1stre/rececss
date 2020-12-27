@@ -14,21 +14,25 @@ export type CSSRelativeUnit =
 export type CSSProperty = string;
 type CSSValue = string | number;
 
-export type CSSDeclarationDTO = [CSSProperty, CSSValue] | string[];
+export type CSSDeclarationsDTO = Record<CSSProperty, CSSValue>;
+export type CSSDeclarationDTO = {
+  prop: CSSProperty;
+  value: CSSValue;
+};
 export type CSSRulesetDTO = {
   selector?: string | null;
-  declarations?: CSSDeclarationDTO[];
+  declarations?: CSSDeclarationsDTO;
 };
 
 export interface CSSRulesetInstance {
   getSelector: () => string | null;
-  getDeclarations: () => CSSDeclarationDTO[];
-  getDeclaration: (prop: CSSProperty) => CSSDeclarationDTO | null;
-  getDeclarationValue: (prop: CSSProperty) => CSSValue | null;
-  setSelector: (s: CSSProperty) => CSSRulesetInstance;
-  setDeclarations: (s: CSSDeclarationDTO[]) => CSSRulesetInstance;
-  addDeclaration: (declaration: CSSDeclarationDTO) => CSSRulesetInstance;
-  removeDeclaration: (prop: CSSProperty) => CSSRulesetInstance;
+  getDeclarations: () => CSSDeclarationsDTO;
+  getDeclaration: (v: CSSProperty) => CSSDeclarationDTO | null;
+  getDeclarationValue: (v: CSSProperty) => CSSValue | null;
+  setSelector: (v: CSSProperty) => CSSRulesetInstance;
+  setDeclarations: (v: CSSDeclarationsDTO) => CSSRulesetInstance;
+  addDeclarations: (v: CSSDeclarationsDTO) => CSSRulesetInstance;
+  removeDeclaration: (v: CSSProperty) => CSSRulesetInstance;
   toString: () => string;
   toDTO: () => CSSRulesetDTO;
 }

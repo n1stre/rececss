@@ -3,10 +3,10 @@ import CSSRuleset from "./index";
 
 const basic = {
   selector: ".cn",
-  declarations: [
-    ["width", "20px"],
-    ["background", "red"],
-  ],
+  declarations: {
+    width: "20px",
+    background: "red",
+  },
 };
 
 describe("CSSRuleset", () => {
@@ -17,10 +17,10 @@ describe("CSSRuleset", () => {
 
   it("should read declarations", () => {
     const rs = CSSRuleset.make(basic);
-    expect(rs.getDeclarations()).toEqual([
-      ["width", "20px"],
-      ["background", "red"],
-    ]);
+    expect(rs.getDeclarations()).toEqual({
+      width: "20px",
+      background: "red",
+    });
   });
 
   it("should update selector", () => {
@@ -41,9 +41,9 @@ describe("CSSRuleset", () => {
 
   it("should add declaration", () => {
     const rs = CSSRuleset.make(basic);
-    const d = ["color", "blue"];
+    const d = { color: "blue" };
     expect(rs.getDeclarationValue("color")).toBe(null);
-    expect(rs.addDeclaration(d).getDeclarationValue("color")).toBe("blue");
+    expect(rs.addDeclarations(d).getDeclarationValue("color")).toBe("blue");
   });
 
   it("should remove declaration", () => {
@@ -55,7 +55,10 @@ describe("CSSRuleset", () => {
 
   it("should find declaration by property", () => {
     const rs = CSSRuleset.make(basic);
-    expect(rs.getDeclaration("width")).toEqual(["width", "20px"]);
+    expect(rs.getDeclaration("width")).toEqual({
+      prop: "width",
+      value: "20px",
+    });
   });
 
   it("should be represented as CSS string", () => {

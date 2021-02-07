@@ -8,7 +8,9 @@
   },
   "scripts": {
     "test": "jest",
-    "test:watch": "jest --watch"
+    "test:watch": "jest --watch",
+    "g:e": "bystro ts__ca_entity ./src/1_entities",
+    "g:u": "bystro ts__ca_usecase ./src/2_usecases"
   },
   "repository": {
     "type": "git",
@@ -26,6 +28,7 @@
     "@types/node": "^14.14.11",
     "@typescript-eslint/eslint-plugin": "^4.9.1",
     "@typescript-eslint/parser": "^4.9.1",
+    "bystro": "^0.3.3",
     "eslint": "^7.15.0",
     "eslint-config-prettier": "^7.0.0",
     "eslint-plugin-prettier": "^3.2.0",

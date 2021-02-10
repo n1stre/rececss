@@ -1,6 +1,7 @@
 {
   "compilerOptions": {
     "target": "ES2019",
+    // "lib": ["ES2019"],
     "module": "CommonJS",
     "moduleResolution": "node",
     "skipLibCheck": true,
@@ -12,17 +13,9 @@
     "experimentalDecorators": true,
     "allowSyntheticDefaultImports": true,
     "outDir": "dist",
-    "typeRoots": ["./**/__types__", "./node_modules/@types"],
+    "typeRoots": ["./node_modules/@types"],
     "baseUrl": ".",
-    "paths": {
-      "*": ["node_modules/*"],
-      "@fixtures/*": ["__tests__/fixtures/*"],
-      "@mocks/*": ["__tests__/mocks/*"],
-      "@entities/*": ["src/1_entities/*"],
-      "@usecases/*": ["src/2_usecases/*"],
-      "@shared/*": ["src/shared/*"]
-    }
   },
-  "include": ["src", "__types__/index.d.ts"],
-  "exclude": ["node_modules", "**/*.spec.ts"]
+  "include": ["src"],
+  "exclude": ["node_modules", "**/*.spec.ts", "**/*.test.ts"]
 }

@@ -2,7 +2,15 @@ import { IRulesetDTO } from "../Ruleset/Ruleset.interface";
 
 export interface IStylesheetDTO {
   rulesets: IStylesheetRulesetDTO[];
-  media: IStylesheetMediaDTO | null;
+  media?: IStylesheetMediaDTO;
+}
+
+export interface IStylesheetProps {
+  rulesetToString: (rs: IStylesheetRulesetDTO) => string;
+  rulesetRename: (
+    rs: IStylesheetRulesetDTO,
+    fn: (name: string) => string,
+  ) => IStylesheetRulesetDTO;
 }
 
 export interface IStylesheetRulesetDTO extends IRulesetDTO {}
@@ -14,9 +22,9 @@ export interface IStylesheetMediaDTO {
 
 export interface IStylesheet {
   getRulesets: () => IStylesheetRulesetDTO[];
-  setRulesets: (...data: IStylesheetRulesetDTO[]) => IStylesheet;
-  getMedia: () => IStylesheetMediaDTO | null;
+  addRulesets: (...data: IStylesheetRulesetDTO[]) => IStylesheet;
+  getMedia: () => IStylesheetMediaDTO | undefined;
   setMedia: (media: IStylesheetMediaDTO) => IStylesheet;
-  toString: () => string;
+  getContents: () => string;
   toDTO: () => IStylesheetDTO;
 }

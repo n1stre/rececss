@@ -2,7 +2,11 @@ import { IRulesetDTO, IRuleset } from "./Ruleset.interface";
 
 const buildRuleset = () => {
   return class Ruleset implements IRuleset {
-    constructor(private dto: IRulesetDTO) {}
+    private dto: IRulesetDTO;
+
+    constructor(dto: IRulesetDTO) {
+      this.dto = { ...dto };
+    }
 
     public rename(fn: (old: string) => string) {
       this.dto.classname = fn(this.dto.classname);

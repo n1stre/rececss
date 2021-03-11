@@ -1,3 +1,0 @@
-@each $name, $color in $CLR_TEXT_PALLETE {
-  @include class("c_#{$name}") { color: $color; }
-}

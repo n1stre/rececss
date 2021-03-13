@@ -1,57 +1,44 @@
-import RulesetsBuilderMock from "../../../tests/mocks/RulesetsBuilderMock";
-import GenerateUtilityStylesheet from "./index";
+import { IRulesetsFactory } from "../interfaces";
+import GenerateStylesheetAssets from "./index";
 
-const Usecase = GenerateUtilityStylesheet.build();
-const builder = new RulesetsBuilderMock();
-const basicUsecase = new Usecase(builder);
+const Usecase = GenerateStylesheetAssets.build({
+  basename: "rececss",
+  extension: "css",
+});
+
+const factory: IRulesetsFactory = {
+  create: jest.fn(() => [
+    { classname: "w_10", declarations: "width: 10px;" },
+    { classname: "fz_16", declarations: "font-size: 16px;" },
+  ]),
+};
+const basicUsecase = new Usecase(factory);
 
 describe("GenerateUtilityStylesheet usecase", () => {
-  it("should contain specified utility rulesets", async () => {
-    const result = await basicUsecase.exec({
-      rules: {
-        size: { "5px": "5px", sm: "15px" },
-        margin: { "5px": "5px", sm: "15px" },
-        padding: { "5px": "5px", sm: "15px" },
-        offset: { "5px": "5px", sm: "15px" },
-        fontSize: { "5px": "5px", sm: "15px" },
-        fontFamily: { prim: "Arial, sans-serif", sec: "Helvetica, serif" },
-        zIndex: { popup: "900", toast: "100" },
-      },
-    });
+  it("should craete rulesets properly", async () => {
+    const values = {
+      size: {},
+      margin: {},
+      padding: {},
+      offset: {},
+      font: {},
+      flex: {},
+      border: {},
+      color: {},
+      zIndex: {},
+    };
 
-    const cnt = result[0].contents;
-
-    expect(cnt).toContain(".w_5px { width: 5px; }\n");
-    expect(cnt).toContain(".h_5px { height: 5px; }\n");
-    expect(cnt).toContain(".w_sm { width: 15px; }\n");
-    expect(cnt).toContain(".h_sm { height: 15px; }\n");
-    expect(cnt).toContain(".m_5px { margin: 5px; }\n");
-    expect(cnt).toContain(".m_sm { margin: 15px; }\n");
-    expect(cnt).toContain(".p_5px { padding: 5px; }\n");
-    expect(cnt).toContain(".p_sm { padding: 15px; }\n");
-    expect(cnt).toContain(".oft_5px { top: 5px; }\n");
-    expect(cnt).toContain(".ofb_5px { bottom: 5px; }\n");
-    expect(cnt).toContain(".oft_sm { top: 15px; }\n");
-    expect(cnt).toContain(".ofb_sm { bottom: 15px; }\n");
-    expect(cnt).toContain(".fz_5px { font-size: 5px; }\n");
-    expect(cnt).toContain(".fz_sm { font-size: 15px; }\n");
-    expect(cnt).toContain(".ff_prim { font-family: Arial, sans-serif; }\n");
-    expect(cnt).toContain(".ff_sec { font-family: Helvetica, serif; }\n");
-    expect(cnt).toContain(".z_popup { z-index: 900; }\n");
-    expect(cnt).toContain(".z_toast { z-index: 100; }\n");
+    await basicUsecase.exec({ values });
+    expect(factory.create).toBeCalledWith(values);
   });
 
-  it("should contain specified media queries", async () => {
+  it("should contain valid result", async () => {
     const md = "only screen and (min-width: 768px)";
     const lg = "only screen and (min-width: 999px)";
 
     const result = await basicUsecase.exec({
-      concat: true,
       media: { md, lg },
-      rules: {
-        margin: { "5px": "5px" },
-        fontSize: { "5px": "5px" },
-      },
+      values: {},
     });
 
     const contents = result[0].contents;
@@ -61,15 +48,15 @@ describe("GenerateUtilityStylesheet usecase", () => {
     expect(lgIdx).not.toBe(-1);
 
     const basePart = contents.slice(0, mdIdx);
-    expect(basePart).toContain(`.fz_5px { font-size: 5px; }\n`);
-    expect(basePart).toContain(`.m_5px { margin: 5px; }\n`);
+    expect(basePart).toContain(`.w_10 { width: 10px; }\n`);
+    expect(basePart).toContain(`.fz_16 { font-size: 16px; }\n`);
 
     const mdPart = contents.slice(mdIdx, lgIdx);
-    expect(mdPart).toContain(`.md\:fz_5px { font-size: 5px; }\n`);
-    expect(mdPart).toContain(`.md\:m_5px { margin: 5px; }\n`);
+    expect(mdPart).toContain(`.md\:w_10 { width: 10px; }\n`);
+    expect(mdPart).toContain(`.md\:fz_16 { font-size: 16px; }\n`);
 
     const lgPart = contents.slice(lgIdx, -1);
-    expect(lgPart).toContain(`.lg\:fz_5px { font-size: 5px; }\n`);
-    expect(lgPart).toContain(`.lg\:m_5px { margin: 5px; }\n`);
+    expect(lgPart).toContain(`.lg\:w_10 { width: 10px; }\n`);
+    expect(lgPart).toContain(`.lg\:fz_16 { font-size: 16px; }\n`);
   });
 });

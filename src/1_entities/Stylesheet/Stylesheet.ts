@@ -14,50 +14,47 @@ const buildStylesheet = (props: IStylesheetProps) => {
       this.dto = { rulesets: [], media: undefined, ...dto };
     }
 
-    public getRulesets() {
+    getRulesets() {
       return this.dto.rulesets;
     }
 
-    public addRulesets(...data: IStylesheetRulesetDTO[]) {
+    addRulesets(...data: IStylesheetRulesetDTO[]) {
       this.dto.rulesets = [...this.getRulesets(), ...data];
       return this;
     }
 
-    public getMedia() {
+    getMedia() {
       return this.dto.media;
     }
 
-    public setMedia(media: IStylesheetMediaDTO) {
+    setMedia(media: IStylesheetMediaDTO) {
       this.dto.media = media;
       return this;
     }
 
-    public getContents() {
-      const result: string[] = [];
+    getContents() {
       const media = this.getMedia();
-
-      if (media) {
-        const renameFn = (n: string) => media.name + ":" + n;
-        result.push(`@media ${media.query} {`);
-        result.push(...this.getStringifiedRulesets(renameFn));
-        result.push("}");
-      } else {
-        result.push(...this.getStringifiedRulesets());
-      }
-
-      return result.join("\n") + "\n";
+      if (media) return this.getMediaRulesetsString(media) + "\n";
+      return this.getRulesetsString() + "\n";
     }
 
-    public toDTO() {
+    toDTO() {
       return this.dto;
     }
 
-    private getStringifiedRulesets(renameFn?: (n: string) => string) {
-      return this.getRulesets().map((rs) => {
+    private getMediaRulesetsString(media: IStylesheetMediaDTO) {
+      const renameFn = (n: string) => media.name + ":" + n;
+      const rulesetsString = this.getRulesetsString(renameFn);
+      const result = [`@media ${media.query} {`, rulesetsString, "}"];
+      return result.join("\n");
+    }
+
+    private getRulesetsString(renameFn?: (n: string) => string) {
+      return this.getRulesets().reduce((acc, rs) => {
         const renamed = renameFn ? props.rulesetRename(rs, renameFn) : rs;
-        const stringified = props.rulesetToString(renamed);
-        return stringified;
-      });
+        const newLine = (acc ? "\n" : "") + props.rulesetToString(renamed);
+        return acc + newLine;
+      }, "");
     }
   };
 };

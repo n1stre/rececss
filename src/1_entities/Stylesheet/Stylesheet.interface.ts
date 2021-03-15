@@ -5,19 +5,19 @@ export interface IStylesheetDTO {
   media?: IStylesheetMediaDTO;
 }
 
+export interface IStylesheetRulesetDTO extends IRulesetDTO {}
+
+export interface IStylesheetMediaDTO {
+  name: string;
+  query: string;
+}
+
 export interface IStylesheetProps {
   rulesetToString: (rs: IStylesheetRulesetDTO) => string;
   rulesetRename: (
     rs: IStylesheetRulesetDTO,
     fn: (name: string) => string,
   ) => IStylesheetRulesetDTO;
-}
-
-export interface IStylesheetRulesetDTO extends IRulesetDTO {}
-
-export interface IStylesheetMediaDTO {
-  name: string;
-  query: string;
 }
 
 export interface IStylesheet {

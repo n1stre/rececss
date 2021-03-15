@@ -1,25 +1,55 @@
 import { IRulesetDTO } from "../1_entities/Ruleset/Ruleset.interface";
+import { IStylesheetDTO } from "../1_entities/Stylesheet/Stylesheet.interface";
 
 export interface IAsset {
   name: string;
   contents: string;
 }
 
-export interface IRulesetsValuesDTO {
-  size: Record<string, string>;
-  padding: Record<string, string>;
-  margin: Record<string, string>;
-  offset: Record<string, string>;
-  fontSize: Record<string, string>;
-  fontFamily: Record<string, string>;
-  border: Record<string, string>;
-  borderRadius: Record<string, string>;
-  color: Record<string, string>;
-  zIndex: Record<string, string>;
-}
+export type TRulesetValues = Record<string, string>;
 
-export interface IRulesetsBuilder {
-  addComputed: (data?: Partial<IRulesetsValuesDTO>) => IRulesetsBuilder;
-  addStatic: () => IRulesetsBuilder;
-  getResult: () => IRulesetDTO[];
+export type TSizeValues = Partial<{
+  width: TRulesetValues;
+  height: TRulesetValues;
+}>;
+
+export type TSpacingValues = Partial<{
+  shorthand: TRulesetValues;
+  edges: TRulesetValues;
+}>;
+
+export type TFontValues = Partial<{
+  shorthand: TRulesetValues;
+  family: TRulesetValues;
+  size: TRulesetValues;
+  lineHeight: TRulesetValues;
+}>;
+
+export type TBorderValues = Partial<{
+  shorthand: TRulesetValues;
+  radius: TRulesetValues;
+}>;
+
+export type TFlexValues = Partial<{
+  shorthand: TRulesetValues;
+  grow: TRulesetValues;
+  shrink: TRulesetValues;
+  basis: TRulesetValues;
+  order: TRulesetValues;
+}>;
+
+export type TConfigurableRulesetsValues = Partial<{
+  size: TSizeValues;
+  padding: TSpacingValues;
+  margin: TSpacingValues;
+  offset: TRulesetValues;
+  font: TFontValues;
+  flex: TFlexValues;
+  border: TBorderValues;
+  color: TRulesetValues;
+  zIndex: TRulesetValues;
+}>;
+
+export interface IRulesetsFactory {
+  create: (dto: TConfigurableRulesetsValues) => IRulesetDTO[];
 }

@@ -1,5 +1,5 @@
-import dto from "./Config.example";
 import Config from "./index";
+const dto = require("./Config.example");
 
 describe("Config", () => {
   it("should parse rules to values", () => {

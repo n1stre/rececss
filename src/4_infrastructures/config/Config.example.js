@@ -1,6 +1,5 @@
-import { IConfigDTO } from "../interfaces";
 
-export default {
+module.exports = {
   output: {
     path: "",
     splitByMedia: true,
@@ -86,4 +85,4 @@ export default {
       light: "#fff",
     },
   },
-} as IConfigDTO;
+}

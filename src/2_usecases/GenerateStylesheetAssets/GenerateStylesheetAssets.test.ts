@@ -8,7 +8,7 @@ const Usecase = GenerateStylesheetAssets.build({
 
 const factory: IRulesetsFactory = {
   create: jest.fn(() => [
-    { classname: "w_10", declarations: "width: 10px;" },
+    { classname: "w_10%", declarations: "width: 10%;" },
     { classname: "fz_16", declarations: "font-size: 16px;" },
   ]),
 };
@@ -48,15 +48,15 @@ describe("GenerateUtilityStylesheet usecase", () => {
     expect(lgIdx).not.toBe(-1);
 
     const basePart = contents.slice(0, mdIdx);
-    expect(basePart).toContain(`.w_10 { width: 10px; }\n`);
+    expect(basePart).toContain(`.w_10\\% { width: 10%; }\n`);
     expect(basePart).toContain(`.fz_16 { font-size: 16px; }\n`);
 
     const mdPart = contents.slice(mdIdx, lgIdx);
-    expect(mdPart).toContain(`.md\:w_10 { width: 10px; }\n`);
-    expect(mdPart).toContain(`.md\:fz_16 { font-size: 16px; }\n`);
+    expect(mdPart).toContain(`.md\\:w_10\\% { width: 10%; }\n`);
+    expect(mdPart).toContain(`.md\\:fz_16 { font-size: 16px; }\n`);
 
     const lgPart = contents.slice(lgIdx, -1);
-    expect(lgPart).toContain(`.lg\:w_10 { width: 10px; }\n`);
-    expect(lgPart).toContain(`.lg\:fz_16 { font-size: 16px; }\n`);
+    expect(lgPart).toContain(`.lg\\:w_10\\% { width: 10%; }\n`);
+    expect(lgPart).toContain(`.lg\\:fz_16 { font-size: 16px; }\n`);
   });
 });

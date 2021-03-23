@@ -18,7 +18,11 @@
     "type": "git",
     "url": "git+https://github.com/re-ce/rececss.git"
   },
-  "keywords": ["css", "atomic css", "css utilities"],
+  "keywords": [
+    "css",
+    "atomic css",
+    "css utilities"
+  ],
   "author": "Nikita Streletss",
   "license": "MIT",
   "bugs": {

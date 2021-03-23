@@ -3,6 +3,7 @@ node_modules/
 package-lock.json
 yarn.lock
 yarn-error.log
+pnpm-lock.yaml
 
 # Testing
 test/
@@ -37,3 +38,7 @@ benchmarks/
 settings.json
 CNAME
 .DS_Store
+rececss.config.js
+rececss.css
+rececss.lg.css
+rececss.md.css

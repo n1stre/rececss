@@ -1,9 +1,12 @@
-import { IConfigDTO } from "../interfaces";
 
-export default {
+module.exports = {
   output: {
     path: "",
     splitByMedia: true,
+  },
+  media: {
+    md: "only screen and (min-width: 768px)",
+    lg: "only screen and (min-width: 1024px)"
   },
   rules: {
     // prettier-ignore
@@ -86,4 +89,4 @@ export default {
       light: "#fff",
     },
   },
-} as IConfigDTO;
+}

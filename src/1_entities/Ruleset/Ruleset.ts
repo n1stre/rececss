@@ -14,11 +14,19 @@ const buildRuleset = () => {
     }
 
     public toString() {
-      return `.${this.dto.classname} { ${this.dto.declarations} }`;
+      const cn = this.escapeClassname(this.dto.classname);
+      return `.${cn} { ${this.dto.declarations} }`;
     }
 
     public toDTO() {
       return this.dto;
+    }
+
+    private escapeClassname(cn: string) {
+      return cn
+        .replace(/\%/g, "\\%")
+        .replace(/\:/g, "\\:")
+        .replace(/\./g, "\\.");
     }
   };
 };

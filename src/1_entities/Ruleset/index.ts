@@ -1,9 +1,3 @@
-import { IRulesetDTO, IRuleset } from "./Ruleset.interface";
-import buildRuleset from "./Ruleset";
-
-const Ruleset = buildRuleset();
-
-export default Object.freeze({
-  prebuild: buildRuleset,
-  make: (dto: IRulesetDTO): IRuleset => new Ruleset(dto),
-});
+import Ruleset from "./Ruleset";
+export * as IRuleset from "./Ruleset.interface";
+export default Ruleset;

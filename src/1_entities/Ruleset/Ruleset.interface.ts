@@ -1,10 +1,18 @@
-export interface IRulesetDTO {
-  classname: string;
-  declarations: string;
+export interface Props {
+  prefixSep: string;
+  suffixSep: string;
 }
 
-export interface IRuleset {
-  rename: (fn: (old: string) => string) => IRuleset;
+export interface DTO {
+  classname: string;
+  classnamePrefix?: string;
+  declarations: string;
+  pseudoClasses?: Record<string, string>;
+}
+
+export interface Instance {
+  addClassnamePrefix: (prefix: string) => Instance;
   toString: () => string;
-  toDTO: () => IRulesetDTO;
+  toPrefixedString: (prefix: string) => string;
+  toDTO: () => DTO;
 }

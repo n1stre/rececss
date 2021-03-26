@@ -1,30 +1,24 @@
-import { IRulesetDTO } from "../Ruleset/Ruleset.interface";
-
-export interface IStylesheetDTO {
-  rulesets: IStylesheetRulesetDTO[];
-  media?: IStylesheetMediaDTO;
+export interface Props {
+  filename: string;
+  extension: string;
 }
 
-export interface IStylesheetRulesetDTO extends IRulesetDTO {}
+export interface DTO {
+  rulesets: string[];
+  media?: MediaDTO;
+}
 
-export interface IStylesheetMediaDTO {
+export interface MediaDTO {
   name: string;
   query: string;
 }
 
-export interface IStylesheetProps {
-  rulesetToString: (rs: IStylesheetRulesetDTO) => string;
-  rulesetRename: (
-    rs: IStylesheetRulesetDTO,
-    fn: (name: string) => string,
-  ) => IStylesheetRulesetDTO;
-}
-
-export interface IStylesheet {
-  getRulesets: () => IStylesheetRulesetDTO[];
-  addRulesets: (...data: IStylesheetRulesetDTO[]) => IStylesheet;
-  getMedia: () => IStylesheetMediaDTO | undefined;
-  setMedia: (media: IStylesheetMediaDTO) => IStylesheet;
-  getContents: () => string;
-  toDTO: () => IStylesheetDTO;
+export interface Instance {
+  getRulesets: () => string[];
+  addRulesets: (...data: string[]) => Instance;
+  getMedia: () => MediaDTO | undefined;
+  getName: () => string;
+  setMedia: (media: MediaDTO) => Instance;
+  toString: () => string;
+  toDTO: () => DTO;
 }

@@ -1,5 +1,4 @@
-import { IRulesetDTO } from "../1_entities/Ruleset/Ruleset.interface";
-import { IStylesheetDTO } from "../1_entities/Stylesheet/Stylesheet.interface";
+import { IRuleset } from "../1_entities/Ruleset";
 
 export interface IAsset {
   name: string;
@@ -51,5 +50,5 @@ export type TConfigurableRulesetsValues = Partial<{
 }>;
 
 export interface IRulesetsFactory {
-  create: (dto: TConfigurableRulesetsValues) => IRulesetDTO[];
+  create: (dto: TConfigurableRulesetsValues) => IRuleset.DTO[];
 }

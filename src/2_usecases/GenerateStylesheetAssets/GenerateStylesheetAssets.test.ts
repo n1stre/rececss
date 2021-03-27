@@ -1,35 +1,24 @@
 import { IRulesetsFactory } from "../interfaces";
 import GenerateStylesheetAssets from "./index";
 
-const Usecase = GenerateStylesheetAssets.build({
-  basename: "rececss",
-  extension: "css",
-});
-
-const factory: IRulesetsFactory = {
+const RulesetsFactory: IRulesetsFactory = {
   create: jest.fn(() => [
     { classname: "w_10%", declarations: "width: 10%;" },
     { classname: "fz_16", declarations: "font-size: 16px;" },
   ]),
 };
-const basicUsecase = new Usecase(factory);
+
+const basicUsecase = GenerateStylesheetAssets.create({
+  RulesetsFactory,
+  // assetProps: {},
+  // rulesetProps: {},
+});
 
 describe("GenerateUtilityStylesheet usecase", () => {
   it("should craete rulesets properly", async () => {
-    const values = {
-      size: {},
-      margin: {},
-      padding: {},
-      offset: {},
-      font: {},
-      flex: {},
-      border: {},
-      color: {},
-      zIndex: {},
-    };
-
+    const values = {};
     await basicUsecase.exec({ values });
-    expect(factory.create).toBeCalledWith(values);
+    expect(RulesetsFactory.create).toBeCalledWith(values);
   });
 
   it("should contain valid result", async () => {

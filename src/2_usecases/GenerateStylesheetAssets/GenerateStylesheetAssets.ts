@@ -1,46 +1,61 @@
-import Stylesheet from "../../1_entities/Stylesheet";
-import { IStylesheet } from "../../1_entities/Stylesheet/Stylesheet.interface";
+import Ruleset, { IRuleset } from "../../1_entities/Ruleset";
+import Stylesheet, { IStylesheet } from "../../1_entities/Stylesheet";
 import { IRulesetsFactory, TConfigurableRulesetsValues } from "../interfaces";
 import * as errors from "./GenerateStylesheetAssets.errors";
 
-export default (props: { basename: string; extension: string }) => {
-  return class GenerateStylesheetAssetsUseCase {
-    constructor(private rulesetsFactory: IRulesetsFactory) {}
+interface IProps {
+  RulesetsFactory: IRulesetsFactory;
+  stylesheetProps?: Partial<IStylesheet.Props>;
+  rulesetProps?: Partial<IRuleset.Props>;
+}
 
-    public exec = async (dto: {
-      values: TConfigurableRulesetsValues;
-      media?: Record<string, string>;
-      splitByMedia?: boolean;
-    }) => {
-      const stylesheets: IStylesheet[] = [];
-      const rulesets = this.rulesetsFactory.create(dto.values);
-      stylesheets.push(Stylesheet.make({ rulesets }));
+export default class GenerateStylesheetAssets {
+  private constructor(private props: IProps) {}
 
-      if (dto.media) {
-        Object.entries(dto.media).forEach(([name, query]) => {
-          const media = { name, query };
-          const stylesheet = Stylesheet.make({ rulesets, media });
-          stylesheets.push(stylesheet);
-        });
-      }
+  static create(props: IProps) {
+    return new GenerateStylesheetAssets(props);
+  }
 
-      if (dto.splitByMedia) {
-        return stylesheets.map((s) => {
-          const name = this.generateStylesheetName(s);
-          const contents = s.getContents();
-          return { name, contents };
-        });
-      }
+  async exec(dto: {
+    values: TConfigurableRulesetsValues;
+    media?: Record<string, string>;
+    splitByMedia?: boolean;
+  }) {
+    const baseRulesets = this.createRulesets(dto.values);
+    const rulesets = baseRulesets.map((rs) => rs.toString());
+    const stylesheet = this.createStylesheet({ rulesets });
+    const stylesheets = [stylesheet];
 
-      const name = this.generateStylesheetName();
-      const contents = stylesheets.map((s) => s.getContents()).join("\n");
-      return [{ name, contents }];
-    };
-
-    private generateStylesheetName(stylesheet?: IStylesheet) {
-      const mediaName = stylesheet?.getMedia()?.name;
-      const nameParts = [props.basename, mediaName, props.extension];
-      return nameParts.filter(Boolean).join(".");
+    if (dto.media) {
+      Object.entries(dto.media).forEach(([name, query]) => {
+        const media = { name, query };
+        const rulesets = baseRulesets.map((rs) => rs.toPrefixedString(name));
+        stylesheets.push(this.createStylesheet({ rulesets, media }));
+      });
     }
-  };
-};
+
+    if (dto.splitByMedia) {
+      return stylesheets.map((s) => ({
+        name: s.getName(),
+        contents: s.toString(),
+      }));
+    }
+
+    const name = stylesheet.getName();
+    const contents = stylesheets.map((s) => s.toString()).join("\n");
+    return [{ name, contents }];
+  }
+
+  private createRulesets(dto: TConfigurableRulesetsValues) {
+    const dtos = this.props.RulesetsFactory.create(dto);
+    return dtos.map((rs) => this.createRuleset(rs));
+  }
+
+  private createRuleset(dto: IRuleset.DTO) {
+    return Ruleset.build(this.props.rulesetProps).create(dto);
+  }
+
+  private createStylesheet(dto: IStylesheet.DTO) {
+    return Stylesheet.build(this.props.stylesheetProps).create(dto);
+  }
+}

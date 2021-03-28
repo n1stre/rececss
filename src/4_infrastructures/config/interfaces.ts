@@ -1,10 +1,8 @@
 import { TConfigurableRulesetsValues } from "../../2_usecases/interfaces";
 
-type IConfigRuleNamedValues = Record<string, string>;
+export type IConfigRuleRange = [number, number, number];
 
-export type IConfigRuleUnitRange = [number, number, number];
-
-export type IConfigRuleUnitValue = number | IConfigRuleUnitRange;
+export type IConfigRuleValue = number | IConfigRuleRange;
 
 export type IConfigRuleUnit =
   | "px"
@@ -17,53 +15,62 @@ export type IConfigRuleUnit =
   | "%";
 
 export type IConfigRuleUnitValues = Partial<
-  Record<IConfigRuleUnit, IConfigRuleUnitValue[]>
+  Record<IConfigRuleUnit, IConfigRuleValue[]>
 >;
 
-export type IConfigRuleMixedValues = Partial<{
-  named: IConfigRuleNamedValues;
+export type IConfigRuleNamedUnits = Partial<{
+  named: Record<string, string>;
   units: IConfigRuleUnitValues;
 }>;
 
-export type IConfigRuleMixedUnitlessValues = Partial<{
-  named: IConfigRuleNamedValues;
-  units: IConfigRuleUnitValue[];
+export type IConfigRuleNamedValues = Partial<{
+  named: Record<string, string>;
+  values: IConfigRuleValue[];
 }>;
 
 export interface IConfigDTO {
   output: {
     path: string;
+    filename?: string;
+    extension?: string;
     splitByMedia?: boolean;
   };
+  sep?: {
+    media?: string;
+    pseudoClass?: string;
+  };
   media?: Record<string, string>;
+  classes?: Record<string, string>;
+  pseudoClasses?: Record<string, string>;
   rules: Partial<{
-    width: IConfigRuleMixedValues;
-    height: IConfigRuleMixedValues;
+    width: IConfigRuleNamedUnits;
+    height: IConfigRuleNamedUnits;
     padding: Partial<{
-      shorthand: IConfigRuleMixedValues;
-      edges: IConfigRuleMixedValues;
+      shorthand: IConfigRuleNamedUnits;
+      edges: IConfigRuleNamedUnits;
     }>;
     margin: Partial<{
-      shorthand: IConfigRuleMixedValues;
-      edges: IConfigRuleMixedValues;
+      shorthand: IConfigRuleNamedUnits;
+      edges: IConfigRuleNamedUnits;
     }>;
-    offset: IConfigRuleMixedValues;
-    color: IConfigRuleNamedValues;
+    offset: IConfigRuleNamedUnits;
+    color: Record<string, string>;
     flex: Partial<{
-      shorthand: IConfigRuleMixedUnitlessValues;
-      basis: IConfigRuleMixedValues;
-      grow: IConfigRuleMixedUnitlessValues;
-      shrink: IConfigRuleMixedUnitlessValues;
-      order: IConfigRuleMixedUnitlessValues;
+      shorthand: IConfigRuleNamedValues;
+      basis: IConfigRuleNamedUnits;
+      grow: IConfigRuleNamedValues;
+      shrink: IConfigRuleNamedValues;
+      order: IConfigRuleNamedValues;
     }>;
     font: Partial<{
-      shorthand: IConfigRuleNamedValues;
-      size: IConfigRuleMixedValues;
-      family: IConfigRuleNamedValues;
+      shorthand: Record<string, string>;
+      size: IConfigRuleNamedUnits;
+      family: Record<string, string>;
+      lineHeight: IConfigRuleNamedUnits & IConfigRuleNamedValues;
     }>;
     border: Partial<{
-      shorthand: IConfigRuleNamedValues;
-      radius: IConfigRuleMixedValues;
+      shorthand: Record<string, string>;
+      radius: IConfigRuleNamedUnits;
     }>;
   }>;
 }
@@ -72,5 +79,11 @@ export interface IConfig {
   getRulesetsValues: () => TConfigurableRulesetsValues;
   getMedia: () => Record<string, string>;
   getOutputPath: () => string;
+  getOutputFilename: () => string | undefined;
+  getOutputExtension: () => string | undefined;
+  getClassnames: () => Record<string, string>;
+  getPseudoClasses: () => Record<string, string>;
+  getMediaSeparator: () => string | undefined;
+  getPseudoClassSeparator: () => string | undefined;
   shouldSplitOutputByMedia: () => boolean;
 }

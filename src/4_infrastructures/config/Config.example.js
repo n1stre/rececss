@@ -41,7 +41,7 @@ module.exports = {
     flex: {
       shorthand: {
         named: { "00a": "0 0 auto", norm: "1" },
-        units: [[1, 10, 1]],
+        values: [[1, 10, 1]],
       },
       basis: {
         named: { xs: "8px", sm: "12px", md: "16px" },
@@ -49,15 +49,15 @@ module.exports = {
       },
       grow: {
         named: {},
-        units: [1, 2, 4],
+        values: [1, 2, 4],
       },
       shrink: {
         named: {},
-        units: [1, 3],
+        values: [1, 3],
       },
       order: {
         named: {},
-        units: [1, -1],
+        values: [1, -1],
       },
     },
     font: {

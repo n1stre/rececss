@@ -1,17 +1,26 @@
 import path from "path";
 import { IInputOutput } from "../../3_adapters/interfaces";
-import Config from "../config";
 import { IConfig, IFileSystem } from "../interfaces";
+import Config from "../config";
 
 export default class ConfigFileSystemIO implements IInputOutput {
   private config: IConfig;
 
-  constructor(private configFileName: string, private fs: IFileSystem) {
+  constructor(configFileName: string, private fs: IFileSystem) {
     try {
-      this.config = Config.new(require(this.configPath));
+      const configPath = path.resolve(process.cwd(), configFileName);
+      const config = Config.new(require(configPath));
+      this.config = config;
     } catch (err) {
       throw Error("Config does not exist");
     }
+  }
+
+  getRulesetsBuilderInput() {
+    return {
+      classNames: this.config.getClassnames(),
+      pseudoClasses: this.config.getPseudoClasses(),
+    };
   }
 
   getStylesheetsAssetsInput() {
@@ -22,15 +31,25 @@ export default class ConfigFileSystemIO implements IInputOutput {
     };
   }
 
+  getRulesetPropsInput() {
+    return {
+      prefixSep: this.config.getMediaSeparator(),
+      suffixSep: this.config.getPseudoClassSeparator(),
+    };
+  }
+
+  getStylesheetPropsInput() {
+    return {
+      filename: this.config.getOutputFilename(),
+      extension: this.config.getOutputExtension(),
+    };
+  }
+
   outputAssets(assets: { name: string; contents: string }[]) {
     const files = assets.map((asset) => ({
       path: path.join(this.config.getOutputPath(), asset.name),
       contents: asset.contents,
     }));
     return this.fs.writeFiles(files);
-  }
-
-  private get configPath() {
-    return path.resolve(process.cwd(), this.configFileName);
   }
 }

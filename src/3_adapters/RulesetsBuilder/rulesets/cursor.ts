@@ -2,7 +2,7 @@ import { IRulesetsBuilderFunctions } from "../RulesetsBuilder.interface";
 
 export default <T extends IRulesetsBuilderFunctions>(self: T) =>
   function addCursor() {
-    self.addStatic(
+    self.addRulesets(
       "cursorAuto",
       "cursorDefault",
       "cursorCrosshair",

@@ -6,9 +6,9 @@ export default <T extends IRulesetsBuilderFunctions>(self: T) =>
     family?: Record<string, string>;
     size?: Record<string, string>;
   }) {
-    self.addValues(v?.shorthand, "font");
-    self.addValues(v?.family, "fontFamily");
-    self.addValues(v?.size, "fontSize");
+    self.mapToRulesets(v?.shorthand, "font");
+    self.mapToRulesets(v?.family, "fontFamily");
+    self.mapToRulesets(v?.size, "fontSize");
 
     return self;
   };

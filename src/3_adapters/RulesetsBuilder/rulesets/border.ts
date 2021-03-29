@@ -5,7 +5,7 @@ export default <T extends IRulesetsBuilderFunctions>(self: T) =>
     shorthand?: Record<string, string>;
     radius?: Record<string, string>;
   }) {
-    self.addValues(
+    self.mapToRulesets(
       v?.shorthand,
       "border",
       "borderTop",
@@ -13,6 +13,6 @@ export default <T extends IRulesetsBuilderFunctions>(self: T) =>
       "borderLeft",
       "borderRight",
     );
-    self.addValues(v?.radius, "borderRadius");
+    self.mapToRulesets(v?.radius, "borderRadius");
     return self;
   };

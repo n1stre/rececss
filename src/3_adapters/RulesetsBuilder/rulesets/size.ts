@@ -5,11 +5,11 @@ export default <T extends IRulesetsBuilderFunctions>(self: T) =>
     width: Record<number, string>;
     height: Record<number, string>;
   }) {
-    self.addStatic("widthAuto");
-    self.addValues(v?.width, "width", "minWidth", "maxWidth");
+    self.addRulesets("widthAuto");
+    self.mapToRulesets(v?.width, "width", "minWidth", "maxWidth");
 
-    self.addStatic("heightAuto");
-    self.addValues(v?.height, "height", "minHeight", "maxHeight");
+    self.addRulesets("heightAuto");
+    self.mapToRulesets(v?.height, "height", "minHeight", "maxHeight");
 
     return self;
   };

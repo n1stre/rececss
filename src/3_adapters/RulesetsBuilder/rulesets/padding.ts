@@ -5,8 +5,8 @@ export default <T extends IRulesetsBuilderFunctions>(self: T) =>
     shorthand: Record<number, string>;
     edges: Record<number, string>;
   }) {
-    self.addValues(v?.shorthand, "padding");
-    self.addValues(
+    self.mapToRulesets(v?.shorthand, "padding");
+    self.mapToRulesets(
       v?.edges,
       "padding",
       "paddingTop",

@@ -2,7 +2,7 @@ import { IRulesetsBuilderFunctions } from "../RulesetsBuilder.interface";
 
 export default <T extends IRulesetsBuilderFunctions>(self: T) =>
   function addText() {
-    self.addStatic(
+    self.addRulesets(
       "verticalAlignSuper",
       "verticalAlignTop",
       "verticalAlignTextTop",
@@ -13,28 +13,28 @@ export default <T extends IRulesetsBuilderFunctions>(self: T) =>
       "verticalAlignSub",
     );
 
-    self.addStatic(
+    self.addRulesets(
       "textAlignLeft",
       "textAlignCenter",
       "textAlignRight",
       "textAlignJustify",
     );
 
-    self.addStatic(
+    self.addRulesets(
       "textAlignLastAuto",
       "textAlignLastLeft",
       "textAlignLastCenter",
       "textAlignLastRight",
     );
 
-    self.addStatic(
+    self.addRulesets(
       "textDecorationNone",
       "textDecorationUnderline",
       "textDecorationOverline",
       "textDecorationLineThrough",
     );
 
-    self.addStatic(
+    self.addRulesets(
       "textEmphasisNone",
       "textEmphasisAccent",
       "textEmphasisDot",
@@ -44,14 +44,14 @@ export default <T extends IRulesetsBuilderFunctions>(self: T) =>
       "textEmphasisAfter",
     );
 
-    self.addStatic(
+    self.addRulesets(
       "textTransformNone",
       "textTransformCapitalize",
       "textTransformUppercase",
       "textTransformLowercase",
     );
 
-    self.addStatic(
+    self.addRulesets(
       "whiteSpaceNormal",
       "whiteSpacePre",
       "whiteSpaceNoWrap",

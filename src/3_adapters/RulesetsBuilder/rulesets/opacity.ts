@@ -2,7 +2,7 @@ import { IRulesetsBuilderFunctions } from "../RulesetsBuilder.interface";
 
 export default <T extends IRulesetsBuilderFunctions>(self: T) =>
   function addOpacity() {
-    self.addStatic(
+    self.addRulesets(
       "opacity0",
       "opacity01",
       "opacity02",

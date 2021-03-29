@@ -1,4 +1,4 @@
-import { IRulesetDTO } from "../../1_entities/Ruleset/Ruleset.interface";
+import { IRuleset } from "../../1_entities/Ruleset";
 import {
   TBorderValues,
   TFlexValues,
@@ -7,6 +7,11 @@ import {
   TSizeValues,
   TSpacingValues,
 } from "../../2_usecases/interfaces";
+
+export interface IRulesetBuilderDTO {
+  classNames?: Partial<IRulesetNamesMap>;
+  pseudoClasses?: Record<string, string>;
+}
 
 export interface IRulesetsBuilder {
   addSize: (v?: TSizeValues) => IRulesetsBuilder;
@@ -26,12 +31,12 @@ export interface IRulesetsBuilder {
   addList: () => IRulesetsBuilder;
   addOverflow: () => IRulesetsBuilder;
   addOpacity: () => IRulesetsBuilder;
-  getResult: () => IRulesetDTO[];
+  getResult: () => IRuleset.DTO[];
 }
 
 export interface IRulesetsBuilderFunctions {
-  addStatic: (...rulesetNames: (keyof IRulesetNamesMap<string>)[]) => void;
-  addValues: (
+  addRulesets: (...rulesetNames: (keyof IRulesetNamesMap<string>)[]) => void;
+  mapToRulesets: (
     values: Record<string, string> | undefined,
     ...rulesetNames: (keyof IRulesetNamesMap<string>)[]
   ) => void;

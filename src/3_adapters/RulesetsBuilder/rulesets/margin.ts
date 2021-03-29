@@ -5,8 +5,8 @@ export default <T extends IRulesetsBuilderFunctions>(self: T) =>
     shorthand: Record<number, string>;
     edges: Record<number, string>;
   }) {
-    self.addValues(v?.shorthand, "margin");
-    self.addValues(
+    self.mapToRulesets(v?.shorthand, "margin");
+    self.mapToRulesets(
       v?.edges,
       "margin",
       "marginTop",

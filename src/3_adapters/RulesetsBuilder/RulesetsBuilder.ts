@@ -1,5 +1,6 @@
-import { IRulesetDTO } from "../../1_entities/Ruleset/Ruleset.interface";
+import { IRuleset } from "../../1_entities/Ruleset";
 import {
+  IRulesetBuilderDTO,
   IRulesetNamesMap,
   IRulesetsBuilder,
   IRulesetsBuilderFunctions,
@@ -15,12 +16,14 @@ type TValues = Record<string, string>;
 export default () => {
   return class RulesetsBuilder
     implements IRulesetsBuilder, IRulesetsBuilderFunctions {
-    private result: IRulesetDTO[];
+    private result: IRuleset.DTO[];
     private classNamesMap: IRulesetNamesMap;
     private declarationsMap = declarationsMap;
+    private pseudoClasses?: Record<string, string>;
 
-    constructor(classNames?: Partial<IRulesetNamesMap>) {
-      this.classNamesMap = Object.assign(classNamesMap, classNames);
+    constructor(dto?: IRulesetBuilderDTO) {
+      this.classNamesMap = Object.assign(classNamesMap, dto?.classNames);
+      this.pseudoClasses = dto?.pseudoClasses;
       this.result = [];
     }
 
@@ -62,20 +65,21 @@ export default () => {
       return this.result;
     }
 
-    addValues(values: TValues, ...rulesetNames: TRulesetNames) {
+    mapToRulesets(values: TValues, ...rulesetNames: TRulesetNames) {
       if (!values) return;
       Object.entries(values).forEach((v) => this.pushRulesets(rulesetNames, v));
     }
 
-    addStatic(...rulesetNames: TRulesetNames) {
+    addRulesets(...rulesetNames: TRulesetNames) {
       this.pushRulesets(rulesetNames);
     }
 
     private pushRulesets(rulesetNames: TRulesetNames, val?: [string, string]) {
       rulesetNames.forEach((name) => {
+        const { pseudoClasses } = this;
         const classname = this.getClassname(name, val?.[0]);
         const declarations = this.getDeclaration(name, val?.[1]);
-        this.result.push({ classname, declarations });
+        this.result.push({ classname, declarations, pseudoClasses });
       });
     }
 

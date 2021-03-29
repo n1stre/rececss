@@ -8,31 +8,31 @@ export default <T extends IRulesetsBuilderFunctions>(self: T) =>
     basis?: Record<string, string>;
     order?: Record<string, string>;
   }) {
-    self.addValues(v?.shorthand, "flex");
-    self.addValues(v?.grow, "flexGrow");
-    self.addValues(v?.shrink, "flexShrink");
+    self.mapToRulesets(v?.shorthand, "flex");
+    self.mapToRulesets(v?.grow, "flexGrow");
+    self.mapToRulesets(v?.shrink, "flexShrink");
 
-    self.addStatic("flexBasisAuto");
-    self.addValues(v?.basis, "flexBasis");
+    self.addRulesets("flexBasisAuto");
+    self.mapToRulesets(v?.basis, "flexBasis");
 
-    self.addStatic("orderUnset");
-    self.addValues(v?.order, "order");
+    self.addRulesets("orderUnset");
+    self.mapToRulesets(v?.order, "order");
 
-    self.addStatic(
+    self.addRulesets(
       "flexDirectionColumn",
       "flexDirectionColumnReverse",
       "flexDirectionRow",
       "flexDirectionRowReverse",
     );
 
-    self.addStatic(
+    self.addRulesets(
       "flexWrapNoWrap",
       "flexWrapWrap",
       "flexWrapWrapReverse",
       "flexWrapUnset",
     );
 
-    self.addStatic(
+    self.addRulesets(
       "justifyContentUnset",
       "justifyContentCenter",
       "justifyContentFlexEnd",
@@ -41,7 +41,7 @@ export default <T extends IRulesetsBuilderFunctions>(self: T) =>
       "justifyContentSpaceBetween",
     );
 
-    self.addStatic(
+    self.addRulesets(
       "alignContentCenter",
       "alignContentFlexEnd",
       "alignContentFlexStart",
@@ -50,7 +50,7 @@ export default <T extends IRulesetsBuilderFunctions>(self: T) =>
       "alignContentSpaceBetween",
     );
 
-    self.addStatic(
+    self.addRulesets(
       "alignItemsBaseline",
       "alignItemsСenter",
       "alignItemsFlexEnd",

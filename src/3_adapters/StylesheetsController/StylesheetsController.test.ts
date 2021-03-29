@@ -11,7 +11,7 @@ const io: IInputOutput = {
 
 describe("StylesheetsController", () => {
   beforeEach(() => {
-    jest.resetAllMocks();
+    jest.restoreAllMocks();
   });
 
   it("should generate assets without errors", async () => {

@@ -1,643 +1,678 @@
 @media only screen and (min-width: 1024px) {
-.lg\:w_a { width: auto; }
-.lg\:w_0 { width: 0px; }
-.lg\:miw_0 { min-width: 0px; }
-.lg\:maw_0 { max-width: 0px; }
-.lg\:w_5 { width: 5px; }
-.lg\:miw_5 { min-width: 5px; }
-.lg\:maw_5 { max-width: 5px; }
-.lg\:w_10 { width: 10px; }
-.lg\:miw_10 { min-width: 10px; }
-.lg\:maw_10 { max-width: 10px; }
-.lg\:w_15 { width: 15px; }
-.lg\:miw_15 { min-width: 15px; }
-.lg\:maw_15 { max-width: 15px; }
-.lg\:w_20 { width: 20px; }
-.lg\:miw_20 { min-width: 20px; }
-.lg\:maw_20 { max-width: 20px; }
-.lg\:w_25 { width: 25px; }
-.lg\:miw_25 { min-width: 25px; }
-.lg\:maw_25 { max-width: 25px; }
-.lg\:w_30 { width: 30px; }
-.lg\:miw_30 { min-width: 30px; }
-.lg\:maw_30 { max-width: 30px; }
-.lg\:w_35 { width: 35px; }
-.lg\:miw_35 { min-width: 35px; }
-.lg\:maw_35 { max-width: 35px; }
-.lg\:w_40 { width: 40px; }
-.lg\:miw_40 { min-width: 40px; }
-.lg\:maw_40 { max-width: 40px; }
-.lg\:w_45 { width: 45px; }
-.lg\:miw_45 { min-width: 45px; }
-.lg\:maw_45 { max-width: 45px; }
-.lg\:w_50 { width: 50px; }
-.lg\:miw_50 { min-width: 50px; }
-.lg\:maw_50 { max-width: 50px; }
-.lg\:w_100 { width: 100px; }
-.lg\:miw_100 { min-width: 100px; }
-.lg\:maw_100 { max-width: 100px; }
-.lg\:w_200 { width: 200px; }
-.lg\:miw_200 { min-width: 200px; }
-.lg\:maw_200 { max-width: 200px; }
-.lg\:w_300 { width: 300px; }
-.lg\:miw_300 { min-width: 300px; }
-.lg\:maw_300 { max-width: 300px; }
-.lg\:w_400 { width: 400px; }
-.lg\:miw_400 { min-width: 400px; }
-.lg\:maw_400 { max-width: 400px; }
-.lg\:w_500 { width: 500px; }
-.lg\:miw_500 { min-width: 500px; }
-.lg\:maw_500 { max-width: 500px; }
-.lg\:w_600 { width: 600px; }
-.lg\:miw_600 { min-width: 600px; }
-.lg\:maw_600 { max-width: 600px; }
-.lg\:w_700 { width: 700px; }
-.lg\:miw_700 { min-width: 700px; }
-.lg\:maw_700 { max-width: 700px; }
-.lg\:w_800 { width: 800px; }
-.lg\:miw_800 { min-width: 800px; }
-.lg\:maw_800 { max-width: 800px; }
-.lg\:w_900 { width: 900px; }
-.lg\:miw_900 { min-width: 900px; }
-.lg\:maw_900 { max-width: 900px; }
-.lg\:w_1000 { width: 1000px; }
-.lg\:miw_1000 { min-width: 1000px; }
-.lg\:maw_1000 { max-width: 1000px; }
-.lg\:w_full { width: 100%; }
-.lg\:miw_full { min-width: 100%; }
-.lg\:maw_full { max-width: 100%; }
-.lg\:w_half { width: 50%; }
-.lg\:miw_half { min-width: 50%; }
-.lg\:maw_half { max-width: 50%; }
-.lg\:w_0\% { width: 0%; }
-.lg\:miw_0\% { min-width: 0%; }
-.lg\:maw_0\% { max-width: 0%; }
-.lg\:w_10\% { width: 10%; }
-.lg\:miw_10\% { min-width: 10%; }
-.lg\:maw_10\% { max-width: 10%; }
-.lg\:w_20\% { width: 20%; }
-.lg\:miw_20\% { min-width: 20%; }
-.lg\:maw_20\% { max-width: 20%; }
-.lg\:w_30\% { width: 30%; }
-.lg\:miw_30\% { min-width: 30%; }
-.lg\:maw_30\% { max-width: 30%; }
-.lg\:w_40\% { width: 40%; }
-.lg\:miw_40\% { min-width: 40%; }
-.lg\:maw_40\% { max-width: 40%; }
-.lg\:w_50\% { width: 50%; }
-.lg\:miw_50\% { min-width: 50%; }
-.lg\:maw_50\% { max-width: 50%; }
-.lg\:w_60\% { width: 60%; }
-.lg\:miw_60\% { min-width: 60%; }
-.lg\:maw_60\% { max-width: 60%; }
-.lg\:w_70\% { width: 70%; }
-.lg\:miw_70\% { min-width: 70%; }
-.lg\:maw_70\% { max-width: 70%; }
-.lg\:w_80\% { width: 80%; }
-.lg\:miw_80\% { min-width: 80%; }
-.lg\:maw_80\% { max-width: 80%; }
-.lg\:w_90\% { width: 90%; }
-.lg\:miw_90\% { min-width: 90%; }
-.lg\:maw_90\% { max-width: 90%; }
-.lg\:w_100\% { width: 100%; }
-.lg\:miw_100\% { min-width: 100%; }
-.lg\:maw_100\% { max-width: 100%; }
-.lg\:h_a { height: auto; }
-.lg\:h_300 { height: 300px; }
-.lg\:mih_300 { min-height: 300px; }
-.lg\:mah_300 { max-height: 300px; }
-.lg\:h_full { height: 100%; }
-.lg\:mih_full { min-height: 100%; }
-.lg\:mah_full { max-height: 100%; }
-.lg\:h_half { height: 50%; }
-.lg\:mih_half { min-height: 50%; }
-.lg\:mah_half { max-height: 50%; }
-.lg\:h_50vh { height: 50vh; }
-.lg\:mih_50vh { min-height: 50vh; }
-.lg\:mah_50vh { max-height: 50vh; }
-.lg\:h_100vh { height: 100vh; }
-.lg\:mih_100vh { min-height: 100vh; }
-.lg\:mah_100vh { max-height: 100vh; }
-.lg\:m_a { margin: auto; }
-.lg\:m_0a { margin: 0 auto; }
-.lg\:m_1em { margin: 1em; }
-.lg\:m_2em { margin: 2em; }
-.lg\:m_3em { margin: 3em; }
-.lg\:m_4em { margin: 4em; }
-.lg\:m_5em { margin: 5em; }
-.lg\:m_0 { margin: 0px; }
-.lg\:mt_0 { margin-top: 0px; }
-.lg\:mb_0 { margin-bottom: 0px; }
-.lg\:mver_0 { margin-top: 0px; margin-bottom: 0px; }
-.lg\:ml_0 { margin-left: 0px; }
-.lg\:mr_0 { margin-right: 0px; }
-.lg\:mhor_0 { margin-left: 0px; margin-right: 0px; }
-.lg\:m_5 { margin: 5px; }
-.lg\:mt_5 { margin-top: 5px; }
-.lg\:mb_5 { margin-bottom: 5px; }
-.lg\:mver_5 { margin-top: 5px; margin-bottom: 5px; }
-.lg\:ml_5 { margin-left: 5px; }
-.lg\:mr_5 { margin-right: 5px; }
-.lg\:mhor_5 { margin-left: 5px; margin-right: 5px; }
-.lg\:m_10 { margin: 10px; }
-.lg\:mt_10 { margin-top: 10px; }
-.lg\:mb_10 { margin-bottom: 10px; }
-.lg\:mver_10 { margin-top: 10px; margin-bottom: 10px; }
-.lg\:ml_10 { margin-left: 10px; }
-.lg\:mr_10 { margin-right: 10px; }
-.lg\:mhor_10 { margin-left: 10px; margin-right: 10px; }
-.lg\:m_15 { margin: 15px; }
-.lg\:mt_15 { margin-top: 15px; }
-.lg\:mb_15 { margin-bottom: 15px; }
-.lg\:mver_15 { margin-top: 15px; margin-bottom: 15px; }
-.lg\:ml_15 { margin-left: 15px; }
-.lg\:mr_15 { margin-right: 15px; }
-.lg\:mhor_15 { margin-left: 15px; margin-right: 15px; }
-.lg\:m_20 { margin: 20px; }
-.lg\:mt_20 { margin-top: 20px; }
-.lg\:mb_20 { margin-bottom: 20px; }
-.lg\:mver_20 { margin-top: 20px; margin-bottom: 20px; }
-.lg\:ml_20 { margin-left: 20px; }
-.lg\:mr_20 { margin-right: 20px; }
-.lg\:mhor_20 { margin-left: 20px; margin-right: 20px; }
-.lg\:m_25 { margin: 25px; }
-.lg\:mt_25 { margin-top: 25px; }
-.lg\:mb_25 { margin-bottom: 25px; }
-.lg\:mver_25 { margin-top: 25px; margin-bottom: 25px; }
-.lg\:ml_25 { margin-left: 25px; }
-.lg\:mr_25 { margin-right: 25px; }
-.lg\:mhor_25 { margin-left: 25px; margin-right: 25px; }
-.lg\:m_30 { margin: 30px; }
-.lg\:mt_30 { margin-top: 30px; }
-.lg\:mb_30 { margin-bottom: 30px; }
-.lg\:mver_30 { margin-top: 30px; margin-bottom: 30px; }
-.lg\:ml_30 { margin-left: 30px; }
-.lg\:mr_30 { margin-right: 30px; }
-.lg\:mhor_30 { margin-left: 30px; margin-right: 30px; }
-.lg\:m_35 { margin: 35px; }
-.lg\:mt_35 { margin-top: 35px; }
-.lg\:mb_35 { margin-bottom: 35px; }
-.lg\:mver_35 { margin-top: 35px; margin-bottom: 35px; }
-.lg\:ml_35 { margin-left: 35px; }
-.lg\:mr_35 { margin-right: 35px; }
-.lg\:mhor_35 { margin-left: 35px; margin-right: 35px; }
-.lg\:m_40 { margin: 40px; }
-.lg\:mt_40 { margin-top: 40px; }
-.lg\:mb_40 { margin-bottom: 40px; }
-.lg\:mver_40 { margin-top: 40px; margin-bottom: 40px; }
-.lg\:ml_40 { margin-left: 40px; }
-.lg\:mr_40 { margin-right: 40px; }
-.lg\:mhor_40 { margin-left: 40px; margin-right: 40px; }
-.lg\:m_45 { margin: 45px; }
-.lg\:mt_45 { margin-top: 45px; }
-.lg\:mb_45 { margin-bottom: 45px; }
-.lg\:mver_45 { margin-top: 45px; margin-bottom: 45px; }
-.lg\:ml_45 { margin-left: 45px; }
-.lg\:mr_45 { margin-right: 45px; }
-.lg\:mhor_45 { margin-left: 45px; margin-right: 45px; }
-.lg\:m_50 { margin: 50px; }
-.lg\:mt_50 { margin-top: 50px; }
-.lg\:mb_50 { margin-bottom: 50px; }
-.lg\:mver_50 { margin-top: 50px; margin-bottom: 50px; }
-.lg\:ml_50 { margin-left: 50px; }
-.lg\:mr_50 { margin-right: 50px; }
-.lg\:mhor_50 { margin-left: 50px; margin-right: 50px; }
-.lg\:m_sm { margin: 10px; }
-.lg\:mt_sm { margin-top: 10px; }
-.lg\:mb_sm { margin-bottom: 10px; }
-.lg\:mver_sm { margin-top: 10px; margin-bottom: 10px; }
-.lg\:ml_sm { margin-left: 10px; }
-.lg\:mr_sm { margin-right: 10px; }
-.lg\:mhor_sm { margin-left: 10px; margin-right: 10px; }
-.lg\:m_md { margin: 15px; }
-.lg\:mt_md { margin-top: 15px; }
-.lg\:mb_md { margin-bottom: 15px; }
-.lg\:mver_md { margin-top: 15px; margin-bottom: 15px; }
-.lg\:ml_md { margin-left: 15px; }
-.lg\:mr_md { margin-right: 15px; }
-.lg\:mhor_md { margin-left: 15px; margin-right: 15px; }
-.lg\:m_lg { margin: 30px; }
-.lg\:mt_lg { margin-top: 30px; }
-.lg\:mb_lg { margin-bottom: 30px; }
-.lg\:mver_lg { margin-top: 30px; margin-bottom: 30px; }
-.lg\:ml_lg { margin-left: 30px; }
-.lg\:mr_lg { margin-right: 30px; }
-.lg\:mhor_lg { margin-left: 30px; margin-right: 30px; }
-.lg\:m_xl { margin: 50px; }
-.lg\:mt_xl { margin-top: 50px; }
-.lg\:mb_xl { margin-bottom: 50px; }
-.lg\:mver_xl { margin-top: 50px; margin-bottom: 50px; }
-.lg\:ml_xl { margin-left: 50px; }
-.lg\:mr_xl { margin-right: 50px; }
-.lg\:mhor_xl { margin-left: 50px; margin-right: 50px; }
-.lg\:p_a { padding: auto; }
-.lg\:p_1em { padding: 1em; }
-.lg\:p_2em { padding: 2em; }
-.lg\:p_0 { padding: 0px; }
-.lg\:pt_0 { padding-top: 0px; }
-.lg\:pb_0 { padding-bottom: 0px; }
-.lg\:pver_0 { padding-top: 0px; padding-bottom: 0px; }
-.lg\:pl_0 { padding-left: 0px; }
-.lg\:pr_0 { padding-right: 0px; }
-.lg\:phor_0 { padding-left: 0px; padding-right: 0px; }
-.lg\:p_5 { padding: 5px; }
-.lg\:pt_5 { padding-top: 5px; }
-.lg\:pb_5 { padding-bottom: 5px; }
-.lg\:pver_5 { padding-top: 5px; padding-bottom: 5px; }
-.lg\:pl_5 { padding-left: 5px; }
-.lg\:pr_5 { padding-right: 5px; }
-.lg\:phor_5 { padding-left: 5px; padding-right: 5px; }
-.lg\:p_10 { padding: 10px; }
-.lg\:pt_10 { padding-top: 10px; }
-.lg\:pb_10 { padding-bottom: 10px; }
-.lg\:pver_10 { padding-top: 10px; padding-bottom: 10px; }
-.lg\:pl_10 { padding-left: 10px; }
-.lg\:pr_10 { padding-right: 10px; }
-.lg\:phor_10 { padding-left: 10px; padding-right: 10px; }
-.lg\:p_15 { padding: 15px; }
-.lg\:pt_15 { padding-top: 15px; }
-.lg\:pb_15 { padding-bottom: 15px; }
-.lg\:pver_15 { padding-top: 15px; padding-bottom: 15px; }
-.lg\:pl_15 { padding-left: 15px; }
-.lg\:pr_15 { padding-right: 15px; }
-.lg\:phor_15 { padding-left: 15px; padding-right: 15px; }
-.lg\:p_20 { padding: 20px; }
-.lg\:pt_20 { padding-top: 20px; }
-.lg\:pb_20 { padding-bottom: 20px; }
-.lg\:pver_20 { padding-top: 20px; padding-bottom: 20px; }
-.lg\:pl_20 { padding-left: 20px; }
-.lg\:pr_20 { padding-right: 20px; }
-.lg\:phor_20 { padding-left: 20px; padding-right: 20px; }
-.lg\:p_25 { padding: 25px; }
-.lg\:pt_25 { padding-top: 25px; }
-.lg\:pb_25 { padding-bottom: 25px; }
-.lg\:pver_25 { padding-top: 25px; padding-bottom: 25px; }
-.lg\:pl_25 { padding-left: 25px; }
-.lg\:pr_25 { padding-right: 25px; }
-.lg\:phor_25 { padding-left: 25px; padding-right: 25px; }
-.lg\:p_30 { padding: 30px; }
-.lg\:pt_30 { padding-top: 30px; }
-.lg\:pb_30 { padding-bottom: 30px; }
-.lg\:pver_30 { padding-top: 30px; padding-bottom: 30px; }
-.lg\:pl_30 { padding-left: 30px; }
-.lg\:pr_30 { padding-right: 30px; }
-.lg\:phor_30 { padding-left: 30px; padding-right: 30px; }
-.lg\:p_35 { padding: 35px; }
-.lg\:pt_35 { padding-top: 35px; }
-.lg\:pb_35 { padding-bottom: 35px; }
-.lg\:pver_35 { padding-top: 35px; padding-bottom: 35px; }
-.lg\:pl_35 { padding-left: 35px; }
-.lg\:pr_35 { padding-right: 35px; }
-.lg\:phor_35 { padding-left: 35px; padding-right: 35px; }
-.lg\:p_40 { padding: 40px; }
-.lg\:pt_40 { padding-top: 40px; }
-.lg\:pb_40 { padding-bottom: 40px; }
-.lg\:pver_40 { padding-top: 40px; padding-bottom: 40px; }
-.lg\:pl_40 { padding-left: 40px; }
-.lg\:pr_40 { padding-right: 40px; }
-.lg\:phor_40 { padding-left: 40px; padding-right: 40px; }
-.lg\:p_45 { padding: 45px; }
-.lg\:pt_45 { padding-top: 45px; }
-.lg\:pb_45 { padding-bottom: 45px; }
-.lg\:pver_45 { padding-top: 45px; padding-bottom: 45px; }
-.lg\:pl_45 { padding-left: 45px; }
-.lg\:pr_45 { padding-right: 45px; }
-.lg\:phor_45 { padding-left: 45px; padding-right: 45px; }
-.lg\:p_50 { padding: 50px; }
-.lg\:pt_50 { padding-top: 50px; }
-.lg\:pb_50 { padding-bottom: 50px; }
-.lg\:pver_50 { padding-top: 50px; padding-bottom: 50px; }
-.lg\:pl_50 { padding-left: 50px; }
-.lg\:pr_50 { padding-right: 50px; }
-.lg\:phor_50 { padding-left: 50px; padding-right: 50px; }
-.lg\:p_sm { padding: 10px; }
-.lg\:pt_sm { padding-top: 10px; }
-.lg\:pb_sm { padding-bottom: 10px; }
-.lg\:pver_sm { padding-top: 10px; padding-bottom: 10px; }
-.lg\:pl_sm { padding-left: 10px; }
-.lg\:pr_sm { padding-right: 10px; }
-.lg\:phor_sm { padding-left: 10px; padding-right: 10px; }
-.lg\:p_md { padding: 15px; }
-.lg\:pt_md { padding-top: 15px; }
-.lg\:pb_md { padding-bottom: 15px; }
-.lg\:pver_md { padding-top: 15px; padding-bottom: 15px; }
-.lg\:pl_md { padding-left: 15px; }
-.lg\:pr_md { padding-right: 15px; }
-.lg\:phor_md { padding-left: 15px; padding-right: 15px; }
-.lg\:p_lg { padding: 30px; }
-.lg\:pt_lg { padding-top: 30px; }
-.lg\:pb_lg { padding-bottom: 30px; }
-.lg\:pver_lg { padding-top: 30px; padding-bottom: 30px; }
-.lg\:pl_lg { padding-left: 30px; }
-.lg\:pr_lg { padding-right: 30px; }
-.lg\:phor_lg { padding-left: 30px; padding-right: 30px; }
-.lg\:p_xl { padding: 50px; }
-.lg\:pt_xl { padding-top: 50px; }
-.lg\:pb_xl { padding-bottom: 50px; }
-.lg\:pver_xl { padding-top: 50px; padding-bottom: 50px; }
-.lg\:pl_xl { padding-left: 50px; }
-.lg\:pr_xl { padding-right: 50px; }
-.lg\:phor_xl { padding-left: 50px; padding-right: 50px; }
-.lg\:p_1\.3em { padding: 1.3em; }
-.lg\:pt_1\.3em { padding-top: 1.3em; }
-.lg\:pb_1\.3em { padding-bottom: 1.3em; }
-.lg\:pver_1\.3em { padding-top: 1.3em; padding-bottom: 1.3em; }
-.lg\:pl_1\.3em { padding-left: 1.3em; }
-.lg\:pr_1\.3em { padding-right: 1.3em; }
-.lg\:phor_1\.3em { padding-left: 1.3em; padding-right: 1.3em; }
-.lg\:p_3em { padding: 3em; }
-.lg\:pt_3em { padding-top: 3em; }
-.lg\:pb_3em { padding-bottom: 3em; }
-.lg\:pver_3em { padding-top: 3em; padding-bottom: 3em; }
-.lg\:pl_3em { padding-left: 3em; }
-.lg\:pr_3em { padding-right: 3em; }
-.lg\:phor_3em { padding-left: 3em; padding-right: 3em; }
-.lg\:t_0 { top: 0px; }
-.lg\:b_0 { bottom: 0px; }
-.lg\:l_0 { left: 0px; }
-.lg\:r_0 { right: 0px; }
-.lg\:t_5 { top: 5px; }
-.lg\:b_5 { bottom: 5px; }
-.lg\:l_5 { left: 5px; }
-.lg\:r_5 { right: 5px; }
-.lg\:t_10 { top: 10px; }
-.lg\:b_10 { bottom: 10px; }
-.lg\:l_10 { left: 10px; }
-.lg\:r_10 { right: 10px; }
-.lg\:t_15 { top: 15px; }
-.lg\:b_15 { bottom: 15px; }
-.lg\:l_15 { left: 15px; }
-.lg\:r_15 { right: 15px; }
-.lg\:t_20 { top: 20px; }
-.lg\:b_20 { bottom: 20px; }
-.lg\:l_20 { left: 20px; }
-.lg\:r_20 { right: 20px; }
-.lg\:t_25 { top: 25px; }
-.lg\:b_25 { bottom: 25px; }
-.lg\:l_25 { left: 25px; }
-.lg\:r_25 { right: 25px; }
-.lg\:t_30 { top: 30px; }
-.lg\:b_30 { bottom: 30px; }
-.lg\:l_30 { left: 30px; }
-.lg\:r_30 { right: 30px; }
-.lg\:t_35 { top: 35px; }
-.lg\:b_35 { bottom: 35px; }
-.lg\:l_35 { left: 35px; }
-.lg\:r_35 { right: 35px; }
-.lg\:t_40 { top: 40px; }
-.lg\:b_40 { bottom: 40px; }
-.lg\:l_40 { left: 40px; }
-.lg\:r_40 { right: 40px; }
-.lg\:t_45 { top: 45px; }
-.lg\:b_45 { bottom: 45px; }
-.lg\:l_45 { left: 45px; }
-.lg\:r_45 { right: 45px; }
-.lg\:t_50 { top: 50px; }
-.lg\:b_50 { bottom: 50px; }
-.lg\:l_50 { left: 50px; }
-.lg\:r_50 { right: 50px; }
-.lg\:t_55 { top: 55px; }
-.lg\:b_55 { bottom: 55px; }
-.lg\:l_55 { left: 55px; }
-.lg\:r_55 { right: 55px; }
-.lg\:t_60 { top: 60px; }
-.lg\:b_60 { bottom: 60px; }
-.lg\:l_60 { left: 60px; }
-.lg\:r_60 { right: 60px; }
-.lg\:t_65 { top: 65px; }
-.lg\:b_65 { bottom: 65px; }
-.lg\:l_65 { left: 65px; }
-.lg\:r_65 { right: 65px; }
-.lg\:t_70 { top: 70px; }
-.lg\:b_70 { bottom: 70px; }
-.lg\:l_70 { left: 70px; }
-.lg\:r_70 { right: 70px; }
-.lg\:t_75 { top: 75px; }
-.lg\:b_75 { bottom: 75px; }
-.lg\:l_75 { left: 75px; }
-.lg\:r_75 { right: 75px; }
-.lg\:t_80 { top: 80px; }
-.lg\:b_80 { bottom: 80px; }
-.lg\:l_80 { left: 80px; }
-.lg\:r_80 { right: 80px; }
-.lg\:t_85 { top: 85px; }
-.lg\:b_85 { bottom: 85px; }
-.lg\:l_85 { left: 85px; }
-.lg\:r_85 { right: 85px; }
-.lg\:t_90 { top: 90px; }
-.lg\:b_90 { bottom: 90px; }
-.lg\:l_90 { left: 90px; }
-.lg\:r_90 { right: 90px; }
-.lg\:t_95 { top: 95px; }
-.lg\:b_95 { bottom: 95px; }
-.lg\:l_95 { left: 95px; }
-.lg\:r_95 { right: 95px; }
-.lg\:t_100 { top: 100px; }
-.lg\:b_100 { bottom: 100px; }
-.lg\:l_100 { left: 100px; }
-.lg\:r_100 { right: 100px; }
-.lg\:t_xs { top: 5px; }
-.lg\:b_xs { bottom: 5px; }
-.lg\:l_xs { left: 5px; }
-.lg\:r_xs { right: 5px; }
-.lg\:t_sm { top: 10px; }
-.lg\:b_sm { bottom: 10px; }
-.lg\:l_sm { left: 10px; }
-.lg\:r_sm { right: 10px; }
-.lg\:t_md { top: 15px; }
-.lg\:b_md { bottom: 15px; }
-.lg\:l_md { left: 15px; }
-.lg\:r_md { right: 15px; }
-.lg\:t_lg { top: 30px; }
-.lg\:b_lg { bottom: 30px; }
-.lg\:l_lg { left: 30px; }
-.lg\:r_lg { right: 30px; }
-.lg\:t_xl { top: 50px; }
-.lg\:b_xl { bottom: 50px; }
-.lg\:l_xl { left: 50px; }
-.lg\:r_xl { right: 50px; }
-.lg\:f_primary { font: italic bold .8em/1.2 Arial, sans-serif; }
-.lg\:ff_primary { font-family: Arial, serif; }
-.lg\:ff_secondary { font-family: Helvetica, sans-serif; }
-.lg\:fz_8 { font-size: 8px; }
-.lg\:fz_10 { font-size: 10px; }
-.lg\:fz_12 { font-size: 12px; }
-.lg\:fz_14 { font-size: 14px; }
-.lg\:fz_16 { font-size: 16px; }
-.lg\:fz_xs { font-size: 8px; }
-.lg\:fz_sm { font-size: 12px; }
-.lg\:fz_md { font-size: 16px; }
-.lg\:bd_thin { border: 1px solid black; }
-.lg\:bdt_thin { border-top: 1px solid black; }
-.lg\:bdb_thin { border-bottom: 1px solid black; }
-.lg\:bdl_thin { border-left: 1px solid black; }
-.lg\:bdr_thin { border-right: 1px solid black; }
-.lg\:bd_bold { border: 5px solid black; }
-.lg\:bdt_bold { border-top: 5px solid black; }
-.lg\:bdb_bold { border-bottom: 5px solid black; }
-.lg\:bdl_bold { border-left: 5px solid black; }
-.lg\:bdr_bold { border-right: 5px solid black; }
-.lg\:bdrs_5 { border-radius: 5px; }
-.lg\:bdrs_10 { border-radius: 10px; }
-.lg\:bdrs_circle { border-radius: 50%; }
-.lg\:bgc_dark { background-color: #000; }
-.lg\:c_dark { color: #000; }
-.lg\:bgc_light { background-color: #fff; }
-.lg\:c_light { color: #fff; }
-.lg\:fx_1 { flex: 1; }
-.lg\:fx_2 { flex: 2; }
-.lg\:fx_3 { flex: 3; }
-.lg\:fx_4 { flex: 4; }
-.lg\:fx_5 { flex: 5; }
-.lg\:fx_6 { flex: 6; }
-.lg\:fx_7 { flex: 7; }
-.lg\:fx_8 { flex: 8; }
-.lg\:fx_9 { flex: 9; }
-.lg\:fx_10 { flex: 10; }
-.lg\:fx_00a { flex: 0 0 auto; }
-.lg\:fx_norm { flex: 1; }
-.lg\:fxg_1 { flex-grow: 1; }
-.lg\:fxg_2 { flex-grow: 2; }
-.lg\:fxg_4 { flex-grow: 4; }
-.lg\:fxs_1 { flex-shrink: 1; }
-.lg\:fxs_3 { flex-shrink: 3; }
-.lg\:fxb_a { flex-basis: auto; }
-.lg\:fxb_8 { flex-basis: 8px; }
-.lg\:fxb_10 { flex-basis: 10px; }
-.lg\:fxb_12 { flex-basis: 12px; }
-.lg\:fxb_14 { flex-basis: 14px; }
-.lg\:fxb_16 { flex-basis: 16px; }
-.lg\:fxb_xs { flex-basis: 8px; }
-.lg\:fxb_sm { flex-basis: 12px; }
-.lg\:fxb_md { flex-basis: 16px; }
-.lg\:fxb_0\% { flex-basis: 0%; }
-.lg\:fxb_20\% { flex-basis: 20%; }
-.lg\:fxb_40\% { flex-basis: 40%; }
-.lg\:fxb_60\% { flex-basis: 60%; }
-.lg\:fxb_80\% { flex-basis: 80%; }
-.lg\:fxb_100\% { flex-basis: 100%; }
-.lg\:ord_u { order: unset; }
-.lg\:ord_1 { order: 1; }
-.lg\:ord_-1 { order: -1; }
-.lg\:fxd_c { flex-direction: column; }
-.lg\:fxd_cr { flex-direction: column-reverse; }
-.lg\:fxd_r { flex-direction: row; }
-.lg\:fxd_rr { flex-direction: row-reverse; }
-.lg\:fxw_n { flex-wrap: nowrap; }
-.lg\:fxw_w { flex-wrap: wrap; }
-.lg\:fxw_we { flex-wrap: wrap-reverse; }
-.lg\:fxw_u { flex-wrap: unset; }
-.lg\:jc_u { justify-content: unset; }
-.lg\:jc_c { justify-content: center; }
-.lg\:jc_fe { justify-content: flex-end; }
-.lg\:jc_fs { justify-content: flex-start; }
-.lg\:jc_sa { justify-content: space-around; }
-.lg\:jc_sb { justify-content: space-between; }
-.lg\:ac_c { align-content: center; }
-.lg\:ac_fe { align-content: flex-end; }
-.lg\:ac_fs { align-content: flex-start; }
-.lg\:ac_s { align-content: stretch; }
-.lg\:ac_sa { align-content: space-around; }
-.lg\:ac_sb { align-content: space-between; }
-.lg\:ai_b { align-items: baseline; }
-.lg\:ai_c { align-items: center; }
-.lg\:ai_fe { align-items: flex-end; }
-.lg\:ai_fs { align-items: flex-start; }
-.lg\:ai_s { align-items: stretch; }
-.lg\:z_a { z-index: auto; }
-.lg\:d_n { display: none; }
-.lg\:d_i { display: inline; }
-.lg\:d_b { display: block; }
-.lg\:d_ib { display: inline-block; }
-.lg\:d_f { display: flex; }
-.lg\:d_if { display: inline-flex; }
-.lg\:d_t { display: table; }
-.lg\:d_g { display: grid; }
-.lg\:d_ig { display: inline-grid; }
-.lg\:pos_s { position: static; }
-.lg\:pos_r { position: relative; }
-.lg\:pos_a { position: absolute; }
-.lg\:pos_f { position: fixed; }
-.lg\:va_sup { vertical-align: super; }
-.lg\:va_t { vertical-align: top; }
-.lg\:va_tt { vertical-align: text-top; }
-.lg\:va_m { vertical-align: middle; }
-.lg\:va_bl { vertical-align: baseline; }
-.lg\:va_b { vertical-align: bottom; }
-.lg\:va_tb { vertical-align: text-bottom; }
-.lg\:va_sub { vertical-align: sub; }
-.lg\:ta_l { text-align: left; }
-.lg\:ta_c { text-align: center; }
-.lg\:ta_r { text-align: right; }
-.lg\:ta_j { text-align: justify; }
-.lg\:tal_a { text-align-last: auto; }
-.lg\:tal_l { text-align-last: left; }
-.lg\:tal_c { text-align-last: center; }
-.lg\:tal_r { text-align-last: right; }
-.lg\:td_n { text-decoration: none; }
-.lg\:td_u { text-decoration: underline; }
-.lg\:td_o { text-decoration: overline; }
-.lg\:td_l { text-decoration: line-through; }
-.lg\:te_n { text-emphasis: none; }
-.lg\:te_ac { text-emphasis: accent; }
-.lg\:te_dt { text-emphasis: dot; }
-.lg\:te_c { text-emphasis: circle; }
-.lg\:te_ds { text-emphasis: disc; }
-.lg\:te_b { text-emphasis: before; }
-.lg\:te_a { text-emphasis: after; }
-.lg\:tt_n { text-transform: none; }
-.lg\:tt_c { text-transform: capitalize; }
-.lg\:tt_u { text-transform: uppercase; }
-.lg\:tt_l { text-transform: lowercase; }
-.lg\:whs_n { white-space: normal; }
-.lg\:whs_p { white-space: pre; }
-.lg\:whs_nw { white-space: nowrap; }
-.lg\:whs_pw { white-space: pre-wrap; }
-.lg\:whs_pl { white-space: pre-line; }
-.lg\:v_v { visibility: visible; }
-.lg\:v_h { visibility: hidden; }
-.lg\:v_c { visibility: collapse; }
-.lg\:cur_a { cursor: auto; }
-.lg\:cur_d { cursor: default; }
-.lg\:cur_c { cursor: crosshair; }
-.lg\:cur_ha { cursor: hand; }
-.lg\:cur_he { cursor: help; }
-.lg\:cur_m { cursor: move; }
-.lg\:cur_p { cursor: pointer; }
-.lg\:cur_t { cursor: text; }
-.lg\:lis_n { list-style: none; }
-.lg\:lisp_i { list-style-position: inside; }
-.lg\:lisp_o { list-style-position: outside; }
-.lg\:list_n { list-style-type: none; }
-.lg\:list_d { list-style-type: disc; }
-.lg\:list_c { list-style-type: circle; }
-.lg\:list_s { list-style-type: square; }
-.lg\:list_dc { list-style-type: decimal; }
-.lg\:list_dclz { list-style-type: decimal-leading-zero; }
-.lg\:list_lr { list-style-type: lower-roman; }
-.lg\:list_ur { list-style-type: upper-roman; }
-.lg\:lisi_n { list-style-image: none; }
-.lg\:ov_v { overflow: visible; }
-.lg\:ov_h { overflow: hidden; }
-.lg\:ov_s { overflow: scroll; }
-.lg\:ov_a { overflow: auto; }
-.lg\:ovx_v { overflow-x: visible; }
-.lg\:ovx_h { overflow-x: hidden; }
-.lg\:ovx_s { overflow-x: scroll; }
-.lg\:ovx_a { overflow-x: auto; }
-.lg\:ovy_v { overflow-y: visible; }
-.lg\:ovy_h { overflow-y: hidden; }
-.lg\:ovy_s { overflow-y: scroll; }
-.lg\:ovy_a { overflow-y: auto; }
-.lg\:op_0 { opacity: 0; }
-.lg\:op_01 { opacity: 0.1; }
-.lg\:op_02 { opacity: 0.2; }
-.lg\:op_03 { opacity: 0.3; }
-.lg\:op_04 { opacity: 0.4; }
-.lg\:op_05 { opacity: 0.5; }
-.lg\:op_06 { opacity: 0.6; }
-.lg\:op_07 { opacity: 0.7; }
-.lg\:op_08 { opacity: 0.8; }
-.lg\:op_09 { opacity: 0.9; }
-.lg\:op_1 { opacity: 1; }
+.lg\:w_a, .lg\:w_a\:h:hover, :hover > .lg\:w_a\:hp, .lg\:w_a\:js.js-active, .js-active .lg\:w_a\:jsp { width: auto; }
+.lg\:w_0, .lg\:w_0\:h:hover, :hover > .lg\:w_0\:hp, .lg\:w_0\:js.js-active, .js-active .lg\:w_0\:jsp { width: 0px; }
+.lg\:miw_0, .lg\:miw_0\:h:hover, :hover > .lg\:miw_0\:hp, .lg\:miw_0\:js.js-active, .js-active .lg\:miw_0\:jsp { min-width: 0px; }
+.lg\:maw_0, .lg\:maw_0\:h:hover, :hover > .lg\:maw_0\:hp, .lg\:maw_0\:js.js-active, .js-active .lg\:maw_0\:jsp { max-width: 0px; }
+.lg\:w_5, .lg\:w_5\:h:hover, :hover > .lg\:w_5\:hp, .lg\:w_5\:js.js-active, .js-active .lg\:w_5\:jsp { width: 5px; }
+.lg\:miw_5, .lg\:miw_5\:h:hover, :hover > .lg\:miw_5\:hp, .lg\:miw_5\:js.js-active, .js-active .lg\:miw_5\:jsp { min-width: 5px; }
+.lg\:maw_5, .lg\:maw_5\:h:hover, :hover > .lg\:maw_5\:hp, .lg\:maw_5\:js.js-active, .js-active .lg\:maw_5\:jsp { max-width: 5px; }
+.lg\:w_10, .lg\:w_10\:h:hover, :hover > .lg\:w_10\:hp, .lg\:w_10\:js.js-active, .js-active .lg\:w_10\:jsp { width: 10px; }
+.lg\:miw_10, .lg\:miw_10\:h:hover, :hover > .lg\:miw_10\:hp, .lg\:miw_10\:js.js-active, .js-active .lg\:miw_10\:jsp { min-width: 10px; }
+.lg\:maw_10, .lg\:maw_10\:h:hover, :hover > .lg\:maw_10\:hp, .lg\:maw_10\:js.js-active, .js-active .lg\:maw_10\:jsp { max-width: 10px; }
+.lg\:w_15, .lg\:w_15\:h:hover, :hover > .lg\:w_15\:hp, .lg\:w_15\:js.js-active, .js-active .lg\:w_15\:jsp { width: 15px; }
+.lg\:miw_15, .lg\:miw_15\:h:hover, :hover > .lg\:miw_15\:hp, .lg\:miw_15\:js.js-active, .js-active .lg\:miw_15\:jsp { min-width: 15px; }
+.lg\:maw_15, .lg\:maw_15\:h:hover, :hover > .lg\:maw_15\:hp, .lg\:maw_15\:js.js-active, .js-active .lg\:maw_15\:jsp { max-width: 15px; }
+.lg\:w_20, .lg\:w_20\:h:hover, :hover > .lg\:w_20\:hp, .lg\:w_20\:js.js-active, .js-active .lg\:w_20\:jsp { width: 20px; }
+.lg\:miw_20, .lg\:miw_20\:h:hover, :hover > .lg\:miw_20\:hp, .lg\:miw_20\:js.js-active, .js-active .lg\:miw_20\:jsp { min-width: 20px; }
+.lg\:maw_20, .lg\:maw_20\:h:hover, :hover > .lg\:maw_20\:hp, .lg\:maw_20\:js.js-active, .js-active .lg\:maw_20\:jsp { max-width: 20px; }
+.lg\:w_25, .lg\:w_25\:h:hover, :hover > .lg\:w_25\:hp, .lg\:w_25\:js.js-active, .js-active .lg\:w_25\:jsp { width: 25px; }
+.lg\:miw_25, .lg\:miw_25\:h:hover, :hover > .lg\:miw_25\:hp, .lg\:miw_25\:js.js-active, .js-active .lg\:miw_25\:jsp { min-width: 25px; }
+.lg\:maw_25, .lg\:maw_25\:h:hover, :hover > .lg\:maw_25\:hp, .lg\:maw_25\:js.js-active, .js-active .lg\:maw_25\:jsp { max-width: 25px; }
+.lg\:w_30, .lg\:w_30\:h:hover, :hover > .lg\:w_30\:hp, .lg\:w_30\:js.js-active, .js-active .lg\:w_30\:jsp { width: 30px; }
+.lg\:miw_30, .lg\:miw_30\:h:hover, :hover > .lg\:miw_30\:hp, .lg\:miw_30\:js.js-active, .js-active .lg\:miw_30\:jsp { min-width: 30px; }
+.lg\:maw_30, .lg\:maw_30\:h:hover, :hover > .lg\:maw_30\:hp, .lg\:maw_30\:js.js-active, .js-active .lg\:maw_30\:jsp { max-width: 30px; }
+.lg\:w_35, .lg\:w_35\:h:hover, :hover > .lg\:w_35\:hp, .lg\:w_35\:js.js-active, .js-active .lg\:w_35\:jsp { width: 35px; }
+.lg\:miw_35, .lg\:miw_35\:h:hover, :hover > .lg\:miw_35\:hp, .lg\:miw_35\:js.js-active, .js-active .lg\:miw_35\:jsp { min-width: 35px; }
+.lg\:maw_35, .lg\:maw_35\:h:hover, :hover > .lg\:maw_35\:hp, .lg\:maw_35\:js.js-active, .js-active .lg\:maw_35\:jsp { max-width: 35px; }
+.lg\:w_40, .lg\:w_40\:h:hover, :hover > .lg\:w_40\:hp, .lg\:w_40\:js.js-active, .js-active .lg\:w_40\:jsp { width: 40px; }
+.lg\:miw_40, .lg\:miw_40\:h:hover, :hover > .lg\:miw_40\:hp, .lg\:miw_40\:js.js-active, .js-active .lg\:miw_40\:jsp { min-width: 40px; }
+.lg\:maw_40, .lg\:maw_40\:h:hover, :hover > .lg\:maw_40\:hp, .lg\:maw_40\:js.js-active, .js-active .lg\:maw_40\:jsp { max-width: 40px; }
+.lg\:w_45, .lg\:w_45\:h:hover, :hover > .lg\:w_45\:hp, .lg\:w_45\:js.js-active, .js-active .lg\:w_45\:jsp { width: 45px; }
+.lg\:miw_45, .lg\:miw_45\:h:hover, :hover > .lg\:miw_45\:hp, .lg\:miw_45\:js.js-active, .js-active .lg\:miw_45\:jsp { min-width: 45px; }
+.lg\:maw_45, .lg\:maw_45\:h:hover, :hover > .lg\:maw_45\:hp, .lg\:maw_45\:js.js-active, .js-active .lg\:maw_45\:jsp { max-width: 45px; }
+.lg\:w_50, .lg\:w_50\:h:hover, :hover > .lg\:w_50\:hp, .lg\:w_50\:js.js-active, .js-active .lg\:w_50\:jsp { width: 50px; }
+.lg\:miw_50, .lg\:miw_50\:h:hover, :hover > .lg\:miw_50\:hp, .lg\:miw_50\:js.js-active, .js-active .lg\:miw_50\:jsp { min-width: 50px; }
+.lg\:maw_50, .lg\:maw_50\:h:hover, :hover > .lg\:maw_50\:hp, .lg\:maw_50\:js.js-active, .js-active .lg\:maw_50\:jsp { max-width: 50px; }
+.lg\:w_100, .lg\:w_100\:h:hover, :hover > .lg\:w_100\:hp, .lg\:w_100\:js.js-active, .js-active .lg\:w_100\:jsp { width: 100px; }
+.lg\:miw_100, .lg\:miw_100\:h:hover, :hover > .lg\:miw_100\:hp, .lg\:miw_100\:js.js-active, .js-active .lg\:miw_100\:jsp { min-width: 100px; }
+.lg\:maw_100, .lg\:maw_100\:h:hover, :hover > .lg\:maw_100\:hp, .lg\:maw_100\:js.js-active, .js-active .lg\:maw_100\:jsp { max-width: 100px; }
+.lg\:w_200, .lg\:w_200\:h:hover, :hover > .lg\:w_200\:hp, .lg\:w_200\:js.js-active, .js-active .lg\:w_200\:jsp { width: 200px; }
+.lg\:miw_200, .lg\:miw_200\:h:hover, :hover > .lg\:miw_200\:hp, .lg\:miw_200\:js.js-active, .js-active .lg\:miw_200\:jsp { min-width: 200px; }
+.lg\:maw_200, .lg\:maw_200\:h:hover, :hover > .lg\:maw_200\:hp, .lg\:maw_200\:js.js-active, .js-active .lg\:maw_200\:jsp { max-width: 200px; }
+.lg\:w_300, .lg\:w_300\:h:hover, :hover > .lg\:w_300\:hp, .lg\:w_300\:js.js-active, .js-active .lg\:w_300\:jsp { width: 300px; }
+.lg\:miw_300, .lg\:miw_300\:h:hover, :hover > .lg\:miw_300\:hp, .lg\:miw_300\:js.js-active, .js-active .lg\:miw_300\:jsp { min-width: 300px; }
+.lg\:maw_300, .lg\:maw_300\:h:hover, :hover > .lg\:maw_300\:hp, .lg\:maw_300\:js.js-active, .js-active .lg\:maw_300\:jsp { max-width: 300px; }
+.lg\:w_400, .lg\:w_400\:h:hover, :hover > .lg\:w_400\:hp, .lg\:w_400\:js.js-active, .js-active .lg\:w_400\:jsp { width: 400px; }
+.lg\:miw_400, .lg\:miw_400\:h:hover, :hover > .lg\:miw_400\:hp, .lg\:miw_400\:js.js-active, .js-active .lg\:miw_400\:jsp { min-width: 400px; }
+.lg\:maw_400, .lg\:maw_400\:h:hover, :hover > .lg\:maw_400\:hp, .lg\:maw_400\:js.js-active, .js-active .lg\:maw_400\:jsp { max-width: 400px; }
+.lg\:w_500, .lg\:w_500\:h:hover, :hover > .lg\:w_500\:hp, .lg\:w_500\:js.js-active, .js-active .lg\:w_500\:jsp { width: 500px; }
+.lg\:miw_500, .lg\:miw_500\:h:hover, :hover > .lg\:miw_500\:hp, .lg\:miw_500\:js.js-active, .js-active .lg\:miw_500\:jsp { min-width: 500px; }
+.lg\:maw_500, .lg\:maw_500\:h:hover, :hover > .lg\:maw_500\:hp, .lg\:maw_500\:js.js-active, .js-active .lg\:maw_500\:jsp { max-width: 500px; }
+.lg\:w_600, .lg\:w_600\:h:hover, :hover > .lg\:w_600\:hp, .lg\:w_600\:js.js-active, .js-active .lg\:w_600\:jsp { width: 600px; }
+.lg\:miw_600, .lg\:miw_600\:h:hover, :hover > .lg\:miw_600\:hp, .lg\:miw_600\:js.js-active, .js-active .lg\:miw_600\:jsp { min-width: 600px; }
+.lg\:maw_600, .lg\:maw_600\:h:hover, :hover > .lg\:maw_600\:hp, .lg\:maw_600\:js.js-active, .js-active .lg\:maw_600\:jsp { max-width: 600px; }
+.lg\:w_700, .lg\:w_700\:h:hover, :hover > .lg\:w_700\:hp, .lg\:w_700\:js.js-active, .js-active .lg\:w_700\:jsp { width: 700px; }
+.lg\:miw_700, .lg\:miw_700\:h:hover, :hover > .lg\:miw_700\:hp, .lg\:miw_700\:js.js-active, .js-active .lg\:miw_700\:jsp { min-width: 700px; }
+.lg\:maw_700, .lg\:maw_700\:h:hover, :hover > .lg\:maw_700\:hp, .lg\:maw_700\:js.js-active, .js-active .lg\:maw_700\:jsp { max-width: 700px; }
+.lg\:w_800, .lg\:w_800\:h:hover, :hover > .lg\:w_800\:hp, .lg\:w_800\:js.js-active, .js-active .lg\:w_800\:jsp { width: 800px; }
+.lg\:miw_800, .lg\:miw_800\:h:hover, :hover > .lg\:miw_800\:hp, .lg\:miw_800\:js.js-active, .js-active .lg\:miw_800\:jsp { min-width: 800px; }
+.lg\:maw_800, .lg\:maw_800\:h:hover, :hover > .lg\:maw_800\:hp, .lg\:maw_800\:js.js-active, .js-active .lg\:maw_800\:jsp { max-width: 800px; }
+.lg\:w_900, .lg\:w_900\:h:hover, :hover > .lg\:w_900\:hp, .lg\:w_900\:js.js-active, .js-active .lg\:w_900\:jsp { width: 900px; }
+.lg\:miw_900, .lg\:miw_900\:h:hover, :hover > .lg\:miw_900\:hp, .lg\:miw_900\:js.js-active, .js-active .lg\:miw_900\:jsp { min-width: 900px; }
+.lg\:maw_900, .lg\:maw_900\:h:hover, :hover > .lg\:maw_900\:hp, .lg\:maw_900\:js.js-active, .js-active .lg\:maw_900\:jsp { max-width: 900px; }
+.lg\:w_1000, .lg\:w_1000\:h:hover, :hover > .lg\:w_1000\:hp, .lg\:w_1000\:js.js-active, .js-active .lg\:w_1000\:jsp { width: 1000px; }
+.lg\:miw_1000, .lg\:miw_1000\:h:hover, :hover > .lg\:miw_1000\:hp, .lg\:miw_1000\:js.js-active, .js-active .lg\:miw_1000\:jsp { min-width: 1000px; }
+.lg\:maw_1000, .lg\:maw_1000\:h:hover, :hover > .lg\:maw_1000\:hp, .lg\:maw_1000\:js.js-active, .js-active .lg\:maw_1000\:jsp { max-width: 1000px; }
+.lg\:w_full, .lg\:w_full\:h:hover, :hover > .lg\:w_full\:hp, .lg\:w_full\:js.js-active, .js-active .lg\:w_full\:jsp { width: 100%; }
+.lg\:miw_full, .lg\:miw_full\:h:hover, :hover > .lg\:miw_full\:hp, .lg\:miw_full\:js.js-active, .js-active .lg\:miw_full\:jsp { min-width: 100%; }
+.lg\:maw_full, .lg\:maw_full\:h:hover, :hover > .lg\:maw_full\:hp, .lg\:maw_full\:js.js-active, .js-active .lg\:maw_full\:jsp { max-width: 100%; }
+.lg\:w_half, .lg\:w_half\:h:hover, :hover > .lg\:w_half\:hp, .lg\:w_half\:js.js-active, .js-active .lg\:w_half\:jsp { width: 50%; }
+.lg\:miw_half, .lg\:miw_half\:h:hover, :hover > .lg\:miw_half\:hp, .lg\:miw_half\:js.js-active, .js-active .lg\:miw_half\:jsp { min-width: 50%; }
+.lg\:maw_half, .lg\:maw_half\:h:hover, :hover > .lg\:maw_half\:hp, .lg\:maw_half\:js.js-active, .js-active .lg\:maw_half\:jsp { max-width: 50%; }
+.lg\:w_0\%, .lg\:w_0\%\:h:hover, :hover > .lg\:w_0\%\:hp, .lg\:w_0\%\:js.js-active, .js-active .lg\:w_0\%\:jsp { width: 0%; }
+.lg\:miw_0\%, .lg\:miw_0\%\:h:hover, :hover > .lg\:miw_0\%\:hp, .lg\:miw_0\%\:js.js-active, .js-active .lg\:miw_0\%\:jsp { min-width: 0%; }
+.lg\:maw_0\%, .lg\:maw_0\%\:h:hover, :hover > .lg\:maw_0\%\:hp, .lg\:maw_0\%\:js.js-active, .js-active .lg\:maw_0\%\:jsp { max-width: 0%; }
+.lg\:w_10\%, .lg\:w_10\%\:h:hover, :hover > .lg\:w_10\%\:hp, .lg\:w_10\%\:js.js-active, .js-active .lg\:w_10\%\:jsp { width: 10%; }
+.lg\:miw_10\%, .lg\:miw_10\%\:h:hover, :hover > .lg\:miw_10\%\:hp, .lg\:miw_10\%\:js.js-active, .js-active .lg\:miw_10\%\:jsp { min-width: 10%; }
+.lg\:maw_10\%, .lg\:maw_10\%\:h:hover, :hover > .lg\:maw_10\%\:hp, .lg\:maw_10\%\:js.js-active, .js-active .lg\:maw_10\%\:jsp { max-width: 10%; }
+.lg\:w_20\%, .lg\:w_20\%\:h:hover, :hover > .lg\:w_20\%\:hp, .lg\:w_20\%\:js.js-active, .js-active .lg\:w_20\%\:jsp { width: 20%; }
+.lg\:miw_20\%, .lg\:miw_20\%\:h:hover, :hover > .lg\:miw_20\%\:hp, .lg\:miw_20\%\:js.js-active, .js-active .lg\:miw_20\%\:jsp { min-width: 20%; }
+.lg\:maw_20\%, .lg\:maw_20\%\:h:hover, :hover > .lg\:maw_20\%\:hp, .lg\:maw_20\%\:js.js-active, .js-active .lg\:maw_20\%\:jsp { max-width: 20%; }
+.lg\:w_30\%, .lg\:w_30\%\:h:hover, :hover > .lg\:w_30\%\:hp, .lg\:w_30\%\:js.js-active, .js-active .lg\:w_30\%\:jsp { width: 30%; }
+.lg\:miw_30\%, .lg\:miw_30\%\:h:hover, :hover > .lg\:miw_30\%\:hp, .lg\:miw_30\%\:js.js-active, .js-active .lg\:miw_30\%\:jsp { min-width: 30%; }
+.lg\:maw_30\%, .lg\:maw_30\%\:h:hover, :hover > .lg\:maw_30\%\:hp, .lg\:maw_30\%\:js.js-active, .js-active .lg\:maw_30\%\:jsp { max-width: 30%; }
+.lg\:w_40\%, .lg\:w_40\%\:h:hover, :hover > .lg\:w_40\%\:hp, .lg\:w_40\%\:js.js-active, .js-active .lg\:w_40\%\:jsp { width: 40%; }
+.lg\:miw_40\%, .lg\:miw_40\%\:h:hover, :hover > .lg\:miw_40\%\:hp, .lg\:miw_40\%\:js.js-active, .js-active .lg\:miw_40\%\:jsp { min-width: 40%; }
+.lg\:maw_40\%, .lg\:maw_40\%\:h:hover, :hover > .lg\:maw_40\%\:hp, .lg\:maw_40\%\:js.js-active, .js-active .lg\:maw_40\%\:jsp { max-width: 40%; }
+.lg\:w_50\%, .lg\:w_50\%\:h:hover, :hover > .lg\:w_50\%\:hp, .lg\:w_50\%\:js.js-active, .js-active .lg\:w_50\%\:jsp { width: 50%; }
+.lg\:miw_50\%, .lg\:miw_50\%\:h:hover, :hover > .lg\:miw_50\%\:hp, .lg\:miw_50\%\:js.js-active, .js-active .lg\:miw_50\%\:jsp { min-width: 50%; }
+.lg\:maw_50\%, .lg\:maw_50\%\:h:hover, :hover > .lg\:maw_50\%\:hp, .lg\:maw_50\%\:js.js-active, .js-active .lg\:maw_50\%\:jsp { max-width: 50%; }
+.lg\:w_60\%, .lg\:w_60\%\:h:hover, :hover > .lg\:w_60\%\:hp, .lg\:w_60\%\:js.js-active, .js-active .lg\:w_60\%\:jsp { width: 60%; }
+.lg\:miw_60\%, .lg\:miw_60\%\:h:hover, :hover > .lg\:miw_60\%\:hp, .lg\:miw_60\%\:js.js-active, .js-active .lg\:miw_60\%\:jsp { min-width: 60%; }
+.lg\:maw_60\%, .lg\:maw_60\%\:h:hover, :hover > .lg\:maw_60\%\:hp, .lg\:maw_60\%\:js.js-active, .js-active .lg\:maw_60\%\:jsp { max-width: 60%; }
+.lg\:w_70\%, .lg\:w_70\%\:h:hover, :hover > .lg\:w_70\%\:hp, .lg\:w_70\%\:js.js-active, .js-active .lg\:w_70\%\:jsp { width: 70%; }
+.lg\:miw_70\%, .lg\:miw_70\%\:h:hover, :hover > .lg\:miw_70\%\:hp, .lg\:miw_70\%\:js.js-active, .js-active .lg\:miw_70\%\:jsp { min-width: 70%; }
+.lg\:maw_70\%, .lg\:maw_70\%\:h:hover, :hover > .lg\:maw_70\%\:hp, .lg\:maw_70\%\:js.js-active, .js-active .lg\:maw_70\%\:jsp { max-width: 70%; }
+.lg\:w_80\%, .lg\:w_80\%\:h:hover, :hover > .lg\:w_80\%\:hp, .lg\:w_80\%\:js.js-active, .js-active .lg\:w_80\%\:jsp { width: 80%; }
+.lg\:miw_80\%, .lg\:miw_80\%\:h:hover, :hover > .lg\:miw_80\%\:hp, .lg\:miw_80\%\:js.js-active, .js-active .lg\:miw_80\%\:jsp { min-width: 80%; }
+.lg\:maw_80\%, .lg\:maw_80\%\:h:hover, :hover > .lg\:maw_80\%\:hp, .lg\:maw_80\%\:js.js-active, .js-active .lg\:maw_80\%\:jsp { max-width: 80%; }
+.lg\:w_90\%, .lg\:w_90\%\:h:hover, :hover > .lg\:w_90\%\:hp, .lg\:w_90\%\:js.js-active, .js-active .lg\:w_90\%\:jsp { width: 90%; }
+.lg\:miw_90\%, .lg\:miw_90\%\:h:hover, :hover > .lg\:miw_90\%\:hp, .lg\:miw_90\%\:js.js-active, .js-active .lg\:miw_90\%\:jsp { min-width: 90%; }
+.lg\:maw_90\%, .lg\:maw_90\%\:h:hover, :hover > .lg\:maw_90\%\:hp, .lg\:maw_90\%\:js.js-active, .js-active .lg\:maw_90\%\:jsp { max-width: 90%; }
+.lg\:w_100\%, .lg\:w_100\%\:h:hover, :hover > .lg\:w_100\%\:hp, .lg\:w_100\%\:js.js-active, .js-active .lg\:w_100\%\:jsp { width: 100%; }
+.lg\:miw_100\%, .lg\:miw_100\%\:h:hover, :hover > .lg\:miw_100\%\:hp, .lg\:miw_100\%\:js.js-active, .js-active .lg\:miw_100\%\:jsp { min-width: 100%; }
+.lg\:maw_100\%, .lg\:maw_100\%\:h:hover, :hover > .lg\:maw_100\%\:hp, .lg\:maw_100\%\:js.js-active, .js-active .lg\:maw_100\%\:jsp { max-width: 100%; }
+.lg\:h_a, .lg\:h_a\:h:hover, :hover > .lg\:h_a\:hp, .lg\:h_a\:js.js-active, .js-active .lg\:h_a\:jsp { height: auto; }
+.lg\:h_0, .lg\:h_0\:h:hover, :hover > .lg\:h_0\:hp, .lg\:h_0\:js.js-active, .js-active .lg\:h_0\:jsp { height: 0px; }
+.lg\:mih_0, .lg\:mih_0\:h:hover, :hover > .lg\:mih_0\:hp, .lg\:mih_0\:js.js-active, .js-active .lg\:mih_0\:jsp { min-height: 0px; }
+.lg\:mah_0, .lg\:mah_0\:h:hover, :hover > .lg\:mah_0\:hp, .lg\:mah_0\:js.js-active, .js-active .lg\:mah_0\:jsp { max-height: 0px; }
+.lg\:h_5, .lg\:h_5\:h:hover, :hover > .lg\:h_5\:hp, .lg\:h_5\:js.js-active, .js-active .lg\:h_5\:jsp { height: 5px; }
+.lg\:mih_5, .lg\:mih_5\:h:hover, :hover > .lg\:mih_5\:hp, .lg\:mih_5\:js.js-active, .js-active .lg\:mih_5\:jsp { min-height: 5px; }
+.lg\:mah_5, .lg\:mah_5\:h:hover, :hover > .lg\:mah_5\:hp, .lg\:mah_5\:js.js-active, .js-active .lg\:mah_5\:jsp { max-height: 5px; }
+.lg\:h_10, .lg\:h_10\:h:hover, :hover > .lg\:h_10\:hp, .lg\:h_10\:js.js-active, .js-active .lg\:h_10\:jsp { height: 10px; }
+.lg\:mih_10, .lg\:mih_10\:h:hover, :hover > .lg\:mih_10\:hp, .lg\:mih_10\:js.js-active, .js-active .lg\:mih_10\:jsp { min-height: 10px; }
+.lg\:mah_10, .lg\:mah_10\:h:hover, :hover > .lg\:mah_10\:hp, .lg\:mah_10\:js.js-active, .js-active .lg\:mah_10\:jsp { max-height: 10px; }
+.lg\:h_15, .lg\:h_15\:h:hover, :hover > .lg\:h_15\:hp, .lg\:h_15\:js.js-active, .js-active .lg\:h_15\:jsp { height: 15px; }
+.lg\:mih_15, .lg\:mih_15\:h:hover, :hover > .lg\:mih_15\:hp, .lg\:mih_15\:js.js-active, .js-active .lg\:mih_15\:jsp { min-height: 15px; }
+.lg\:mah_15, .lg\:mah_15\:h:hover, :hover > .lg\:mah_15\:hp, .lg\:mah_15\:js.js-active, .js-active .lg\:mah_15\:jsp { max-height: 15px; }
+.lg\:h_20, .lg\:h_20\:h:hover, :hover > .lg\:h_20\:hp, .lg\:h_20\:js.js-active, .js-active .lg\:h_20\:jsp { height: 20px; }
+.lg\:mih_20, .lg\:mih_20\:h:hover, :hover > .lg\:mih_20\:hp, .lg\:mih_20\:js.js-active, .js-active .lg\:mih_20\:jsp { min-height: 20px; }
+.lg\:mah_20, .lg\:mah_20\:h:hover, :hover > .lg\:mah_20\:hp, .lg\:mah_20\:js.js-active, .js-active .lg\:mah_20\:jsp { max-height: 20px; }
+.lg\:h_25, .lg\:h_25\:h:hover, :hover > .lg\:h_25\:hp, .lg\:h_25\:js.js-active, .js-active .lg\:h_25\:jsp { height: 25px; }
+.lg\:mih_25, .lg\:mih_25\:h:hover, :hover > .lg\:mih_25\:hp, .lg\:mih_25\:js.js-active, .js-active .lg\:mih_25\:jsp { min-height: 25px; }
+.lg\:mah_25, .lg\:mah_25\:h:hover, :hover > .lg\:mah_25\:hp, .lg\:mah_25\:js.js-active, .js-active .lg\:mah_25\:jsp { max-height: 25px; }
+.lg\:h_30, .lg\:h_30\:h:hover, :hover > .lg\:h_30\:hp, .lg\:h_30\:js.js-active, .js-active .lg\:h_30\:jsp { height: 30px; }
+.lg\:mih_30, .lg\:mih_30\:h:hover, :hover > .lg\:mih_30\:hp, .lg\:mih_30\:js.js-active, .js-active .lg\:mih_30\:jsp { min-height: 30px; }
+.lg\:mah_30, .lg\:mah_30\:h:hover, :hover > .lg\:mah_30\:hp, .lg\:mah_30\:js.js-active, .js-active .lg\:mah_30\:jsp { max-height: 30px; }
+.lg\:h_35, .lg\:h_35\:h:hover, :hover > .lg\:h_35\:hp, .lg\:h_35\:js.js-active, .js-active .lg\:h_35\:jsp { height: 35px; }
+.lg\:mih_35, .lg\:mih_35\:h:hover, :hover > .lg\:mih_35\:hp, .lg\:mih_35\:js.js-active, .js-active .lg\:mih_35\:jsp { min-height: 35px; }
+.lg\:mah_35, .lg\:mah_35\:h:hover, :hover > .lg\:mah_35\:hp, .lg\:mah_35\:js.js-active, .js-active .lg\:mah_35\:jsp { max-height: 35px; }
+.lg\:h_40, .lg\:h_40\:h:hover, :hover > .lg\:h_40\:hp, .lg\:h_40\:js.js-active, .js-active .lg\:h_40\:jsp { height: 40px; }
+.lg\:mih_40, .lg\:mih_40\:h:hover, :hover > .lg\:mih_40\:hp, .lg\:mih_40\:js.js-active, .js-active .lg\:mih_40\:jsp { min-height: 40px; }
+.lg\:mah_40, .lg\:mah_40\:h:hover, :hover > .lg\:mah_40\:hp, .lg\:mah_40\:js.js-active, .js-active .lg\:mah_40\:jsp { max-height: 40px; }
+.lg\:h_45, .lg\:h_45\:h:hover, :hover > .lg\:h_45\:hp, .lg\:h_45\:js.js-active, .js-active .lg\:h_45\:jsp { height: 45px; }
+.lg\:mih_45, .lg\:mih_45\:h:hover, :hover > .lg\:mih_45\:hp, .lg\:mih_45\:js.js-active, .js-active .lg\:mih_45\:jsp { min-height: 45px; }
+.lg\:mah_45, .lg\:mah_45\:h:hover, :hover > .lg\:mah_45\:hp, .lg\:mah_45\:js.js-active, .js-active .lg\:mah_45\:jsp { max-height: 45px; }
+.lg\:h_50, .lg\:h_50\:h:hover, :hover > .lg\:h_50\:hp, .lg\:h_50\:js.js-active, .js-active .lg\:h_50\:jsp { height: 50px; }
+.lg\:mih_50, .lg\:mih_50\:h:hover, :hover > .lg\:mih_50\:hp, .lg\:mih_50\:js.js-active, .js-active .lg\:mih_50\:jsp { min-height: 50px; }
+.lg\:mah_50, .lg\:mah_50\:h:hover, :hover > .lg\:mah_50\:hp, .lg\:mah_50\:js.js-active, .js-active .lg\:mah_50\:jsp { max-height: 50px; }
+.lg\:h_300, .lg\:h_300\:h:hover, :hover > .lg\:h_300\:hp, .lg\:h_300\:js.js-active, .js-active .lg\:h_300\:jsp { height: 300px; }
+.lg\:mih_300, .lg\:mih_300\:h:hover, :hover > .lg\:mih_300\:hp, .lg\:mih_300\:js.js-active, .js-active .lg\:mih_300\:jsp { min-height: 300px; }
+.lg\:mah_300, .lg\:mah_300\:h:hover, :hover > .lg\:mah_300\:hp, .lg\:mah_300\:js.js-active, .js-active .lg\:mah_300\:jsp { max-height: 300px; }
+.lg\:h_full, .lg\:h_full\:h:hover, :hover > .lg\:h_full\:hp, .lg\:h_full\:js.js-active, .js-active .lg\:h_full\:jsp { height: 100%; }
+.lg\:mih_full, .lg\:mih_full\:h:hover, :hover > .lg\:mih_full\:hp, .lg\:mih_full\:js.js-active, .js-active .lg\:mih_full\:jsp { min-height: 100%; }
+.lg\:mah_full, .lg\:mah_full\:h:hover, :hover > .lg\:mah_full\:hp, .lg\:mah_full\:js.js-active, .js-active .lg\:mah_full\:jsp { max-height: 100%; }
+.lg\:h_half, .lg\:h_half\:h:hover, :hover > .lg\:h_half\:hp, .lg\:h_half\:js.js-active, .js-active .lg\:h_half\:jsp { height: 50%; }
+.lg\:mih_half, .lg\:mih_half\:h:hover, :hover > .lg\:mih_half\:hp, .lg\:mih_half\:js.js-active, .js-active .lg\:mih_half\:jsp { min-height: 50%; }
+.lg\:mah_half, .lg\:mah_half\:h:hover, :hover > .lg\:mah_half\:hp, .lg\:mah_half\:js.js-active, .js-active .lg\:mah_half\:jsp { max-height: 50%; }
+.lg\:h_50vh, .lg\:h_50vh\:h:hover, :hover > .lg\:h_50vh\:hp, .lg\:h_50vh\:js.js-active, .js-active .lg\:h_50vh\:jsp { height: 50vh; }
+.lg\:mih_50vh, .lg\:mih_50vh\:h:hover, :hover > .lg\:mih_50vh\:hp, .lg\:mih_50vh\:js.js-active, .js-active .lg\:mih_50vh\:jsp { min-height: 50vh; }
+.lg\:mah_50vh, .lg\:mah_50vh\:h:hover, :hover > .lg\:mah_50vh\:hp, .lg\:mah_50vh\:js.js-active, .js-active .lg\:mah_50vh\:jsp { max-height: 50vh; }
+.lg\:h_100vh, .lg\:h_100vh\:h:hover, :hover > .lg\:h_100vh\:hp, .lg\:h_100vh\:js.js-active, .js-active .lg\:h_100vh\:jsp { height: 100vh; }
+.lg\:mih_100vh, .lg\:mih_100vh\:h:hover, :hover > .lg\:mih_100vh\:hp, .lg\:mih_100vh\:js.js-active, .js-active .lg\:mih_100vh\:jsp { min-height: 100vh; }
+.lg\:mah_100vh, .lg\:mah_100vh\:h:hover, :hover > .lg\:mah_100vh\:hp, .lg\:mah_100vh\:js.js-active, .js-active .lg\:mah_100vh\:jsp { max-height: 100vh; }
+.lg\:m_a, .lg\:m_a\:h:hover, :hover > .lg\:m_a\:hp, .lg\:m_a\:js.js-active, .js-active .lg\:m_a\:jsp { margin: auto; }
+.lg\:m_0a, .lg\:m_0a\:h:hover, :hover > .lg\:m_0a\:hp, .lg\:m_0a\:js.js-active, .js-active .lg\:m_0a\:jsp { margin: 0 auto; }
+.lg\:m_1em, .lg\:m_1em\:h:hover, :hover > .lg\:m_1em\:hp, .lg\:m_1em\:js.js-active, .js-active .lg\:m_1em\:jsp { margin: 1em; }
+.lg\:m_2em, .lg\:m_2em\:h:hover, :hover > .lg\:m_2em\:hp, .lg\:m_2em\:js.js-active, .js-active .lg\:m_2em\:jsp { margin: 2em; }
+.lg\:m_3em, .lg\:m_3em\:h:hover, :hover > .lg\:m_3em\:hp, .lg\:m_3em\:js.js-active, .js-active .lg\:m_3em\:jsp { margin: 3em; }
+.lg\:m_4em, .lg\:m_4em\:h:hover, :hover > .lg\:m_4em\:hp, .lg\:m_4em\:js.js-active, .js-active .lg\:m_4em\:jsp { margin: 4em; }
+.lg\:m_5em, .lg\:m_5em\:h:hover, :hover > .lg\:m_5em\:hp, .lg\:m_5em\:js.js-active, .js-active .lg\:m_5em\:jsp { margin: 5em; }
+.lg\:m_0, .lg\:m_0\:h:hover, :hover > .lg\:m_0\:hp, .lg\:m_0\:js.js-active, .js-active .lg\:m_0\:jsp { margin: 0px; }
+.lg\:mt_0, .lg\:mt_0\:h:hover, :hover > .lg\:mt_0\:hp, .lg\:mt_0\:js.js-active, .js-active .lg\:mt_0\:jsp { margin-top: 0px; }
+.lg\:mb_0, .lg\:mb_0\:h:hover, :hover > .lg\:mb_0\:hp, .lg\:mb_0\:js.js-active, .js-active .lg\:mb_0\:jsp { margin-bottom: 0px; }
+.lg\:mver_0, .lg\:mver_0\:h:hover, :hover > .lg\:mver_0\:hp, .lg\:mver_0\:js.js-active, .js-active .lg\:mver_0\:jsp { margin-top: 0px; margin-bottom: 0px; }
+.lg\:ml_0, .lg\:ml_0\:h:hover, :hover > .lg\:ml_0\:hp, .lg\:ml_0\:js.js-active, .js-active .lg\:ml_0\:jsp { margin-left: 0px; }
+.lg\:mr_0, .lg\:mr_0\:h:hover, :hover > .lg\:mr_0\:hp, .lg\:mr_0\:js.js-active, .js-active .lg\:mr_0\:jsp { margin-right: 0px; }
+.lg\:mhor_0, .lg\:mhor_0\:h:hover, :hover > .lg\:mhor_0\:hp, .lg\:mhor_0\:js.js-active, .js-active .lg\:mhor_0\:jsp { margin-left: 0px; margin-right: 0px; }
+.lg\:m_5, .lg\:m_5\:h:hover, :hover > .lg\:m_5\:hp, .lg\:m_5\:js.js-active, .js-active .lg\:m_5\:jsp { margin: 5px; }
+.lg\:mt_5, .lg\:mt_5\:h:hover, :hover > .lg\:mt_5\:hp, .lg\:mt_5\:js.js-active, .js-active .lg\:mt_5\:jsp { margin-top: 5px; }
+.lg\:mb_5, .lg\:mb_5\:h:hover, :hover > .lg\:mb_5\:hp, .lg\:mb_5\:js.js-active, .js-active .lg\:mb_5\:jsp { margin-bottom: 5px; }
+.lg\:mver_5, .lg\:mver_5\:h:hover, :hover > .lg\:mver_5\:hp, .lg\:mver_5\:js.js-active, .js-active .lg\:mver_5\:jsp { margin-top: 5px; margin-bottom: 5px; }
+.lg\:ml_5, .lg\:ml_5\:h:hover, :hover > .lg\:ml_5\:hp, .lg\:ml_5\:js.js-active, .js-active .lg\:ml_5\:jsp { margin-left: 5px; }
+.lg\:mr_5, .lg\:mr_5\:h:hover, :hover > .lg\:mr_5\:hp, .lg\:mr_5\:js.js-active, .js-active .lg\:mr_5\:jsp { margin-right: 5px; }
+.lg\:mhor_5, .lg\:mhor_5\:h:hover, :hover > .lg\:mhor_5\:hp, .lg\:mhor_5\:js.js-active, .js-active .lg\:mhor_5\:jsp { margin-left: 5px; margin-right: 5px; }
+.lg\:m_10, .lg\:m_10\:h:hover, :hover > .lg\:m_10\:hp, .lg\:m_10\:js.js-active, .js-active .lg\:m_10\:jsp { margin: 10px; }
+.lg\:mt_10, .lg\:mt_10\:h:hover, :hover > .lg\:mt_10\:hp, .lg\:mt_10\:js.js-active, .js-active .lg\:mt_10\:jsp { margin-top: 10px; }
+.lg\:mb_10, .lg\:mb_10\:h:hover, :hover > .lg\:mb_10\:hp, .lg\:mb_10\:js.js-active, .js-active .lg\:mb_10\:jsp { margin-bottom: 10px; }
+.lg\:mver_10, .lg\:mver_10\:h:hover, :hover > .lg\:mver_10\:hp, .lg\:mver_10\:js.js-active, .js-active .lg\:mver_10\:jsp { margin-top: 10px; margin-bottom: 10px; }
+.lg\:ml_10, .lg\:ml_10\:h:hover, :hover > .lg\:ml_10\:hp, .lg\:ml_10\:js.js-active, .js-active .lg\:ml_10\:jsp { margin-left: 10px; }
+.lg\:mr_10, .lg\:mr_10\:h:hover, :hover > .lg\:mr_10\:hp, .lg\:mr_10\:js.js-active, .js-active .lg\:mr_10\:jsp { margin-right: 10px; }
+.lg\:mhor_10, .lg\:mhor_10\:h:hover, :hover > .lg\:mhor_10\:hp, .lg\:mhor_10\:js.js-active, .js-active .lg\:mhor_10\:jsp { margin-left: 10px; margin-right: 10px; }
+.lg\:m_15, .lg\:m_15\:h:hover, :hover > .lg\:m_15\:hp, .lg\:m_15\:js.js-active, .js-active .lg\:m_15\:jsp { margin: 15px; }
+.lg\:mt_15, .lg\:mt_15\:h:hover, :hover > .lg\:mt_15\:hp, .lg\:mt_15\:js.js-active, .js-active .lg\:mt_15\:jsp { margin-top: 15px; }
+.lg\:mb_15, .lg\:mb_15\:h:hover, :hover > .lg\:mb_15\:hp, .lg\:mb_15\:js.js-active, .js-active .lg\:mb_15\:jsp { margin-bottom: 15px; }
+.lg\:mver_15, .lg\:mver_15\:h:hover, :hover > .lg\:mver_15\:hp, .lg\:mver_15\:js.js-active, .js-active .lg\:mver_15\:jsp { margin-top: 15px; margin-bottom: 15px; }
+.lg\:ml_15, .lg\:ml_15\:h:hover, :hover > .lg\:ml_15\:hp, .lg\:ml_15\:js.js-active, .js-active .lg\:ml_15\:jsp { margin-left: 15px; }
+.lg\:mr_15, .lg\:mr_15\:h:hover, :hover > .lg\:mr_15\:hp, .lg\:mr_15\:js.js-active, .js-active .lg\:mr_15\:jsp { margin-right: 15px; }
+.lg\:mhor_15, .lg\:mhor_15\:h:hover, :hover > .lg\:mhor_15\:hp, .lg\:mhor_15\:js.js-active, .js-active .lg\:mhor_15\:jsp { margin-left: 15px; margin-right: 15px; }
+.lg\:m_20, .lg\:m_20\:h:hover, :hover > .lg\:m_20\:hp, .lg\:m_20\:js.js-active, .js-active .lg\:m_20\:jsp { margin: 20px; }
+.lg\:mt_20, .lg\:mt_20\:h:hover, :hover > .lg\:mt_20\:hp, .lg\:mt_20\:js.js-active, .js-active .lg\:mt_20\:jsp { margin-top: 20px; }
+.lg\:mb_20, .lg\:mb_20\:h:hover, :hover > .lg\:mb_20\:hp, .lg\:mb_20\:js.js-active, .js-active .lg\:mb_20\:jsp { margin-bottom: 20px; }
+.lg\:mver_20, .lg\:mver_20\:h:hover, :hover > .lg\:mver_20\:hp, .lg\:mver_20\:js.js-active, .js-active .lg\:mver_20\:jsp { margin-top: 20px; margin-bottom: 20px; }
+.lg\:ml_20, .lg\:ml_20\:h:hover, :hover > .lg\:ml_20\:hp, .lg\:ml_20\:js.js-active, .js-active .lg\:ml_20\:jsp { margin-left: 20px; }
+.lg\:mr_20, .lg\:mr_20\:h:hover, :hover > .lg\:mr_20\:hp, .lg\:mr_20\:js.js-active, .js-active .lg\:mr_20\:jsp { margin-right: 20px; }
+.lg\:mhor_20, .lg\:mhor_20\:h:hover, :hover > .lg\:mhor_20\:hp, .lg\:mhor_20\:js.js-active, .js-active .lg\:mhor_20\:jsp { margin-left: 20px; margin-right: 20px; }
+.lg\:m_25, .lg\:m_25\:h:hover, :hover > .lg\:m_25\:hp, .lg\:m_25\:js.js-active, .js-active .lg\:m_25\:jsp { margin: 25px; }
+.lg\:mt_25, .lg\:mt_25\:h:hover, :hover > .lg\:mt_25\:hp, .lg\:mt_25\:js.js-active, .js-active .lg\:mt_25\:jsp { margin-top: 25px; }
+.lg\:mb_25, .lg\:mb_25\:h:hover, :hover > .lg\:mb_25\:hp, .lg\:mb_25\:js.js-active, .js-active .lg\:mb_25\:jsp { margin-bottom: 25px; }
+.lg\:mver_25, .lg\:mver_25\:h:hover, :hover > .lg\:mver_25\:hp, .lg\:mver_25\:js.js-active, .js-active .lg\:mver_25\:jsp { margin-top: 25px; margin-bottom: 25px; }
+.lg\:ml_25, .lg\:ml_25\:h:hover, :hover > .lg\:ml_25\:hp, .lg\:ml_25\:js.js-active, .js-active .lg\:ml_25\:jsp { margin-left: 25px; }
+.lg\:mr_25, .lg\:mr_25\:h:hover, :hover > .lg\:mr_25\:hp, .lg\:mr_25\:js.js-active, .js-active .lg\:mr_25\:jsp { margin-right: 25px; }
+.lg\:mhor_25, .lg\:mhor_25\:h:hover, :hover > .lg\:mhor_25\:hp, .lg\:mhor_25\:js.js-active, .js-active .lg\:mhor_25\:jsp { margin-left: 25px; margin-right: 25px; }
+.lg\:m_30, .lg\:m_30\:h:hover, :hover > .lg\:m_30\:hp, .lg\:m_30\:js.js-active, .js-active .lg\:m_30\:jsp { margin: 30px; }
+.lg\:mt_30, .lg\:mt_30\:h:hover, :hover > .lg\:mt_30\:hp, .lg\:mt_30\:js.js-active, .js-active .lg\:mt_30\:jsp { margin-top: 30px; }
+.lg\:mb_30, .lg\:mb_30\:h:hover, :hover > .lg\:mb_30\:hp, .lg\:mb_30\:js.js-active, .js-active .lg\:mb_30\:jsp { margin-bottom: 30px; }
+.lg\:mver_30, .lg\:mver_30\:h:hover, :hover > .lg\:mver_30\:hp, .lg\:mver_30\:js.js-active, .js-active .lg\:mver_30\:jsp { margin-top: 30px; margin-bottom: 30px; }
+.lg\:ml_30, .lg\:ml_30\:h:hover, :hover > .lg\:ml_30\:hp, .lg\:ml_30\:js.js-active, .js-active .lg\:ml_30\:jsp { margin-left: 30px; }
+.lg\:mr_30, .lg\:mr_30\:h:hover, :hover > .lg\:mr_30\:hp, .lg\:mr_30\:js.js-active, .js-active .lg\:mr_30\:jsp { margin-right: 30px; }
+.lg\:mhor_30, .lg\:mhor_30\:h:hover, :hover > .lg\:mhor_30\:hp, .lg\:mhor_30\:js.js-active, .js-active .lg\:mhor_30\:jsp { margin-left: 30px; margin-right: 30px; }
+.lg\:m_35, .lg\:m_35\:h:hover, :hover > .lg\:m_35\:hp, .lg\:m_35\:js.js-active, .js-active .lg\:m_35\:jsp { margin: 35px; }
+.lg\:mt_35, .lg\:mt_35\:h:hover, :hover > .lg\:mt_35\:hp, .lg\:mt_35\:js.js-active, .js-active .lg\:mt_35\:jsp { margin-top: 35px; }
+.lg\:mb_35, .lg\:mb_35\:h:hover, :hover > .lg\:mb_35\:hp, .lg\:mb_35\:js.js-active, .js-active .lg\:mb_35\:jsp { margin-bottom: 35px; }
+.lg\:mver_35, .lg\:mver_35\:h:hover, :hover > .lg\:mver_35\:hp, .lg\:mver_35\:js.js-active, .js-active .lg\:mver_35\:jsp { margin-top: 35px; margin-bottom: 35px; }
+.lg\:ml_35, .lg\:ml_35\:h:hover, :hover > .lg\:ml_35\:hp, .lg\:ml_35\:js.js-active, .js-active .lg\:ml_35\:jsp { margin-left: 35px; }
+.lg\:mr_35, .lg\:mr_35\:h:hover, :hover > .lg\:mr_35\:hp, .lg\:mr_35\:js.js-active, .js-active .lg\:mr_35\:jsp { margin-right: 35px; }
+.lg\:mhor_35, .lg\:mhor_35\:h:hover, :hover > .lg\:mhor_35\:hp, .lg\:mhor_35\:js.js-active, .js-active .lg\:mhor_35\:jsp { margin-left: 35px; margin-right: 35px; }
+.lg\:m_40, .lg\:m_40\:h:hover, :hover > .lg\:m_40\:hp, .lg\:m_40\:js.js-active, .js-active .lg\:m_40\:jsp { margin: 40px; }
+.lg\:mt_40, .lg\:mt_40\:h:hover, :hover > .lg\:mt_40\:hp, .lg\:mt_40\:js.js-active, .js-active .lg\:mt_40\:jsp { margin-top: 40px; }
+.lg\:mb_40, .lg\:mb_40\:h:hover, :hover > .lg\:mb_40\:hp, .lg\:mb_40\:js.js-active, .js-active .lg\:mb_40\:jsp { margin-bottom: 40px; }
+.lg\:mver_40, .lg\:mver_40\:h:hover, :hover > .lg\:mver_40\:hp, .lg\:mver_40\:js.js-active, .js-active .lg\:mver_40\:jsp { margin-top: 40px; margin-bottom: 40px; }
+.lg\:ml_40, .lg\:ml_40\:h:hover, :hover > .lg\:ml_40\:hp, .lg\:ml_40\:js.js-active, .js-active .lg\:ml_40\:jsp { margin-left: 40px; }
+.lg\:mr_40, .lg\:mr_40\:h:hover, :hover > .lg\:mr_40\:hp, .lg\:mr_40\:js.js-active, .js-active .lg\:mr_40\:jsp { margin-right: 40px; }
+.lg\:mhor_40, .lg\:mhor_40\:h:hover, :hover > .lg\:mhor_40\:hp, .lg\:mhor_40\:js.js-active, .js-active .lg\:mhor_40\:jsp { margin-left: 40px; margin-right: 40px; }
+.lg\:m_45, .lg\:m_45\:h:hover, :hover > .lg\:m_45\:hp, .lg\:m_45\:js.js-active, .js-active .lg\:m_45\:jsp { margin: 45px; }
+.lg\:mt_45, .lg\:mt_45\:h:hover, :hover > .lg\:mt_45\:hp, .lg\:mt_45\:js.js-active, .js-active .lg\:mt_45\:jsp { margin-top: 45px; }
+.lg\:mb_45, .lg\:mb_45\:h:hover, :hover > .lg\:mb_45\:hp, .lg\:mb_45\:js.js-active, .js-active .lg\:mb_45\:jsp { margin-bottom: 45px; }
+.lg\:mver_45, .lg\:mver_45\:h:hover, :hover > .lg\:mver_45\:hp, .lg\:mver_45\:js.js-active, .js-active .lg\:mver_45\:jsp { margin-top: 45px; margin-bottom: 45px; }
+.lg\:ml_45, .lg\:ml_45\:h:hover, :hover > .lg\:ml_45\:hp, .lg\:ml_45\:js.js-active, .js-active .lg\:ml_45\:jsp { margin-left: 45px; }
+.lg\:mr_45, .lg\:mr_45\:h:hover, :hover > .lg\:mr_45\:hp, .lg\:mr_45\:js.js-active, .js-active .lg\:mr_45\:jsp { margin-right: 45px; }
+.lg\:mhor_45, .lg\:mhor_45\:h:hover, :hover > .lg\:mhor_45\:hp, .lg\:mhor_45\:js.js-active, .js-active .lg\:mhor_45\:jsp { margin-left: 45px; margin-right: 45px; }
+.lg\:m_50, .lg\:m_50\:h:hover, :hover > .lg\:m_50\:hp, .lg\:m_50\:js.js-active, .js-active .lg\:m_50\:jsp { margin: 50px; }
+.lg\:mt_50, .lg\:mt_50\:h:hover, :hover > .lg\:mt_50\:hp, .lg\:mt_50\:js.js-active, .js-active .lg\:mt_50\:jsp { margin-top: 50px; }
+.lg\:mb_50, .lg\:mb_50\:h:hover, :hover > .lg\:mb_50\:hp, .lg\:mb_50\:js.js-active, .js-active .lg\:mb_50\:jsp { margin-bottom: 50px; }
+.lg\:mver_50, .lg\:mver_50\:h:hover, :hover > .lg\:mver_50\:hp, .lg\:mver_50\:js.js-active, .js-active .lg\:mver_50\:jsp { margin-top: 50px; margin-bottom: 50px; }
+.lg\:ml_50, .lg\:ml_50\:h:hover, :hover > .lg\:ml_50\:hp, .lg\:ml_50\:js.js-active, .js-active .lg\:ml_50\:jsp { margin-left: 50px; }
+.lg\:mr_50, .lg\:mr_50\:h:hover, :hover > .lg\:mr_50\:hp, .lg\:mr_50\:js.js-active, .js-active .lg\:mr_50\:jsp { margin-right: 50px; }
+.lg\:mhor_50, .lg\:mhor_50\:h:hover, :hover > .lg\:mhor_50\:hp, .lg\:mhor_50\:js.js-active, .js-active .lg\:mhor_50\:jsp { margin-left: 50px; margin-right: 50px; }
+.lg\:m_sm, .lg\:m_sm\:h:hover, :hover > .lg\:m_sm\:hp, .lg\:m_sm\:js.js-active, .js-active .lg\:m_sm\:jsp { margin: 10px; }
+.lg\:mt_sm, .lg\:mt_sm\:h:hover, :hover > .lg\:mt_sm\:hp, .lg\:mt_sm\:js.js-active, .js-active .lg\:mt_sm\:jsp { margin-top: 10px; }
+.lg\:mb_sm, .lg\:mb_sm\:h:hover, :hover > .lg\:mb_sm\:hp, .lg\:mb_sm\:js.js-active, .js-active .lg\:mb_sm\:jsp { margin-bottom: 10px; }
+.lg\:mver_sm, .lg\:mver_sm\:h:hover, :hover > .lg\:mver_sm\:hp, .lg\:mver_sm\:js.js-active, .js-active .lg\:mver_sm\:jsp { margin-top: 10px; margin-bottom: 10px; }
+.lg\:ml_sm, .lg\:ml_sm\:h:hover, :hover > .lg\:ml_sm\:hp, .lg\:ml_sm\:js.js-active, .js-active .lg\:ml_sm\:jsp { margin-left: 10px; }
+.lg\:mr_sm, .lg\:mr_sm\:h:hover, :hover > .lg\:mr_sm\:hp, .lg\:mr_sm\:js.js-active, .js-active .lg\:mr_sm\:jsp { margin-right: 10px; }
+.lg\:mhor_sm, .lg\:mhor_sm\:h:hover, :hover > .lg\:mhor_sm\:hp, .lg\:mhor_sm\:js.js-active, .js-active .lg\:mhor_sm\:jsp { margin-left: 10px; margin-right: 10px; }
+.lg\:m_md, .lg\:m_md\:h:hover, :hover > .lg\:m_md\:hp, .lg\:m_md\:js.js-active, .js-active .lg\:m_md\:jsp { margin: 15px; }
+.lg\:mt_md, .lg\:mt_md\:h:hover, :hover > .lg\:mt_md\:hp, .lg\:mt_md\:js.js-active, .js-active .lg\:mt_md\:jsp { margin-top: 15px; }
+.lg\:mb_md, .lg\:mb_md\:h:hover, :hover > .lg\:mb_md\:hp, .lg\:mb_md\:js.js-active, .js-active .lg\:mb_md\:jsp { margin-bottom: 15px; }
+.lg\:mver_md, .lg\:mver_md\:h:hover, :hover > .lg\:mver_md\:hp, .lg\:mver_md\:js.js-active, .js-active .lg\:mver_md\:jsp { margin-top: 15px; margin-bottom: 15px; }
+.lg\:ml_md, .lg\:ml_md\:h:hover, :hover > .lg\:ml_md\:hp, .lg\:ml_md\:js.js-active, .js-active .lg\:ml_md\:jsp { margin-left: 15px; }
+.lg\:mr_md, .lg\:mr_md\:h:hover, :hover > .lg\:mr_md\:hp, .lg\:mr_md\:js.js-active, .js-active .lg\:mr_md\:jsp { margin-right: 15px; }
+.lg\:mhor_md, .lg\:mhor_md\:h:hover, :hover > .lg\:mhor_md\:hp, .lg\:mhor_md\:js.js-active, .js-active .lg\:mhor_md\:jsp { margin-left: 15px; margin-right: 15px; }
+.lg\:m_lg, .lg\:m_lg\:h:hover, :hover > .lg\:m_lg\:hp, .lg\:m_lg\:js.js-active, .js-active .lg\:m_lg\:jsp { margin: 30px; }
+.lg\:mt_lg, .lg\:mt_lg\:h:hover, :hover > .lg\:mt_lg\:hp, .lg\:mt_lg\:js.js-active, .js-active .lg\:mt_lg\:jsp { margin-top: 30px; }
+.lg\:mb_lg, .lg\:mb_lg\:h:hover, :hover > .lg\:mb_lg\:hp, .lg\:mb_lg\:js.js-active, .js-active .lg\:mb_lg\:jsp { margin-bottom: 30px; }
+.lg\:mver_lg, .lg\:mver_lg\:h:hover, :hover > .lg\:mver_lg\:hp, .lg\:mver_lg\:js.js-active, .js-active .lg\:mver_lg\:jsp { margin-top: 30px; margin-bottom: 30px; }
+.lg\:ml_lg, .lg\:ml_lg\:h:hover, :hover > .lg\:ml_lg\:hp, .lg\:ml_lg\:js.js-active, .js-active .lg\:ml_lg\:jsp { margin-left: 30px; }
+.lg\:mr_lg, .lg\:mr_lg\:h:hover, :hover > .lg\:mr_lg\:hp, .lg\:mr_lg\:js.js-active, .js-active .lg\:mr_lg\:jsp { margin-right: 30px; }
+.lg\:mhor_lg, .lg\:mhor_lg\:h:hover, :hover > .lg\:mhor_lg\:hp, .lg\:mhor_lg\:js.js-active, .js-active .lg\:mhor_lg\:jsp { margin-left: 30px; margin-right: 30px; }
+.lg\:m_xl, .lg\:m_xl\:h:hover, :hover > .lg\:m_xl\:hp, .lg\:m_xl\:js.js-active, .js-active .lg\:m_xl\:jsp { margin: 50px; }
+.lg\:mt_xl, .lg\:mt_xl\:h:hover, :hover > .lg\:mt_xl\:hp, .lg\:mt_xl\:js.js-active, .js-active .lg\:mt_xl\:jsp { margin-top: 50px; }
+.lg\:mb_xl, .lg\:mb_xl\:h:hover, :hover > .lg\:mb_xl\:hp, .lg\:mb_xl\:js.js-active, .js-active .lg\:mb_xl\:jsp { margin-bottom: 50px; }
+.lg\:mver_xl, .lg\:mver_xl\:h:hover, :hover > .lg\:mver_xl\:hp, .lg\:mver_xl\:js.js-active, .js-active .lg\:mver_xl\:jsp { margin-top: 50px; margin-bottom: 50px; }
+.lg\:ml_xl, .lg\:ml_xl\:h:hover, :hover > .lg\:ml_xl\:hp, .lg\:ml_xl\:js.js-active, .js-active .lg\:ml_xl\:jsp { margin-left: 50px; }
+.lg\:mr_xl, .lg\:mr_xl\:h:hover, :hover > .lg\:mr_xl\:hp, .lg\:mr_xl\:js.js-active, .js-active .lg\:mr_xl\:jsp { margin-right: 50px; }
+.lg\:mhor_xl, .lg\:mhor_xl\:h:hover, :hover > .lg\:mhor_xl\:hp, .lg\:mhor_xl\:js.js-active, .js-active .lg\:mhor_xl\:jsp { margin-left: 50px; margin-right: 50px; }
+.lg\:p_a, .lg\:p_a\:h:hover, :hover > .lg\:p_a\:hp, .lg\:p_a\:js.js-active, .js-active .lg\:p_a\:jsp { padding: auto; }
+.lg\:p_1em, .lg\:p_1em\:h:hover, :hover > .lg\:p_1em\:hp, .lg\:p_1em\:js.js-active, .js-active .lg\:p_1em\:jsp { padding: 1em; }
+.lg\:p_2em, .lg\:p_2em\:h:hover, :hover > .lg\:p_2em\:hp, .lg\:p_2em\:js.js-active, .js-active .lg\:p_2em\:jsp { padding: 2em; }
+.lg\:p_0, .lg\:p_0\:h:hover, :hover > .lg\:p_0\:hp, .lg\:p_0\:js.js-active, .js-active .lg\:p_0\:jsp { padding: 0px; }
+.lg\:pt_0, .lg\:pt_0\:h:hover, :hover > .lg\:pt_0\:hp, .lg\:pt_0\:js.js-active, .js-active .lg\:pt_0\:jsp { padding-top: 0px; }
+.lg\:pb_0, .lg\:pb_0\:h:hover, :hover > .lg\:pb_0\:hp, .lg\:pb_0\:js.js-active, .js-active .lg\:pb_0\:jsp { padding-bottom: 0px; }
+.lg\:pver_0, .lg\:pver_0\:h:hover, :hover > .lg\:pver_0\:hp, .lg\:pver_0\:js.js-active, .js-active .lg\:pver_0\:jsp { padding-top: 0px; padding-bottom: 0px; }
+.lg\:pl_0, .lg\:pl_0\:h:hover, :hover > .lg\:pl_0\:hp, .lg\:pl_0\:js.js-active, .js-active .lg\:pl_0\:jsp { padding-left: 0px; }
+.lg\:pr_0, .lg\:pr_0\:h:hover, :hover > .lg\:pr_0\:hp, .lg\:pr_0\:js.js-active, .js-active .lg\:pr_0\:jsp { padding-right: 0px; }
+.lg\:phor_0, .lg\:phor_0\:h:hover, :hover > .lg\:phor_0\:hp, .lg\:phor_0\:js.js-active, .js-active .lg\:phor_0\:jsp { padding-left: 0px; padding-right: 0px; }
+.lg\:p_5, .lg\:p_5\:h:hover, :hover > .lg\:p_5\:hp, .lg\:p_5\:js.js-active, .js-active .lg\:p_5\:jsp { padding: 5px; }
+.lg\:pt_5, .lg\:pt_5\:h:hover, :hover > .lg\:pt_5\:hp, .lg\:pt_5\:js.js-active, .js-active .lg\:pt_5\:jsp { padding-top: 5px; }
+.lg\:pb_5, .lg\:pb_5\:h:hover, :hover > .lg\:pb_5\:hp, .lg\:pb_5\:js.js-active, .js-active .lg\:pb_5\:jsp { padding-bottom: 5px; }
+.lg\:pver_5, .lg\:pver_5\:h:hover, :hover > .lg\:pver_5\:hp, .lg\:pver_5\:js.js-active, .js-active .lg\:pver_5\:jsp { padding-top: 5px; padding-bottom: 5px; }
+.lg\:pl_5, .lg\:pl_5\:h:hover, :hover > .lg\:pl_5\:hp, .lg\:pl_5\:js.js-active, .js-active .lg\:pl_5\:jsp { padding-left: 5px; }
+.lg\:pr_5, .lg\:pr_5\:h:hover, :hover > .lg\:pr_5\:hp, .lg\:pr_5\:js.js-active, .js-active .lg\:pr_5\:jsp { padding-right: 5px; }
+.lg\:phor_5, .lg\:phor_5\:h:hover, :hover > .lg\:phor_5\:hp, .lg\:phor_5\:js.js-active, .js-active .lg\:phor_5\:jsp { padding-left: 5px; padding-right: 5px; }
+.lg\:p_10, .lg\:p_10\:h:hover, :hover > .lg\:p_10\:hp, .lg\:p_10\:js.js-active, .js-active .lg\:p_10\:jsp { padding: 10px; }
+.lg\:pt_10, .lg\:pt_10\:h:hover, :hover > .lg\:pt_10\:hp, .lg\:pt_10\:js.js-active, .js-active .lg\:pt_10\:jsp { padding-top: 10px; }
+.lg\:pb_10, .lg\:pb_10\:h:hover, :hover > .lg\:pb_10\:hp, .lg\:pb_10\:js.js-active, .js-active .lg\:pb_10\:jsp { padding-bottom: 10px; }
+.lg\:pver_10, .lg\:pver_10\:h:hover, :hover > .lg\:pver_10\:hp, .lg\:pver_10\:js.js-active, .js-active .lg\:pver_10\:jsp { padding-top: 10px; padding-bottom: 10px; }
+.lg\:pl_10, .lg\:pl_10\:h:hover, :hover > .lg\:pl_10\:hp, .lg\:pl_10\:js.js-active, .js-active .lg\:pl_10\:jsp { padding-left: 10px; }
+.lg\:pr_10, .lg\:pr_10\:h:hover, :hover > .lg\:pr_10\:hp, .lg\:pr_10\:js.js-active, .js-active .lg\:pr_10\:jsp { padding-right: 10px; }
+.lg\:phor_10, .lg\:phor_10\:h:hover, :hover > .lg\:phor_10\:hp, .lg\:phor_10\:js.js-active, .js-active .lg\:phor_10\:jsp { padding-left: 10px; padding-right: 10px; }
+.lg\:p_15, .lg\:p_15\:h:hover, :hover > .lg\:p_15\:hp, .lg\:p_15\:js.js-active, .js-active .lg\:p_15\:jsp { padding: 15px; }
+.lg\:pt_15, .lg\:pt_15\:h:hover, :hover > .lg\:pt_15\:hp, .lg\:pt_15\:js.js-active, .js-active .lg\:pt_15\:jsp { padding-top: 15px; }
+.lg\:pb_15, .lg\:pb_15\:h:hover, :hover > .lg\:pb_15\:hp, .lg\:pb_15\:js.js-active, .js-active .lg\:pb_15\:jsp { padding-bottom: 15px; }
+.lg\:pver_15, .lg\:pver_15\:h:hover, :hover > .lg\:pver_15\:hp, .lg\:pver_15\:js.js-active, .js-active .lg\:pver_15\:jsp { padding-top: 15px; padding-bottom: 15px; }
+.lg\:pl_15, .lg\:pl_15\:h:hover, :hover > .lg\:pl_15\:hp, .lg\:pl_15\:js.js-active, .js-active .lg\:pl_15\:jsp { padding-left: 15px; }
+.lg\:pr_15, .lg\:pr_15\:h:hover, :hover > .lg\:pr_15\:hp, .lg\:pr_15\:js.js-active, .js-active .lg\:pr_15\:jsp { padding-right: 15px; }
+.lg\:phor_15, .lg\:phor_15\:h:hover, :hover > .lg\:phor_15\:hp, .lg\:phor_15\:js.js-active, .js-active .lg\:phor_15\:jsp { padding-left: 15px; padding-right: 15px; }
+.lg\:p_20, .lg\:p_20\:h:hover, :hover > .lg\:p_20\:hp, .lg\:p_20\:js.js-active, .js-active .lg\:p_20\:jsp { padding: 20px; }
+.lg\:pt_20, .lg\:pt_20\:h:hover, :hover > .lg\:pt_20\:hp, .lg\:pt_20\:js.js-active, .js-active .lg\:pt_20\:jsp { padding-top: 20px; }
+.lg\:pb_20, .lg\:pb_20\:h:hover, :hover > .lg\:pb_20\:hp, .lg\:pb_20\:js.js-active, .js-active .lg\:pb_20\:jsp { padding-bottom: 20px; }
+.lg\:pver_20, .lg\:pver_20\:h:hover, :hover > .lg\:pver_20\:hp, .lg\:pver_20\:js.js-active, .js-active .lg\:pver_20\:jsp { padding-top: 20px; padding-bottom: 20px; }
+.lg\:pl_20, .lg\:pl_20\:h:hover, :hover > .lg\:pl_20\:hp, .lg\:pl_20\:js.js-active, .js-active .lg\:pl_20\:jsp { padding-left: 20px; }
+.lg\:pr_20, .lg\:pr_20\:h:hover, :hover > .lg\:pr_20\:hp, .lg\:pr_20\:js.js-active, .js-active .lg\:pr_20\:jsp { padding-right: 20px; }
+.lg\:phor_20, .lg\:phor_20\:h:hover, :hover > .lg\:phor_20\:hp, .lg\:phor_20\:js.js-active, .js-active .lg\:phor_20\:jsp { padding-left: 20px; padding-right: 20px; }
+.lg\:p_25, .lg\:p_25\:h:hover, :hover > .lg\:p_25\:hp, .lg\:p_25\:js.js-active, .js-active .lg\:p_25\:jsp { padding: 25px; }
+.lg\:pt_25, .lg\:pt_25\:h:hover, :hover > .lg\:pt_25\:hp, .lg\:pt_25\:js.js-active, .js-active .lg\:pt_25\:jsp { padding-top: 25px; }
+.lg\:pb_25, .lg\:pb_25\:h:hover, :hover > .lg\:pb_25\:hp, .lg\:pb_25\:js.js-active, .js-active .lg\:pb_25\:jsp { padding-bottom: 25px; }
+.lg\:pver_25, .lg\:pver_25\:h:hover, :hover > .lg\:pver_25\:hp, .lg\:pver_25\:js.js-active, .js-active .lg\:pver_25\:jsp { padding-top: 25px; padding-bottom: 25px; }
+.lg\:pl_25, .lg\:pl_25\:h:hover, :hover > .lg\:pl_25\:hp, .lg\:pl_25\:js.js-active, .js-active .lg\:pl_25\:jsp { padding-left: 25px; }
+.lg\:pr_25, .lg\:pr_25\:h:hover, :hover > .lg\:pr_25\:hp, .lg\:pr_25\:js.js-active, .js-active .lg\:pr_25\:jsp { padding-right: 25px; }
+.lg\:phor_25, .lg\:phor_25\:h:hover, :hover > .lg\:phor_25\:hp, .lg\:phor_25\:js.js-active, .js-active .lg\:phor_25\:jsp { padding-left: 25px; padding-right: 25px; }
+.lg\:p_30, .lg\:p_30\:h:hover, :hover > .lg\:p_30\:hp, .lg\:p_30\:js.js-active, .js-active .lg\:p_30\:jsp { padding: 30px; }
+.lg\:pt_30, .lg\:pt_30\:h:hover, :hover > .lg\:pt_30\:hp, .lg\:pt_30\:js.js-active, .js-active .lg\:pt_30\:jsp { padding-top: 30px; }
+.lg\:pb_30, .lg\:pb_30\:h:hover, :hover > .lg\:pb_30\:hp, .lg\:pb_30\:js.js-active, .js-active .lg\:pb_30\:jsp { padding-bottom: 30px; }
+.lg\:pver_30, .lg\:pver_30\:h:hover, :hover > .lg\:pver_30\:hp, .lg\:pver_30\:js.js-active, .js-active .lg\:pver_30\:jsp { padding-top: 30px; padding-bottom: 30px; }
+.lg\:pl_30, .lg\:pl_30\:h:hover, :hover > .lg\:pl_30\:hp, .lg\:pl_30\:js.js-active, .js-active .lg\:pl_30\:jsp { padding-left: 30px; }
+.lg\:pr_30, .lg\:pr_30\:h:hover, :hover > .lg\:pr_30\:hp, .lg\:pr_30\:js.js-active, .js-active .lg\:pr_30\:jsp { padding-right: 30px; }
+.lg\:phor_30, .lg\:phor_30\:h:hover, :hover > .lg\:phor_30\:hp, .lg\:phor_30\:js.js-active, .js-active .lg\:phor_30\:jsp { padding-left: 30px; padding-right: 30px; }
+.lg\:p_35, .lg\:p_35\:h:hover, :hover > .lg\:p_35\:hp, .lg\:p_35\:js.js-active, .js-active .lg\:p_35\:jsp { padding: 35px; }
+.lg\:pt_35, .lg\:pt_35\:h:hover, :hover > .lg\:pt_35\:hp, .lg\:pt_35\:js.js-active, .js-active .lg\:pt_35\:jsp { padding-top: 35px; }
+.lg\:pb_35, .lg\:pb_35\:h:hover, :hover > .lg\:pb_35\:hp, .lg\:pb_35\:js.js-active, .js-active .lg\:pb_35\:jsp { padding-bottom: 35px; }
+.lg\:pver_35, .lg\:pver_35\:h:hover, :hover > .lg\:pver_35\:hp, .lg\:pver_35\:js.js-active, .js-active .lg\:pver_35\:jsp { padding-top: 35px; padding-bottom: 35px; }
+.lg\:pl_35, .lg\:pl_35\:h:hover, :hover > .lg\:pl_35\:hp, .lg\:pl_35\:js.js-active, .js-active .lg\:pl_35\:jsp { padding-left: 35px; }
+.lg\:pr_35, .lg\:pr_35\:h:hover, :hover > .lg\:pr_35\:hp, .lg\:pr_35\:js.js-active, .js-active .lg\:pr_35\:jsp { padding-right: 35px; }
+.lg\:phor_35, .lg\:phor_35\:h:hover, :hover > .lg\:phor_35\:hp, .lg\:phor_35\:js.js-active, .js-active .lg\:phor_35\:jsp { padding-left: 35px; padding-right: 35px; }
+.lg\:p_40, .lg\:p_40\:h:hover, :hover > .lg\:p_40\:hp, .lg\:p_40\:js.js-active, .js-active .lg\:p_40\:jsp { padding: 40px; }
+.lg\:pt_40, .lg\:pt_40\:h:hover, :hover > .lg\:pt_40\:hp, .lg\:pt_40\:js.js-active, .js-active .lg\:pt_40\:jsp { padding-top: 40px; }
+.lg\:pb_40, .lg\:pb_40\:h:hover, :hover > .lg\:pb_40\:hp, .lg\:pb_40\:js.js-active, .js-active .lg\:pb_40\:jsp { padding-bottom: 40px; }
+.lg\:pver_40, .lg\:pver_40\:h:hover, :hover > .lg\:pver_40\:hp, .lg\:pver_40\:js.js-active, .js-active .lg\:pver_40\:jsp { padding-top: 40px; padding-bottom: 40px; }
+.lg\:pl_40, .lg\:pl_40\:h:hover, :hover > .lg\:pl_40\:hp, .lg\:pl_40\:js.js-active, .js-active .lg\:pl_40\:jsp { padding-left: 40px; }
+.lg\:pr_40, .lg\:pr_40\:h:hover, :hover > .lg\:pr_40\:hp, .lg\:pr_40\:js.js-active, .js-active .lg\:pr_40\:jsp { padding-right: 40px; }
+.lg\:phor_40, .lg\:phor_40\:h:hover, :hover > .lg\:phor_40\:hp, .lg\:phor_40\:js.js-active, .js-active .lg\:phor_40\:jsp { padding-left: 40px; padding-right: 40px; }
+.lg\:p_45, .lg\:p_45\:h:hover, :hover > .lg\:p_45\:hp, .lg\:p_45\:js.js-active, .js-active .lg\:p_45\:jsp { padding: 45px; }
+.lg\:pt_45, .lg\:pt_45\:h:hover, :hover > .lg\:pt_45\:hp, .lg\:pt_45\:js.js-active, .js-active .lg\:pt_45\:jsp { padding-top: 45px; }
+.lg\:pb_45, .lg\:pb_45\:h:hover, :hover > .lg\:pb_45\:hp, .lg\:pb_45\:js.js-active, .js-active .lg\:pb_45\:jsp { padding-bottom: 45px; }
+.lg\:pver_45, .lg\:pver_45\:h:hover, :hover > .lg\:pver_45\:hp, .lg\:pver_45\:js.js-active, .js-active .lg\:pver_45\:jsp { padding-top: 45px; padding-bottom: 45px; }
+.lg\:pl_45, .lg\:pl_45\:h:hover, :hover > .lg\:pl_45\:hp, .lg\:pl_45\:js.js-active, .js-active .lg\:pl_45\:jsp { padding-left: 45px; }
+.lg\:pr_45, .lg\:pr_45\:h:hover, :hover > .lg\:pr_45\:hp, .lg\:pr_45\:js.js-active, .js-active .lg\:pr_45\:jsp { padding-right: 45px; }
+.lg\:phor_45, .lg\:phor_45\:h:hover, :hover > .lg\:phor_45\:hp, .lg\:phor_45\:js.js-active, .js-active .lg\:phor_45\:jsp { padding-left: 45px; padding-right: 45px; }
+.lg\:p_50, .lg\:p_50\:h:hover, :hover > .lg\:p_50\:hp, .lg\:p_50\:js.js-active, .js-active .lg\:p_50\:jsp { padding: 50px; }
+.lg\:pt_50, .lg\:pt_50\:h:hover, :hover > .lg\:pt_50\:hp, .lg\:pt_50\:js.js-active, .js-active .lg\:pt_50\:jsp { padding-top: 50px; }
+.lg\:pb_50, .lg\:pb_50\:h:hover, :hover > .lg\:pb_50\:hp, .lg\:pb_50\:js.js-active, .js-active .lg\:pb_50\:jsp { padding-bottom: 50px; }
+.lg\:pver_50, .lg\:pver_50\:h:hover, :hover > .lg\:pver_50\:hp, .lg\:pver_50\:js.js-active, .js-active .lg\:pver_50\:jsp { padding-top: 50px; padding-bottom: 50px; }
+.lg\:pl_50, .lg\:pl_50\:h:hover, :hover > .lg\:pl_50\:hp, .lg\:pl_50\:js.js-active, .js-active .lg\:pl_50\:jsp { padding-left: 50px; }
+.lg\:pr_50, .lg\:pr_50\:h:hover, :hover > .lg\:pr_50\:hp, .lg\:pr_50\:js.js-active, .js-active .lg\:pr_50\:jsp { padding-right: 50px; }
+.lg\:phor_50, .lg\:phor_50\:h:hover, :hover > .lg\:phor_50\:hp, .lg\:phor_50\:js.js-active, .js-active .lg\:phor_50\:jsp { padding-left: 50px; padding-right: 50px; }
+.lg\:p_sm, .lg\:p_sm\:h:hover, :hover > .lg\:p_sm\:hp, .lg\:p_sm\:js.js-active, .js-active .lg\:p_sm\:jsp { padding: 10px; }
+.lg\:pt_sm, .lg\:pt_sm\:h:hover, :hover > .lg\:pt_sm\:hp, .lg\:pt_sm\:js.js-active, .js-active .lg\:pt_sm\:jsp { padding-top: 10px; }
+.lg\:pb_sm, .lg\:pb_sm\:h:hover, :hover > .lg\:pb_sm\:hp, .lg\:pb_sm\:js.js-active, .js-active .lg\:pb_sm\:jsp { padding-bottom: 10px; }
+.lg\:pver_sm, .lg\:pver_sm\:h:hover, :hover > .lg\:pver_sm\:hp, .lg\:pver_sm\:js.js-active, .js-active .lg\:pver_sm\:jsp { padding-top: 10px; padding-bottom: 10px; }
+.lg\:pl_sm, .lg\:pl_sm\:h:hover, :hover > .lg\:pl_sm\:hp, .lg\:pl_sm\:js.js-active, .js-active .lg\:pl_sm\:jsp { padding-left: 10px; }
+.lg\:pr_sm, .lg\:pr_sm\:h:hover, :hover > .lg\:pr_sm\:hp, .lg\:pr_sm\:js.js-active, .js-active .lg\:pr_sm\:jsp { padding-right: 10px; }
+.lg\:phor_sm, .lg\:phor_sm\:h:hover, :hover > .lg\:phor_sm\:hp, .lg\:phor_sm\:js.js-active, .js-active .lg\:phor_sm\:jsp { padding-left: 10px; padding-right: 10px; }
+.lg\:p_md, .lg\:p_md\:h:hover, :hover > .lg\:p_md\:hp, .lg\:p_md\:js.js-active, .js-active .lg\:p_md\:jsp { padding: 15px; }
+.lg\:pt_md, .lg\:pt_md\:h:hover, :hover > .lg\:pt_md\:hp, .lg\:pt_md\:js.js-active, .js-active .lg\:pt_md\:jsp { padding-top: 15px; }
+.lg\:pb_md, .lg\:pb_md\:h:hover, :hover > .lg\:pb_md\:hp, .lg\:pb_md\:js.js-active, .js-active .lg\:pb_md\:jsp { padding-bottom: 15px; }
+.lg\:pver_md, .lg\:pver_md\:h:hover, :hover > .lg\:pver_md\:hp, .lg\:pver_md\:js.js-active, .js-active .lg\:pver_md\:jsp { padding-top: 15px; padding-bottom: 15px; }
+.lg\:pl_md, .lg\:pl_md\:h:hover, :hover > .lg\:pl_md\:hp, .lg\:pl_md\:js.js-active, .js-active .lg\:pl_md\:jsp { padding-left: 15px; }
+.lg\:pr_md, .lg\:pr_md\:h:hover, :hover > .lg\:pr_md\:hp, .lg\:pr_md\:js.js-active, .js-active .lg\:pr_md\:jsp { padding-right: 15px; }
+.lg\:phor_md, .lg\:phor_md\:h:hover, :hover > .lg\:phor_md\:hp, .lg\:phor_md\:js.js-active, .js-active .lg\:phor_md\:jsp { padding-left: 15px; padding-right: 15px; }
+.lg\:p_lg, .lg\:p_lg\:h:hover, :hover > .lg\:p_lg\:hp, .lg\:p_lg\:js.js-active, .js-active .lg\:p_lg\:jsp { padding: 30px; }
+.lg\:pt_lg, .lg\:pt_lg\:h:hover, :hover > .lg\:pt_lg\:hp, .lg\:pt_lg\:js.js-active, .js-active .lg\:pt_lg\:jsp { padding-top: 30px; }
+.lg\:pb_lg, .lg\:pb_lg\:h:hover, :hover > .lg\:pb_lg\:hp, .lg\:pb_lg\:js.js-active, .js-active .lg\:pb_lg\:jsp { padding-bottom: 30px; }
+.lg\:pver_lg, .lg\:pver_lg\:h:hover, :hover > .lg\:pver_lg\:hp, .lg\:pver_lg\:js.js-active, .js-active .lg\:pver_lg\:jsp { padding-top: 30px; padding-bottom: 30px; }
+.lg\:pl_lg, .lg\:pl_lg\:h:hover, :hover > .lg\:pl_lg\:hp, .lg\:pl_lg\:js.js-active, .js-active .lg\:pl_lg\:jsp { padding-left: 30px; }
+.lg\:pr_lg, .lg\:pr_lg\:h:hover, :hover > .lg\:pr_lg\:hp, .lg\:pr_lg\:js.js-active, .js-active .lg\:pr_lg\:jsp { padding-right: 30px; }
+.lg\:phor_lg, .lg\:phor_lg\:h:hover, :hover > .lg\:phor_lg\:hp, .lg\:phor_lg\:js.js-active, .js-active .lg\:phor_lg\:jsp { padding-left: 30px; padding-right: 30px; }
+.lg\:p_xl, .lg\:p_xl\:h:hover, :hover > .lg\:p_xl\:hp, .lg\:p_xl\:js.js-active, .js-active .lg\:p_xl\:jsp { padding: 50px; }
+.lg\:pt_xl, .lg\:pt_xl\:h:hover, :hover > .lg\:pt_xl\:hp, .lg\:pt_xl\:js.js-active, .js-active .lg\:pt_xl\:jsp { padding-top: 50px; }
+.lg\:pb_xl, .lg\:pb_xl\:h:hover, :hover > .lg\:pb_xl\:hp, .lg\:pb_xl\:js.js-active, .js-active .lg\:pb_xl\:jsp { padding-bottom: 50px; }
+.lg\:pver_xl, .lg\:pver_xl\:h:hover, :hover > .lg\:pver_xl\:hp, .lg\:pver_xl\:js.js-active, .js-active .lg\:pver_xl\:jsp { padding-top: 50px; padding-bottom: 50px; }
+.lg\:pl_xl, .lg\:pl_xl\:h:hover, :hover > .lg\:pl_xl\:hp, .lg\:pl_xl\:js.js-active, .js-active .lg\:pl_xl\:jsp { padding-left: 50px; }
+.lg\:pr_xl, .lg\:pr_xl\:h:hover, :hover > .lg\:pr_xl\:hp, .lg\:pr_xl\:js.js-active, .js-active .lg\:pr_xl\:jsp { padding-right: 50px; }
+.lg\:phor_xl, .lg\:phor_xl\:h:hover, :hover > .lg\:phor_xl\:hp, .lg\:phor_xl\:js.js-active, .js-active .lg\:phor_xl\:jsp { padding-left: 50px; padding-right: 50px; }
+.lg\:p_1\.3em, .lg\:p_1\.3em\:h:hover, :hover > .lg\:p_1\.3em\:hp, .lg\:p_1\.3em\:js.js-active, .js-active .lg\:p_1\.3em\:jsp { padding: 1.3em; }
+.lg\:pt_1\.3em, .lg\:pt_1\.3em\:h:hover, :hover > .lg\:pt_1\.3em\:hp, .lg\:pt_1\.3em\:js.js-active, .js-active .lg\:pt_1\.3em\:jsp { padding-top: 1.3em; }
+.lg\:pb_1\.3em, .lg\:pb_1\.3em\:h:hover, :hover > .lg\:pb_1\.3em\:hp, .lg\:pb_1\.3em\:js.js-active, .js-active .lg\:pb_1\.3em\:jsp { padding-bottom: 1.3em; }
+.lg\:pver_1\.3em, .lg\:pver_1\.3em\:h:hover, :hover > .lg\:pver_1\.3em\:hp, .lg\:pver_1\.3em\:js.js-active, .js-active .lg\:pver_1\.3em\:jsp { padding-top: 1.3em; padding-bottom: 1.3em; }
+.lg\:pl_1\.3em, .lg\:pl_1\.3em\:h:hover, :hover > .lg\:pl_1\.3em\:hp, .lg\:pl_1\.3em\:js.js-active, .js-active .lg\:pl_1\.3em\:jsp { padding-left: 1.3em; }
+.lg\:pr_1\.3em, .lg\:pr_1\.3em\:h:hover, :hover > .lg\:pr_1\.3em\:hp, .lg\:pr_1\.3em\:js.js-active, .js-active .lg\:pr_1\.3em\:jsp { padding-right: 1.3em; }
+.lg\:phor_1\.3em, .lg\:phor_1\.3em\:h:hover, :hover > .lg\:phor_1\.3em\:hp, .lg\:phor_1\.3em\:js.js-active, .js-active .lg\:phor_1\.3em\:jsp { padding-left: 1.3em; padding-right: 1.3em; }
+.lg\:p_3em, .lg\:p_3em\:h:hover, :hover > .lg\:p_3em\:hp, .lg\:p_3em\:js.js-active, .js-active .lg\:p_3em\:jsp { padding: 3em; }
+.lg\:pt_3em, .lg\:pt_3em\:h:hover, :hover > .lg\:pt_3em\:hp, .lg\:pt_3em\:js.js-active, .js-active .lg\:pt_3em\:jsp { padding-top: 3em; }
+.lg\:pb_3em, .lg\:pb_3em\:h:hover, :hover > .lg\:pb_3em\:hp, .lg\:pb_3em\:js.js-active, .js-active .lg\:pb_3em\:jsp { padding-bottom: 3em; }
+.lg\:pver_3em, .lg\:pver_3em\:h:hover, :hover > .lg\:pver_3em\:hp, .lg\:pver_3em\:js.js-active, .js-active .lg\:pver_3em\:jsp { padding-top: 3em; padding-bottom: 3em; }
+.lg\:pl_3em, .lg\:pl_3em\:h:hover, :hover > .lg\:pl_3em\:hp, .lg\:pl_3em\:js.js-active, .js-active .lg\:pl_3em\:jsp { padding-left: 3em; }
+.lg\:pr_3em, .lg\:pr_3em\:h:hover, :hover > .lg\:pr_3em\:hp, .lg\:pr_3em\:js.js-active, .js-active .lg\:pr_3em\:jsp { padding-right: 3em; }
+.lg\:phor_3em, .lg\:phor_3em\:h:hover, :hover > .lg\:phor_3em\:hp, .lg\:phor_3em\:js.js-active, .js-active .lg\:phor_3em\:jsp { padding-left: 3em; padding-right: 3em; }
+.lg\:t_0, .lg\:t_0\:h:hover, :hover > .lg\:t_0\:hp, .lg\:t_0\:js.js-active, .js-active .lg\:t_0\:jsp { top: 0px; }
+.lg\:b_0, .lg\:b_0\:h:hover, :hover > .lg\:b_0\:hp, .lg\:b_0\:js.js-active, .js-active .lg\:b_0\:jsp { bottom: 0px; }
+.lg\:l_0, .lg\:l_0\:h:hover, :hover > .lg\:l_0\:hp, .lg\:l_0\:js.js-active, .js-active .lg\:l_0\:jsp { left: 0px; }
+.lg\:r_0, .lg\:r_0\:h:hover, :hover > .lg\:r_0\:hp, .lg\:r_0\:js.js-active, .js-active .lg\:r_0\:jsp { right: 0px; }
+.lg\:t_5, .lg\:t_5\:h:hover, :hover > .lg\:t_5\:hp, .lg\:t_5\:js.js-active, .js-active .lg\:t_5\:jsp { top: 5px; }
+.lg\:b_5, .lg\:b_5\:h:hover, :hover > .lg\:b_5\:hp, .lg\:b_5\:js.js-active, .js-active .lg\:b_5\:jsp { bottom: 5px; }
+.lg\:l_5, .lg\:l_5\:h:hover, :hover > .lg\:l_5\:hp, .lg\:l_5\:js.js-active, .js-active .lg\:l_5\:jsp { left: 5px; }
+.lg\:r_5, .lg\:r_5\:h:hover, :hover > .lg\:r_5\:hp, .lg\:r_5\:js.js-active, .js-active .lg\:r_5\:jsp { right: 5px; }
+.lg\:t_10, .lg\:t_10\:h:hover, :hover > .lg\:t_10\:hp, .lg\:t_10\:js.js-active, .js-active .lg\:t_10\:jsp { top: 10px; }
+.lg\:b_10, .lg\:b_10\:h:hover, :hover > .lg\:b_10\:hp, .lg\:b_10\:js.js-active, .js-active .lg\:b_10\:jsp { bottom: 10px; }
+.lg\:l_10, .lg\:l_10\:h:hover, :hover > .lg\:l_10\:hp, .lg\:l_10\:js.js-active, .js-active .lg\:l_10\:jsp { left: 10px; }
+.lg\:r_10, .lg\:r_10\:h:hover, :hover > .lg\:r_10\:hp, .lg\:r_10\:js.js-active, .js-active .lg\:r_10\:jsp { right: 10px; }
+.lg\:t_15, .lg\:t_15\:h:hover, :hover > .lg\:t_15\:hp, .lg\:t_15\:js.js-active, .js-active .lg\:t_15\:jsp { top: 15px; }
+.lg\:b_15, .lg\:b_15\:h:hover, :hover > .lg\:b_15\:hp, .lg\:b_15\:js.js-active, .js-active .lg\:b_15\:jsp { bottom: 15px; }
+.lg\:l_15, .lg\:l_15\:h:hover, :hover > .lg\:l_15\:hp, .lg\:l_15\:js.js-active, .js-active .lg\:l_15\:jsp { left: 15px; }
+.lg\:r_15, .lg\:r_15\:h:hover, :hover > .lg\:r_15\:hp, .lg\:r_15\:js.js-active, .js-active .lg\:r_15\:jsp { right: 15px; }
+.lg\:t_20, .lg\:t_20\:h:hover, :hover > .lg\:t_20\:hp, .lg\:t_20\:js.js-active, .js-active .lg\:t_20\:jsp { top: 20px; }
+.lg\:b_20, .lg\:b_20\:h:hover, :hover > .lg\:b_20\:hp, .lg\:b_20\:js.js-active, .js-active .lg\:b_20\:jsp { bottom: 20px; }
+.lg\:l_20, .lg\:l_20\:h:hover, :hover > .lg\:l_20\:hp, .lg\:l_20\:js.js-active, .js-active .lg\:l_20\:jsp { left: 20px; }
+.lg\:r_20, .lg\:r_20\:h:hover, :hover > .lg\:r_20\:hp, .lg\:r_20\:js.js-active, .js-active .lg\:r_20\:jsp { right: 20px; }
+.lg\:t_25, .lg\:t_25\:h:hover, :hover > .lg\:t_25\:hp, .lg\:t_25\:js.js-active, .js-active .lg\:t_25\:jsp { top: 25px; }
+.lg\:b_25, .lg\:b_25\:h:hover, :hover > .lg\:b_25\:hp, .lg\:b_25\:js.js-active, .js-active .lg\:b_25\:jsp { bottom: 25px; }
+.lg\:l_25, .lg\:l_25\:h:hover, :hover > .lg\:l_25\:hp, .lg\:l_25\:js.js-active, .js-active .lg\:l_25\:jsp { left: 25px; }
+.lg\:r_25, .lg\:r_25\:h:hover, :hover > .lg\:r_25\:hp, .lg\:r_25\:js.js-active, .js-active .lg\:r_25\:jsp { right: 25px; }
+.lg\:t_30, .lg\:t_30\:h:hover, :hover > .lg\:t_30\:hp, .lg\:t_30\:js.js-active, .js-active .lg\:t_30\:jsp { top: 30px; }
+.lg\:b_30, .lg\:b_30\:h:hover, :hover > .lg\:b_30\:hp, .lg\:b_30\:js.js-active, .js-active .lg\:b_30\:jsp { bottom: 30px; }
+.lg\:l_30, .lg\:l_30\:h:hover, :hover > .lg\:l_30\:hp, .lg\:l_30\:js.js-active, .js-active .lg\:l_30\:jsp { left: 30px; }
+.lg\:r_30, .lg\:r_30\:h:hover, :hover > .lg\:r_30\:hp, .lg\:r_30\:js.js-active, .js-active .lg\:r_30\:jsp { right: 30px; }
+.lg\:t_35, .lg\:t_35\:h:hover, :hover > .lg\:t_35\:hp, .lg\:t_35\:js.js-active, .js-active .lg\:t_35\:jsp { top: 35px; }
+.lg\:b_35, .lg\:b_35\:h:hover, :hover > .lg\:b_35\:hp, .lg\:b_35\:js.js-active, .js-active .lg\:b_35\:jsp { bottom: 35px; }
+.lg\:l_35, .lg\:l_35\:h:hover, :hover > .lg\:l_35\:hp, .lg\:l_35\:js.js-active, .js-active .lg\:l_35\:jsp { left: 35px; }
+.lg\:r_35, .lg\:r_35\:h:hover, :hover > .lg\:r_35\:hp, .lg\:r_35\:js.js-active, .js-active .lg\:r_35\:jsp { right: 35px; }
+.lg\:t_40, .lg\:t_40\:h:hover, :hover > .lg\:t_40\:hp, .lg\:t_40\:js.js-active, .js-active .lg\:t_40\:jsp { top: 40px; }
+.lg\:b_40, .lg\:b_40\:h:hover, :hover > .lg\:b_40\:hp, .lg\:b_40\:js.js-active, .js-active .lg\:b_40\:jsp { bottom: 40px; }
+.lg\:l_40, .lg\:l_40\:h:hover, :hover > .lg\:l_40\:hp, .lg\:l_40\:js.js-active, .js-active .lg\:l_40\:jsp { left: 40px; }
+.lg\:r_40, .lg\:r_40\:h:hover, :hover > .lg\:r_40\:hp, .lg\:r_40\:js.js-active, .js-active .lg\:r_40\:jsp { right: 40px; }
+.lg\:t_45, .lg\:t_45\:h:hover, :hover > .lg\:t_45\:hp, .lg\:t_45\:js.js-active, .js-active .lg\:t_45\:jsp { top: 45px; }
+.lg\:b_45, .lg\:b_45\:h:hover, :hover > .lg\:b_45\:hp, .lg\:b_45\:js.js-active, .js-active .lg\:b_45\:jsp { bottom: 45px; }
+.lg\:l_45, .lg\:l_45\:h:hover, :hover > .lg\:l_45\:hp, .lg\:l_45\:js.js-active, .js-active .lg\:l_45\:jsp { left: 45px; }
+.lg\:r_45, .lg\:r_45\:h:hover, :hover > .lg\:r_45\:hp, .lg\:r_45\:js.js-active, .js-active .lg\:r_45\:jsp { right: 45px; }
+.lg\:t_50, .lg\:t_50\:h:hover, :hover > .lg\:t_50\:hp, .lg\:t_50\:js.js-active, .js-active .lg\:t_50\:jsp { top: 50px; }
+.lg\:b_50, .lg\:b_50\:h:hover, :hover > .lg\:b_50\:hp, .lg\:b_50\:js.js-active, .js-active .lg\:b_50\:jsp { bottom: 50px; }
+.lg\:l_50, .lg\:l_50\:h:hover, :hover > .lg\:l_50\:hp, .lg\:l_50\:js.js-active, .js-active .lg\:l_50\:jsp { left: 50px; }
+.lg\:r_50, .lg\:r_50\:h:hover, :hover > .lg\:r_50\:hp, .lg\:r_50\:js.js-active, .js-active .lg\:r_50\:jsp { right: 50px; }
+.lg\:t_55, .lg\:t_55\:h:hover, :hover > .lg\:t_55\:hp, .lg\:t_55\:js.js-active, .js-active .lg\:t_55\:jsp { top: 55px; }
+.lg\:b_55, .lg\:b_55\:h:hover, :hover > .lg\:b_55\:hp, .lg\:b_55\:js.js-active, .js-active .lg\:b_55\:jsp { bottom: 55px; }
+.lg\:l_55, .lg\:l_55\:h:hover, :hover > .lg\:l_55\:hp, .lg\:l_55\:js.js-active, .js-active .lg\:l_55\:jsp { left: 55px; }
+.lg\:r_55, .lg\:r_55\:h:hover, :hover > .lg\:r_55\:hp, .lg\:r_55\:js.js-active, .js-active .lg\:r_55\:jsp { right: 55px; }
+.lg\:t_60, .lg\:t_60\:h:hover, :hover > .lg\:t_60\:hp, .lg\:t_60\:js.js-active, .js-active .lg\:t_60\:jsp { top: 60px; }
+.lg\:b_60, .lg\:b_60\:h:hover, :hover > .lg\:b_60\:hp, .lg\:b_60\:js.js-active, .js-active .lg\:b_60\:jsp { bottom: 60px; }
+.lg\:l_60, .lg\:l_60\:h:hover, :hover > .lg\:l_60\:hp, .lg\:l_60\:js.js-active, .js-active .lg\:l_60\:jsp { left: 60px; }
+.lg\:r_60, .lg\:r_60\:h:hover, :hover > .lg\:r_60\:hp, .lg\:r_60\:js.js-active, .js-active .lg\:r_60\:jsp { right: 60px; }
+.lg\:t_65, .lg\:t_65\:h:hover, :hover > .lg\:t_65\:hp, .lg\:t_65\:js.js-active, .js-active .lg\:t_65\:jsp { top: 65px; }
+.lg\:b_65, .lg\:b_65\:h:hover, :hover > .lg\:b_65\:hp, .lg\:b_65\:js.js-active, .js-active .lg\:b_65\:jsp { bottom: 65px; }
+.lg\:l_65, .lg\:l_65\:h:hover, :hover > .lg\:l_65\:hp, .lg\:l_65\:js.js-active, .js-active .lg\:l_65\:jsp { left: 65px; }
+.lg\:r_65, .lg\:r_65\:h:hover, :hover > .lg\:r_65\:hp, .lg\:r_65\:js.js-active, .js-active .lg\:r_65\:jsp { right: 65px; }
+.lg\:t_70, .lg\:t_70\:h:hover, :hover > .lg\:t_70\:hp, .lg\:t_70\:js.js-active, .js-active .lg\:t_70\:jsp { top: 70px; }
+.lg\:b_70, .lg\:b_70\:h:hover, :hover > .lg\:b_70\:hp, .lg\:b_70\:js.js-active, .js-active .lg\:b_70\:jsp { bottom: 70px; }
+.lg\:l_70, .lg\:l_70\:h:hover, :hover > .lg\:l_70\:hp, .lg\:l_70\:js.js-active, .js-active .lg\:l_70\:jsp { left: 70px; }
+.lg\:r_70, .lg\:r_70\:h:hover, :hover > .lg\:r_70\:hp, .lg\:r_70\:js.js-active, .js-active .lg\:r_70\:jsp { right: 70px; }
+.lg\:t_75, .lg\:t_75\:h:hover, :hover > .lg\:t_75\:hp, .lg\:t_75\:js.js-active, .js-active .lg\:t_75\:jsp { top: 75px; }
+.lg\:b_75, .lg\:b_75\:h:hover, :hover > .lg\:b_75\:hp, .lg\:b_75\:js.js-active, .js-active .lg\:b_75\:jsp { bottom: 75px; }
+.lg\:l_75, .lg\:l_75\:h:hover, :hover > .lg\:l_75\:hp, .lg\:l_75\:js.js-active, .js-active .lg\:l_75\:jsp { left: 75px; }
+.lg\:r_75, .lg\:r_75\:h:hover, :hover > .lg\:r_75\:hp, .lg\:r_75\:js.js-active, .js-active .lg\:r_75\:jsp { right: 75px; }
+.lg\:t_80, .lg\:t_80\:h:hover, :hover > .lg\:t_80\:hp, .lg\:t_80\:js.js-active, .js-active .lg\:t_80\:jsp { top: 80px; }
+.lg\:b_80, .lg\:b_80\:h:hover, :hover > .lg\:b_80\:hp, .lg\:b_80\:js.js-active, .js-active .lg\:b_80\:jsp { bottom: 80px; }
+.lg\:l_80, .lg\:l_80\:h:hover, :hover > .lg\:l_80\:hp, .lg\:l_80\:js.js-active, .js-active .lg\:l_80\:jsp { left: 80px; }
+.lg\:r_80, .lg\:r_80\:h:hover, :hover > .lg\:r_80\:hp, .lg\:r_80\:js.js-active, .js-active .lg\:r_80\:jsp { right: 80px; }
+.lg\:t_85, .lg\:t_85\:h:hover, :hover > .lg\:t_85\:hp, .lg\:t_85\:js.js-active, .js-active .lg\:t_85\:jsp { top: 85px; }
+.lg\:b_85, .lg\:b_85\:h:hover, :hover > .lg\:b_85\:hp, .lg\:b_85\:js.js-active, .js-active .lg\:b_85\:jsp { bottom: 85px; }
+.lg\:l_85, .lg\:l_85\:h:hover, :hover > .lg\:l_85\:hp, .lg\:l_85\:js.js-active, .js-active .lg\:l_85\:jsp { left: 85px; }
+.lg\:r_85, .lg\:r_85\:h:hover, :hover > .lg\:r_85\:hp, .lg\:r_85\:js.js-active, .js-active .lg\:r_85\:jsp { right: 85px; }
+.lg\:t_90, .lg\:t_90\:h:hover, :hover > .lg\:t_90\:hp, .lg\:t_90\:js.js-active, .js-active .lg\:t_90\:jsp { top: 90px; }
+.lg\:b_90, .lg\:b_90\:h:hover, :hover > .lg\:b_90\:hp, .lg\:b_90\:js.js-active, .js-active .lg\:b_90\:jsp { bottom: 90px; }
+.lg\:l_90, .lg\:l_90\:h:hover, :hover > .lg\:l_90\:hp, .lg\:l_90\:js.js-active, .js-active .lg\:l_90\:jsp { left: 90px; }
+.lg\:r_90, .lg\:r_90\:h:hover, :hover > .lg\:r_90\:hp, .lg\:r_90\:js.js-active, .js-active .lg\:r_90\:jsp { right: 90px; }
+.lg\:t_95, .lg\:t_95\:h:hover, :hover > .lg\:t_95\:hp, .lg\:t_95\:js.js-active, .js-active .lg\:t_95\:jsp { top: 95px; }
+.lg\:b_95, .lg\:b_95\:h:hover, :hover > .lg\:b_95\:hp, .lg\:b_95\:js.js-active, .js-active .lg\:b_95\:jsp { bottom: 95px; }
+.lg\:l_95, .lg\:l_95\:h:hover, :hover > .lg\:l_95\:hp, .lg\:l_95\:js.js-active, .js-active .lg\:l_95\:jsp { left: 95px; }
+.lg\:r_95, .lg\:r_95\:h:hover, :hover > .lg\:r_95\:hp, .lg\:r_95\:js.js-active, .js-active .lg\:r_95\:jsp { right: 95px; }
+.lg\:t_100, .lg\:t_100\:h:hover, :hover > .lg\:t_100\:hp, .lg\:t_100\:js.js-active, .js-active .lg\:t_100\:jsp { top: 100px; }
+.lg\:b_100, .lg\:b_100\:h:hover, :hover > .lg\:b_100\:hp, .lg\:b_100\:js.js-active, .js-active .lg\:b_100\:jsp { bottom: 100px; }
+.lg\:l_100, .lg\:l_100\:h:hover, :hover > .lg\:l_100\:hp, .lg\:l_100\:js.js-active, .js-active .lg\:l_100\:jsp { left: 100px; }
+.lg\:r_100, .lg\:r_100\:h:hover, :hover > .lg\:r_100\:hp, .lg\:r_100\:js.js-active, .js-active .lg\:r_100\:jsp { right: 100px; }
+.lg\:t_xs, .lg\:t_xs\:h:hover, :hover > .lg\:t_xs\:hp, .lg\:t_xs\:js.js-active, .js-active .lg\:t_xs\:jsp { top: 5px; }
+.lg\:b_xs, .lg\:b_xs\:h:hover, :hover > .lg\:b_xs\:hp, .lg\:b_xs\:js.js-active, .js-active .lg\:b_xs\:jsp { bottom: 5px; }
+.lg\:l_xs, .lg\:l_xs\:h:hover, :hover > .lg\:l_xs\:hp, .lg\:l_xs\:js.js-active, .js-active .lg\:l_xs\:jsp { left: 5px; }
+.lg\:r_xs, .lg\:r_xs\:h:hover, :hover > .lg\:r_xs\:hp, .lg\:r_xs\:js.js-active, .js-active .lg\:r_xs\:jsp { right: 5px; }
+.lg\:t_sm, .lg\:t_sm\:h:hover, :hover > .lg\:t_sm\:hp, .lg\:t_sm\:js.js-active, .js-active .lg\:t_sm\:jsp { top: 10px; }
+.lg\:b_sm, .lg\:b_sm\:h:hover, :hover > .lg\:b_sm\:hp, .lg\:b_sm\:js.js-active, .js-active .lg\:b_sm\:jsp { bottom: 10px; }
+.lg\:l_sm, .lg\:l_sm\:h:hover, :hover > .lg\:l_sm\:hp, .lg\:l_sm\:js.js-active, .js-active .lg\:l_sm\:jsp { left: 10px; }
+.lg\:r_sm, .lg\:r_sm\:h:hover, :hover > .lg\:r_sm\:hp, .lg\:r_sm\:js.js-active, .js-active .lg\:r_sm\:jsp { right: 10px; }
+.lg\:t_md, .lg\:t_md\:h:hover, :hover > .lg\:t_md\:hp, .lg\:t_md\:js.js-active, .js-active .lg\:t_md\:jsp { top: 15px; }
+.lg\:b_md, .lg\:b_md\:h:hover, :hover > .lg\:b_md\:hp, .lg\:b_md\:js.js-active, .js-active .lg\:b_md\:jsp { bottom: 15px; }
+.lg\:l_md, .lg\:l_md\:h:hover, :hover > .lg\:l_md\:hp, .lg\:l_md\:js.js-active, .js-active .lg\:l_md\:jsp { left: 15px; }
+.lg\:r_md, .lg\:r_md\:h:hover, :hover > .lg\:r_md\:hp, .lg\:r_md\:js.js-active, .js-active .lg\:r_md\:jsp { right: 15px; }
+.lg\:t_lg, .lg\:t_lg\:h:hover, :hover > .lg\:t_lg\:hp, .lg\:t_lg\:js.js-active, .js-active .lg\:t_lg\:jsp { top: 30px; }
+.lg\:b_lg, .lg\:b_lg\:h:hover, :hover > .lg\:b_lg\:hp, .lg\:b_lg\:js.js-active, .js-active .lg\:b_lg\:jsp { bottom: 30px; }
+.lg\:l_lg, .lg\:l_lg\:h:hover, :hover > .lg\:l_lg\:hp, .lg\:l_lg\:js.js-active, .js-active .lg\:l_lg\:jsp { left: 30px; }
+.lg\:r_lg, .lg\:r_lg\:h:hover, :hover > .lg\:r_lg\:hp, .lg\:r_lg\:js.js-active, .js-active .lg\:r_lg\:jsp { right: 30px; }
+.lg\:t_xl, .lg\:t_xl\:h:hover, :hover > .lg\:t_xl\:hp, .lg\:t_xl\:js.js-active, .js-active .lg\:t_xl\:jsp { top: 50px; }
+.lg\:b_xl, .lg\:b_xl\:h:hover, :hover > .lg\:b_xl\:hp, .lg\:b_xl\:js.js-active, .js-active .lg\:b_xl\:jsp { bottom: 50px; }
+.lg\:l_xl, .lg\:l_xl\:h:hover, :hover > .lg\:l_xl\:hp, .lg\:l_xl\:js.js-active, .js-active .lg\:l_xl\:jsp { left: 50px; }
+.lg\:r_xl, .lg\:r_xl\:h:hover, :hover > .lg\:r_xl\:hp, .lg\:r_xl\:js.js-active, .js-active .lg\:r_xl\:jsp { right: 50px; }
+.lg\:f_primary, .lg\:f_primary\:h:hover, :hover > .lg\:f_primary\:hp, .lg\:f_primary\:js.js-active, .js-active .lg\:f_primary\:jsp { font: italic bold .8em/1.2 Arial, sans-serif; }
+.lg\:ff_primary, .lg\:ff_primary\:h:hover, :hover > .lg\:ff_primary\:hp, .lg\:ff_primary\:js.js-active, .js-active .lg\:ff_primary\:jsp { font-family: Arial, serif; }
+.lg\:ff_secondary, .lg\:ff_secondary\:h:hover, :hover > .lg\:ff_secondary\:hp, .lg\:ff_secondary\:js.js-active, .js-active .lg\:ff_secondary\:jsp { font-family: Helvetica, sans-serif; }
+.lg\:fz_8, .lg\:fz_8\:h:hover, :hover > .lg\:fz_8\:hp, .lg\:fz_8\:js.js-active, .js-active .lg\:fz_8\:jsp { font-size: 8px; }
+.lg\:fz_10, .lg\:fz_10\:h:hover, :hover > .lg\:fz_10\:hp, .lg\:fz_10\:js.js-active, .js-active .lg\:fz_10\:jsp { font-size: 10px; }
+.lg\:fz_12, .lg\:fz_12\:h:hover, :hover > .lg\:fz_12\:hp, .lg\:fz_12\:js.js-active, .js-active .lg\:fz_12\:jsp { font-size: 12px; }
+.lg\:fz_14, .lg\:fz_14\:h:hover, :hover > .lg\:fz_14\:hp, .lg\:fz_14\:js.js-active, .js-active .lg\:fz_14\:jsp { font-size: 14px; }
+.lg\:fz_16, .lg\:fz_16\:h:hover, :hover > .lg\:fz_16\:hp, .lg\:fz_16\:js.js-active, .js-active .lg\:fz_16\:jsp { font-size: 16px; }
+.lg\:fz_xs, .lg\:fz_xs\:h:hover, :hover > .lg\:fz_xs\:hp, .lg\:fz_xs\:js.js-active, .js-active .lg\:fz_xs\:jsp { font-size: 8px; }
+.lg\:fz_sm, .lg\:fz_sm\:h:hover, :hover > .lg\:fz_sm\:hp, .lg\:fz_sm\:js.js-active, .js-active .lg\:fz_sm\:jsp { font-size: 12px; }
+.lg\:fz_md, .lg\:fz_md\:h:hover, :hover > .lg\:fz_md\:hp, .lg\:fz_md\:js.js-active, .js-active .lg\:fz_md\:jsp { font-size: 16px; }
+.lg\:bd_thin, .lg\:bd_thin\:h:hover, :hover > .lg\:bd_thin\:hp, .lg\:bd_thin\:js.js-active, .js-active .lg\:bd_thin\:jsp { border: 1px solid black; }
+.lg\:bdt_thin, .lg\:bdt_thin\:h:hover, :hover > .lg\:bdt_thin\:hp, .lg\:bdt_thin\:js.js-active, .js-active .lg\:bdt_thin\:jsp { border-top: 1px solid black; }
+.lg\:bdb_thin, .lg\:bdb_thin\:h:hover, :hover > .lg\:bdb_thin\:hp, .lg\:bdb_thin\:js.js-active, .js-active .lg\:bdb_thin\:jsp { border-bottom: 1px solid black; }
+.lg\:bdl_thin, .lg\:bdl_thin\:h:hover, :hover > .lg\:bdl_thin\:hp, .lg\:bdl_thin\:js.js-active, .js-active .lg\:bdl_thin\:jsp { border-left: 1px solid black; }
+.lg\:bdr_thin, .lg\:bdr_thin\:h:hover, :hover > .lg\:bdr_thin\:hp, .lg\:bdr_thin\:js.js-active, .js-active .lg\:bdr_thin\:jsp { border-right: 1px solid black; }
+.lg\:bd_bold, .lg\:bd_bold\:h:hover, :hover > .lg\:bd_bold\:hp, .lg\:bd_bold\:js.js-active, .js-active .lg\:bd_bold\:jsp { border: 5px solid black; }
+.lg\:bdt_bold, .lg\:bdt_bold\:h:hover, :hover > .lg\:bdt_bold\:hp, .lg\:bdt_bold\:js.js-active, .js-active .lg\:bdt_bold\:jsp { border-top: 5px solid black; }
+.lg\:bdb_bold, .lg\:bdb_bold\:h:hover, :hover > .lg\:bdb_bold\:hp, .lg\:bdb_bold\:js.js-active, .js-active .lg\:bdb_bold\:jsp { border-bottom: 5px solid black; }
+.lg\:bdl_bold, .lg\:bdl_bold\:h:hover, :hover > .lg\:bdl_bold\:hp, .lg\:bdl_bold\:js.js-active, .js-active .lg\:bdl_bold\:jsp { border-left: 5px solid black; }
+.lg\:bdr_bold, .lg\:bdr_bold\:h:hover, :hover > .lg\:bdr_bold\:hp, .lg\:bdr_bold\:js.js-active, .js-active .lg\:bdr_bold\:jsp { border-right: 5px solid black; }
+.lg\:bdrs_5, .lg\:bdrs_5\:h:hover, :hover > .lg\:bdrs_5\:hp, .lg\:bdrs_5\:js.js-active, .js-active .lg\:bdrs_5\:jsp { border-radius: 5px; }
+.lg\:bdrs_10, .lg\:bdrs_10\:h:hover, :hover > .lg\:bdrs_10\:hp, .lg\:bdrs_10\:js.js-active, .js-active .lg\:bdrs_10\:jsp { border-radius: 10px; }
+.lg\:bdrs_circle, .lg\:bdrs_circle\:h:hover, :hover > .lg\:bdrs_circle\:hp, .lg\:bdrs_circle\:js.js-active, .js-active .lg\:bdrs_circle\:jsp { border-radius: 50%; }
+.lg\:bgc_dark, .lg\:bgc_dark\:h:hover, :hover > .lg\:bgc_dark\:hp, .lg\:bgc_dark\:js.js-active, .js-active .lg\:bgc_dark\:jsp { background-color: #000; }
+.lg\:c_dark, .lg\:c_dark\:h:hover, :hover > .lg\:c_dark\:hp, .lg\:c_dark\:js.js-active, .js-active .lg\:c_dark\:jsp { color: #000; }
+.lg\:bgc_light, .lg\:bgc_light\:h:hover, :hover > .lg\:bgc_light\:hp, .lg\:bgc_light\:js.js-active, .js-active .lg\:bgc_light\:jsp { background-color: #fff; }
+.lg\:c_light, .lg\:c_light\:h:hover, :hover > .lg\:c_light\:hp, .lg\:c_light\:js.js-active, .js-active .lg\:c_light\:jsp { color: #fff; }
+.lg\:bgc_red, .lg\:bgc_red\:h:hover, :hover > .lg\:bgc_red\:hp, .lg\:bgc_red\:js.js-active, .js-active .lg\:bgc_red\:jsp { background-color: red; }
+.lg\:c_red, .lg\:c_red\:h:hover, :hover > .lg\:c_red\:hp, .lg\:c_red\:js.js-active, .js-active .lg\:c_red\:jsp { color: red; }
+.lg\:fx_1, .lg\:fx_1\:h:hover, :hover > .lg\:fx_1\:hp, .lg\:fx_1\:js.js-active, .js-active .lg\:fx_1\:jsp { flex: 1; }
+.lg\:fx_2, .lg\:fx_2\:h:hover, :hover > .lg\:fx_2\:hp, .lg\:fx_2\:js.js-active, .js-active .lg\:fx_2\:jsp { flex: 2; }
+.lg\:fx_3, .lg\:fx_3\:h:hover, :hover > .lg\:fx_3\:hp, .lg\:fx_3\:js.js-active, .js-active .lg\:fx_3\:jsp { flex: 3; }
+.lg\:fx_4, .lg\:fx_4\:h:hover, :hover > .lg\:fx_4\:hp, .lg\:fx_4\:js.js-active, .js-active .lg\:fx_4\:jsp { flex: 4; }
+.lg\:fx_5, .lg\:fx_5\:h:hover, :hover > .lg\:fx_5\:hp, .lg\:fx_5\:js.js-active, .js-active .lg\:fx_5\:jsp { flex: 5; }
+.lg\:fx_6, .lg\:fx_6\:h:hover, :hover > .lg\:fx_6\:hp, .lg\:fx_6\:js.js-active, .js-active .lg\:fx_6\:jsp { flex: 6; }
+.lg\:fx_7, .lg\:fx_7\:h:hover, :hover > .lg\:fx_7\:hp, .lg\:fx_7\:js.js-active, .js-active .lg\:fx_7\:jsp { flex: 7; }
+.lg\:fx_8, .lg\:fx_8\:h:hover, :hover > .lg\:fx_8\:hp, .lg\:fx_8\:js.js-active, .js-active .lg\:fx_8\:jsp { flex: 8; }
+.lg\:fx_9, .lg\:fx_9\:h:hover, :hover > .lg\:fx_9\:hp, .lg\:fx_9\:js.js-active, .js-active .lg\:fx_9\:jsp { flex: 9; }
+.lg\:fx_10, .lg\:fx_10\:h:hover, :hover > .lg\:fx_10\:hp, .lg\:fx_10\:js.js-active, .js-active .lg\:fx_10\:jsp { flex: 10; }
+.lg\:fx_00a, .lg\:fx_00a\:h:hover, :hover > .lg\:fx_00a\:hp, .lg\:fx_00a\:js.js-active, .js-active .lg\:fx_00a\:jsp { flex: 0 0 auto; }
+.lg\:fx_norm, .lg\:fx_norm\:h:hover, :hover > .lg\:fx_norm\:hp, .lg\:fx_norm\:js.js-active, .js-active .lg\:fx_norm\:jsp { flex: 1; }
+.lg\:fxg_1, .lg\:fxg_1\:h:hover, :hover > .lg\:fxg_1\:hp, .lg\:fxg_1\:js.js-active, .js-active .lg\:fxg_1\:jsp { flex-grow: 1; }
+.lg\:fxg_2, .lg\:fxg_2\:h:hover, :hover > .lg\:fxg_2\:hp, .lg\:fxg_2\:js.js-active, .js-active .lg\:fxg_2\:jsp { flex-grow: 2; }
+.lg\:fxg_4, .lg\:fxg_4\:h:hover, :hover > .lg\:fxg_4\:hp, .lg\:fxg_4\:js.js-active, .js-active .lg\:fxg_4\:jsp { flex-grow: 4; }
+.lg\:fxs_1, .lg\:fxs_1\:h:hover, :hover > .lg\:fxs_1\:hp, .lg\:fxs_1\:js.js-active, .js-active .lg\:fxs_1\:jsp { flex-shrink: 1; }
+.lg\:fxs_3, .lg\:fxs_3\:h:hover, :hover > .lg\:fxs_3\:hp, .lg\:fxs_3\:js.js-active, .js-active .lg\:fxs_3\:jsp { flex-shrink: 3; }
+.lg\:fxb_a, .lg\:fxb_a\:h:hover, :hover > .lg\:fxb_a\:hp, .lg\:fxb_a\:js.js-active, .js-active .lg\:fxb_a\:jsp { flex-basis: auto; }
+.lg\:fxb_8, .lg\:fxb_8\:h:hover, :hover > .lg\:fxb_8\:hp, .lg\:fxb_8\:js.js-active, .js-active .lg\:fxb_8\:jsp { flex-basis: 8px; }
+.lg\:fxb_10, .lg\:fxb_10\:h:hover, :hover > .lg\:fxb_10\:hp, .lg\:fxb_10\:js.js-active, .js-active .lg\:fxb_10\:jsp { flex-basis: 10px; }
+.lg\:fxb_12, .lg\:fxb_12\:h:hover, :hover > .lg\:fxb_12\:hp, .lg\:fxb_12\:js.js-active, .js-active .lg\:fxb_12\:jsp { flex-basis: 12px; }
+.lg\:fxb_14, .lg\:fxb_14\:h:hover, :hover > .lg\:fxb_14\:hp, .lg\:fxb_14\:js.js-active, .js-active .lg\:fxb_14\:jsp { flex-basis: 14px; }
+.lg\:fxb_16, .lg\:fxb_16\:h:hover, :hover > .lg\:fxb_16\:hp, .lg\:fxb_16\:js.js-active, .js-active .lg\:fxb_16\:jsp { flex-basis: 16px; }
+.lg\:fxb_xs, .lg\:fxb_xs\:h:hover, :hover > .lg\:fxb_xs\:hp, .lg\:fxb_xs\:js.js-active, .js-active .lg\:fxb_xs\:jsp { flex-basis: 8px; }
+.lg\:fxb_sm, .lg\:fxb_sm\:h:hover, :hover > .lg\:fxb_sm\:hp, .lg\:fxb_sm\:js.js-active, .js-active .lg\:fxb_sm\:jsp { flex-basis: 12px; }
+.lg\:fxb_md, .lg\:fxb_md\:h:hover, :hover > .lg\:fxb_md\:hp, .lg\:fxb_md\:js.js-active, .js-active .lg\:fxb_md\:jsp { flex-basis: 16px; }
+.lg\:fxb_0\%, .lg\:fxb_0\%\:h:hover, :hover > .lg\:fxb_0\%\:hp, .lg\:fxb_0\%\:js.js-active, .js-active .lg\:fxb_0\%\:jsp { flex-basis: 0%; }
+.lg\:fxb_20\%, .lg\:fxb_20\%\:h:hover, :hover > .lg\:fxb_20\%\:hp, .lg\:fxb_20\%\:js.js-active, .js-active .lg\:fxb_20\%\:jsp { flex-basis: 20%; }
+.lg\:fxb_40\%, .lg\:fxb_40\%\:h:hover, :hover > .lg\:fxb_40\%\:hp, .lg\:fxb_40\%\:js.js-active, .js-active .lg\:fxb_40\%\:jsp { flex-basis: 40%; }
+.lg\:fxb_60\%, .lg\:fxb_60\%\:h:hover, :hover > .lg\:fxb_60\%\:hp, .lg\:fxb_60\%\:js.js-active, .js-active .lg\:fxb_60\%\:jsp { flex-basis: 60%; }
+.lg\:fxb_80\%, .lg\:fxb_80\%\:h:hover, :hover > .lg\:fxb_80\%\:hp, .lg\:fxb_80\%\:js.js-active, .js-active .lg\:fxb_80\%\:jsp { flex-basis: 80%; }
+.lg\:fxb_100\%, .lg\:fxb_100\%\:h:hover, :hover > .lg\:fxb_100\%\:hp, .lg\:fxb_100\%\:js.js-active, .js-active .lg\:fxb_100\%\:jsp { flex-basis: 100%; }
+.lg\:ord_u, .lg\:ord_u\:h:hover, :hover > .lg\:ord_u\:hp, .lg\:ord_u\:js.js-active, .js-active .lg\:ord_u\:jsp { order: unset; }
+.lg\:ord_1, .lg\:ord_1\:h:hover, :hover > .lg\:ord_1\:hp, .lg\:ord_1\:js.js-active, .js-active .lg\:ord_1\:jsp { order: 1; }
+.lg\:ord_-1, .lg\:ord_-1\:h:hover, :hover > .lg\:ord_-1\:hp, .lg\:ord_-1\:js.js-active, .js-active .lg\:ord_-1\:jsp { order: -1; }
+.lg\:fxd_c, .lg\:fxd_c\:h:hover, :hover > .lg\:fxd_c\:hp, .lg\:fxd_c\:js.js-active, .js-active .lg\:fxd_c\:jsp { flex-direction: column; }
+.lg\:fxd_cr, .lg\:fxd_cr\:h:hover, :hover > .lg\:fxd_cr\:hp, .lg\:fxd_cr\:js.js-active, .js-active .lg\:fxd_cr\:jsp { flex-direction: column-reverse; }
+.lg\:fxd_r, .lg\:fxd_r\:h:hover, :hover > .lg\:fxd_r\:hp, .lg\:fxd_r\:js.js-active, .js-active .lg\:fxd_r\:jsp { flex-direction: row; }
+.lg\:fxd_rr, .lg\:fxd_rr\:h:hover, :hover > .lg\:fxd_rr\:hp, .lg\:fxd_rr\:js.js-active, .js-active .lg\:fxd_rr\:jsp { flex-direction: row-reverse; }
+.lg\:fxw_n, .lg\:fxw_n\:h:hover, :hover > .lg\:fxw_n\:hp, .lg\:fxw_n\:js.js-active, .js-active .lg\:fxw_n\:jsp { flex-wrap: nowrap; }
+.lg\:fxw_w, .lg\:fxw_w\:h:hover, :hover > .lg\:fxw_w\:hp, .lg\:fxw_w\:js.js-active, .js-active .lg\:fxw_w\:jsp { flex-wrap: wrap; }
+.lg\:fxw_we, .lg\:fxw_we\:h:hover, :hover > .lg\:fxw_we\:hp, .lg\:fxw_we\:js.js-active, .js-active .lg\:fxw_we\:jsp { flex-wrap: wrap-reverse; }
+.lg\:fxw_u, .lg\:fxw_u\:h:hover, :hover > .lg\:fxw_u\:hp, .lg\:fxw_u\:js.js-active, .js-active .lg\:fxw_u\:jsp { flex-wrap: unset; }
+.lg\:jc_u, .lg\:jc_u\:h:hover, :hover > .lg\:jc_u\:hp, .lg\:jc_u\:js.js-active, .js-active .lg\:jc_u\:jsp { justify-content: unset; }
+.lg\:jc_c, .lg\:jc_c\:h:hover, :hover > .lg\:jc_c\:hp, .lg\:jc_c\:js.js-active, .js-active .lg\:jc_c\:jsp { justify-content: center; }
+.lg\:jc_fe, .lg\:jc_fe\:h:hover, :hover > .lg\:jc_fe\:hp, .lg\:jc_fe\:js.js-active, .js-active .lg\:jc_fe\:jsp { justify-content: flex-end; }
+.lg\:jc_fs, .lg\:jc_fs\:h:hover, :hover > .lg\:jc_fs\:hp, .lg\:jc_fs\:js.js-active, .js-active .lg\:jc_fs\:jsp { justify-content: flex-start; }
+.lg\:jc_sa, .lg\:jc_sa\:h:hover, :hover > .lg\:jc_sa\:hp, .lg\:jc_sa\:js.js-active, .js-active .lg\:jc_sa\:jsp { justify-content: space-around; }
+.lg\:jc_sb, .lg\:jc_sb\:h:hover, :hover > .lg\:jc_sb\:hp, .lg\:jc_sb\:js.js-active, .js-active .lg\:jc_sb\:jsp { justify-content: space-between; }
+.lg\:ac_c, .lg\:ac_c\:h:hover, :hover > .lg\:ac_c\:hp, .lg\:ac_c\:js.js-active, .js-active .lg\:ac_c\:jsp { align-content: center; }
+.lg\:ac_fe, .lg\:ac_fe\:h:hover, :hover > .lg\:ac_fe\:hp, .lg\:ac_fe\:js.js-active, .js-active .lg\:ac_fe\:jsp { align-content: flex-end; }
+.lg\:ac_fs, .lg\:ac_fs\:h:hover, :hover > .lg\:ac_fs\:hp, .lg\:ac_fs\:js.js-active, .js-active .lg\:ac_fs\:jsp { align-content: flex-start; }
+.lg\:ac_s, .lg\:ac_s\:h:hover, :hover > .lg\:ac_s\:hp, .lg\:ac_s\:js.js-active, .js-active .lg\:ac_s\:jsp { align-content: stretch; }
+.lg\:ac_sa, .lg\:ac_sa\:h:hover, :hover > .lg\:ac_sa\:hp, .lg\:ac_sa\:js.js-active, .js-active .lg\:ac_sa\:jsp { align-content: space-around; }
+.lg\:ac_sb, .lg\:ac_sb\:h:hover, :hover > .lg\:ac_sb\:hp, .lg\:ac_sb\:js.js-active, .js-active .lg\:ac_sb\:jsp { align-content: space-between; }
+.lg\:ai_b, .lg\:ai_b\:h:hover, :hover > .lg\:ai_b\:hp, .lg\:ai_b\:js.js-active, .js-active .lg\:ai_b\:jsp { align-items: baseline; }
+.lg\:ai_c, .lg\:ai_c\:h:hover, :hover > .lg\:ai_c\:hp, .lg\:ai_c\:js.js-active, .js-active .lg\:ai_c\:jsp { align-items: center; }
+.lg\:ai_fe, .lg\:ai_fe\:h:hover, :hover > .lg\:ai_fe\:hp, .lg\:ai_fe\:js.js-active, .js-active .lg\:ai_fe\:jsp { align-items: flex-end; }
+.lg\:ai_fs, .lg\:ai_fs\:h:hover, :hover > .lg\:ai_fs\:hp, .lg\:ai_fs\:js.js-active, .js-active .lg\:ai_fs\:jsp { align-items: flex-start; }
+.lg\:ai_s, .lg\:ai_s\:h:hover, :hover > .lg\:ai_s\:hp, .lg\:ai_s\:js.js-active, .js-active .lg\:ai_s\:jsp { align-items: stretch; }
+.lg\:z_a, .lg\:z_a\:h:hover, :hover > .lg\:z_a\:hp, .lg\:z_a\:js.js-active, .js-active .lg\:z_a\:jsp { z-index: auto; }
+.lg\:d_n, .lg\:d_n\:h:hover, :hover > .lg\:d_n\:hp, .lg\:d_n\:js.js-active, .js-active .lg\:d_n\:jsp { display: none; }
+.lg\:d_i, .lg\:d_i\:h:hover, :hover > .lg\:d_i\:hp, .lg\:d_i\:js.js-active, .js-active .lg\:d_i\:jsp { display: inline; }
+.lg\:d_b, .lg\:d_b\:h:hover, :hover > .lg\:d_b\:hp, .lg\:d_b\:js.js-active, .js-active .lg\:d_b\:jsp { display: block; }
+.lg\:d_ib, .lg\:d_ib\:h:hover, :hover > .lg\:d_ib\:hp, .lg\:d_ib\:js.js-active, .js-active .lg\:d_ib\:jsp { display: inline-block; }
+.lg\:d_f, .lg\:d_f\:h:hover, :hover > .lg\:d_f\:hp, .lg\:d_f\:js.js-active, .js-active .lg\:d_f\:jsp { display: flex; }
+.lg\:d_if, .lg\:d_if\:h:hover, :hover > .lg\:d_if\:hp, .lg\:d_if\:js.js-active, .js-active .lg\:d_if\:jsp { display: inline-flex; }
+.lg\:d_t, .lg\:d_t\:h:hover, :hover > .lg\:d_t\:hp, .lg\:d_t\:js.js-active, .js-active .lg\:d_t\:jsp { display: table; }
+.lg\:d_g, .lg\:d_g\:h:hover, :hover > .lg\:d_g\:hp, .lg\:d_g\:js.js-active, .js-active .lg\:d_g\:jsp { display: grid; }
+.lg\:d_ig, .lg\:d_ig\:h:hover, :hover > .lg\:d_ig\:hp, .lg\:d_ig\:js.js-active, .js-active .lg\:d_ig\:jsp { display: inline-grid; }
+.lg\:pos_s, .lg\:pos_s\:h:hover, :hover > .lg\:pos_s\:hp, .lg\:pos_s\:js.js-active, .js-active .lg\:pos_s\:jsp { position: static; }
+.lg\:pos_r, .lg\:pos_r\:h:hover, :hover > .lg\:pos_r\:hp, .lg\:pos_r\:js.js-active, .js-active .lg\:pos_r\:jsp { position: relative; }
+.lg\:pos_a, .lg\:pos_a\:h:hover, :hover > .lg\:pos_a\:hp, .lg\:pos_a\:js.js-active, .js-active .lg\:pos_a\:jsp { position: absolute; }
+.lg\:pos_f, .lg\:pos_f\:h:hover, :hover > .lg\:pos_f\:hp, .lg\:pos_f\:js.js-active, .js-active .lg\:pos_f\:jsp { position: fixed; }
+.lg\:va_sup, .lg\:va_sup\:h:hover, :hover > .lg\:va_sup\:hp, .lg\:va_sup\:js.js-active, .js-active .lg\:va_sup\:jsp { vertical-align: super; }
+.lg\:va_t, .lg\:va_t\:h:hover, :hover > .lg\:va_t\:hp, .lg\:va_t\:js.js-active, .js-active .lg\:va_t\:jsp { vertical-align: top; }
+.lg\:va_tt, .lg\:va_tt\:h:hover, :hover > .lg\:va_tt\:hp, .lg\:va_tt\:js.js-active, .js-active .lg\:va_tt\:jsp { vertical-align: text-top; }
+.lg\:va_m, .lg\:va_m\:h:hover, :hover > .lg\:va_m\:hp, .lg\:va_m\:js.js-active, .js-active .lg\:va_m\:jsp { vertical-align: middle; }
+.lg\:va_bl, .lg\:va_bl\:h:hover, :hover > .lg\:va_bl\:hp, .lg\:va_bl\:js.js-active, .js-active .lg\:va_bl\:jsp { vertical-align: baseline; }
+.lg\:va_b, .lg\:va_b\:h:hover, :hover > .lg\:va_b\:hp, .lg\:va_b\:js.js-active, .js-active .lg\:va_b\:jsp { vertical-align: bottom; }
+.lg\:va_tb, .lg\:va_tb\:h:hover, :hover > .lg\:va_tb\:hp, .lg\:va_tb\:js.js-active, .js-active .lg\:va_tb\:jsp { vertical-align: text-bottom; }
+.lg\:va_sub, .lg\:va_sub\:h:hover, :hover > .lg\:va_sub\:hp, .lg\:va_sub\:js.js-active, .js-active .lg\:va_sub\:jsp { vertical-align: sub; }
+.lg\:ta_l, .lg\:ta_l\:h:hover, :hover > .lg\:ta_l\:hp, .lg\:ta_l\:js.js-active, .js-active .lg\:ta_l\:jsp { text-align: left; }
+.lg\:ta_c, .lg\:ta_c\:h:hover, :hover > .lg\:ta_c\:hp, .lg\:ta_c\:js.js-active, .js-active .lg\:ta_c\:jsp { text-align: center; }
+.lg\:ta_r, .lg\:ta_r\:h:hover, :hover > .lg\:ta_r\:hp, .lg\:ta_r\:js.js-active, .js-active .lg\:ta_r\:jsp { text-align: right; }
+.lg\:ta_j, .lg\:ta_j\:h:hover, :hover > .lg\:ta_j\:hp, .lg\:ta_j\:js.js-active, .js-active .lg\:ta_j\:jsp { text-align: justify; }
+.lg\:tal_a, .lg\:tal_a\:h:hover, :hover > .lg\:tal_a\:hp, .lg\:tal_a\:js.js-active, .js-active .lg\:tal_a\:jsp { text-align-last: auto; }
+.lg\:tal_l, .lg\:tal_l\:h:hover, :hover > .lg\:tal_l\:hp, .lg\:tal_l\:js.js-active, .js-active .lg\:tal_l\:jsp { text-align-last: left; }
+.lg\:tal_c, .lg\:tal_c\:h:hover, :hover > .lg\:tal_c\:hp, .lg\:tal_c\:js.js-active, .js-active .lg\:tal_c\:jsp { text-align-last: center; }
+.lg\:tal_r, .lg\:tal_r\:h:hover, :hover > .lg\:tal_r\:hp, .lg\:tal_r\:js.js-active, .js-active .lg\:tal_r\:jsp { text-align-last: right; }
+.lg\:td_n, .lg\:td_n\:h:hover, :hover > .lg\:td_n\:hp, .lg\:td_n\:js.js-active, .js-active .lg\:td_n\:jsp { text-decoration: none; }
+.lg\:td_u, .lg\:td_u\:h:hover, :hover > .lg\:td_u\:hp, .lg\:td_u\:js.js-active, .js-active .lg\:td_u\:jsp { text-decoration: underline; }
+.lg\:td_o, .lg\:td_o\:h:hover, :hover > .lg\:td_o\:hp, .lg\:td_o\:js.js-active, .js-active .lg\:td_o\:jsp { text-decoration: overline; }
+.lg\:td_l, .lg\:td_l\:h:hover, :hover > .lg\:td_l\:hp, .lg\:td_l\:js.js-active, .js-active .lg\:td_l\:jsp { text-decoration: line-through; }
+.lg\:te_n, .lg\:te_n\:h:hover, :hover > .lg\:te_n\:hp, .lg\:te_n\:js.js-active, .js-active .lg\:te_n\:jsp { text-emphasis: none; }
+.lg\:te_ac, .lg\:te_ac\:h:hover, :hover > .lg\:te_ac\:hp, .lg\:te_ac\:js.js-active, .js-active .lg\:te_ac\:jsp { text-emphasis: accent; }
+.lg\:te_dt, .lg\:te_dt\:h:hover, :hover > .lg\:te_dt\:hp, .lg\:te_dt\:js.js-active, .js-active .lg\:te_dt\:jsp { text-emphasis: dot; }
+.lg\:te_c, .lg\:te_c\:h:hover, :hover > .lg\:te_c\:hp, .lg\:te_c\:js.js-active, .js-active .lg\:te_c\:jsp { text-emphasis: circle; }
+.lg\:te_ds, .lg\:te_ds\:h:hover, :hover > .lg\:te_ds\:hp, .lg\:te_ds\:js.js-active, .js-active .lg\:te_ds\:jsp { text-emphasis: disc; }
+.lg\:te_b, .lg\:te_b\:h:hover, :hover > .lg\:te_b\:hp, .lg\:te_b\:js.js-active, .js-active .lg\:te_b\:jsp { text-emphasis: before; }
+.lg\:te_a, .lg\:te_a\:h:hover, :hover > .lg\:te_a\:hp, .lg\:te_a\:js.js-active, .js-active .lg\:te_a\:jsp { text-emphasis: after; }
+.lg\:tt_n, .lg\:tt_n\:h:hover, :hover > .lg\:tt_n\:hp, .lg\:tt_n\:js.js-active, .js-active .lg\:tt_n\:jsp { text-transform: none; }
+.lg\:tt_c, .lg\:tt_c\:h:hover, :hover > .lg\:tt_c\:hp, .lg\:tt_c\:js.js-active, .js-active .lg\:tt_c\:jsp { text-transform: capitalize; }
+.lg\:tt_u, .lg\:tt_u\:h:hover, :hover > .lg\:tt_u\:hp, .lg\:tt_u\:js.js-active, .js-active .lg\:tt_u\:jsp { text-transform: uppercase; }
+.lg\:tt_l, .lg\:tt_l\:h:hover, :hover > .lg\:tt_l\:hp, .lg\:tt_l\:js.js-active, .js-active .lg\:tt_l\:jsp { text-transform: lowercase; }
+.lg\:whs_n, .lg\:whs_n\:h:hover, :hover > .lg\:whs_n\:hp, .lg\:whs_n\:js.js-active, .js-active .lg\:whs_n\:jsp { white-space: normal; }
+.lg\:whs_p, .lg\:whs_p\:h:hover, :hover > .lg\:whs_p\:hp, .lg\:whs_p\:js.js-active, .js-active .lg\:whs_p\:jsp { white-space: pre; }
+.lg\:whs_nw, .lg\:whs_nw\:h:hover, :hover > .lg\:whs_nw\:hp, .lg\:whs_nw\:js.js-active, .js-active .lg\:whs_nw\:jsp { white-space: nowrap; }
+.lg\:whs_pw, .lg\:whs_pw\:h:hover, :hover > .lg\:whs_pw\:hp, .lg\:whs_pw\:js.js-active, .js-active .lg\:whs_pw\:jsp { white-space: pre-wrap; }
+.lg\:whs_pl, .lg\:whs_pl\:h:hover, :hover > .lg\:whs_pl\:hp, .lg\:whs_pl\:js.js-active, .js-active .lg\:whs_pl\:jsp { white-space: pre-line; }
+.lg\:v_v, .lg\:v_v\:h:hover, :hover > .lg\:v_v\:hp, .lg\:v_v\:js.js-active, .js-active .lg\:v_v\:jsp { visibility: visible; }
+.lg\:v_h, .lg\:v_h\:h:hover, :hover > .lg\:v_h\:hp, .lg\:v_h\:js.js-active, .js-active .lg\:v_h\:jsp { visibility: hidden; }
+.lg\:v_c, .lg\:v_c\:h:hover, :hover > .lg\:v_c\:hp, .lg\:v_c\:js.js-active, .js-active .lg\:v_c\:jsp { visibility: collapse; }
+.lg\:cur_a, .lg\:cur_a\:h:hover, :hover > .lg\:cur_a\:hp, .lg\:cur_a\:js.js-active, .js-active .lg\:cur_a\:jsp { cursor: auto; }
+.lg\:cur_d, .lg\:cur_d\:h:hover, :hover > .lg\:cur_d\:hp, .lg\:cur_d\:js.js-active, .js-active .lg\:cur_d\:jsp { cursor: default; }
+.lg\:cur_c, .lg\:cur_c\:h:hover, :hover > .lg\:cur_c\:hp, .lg\:cur_c\:js.js-active, .js-active .lg\:cur_c\:jsp { cursor: crosshair; }
+.lg\:cur_ha, .lg\:cur_ha\:h:hover, :hover > .lg\:cur_ha\:hp, .lg\:cur_ha\:js.js-active, .js-active .lg\:cur_ha\:jsp { cursor: hand; }
+.lg\:cur_he, .lg\:cur_he\:h:hover, :hover > .lg\:cur_he\:hp, .lg\:cur_he\:js.js-active, .js-active .lg\:cur_he\:jsp { cursor: help; }
+.lg\:cur_m, .lg\:cur_m\:h:hover, :hover > .lg\:cur_m\:hp, .lg\:cur_m\:js.js-active, .js-active .lg\:cur_m\:jsp { cursor: move; }
+.lg\:cur_p, .lg\:cur_p\:h:hover, :hover > .lg\:cur_p\:hp, .lg\:cur_p\:js.js-active, .js-active .lg\:cur_p\:jsp { cursor: pointer; }
+.lg\:cur_t, .lg\:cur_t\:h:hover, :hover > .lg\:cur_t\:hp, .lg\:cur_t\:js.js-active, .js-active .lg\:cur_t\:jsp { cursor: text; }
+.lg\:lis_n, .lg\:lis_n\:h:hover, :hover > .lg\:lis_n\:hp, .lg\:lis_n\:js.js-active, .js-active .lg\:lis_n\:jsp { list-style: none; }
+.lg\:lisp_i, .lg\:lisp_i\:h:hover, :hover > .lg\:lisp_i\:hp, .lg\:lisp_i\:js.js-active, .js-active .lg\:lisp_i\:jsp { list-style-position: inside; }
+.lg\:lisp_o, .lg\:lisp_o\:h:hover, :hover > .lg\:lisp_o\:hp, .lg\:lisp_o\:js.js-active, .js-active .lg\:lisp_o\:jsp { list-style-position: outside; }
+.lg\:list_n, .lg\:list_n\:h:hover, :hover > .lg\:list_n\:hp, .lg\:list_n\:js.js-active, .js-active .lg\:list_n\:jsp { list-style-type: none; }
+.lg\:list_d, .lg\:list_d\:h:hover, :hover > .lg\:list_d\:hp, .lg\:list_d\:js.js-active, .js-active .lg\:list_d\:jsp { list-style-type: disc; }
+.lg\:list_c, .lg\:list_c\:h:hover, :hover > .lg\:list_c\:hp, .lg\:list_c\:js.js-active, .js-active .lg\:list_c\:jsp { list-style-type: circle; }
+.lg\:list_s, .lg\:list_s\:h:hover, :hover > .lg\:list_s\:hp, .lg\:list_s\:js.js-active, .js-active .lg\:list_s\:jsp { list-style-type: square; }
+.lg\:list_dc, .lg\:list_dc\:h:hover, :hover > .lg\:list_dc\:hp, .lg\:list_dc\:js.js-active, .js-active .lg\:list_dc\:jsp { list-style-type: decimal; }
+.lg\:list_dclz, .lg\:list_dclz\:h:hover, :hover > .lg\:list_dclz\:hp, .lg\:list_dclz\:js.js-active, .js-active .lg\:list_dclz\:jsp { list-style-type: decimal-leading-zero; }
+.lg\:list_lr, .lg\:list_lr\:h:hover, :hover > .lg\:list_lr\:hp, .lg\:list_lr\:js.js-active, .js-active .lg\:list_lr\:jsp { list-style-type: lower-roman; }
+.lg\:list_ur, .lg\:list_ur\:h:hover, :hover > .lg\:list_ur\:hp, .lg\:list_ur\:js.js-active, .js-active .lg\:list_ur\:jsp { list-style-type: upper-roman; }
+.lg\:lisi_n, .lg\:lisi_n\:h:hover, :hover > .lg\:lisi_n\:hp, .lg\:lisi_n\:js.js-active, .js-active .lg\:lisi_n\:jsp { list-style-image: none; }
+.lg\:ov_v, .lg\:ov_v\:h:hover, :hover > .lg\:ov_v\:hp, .lg\:ov_v\:js.js-active, .js-active .lg\:ov_v\:jsp { overflow: visible; }
+.lg\:ov_h, .lg\:ov_h\:h:hover, :hover > .lg\:ov_h\:hp, .lg\:ov_h\:js.js-active, .js-active .lg\:ov_h\:jsp { overflow: hidden; }
+.lg\:ov_s, .lg\:ov_s\:h:hover, :hover > .lg\:ov_s\:hp, .lg\:ov_s\:js.js-active, .js-active .lg\:ov_s\:jsp { overflow: scroll; }
+.lg\:ov_a, .lg\:ov_a\:h:hover, :hover > .lg\:ov_a\:hp, .lg\:ov_a\:js.js-active, .js-active .lg\:ov_a\:jsp { overflow: auto; }
+.lg\:ovx_v, .lg\:ovx_v\:h:hover, :hover > .lg\:ovx_v\:hp, .lg\:ovx_v\:js.js-active, .js-active .lg\:ovx_v\:jsp { overflow-x: visible; }
+.lg\:ovx_h, .lg\:ovx_h\:h:hover, :hover > .lg\:ovx_h\:hp, .lg\:ovx_h\:js.js-active, .js-active .lg\:ovx_h\:jsp { overflow-x: hidden; }
+.lg\:ovx_s, .lg\:ovx_s\:h:hover, :hover > .lg\:ovx_s\:hp, .lg\:ovx_s\:js.js-active, .js-active .lg\:ovx_s\:jsp { overflow-x: scroll; }
+.lg\:ovx_a, .lg\:ovx_a\:h:hover, :hover > .lg\:ovx_a\:hp, .lg\:ovx_a\:js.js-active, .js-active .lg\:ovx_a\:jsp { overflow-x: auto; }
+.lg\:ovy_v, .lg\:ovy_v\:h:hover, :hover > .lg\:ovy_v\:hp, .lg\:ovy_v\:js.js-active, .js-active .lg\:ovy_v\:jsp { overflow-y: visible; }
+.lg\:ovy_h, .lg\:ovy_h\:h:hover, :hover > .lg\:ovy_h\:hp, .lg\:ovy_h\:js.js-active, .js-active .lg\:ovy_h\:jsp { overflow-y: hidden; }
+.lg\:ovy_s, .lg\:ovy_s\:h:hover, :hover > .lg\:ovy_s\:hp, .lg\:ovy_s\:js.js-active, .js-active .lg\:ovy_s\:jsp { overflow-y: scroll; }
+.lg\:ovy_a, .lg\:ovy_a\:h:hover, :hover > .lg\:ovy_a\:hp, .lg\:ovy_a\:js.js-active, .js-active .lg\:ovy_a\:jsp { overflow-y: auto; }
+.lg\:op_0, .lg\:op_0\:h:hover, :hover > .lg\:op_0\:hp, .lg\:op_0\:js.js-active, .js-active .lg\:op_0\:jsp { opacity: 0; }
+.lg\:op_01, .lg\:op_01\:h:hover, :hover > .lg\:op_01\:hp, .lg\:op_01\:js.js-active, .js-active .lg\:op_01\:jsp { opacity: 0.1; }
+.lg\:op_02, .lg\:op_02\:h:hover, :hover > .lg\:op_02\:hp, .lg\:op_02\:js.js-active, .js-active .lg\:op_02\:jsp { opacity: 0.2; }
+.lg\:op_03, .lg\:op_03\:h:hover, :hover > .lg\:op_03\:hp, .lg\:op_03\:js.js-active, .js-active .lg\:op_03\:jsp { opacity: 0.3; }
+.lg\:op_04, .lg\:op_04\:h:hover, :hover > .lg\:op_04\:hp, .lg\:op_04\:js.js-active, .js-active .lg\:op_04\:jsp { opacity: 0.4; }
+.lg\:op_05, .lg\:op_05\:h:hover, :hover > .lg\:op_05\:hp, .lg\:op_05\:js.js-active, .js-active .lg\:op_05\:jsp { opacity: 0.5; }
+.lg\:op_06, .lg\:op_06\:h:hover, :hover > .lg\:op_06\:hp, .lg\:op_06\:js.js-active, .js-active .lg\:op_06\:jsp { opacity: 0.6; }
+.lg\:op_07, .lg\:op_07\:h:hover, :hover > .lg\:op_07\:hp, .lg\:op_07\:js.js-active, .js-active .lg\:op_07\:jsp { opacity: 0.7; }
+.lg\:op_08, .lg\:op_08\:h:hover, :hover > .lg\:op_08\:hp, .lg\:op_08\:js.js-active, .js-active .lg\:op_08\:jsp { opacity: 0.8; }
+.lg\:op_09, .lg\:op_09\:h:hover, :hover > .lg\:op_09\:hp, .lg\:op_09\:js.js-active, .js-active .lg\:op_09\:jsp { opacity: 0.9; }
+.lg\:op_1, .lg\:op_1\:h:hover, :hover > .lg\:op_1\:hp, .lg\:op_1\:js.js-active, .js-active .lg\:op_1\:jsp { opacity: 1; }
 }

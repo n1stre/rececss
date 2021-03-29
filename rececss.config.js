@@ -2,21 +2,32 @@
 module.exports = {
   output: {
     path: "",
+    filename: "rececss",
+    extension: "css",
     splitByMedia: true,
   },
   media: {
     md: "only screen and (min-width: 768px)",
     lg: "only screen and (min-width: 1024px)"
   },
+  sep: {
+    media: ":",
+    pseudoClass: ":"
+  },
+  pseudoClasses: {
+    h: "$0:hover",
+    hp: ":hover > $0",
+    js: "$0.js-active",
+    jsp: ".js-active $0",
+  },
   rules: {
-    // prettier-ignore
     width: {
       named: { full: "100%", half: "50%" },
       units: { px: [[0, 50, 5], [100, 1000, 100]], "%": [[0, 100, 10]] },
     },
     height: {
       named: { full: "100%", half: "50%" },
-      units: { px: [300], vh: [50, 100] },
+      units: { px: [[0, 50, 5], 300], vh: [50, 100] },
     },
     padding: {
       shorthand: {
@@ -45,7 +56,7 @@ module.exports = {
     flex: {
       shorthand: {
         named: { "00a": "0 0 auto", norm: "1" },
-        units: [[1, 10, 1]],
+        values: [[1, 10, 1]],
       },
       basis: {
         named: { xs: "8px", sm: "12px", md: "16px" },
@@ -53,15 +64,15 @@ module.exports = {
       },
       grow: {
         named: {},
-        units: [1, 2, 4],
+        values: [1, 2, 4],
       },
       shrink: {
         named: {},
-        units: [1, 3],
+        values: [1, 3],
       },
       order: {
         named: {},
-        units: [1, -1],
+        values: [1, -1],
       },
     },
     font: {
@@ -78,7 +89,10 @@ module.exports = {
       },
     },
     border: {
-      shorthand: { thin: "1px solid black", bold: "5px solid black" },
+      shorthand: {
+        thin: "1px solid black",
+        bold: "5px solid black"
+      },
       radius: {
         named: { circle: "50%" },
         units: { px: [5, 10] },
@@ -87,6 +101,7 @@ module.exports = {
     color: {
       dark: "#000",
       light: "#fff",
+      red: "red"
     },
   },
 }

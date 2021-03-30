@@ -31,7 +31,7 @@ And simply run:
 $ npx rececss
 ```
 
-The following CSS will be generated at `./path/to/css/rececss.css`:
+The generated CSS assets will be placed at `./path/to/css/rececss.css` and contain the following rulesets:
 
 ```css
 .w_full { width: 100%; } .miw_full { min-width: 100%; } .maw_full { max-width: 100%; }
@@ -46,8 +46,10 @@ The following CSS will be generated at `./path/to/css/rececss.css`:
 .w_100 { width: 100px; } .miw_100 { min-width: 100px; } .maw_100 { max-width: 100px; }
 .w_500 { width: 500px; } .miw_500 { min-width: 500px; } .maw_500 { max-width: 500px; }
 
-.c_dark  { color: #000; } .bgc_dark  { background-color: #000; }
-.c_light { color: #fff; } .bgc_light { background-color: #fff; }
+.c_dark  { color: #000; }
+.c_light { color: #fff; }
+
+// ... 
 
 ```
 
@@ -92,6 +94,50 @@ will result in:
 ```
 
 ### Media Queries
+Sets up the map of media queries to be used in generated assets where keys are used as prefixes for classnames. For example the config below:
+
+```javascript
+module.exports = {
+  output: {
+    splitByMedia: true,
+  },
+  sep: {
+    media: "-",
+  },
+  media: {
+    md: "only screen and (min-width: 768px)",
+    lg: "only screen and (min-width: 1024px)"
+  },
+  rules: {
+    color: { dark: "#000" },
+  }
+  ...
+}
+```
+
+will generate assets with the following rulesets: 
+
+```css rececss
+/* rececss.css */
+.c_dark { color: #000; }
+...
+```
+
+```css
+/* rececss.md.css */
+@media only screen and (min-width: 768px) {
+  .md-c_dark { color: #000; }
+  ...
+}
+```
+
+```css
+/* rececss.lg.css */
+@media only screen and (min-width: 1024px) {
+  .lg-c_dark { color: #000; }
+  ...
+}
+```
 
 ### States (:hover, :focus, :active, etc.)
 

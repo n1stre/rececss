@@ -19,7 +19,7 @@ module.exports = {
   rules: {
     width: {
       named: { full: "100%", half: "50%" },
-      units: { px: [[0, 50, 10], 100, 500], "%": [[0, 100, 20]] }, // supports ranges in form [start, stop, step]
+      units: { px: [[0, 50, 10], 100, 500] }, // supports ranges in form [start, stop, step]
     },
     color: { dark: "#000", light: "#fff" },
     ...
@@ -47,13 +47,6 @@ The following CSS will be generated at `./path/to/css/rececss.css`:
 .w_50  { width: 50px; }  .miw_50  { min-width: 50px; }  .maw_50  { max-width: 50px; }
 .w_100 { width: 100px; } .miw_100 { min-width: 100px; } .maw_100 { max-width: 100px; }
 .w_500 { width: 500px; } .miw_500 { min-width: 500px; } .maw_500 { max-width: 500px; }
-
-.w_0\%   { width: 0%; }   .miw_0\%   { min-width: 0%; }   .maw_0\%   { max-width: 0%; }
-.w_20\%  { width: 20%; }  .miw_20\%  { min-width: 20%; }  .maw_20\%  { max-width: 20%; }
-.w_40\%  { width: 40%; }  .miw_40\%  { min-width: 40%; }  .maw_40\%  { max-width: 40%; }
-.w_60\%  { width: 60%; }  .miw_60\%  { min-width: 60%; }  .maw_60\%  { max-width: 60%; }
-.w_80\%  { width: 80%; }  .miw_80\%  { min-width: 80%; }  .maw_80\%  { max-width: 80%; }
-.w_100\% { width: 100%; } .miw_100\% { min-width: 100%; } .maw_100\% { max-width: 100%; }
 
 .c_dark  { color: #000; } .bgc_dark  { background-color: #000; }
 .c_light { color: #fff; } .bgc_light { background-color: #fff; }

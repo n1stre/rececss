@@ -57,10 +57,10 @@ The generated CSS assets will be placed at `./path/to/css/rececss.css` and conta
 
 ### Output
 Specifies the output settings of the result CSS assets.
-- **`path` (string)** - All of the generated assets will be placed into this directory. Defaults to `.`.
-- **`filename` (string)** - Common filename which will be given to all of the generated assets. Defaults to `rececss`.
-- **`extension` ("css" | "scss")** - Extension of the generated assets. Defaults to `css`.
-- **`splitByMedia` (boolean)** - Weather split generated assets for each media or keep it in a single file. Defaults to `false`
+- **`path`** (string) - All of the generated assets will be placed into this directory. Defaults to `.`.
+- **`filename`** (string) - Common filename which will be given to all of the generated assets. Defaults to `rececss`.
+- **`extension`** ("css" | "scss") - Extension of the generated assets. Defaults to `css`.
+- **`splitByMedia`** (boolean) - Weather split generated assets for each media or keep it in a single file. Defaults to `false`
 
 
 For example, using the following `rececss.config.js` 
@@ -74,8 +74,8 @@ module.exports = {
     splitByMedia: true,
   },
   media: {
-    md: "only screen and (min-width: 768px)",
-    lg: "only screen and (min-width: 1024px)"
+    prnt: "print",
+    scr: "screen"
   },
   ...
 }
@@ -88,8 +88,8 @@ will result in:
 │   └── to
 │       └── css
 │           ├── utils.css
-│           ├── utils.lg.css
-│           └── utils.md.css
+│           ├── utils.prnt.css
+│           └── utils.scr.css
 └── rececss.config.js
 ```
 

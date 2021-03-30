@@ -19,7 +19,7 @@ module.exports = {
   rules: {
     width: {
       named: { full: "100%", half: "50%" },
-      units: { px: [[0, 50, 10], 100, 500] }, // supports ranges in form [start, stop, step]
+      units: { px: [[0, 50, 10], 100, 500] }, // supports ranges in a [start, stop, step] form
     },
     color: { dark: "#000", light: "#fff" },
     ...
@@ -56,8 +56,42 @@ The following CSS will be generated at `./path/to/css/rececss.css`:
 ## Customization
 
 ### Output
-#### Path
-#### Splitting by media
+Specifies the output settings of the result CSS assets.
+- **`path` (string)** - All of the generated assets will be placed into this directory. Defaults to `.`.
+- **`filename` (string)** - Common filename which will be given to all of the generated assets. Defaults to `rececss`.
+- **`extension` ("css" | "scss")** - Extension of the generated assets. Defaults to `css`.
+- **`splitByMedia` (boolean)** - Weather split generated assets for each media or keep it in a single file. Defaults to `false`
+
+
+For example, using the following `rececss.config.js` 
+
+```javascript
+module.exports = {
+  output: {
+    path: "path/to/css",
+    filename: "utils",
+    extension: "css",
+    splitByMedia: true,
+  },
+  media: {
+    md: "only screen and (min-width: 768px)",
+    lg: "only screen and (min-width: 1024px)"
+  },
+  ...
+}
+```
+
+will result in:
+
+```console
+├── path
+│   └── to
+│       └── css
+│           ├── utils.css
+│           ├── utils.lg.css
+│           └── utils.md.css
+└── rececss.config.js
+```
 
 ### Media Queries
 

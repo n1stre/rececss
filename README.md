@@ -52,3 +52,26 @@ The following CSS will be generated at `./path/to/css/rececss.css`:
 .c_light { color: #fff; } .bgc_light { background-color: #fff; }
 
 ```
+
+## Customization
+
+### Output
+#### Path
+#### Splitting by media
+
+### Media Queries
+
+### States (:hover, :focus, :active, etc.)
+
+### Rules
+#### Width
+#### Height
+#### Margin
+#### Padding
+#### Offset (top, right, bottom, left)
+#### Flex
+#### Font
+#### Border
+#### Colors
+
+### Classnames

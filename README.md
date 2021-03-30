@@ -5,8 +5,6 @@ Minimalistic, fully customizable CSS utilities generator
 ![License](https://img.shields.io/npm/l/rececss)
 ![NPM Version](https://img.shields.io/npm/v/rececss)
 
----
-
 ## Usage
 
 Create a `rececss.config.js` file at the root of your project:

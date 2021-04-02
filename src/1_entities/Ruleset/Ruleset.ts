@@ -1,4 +1,4 @@
-import { DTO, Instance, Props } from "./Ruleset.interface";
+import { DTO, Factory, Instance, Props } from "./Ruleset.interface";
 
 const defaultProps: Props = {
   prefixSep: ":",
@@ -10,10 +10,9 @@ export default class Ruleset implements Instance {
     this.dto = { ...dto };
   }
 
-  static build(partialProps: Partial<Props> = {}) {
+  static createFactory(partialProps: Partial<Props> = {}): Factory {
     const props = { ...defaultProps, ...partialProps };
-    const create = (dto: DTO) => new Ruleset(dto, props);
-    return Object.freeze({ create });
+    return Object.freeze({ create: (dto: DTO) => new Ruleset(dto, props) });
   }
 
   static create(dto: DTO) {
@@ -30,54 +29,63 @@ export default class Ruleset implements Instance {
   }
 
   toString() {
-    const selector = this.getSelector();
-    const declarations = this.getDeclarations();
-    return selector && `${selector} { ${declarations} }`;
+    const selectors = this.getSelectors();
+    return selectors && `${selectors} { ${this.declarations} }`;
   }
 
   toDTO() {
     return this.dto;
   }
 
-  private getDeclarations() {
-    return this.dto.declarations;
+  private getSelectors() {
+    const base = this.getClassnameSelector();
+    const states = this.getStateClassnames();
+    return states ? base + ", " + states : base;
   }
 
-  private getSelector() {
-    const base = this.getClassname();
-    const pseudos = this.getPseudoClassnames();
-    return pseudos ? base + ", " + pseudos : base;
-  }
-
-  private getClassnamePrefix() {
-    const { prefixSep } = this.props;
-    const { classnamePrefix } = this.dto;
-    return classnamePrefix ? classnamePrefix + prefixSep : "";
-  }
-
-  private getClassname(suffix: string = "") {
-    const prefix = this.getClassnamePrefix();
-    const classname = prefix + this.dto.classname + suffix;
-    return "." + this.escapeClassname(classname);
-  }
-
-  private getPseudoClassnames() {
-    return Object.entries(this.dto.pseudoClasses || {})
-      .map((entry) => this.getPseudoClassname(...entry))
+  private getStateClassnames() {
+    return Object.entries(this.dto.classnameStates || {})
+      .map((entry) => this.getStateClassname(...entry))
       .join(", ");
   }
 
-  private getPseudoClassname(pseudoSuffix: string, pseudoSelector: string) {
-    const suffix = this.props.suffixSep + pseudoSuffix;
-    const classname = this.getClassname(suffix);
-    return pseudoSelector.replace("$0", classname);
+  private getStateClassname(stateSuffix: string, stateSelector: string) {
+    const suffix = this.suffixSep + stateSuffix;
+    const classname = this.getClassnameSelector(suffix);
+    return stateSelector.replace("$0", classname);
+  }
+
+  private getClassnameSelector(suffix: string = "") {
+    const rawClassname = this.classnamePrefix + this.dto.classname + suffix;
+    const classname = "." + this.escapeClassname(rawClassname);
+    return this.transformSelector(classname);
   }
 
   private escapeClassname(cn: string) {
-    return cn
-      .replace(/\%/g, "\\%")
-      .replace(/\:/g, "\\:")
-      .replace(/\./g, "\\.")
-      .replace(/\@/g, "\\@");
+    const chars = ["%", ":", ".", "@"];
+    return chars.reduce((cn, char) => cn.replace(char, `\\${char}`), cn);
+  }
+
+  private transformSelector(cn: string) {
+    return this.dto.selectorTransform
+      ? this.dto.selectorTransform.replace("$0", cn)
+      : cn;
+  }
+
+  private get declarations() {
+    return this.dto.declarations || "";
+  }
+
+  private get classnamePrefix() {
+    const { classnamePrefix } = this.dto;
+    return classnamePrefix ? classnamePrefix + this.prefixSep : "";
+  }
+
+  private get prefixSep() {
+    return this.props.prefixSep || defaultProps.prefixSep;
+  }
+
+  private get suffixSep() {
+    return this.props.suffixSep || defaultProps.suffixSep;
   }
 }

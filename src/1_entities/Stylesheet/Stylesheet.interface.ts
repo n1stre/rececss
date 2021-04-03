@@ -22,3 +22,7 @@ export interface Instance {
   toString: () => string;
   toDTO: () => DTO;
 }
+
+export interface Factory {
+  create: (dto: DTO) => Instance;
+}

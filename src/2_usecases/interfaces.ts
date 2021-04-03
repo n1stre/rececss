@@ -29,12 +29,19 @@ export type TBorderValues = Partial<{
   radius: TRulesetValues;
 }>;
 
+export type TFlexGridValues = Partial<{
+  cols: number;
+  gutter: string;
+  gutters: TRulesetValues;
+}>;
+
 export type TFlexValues = Partial<{
   shorthand: TRulesetValues;
   grow: TRulesetValues;
   shrink: TRulesetValues;
   basis: TRulesetValues;
   order: TRulesetValues;
+  grid: TFlexGridValues;
 }>;
 
 export type TConfigurableRulesetsValues = Partial<{
@@ -50,5 +57,5 @@ export type TConfigurableRulesetsValues = Partial<{
 }>;
 
 export interface IRulesetsFactory {
-  create: (dto: TConfigurableRulesetsValues) => IRuleset.DTO[];
+  createAll: (dto: TConfigurableRulesetsValues) => IRuleset.Instance[];
 }

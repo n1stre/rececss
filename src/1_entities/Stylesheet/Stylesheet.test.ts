@@ -20,4 +20,14 @@ describe("Stylesheet entity", () => {
       "@media screen and (max-width: 700px) {\n.m_a { margin: auto; }\n.fullwidth { width: 100%; }\n}\n",
     );
   });
+
+  it("should use default name", () => {
+    const factory = Stylesheet.createFactory({
+      filename: undefined,
+      extension: undefined,
+    });
+    const style = factory.create({ rulesets: defaultRulesets });
+
+    expect(style.getName()).toBe("rececss.css");
+  });
 });

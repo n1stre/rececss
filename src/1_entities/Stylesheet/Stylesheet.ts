@@ -10,10 +10,9 @@ export default class Stylesheet implements Instance {
     this.dto = { ...dto };
   }
 
-  static build(partialProps: Partial<Props> = {}) {
+  static createFactory(partialProps: Partial<Props> = {}) {
     const props = { ...defaultProps, ...partialProps };
-    const create = (dto: DTO) => new Stylesheet(dto, props);
-    return Object.freeze({ create });
+    return Object.freeze({ create: (dto: DTO) => new Stylesheet(dto, props) });
   }
 
   static create(dto: DTO) {
@@ -30,8 +29,7 @@ export default class Stylesheet implements Instance {
   }
 
   getName() {
-    const media = this.getMedia();
-    const nameParts = [this.props.filename, media?.name, this.props.extension];
+    const nameParts = [this.filename, this.mediaName, this.extension];
     return nameParts.filter(Boolean).join(".");
   }
 
@@ -47,7 +45,7 @@ export default class Stylesheet implements Instance {
   toString() {
     const media = this.getMedia();
     if (media) return this.getMediaRulesetsString(media) + "\n";
-    return this.getRulesetsString() + "\n";
+    return this.rulesetsString + "\n";
   }
 
   toDTO() {
@@ -55,12 +53,23 @@ export default class Stylesheet implements Instance {
   }
 
   private getMediaRulesetsString(media: MediaDTO) {
-    const rulesetsString = this.getRulesetsString();
-    const result = [`@media ${media.query} {`, rulesetsString, "}"];
+    const result = [`@media ${media.query} {`, this.rulesetsString, "}"];
     return result.join("\n");
   }
 
-  private getRulesetsString() {
+  private get rulesetsString() {
     return this.getRulesets().join("\n");
+  }
+
+  private get mediaName() {
+    return this.getMedia()?.name;
+  }
+
+  private get filename() {
+    return this.props.filename || defaultProps.filename;
+  }
+
+  private get extension() {
+    return this.props.extension || defaultProps.extension;
   }
 }

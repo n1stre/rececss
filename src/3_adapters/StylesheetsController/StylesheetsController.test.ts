@@ -15,7 +15,7 @@ describe("StylesheetsController", () => {
   });
 
   it("should generate assets without errors", async () => {
-    const controller = StylesheetsController.new(io);
+    const controller = StylesheetsController.create(io);
     const res = await controller.generateAssets();
     expect(io.getStylesheetsAssetsInput).toBeCalledTimes(1);
     expect(io.outputAssets).toBeCalledTimes(1);

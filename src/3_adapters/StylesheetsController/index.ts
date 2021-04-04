@@ -1,9 +1,3 @@
-import build from "./StylesheetsController";
-
-const Controller = build();
-const StylesheetsController = Object.freeze({
-  build,
-  new: (...p: ConstructorParameters<typeof Controller>) => new Controller(...p),
-});
+import StylesheetsController from "./StylesheetsController";
 
 export default StylesheetsController;

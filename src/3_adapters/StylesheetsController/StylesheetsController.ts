@@ -1,21 +1,23 @@
+import Stylesheet from "../../1_entities/Stylesheet";
 import GenerateStylesheetAssets from "../../2_usecases/GenerateStylesheetAssets";
 import { IInputOutput } from "../interfaces";
-import { AllRulesetsFactory } from "../RulesetsFactory";
-import RulesetsBuilder from "../RulesetsBuilder";
+import RulesetsFactory from "../RulesetsFactory";
 
-export default () => {
-  return class StylesheetsController {
-    constructor(private io: IInputOutput) {}
+export default class StylesheetsController {
+  private constructor(private io: IInputOutput) {}
+  private StylesheetFactory = Stylesheet.createFactory(this.io.getStylesheetPropsInput()); // prettier-ignore
+  private RulesetsFactory = RulesetsFactory.create(this.io.getRulesetsBuilderInput()); // prettier-ignore
 
-    async generateAssets() {
-      const builder = RulesetsBuilder.new(this.io.getRulesetsBuilderInput());
-      const assets = await GenerateStylesheetAssets.create({
-        RulesetsFactory: AllRulesetsFactory.new(builder),
-        rulesetProps: this.io.getRulesetPropsInput(),
-        stylesheetProps: this.io.getStylesheetPropsInput(),
-      }).exec(this.io.getStylesheetsAssetsInput());
+  static create(io: IInputOutput) {
+    return new StylesheetsController(io);
+  }
 
-      await this.io.outputAssets(assets);
-    }
-  };
-};
+  async generateAssets() {
+    const { RulesetsFactory, StylesheetFactory } = this;
+    const props = { RulesetsFactory, StylesheetFactory };
+    const usecase = GenerateStylesheetAssets.create(props);
+    const assets = await usecase.exec(this.io.getStylesheetsAssetsInput());
+
+    await this.io.outputAssets(assets);
+  }
+}

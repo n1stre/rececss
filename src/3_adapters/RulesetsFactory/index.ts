@@ -1,6 +1,3 @@
-import AllRulesetsFactoryClass from "./AllRulesetsFactory";
-
-export const AllRulesetsFactory = Object.freeze({
-  new: (...p: ConstructorParameters<typeof AllRulesetsFactoryClass>) =>
-    new AllRulesetsFactoryClass(...p),
-});
+import RulesetsFactory from "./RulesetsFactory";
+export * as IRulesetsFactory from "./RulesetsFactory.interface";
+export default RulesetsFactory;

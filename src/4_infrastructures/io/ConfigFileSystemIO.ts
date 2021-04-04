@@ -18,8 +18,9 @@ export default class ConfigFileSystemIO implements IInputOutput {
 
   getRulesetsBuilderInput() {
     return {
-      classNames: this.config.getClassnames(),
-      pseudoClasses: this.config.getPseudoClasses(),
+      rulesetProps: this.getRulesetPropsInput(),
+      classnames: this.config.getClassnames(),
+      classnameStates: this.config.getClassnameStates(),
     };
   }
 
@@ -34,7 +35,7 @@ export default class ConfigFileSystemIO implements IInputOutput {
   getRulesetPropsInput() {
     return {
       prefixSep: this.config.getMediaSeparator(),
-      suffixSep: this.config.getPseudoClassSeparator(),
+      suffixSep: this.config.getStatesSeparator(),
     };
   }
 

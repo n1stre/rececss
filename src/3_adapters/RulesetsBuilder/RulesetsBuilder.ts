@@ -1,98 +1,84 @@
-import { IRuleset } from "../../1_entities/Ruleset";
+import Ruleset, { IRuleset } from "../../1_entities/Ruleset";
 import {
-  IRulesetBuilderDTO,
-  IRulesetNamesMap,
-  IRulesetsBuilder,
-  IRulesetsBuilderFunctions,
+  DTO,
+  RulesetNamesMap,
+  Instance,
+  Classname,
+  Declaration,
 } from "./RulesetsBuilder.interface";
 import classNamesMap from "./RulesetsBuilder.classnames";
 import declarationsMap from "./RulesetsBuilder.declarations";
-import * as rulesets from "./rulesets";
 
-type TRulesetName = keyof IRulesetNamesMap;
+type TRulesetName = keyof RulesetNamesMap;
 type TRulesetNames = TRulesetName[];
 type TValues = Record<string, string>;
 
-export default () => {
-  return class RulesetsBuilder
-    implements IRulesetsBuilder, IRulesetsBuilderFunctions {
-    private result: IRuleset.DTO[];
-    private classNamesMap: IRulesetNamesMap;
-    private declarationsMap = declarationsMap;
-    private pseudoClasses?: Record<string, string>;
+export default class RulesetsBuilder implements Instance {
+  private result: IRuleset.Instance[];
+  private constructor(private dto?: DTO) {
+    this.result = [];
+  }
 
-    constructor(dto?: IRulesetBuilderDTO) {
-      this.classNamesMap = Object.assign(classNamesMap, dto?.classNames);
-      this.pseudoClasses = dto?.pseudoClasses;
-      this.result = [];
-    }
+  static create(dto?: DTO) {
+    return new RulesetsBuilder(dto);
+  }
 
-    addSize = rulesets.makeAddSize(this);
+  getResult() {
+    const result = this.result;
+    this.result = [];
+    return result;
+  }
 
-    addMargin = rulesets.makeAddMargin(this);
+  getResultDTO() {
+    return this.getResult().map((ruleset) => ruleset.toDTO());
+  }
 
-    addPadding = rulesets.makeAddPadding(this);
+  addRulesetsFromValues(values: TValues, rulesetNames: TRulesetNames) {
+    if (!values) return;
+    Object.entries(values).forEach((v) =>
+      this.addRulesetsFromNames(rulesetNames, v),
+    );
+  }
 
-    addOffset = rulesets.makeAddOffset(this);
+  addRulesetsFromNames(rulesetNames: TRulesetNames, val?: [string, string]) {
+    rulesetNames.forEach((name) => {
+      const classname = this.getClassname(name, val?.[0]);
+      const declarations = this.getDeclaration(name, val?.[1]);
+      this.addRulesetWithStates({ classname, declarations });
+    });
+  }
 
-    addFont = rulesets.makeAddFont(this);
+  addRulesetWithStates(dto: IRuleset.DTO) {
+    dto.classnameStates = this.classnameStates;
+    this.addRuleset(dto);
+  }
 
-    addFlex = rulesets.makeAddFlex(this);
+  addRuleset(dto: IRuleset.DTO) {
+    const ruleset = this.RulesetFactory.create(dto);
+    this.result.push(ruleset);
+  }
 
-    addBorder = rulesets.makeAddBorder(this);
+  getClassname(name: Classname, value?: string) {
+    return this.interpolateRulesetData(this.classnamesMap[name], value);
+  }
 
-    addColor = rulesets.makeAddColor(this);
+  getDeclaration(name: Declaration, value?: string) {
+    return this.interpolateRulesetData(declarationsMap[name], value);
+  }
 
-    addText = rulesets.makeAddText(this);
+  private get RulesetFactory() {
+    return Ruleset.createFactory(this.dto?.rulesetProps);
+  }
 
-    addZIndex = rulesets.makeAddZIndex(this);
+  private get classnamesMap() {
+    return Object.assign({}, classNamesMap, this.dto?.classnamesMap);
+  }
 
-    addDisplay = rulesets.makeAddDisplay(this);
+  private get classnameStates() {
+    return this.dto?.classnameStates;
+  }
 
-    addPosition = rulesets.makeAddPosition(this);
-
-    addOpacity = rulesets.makeAddOpacity(this);
-
-    addOverflow = rulesets.makeAddOverflow(this);
-
-    addVisibility = rulesets.makeAddVisibility(this);
-
-    addList = rulesets.makeAddList(this);
-
-    addCursor = rulesets.makeAddCursor(this);
-
-    getResult() {
-      return this.result;
-    }
-
-    mapToRulesets(values: TValues, ...rulesetNames: TRulesetNames) {
-      if (!values) return;
-      Object.entries(values).forEach((v) => this.pushRulesets(rulesetNames, v));
-    }
-
-    addRulesets(...rulesetNames: TRulesetNames) {
-      this.pushRulesets(rulesetNames);
-    }
-
-    private pushRulesets(rulesetNames: TRulesetNames, val?: [string, string]) {
-      rulesetNames.forEach((name) => {
-        const { pseudoClasses } = this;
-        const classname = this.getClassname(name, val?.[0]);
-        const declarations = this.getDeclaration(name, val?.[1]);
-        this.result.push({ classname, declarations, pseudoClasses });
-      });
-    }
-
-    private getClassname(name: TRulesetName, value?: string) {
-      return this.interpolateRulesetData(this.classNamesMap[name], value);
-    }
-
-    private getDeclaration(name: TRulesetName, value?: string) {
-      return this.interpolateRulesetData(this.declarationsMap[name], value);
-    }
-
-    private interpolateRulesetData(data: string, value?: string) {
-      return value ? data.replace(/\$0/g, value) : data;
-    }
-  };
-};
+  private interpolateRulesetData(data: string, value?: string) {
+    return value ? data.replace(/\$0/g, value) : data;
+  }
+}

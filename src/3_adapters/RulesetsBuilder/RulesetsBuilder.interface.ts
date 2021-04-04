@@ -1,48 +1,38 @@
 import { IRuleset } from "../../1_entities/Ruleset";
-import {
-  TBorderValues,
-  TFlexValues,
-  TFontValues,
-  TRulesetValues,
-  TSizeValues,
-  TSpacingValues,
-} from "../../2_usecases/interfaces";
 
-export interface IRulesetBuilderDTO {
-  classNames?: Partial<IRulesetNamesMap>;
-  pseudoClasses?: Record<string, string>;
+export interface DTO {
+  rulesetProps?: Partial<IRuleset.Props>;
+  classnamesMap?: Partial<RulesetNamesMap>;
+  classnameStates?: Record<string, string>;
 }
 
-export interface IRulesetsBuilder {
-  addSize: (v?: TSizeValues) => IRulesetsBuilder;
-  addMargin: (v?: TSpacingValues) => IRulesetsBuilder;
-  addPadding: (v?: TSpacingValues) => IRulesetsBuilder;
-  addOffset: (v?: TRulesetValues) => IRulesetsBuilder;
-  addFont: (v?: TFontValues) => IRulesetsBuilder;
-  addBorder: (v?: TBorderValues) => IRulesetsBuilder;
-  addColor: (v?: TRulesetValues) => IRulesetsBuilder;
-  addFlex: (v?: TFlexValues) => IRulesetsBuilder;
-  addZIndex: (v?: TRulesetValues) => IRulesetsBuilder;
-  addDisplay: () => IRulesetsBuilder;
-  addPosition: () => IRulesetsBuilder;
-  addText: () => IRulesetsBuilder;
-  addVisibility: () => IRulesetsBuilder;
-  addCursor: () => IRulesetsBuilder;
-  addList: () => IRulesetsBuilder;
-  addOverflow: () => IRulesetsBuilder;
-  addOpacity: () => IRulesetsBuilder;
-  getResult: () => IRuleset.DTO[];
-}
-
-export interface IRulesetsBuilderFunctions {
-  addRulesets: (...rulesetNames: (keyof IRulesetNamesMap<string>)[]) => void;
-  mapToRulesets: (
+export interface Instance {
+  getClassname: (name: keyof ClassnamesMap, value?: string) => string;
+  getDeclaration: (name: keyof DeclarationsMap, value?: string) => string;
+  addRuleset: (dto: IRuleset.DTO) => void;
+  addRulesetWithStates: (dto: IRuleset.DTO) => void;
+  addRulesetsFromNames: (names: (keyof RulesetNamesMap)[]) => void;
+  addRulesetsFromValues: (
     values: Record<string, string> | undefined,
-    ...rulesetNames: (keyof IRulesetNamesMap<string>)[]
+    names: (keyof RulesetNamesMap)[],
   ) => void;
+  getResult: () => IRuleset.Instance[];
+  getResultDTO: () => IRuleset.DTO[];
 }
 
-export interface IRulesetNamesMap<T = string>
+export interface DeclarationsMap extends RulesetNamesMap {
+  flexRowChild: string;
+}
+
+export interface ClassnamesMap extends RulesetNamesMap {
+  flexRowGuttered: string;
+}
+
+export type Classname = keyof ClassnamesMap;
+
+export type Declaration = keyof DeclarationsMap;
+
+export interface RulesetNamesMap<T = string>
   extends TSizeRulesetNames<T>,
     TPaddingRulesetNames<T>,
     TMarginRulesetNames<T>,
@@ -56,6 +46,7 @@ export interface IRulesetNamesMap<T = string>
     TVisibilityRulesetNames<T>,
     TextRulesetNames<T>,
     FlexRulesetNames<T>,
+    FlexGridRulesetNames<T>,
     TOverflowRulesetNames<T>,
     TListRulesetNames<T>,
     TOpacityRulesetNames<T>,
@@ -244,6 +235,11 @@ type FlexRulesetNames<T> = {
   alignItemsStretch: T;
   order: T;
   orderUnset: T;
+};
+
+type FlexGridRulesetNames<T> = {
+  flexRow: string;
+  flexCol: string;
 };
 
 type TOpacityRulesetNames<T> = {

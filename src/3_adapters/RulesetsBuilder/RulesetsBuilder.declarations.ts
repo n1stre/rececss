@@ -1,6 +1,6 @@
-import { IRulesetNamesMap } from "./RulesetsBuilder.interface";
+import { DeclarationsMap } from "./RulesetsBuilder.interface";
 
-const RulesetsDeclarationsMap: IRulesetNamesMap<string> = {
+const RulesetsDeclarationsMap: DeclarationsMap = {
   widthAuto: "width: auto;",
   width: "width: $0;",
   minWidth: "min-width: $0;",
@@ -145,6 +145,10 @@ const RulesetsDeclarationsMap: IRulesetNamesMap<string> = {
   flexBasisAuto: "flex-basis: auto;",
   order: "order: $0;",
   orderUnset: "order: unset;",
+
+  flexRow: "display: flex; margin-left: -$0; margin-right: -$0;",
+  flexRowChild: "flex: 0 0 auto; padding-left: $0; padding-right: $0;",
+  flexCol: "flex-basis: $0; max-width: $0;",
 
   flexDirectionColumn: "flex-direction: column;",
   flexDirectionColumnReverse: "flex-direction: column-reverse;",

@@ -1,6 +1,6 @@
-import { IRulesetNamesMap } from "./RulesetsBuilder.interface";
+import { ClassnamesMap } from "./RulesetsBuilder.interface";
 
-const RulesetsEmmetClassnamesMap: IRulesetNamesMap<string> = {
+const RulesetsEmmetClassnamesMap: ClassnamesMap = {
   widthAuto: "w_a",
   width: "w_$0",
   minWidth: "miw_$0",
@@ -145,6 +145,10 @@ const RulesetsEmmetClassnamesMap: IRulesetNamesMap<string> = {
   flexBasisAuto: "fxb_a",
   order: "ord_$0",
   orderUnset: "ord_u",
+
+  flexRow: "fxrow",
+  flexRowGuttered: "fxrow_$0",
+  flexCol: "fxcol_$0",
 
   flexDirectionColumn: "fxd_c",
   flexDirectionColumnReverse: "fxd_cr",

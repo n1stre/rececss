@@ -24,11 +24,11 @@ export default (props: {
           height: this.parseData(rules.height),
         },
         padding: {
-          shorthand: this.parseData(rules.padding?.shorthand),
+          shorthand: rules.padding?.shorthand,
           edges: this.parseData(rules.padding?.edges),
         },
         margin: {
-          shorthand: this.parseData(rules.margin?.shorthand),
+          shorthand: rules.margin?.shorthand,
           edges: this.parseData(rules.margin?.edges),
         },
         offset: this.parseData(rules.offset),
@@ -72,16 +72,16 @@ export default (props: {
       return this.dto.sep?.media;
     }
 
-    getPseudoClassSeparator() {
-      return this.dto.sep?.pseudoClass;
+    getStatesSeparator() {
+      return this.dto.sep?.state;
     }
 
     getClassnames() {
       return this.dto.classes || {};
     }
 
-    getPseudoClasses() {
-      return this.dto.pseudoClasses || {};
+    getClassnameStates() {
+      return this.dto.states || {};
     }
 
     shouldSplitOutputByMedia() {

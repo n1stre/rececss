@@ -15,20 +15,14 @@ module.exports = {
       units: { px: [300], vh: [50, 100] },
     },
     padding: {
-      shorthand: {
-        named: { a: "auto" },
-        units: { em: [1, 2] },
-      },
+      shorthand: { a: "auto", "1em": "1em", "2em": "2em" },
       edges: {
         named: { sm: "10px", md: "15px", lg: "30px", xl: "50px" },
         units: { px: [[0, 50, 5]], em: [3, 1.3], "%": [] },
       },
     },
     margin: {
-      shorthand: {
-        named: { a: "auto", "0a": "0 auto" },
-        units: { em: [[1, 5, 1]] },
-      },
+      shorthand: { a: "auto", "0a": "0 auto", "1em": "1em", "2em": "2em", "3em": "3em", "4em": "4em", "5em": "5em"},
       edges: {
         named: { sm: "10px", md: "15px", lg: "30px", xl: "50px" },
         units: { px: [[0, 50, 5]] },

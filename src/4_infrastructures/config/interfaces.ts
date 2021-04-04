@@ -37,20 +37,20 @@ export interface IConfigDTO {
   };
   sep?: {
     media?: string;
-    pseudoClass?: string;
+    state?: string;
   };
   media?: Record<string, string>;
   classes?: Record<string, string>;
-  pseudoClasses?: Record<string, string>;
+  states?: Record<string, string>;
   rules: Partial<{
     width: IConfigRuleNamedUnits;
     height: IConfigRuleNamedUnits;
     padding: Partial<{
-      shorthand: IConfigRuleNamedUnits;
+      shorthand: Record<string, string>;
       edges: IConfigRuleNamedUnits;
     }>;
     margin: Partial<{
-      shorthand: IConfigRuleNamedUnits;
+      shorthand: Record<string, string>;
       edges: IConfigRuleNamedUnits;
     }>;
     offset: IConfigRuleNamedUnits;
@@ -82,8 +82,8 @@ export interface IConfig {
   getOutputFilename: () => string | undefined;
   getOutputExtension: () => string | undefined;
   getClassnames: () => Record<string, string>;
-  getPseudoClasses: () => Record<string, string>;
+  getClassnameStates: () => Record<string, string>;
   getMediaSeparator: () => string | undefined;
-  getPseudoClassSeparator: () => string | undefined;
+  getStatesSeparator: () => string | undefined;
   shouldSplitOutputByMedia: () => boolean;
 }

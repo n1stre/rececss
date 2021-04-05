@@ -11,10 +11,10 @@ describe("Ruleset entity", () => {
 
   it("should escape classname", () => {
     const rs = Ruleset.create({
-      classname: "md:w_20.5%",
+      classname: "md:w_20.5%:hover",
       declarations: "width: 20.5%;",
     });
-    expect(rs.toString()).toBe(".md\\:w_20\\.5\\% { width: 20.5%; }");
+    expect(rs.toString()).toBe(".md\\:w_20\\.5\\%\\:hover { width: 20.5%; }");
   });
 
   it("should attach class states", () => {

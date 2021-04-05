@@ -63,7 +63,8 @@ export default class Ruleset implements Instance {
 
   private escapeClassname(cn: string) {
     const chars = ["%", ":", ".", "@"];
-    return chars.reduce((cn, char) => cn.replace(char, `\\${char}`), cn);
+    const reg = (char: string) => new RegExp(`\\${char}`, "g");
+    return chars.reduce((cn, char) => cn.replace(reg(char), `\\${char}`), cn);
   }
 
   private transformSelector(cn: string) {

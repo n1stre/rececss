@@ -1,5 +1,5 @@
 import Config from "./index";
-const dto = require("./Config.example");
+const dto = require("../../../rececss.config");
 
 describe("Config", () => {
   it("should parse rules to values", () => {
@@ -53,7 +53,7 @@ describe("Config", () => {
     });
 
     expect(values.padding).toEqual({
-      shorthand: { a: "auto", "1em": "1em", "2em": "2em" },
+      shorthand: { a: "auto" },
       edges: {
         sm: "10px",
         md: "15px",
@@ -79,11 +79,6 @@ describe("Config", () => {
       shorthand: {
         a: "auto",
         "0a": "0 auto",
-        "1em": "1em",
-        "2em": "2em",
-        "3em": "3em",
-        "4em": "4em",
-        "5em": "5em",
       },
       edges: {
         sm: "10px",
@@ -177,6 +172,11 @@ describe("Config", () => {
         "1": "1",
         "-1": "-1",
       },
+      grid: {
+        cols: 12,
+        gutter: "20px",
+        gutters: { sm: "10px", lg: "40px" },
+      },
     });
 
     expect(values.font).toEqual({
@@ -208,6 +208,6 @@ describe("Config", () => {
       },
     });
 
-    expect(values.color).toEqual({ dark: "#000", light: "#fff" });
+    expect(values.color).toEqual({ dark: "#000", light: "#fff", red: "red" });
   });
 });

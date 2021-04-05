@@ -61,6 +61,11 @@ export interface IConfigDTO {
       grow: IConfigRuleNamedValues;
       shrink: IConfigRuleNamedValues;
       order: IConfigRuleNamedValues;
+      grid: {
+        cols: number;
+        gutter?: string;
+        gutters?: Record<string, string>;
+      };
     }>;
     font: Partial<{
       shorthand: Record<string, string>;

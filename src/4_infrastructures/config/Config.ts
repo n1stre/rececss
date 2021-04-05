@@ -38,6 +38,7 @@ export default (props: {
           grow: this.parseData(rules.flex?.grow),
           shrink: this.parseData(rules.flex?.shrink),
           order: this.parseData(rules.flex?.order),
+          grid: rules.flex?.grid,
         },
         font: {
           shorthand: rules.font?.shorthand,

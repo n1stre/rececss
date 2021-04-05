@@ -147,7 +147,7 @@ const RulesetsDeclarationsMap: DeclarationsMap = {
   orderUnset: "order: unset;",
 
   flexRow: "display: flex; margin-left: -$0; margin-right: -$0;",
-  flexRowChild: "flex: 0 0 auto; padding-left: $0; padding-right: $0;",
+  flexRowChild: "flex: 1 0 auto; padding-left: $0; padding-right: $0;",
   flexCol: "flex-basis: $0; max-width: $0;",
 
   flexDirectionColumn: "flex-direction: column;",

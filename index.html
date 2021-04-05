@@ -9,8 +9,10 @@
   <link rel="stylesheet" href="./rececss.lg.css">
   <title>Document</title>
   <style>
-    .some {
-      width: 500px;
+    * { box-sizing: border-box; }
+    .box {
+      height: 50px;
+      background: #000;
     }
   </style>
 </head>
@@ -19,6 +21,17 @@
   <div class="h_300 bgc_dark">
     <div class="pos_a t_50 r_100 w_50 h_50 bgc_red md:bgc_light:hp"></div>
     <div class="pos_a t_30 l_100 w_50 h_50 bgc_red"></div>
+  </div>
+
+  <div class="fxrow mt_50 mih_50 bgc_red">
+    <!-- <div class="fxcol_12"><div class="box"></div></div> -->
+  </div>
+
+  <div class="fxrow mt_50 fxw_w">
+    <div class="md:fxcol_2"><div class="box"></div></div>
+    <div class="md:fxcol_4"><div class="box"></div></div>
+    <div class="md:fxcol_2"><div class="box"></div></div>
+    <div class="md:fxcol_4"><div class="box"></div></div>
   </div>
 </body>
 </html>

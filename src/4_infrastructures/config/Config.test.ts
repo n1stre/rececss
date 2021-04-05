@@ -46,6 +46,7 @@ describe("Config", () => {
       height: {
         full: "100%",
         half: "50%",
+        "50": "50px",
         "300": "300px",
         "50vh": "50vh",
         "100vh": "100vh",

@@ -27,7 +27,7 @@ module.exports = {
     },
     height: {
       named: { full: "100%", half: "50%" },
-      units: { px: [[0, 50, 5], 300], vh: [50, 100] },
+      units: { px: [300, 50], vh: [50, 100] },
     },
     padding: {
       shorthand: { a: "auto" },
@@ -62,7 +62,8 @@ module.exports = {
       },
       grid: {
         cols: 12,
-        gutters: [0, 20, 40]
+        gutter: "20px",
+        gutters: { sm: "10px", lg: "40px"}
       },
       shrink: {
         named: {},

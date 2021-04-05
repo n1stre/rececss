@@ -12,9 +12,9 @@ module.exports = {
   },
   sep: {
     media: ":",
-    pseudoClass: ":"
+    state: ":"
   },
-  pseudoClasses: {
+  states: {
     h: "$0:hover",
     hp: ":hover > $0",
     js: "$0.js-active",

@@ -249,11 +249,11 @@ describe("RulesetsFactory", () => {
     // prettier-ignore
     expect(toString(res)).toEqual([
       ".fxrow { display: flex; margin-left: -5px; margin-right: -5px; }",
-      ".fxrow > * { flex: 0 0 auto; padding-left: 5px; padding-right: 5px; }",
+      ".fxrow > * { flex: 1 0 auto; padding-left: 5px; padding-right: 5px; }",
       ".fxrow_sm { display: flex; margin-left: -10px; margin-right: -10px; }",
-      ".fxrow_sm > * { flex: 0 0 auto; padding-left: 10px; padding-right: 10px; }",
+      ".fxrow_sm > * { flex: 1 0 auto; padding-left: 10px; padding-right: 10px; }",
       ".fxrow_lg { display: flex; margin-left: -20em; margin-right: -20em; }",
-      ".fxrow_lg > * { flex: 0 0 auto; padding-left: 20em; padding-right: 20em; }",
+      ".fxrow_lg > * { flex: 1 0 auto; padding-left: 20em; padding-right: 20em; }",
 
       `.fxcol_1 { flex-basis: ${1 / 12 * 100}%; max-width: ${1 / 12 * 100}%; }`,
       `.fxcol_2 { flex-basis: ${2 / 12 * 100}%; max-width: ${2 / 12 * 100}%; }`,

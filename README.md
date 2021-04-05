@@ -100,7 +100,7 @@ will result in:
 └── rececss.config.js
 ```
 
-### Media Queries
+### Media
 Sets up the map of media queries to be used in generated assets where keys are used as prefixes for classnames. For example the config below:
 
 ```javascript
@@ -147,6 +147,48 @@ will generate assets with the following rulesets:
 ```
 
 ### States (:hover, :focus, :active, etc.)
+Here is the place where you can define pseudo-class or javasript driven utility states that would be applied to *all* of the generated rulesets.
+
+```javascript
+module.exports = {
+  ...
+  sep: {
+    state: "-"
+  },
+  states: {
+    hov: "$0:hover",
+    hovParent: ":hover > $0",
+    js: "$0.js-active",
+  },
+  rules: {
+    margin: { shorthand: { "0a": "0 auto" }},
+    color: { dark: "#000", light: "#fff" },
+  },
+}
+```
+In the above config `$0` in `states` represents a classname that would be inserted after processing. Keys should be used as suffixes for this classnames. Check out the result: 
+
+```css
+.m_0a,
+.m_0a-hov:hover,
+*:hover > .m_0a-hovParent,
+.m_0a-js.js-active {
+  margin: 0 auto;
+}
+.c_dark,
+.c_dark-hov:hover,
+*:hover > .c_dark-hovParent,
+.c_dark-js.js-active {
+  color: #000;
+}
+.c_light,
+.c_light-hov:hover,
+*:hover > .c_light-hovParent,
+.c_light-js.js-active {
+  color: #fff;
+}
+
+```
 
 ### Rules
 #### Width

@@ -202,3 +202,18 @@ In the above config `$0` in `states` represents a classname that would be insert
 #### Colors
 
 ### Classnames
+Allows to overwrite any of the utility classnames:
+
+```javascript
+module.exports = {
+  classnames: {
+    font: "font_$0",
+    displayNone: "hidden",
+    opacity0: "invisible"
+  },
+  ...
+}
+```
+
+List of all available classnames can found [here](https://github.com/re-ce/rececss/blob/master/src/3_adapters/RulesetsBuilder/RulesetsBuilder.classnames.ts)
+

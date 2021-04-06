@@ -399,17 +399,119 @@ Outputs:
 module.exports = {
   // ...
   rules: {
-    
-  },
-  classnames: {
-   
+    offset: {
+      named: { sm: "10px", md: "15px" },
+      units: { px: [[0, 100, 5]] },
+    },
   }
 }
 ```
+
+With classname defaults:
+```javascript
+{
+  top: "t_$0",
+  bottom: "b_$0",
+  left: "l_$0",
+  right: "r_$0",
+}
+```
+
+Outputs:
+```css
+.t_0 { top: 0px; } .b_0 { bottom: 0px; } .l_0 { left: 0px; } .r_0 { right: 0px; }
+.t_5 { top: 5px; } .b_5 { bottom: 5px; } .l_5 { left: 5px; } .r_5 { right: 5px; }
+.t_10 { top: 10px; } .b_10 { bottom: 10px; } .l_10 { left: 10px; } .r_10 { right: 10px; }
+...
+.t_100 { top: 100px; } .b_100 { bottom: 100px; } .l_100 { left: 100px; } .r_100 { right: 100px; }
+```
+
 #### Flex
+```javascript
+module.exports = {
+  // ...
+  rules: {
+    flex: {
+      shorthand: {
+        named: { "00a": "0 0 auto", norm: "1" },
+        values: [[1, 10, 1]],
+      },
+      basis: {
+        named: { xs: "8px", sm: "12px", md: "16px" },
+        units: { px: [[8, 16, 2]], "%": [[0, 100, 20]] },
+      },
+      grow: {
+        named: {},
+        values: [1, 2, 4],
+      },
+      shrink: {
+        named: {},
+        values: [1, 3],
+      },
+      order: {
+        named: {},
+        values: [1, -1],
+      },
+      grid: {
+        cols: 12,
+        gutter: "20px",
+        gutters: { sm: "10px", lg: "40px"}
+      },
+    },
+  }
+}
+```
+
 #### Font
+```javascript
+module.exports = {
+  // ...
+  rules: {
+    font: {
+      shorthand: {
+        primary: "italic bold .8em/1.2 Arial, sans-serif",
+      },
+      size: {
+        named: { xs: "8px", sm: "12px", md: "16px" },
+        units: { px: [[8, 16, 2]] },
+      },
+      family: {
+        primary: "Arial, serif",
+        secondary: "Helvetica, sans-serif",
+      },
+    }
+  }
+}
+```
+
 #### Border
+```javascript
+module.exports = {
+  // ...
+  rules: {
+    border: {
+      shorthand: {
+        thin: "1px solid black",
+        bold: "5px solid black"
+      },
+      radius: {
+        named: { circle: "50%" },
+        units: { px: [5, 10] },
+      },
+    },
+  }
+}
+```
+
 #### Colors
+```javascript
+module.exports = {
+  // ...
+  rules: {
+    
+  }
+}
+```
 
 ### Classnames
 Allows to overwrite any of the utility classnames:

@@ -443,19 +443,19 @@ module.exports = {
         values: [[1, 10, 1]],
       },
       basis: {
-        named: { xs: "8px", sm: "12px", md: "16px" },
-        units: { px: [[8, 16, 2]], "%": [[0, 100, 20]] },
+        named: { half: "50%" },
+        units: { px: [[100, 500, 100]], "%": [[0, 100, 20]] },
       },
       grow: {
-        named: {},
-        values: [1, 2, 4],
+        named: { max: 10 },
+        values: [1, 2, 3, 4],
       },
       shrink: {
-        named: {},
-        values: [1, 3],
+        named: { none: 0 },
+        values: [1, 2, 3],
       },
       order: {
-        named: {},
+        named: { first: 1 },
         values: [1, -1],
       },
       grid: {
@@ -469,7 +469,6 @@ module.exports = {
 ```
 ##### Shorthand
 Utilizes `flex: "fx_$0"` as default classname and outputs: 
-
 ```css
 .fx_00a { flex: 0 0 auto; }
 .fx_norm { flex: 1; }
@@ -486,18 +485,85 @@ Utilizes `flex: "fx_$0"` as default classname and outputs:
 ```
 
 ##### Basis
-Utilizes `flex: "fx_$0"` as default classname and outputs: 
+Utilizes `flexBasis: "fxb_$0"` as default classname and outputs: 
+```css
+.fxb_half { flex-basis: 50%; }
+.fxb_100 { flex-basis: 100px; }
+.fxb_200 { flex-basis: 200px; }
+.fxb_300 { flex-basis: 300px; }
+.fxb_400 { flex-basis: 400px; }
+.fxb_500 { flex-basis: 500px; }
+.fxb_0\% { flex-basis: 0%; }
+.fxb_20\% { flex-basis: 20%; }
+.fxb_40\% { flex-basis: 40%; }
+.fxb_60\% { flex-basis: 60%; }
+.fxb_80\% { flex-basis: 80%; }
+.fxb_100\% { flex-basis: 100%; }
+```
 
 ##### Grow
-Utilizes `flex: "fx_$0"` as default classname and outputs: 
+Utilizes `flexGrow: "fxg_$0"` as default classname and outputs:   
+```css
+.fxg_max { flex-grow: 10; }
+.fxg_1 { flex-grow: 1; }
+.fxg_2 { flex-grow: 2; }
+.fxg_3 { flex-grow: 3; }
+.fxg_4 { flex-grow: 4; }
+```
 
 ##### Shrink
-Utilizes `flex: "fx_$0"` as default classname and outputs: 
+Utilizes `flexShrink: "fxs_$0"` as default classname and outputs: 
+```css
+.fxs_none { flex-shrink: 0; }
+.fxs_1 { flex-shrink: 1; }
+.fxs_2 { flex-shrink: 2; }
+.fxs_3 { flex-shrink: 3; }
+```
 
 ##### Order
-Utilizes `flex: "fx_$0"` as default classname and outputs: 
+Utilizes `order: "ord_$0"` as default classname and outputs: 
+```css
+.ord_first { order: 1; }
+.ord_1 { order: 1; }
+.ord_-1 { order: -1; }
+```
 
 ##### Grid
+Generates flexbox grid where
+- **`cols`** (number) - total number of columns
+- **`gutter`** (string) - default gutter to be used with `flexRow`
+- **`gutters`** (object)- additional gutters to be used with `flexRowGuttered`
+
+Utilizes classnames below as defaults:
+```javascript
+{
+  flexRow: "fxrow",
+  flexRowGuttered: "fxrow_$0",
+  flexCol: "fxcol_$0",
+}
+```
+```css
+.fxrow    { display: flex; margin-left: -10px; margin-right: -10px; }
+.fxrow_sm { display: flex; margin-left: -5px; margin-right: -5px; }
+.fxrow_lg { display: flex; margin-left: -20px; margin-right: -20px; }
+
+.fxrow > *    { flex: 1 0 auto; padding-left: 10px; padding-right: 10px; }
+.fxrow_sm > * { flex: 1 0 auto; padding-left: 5px; padding-right: 5px; }
+.fxrow_lg > * { flex: 1 0 auto; padding-left: 20px; padding-right: 20px; }
+
+.fxcol_1 { flex-basis: 8.333%; max-width: 8.333%; }
+.fxcol_2 { flex-basis: 16.666%; max-width: 16.666%; }
+.fxcol_3 { flex-basis: 25%; max-width: 25%; }
+.fxcol_4 { flex-basis: 33.333%; max-width: 33.333%; }
+.fxcol_5 { flex-basis: 41.666%; max-width: 41.666%; }
+.fxcol_6 { flex-basis: 50%; max-width: 50%; }
+.fxcol_7 { flex-basis: 58.333%; max-width: 58.333%; }
+.fxcol_8 { flex-basis: 66.666%; max-width: 66.666%; }
+.fxcol_9 { flex-basis: 75%; max-width: 75%; }
+.fxcol_10 { flex-basis: 83.333%; max-width: 83.333%; }
+.fxcol_11 { flex-basis: 91.666%; max-width: 91.666%; }
+.fxcol_12 { flex-basis: 100%; max-width: 100%; }
+```
 
 #### Font
 ```javascript

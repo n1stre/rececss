@@ -193,7 +193,7 @@ In the above config `$0` in `states` represents a classname that would be insert
 ### Rules
 Most of the rules follows minimal conventions for generating values:
 
-1. **Named values.** <br>
+**Named values.** <br>
 An object where keys are being used as classname value identifiers and values inserted into CSS declaration.
 ```javascript
 rule: { 
@@ -201,7 +201,7 @@ rule: {
 }
 ```
 
-2. **Unit values.** <br>
+**Unit values.** <br>
 An object with CSS units (`px`, `em`, `rem`, `vh`, `vw`, `ch`, `pt`, `%`) as keys and values as an array of numbers or ranges where ranges is a number array in a `[start, stop, step]` form.
 ```javascript
 rule: { 
@@ -212,7 +212,7 @@ rule: {
 }
 ```
 
-3. **Unitless values.** <br>
+**Unitless values.** <br>
 An array of numbers or ranges used for unitless ruleset property values (`line-height`, `flex`, etc.)
 ```javascript
 rule: { 

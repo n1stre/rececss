@@ -191,6 +191,35 @@ In the above config `$0` in `states` represents a classname that would be insert
 ```
 
 ### Rules
+Most of the rules follows minimal conventions for generating values:
+
+1. **Named values.** <br>
+An object where keys are being used as classname value identifiers and values inserted into CSS declaration.
+```javascript
+rule: { 
+  named: { full: "100%", half: "50%" } 
+}
+```
+
+2. **Unit values.** <br>
+An object with CSS units (`px`, `em`, `rem`, `vh`, `vw`, `ch`, `pt`, `%`) as keys and values as an array of numbers or ranges where ranges is a number array in a `[start, stop, step]` form.
+```javascript
+rule: { 
+  units: { 
+    px: [33, [0, 50, 5], [100, 1000, 100]], // => 33px, 0px, 5px, 10px, ... 50px, 100px, ... 1000px
+    "%": [[0, 100, 10]] // => 0%, 10%, 15%, ... 100%
+  }
+}
+```
+
+3. **Unitless values.** <br>
+An array of numbers or ranges used for unitless ruleset property values (`line-height`, `flex`, etc.)
+```javascript
+rule: { 
+  values: [1.5, [1, 10, 1]], // => 1.5, 1, 2, 3, ... 10
+}
+```
+
 #### Width
 #### Height
 #### Margin

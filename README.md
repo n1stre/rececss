@@ -317,13 +317,14 @@ module.exports = {
   }
 }
 ```
-
-Property `shorthand` utilizes `margin` shorthand property with default classname `m_$0` and outputs: 
+##### Shorthand
+Property `shorthand` utilizes `margin: "m_$0"` as default classname and outputs: 
 ```css
 .m_a { margin: auto; }
 .m_0a { margin: 0 auto; }
 ```
 
+##### Edges
 Property `edges` utilizes classnames below: 
 ```javascript
 {
@@ -350,7 +351,6 @@ And outputs:
 
 
 #### Padding
-Same as `margin`:
 ```javascript
 module.exports = {
   // ...
@@ -366,7 +366,15 @@ module.exports = {
 }
 ```
 
-Utilizes classnames below:
+##### Shorthand
+Property `shorthand` utilizes `margin: "m_$0"` as default classname and outputs: 
+```css
+.p_a { padding: auto; }
+.p_card { padding: 20px 10px 40px; }
+```
+
+##### Edges
+Property `edges` utilizes classnames below: 
 ```javascript
 {
   padding: "p_$0",
@@ -381,8 +389,6 @@ Utilizes classnames below:
 
 Outputs: 
 ```css
-.p_a { padding: auto; }
-.p_card { padding: 20px 10px 40px; }
 .p_sm { padding: 10px; } .pt_sm { padding-top: 10px; } .pb_sm { padding-bottom: 10px; } .pver_sm { padding-top: 10px; padding-bottom: 10px; } .pl_sm { padding-left: 10px; } .pr_sm { padding-right: 10px; } .phor_sm { padding-left: 10px; padding-right: 10px; }
 .p_md { padding: 15px; } .pt_md { padding-top: 15px; } .pb_md { padding-bottom: 15px; } .pver_md { padding-top: 15px; padding-bottom: 15px; } .pl_md { padding-left: 15px; } .pr_md { padding-right: 15px; } .phor_md { padding-left: 15px; padding-right: 15px; }
 .p_1em { padding: 1em; } .pt_1em { padding-top: 1em; } .pb_1em { padding-bottom: 1em; } .pver_1em { padding-top: 1em; padding-bottom: 1em; } .pl_1em { padding-left: 1em; } .pr_1em { padding-right: 1em; } .phor_1em { padding-left: 1em; padding-right: 1em; }
@@ -419,8 +425,8 @@ Outputs:
 ```css
 .t_sm { top: 10px; } .b_sm { bottom: 10px; } .l_sm { left: 10px; } .r_sm { right: 10px; }
 .t_md { top: 15px; } .b_md { bottom: 15px; } .l_md { left: 15px; } .r_md { right: 15px; }
-.t_0 { top: 0px; } .b_0 { bottom: 0px; } .l_0 { left: 0px; } .r_0 { right: 0px; }
-.t_5 { top: 5px; } .b_5 { bottom: 5px; } .l_5 { left: 5px; } .r_5 { right: 5px; }
+.t_0  { top: 0px; }  .b_0  { bottom: 0px; }  .l_0  { left: 0px; }  .r_0 { right: 0px; }
+.t_5  { top: 5px; }  .b_5  { bottom: 5px; }  .l_5  { left: 5px; }  .r_5 { right: 5px; }
 .t_10 { top: 10px; } .b_10 { bottom: 10px; } .l_10 { left: 10px; } .r_10 { right: 10px; }
 ...
 .t_100 { top: 100px; } .b_100 { bottom: 100px; } .l_100 { left: 100px; } .r_100 { right: 100px; }
@@ -461,6 +467,37 @@ module.exports = {
   }
 }
 ```
+##### Shorthand
+Utilizes `flex: "fx_$0"` as default classname and outputs: 
+
+```css
+.fx_00a { flex: 0 0 auto; }
+.fx_norm { flex: 1; }
+.fx_1 { flex: 1; }
+.fx_2 { flex: 2; }
+.fx_3 { flex: 3; }
+.fx_4 { flex: 4; }
+.fx_5 { flex: 5; }
+.fx_6 { flex: 6; }
+.fx_7 { flex: 7; }
+.fx_8 { flex: 8; }
+.fx_9 { flex: 9; }
+.fx_10 { flex: 10; }
+```
+
+##### Basis
+Utilizes `flex: "fx_$0"` as default classname and outputs: 
+
+##### Grow
+Utilizes `flex: "fx_$0"` as default classname and outputs: 
+
+##### Shrink
+Utilizes `flex: "fx_$0"` as default classname and outputs: 
+
+##### Order
+Utilizes `flex: "fx_$0"` as default classname and outputs: 
+
+##### Grid
 
 #### Font
 ```javascript

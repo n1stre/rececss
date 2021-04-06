@@ -351,17 +351,47 @@ And outputs:
 
 
 #### Padding
+Same as `margin`:
 ```javascript
 module.exports = {
   // ...
   rules: {
-    shorthand: { a: "auto" },
-    edges: {
-      named: { sm: "10px", md: "15px", lg: "30px", xl: "50px" },
-      units: { em: [[1, 3, 0.5]] },
-    },
+    padding: {
+      shorthand: { a: "auto", card: "20px 10px 40px" },
+      edges: {
+        named: { sm: "10px", md: "15px" },
+        units: { em: [[1, 3, 0.5]] },
+      },
+    }
   }
 }
+```
+
+Utilizes classnames below:
+```javascript
+{
+  padding: "p_$0",
+  paddingTop: "pt_$0",
+  paddingBottom: "pb_$0",
+  paddingVertical: "pver_$0",
+  paddingLeft: "pl_$0",
+  paddingRight: "pr_$0",
+  paddingHorizontal: "phor_$0",
+}
+```
+
+Outputs: 
+```css
+.p_a { padding: auto; }
+.p_card { padding: 20px 10px 40px; }
+.p_sm { padding: 10px; } .pt_sm { padding-top: 10px; } .pb_sm { padding-bottom: 10px; } .pver_sm { padding-top: 10px; padding-bottom: 10px; } .pl_sm { padding-left: 10px; } .pr_sm { padding-right: 10px; } .phor_sm { padding-left: 10px; padding-right: 10px; }
+.p_md { padding: 15px; } .pt_md { padding-top: 15px; } .pb_md { padding-bottom: 15px; } .pver_md { padding-top: 15px; padding-bottom: 15px; } .pl_md { padding-left: 15px; } .pr_md { padding-right: 15px; } .phor_md { padding-left: 15px; padding-right: 15px; }
+
+.p_1em { padding: 1em; } .pt_1em { padding-top: 1em; } .pb_1em { padding-bottom: 1em; } .pver_1em { padding-top: 1em; padding-bottom: 1em; } .pl_1em { padding-left: 1em; } .pr_1em { padding-right: 1em; } .phor_1em { padding-left: 1em; padding-right: 1em; }
+.p_1\.5em { padding: 1.5em; } .pt_1\.5em { padding-top: 1.5em; } .pb_1\.5em { padding-bottom: 1.5em; } .pver_1\.5em { padding-top: 1.5em; padding-bottom: 1.5em; } .pl_1\.5em { padding-left: 1.5em; } .pr_1\.5em { padding-right: 1.5em; } .phor_1\.5em { padding-left: 1.5em; padding-right: 1.5em; }
+...
+.p_3em { padding: 3em; } .pt_3em { padding-top: 3em; } .pb_3em { padding-bottom: 3em; } .pver_3em { padding-top: 3em; padding-bottom: 3em; } .pl_3em { padding-left: 3em; } .pr_3em { padding-right: 3em; } .phor_3em { padding-left: 3em; padding-right: 3em; }
+
 ```
 
 #### Offset (top, right, bottom, left)

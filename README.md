@@ -221,10 +221,161 @@ rule: {
 ```
 
 #### Width
+Gets customized through `named` and `units`:
+```javascript
+module.exports = {
+  // ...
+  rules: {
+    width: {
+      named: { full: "100%", half: "50%" },
+      units: { px: [[0, 50, 5], [100, 1000, 100]], "%": [[0, 100, 10]] },
+    },
+  }
+}
+```
+
+With classname defaults:
+```javascript
+{
+  widthAuto: "w_a",
+  width: "w_$0",
+  minWidth: "miw_$0",
+  maxWidth: "maw_$0",
+}
+```
+
+Outputs:
+```css
+.w_a { width: auto; }
+.w_full { width: 100%; } .miw_full { min-width: 100%; } .maw_full { max-width: 100%; }
+.w_half { width: 50%; } .miw_half { min-width: 50%; } .maw_half { max-width: 50%; }
+.w_0 { width: 0px; } .miw_0 { min-width: 0px; } .maw_0 { max-width: 0px; }
+.w_5 { width: 5px; } .miw_5 { min-width: 5px; } .maw_5 { max-width: 5px; }
+.w_10 { width: 10px; } .miw_10 { min-width: 10px; } .maw_10 { max-width: 10px; }
+...
+.w_50 { width: 50px; } .miw_50 { min-width: 50px; } .maw_50 { max-width: 50px; }
+.w_100 { width: 100px; } .miw_100 { min-width: 100px; } .maw_100 { max-width: 100px; }
+.w_200 { width: 200px; } .miw_200 { min-width: 200px; } .maw_200 { max-width: 200px; }
+...
+.w_1000 { width: 1000px; } .miw_1000 { min-width: 1000px; } .maw_1000 { max-width: 1000px; }
+.w_0\% { width: 0%; } .miw_0\% { min-width: 0%; } .maw_0\% { max-width: 0%; }
+.w_10\% { width: 10%; } .miw_10\% { min-width: 10%; } .maw_10\% { max-width: 10%; }
+.w_20\% { width: 20%; } .miw_20\% { min-width: 20%; } .maw_20\% { max-width: 20%; }
+...
+.w_100\% { width: 100%; } .miw_100\% { min-width: 100%; } .maw_100\% { max-width: 100%; }
+```
+
 #### Height
+Gets customized through `named` and `units`:
+```javascript
+module.exports = {
+  // ...
+  rules: {
+    height: {
+      named: { full: "100%" },
+      units: { px: [300, 50], vh: [[0, 100, 10]] },
+    }
+  }
+}
+```
+
+With classname defaults:
+```javascript
+{
+  heightAuto: "h_a",
+  height: "h_$0",
+  minHeight: "mih_$0",
+  maxHeight: "mah_$0",
+}
+```
+
+Outputs:
+```css
+.h_a { height: auto; }
+.h_full { height: 100%; } .mih_full { min-height: 100%; } .mah_full { max-height: 100%; }
+.h_50 { height: 50px; } .mih_50 { min-height: 50px; } .mah_50 { max-height: 50px; }
+.h_300 { height: 300px; } .mih_300 { min-height: 300px; } .mah_300 { max-height: 300px; }
+.h_0vh { height: 0vh; } .mih_0vh { min-height: 0vh; } .mah_0vh { max-height: 0vh; }
+.h_10vh { height: 10vh; } .mih_10vh { min-height: 10vh; } .mah_10vh { max-height: 10vh; }
+...
+.h_100vh { height: 100vh; } .mih_100vh { min-height: 100vh; } .mah_100vh { max-height: 100vh; }
+```
+
 #### Margin
+Gets customized through `shorthand`(`named` values) and `edges`(`named` + `units` values):
+```javascript
+module.exports = {
+  // ...
+  rules: {
+    margin: {
+      shorthand: { a: "auto", "0a": "0 auto" },
+      edges: {
+        named: { sm: "10px", md: "15px", lg: "30px" },
+        units: { px: [[0, 50, 5]] },
+      },
+    }
+  }
+}
+```
+
+Property `shorthand` utilizes `margin` shorthand property with default classname `m_$0` and outputs: 
+```css
+.m_a { margin: auto; }
+.m_0a { margin: 0 auto; }
+```
+
+Property `edges` utilizes classnames below: 
+```javascript
+{
+  margin: "m_$0",
+  marginTop: "mt_$0",
+  marginBottom: "mb_$0",
+  marginVertical: "mver_$0",
+  marginLeft: "ml_$0",
+  marginRight: "mr_$0",
+  marginHorizontal: "mhor_$0",
+}
+```
+And outputs:
+```css
+.m_sm { margin: 10px; } .mt_sm { margin-top: 10px; } .mb_sm { margin-bottom: 10px; } .mver_sm { margin-top: 10px; margin-bottom: 10px; } .ml_sm { margin-left: 10px; } .mr_sm { margin-right: 10px; } .mhor_sm { margin-left: 10px; margin-right: 10px; }
+.m_md { margin: 15px; } .mt_md { margin-top: 15px; } .mb_md { margin-bottom: 15px; } .mver_md { margin-top: 15px; margin-bottom: 15px; } .ml_md { margin-left: 15px; } .mr_md { margin-right: 15px; } .mhor_md { margin-left: 15px; margin-right: 15px; }
+.m_lg { margin: 30px; } .mt_lg { margin-top: 30px; } .mb_lg { margin-bottom: 30px; } .mver_lg { margin-top: 30px; margin-bottom: 30px; } .ml_lg { margin-left: 30px; } .mr_lg { margin-right: 30px; } .mhor_lg { margin-left: 30px; margin-right: 30px; }
+
+.m_0 { margin: 0px; } .mt_0 { margin-top: 0px; } .mb_0 { margin-bottom: 0px; } .mver_0 { margin-top: 0px; margin-bottom: 0px; } .ml_0 { margin-left: 0px; } .mr_0 { margin-right: 0px; } .mhor_0 { margin-left: 0px; margin-right: 0px; }
+.m_5 { margin: 5px; } .mt_5 { margin-top: 5px; } .mb_5 { margin-bottom: 5px; } .mver_5 { margin-top: 5px; margin-bottom: 5px; } .ml_5 { margin-left: 5px; } .mr_5 { margin-right: 5px; } .mhor_5 { margin-left: 5px; margin-right: 5px; }
+...
+.m_50 { margin: 50px; } .mt_50 { margin-top: 50px; } .mb_50 { margin-bottom: 50px; } .mver_50 { margin-top: 50px; margin-bottom: 50px; } .ml_50 { margin-left: 50px; } .mr_50 { margin-right: 50px; } .mhor_50 { margin-left: 50px; margin-right: 50px; }
+```
+
+
+
 #### Padding
+```javascript
+module.exports = {
+  // ...
+  rules: {
+    shorthand: { a: "auto" },
+    edges: {
+      named: { sm: "10px", md: "15px", lg: "30px", xl: "50px" },
+      units: { em: [[1, 3, 0.5]] },
+    },
+  }
+}
+```
+
 #### Offset (top, right, bottom, left)
+```javascript
+module.exports = {
+  // ...
+  rules: {
+    
+  },
+  classnames: {
+   
+  }
+}
+```
 #### Flex
 #### Font
 #### Border

@@ -532,7 +532,7 @@ Utilizes `order: "ord_$0"` as default classname and outputs:
 Generates flexbox grid where
 - **`cols`** (number) - total number of columns
 - **`gutter`** (string) - default gutter to be used with `flexRow`
-- **`gutters`** (object)- additional gutters to be used with `flexRowGuttered`
+- **`gutters`** (object) - additional gutters to be used with `flexRowGuttered`
 
 Utilizes classnames below as defaults:
 ```javascript
@@ -582,10 +582,67 @@ module.exports = {
         primary: "Arial, serif",
         secondary: "Helvetica, sans-serif",
       },
+      lineHeight: {
+        named: { xs: "8px", sm: "12px", md: "16px" },
+        units: { em: [[1, 5, 1]] },
+        values: [1, 2, [3, 4, 0.2]]
+      }
     }
   }
 }
 ```
+
+##### Shorthand
+Utilizes `font: "font: "f_$0"` as default classname and outputs: 
+
+```css
+.f_primary { font: italic bold .8em/1.2 Arial, sans-serif; }
+```
+
+##### Size
+Utilizes `fontSize: "fz_$0"` as default classname and outputs: 
+
+```css
+.fz_xs { font-size: 8px; }
+.fz_sm { font-size: 12px; }
+.fz_md { font-size: 16px; }
+.fz_8 { font-size: 8px; }
+.fz_10 { font-size: 10px; }
+.fz_12 { font-size: 12px; }
+.fz_14 { font-size: 14px; }
+.fz_16 { font-size: 16px; }
+```
+
+##### Family
+Utilizes `fontFamily: "ff_$0"` as default classname and outputs: 
+
+```css
+.ff_primary { font-family: Arial, serif; }
+.ff_secondary { font-family: Helvetica, sans-serif; }
+```
+
+##### Line Height
+Utilizes `lineHeight: "lh_$0"` as default classname and outputs: 
+
+```css
+.lh_xs { line-height: 8px; }
+.lh_sm { line-height: 12px; }
+.lh_md { line-height: 16px; }
+.lh_1em { line-height: 1em; }
+.lh_2em { line-height: 2em; }
+.lh_3em { line-height: 3em; }
+.lh_4em { line-height: 4em; }
+.lh_5em { line-height: 5em; }
+.lh_1 { line-height: 1; }
+.lh_2 { line-height: 2; }
+.lh_3 { line-height: 3; }
+.lh_3\.2 { line-height: 3.2; }
+.lh_3\.4 { line-height: 3.4; }
+.lh_3\.6 { line-height: 3.6; }
+.lh_3\.8 { line-height: 3.8; }
+.lh_4 { line-height: 4; }
+```
+
 
 #### Border
 ```javascript
@@ -605,6 +662,41 @@ module.exports = {
   }
 }
 ```
+##### Shorthand
+Utilizes default classnames:
+```javascript
+{
+  border: "bd_$0",
+  borderLeft: "bdl_$0",
+  borderRight: "bdr_$0",
+  borderTop: "bdt_$0",
+  borderBottom: "bdb_$0",
+}
+```
+
+Outputs:
+```css
+.bd_thin { border: 1px solid black; }
+.bdt_thin { border-top: 1px solid black; }
+.bdb_thin { border-bottom: 1px solid black; }
+.bdl_thin { border-left: 1px solid black; }
+.bdr_thin { border-right: 1px solid black; }
+
+.bd_bold { border: 5px solid black; }
+.bdt_bold { border-top: 5px solid black; }
+.bdb_bold { border-bottom: 5px solid black; }
+.bdl_bold { border-left: 5px solid black; }
+.bdr_bold { border-right: 5px solid black; }
+```
+
+##### Radius
+Utilizes `borderRadius: "bdrs_$0"` as default classname and outputs: 
+```css
+.bdrs_5 { border-radius: 5px; }
+.bdrs_10 { border-radius: 10px; }
+.bdrs_circle { border-radius: 50%; }
+```
+
 
 #### Colors
 ```javascript

@@ -44,6 +44,11 @@ export type TFlexValues = Partial<{
   grid: TFlexGridValues;
 }>;
 
+export type TBackgroundValues = Partial<{
+  shorthand: TRulesetValues;
+  color: TRulesetValues;
+}>;
+
 export type TConfigurableRulesetsValues = Partial<{
   size: TSizeValues;
   padding: TSpacingValues;
@@ -54,6 +59,7 @@ export type TConfigurableRulesetsValues = Partial<{
   border: TBorderValues;
   color: TRulesetValues;
   zIndex: TRulesetValues;
+  background: TBackgroundValues;
 }>;
 
 export interface IRulesetsFactory {

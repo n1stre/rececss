@@ -481,6 +481,15 @@
 .c_light, .c_light\:h:hover, :hover > .c_light\:hp, .c_light\:js.js-active, .js-active .c_light\:jsp { color: #fff; }
 .bgc_red, .bgc_red\:h:hover, :hover > .bgc_red\:hp, .bgc_red\:js.js-active, .js-active .bgc_red\:jsp { background-color: red; }
 .c_red, .c_red\:h:hover, :hover > .c_red\:hp, .c_red\:js.js-active, .js-active .c_red\:jsp { color: red; }
+.bg_grn, .bg_grn\:h:hover, :hover > .bg_grn\:hp, .bg_grn\:js.js-active, .js-active .bg_grn\:jsp { background: green; }
+.bg_gra, .bg_gra\:h:hover, :hover > .bg_gra\:hp, .bg_gra\:js.js-active, .js-active .bg_gra\:jsp { background: content-box radial-gradient(crimson, skyblue);; }
+.bgc_dark, .bgc_dark\:h:hover, :hover > .bgc_dark\:hp, .bgc_dark\:js.js-active, .js-active .bgc_dark\:jsp { background-color: #000; }
+.bgc_light, .bgc_light\:h:hover, :hover > .bgc_light\:hp, .bgc_light\:js.js-active, .js-active .bgc_light\:jsp { background-color: #fff; }
+.bgp_b, .bgp_b\:h:hover, :hover > .bgp_b\:hp, .bgp_b\:js.js-active, .js-active .bgp_b\:jsp { background-position: bottom; }
+.bgp_t, .bgp_t\:h:hover, :hover > .bgp_t\:hp, .bgp_t\:js.js-active, .js-active .bgp_t\:jsp { background-position: top; }
+.bgp_l, .bgp_l\:h:hover, :hover > .bgp_l\:hp, .bgp_l\:js.js-active, .js-active .bgp_l\:jsp { background-position: left; }
+.bgp_r, .bgp_r\:h:hover, :hover > .bgp_r\:hp, .bgp_r\:js.js-active, .js-active .bgp_r\:jsp { background-position: right; }
+.bgp_c, .bgp_c\:h:hover, :hover > .bgp_c\:hp, .bgp_c\:js.js-active, .js-active .bgp_c\:jsp { background-position: center; }
 .fx_1, .fx_1\:h:hover, :hover > .fx_1\:hp, .fx_1\:js.js-active, .js-active .fx_1\:jsp { flex: 1; }
 .fx_2, .fx_2\:h:hover, :hover > .fx_2\:hp, .fx_2\:js.js-active, .js-active .fx_2\:jsp { flex: 2; }
 .fx_3, .fx_3\:h:hover, :hover > .fx_3\:hp, .fx_3\:js.js-active, .js-active .fx_3\:jsp { flex: 3; }

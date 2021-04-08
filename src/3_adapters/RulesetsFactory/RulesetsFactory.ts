@@ -47,6 +47,7 @@ export default class RulesetsFactory implements IRulesetsFactory {
       this.createFont(dto.font),
       this.createBorder(dto.border),
       this.createColor(dto.color),
+      this.createBackground(dto.background),
       this.createFlex(dto.flex),
       this.createFlexGrid(dto.flex?.grid),
       this.createZIndex(dto.zIndex),

@@ -482,6 +482,15 @@
 .lg\:c_light, .lg\:c_light\:h:hover, :hover > .lg\:c_light\:hp, .lg\:c_light\:js.js-active, .js-active .lg\:c_light\:jsp { color: #fff; }
 .lg\:bgc_red, .lg\:bgc_red\:h:hover, :hover > .lg\:bgc_red\:hp, .lg\:bgc_red\:js.js-active, .js-active .lg\:bgc_red\:jsp { background-color: red; }
 .lg\:c_red, .lg\:c_red\:h:hover, :hover > .lg\:c_red\:hp, .lg\:c_red\:js.js-active, .js-active .lg\:c_red\:jsp { color: red; }
+.lg\:bg_grn, .lg\:bg_grn\:h:hover, :hover > .lg\:bg_grn\:hp, .lg\:bg_grn\:js.js-active, .js-active .lg\:bg_grn\:jsp { background: green; }
+.lg\:bg_gra, .lg\:bg_gra\:h:hover, :hover > .lg\:bg_gra\:hp, .lg\:bg_gra\:js.js-active, .js-active .lg\:bg_gra\:jsp { background: content-box radial-gradient(crimson, skyblue);; }
+.lg\:bgc_dark, .lg\:bgc_dark\:h:hover, :hover > .lg\:bgc_dark\:hp, .lg\:bgc_dark\:js.js-active, .js-active .lg\:bgc_dark\:jsp { background-color: #000; }
+.lg\:bgc_light, .lg\:bgc_light\:h:hover, :hover > .lg\:bgc_light\:hp, .lg\:bgc_light\:js.js-active, .js-active .lg\:bgc_light\:jsp { background-color: #fff; }
+.lg\:bgp_b, .lg\:bgp_b\:h:hover, :hover > .lg\:bgp_b\:hp, .lg\:bgp_b\:js.js-active, .js-active .lg\:bgp_b\:jsp { background-position: bottom; }
+.lg\:bgp_t, .lg\:bgp_t\:h:hover, :hover > .lg\:bgp_t\:hp, .lg\:bgp_t\:js.js-active, .js-active .lg\:bgp_t\:jsp { background-position: top; }
+.lg\:bgp_l, .lg\:bgp_l\:h:hover, :hover > .lg\:bgp_l\:hp, .lg\:bgp_l\:js.js-active, .js-active .lg\:bgp_l\:jsp { background-position: left; }
+.lg\:bgp_r, .lg\:bgp_r\:h:hover, :hover > .lg\:bgp_r\:hp, .lg\:bgp_r\:js.js-active, .js-active .lg\:bgp_r\:jsp { background-position: right; }
+.lg\:bgp_c, .lg\:bgp_c\:h:hover, :hover > .lg\:bgp_c\:hp, .lg\:bgp_c\:js.js-active, .js-active .lg\:bgp_c\:jsp { background-position: center; }
 .lg\:fx_1, .lg\:fx_1\:h:hover, :hover > .lg\:fx_1\:hp, .lg\:fx_1\:js.js-active, .js-active .lg\:fx_1\:jsp { flex: 1; }
 .lg\:fx_2, .lg\:fx_2\:h:hover, :hover > .lg\:fx_2\:hp, .lg\:fx_2\:js.js-active, .js-active .lg\:fx_2\:jsp { flex: 2; }
 .lg\:fx_3, .lg\:fx_3\:h:hover, :hover > .lg\:fx_3\:hp, .lg\:fx_3\:js.js-active, .js-active .lg\:fx_3\:jsp { flex: 3; }

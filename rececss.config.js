@@ -86,6 +86,10 @@ module.exports = {
         primary: "Arial, serif",
         secondary: "Helvetica, sans-serif",
       },
+      lineHeight: {
+        named: { xs: "8px", sm: "12px", md: "16px" },
+        values: [1, 2, [3, 4, 0.2]]
+      }
     },
     border: {
       shorthand: {
@@ -96,6 +100,16 @@ module.exports = {
         named: { circle: "50%" },
         units: { px: [5, 10] },
       },
+    },
+    background: {
+      shorthand: {
+        grn: "green",
+        gra: "content-box radial-gradient(crimson, skyblue);"
+      },
+      color: {
+        dark: "#000",
+        light: "#fff",
+      }
     },
     color: {
       dark: "#000",

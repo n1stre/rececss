@@ -35,6 +35,7 @@ src/
 .idea/
 docs/
 benchmarks/
+examples/
 settings.json
 CNAME
 .DS_Store

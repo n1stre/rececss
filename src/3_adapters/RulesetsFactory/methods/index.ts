@@ -7,6 +7,7 @@ export { default as makeCreateFlex } from "./flex";
 export { default as makeCreateFlexGrid } from "./flexGrid";
 export { default as makeCreateBorder } from "./border";
 export { default as makeCreateColor } from "./color";
+export { default as makeCreateBackground } from "./background";
 export { default as makeCreateText } from "./text";
 export { default as makeCreateZIndex } from "./zIndex";
 export { default as makeCreateDisplay } from "./display";

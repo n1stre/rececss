@@ -54,6 +54,7 @@ const RulesetsEmmetClassnamesMap: ClassnamesMap = {
   fontStyleNormal: "fs_n",
   fontStyleItalic: "fs_i",
   fontStyleOblique: "fs_o",
+  lineHeight: "lh_$0",
 
   border: "bd_$0",
   borderLeft: "bdl_$0",
@@ -63,7 +64,6 @@ const RulesetsEmmetClassnamesMap: ClassnamesMap = {
   borderRadius: "bdrs_$0",
 
   color: "c_$0",
-  backgroundColor: "bgc_$0",
 
   positionStatic: "pos_s",
   positionRelative: "pos_r",
@@ -127,8 +127,6 @@ const RulesetsEmmetClassnamesMap: ClassnamesMap = {
   whiteSpacePreWrap: "whs_pw",
   whiteSpacePreLine: "whs_pl",
 
-  lineHeight: "lh_$0",
-
   cursorAuto: "cur_a",
   cursorDefault: "cur_d",
   cursorCrosshair: "cur_c",
@@ -179,6 +177,14 @@ const RulesetsEmmetClassnamesMap: ClassnamesMap = {
   alignItemsFlexEnd: "ai_fe",
   alignItemsFlexStart: "ai_fs",
   alignItemsStretch: "ai_s",
+
+  background: "bg_$0",
+  backgroundColor: "bgc_$0",
+  backgroundPositionTop: "bgp_t",
+  backgroundPositionBottom: "bgp_b",
+  backgroundPositionLeft: "bgp_l",
+  backgroundPositionRight: "bgp_r",
+  backgroundPositionCenter: "bgp_c",
 
   overflowVisible: "ov_v",
   overflowHidden: "ov_h",

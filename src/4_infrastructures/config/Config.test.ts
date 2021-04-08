@@ -198,6 +198,20 @@ describe("Config", () => {
         primary: "Arial, serif",
         secondary: "Helvetica, sans-serif",
       },
+      lineHeight: {
+        "1": "1",
+        "2": "2",
+        "3": "3",
+        "3.2": "3.2",
+        "3.4": "3.4",
+        "3.6": "3.6",
+        "3.8": "3.8",
+        "4": "4",
+        "4.2": "4.2",
+        md: "16px",
+        sm: "12px",
+        xs: "8px",
+      },
     });
 
     expect(values.border).toEqual({

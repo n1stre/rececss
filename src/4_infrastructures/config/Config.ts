@@ -44,10 +44,15 @@ export default (props: {
           shorthand: rules.font?.shorthand,
           size: this.parseData(rules.font?.size),
           family: rules.font?.family,
+          lineHeight: this.parseData(rules.font?.lineHeight),
         },
         border: {
           shorthand: rules.border?.shorthand,
           radius: this.parseData(rules.border?.radius),
+        },
+        background: {
+          shorthand: rules.background?.shorthand,
+          color: rules.background?.color,
         },
         color: rules.color,
       };

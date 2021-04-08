@@ -27,6 +27,7 @@ export default class RulesetsFactory implements IRulesetsFactory {
   createFlexGrid = methods.makeCreateFlexGrid(this.builder);
   createBorder = methods.makeCreateBorder(this.builder);
   createColor = methods.makeCreateColor(this.builder);
+  createBackground = methods.makeCreateBackground(this.builder);
   createText = methods.makeCreateText(this.builder);
   createZIndex = methods.makeCreateZIndex(this.builder);
   createDisplay = methods.makeCreateDisplay(this.builder);

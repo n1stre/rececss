@@ -54,7 +54,6 @@ export interface IConfigDTO {
       edges: IConfigRuleNamedUnits;
     }>;
     offset: IConfigRuleNamedUnits;
-    color: Record<string, string>;
     flex: Partial<{
       shorthand: IConfigRuleNamedValues;
       basis: IConfigRuleNamedUnits;
@@ -76,6 +75,11 @@ export interface IConfigDTO {
     border: Partial<{
       shorthand: Record<string, string>;
       radius: IConfigRuleNamedUnits;
+    }>;
+    color: Record<string, string>;
+    background: Partial<{
+      shorthand: Record<string, string>;
+      color: Record<string, string>;
     }>;
   }>;
 }

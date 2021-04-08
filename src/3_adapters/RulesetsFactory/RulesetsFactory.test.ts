@@ -333,6 +333,23 @@ describe("RulesetsFactory", () => {
     ]);
   });
 
+  it("should build background rulesets", () => {
+    const shorthand = { main: "border-box #eee" };
+    const color = { pink: "pink", tom: "tomato" };
+    const res = rulesetsFactory.createBackground({ shorthand, color });
+
+    expect(toString(res)).toEqual([
+      ".bg_main { background: border-box #eee; }",
+      ".bgc_pink { background-color: pink; }",
+      ".bgc_tom { background-color: tomato; }",
+      ".bgp_b { background-position: bottom; }",
+      ".bgp_t { background-position: top; }",
+      ".bgp_l { background-position: left; }",
+      ".bgp_r { background-position: right; }",
+      ".bgp_c { background-position: center; }",
+    ]);
+  });
+
   it("should build opacity rulesets", () => {
     const res = rulesetsFactory.createOpacity();
 

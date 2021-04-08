@@ -63,7 +63,6 @@ const RulesetsDeclarationsMap: DeclarationsMap = {
   borderRadius: "border-radius: $0;",
 
   color: "color: $0;",
-  backgroundColor: "background-color: $0;",
 
   positionStatic: "position: static;",
   positionRelative: "position: relative;",
@@ -179,6 +178,14 @@ const RulesetsDeclarationsMap: DeclarationsMap = {
   alignItemsFlexEnd: "align-items: flex-end;",
   alignItemsFlexStart: "align-items: flex-start;",
   alignItemsStretch: "align-items: stretch;",
+
+  background: "background: $0;",
+  backgroundColor: "background-color: $0;",
+  backgroundPositionTop: "background-position: top;",
+  backgroundPositionBottom: "background-position: bottom;",
+  backgroundPositionLeft: "background-position: left;",
+  backgroundPositionRight: "background-position: right;",
+  backgroundPositionCenter: "background-position: center;",
 
   overflowVisible: "overflow: visible;",
   overflowHidden: "overflow: hidden;",

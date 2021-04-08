@@ -41,6 +41,7 @@ export interface RulesetNamesMap<T = string>
     TFontRulesetNames<T>,
     TBorderRulesetNames<T>,
     TColorRulesetNames<T>,
+    TBackgroundRulesetNames<T>,
     TCursorRulesetNames<T>,
     TDisplayRulesetNames<T>,
     TVisibilityRulesetNames<T>,
@@ -240,6 +241,16 @@ type FlexRulesetNames<T> = {
 type FlexGridRulesetNames<T> = {
   flexRow: string;
   flexCol: string;
+};
+
+type TBackgroundRulesetNames<T> = {
+  background: T;
+  backgroundColor: T;
+  backgroundPositionTop: T;
+  backgroundPositionBottom: T;
+  backgroundPositionLeft: T;
+  backgroundPositionRight: T;
+  backgroundPositionCenter: T;
 };
 
 type TOpacityRulesetNames<T> = {

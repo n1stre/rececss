@@ -1,5 +1,5 @@
 import { Range } from "../utils";
-import { IConfig } from "./interfaces";
+import * as IConfig from "./Config.interfaces";
 import buildConfig from "./Config";
 
 const ConfigImpl = buildConfig({
@@ -8,7 +8,7 @@ const ConfigImpl = buildConfig({
 });
 
 const Config = Object.freeze({
-  new: (...p: ConstructorParameters<typeof ConfigImpl>): IConfig =>
+  new: (...p: ConstructorParameters<typeof ConfigImpl>): IConfig.Instance =>
     new ConfigImpl(...p),
 });
 

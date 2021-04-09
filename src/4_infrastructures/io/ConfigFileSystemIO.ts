@@ -4,7 +4,7 @@ import { IConfig, IFileSystem } from "../interfaces";
 import Config from "../config";
 
 export default class ConfigFileSystemIO implements IInputOutput {
-  private config: IConfig;
+  private config: IConfig.Instance;
 
   constructor(configFileName: string, private fs: IFileSystem) {
     try {

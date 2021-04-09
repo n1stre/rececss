@@ -16,8 +16,9 @@ module.exports = {
   },
   rules: {
     width: {
-      named: { full: "100%", half: "50%" },
-      units: { px: [[0, 50, 10], 100, 500] }, // supports ranges in a [start, stop, step] form
+      full: "100%", 
+      half: "50%",
+      $px: [[0, 50, 10], 100, 500], // supports ranges in a [start, stop, step] form
     },
     color: { dark: "#000", light: "#fff" },
     ...
@@ -146,7 +147,7 @@ will generate assets with the following rulesets:
 ```
 
 ### States (:hover, :focus, :active, etc.)
-Here is the place where you can define pseudo-class or javasript driven utility states that would be applied to *all* of the generated rulesets.
+Here is the place where you can define pseudo-class or javasript driven utility states that would be applied to **all** of the generated rulesets.
 
 ```javascript
 module.exports = {
@@ -165,7 +166,7 @@ module.exports = {
   },
 }
 ```
-In the above config `$0` in `states` represents a classname that would be inserted after processing. Keys should be used as suffixes for this classnames. Check out the result: 
+In the above config `$0` in `states` represents a classname that would be inserted after processing. Keys are used as suffixes for this classnames. Check out the result: 
 
 ```css
 .m_0a,
@@ -190,107 +191,108 @@ In the above config `$0` in `states` represents a classname that would be insert
 ```
 
 ### Rules
-Most of the rules follows minimal conventions for generating values:
+Most of the rules follows minimal conventions for generating values. Each rule gets described thought an object where regular keys are being used as classname suffixes and their values inserted into CSS declaration. In addition you could provide unit keywords starting with `$` (`$px`, `$em`, `$rem`, `$pct`, ect) with array of numbers and ranges (`[start, stop, step]`) as a value:
 
-**Named values.** <br>
-An object where keys are being used as classname value identifiers and values inserted into CSS declaration.
 ```javascript
 rule: { 
-  named: { full: "100%", half: "50%" } 
+  md: "16px", 
+  lg: "24px",
+  $px: [20, 30, [8, 16, 2]], // => 8px, 10px, 12px, 14px, 16px, 20px, 30px
+  $pct: [[50, 80, 10], 100, 150], // => 50%, 60%, 70%, 80%, 100%, 150%
+  $em: [1, [2, 5, 1]], // => 1em, 2em, 3em, 4em, 5em
+  $rem: [1, [1.1, 2, 0.1]], // => 1rem, 1.1rem, 1.2rem, 1.3rem, 1.4rem, 1.5rem, 1.6rem, 1.7rem, 1.8rem, 1.9rem, 2rem
+  $num: [-1, 0, 1], // => -1, 0, 1
+  $vw: [50, 90], // => 50vw, 90vw
+  $vh: [10, 100], // => 10vh, 100vh
+  $cm: [...],
+  $mm: [...],
+  $Q: [...],
+  $in: [...],
+  $pc: [...],
+  $pt: [...],
+  $ex: [...],
+  $ch: [...],
+  $lh: [...],
+  $vmin: [...],
+  $vmax: [...],
+  $percent: [...], // alias for $pct 
+  $number: [...] // alias for $num 
 }
 ```
 
-**Unit values.** <br>
-An object with CSS units (`px`, `em`, `rem`, `vh`, `vw`, `ch`, `pt`, `%`) as keys and values as an array of numbers or ranges where ranges is a number array in a `[start, stop, step]` form.
-```javascript
-rule: { 
-  units: { 
-    px: [33, [0, 50, 5], [100, 1000, 100]], // => 33px, 0px, 5px, 10px, ... 50px, 100px, ... 1000px
-    "%": [[0, 100, 10]] // => 0%, 10%, 15%, ... 100%
-  }
-}
-```
 
-**Unitless values.** <br>
-An array of numbers or ranges used for unitless ruleset property values (`line-height`, `flex`, etc.)
-```javascript
-rule: { 
-  values: [1.5, [1, 10, 1]], // => 1.5, 1, 2, 3, ... 10
-}
-```
 
 #### Width
-Gets customized through `named` and `units`:
+
+Ruleset Key | Default Classname
+--- | ---
+widthAuto | `w_a`
+width | `w_$0`
+minWidth | `miw_$0`
+maxWidth | `maw_$0`
+
+
 ```javascript
 module.exports = {
   // ...
   rules: {
     width: {
-      named: { full: "100%", half: "50%" },
-      units: { px: [[0, 50, 5], [100, 1000, 100]], "%": [[0, 100, 10]] },
+      full: "100%", 
+      half: "50%",
+      $px: [[0, 50, 5], [100, 1000, 100]], 
+      $pct: [[0, 100, 10]]
     },
   }
 }
 ```
 
-With classname defaults:
-```javascript
-{
-  widthAuto: "w_a",
-  width: "w_$0",
-  minWidth: "miw_$0",
-  maxWidth: "maw_$0",
-}
-```
-
 Outputs:
 ```css
-.w_a { width: auto; }
+.w_a    { width: auto; }
 .w_full { width: 100%; } .miw_full { min-width: 100%; } .maw_full { max-width: 100%; }
 .w_half { width: 50%; }  .miw_half { min-width: 50%; }  .maw_half { max-width: 50%; }
-.w_0  { width: 0px; }  .miw_0  { min-width: 0px; }  .maw_0  { max-width: 0px; }
-.w_5  { width: 5px; }  .miw_5  { min-width: 5px; }  .maw_5  { max-width: 5px; }
-.w_10 { width: 10px; } .miw_10 { min-width: 10px; } .maw_10 { max-width: 10px; }
+.w_0    { width: 0px; }  .miw_0    { min-width: 0px; }  .maw_0    { max-width: 0px; }
+.w_5    { width: 5px; }  .miw_5    { min-width: 5px; }  .maw_5    { max-width: 5px; }
+.w_10   { width: 10px; } .miw_10   { min-width: 10px; } .maw_10   { max-width: 10px; }
 ...
-.w_50  { width: 50px; } .miw_50 { min-width: 50px; } .maw_50 { max-width: 50px; }
+.w_50  { width: 50px; }  .miw_50  { min-width: 50px; }  .maw_50  { max-width: 50px; }
 .w_100 { width: 100px; } .miw_100 { min-width: 100px; } .maw_100 { max-width: 100px; }
 .w_200 { width: 200px; } .miw_200 { min-width: 200px; } .maw_200 { max-width: 200px; }
 ...
 .w_1000 { width: 1000px; } .miw_1000 { min-width: 1000px; } .maw_1000 { max-width: 1000px; }
-.w_0\%  { width: 0%; }  .miw_0\%  { min-width: 0%; }  .maw_0\%  { max-width: 0%; }
-.w_10\% { width: 10%; } .miw_10\% { min-width: 10%; } .maw_10\% { max-width: 10%; }
-.w_20\% { width: 20%; } .miw_20\% { min-width: 20%; } .maw_20\% { max-width: 20%; }
+.w_0\%  { width: 0%; }     .miw_0\%  { min-width: 0%; }     .maw_0\%  { max-width: 0%; }
+.w_10\% { width: 10%; }    .miw_10\% { min-width: 10%; }    .maw_10\% { max-width: 10%; }
+.w_20\% { width: 20%; }    .miw_20\% { min-width: 20%; }    .maw_20\% { max-width: 20%; }
 ...
 .w_100\% { width: 100%; } .miw_100\% { min-width: 100%; } .maw_100\% { max-width: 100%; }
 ```
 
 #### Height
-Gets customized through `named` and `units`:
+
+Ruleset Key | Default Classname
+--- | ---
+heightAuto | `h_a`
+height | `h_$0`
+minHeight | `mih_$0`
+maxHeight | `mah_$0`
+
+
 ```javascript
 module.exports = {
   // ...
   rules: {
     height: {
-      named: { full: "100%" },
-      units: { px: [300, 50], vh: [[0, 100, 10]] },
+      full: "100%",
+      $px: [300, 50], 
+      $vh: [[0, 100, 10]],
     }
   }
 }
 ```
 
-With classname defaults:
-```javascript
-{
-  heightAuto: "h_a",
-  height: "h_$0",
-  minHeight: "mih_$0",
-  maxHeight: "mah_$0",
-}
-```
-
 Outputs:
 ```css
-.h_a { height: auto; }
+.h_a    { height: auto; }
 .h_full { height: 100%; }  .mih_full { min-height: 100%; }  .mah_full { max-height: 100%; }
 .h_50   { height: 50px; }  .mih_50   { min-height: 50px; }  .mah_50   { max-height: 50px; }
 .h_300  { height: 300px; } .mih_300  { min-height: 300px; } .mah_300  { max-height: 300px; }
@@ -301,41 +303,45 @@ Outputs:
 ```
 
 #### Margin
-Gets customized through `shorthand`(`named` values) and `edges`(`named` + `units` values):
+
 ```javascript
 module.exports = {
   // ...
   rules: {
     margin: {
       shorthand: { a: "auto", "0a": "0 auto" },
-      edges: {
-        named: { sm: "10px", md: "15px", lg: "30px" },
-        units: { px: [[0, 50, 5]] },
-      },
+      edges: { sm: "10px", md: "15px", lg: "30px", $px: [[0, 50, 5]] },
     }
   }
 }
 ```
+
 ##### Shorthand
-Property `shorthand` utilizes `margin: "m_$0"` as default classname and outputs: 
+
+Ruleset Key | Default Classname
+--- | ---
+margin | `m_$0`
+
+
+Outputs:
+
 ```css
 .m_a { margin: auto; }
 .m_0a { margin: 0 auto; }
 ```
 
 ##### Edges
-Property `edges` utilizes classnames below: 
-```javascript
-{
-  margin: "m_$0",
-  marginTop: "mt_$0",
-  marginBottom: "mb_$0",
-  marginVertical: "mver_$0",
-  marginLeft: "ml_$0",
-  marginRight: "mr_$0",
-  marginHorizontal: "mhor_$0",
-}
-```
+
+Ruleset Key | Default Classname
+--- | ---
+margin | `m_$0`
+marginTop | `mt_$0`
+marginBottom | `mb_$0`
+marginVertical | `mver_$0`
+marginLeft | `ml_$0`
+marginRight | `mr_$0`
+marginHorizontal | `mhor_$0`
+
 And outputs:
 ```css
 .m_sm { margin: 10px; } .mt_sm { margin-top: 10px; } .mb_sm { margin-bottom: 10px; } .mver_sm { margin-top: 10px; margin-bottom: 10px; } .ml_sm { margin-left: 10px; } .mr_sm { margin-right: 10px; } .mhor_sm { margin-left: 10px; margin-right: 10px; }
@@ -356,35 +362,33 @@ module.exports = {
   rules: {
     padding: {
       shorthand: { a: "auto", card: "20px 10px 40px" },
-      edges: {
-        named: { sm: "10px", md: "15px" },
-        units: { em: [[1, 3, 0.5]] },
-      },
+      edges: { sm: "10px", md: "15px", $em: [[1, 3, 0.5]] },
     }
   }
 }
 ```
 
 ##### Shorthand
-Property `shorthand` utilizes `margin: "m_$0"` as default classname and outputs: 
+
+Ruleset Key | Default Classname
+--- | ---
+padding | `p_$0`
+
 ```css
 .p_a { padding: auto; }
 .p_card { padding: 20px 10px 40px; }
 ```
 
 ##### Edges
-Property `edges` utilizes classnames below: 
-```javascript
-{
-  padding: "p_$0",
-  paddingTop: "pt_$0",
-  paddingBottom: "pb_$0",
-  paddingVertical: "pver_$0",
-  paddingLeft: "pl_$0",
-  paddingRight: "pr_$0",
-  paddingHorizontal: "phor_$0",
-}
-```
+Ruleset Key | Default Classname
+--- | ---
+padding | `p_$0`
+paddingTop | `pt_$0`
+paddingBottom | `pb_$0`
+paddingVertical | `pver_$0`
+paddingLeft | `pl_$0`
+paddingRight | `pr_$0`
+paddingHorizontal | `phor_$0`
 
 Outputs: 
 ```css
@@ -398,25 +402,25 @@ Outputs:
 ```
 
 #### Offset (top, right, bottom, left)
+
+Ruleset Key | Default Classname
+--- | ---
+top | `t_$0`
+bottom | `b_$0`
+left | `l_$0`
+right | `r_$0`
+
+
 ```javascript
 module.exports = {
   // ...
   rules: {
-    offset: {
-      named: { sm: "10px", md: "15px" },
-      units: { px: [[0, 100, 5]] },
+    offset: { 
+      sm: "10px", 
+      md: "15px", 
+      $px: [[0, 100, 5]] 
     },
   }
-}
-```
-
-With classname defaults:
-```javascript
-{
-  top: "t_$0",
-  bottom: "b_$0",
-  left: "l_$0",
-  right: "r_$0",
 }
 ```
 
@@ -437,26 +441,11 @@ module.exports = {
   // ...
   rules: {
     flex: {
-      shorthand: {
-        named: { "00a": "0 0 auto", norm: "1" },
-        values: [[1, 10, 1]],
-      },
-      basis: {
-        named: { half: "50%" },
-        units: { px: [[100, 500, 100]], "%": [[0, 100, 20]] },
-      },
-      grow: {
-        named: { max: 10 },
-        values: [1, 2, 3, 4],
-      },
-      shrink: {
-        named: { none: 0 },
-        values: [1, 2, 3],
-      },
-      order: {
-        named: { first: 1 },
-        values: [1, -1],
-      },
+      shorthand: { "00a": "0 0 auto", norm: "1", $num: [[1, 10, 1]] },
+      basis: { half: "50%", $px: [[100, 500, 100]], $pct: [[0, 100, 20]] },
+      grow: { max: 10, $num: [1, 2, 3, 4] },
+      shrink: { none: 0, $num: [1, 2, 3] },
+      order: { first: 1, $num: [1, -1] },
       grid: {
         cols: 12,
         gutter: "20px",
@@ -467,7 +456,11 @@ module.exports = {
 }
 ```
 ##### Shorthand
-Utilizes `flex: "fx_$0"` as default classname and outputs: 
+Ruleset Key | Default Classname
+--- | ---
+flex | `fx_$0`
+
+Outputs:
 ```css
 .fx_00a { flex: 0 0 auto; }
 .fx_norm { flex: 1; }
@@ -484,7 +477,11 @@ Utilizes `flex: "fx_$0"` as default classname and outputs:
 ```
 
 ##### Basis
-Utilizes `flexBasis: "fxb_$0"` as default classname and outputs: 
+Ruleset Key | Default Classname
+--- | ---
+flexBasis | `fxb_$0`
+
+Outputs:
 ```css
 .fxb_half { flex-basis: 50%; }
 .fxb_100 { flex-basis: 100px; }
@@ -501,7 +498,12 @@ Utilizes `flexBasis: "fxb_$0"` as default classname and outputs:
 ```
 
 ##### Grow
-Utilizes `flexGrow: "fxg_$0"` as default classname and outputs:   
+  
+Ruleset Key | Default Classname
+--- | ---
+flexGrow | `fxg_$0`
+
+Outputs:
 ```css
 .fxg_max { flex-grow: 10; }
 .fxg_1 { flex-grow: 1; }
@@ -511,7 +513,11 @@ Utilizes `flexGrow: "fxg_$0"` as default classname and outputs:
 ```
 
 ##### Shrink
-Utilizes `flexShrink: "fxs_$0"` as default classname and outputs: 
+Ruleset Key | Default Classname
+--- | ---
+flexShrink | `fxs_$0`
+
+Outputs:
 ```css
 .fxs_none { flex-shrink: 0; }
 .fxs_1 { flex-shrink: 1; }
@@ -520,7 +526,11 @@ Utilizes `flexShrink: "fxs_$0"` as default classname and outputs:
 ```
 
 ##### Order
-Utilizes `order: "ord_$0"` as default classname and outputs: 
+Ruleset Key | Default Classname
+--- | ---
+order | `ord_$0`
+
+Outputs:
 ```css
 .ord_first { order: 1; }
 .ord_1 { order: 1; }
@@ -533,14 +543,13 @@ Generates flexbox grid where
 - **`gutter`** (string) - default gutter to be used with `flexRow`
 - **`gutters`** (object) - additional gutters to be used with `flexRowGuttered`
 
-Utilizes classnames below as defaults:
-```javascript
-{
-  flexRow: "fxrow",
-  flexRowGuttered: "fxrow_$0",
-  flexCol: "fxcol_$0",
-}
-```
+Ruleset Key | Default Classname
+--- | ---
+flexRow | `fxrow`
+flexRowGuttered | `fxrow_$0`
+flexCol | `fxcol_$0`
+
+Outputs:
 ```css
 .fxrow    { display: flex; margin-left: -10px; margin-right: -10px; }
 .fxrow_sm { display: flex; margin-left: -5px; margin-right: -5px; }
@@ -570,37 +579,31 @@ module.exports = {
   // ...
   rules: {
     font: {
-      shorthand: {
-        primary: "italic bold .8em/1.2 Arial, sans-serif",
-      },
-      size: {
-        named: { xs: "8px", sm: "12px", md: "16px" },
-        units: { px: [[8, 16, 2]] },
-      },
-      family: {
-        primary: "Arial, serif",
-        secondary: "Helvetica, sans-serif",
-      },
-      lineHeight: {
-        named: { xs: "8px", sm: "12px", md: "16px" },
-        units: { em: [[1, 5, 1]] },
-        values: [1, 2, [3, 4, 0.2]]
-      }
+      shorthand: { primary: "italic bold .8em/1.2 Arial, sans-serif" },
+      size: { xs: "8px", sm: "12px", md: "16px", $px: [[8, 16, 2]] },
+      family: { primary: "Arial, serif", secondary: "Helvetica, sans-serif" },
+      lineHeight: { xs: "8px", sm: "12px", md: "16px", $em: [[1, 5, 1]], $num: [1, 2, [3, 4, 0.2]] }
     }
   }
 }
 ```
 
 ##### Shorthand
-Utilizes `font: "font: "f_$0"` as default classname and outputs: 
+Ruleset Key | Default Classname
+--- | ---
+font | `f_$0`
 
+Outputs:
 ```css
 .f_primary { font: italic bold .8em/1.2 Arial, sans-serif; }
 ```
 
 ##### Size
-Utilizes `fontSize: "fz_$0"` as default classname and outputs: 
+Ruleset Key | Default Classname
+--- | ---
+fontSize | `fz_$0`
 
+Outputs:
 ```css
 .fz_xs { font-size: 8px; }
 .fz_sm { font-size: 12px; }
@@ -613,16 +616,22 @@ Utilizes `fontSize: "fz_$0"` as default classname and outputs:
 ```
 
 ##### Family
-Utilizes `fontFamily: "ff_$0"` as default classname and outputs: 
+Ruleset Key | Default Classname
+--- | ---
+fontFamily | `ff_$0`
 
+Outputs:
 ```css
 .ff_primary { font-family: Arial, serif; }
 .ff_secondary { font-family: Helvetica, sans-serif; }
 ```
 
 ##### Line Height
-Utilizes `lineHeight: "lh_$0"` as default classname and outputs: 
+Ruleset Key | Default Classname
+--- | ---
+lineHeight | `lh_$0`
 
+Outputs:
 ```css
 .lh_xs { line-height: 8px; }
 .lh_sm { line-height: 12px; }
@@ -649,29 +658,22 @@ module.exports = {
   // ...
   rules: {
     border: {
-      shorthand: {
-        thin: "1px solid black",
-        bold: "5px solid black"
-      },
-      radius: {
-        named: { circle: "50%" },
-        units: { px: [5, 10] },
-      },
+      shorthand: { thin: "1px solid black", bold: "5px solid black" },
+      radius: { circle: "50%", $px: [5, 10] },
     },
   }
 }
 ```
 ##### Shorthand
-Utilizes default classnames:
-```javascript
-{
-  border: "bd_$0",
-  borderLeft: "bdl_$0",
-  borderRight: "bdr_$0",
-  borderTop: "bdt_$0",
-  borderBottom: "bdb_$0",
-}
-```
+
+Ruleset Key | Default Classname
+--- | ---
+border | `bd_$0`
+borderLeft | `bdl_$0`
+borderRight | `bdr_$0`
+borderTop | `bdt_$0`
+borderBottom | `bdb_$0`
+
 
 Outputs:
 ```css
@@ -689,7 +691,11 @@ Outputs:
 ```
 
 ##### Radius
-Utilizes `borderRadius: "bdrs_$0"` as default classname and outputs: 
+Ruleset Key | Default Classname
+--- | ---
+borderRadius | `bdrs_$0`
+
+Outputs:
 ```css
 .bdrs_5 { border-radius: 5px; }
 .bdrs_10 { border-radius: 10px; }
@@ -698,13 +704,24 @@ Utilizes `borderRadius: "bdrs_$0"` as default classname and outputs:
 
 
 #### Colors
+
 ```javascript
 module.exports = {
   // ...
   rules: {
-    
+    color: { dark: "#000", light: "#fff" }
   }
 }
+```
+
+Ruleset Key | Default Classname
+--- | ---
+color | `c_$0`
+
+Outputs:
+```css
+.c_dark { color: #000; }
+.c_light { color: #fff; }
 ```
 
 ### Classnames

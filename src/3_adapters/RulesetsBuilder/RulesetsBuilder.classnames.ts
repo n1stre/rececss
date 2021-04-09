@@ -186,6 +186,11 @@ const RulesetsEmmetClassnamesMap: ClassnamesMap = {
   backgroundPositionRight: "bgp_r",
   backgroundPositionCenter: "bgp_c",
 
+  boxShadow: "bxsh_$0",
+  boxShadowNone: "bxsh_n",
+  textShadow: "tsh_$0",
+  textShadowNone: "tsh_n",
+
   overflowVisible: "ov_v",
   overflowHidden: "ov_h",
   overflowScroll: "ov_s",

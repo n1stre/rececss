@@ -37,6 +37,7 @@ export default class RulesetsFactory implements IRulesetsFactory {
   createVisibility = methods.makeCreateVisibility(this.builder);
   createList = methods.makeCreateList(this.builder);
   createCursor = methods.makeCreateCursor(this.builder);
+  createShadow = methods.makeCreateShadow(this.builder);
 
   createAll(dto: TConfigurableRulesetsValues) {
     return [
@@ -51,6 +52,7 @@ export default class RulesetsFactory implements IRulesetsFactory {
       this.createFlex(dto.flex),
       this.createFlexGrid(dto.flex?.grid),
       this.createZIndex(dto.zIndex),
+      this.createShadow(dto.shadow),
       this.createDisplay(),
       this.createPosition(),
       this.createText(),

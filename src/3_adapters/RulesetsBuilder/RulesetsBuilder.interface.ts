@@ -51,6 +51,7 @@ export interface RulesetNamesMap<T = string>
     TOverflowRulesetNames<T>,
     TListRulesetNames<T>,
     TOpacityRulesetNames<T>,
+    TShadowRulesetNames<T>,
     ZIndexRulesetNames<T> {}
 
 type TSizeRulesetNames<T> = {
@@ -251,6 +252,13 @@ type TBackgroundRulesetNames<T> = {
   backgroundPositionLeft: T;
   backgroundPositionRight: T;
   backgroundPositionCenter: T;
+};
+
+type TShadowRulesetNames<T> = {
+  textShadow: T;
+  textShadowNone: T;
+  boxShadow: T;
+  boxShadowNone: T;
 };
 
 type TOpacityRulesetNames<T> = {

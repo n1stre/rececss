@@ -350,6 +350,22 @@ describe("RulesetsFactory", () => {
     ]);
   });
 
+  it("should build box shadow rulesets", () => {
+    const box = { main: "10px 5px 5px red", dark: "10px 5px 5px black" };
+    const text = { red: "red 2px 5px" };
+    const res = rulesetsFactory.createShadow({ box, text });
+
+    expect(toString(res)).toEqual(
+      expect.arrayContaining([
+        ".bxsh_n { box-shadow: none; }",
+        ".bxsh_main { box-shadow: 10px 5px 5px red; }",
+        ".bxsh_dark { box-shadow: 10px 5px 5px black; }",
+        ".tsh_n { text-shadow: none; }",
+        ".tsh_red { text-shadow: red 2px 5px; }",
+      ]),
+    );
+  });
+
   it("should build opacity rulesets", () => {
     const res = rulesetsFactory.createOpacity();
 

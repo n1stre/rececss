@@ -49,6 +49,11 @@ export type TBackgroundValues = Partial<{
   color: TRulesetValues;
 }>;
 
+export type TBoxValues = Partial<{
+  box: TRulesetValues;
+  text: TRulesetValues;
+}>;
+
 export type TConfigurableRulesetsValues = Partial<{
   size: TSizeValues;
   padding: TSpacingValues;
@@ -60,6 +65,7 @@ export type TConfigurableRulesetsValues = Partial<{
   color: TRulesetValues;
   zIndex: TRulesetValues;
   background: TBackgroundValues;
+  shadow: TBoxValues;
 }>;
 
 export interface IRulesetsFactory {

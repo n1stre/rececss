@@ -187,6 +187,11 @@ const RulesetsDeclarationsMap: DeclarationsMap = {
   backgroundPositionRight: "background-position: right;",
   backgroundPositionCenter: "background-position: center;",
 
+  boxShadow: "box-shadow: $0;",
+  boxShadowNone: "box-shadow: none;",
+  textShadow: "text-shadow: $0;",
+  textShadowNone: "text-shadow: none;",
+
   overflowVisible: "overflow: visible;",
   overflowHidden: "overflow: hidden;",
   overflowScroll: "overflow: scroll;",

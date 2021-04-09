@@ -17,3 +17,4 @@ export { default as makeCreateOverflow } from "./overflow";
 export { default as makeCreateVisibility } from "./visibility";
 export { default as makeCreateList } from "./list";
 export { default as makeCreateCursor } from "./cursor";
+export { default as makeCreateShadow } from "./shadow";

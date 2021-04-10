@@ -46,6 +46,7 @@ export default (props: {
           shorthand: rules.background?.shorthand,
           color: rules.background?.color,
         },
+        shadow: rules.shadow,
         color: rules.color,
       };
     }

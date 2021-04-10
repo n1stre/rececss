@@ -83,6 +83,10 @@ export interface DTO {
       shorthand: Rule;
       color: Rule;
     }>;
+    shadow: Partial<{
+      box: Rule;
+      text: Rule;
+    }>;
   }>;
 }
 

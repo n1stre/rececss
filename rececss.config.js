@@ -100,6 +100,16 @@ module.exports = {
         light: "#fff",
       }
     },
+    shadow: {
+      text: {
+        simple: "2px 4px 3px rgba(0,0,0,0.3)",
+        hard: "6px 6px 0px rgba(0,0,0,0.2)"
+      },
+      box: {
+        air: "0px 4px 12px rgba(0, 0, 0, 0.08) ",
+        light: "0px 10px 15px -3px rgba(0, 0, 0, 0.1), 0px 4px 6px -2px rgba(0, 0, 0, 0.05)"
+      }
+    },
     color: {
       dark: "#000",
       light: "#fff",

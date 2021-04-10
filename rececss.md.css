@@ -570,6 +570,12 @@
 .md\:fxcol_11, .md\:fxcol_11\:h:hover, :hover > .md\:fxcol_11\:hp, .md\:fxcol_11\:js.js-active, .js-active .md\:fxcol_11\:jsp { flex-basis: 91.66666666666666%; max-width: 91.66666666666666%; }
 .md\:fxcol_12, .md\:fxcol_12\:h:hover, :hover > .md\:fxcol_12\:hp, .md\:fxcol_12\:js.js-active, .js-active .md\:fxcol_12\:jsp { flex-basis: 100%; max-width: 100%; }
 .md\:z_a, .md\:z_a\:h:hover, :hover > .md\:z_a\:hp, .md\:z_a\:js.js-active, .js-active .md\:z_a\:jsp { z-index: auto; }
+.md\:bxsh_air, .md\:bxsh_air\:h:hover, :hover > .md\:bxsh_air\:hp, .md\:bxsh_air\:js.js-active, .js-active .md\:bxsh_air\:jsp { box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.08) ; }
+.md\:bxsh_light, .md\:bxsh_light\:h:hover, :hover > .md\:bxsh_light\:hp, .md\:bxsh_light\:js.js-active, .js-active .md\:bxsh_light\:jsp { box-shadow: 0px 10px 15px -3px rgba(0, 0, 0, 0.1), 0px 4px 6px -2px rgba(0, 0, 0, 0.05); }
+.md\:bxsh_n, .md\:bxsh_n\:h:hover, :hover > .md\:bxsh_n\:hp, .md\:bxsh_n\:js.js-active, .js-active .md\:bxsh_n\:jsp { box-shadow: none; }
+.md\:tsh_simple, .md\:tsh_simple\:h:hover, :hover > .md\:tsh_simple\:hp, .md\:tsh_simple\:js.js-active, .js-active .md\:tsh_simple\:jsp { text-shadow: 2px 4px 3px rgba(0,0,0,0.3); }
+.md\:tsh_hard, .md\:tsh_hard\:h:hover, :hover > .md\:tsh_hard\:hp, .md\:tsh_hard\:js.js-active, .js-active .md\:tsh_hard\:jsp { text-shadow: 6px 6px 0px rgba(0,0,0,0.2); }
+.md\:tsh_n, .md\:tsh_n\:h:hover, :hover > .md\:tsh_n\:hp, .md\:tsh_n\:js.js-active, .js-active .md\:tsh_n\:jsp { text-shadow: none; }
 .md\:d_n, .md\:d_n\:h:hover, :hover > .md\:d_n\:hp, .md\:d_n\:js.js-active, .js-active .md\:d_n\:jsp { display: none; }
 .md\:d_i, .md\:d_i\:h:hover, :hover > .md\:d_i\:hp, .md\:d_i\:js.js-active, .js-active .md\:d_i\:jsp { display: inline; }
 .md\:d_b, .md\:d_b\:h:hover, :hover > .md\:d_b\:hp, .md\:d_b\:js.js-active, .js-active .md\:d_b\:jsp { display: block; }

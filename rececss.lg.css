@@ -570,6 +570,12 @@
 .lg\:fxcol_11, .lg\:fxcol_11\:h:hover, :hover > .lg\:fxcol_11\:hp, .lg\:fxcol_11\:js.js-active, .js-active .lg\:fxcol_11\:jsp { flex-basis: 91.66666666666666%; max-width: 91.66666666666666%; }
 .lg\:fxcol_12, .lg\:fxcol_12\:h:hover, :hover > .lg\:fxcol_12\:hp, .lg\:fxcol_12\:js.js-active, .js-active .lg\:fxcol_12\:jsp { flex-basis: 100%; max-width: 100%; }
 .lg\:z_a, .lg\:z_a\:h:hover, :hover > .lg\:z_a\:hp, .lg\:z_a\:js.js-active, .js-active .lg\:z_a\:jsp { z-index: auto; }
+.lg\:bxsh_air, .lg\:bxsh_air\:h:hover, :hover > .lg\:bxsh_air\:hp, .lg\:bxsh_air\:js.js-active, .js-active .lg\:bxsh_air\:jsp { box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.08) ; }
+.lg\:bxsh_light, .lg\:bxsh_light\:h:hover, :hover > .lg\:bxsh_light\:hp, .lg\:bxsh_light\:js.js-active, .js-active .lg\:bxsh_light\:jsp { box-shadow: 0px 10px 15px -3px rgba(0, 0, 0, 0.1), 0px 4px 6px -2px rgba(0, 0, 0, 0.05); }
+.lg\:bxsh_n, .lg\:bxsh_n\:h:hover, :hover > .lg\:bxsh_n\:hp, .lg\:bxsh_n\:js.js-active, .js-active .lg\:bxsh_n\:jsp { box-shadow: none; }
+.lg\:tsh_simple, .lg\:tsh_simple\:h:hover, :hover > .lg\:tsh_simple\:hp, .lg\:tsh_simple\:js.js-active, .js-active .lg\:tsh_simple\:jsp { text-shadow: 2px 4px 3px rgba(0,0,0,0.3); }
+.lg\:tsh_hard, .lg\:tsh_hard\:h:hover, :hover > .lg\:tsh_hard\:hp, .lg\:tsh_hard\:js.js-active, .js-active .lg\:tsh_hard\:jsp { text-shadow: 6px 6px 0px rgba(0,0,0,0.2); }
+.lg\:tsh_n, .lg\:tsh_n\:h:hover, :hover > .lg\:tsh_n\:hp, .lg\:tsh_n\:js.js-active, .js-active .lg\:tsh_n\:jsp { text-shadow: none; }
 .lg\:d_n, .lg\:d_n\:h:hover, :hover > .lg\:d_n\:hp, .lg\:d_n\:js.js-active, .js-active .lg\:d_n\:jsp { display: none; }
 .lg\:d_i, .lg\:d_i\:h:hover, :hover > .lg\:d_i\:hp, .lg\:d_i\:js.js-active, .js-active .lg\:d_i\:jsp { display: inline; }
 .lg\:d_b, .lg\:d_b\:h:hover, :hover > .lg\:d_b\:hp, .lg\:d_b\:js.js-active, .js-active .lg\:d_b\:jsp { display: block; }

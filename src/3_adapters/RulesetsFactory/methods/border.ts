@@ -5,6 +5,13 @@ export default (self: RulesetsBuilder) =>
     shorthand?: Record<string, string>;
     radius?: Record<string, string>;
   }) {
+    self.addRulesetsFromNames([
+      "borderNone",
+      "borderTopNone",
+      "borderBottomNone",
+      "borderLeftNone",
+      "borderRightNone",
+    ]);
     self.addRulesetsFromValues(v?.shorthand, [
       "border",
       "borderTop",

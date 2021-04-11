@@ -1,11 +1,10 @@
 import { ClassnamesMap } from "./RulesetsBuilder.interface";
 
 const RulesetsEmmetClassnamesMap: ClassnamesMap = {
-  widthAuto: "w_a",
   width: "w_$0",
+  widthAuto: "w_a",
   minWidth: "miw_$0",
   maxWidth: "maw_$0",
-
   heightAuto: "h_a",
   height: "h_$0",
   minHeight: "mih_$0",
@@ -14,10 +13,10 @@ const RulesetsEmmetClassnamesMap: ClassnamesMap = {
   padding: "p_$0",
   paddingTop: "pt_$0",
   paddingBottom: "pb_$0",
-  paddingVertical: "pver_$0",
+  paddingVertical: "pv_$0",
   paddingLeft: "pl_$0",
   paddingRight: "pr_$0",
-  paddingHorizontal: "phor_$0",
+  paddingHorizontal: "ph_$0",
 
   margin: "m_$0",
   marginTop: "mt_$0",
@@ -61,6 +60,11 @@ const RulesetsEmmetClassnamesMap: ClassnamesMap = {
   borderRight: "bdr_$0",
   borderTop: "bdt_$0",
   borderBottom: "bdb_$0",
+  borderNone: "bd_n",
+  borderLeftNone: "bdl_n",
+  borderRightNone: "bdr_n",
+  borderTopNone: "bdt_n",
+  borderBottomNone: "bdb_n",
   borderRadius: "bdrs_$0",
 
   color: "c_$0",
@@ -137,6 +141,8 @@ const RulesetsEmmetClassnamesMap: ClassnamesMap = {
   cursorText: "cur_t",
 
   flex: "fx_$0",
+  flexAuto: "fx_a",
+  flexNone: "fx_n",
   flexGrow: "fxg_$0",
   flexShrink: "fxs_$0",
   flexBasis: "fxb_$0",

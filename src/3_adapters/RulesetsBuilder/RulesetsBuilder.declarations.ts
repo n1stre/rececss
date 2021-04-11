@@ -60,6 +60,11 @@ const RulesetsDeclarationsMap: DeclarationsMap = {
   borderRight: "border-right: $0;",
   borderTop: "border-top: $0;",
   borderBottom: "border-bottom: $0;",
+  borderNone: "border: none;",
+  borderLeftNone: "border-left: none;",
+  borderRightNone: "border-right: none;",
+  borderTopNone: "border-top: none;",
+  borderBottomNone: "border-bottom: none;",
   borderRadius: "border-radius: $0;",
 
   color: "color: $0;",
@@ -138,6 +143,8 @@ const RulesetsDeclarationsMap: DeclarationsMap = {
   cursorText: "cursor: text;",
 
   flex: "flex: $0;",
+  flexAuto: "flex: auto;",
+  flexNone: "flex: none;",
   flexGrow: "flex-grow: $0;",
   flexShrink: "flex-shrink: $0;",
   flexBasis: "flex-basis: $0;",

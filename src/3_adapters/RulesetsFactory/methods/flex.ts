@@ -8,6 +8,7 @@ export default (self: RulesetsBuilder) =>
     basis?: Record<string, string>;
     order?: Record<string, string>;
   }) {
+    self.addRulesetsFromNames(["flexAuto", "flexNone"]);
     self.addRulesetsFromValues(v?.shorthand, ["flex"]);
     self.addRulesetsFromValues(v?.grow, ["flexGrow"]);
     self.addRulesetsFromValues(v?.shrink, ["flexShrink"]);

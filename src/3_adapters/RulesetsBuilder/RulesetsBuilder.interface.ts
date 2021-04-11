@@ -55,14 +55,14 @@ export interface RulesetNamesMap<T = string>
     ZIndexRulesetNames<T> {}
 
 type TSizeRulesetNames<T> = {
-  widthAuto: T;
-  heightAuto: T;
   width: T;
   height: T;
   minWidth: T;
   minHeight: T;
   maxWidth: T;
   maxHeight: T;
+  widthAuto: T;
+  heightAuto: T;
 };
 
 type TPaddingRulesetNames<T> = {
@@ -128,6 +128,11 @@ type TBorderRulesetNames<T> = {
   borderRight: T;
   borderTop: T;
   borderBottom: T;
+  borderNone: T;
+  borderLeftNone: T;
+  borderRightNone: T;
+  borderTopNone: T;
+  borderBottomNone: T;
   borderRadius: T;
 };
 
@@ -206,6 +211,8 @@ type TextRulesetNames<T> = {
 
 type FlexRulesetNames<T> = {
   flex: T;
+  flexAuto: T;
+  flexNone: T;
   flexGrow: T;
   flexShrink: T;
   flexBasisAuto: T;

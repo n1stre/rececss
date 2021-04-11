@@ -61,17 +61,17 @@ describe("RulesetsFactory", () => {
       ".p_20 { padding: 20px; }",
       ".pt_20 { padding-top: 20px; }",
       ".pb_20 { padding-bottom: 20px; }",
-      ".pver_20 { padding-top: 20px; padding-bottom: 20px; }",
+      ".pv_20 { padding-top: 20px; padding-bottom: 20px; }",
       ".pl_20 { padding-left: 20px; }",
       ".pr_20 { padding-right: 20px; }",
-      ".phor_20 { padding-left: 20px; padding-right: 20px; }",
+      ".ph_20 { padding-left: 20px; padding-right: 20px; }",
       ".p_2em { padding: 2em; }",
       ".pt_2em { padding-top: 2em; }",
       ".pb_2em { padding-bottom: 2em; }",
-      ".pver_2em { padding-top: 2em; padding-bottom: 2em; }",
+      ".pv_2em { padding-top: 2em; padding-bottom: 2em; }",
       ".pl_2em { padding-left: 2em; }",
       ".pr_2em { padding-right: 2em; }",
-      ".phor_2em { padding-left: 2em; padding-right: 2em; }",
+      ".ph_2em { padding-left: 2em; padding-right: 2em; }",
     ]);
   });
 
@@ -126,6 +126,11 @@ describe("RulesetsFactory", () => {
 
     // prettier-ignore
     expect(toString(res)).toEqual([
+      ".bd_n { border: none; }",
+      ".bdt_n { border-top: none; }",
+      ".bdb_n { border-bottom: none; }",
+      ".bdl_n { border-left: none; }",
+      ".bdr_n { border-right: none; }",
       ".bd_thin { border: 1px solid black; }",
       ".bdt_thin { border-top: 1px solid black; }",
       ".bdb_thin { border-bottom: 1px solid black; }",

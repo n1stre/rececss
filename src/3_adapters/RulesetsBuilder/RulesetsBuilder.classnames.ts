@@ -21,10 +21,10 @@ const RulesetsEmmetClassnamesMap: ClassnamesMap = {
   margin: "m_$0",
   marginTop: "mt_$0",
   marginBottom: "mb_$0",
-  marginVertical: "mver_$0",
+  marginVertical: "mv_$0",
   marginLeft: "ml_$0",
   marginRight: "mr_$0",
-  marginHorizontal: "mhor_$0",
+  marginHorizontal: "mh_$0",
 
   top: "t_$0",
   bottom: "b_$0",

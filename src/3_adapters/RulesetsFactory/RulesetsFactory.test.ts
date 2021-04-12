@@ -36,17 +36,17 @@ describe("RulesetsFactory", () => {
       ".m_20 { margin: 20px; }",
       ".mt_20 { margin-top: 20px; }",
       ".mb_20 { margin-bottom: 20px; }",
-      ".mver_20 { margin-top: 20px; margin-bottom: 20px; }",
+      ".mv_20 { margin-top: 20px; margin-bottom: 20px; }",
       ".ml_20 { margin-left: 20px; }",
       ".mr_20 { margin-right: 20px; }",
-      ".mhor_20 { margin-left: 20px; margin-right: 20px; }",
+      ".mh_20 { margin-left: 20px; margin-right: 20px; }",
       ".m_2em { margin: 2em; }",
       ".mt_2em { margin-top: 2em; }",
       ".mb_2em { margin-bottom: 2em; }",
-      ".mver_2em { margin-top: 2em; margin-bottom: 2em; }",
+      ".mv_2em { margin-top: 2em; margin-bottom: 2em; }",
       ".ml_2em { margin-left: 2em; }",
       ".mr_2em { margin-right: 2em; }",
-      ".mhor_2em { margin-left: 2em; margin-right: 2em; }",
+      ".mh_2em { margin-left: 2em; margin-right: 2em; }",
     ]);
   });
 

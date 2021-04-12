@@ -225,12 +225,12 @@ rule: {
 
 #### Width
 
-Ruleset Key | Default Classname
---- | ---
-widthAuto | `w_a`
-width | `w_$0`
-minWidth | `miw_$0`
-maxWidth | `maw_$0`
+Ruleset Key | Default Classname | Declarations
+--- | --- | ---
+widthAuto | `w_a` | { width: auto; }
+width | `w_$0` | { width: $0; }
+minWidth | `miw_$0` | { min-width: $0; }
+maxWidth | `maw_$0` | { max-width: $0; }
 
 
 ```javascript
@@ -270,12 +270,12 @@ Outputs:
 
 #### Height
 
-Ruleset Key | Default Classname
---- | ---
-heightAuto | `h_a`
-height | `h_$0`
-minHeight | `mih_$0`
-maxHeight | `mah_$0`
+Ruleset Key | Default Classname | Declarations
+--- | --- | ---
+heightAuto | `h_a` | { height: auto; }
+height | `h_$0` | { height: $0; }
+minHeight | `mih_$0` | { min-height: $0; }
+maxHeight | `mah_$0` | { max-height: $0; }
 
 
 ```javascript
@@ -319,9 +319,9 @@ module.exports = {
 
 ##### Shorthand
 
-Ruleset Key | Default Classname
---- | ---
-margin | `m_$0`
+Ruleset Key | Default Classname | Declarations
+--- | --- | ---
+margin | `m_$0` | { margin: $0; }
 
 
 Outputs:
@@ -333,23 +333,23 @@ Outputs:
 
 ##### Edges
 
-Ruleset Key | Default Classname
---- | ---
-margin | `m_$0`
-marginTop | `mt_$0`
-marginBottom | `mb_$0`
-marginVertical | `mver_$0`
-marginLeft | `ml_$0`
-marginRight | `mr_$0`
-marginHorizontal | `mhor_$0`
+Ruleset Key | Default Classname | Declarations
+--- | --- | ---
+margin | `m_$0` | { margin: $0; }
+marginTop | `mt_$0` | { margin-top: $0; }
+marginBottom | `mb_$0` | { margin-bottom: $0; }
+marginVertical | `mv_$0` | { margin-top: $0; margin-bottom: $0; }
+marginLeft | `ml_$0` | { margin-left: $0; }
+marginRight | `mr_$0` | { margin-right: $0; }
+marginHorizontal | `mh_$0` | { margin-left: $0; margin-right: $0; }
 
 And outputs:
 ```css
 .m_sm { margin: 10px; } .mt_sm { margin-top: 10px; } .mb_sm { margin-bottom: 10px; } .mver_sm { margin-top: 10px; margin-bottom: 10px; } .ml_sm { margin-left: 10px; } .mr_sm { margin-right: 10px; } .mhor_sm { margin-left: 10px; margin-right: 10px; }
 .m_md { margin: 15px; } .mt_md { margin-top: 15px; } .mb_md { margin-bottom: 15px; } .mver_md { margin-top: 15px; margin-bottom: 15px; } .ml_md { margin-left: 15px; } .mr_md { margin-right: 15px; } .mhor_md { margin-left: 15px; margin-right: 15px; }
 .m_lg { margin: 30px; } .mt_lg { margin-top: 30px; } .mb_lg { margin-bottom: 30px; } .mver_lg { margin-top: 30px; margin-bottom: 30px; } .ml_lg { margin-left: 30px; } .mr_lg { margin-right: 30px; } .mhor_lg { margin-left: 30px; margin-right: 30px; }
-.m_0 { margin: 0px; } .mt_0 { margin-top: 0px; } .mb_0 { margin-bottom: 0px; } .mver_0 { margin-top: 0px; margin-bottom: 0px; } .ml_0 { margin-left: 0px; } .mr_0 { margin-right: 0px; } .mhor_0 { margin-left: 0px; margin-right: 0px; }
-.m_5 { margin: 5px; } .mt_5 { margin-top: 5px; } .mb_5 { margin-bottom: 5px; } .mver_5 { margin-top: 5px; margin-bottom: 5px; } .ml_5 { margin-left: 5px; } .mr_5 { margin-right: 5px; } .mhor_5 { margin-left: 5px; margin-right: 5px; }
+.m_0  { margin: 0px; } .mt_0 { margin-top: 0px; } .mb_0 { margin-bottom: 0px; } .mver_0 { margin-top: 0px; margin-bottom: 0px; } .ml_0 { margin-left: 0px; } .mr_0 { margin-right: 0px; } .mhor_0 { margin-left: 0px; margin-right: 0px; }
+.m_5  { margin: 5px; } .mt_5 { margin-top: 5px; } .mb_5 { margin-bottom: 5px; } .mver_5 { margin-top: 5px; margin-bottom: 5px; } .ml_5 { margin-left: 5px; } .mr_5 { margin-right: 5px; } .mhor_5 { margin-left: 5px; margin-right: 5px; }
 ...
 .m_50 { margin: 50px; } .mt_50 { margin-top: 50px; } .mb_50 { margin-bottom: 50px; } .mver_50 { margin-top: 50px; margin-bottom: 50px; } .ml_50 { margin-left: 50px; } .mr_50 { margin-right: 50px; } .mhor_50 { margin-left: 50px; margin-right: 50px; }
 ```
@@ -371,9 +371,9 @@ module.exports = {
 
 ##### Shorthand
 
-Ruleset Key | Default Classname
---- | ---
-padding | `p_$0`
+Ruleset Key | Default Classname | Declarations
+--- | --- | ---
+padding | `p_$0` | { padding: $0; }
 
 ```css
 .p_a { padding: auto; }
@@ -381,22 +381,22 @@ padding | `p_$0`
 ```
 
 ##### Edges
-Ruleset Key | Default Classname
---- | ---
-padding | `p_$0`
-paddingTop | `pt_$0`
-paddingBottom | `pb_$0`
-paddingVertical | `pver_$0`
-paddingLeft | `pl_$0`
-paddingRight | `pr_$0`
-paddingHorizontal | `phor_$0`
+Ruleset Key | Default Classname | Declarations
+--- | --- | ---
+padding | `p_$0` | { padding: $0; }
+paddingTop | `pt_$0` | { padding-top: $0; }
+paddingBottom | `pb_$0` | { padding-bottom: $0; }
+paddingVertical | `pv_$0` | { padding-top: $0; padding-bottom: $0; }
+paddingLeft | `pl_$0` | { padding-left: $0; }
+paddingRight | `pr_$0` | { padding-right: $0; }
+paddingHorizontal | `ph_$0` | { padding-left: $0; padding-right: $0; }
 
 Outputs: 
 ```css
-.p_sm { padding: 10px; } .pt_sm { padding-top: 10px; } .pb_sm { padding-bottom: 10px; } .pver_sm { padding-top: 10px; padding-bottom: 10px; } .pl_sm { padding-left: 10px; } .pr_sm { padding-right: 10px; } .phor_sm { padding-left: 10px; padding-right: 10px; }
-.p_md { padding: 15px; } .pt_md { padding-top: 15px; } .pb_md { padding-bottom: 15px; } .pver_md { padding-top: 15px; padding-bottom: 15px; } .pl_md { padding-left: 15px; } .pr_md { padding-right: 15px; } .phor_md { padding-left: 15px; padding-right: 15px; }
-.p_1em { padding: 1em; } .pt_1em { padding-top: 1em; } .pb_1em { padding-bottom: 1em; } .pver_1em { padding-top: 1em; padding-bottom: 1em; } .pl_1em { padding-left: 1em; } .pr_1em { padding-right: 1em; } .phor_1em { padding-left: 1em; padding-right: 1em; }
-.p_1\.5em { padding: 1.5em; } .pt_1\.5em { padding-top: 1.5em; } .pb_1\.5em { padding-bottom: 1.5em; } .pver_1\.5em { padding-top: 1.5em; padding-bottom: 1.5em; } .pl_1\.5em { padding-left: 1.5em; } .pr_1\.5em { padding-right: 1.5em; } .phor_1\.5em { padding-left: 1.5em; padding-right: 1.5em; }
+.p_sm      { padding: 10px; } .pt_sm { padding-top: 10px; } .pb_sm { padding-bottom: 10px; } .pver_sm { padding-top: 10px; padding-bottom: 10px; } .pl_sm { padding-left: 10px; } .pr_sm { padding-right: 10px; } .phor_sm { padding-left: 10px; padding-right: 10px; }
+.p_md      { padding: 15px; } .pt_md { padding-top: 15px; } .pb_md { padding-bottom: 15px; } .pver_md { padding-top: 15px; padding-bottom: 15px; } .pl_md { padding-left: 15px; } .pr_md { padding-right: 15px; } .phor_md { padding-left: 15px; padding-right: 15px; }
+.p_1em     { padding: 1em; } .pt_1em { padding-top: 1em; } .pb_1em { padding-bottom: 1em; } .pver_1em { padding-top: 1em; padding-bottom: 1em; } .pl_1em { padding-left: 1em; } .pr_1em { padding-right: 1em; } .phor_1em { padding-left: 1em; padding-right: 1em; }
+.p_1\.5em  { padding: 1.5em; } .pt_1\.5em { padding-top: 1.5em; } .pb_1\.5em { padding-bottom: 1.5em; } .pver_1\.5em { padding-top: 1.5em; padding-bottom: 1.5em; } .pl_1\.5em { padding-left: 1.5em; } .pr_1\.5em { padding-right: 1.5em; } .phor_1\.5em { padding-left: 1.5em; padding-right: 1.5em; }
 ...
 .p_3em { padding: 3em; } .pt_3em { padding-top: 3em; } .pb_3em { padding-bottom: 3em; } .pver_3em { padding-top: 3em; padding-bottom: 3em; } .pl_3em { padding-left: 3em; } .pr_3em { padding-right: 3em; } .phor_3em { padding-left: 3em; padding-right: 3em; }
 
@@ -404,12 +404,12 @@ Outputs:
 
 #### Offset (top, right, bottom, left)
 
-Ruleset Key | Default Classname
---- | ---
-top | `t_$0`
-bottom | `b_$0`
-left | `l_$0`
-right | `r_$0`
+Ruleset Key | Default Classname | Declarations
+--- | --- | ---
+top | `t_$0` | { top: $0; }
+bottom | `b_$0` | { bottom: $0; }
+left | `l_$0` | { left: $0; }
+right | `r_$0` | { right: $0; }
 
 
 ```javascript
@@ -457,9 +457,9 @@ module.exports = {
 }
 ```
 ##### Shorthand
-Ruleset Key | Default Classname
---- | ---
-flex | `fx_$0`
+Ruleset Key | Default Classname | Declarations
+--- | --- | ---
+flex | `fx_$0` | { flex: $0; }
 
 Outputs:
 ```css
@@ -478,9 +478,9 @@ Outputs:
 ```
 
 ##### Basis
-Ruleset Key | Default Classname
---- | ---
-flexBasis | `fxb_$0`
+Ruleset Key | Default Classname | Declarations
+--- | --- | ---
+flexBasis | `fxb_$0` | { flex-basis: $0; } 
 
 Outputs:
 ```css
@@ -500,9 +500,9 @@ Outputs:
 
 ##### Grow
   
-Ruleset Key | Default Classname
---- | ---
-flexGrow | `fxg_$0`
+Ruleset Key | Default Classname | Declarations
+--- | --- | ---
+flexGrow | `fxg_$0` | { flex-grow: $0 }
 
 Outputs:
 ```css
@@ -514,9 +514,9 @@ Outputs:
 ```
 
 ##### Shrink
-Ruleset Key | Default Classname
---- | ---
-flexShrink | `fxs_$0`
+Ruleset Key | Default Classname | Declarations
+--- | --- | ---
+flexShrink | `fxs_$0` | { flex-shrink: $0; }
 
 Outputs:
 ```css
@@ -527,9 +527,9 @@ Outputs:
 ```
 
 ##### Order
-Ruleset Key | Default Classname
---- | ---
-order | `ord_$0`
+Ruleset Key | Default Classname | Declarations
+--- | --- | ---
+order | `ord_$0` | { order: $0; }
 
 Outputs:
 ```css
@@ -544,11 +544,11 @@ Generates flexbox grid where
 - **`gutter`** (string) - default gutter to be used with `flexRow`
 - **`gutters`** (object) - additional gutters to be used with `flexRowGuttered`
 
-Ruleset Key | Default Classname
---- | ---
-flexRow | `fxrow`
-flexRowGuttered | `fxrow_$0`
-flexCol | `fxcol_$0`
+Ruleset Key | Default Classname | Declarations
+--- | --- | ---
+flexRow | `fxrow` | { display: flex; margin-left: -$0; margin-right: -$0; }
+flexRowGuttered | `fxrow_$0` | { display: flex; margin-left: -$0; margin-right: -$0; }
+flexCol | `fxcol_$0` | { flex-basis: $0; max-width: $0; }
 
 Outputs:
 ```css
@@ -590,9 +590,9 @@ module.exports = {
 ```
 
 ##### Shorthand
-Ruleset Key | Default Classname
---- | ---
-font | `f_$0`
+Ruleset Key | Default Classname | Declarations
+--- | --- | ---
+font | `f_$0` | { font: $0; }
 
 Outputs:
 ```css
@@ -600,9 +600,9 @@ Outputs:
 ```
 
 ##### Size
-Ruleset Key | Default Classname
---- | ---
-fontSize | `fz_$0`
+Ruleset Key | Default Classname | Declarations
+--- | --- | ---
+fontSize | `fz_$0` | { font-size: $0; }
 
 Outputs:
 ```css
@@ -617,9 +617,9 @@ Outputs:
 ```
 
 ##### Family
-Ruleset Key | Default Classname
---- | ---
-fontFamily | `ff_$0`
+Ruleset Key | Default Classname | Declarations
+--- | --- | ---
+fontFamily | `ff_$0` | { font-family; $0; }
 
 Outputs:
 ```css
@@ -628,9 +628,9 @@ Outputs:
 ```
 
 ##### Line Height
-Ruleset Key | Default Classname
---- | ---
-lineHeight | `lh_$0`
+Ruleset Key | Default Classname | Declarations
+--- | --- | ---
+lineHeight | `lh_$0` | { line-height: $0; }
 
 Outputs:
 ```css
@@ -667,13 +667,18 @@ module.exports = {
 ```
 ##### Shorthand
 
-Ruleset Key | Default Classname
---- | ---
-border | `bd_$0`
-borderLeft | `bdl_$0`
-borderRight | `bdr_$0`
-borderTop | `bdt_$0`
-borderBottom | `bdb_$0`
+Ruleset Key | Default Classname | Declarations
+--- | --- | ---
+border | `bd_$0` | { border: $0; }
+borderLeft | `bdl_$0` | { border-left: $0; }
+borderRight | `bdr_$0` | { border-right: $0; }
+borderTop | `bdt_$0` | { border-top: $0; }
+borderBottom | `bdb_$0` | { border-bottom: $0; }
+borderNone | `bd_n` | { border: none; }
+borderLeftNone | `bdl_n` | { border-left: none; }
+borderRightNone | `bdr_n` | { border-right: none; }
+borderTopNone | `bdt_n` | { border-top: none; }
+borderBottomNone | `bdb_n` | { border-bottom: none; }
 
 
 Outputs:
@@ -689,12 +694,18 @@ Outputs:
 .bdb_bold { border-bottom: 5px solid black; }
 .bdl_bold { border-left: 5px solid black; }
 .bdr_bold { border-right: 5px solid black; }
+
+.bd_none { border: none; }
+.bdt_none { border-top: none; }
+.bdb_none { border-bottom: none; }
+.bdl_none { border-left: none; }
+.bdr_none { border-right: none; }
 ```
 
 ##### Radius
-Ruleset Key | Default Classname
---- | ---
-borderRadius | `bdrs_$0`
+Ruleset Key | Default Classname | Declarations
+--- | --- | ---
+borderRadius | `bdrs_$0` | { border-radius: $0; }
 
 Outputs:
 ```css
@@ -706,6 +717,10 @@ Outputs:
 
 #### Colors
 
+Ruleset Key | Default Classname | Declarations
+--- | --- | ---
+color | `c_$0` | { color: $0 }
+
 ```javascript
 module.exports = {
   // ...
@@ -715,15 +730,34 @@ module.exports = {
 }
 ```
 
-Ruleset Key | Default Classname
---- | ---
-color | `c_$0`
-
 Outputs:
 ```css
 .c_dark { color: #000; }
 .c_light { color: #fff; }
 ```
+
+#### Statics
+Beyond the configurable rulesets there are ones that corresponds to the rest of CSS properties with every possible keyword value.
+
+##### Position
+##### Display
+##### Visibility
+##### Vertical Align
+##### Text Align
+##### Text Decoration
+##### Text Emphasis
+##### Text Transform
+##### White Space
+##### Flex Direction
+##### Flex Wrap
+##### Justify Content
+##### Align Content
+##### Align Items
+##### Background Position
+##### Opacity
+##### Overflow
+##### List Style
+
 
 ### Classnames
 Allows to overwrite any of the utility classnames:

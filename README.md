@@ -191,6 +191,39 @@ In the above config `$0` in `states` represents a classname that would be insert
 
 ```
 
+#### Increasing specificity
+The are scenarios when you need to make some classes more specific then the others. Here is an [example](https://github.com/tailwindlabs/tailwindcss/discussions/1446) of such usecase. You can achieve that with `states` as well:
+
+
+```javascript
+module.exports = {
+  ...
+  sep: { 
+    state: "-" 
+  },
+  states: {
+    "!": "$0$0",
+  },
+  rules: {
+    color: { dark: "#000", light: "#fff" },
+  },
+}
+```
+
+That'll generate the dubplicated classnames like so:
+
+```css
+.c_dark, .c_dark-\\!.c_dark-\\! { color: #000; }
+.c_light, .c_light-\\!.c_light-\\! { color: #fff; }
+```
+
+So that `.c_dark-!` and `.c_light-!` would be more specific then theirs normal variants:
+```html
+<span class="c_light c_dark-!">This texts color is #000<span>
+```
+
+And you can ofcourse add as many levels of specificity as you need.
+
 ### Rules
 Most of the rules follows minimal conventions for generating values. Each rule gets described thought an object where regular keys are being used as classname suffixes and their values inserted into CSS declaration. In addition you could provide unit keywords starting with `$` (`$px`, `$em`, `$rem`, `$pct`, ect) with array of numbers and ranges (`[start, stop, step]`) as a value:
 

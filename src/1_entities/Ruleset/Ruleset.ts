@@ -52,7 +52,7 @@ export default class Ruleset implements Instance {
   private getStateClassname(stateSuffix: string, stateSelector: string) {
     const suffix = this.suffixSep + stateSuffix;
     const classname = this.getClassnameSelector(suffix);
-    return stateSelector.replace("$0", classname);
+    return stateSelector.replace(new RegExp("\\$0", "g"), classname);
   }
 
   private getClassnameSelector(suffix: string = "") {
@@ -62,7 +62,7 @@ export default class Ruleset implements Instance {
   }
 
   private escapeClassname(cn: string) {
-    const chars = ["%", ":", ".", "@"];
+    const chars = ["%", ":", ".", "@", "!"];
     const reg = (char: string) => new RegExp(`\\${char}`, "g");
     return chars.reduce((cn, char) => cn.replace(reg(char), `\\${char}`), cn);
   }

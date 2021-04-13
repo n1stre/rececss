@@ -227,10 +227,10 @@ rule: {
 
 Ruleset Key | Default Classname | Declarations
 --- | --- | ---
-widthAuto | `w_a` | { width: auto; }
-width | `w_$0` | { width: $0; }
-minWidth | `miw_$0` | { min-width: $0; }
-maxWidth | `maw_$0` | { max-width: $0; }
+widthAuto | `w_a` | `{ width: auto; }`
+width | `w_$0` | `{ width: $0; }`
+minWidth | `miw_$0` | `{ min-width: $0; }`
+maxWidth | `maw_$0` | `{ max-width: $0; }`
 
 
 ```javascript
@@ -272,10 +272,10 @@ Outputs:
 
 Ruleset Key | Default Classname | Declarations
 --- | --- | ---
-heightAuto | `h_a` | { height: auto; }
-height | `h_$0` | { height: $0; }
-minHeight | `mih_$0` | { min-height: $0; }
-maxHeight | `mah_$0` | { max-height: $0; }
+heightAuto | `h_a` | `{ height: auto; }`
+height | `h_$0` | `{ height: $0; }`
+minHeight | `mih_$0` | `{ min-height: $0; }`
+maxHeight | `mah_$0` | `{ max-height: $0; }`
 
 
 ```javascript
@@ -321,7 +321,7 @@ module.exports = {
 
 Ruleset Key | Default Classname | Declarations
 --- | --- | ---
-margin | `m_$0` | { margin: $0; }
+margin | `m_$0` | `{ margin: $0; }`
 
 
 Outputs:
@@ -335,13 +335,13 @@ Outputs:
 
 Ruleset Key | Default Classname | Declarations
 --- | --- | ---
-margin | `m_$0` | { margin: $0; }
-marginTop | `mt_$0` | { margin-top: $0; }
-marginBottom | `mb_$0` | { margin-bottom: $0; }
-marginVertical | `mv_$0` | { margin-top: $0; margin-bottom: $0; }
-marginLeft | `ml_$0` | { margin-left: $0; }
-marginRight | `mr_$0` | { margin-right: $0; }
-marginHorizontal | `mh_$0` | { margin-left: $0; margin-right: $0; }
+margin | `m_$0` | `{ margin: $0; }`
+marginTop | `mt_$0` | `{ margin-top: $0; }`
+marginBottom | `mb_$0` | `{ margin-bottom: $0; }`
+marginVertical | `mv_$0` | `{ margin-top: $0; margin-bottom: $0; }`
+marginLeft | `ml_$0` | `{ margin-left: $0; }`
+marginRight | `mr_$0` | `{ margin-right: $0; }`
+marginHorizontal | `mh_$0` | `{ margin-left: $0; margin-right: $0; }`
 
 And outputs:
 ```css
@@ -373,7 +373,7 @@ module.exports = {
 
 Ruleset Key | Default Classname | Declarations
 --- | --- | ---
-padding | `p_$0` | { padding: $0; }
+padding | `p_$0` | `{ padding: $0; }`
 
 ```css
 .p_a { padding: auto; }
@@ -383,13 +383,13 @@ padding | `p_$0` | { padding: $0; }
 ##### Edges
 Ruleset Key | Default Classname | Declarations
 --- | --- | ---
-padding | `p_$0` | { padding: $0; }
-paddingTop | `pt_$0` | { padding-top: $0; }
-paddingBottom | `pb_$0` | { padding-bottom: $0; }
-paddingVertical | `pv_$0` | { padding-top: $0; padding-bottom: $0; }
-paddingLeft | `pl_$0` | { padding-left: $0; }
-paddingRight | `pr_$0` | { padding-right: $0; }
-paddingHorizontal | `ph_$0` | { padding-left: $0; padding-right: $0; }
+padding | `p_$0` | `{ padding: $0; }`
+paddingTop | `pt_$0` | `{ padding-top: $0; }`
+paddingBottom | `pb_$0` | `{ padding-bottom: $0; }`
+paddingVertical | `pv_$0` | `{ padding-top: $0; padding-bottom: $0; }`
+paddingLeft | `pl_$0` | `{ padding-left: $0; }`
+paddingRight | `pr_$0` | `{ padding-right: $0; }`
+paddingHorizontal | `ph_$0` | `{ padding-left: $0; padding-right: $0; }`
 
 Outputs: 
 ```css
@@ -406,10 +406,10 @@ Outputs:
 
 Ruleset Key | Default Classname | Declarations
 --- | --- | ---
-top | `t_$0` | { top: $0; }
-bottom | `b_$0` | { bottom: $0; }
-left | `l_$0` | { left: $0; }
-right | `r_$0` | { right: $0; }
+top | `t_$0` | `{ top: $0; }`
+bottom | `b_$0` | `{ bottom: $0; }`
+left | `l_$0` | `{ left: $0; }`
+right | `r_$0` | `{ right: $0; }`
 
 
 ```javascript
@@ -459,7 +459,7 @@ module.exports = {
 ##### Shorthand
 Ruleset Key | Default Classname | Declarations
 --- | --- | ---
-flex | `fx_$0` | { flex: $0; }
+flex | `fx_$0` | `{ flex: $0; }`
 
 Outputs:
 ```css
@@ -480,7 +480,7 @@ Outputs:
 ##### Basis
 Ruleset Key | Default Classname | Declarations
 --- | --- | ---
-flexBasis | `fxb_$0` | { flex-basis: $0; } 
+flexBasis | `fxb_$0` | `{ flex-basis: $0; }`
 
 Outputs:
 ```css
@@ -502,7 +502,7 @@ Outputs:
   
 Ruleset Key | Default Classname | Declarations
 --- | --- | ---
-flexGrow | `fxg_$0` | { flex-grow: $0 }
+flexGrow | `fxg_$0` | `{ flex-grow: $0 }`
 
 Outputs:
 ```css
@@ -516,7 +516,7 @@ Outputs:
 ##### Shrink
 Ruleset Key | Default Classname | Declarations
 --- | --- | ---
-flexShrink | `fxs_$0` | { flex-shrink: $0; }
+flexShrink | `fxs_$0` | `{ flex-shrink: $0; }`
 
 Outputs:
 ```css
@@ -529,7 +529,7 @@ Outputs:
 ##### Order
 Ruleset Key | Default Classname | Declarations
 --- | --- | ---
-order | `ord_$0` | { order: $0; }
+order | `ord_$0` | `{ order: $0; }`
 
 Outputs:
 ```css
@@ -546,9 +546,9 @@ Generates flexbox grid where
 
 Ruleset Key | Default Classname | Declarations
 --- | --- | ---
-flexRow | `fxrow` | { display: flex; margin-left: -$0; margin-right: -$0; }
-flexRowGuttered | `fxrow_$0` | { display: flex; margin-left: -$0; margin-right: -$0; }
-flexCol | `fxcol_$0` | { flex-basis: $0; max-width: $0; }
+flexRow | `fxrow` | `{ display: flex; margin-left: -$0; margin-right: -$0; }`
+flexRowGuttered | `fxrow_$0` | `{ display: flex; margin-left: -$0; margin-right: -$0; }`
+flexCol | `fxcol_$0` | `{ flex-basis: $0; max-width: $0; }`
 
 Outputs:
 ```css
@@ -592,7 +592,7 @@ module.exports = {
 ##### Shorthand
 Ruleset Key | Default Classname | Declarations
 --- | --- | ---
-font | `f_$0` | { font: $0; }
+font | `f_$0` | `{ font: $0; }`
 
 Outputs:
 ```css
@@ -602,7 +602,7 @@ Outputs:
 ##### Size
 Ruleset Key | Default Classname | Declarations
 --- | --- | ---
-fontSize | `fz_$0` | { font-size: $0; }
+fontSize | `fz_$0` | `{ font-size: $0; }`
 
 Outputs:
 ```css
@@ -619,7 +619,7 @@ Outputs:
 ##### Family
 Ruleset Key | Default Classname | Declarations
 --- | --- | ---
-fontFamily | `ff_$0` | { font-family; $0; }
+fontFamily | `ff_$0` | `{ font-family; $0; }`
 
 Outputs:
 ```css
@@ -630,7 +630,7 @@ Outputs:
 ##### Line Height
 Ruleset Key | Default Classname | Declarations
 --- | --- | ---
-lineHeight | `lh_$0` | { line-height: $0; }
+lineHeight | `lh_$0` | `{ line-height: $0; }`
 
 Outputs:
 ```css
@@ -669,16 +669,11 @@ module.exports = {
 
 Ruleset Key | Default Classname | Declarations
 --- | --- | ---
-border | `bd_$0` | { border: $0; }
-borderLeft | `bdl_$0` | { border-left: $0; }
-borderRight | `bdr_$0` | { border-right: $0; }
-borderTop | `bdt_$0` | { border-top: $0; }
-borderBottom | `bdb_$0` | { border-bottom: $0; }
-borderNone | `bd_n` | { border: none; }
-borderLeftNone | `bdl_n` | { border-left: none; }
-borderRightNone | `bdr_n` | { border-right: none; }
-borderTopNone | `bdt_n` | { border-top: none; }
-borderBottomNone | `bdb_n` | { border-bottom: none; }
+border | `bd_$0` | `{ border: $0; }`
+borderLeft | `bdl_$0` | `{ border-left: $0; }`
+borderRight | `bdr_$0` | `{ border-right: $0; }`
+borderTop | `bdt_$0` | `{ border-top: $0; }`
+borderBottom | `bdb_$0` | `{ border-bottom: $0; }`
 
 
 Outputs:
@@ -694,12 +689,6 @@ Outputs:
 .bdb_bold { border-bottom: 5px solid black; }
 .bdl_bold { border-left: 5px solid black; }
 .bdr_bold { border-right: 5px solid black; }
-
-.bd_none { border: none; }
-.bdt_none { border-top: none; }
-.bdb_none { border-bottom: none; }
-.bdl_none { border-left: none; }
-.bdr_none { border-right: none; }
 ```
 
 ##### Radius
@@ -719,7 +708,7 @@ Outputs:
 
 Ruleset Key | Default Classname | Declarations
 --- | --- | ---
-color | `c_$0` | { color: $0 }
+color | `c_$0` | `{ color: $0 }`
 
 ```javascript
 module.exports = {
@@ -740,24 +729,202 @@ Outputs:
 Beyond the configurable rulesets there are ones that corresponds to the rest of CSS properties with every possible keyword value.
 
 ##### Position
-##### Display
-##### Visibility
-##### Vertical Align
-##### Text Align
-##### Text Decoration
-##### Text Emphasis
-##### Text Transform
-##### White Space
-##### Flex Direction
-##### Flex Wrap
-##### Justify Content
-##### Align Content
-##### Align Items
-##### Background Position
-##### Opacity
-##### Overflow
-##### List Style
+Ruleset Key | Default Classname | Declarations
+--- | --- | ---
+positionStatic | `pos_s` | `{ position: static;}`
+positionRelative | `pos_r` | `{ position: relative; }`
+positionAbsolute | `pos_a` | `{ position: absolute; }`
+positionFixed | `pos_f` | `{ position: fixed; }`
 
+##### Display
+Ruleset Key | Default Classname | Declarations
+--- | --- | ---
+displayNone | `d_n` | `{ display: none; }`
+displayInline | `d_i` | `{ display: inline; }`
+displayBlock | `d_b` | `{ display: block; }`
+displayInlineBlock | `d_ib` | `{ display: inline-block; }`
+displayFlex | `d_f` | `{ display: flex; }`
+displayInlineFlex | `d_if` | `{ display: inline-flex; }`
+displayTable | `d_t` | `{ display: table; }`
+displayGrid | `d_g` | `{ display: grid; }`
+displayInlineGrid | `d_ig` | `{ display: inline-grid; }`
+
+##### Visibility
+Ruleset Key | Default Classname | Declarations
+--- | --- | ---
+visibilityVisible | `v_v` | `{ visibility: visible; }`
+visibilityHidden | `v_h` | `{ visibility: hidden; }`
+visibilityCollapse | `v_c` | `{ visibility: collapse; }`
+
+##### Vertical Align
+Ruleset Key | Default Classname | Declarations
+--- | --- | ---
+verticalAlignSuper | `va_sup` | `{ vertical-align: super; }`
+verticalAlignTop | `va_t` | `{ vertical-align: top; }`
+verticalAlignTextTop | `va_tt` | `{ vertical-align: text-top; }`
+verticalAlignMiddle | `va_m` | `{ vertical-align: middle; }`
+verticalAlignBaseline | `va_bl` | `{ vertical-align: baseline; }`
+verticalAlignBottom | `va_b` | `{ vertical-align: bottom; }`
+verticalAlignTextBottom | `va_tb` | `{ vertical-align: text-bottom; }`
+verticalAlignSub | `va_sub` | `{ vertical-align: sub; }`
+
+##### Text Align
+Ruleset Key | Default Classname | Declarations
+--- | --- | ---
+textAlignLeft | `ta_l` | `{ text-align: left; }`
+textAlignCenter | `ta_c` | `{ text-align: center; }`
+textAlignRight | `ta_r` | `{ text-align: right; }`
+textAlignJustify | `ta_j` | `{ text-align: justify; }`
+textAlignLastAuto | `tal_a` | `{ text-align-last: auto; }`
+textAlignLastLeft | `tal_l` | `{ text-align-last: left; }`
+textAlignLastCenter | `tal_c` | `{ text-align-last: center; }`
+textAlignLastRight | `tal_r` | `{ text-align-last: right; }`
+
+##### Text Decoration
+Ruleset Key | Default Classname | Declarations
+--- | --- | ---
+textDecorationNone | `td_n` | `{ text-decoration: none; }`
+textDecorationUnderline | `td_u` | `{ text-decoration: underline; }`
+textDecorationOverline | `td_o` | `{ text-decoration: overline; }`
+textDecorationLineThrough | `td_l` | `{ text-decoration: line-through; }`
+
+##### Text Emphasis
+Ruleset Key | Default Classname | Declarations
+--- | --- | ---
+textEmphasisNone | `te_n` | `{ text-emphasis: none; }`
+textEmphasisAccent | `te_ac` | `{ text-emphasis: accent; }`
+textEmphasisDot | `te_dt` | `{ text-emphasis: dot; }`
+textEmphasisCircle | `te_c` | `{ text-emphasis: circle; }`
+textEmphasisDisc | `te_ds` | `{ text-emphasis: disc; }`
+textEmphasisBefore | `te_b` | `{ text-emphasis: before; }`
+textEmphasisAfter | `te_a` | `{ text-emphasis: after; }`
+
+##### Text Transform
+Ruleset Key | Default Classname | Declarations
+--- | --- | ---
+textTransformNone | `tt_n` | `{ text-transform: none; }`
+textTransformCapitalize | `tt_c` | `{ text-transform: capitalize; }`
+textTransformUppercase | `tt_u` | `{ text-transform: uppercase; }`
+textTransformLowercase | `tt_l` | `{ text-transform: lowercase; }`
+
+##### White Space
+Ruleset Key | Default Classname | Declarations
+--- | --- | ---
+whiteSpaceNormal | `whs_n` | `{ white-space: normal; }`
+whiteSpacePre | `whs_p` | `{ white-space: pre; }`
+whiteSpaceNoWrap | `whs_nw` | `{ white-space: nowrap; }`
+whiteSpacePreWrap | `whs_pw` | `{ white-space: pre-wrap; }`
+whiteSpacePreLine | `whs_pl` | `{ white-space: pre-line; }`
+
+##### Flex Direction
+Ruleset Key | Default Classname | Declarations
+--- | --- | ---
+flexDirectionColumn | `fxd_c` | `{ flex-direction: column; }`
+flexDirectionColumnReverse | `fxd_cr` | `{ flex-direction: column-reverse; }`
+flexDirectionRow | `fxd_r` | `{ flex-direction: row; }`
+flexDirectionRowReverse | `fxd_rr` | `{ flex-direction: row-reverse; }`
+
+##### Flex Wrap
+Ruleset Key | Default Classname | Declarations
+--- | --- | ---
+flexWrapNoWrap | `fxw_n` | `{ flex-wrap: nowrap; }`
+flexWrapWrap | `fxw_w` | `{ flex-wrap: wrap; }`
+flexWrapWrapReverse | `fxw_we` | `{ flex-wrap: wrap-reverse; }`
+flexWrapUnset | `fxw_u` | `{ flex-wrap: unset; }`
+
+##### Justify Content
+Ruleset Key | Default Classname | Declarations
+--- | --- | ---
+justifyContentUnset | `jc_u` | `{ justify-content: unset; }`
+justifyContentCenter | `jc_c` | `{ justify-content: center; }`
+justifyContentFlexEnd | `jc_fe` | `{ justify-content: flex-end; }`
+justifyContentFlexStart | `jc_fs` | `{ justify-content: flex-start; }`
+justifyContentSpaceAround | `jc_sa` | `{ justify-content: space-around; }`
+justifyContentSpaceBetween | `jc_sb` | `{ justify-content: space-between; }`
+
+##### Align Content
+Ruleset Key | Default Classname | Declarations
+--- | --- | ---
+alignContentCenter | `ac_c` | `{ align-content: center; }`
+alignContentFlexEnd | `ac_fe` | `{ align-content: flex-end; }`
+alignContentFlexStart | `ac_fs` | `{ align-content: flex-start; }`
+alignContentStretch | `ac_s` | `{ align-content: stretch; }`
+alignContentSpaceAround | `ac_sa` | `{ align-content: space-around; }`
+alignContentSpaceBetween | `ac_sb` | `{ align-content: space-between; }`
+
+##### Align Items
+Ruleset Key | Default Classname | Declarations
+--- | --- | ---
+alignItemsBaseline | `ai_b` | `{ align-items: baseline; }`
+alignItemsСenter | `ai_c` | `{ align-items: center; }`
+alignItemsFlexEnd | `ai_fe` | `{ align-items: flex-end; }`
+alignItemsFlexStart | `ai_fs` | `{ align-items: flex-start; }`
+alignItemsStretch | `ai_s` | `{ align-items: stretch; }`
+
+##### Background
+Ruleset Key | Default Classname | Declarations
+--- | --- | ---
+backgroundPositionTop | `bgp_t` | `{ background-position: top; }`
+backgroundPositionBottom | `bgp_b` | `{ background-position: bottom; }`
+backgroundPositionLeft | `bgp_l` | `{ background-position: left; }`
+backgroundPositionRight | `bgp_r` | `{ background-position: right; }`
+backgroundPositionCenter | `bgp_c` | `{ background-position: center; }`
+
+##### Border
+Ruleset Key | Default Classname | Declarations
+--- | --- | ---
+borderNone | `bd_n` | `{ border: none; }`
+borderLeftNone | `bdl_n` | `{ border-left: none; }`
+borderRightNone | `bdr_n` | `{ border-right: none; }`
+borderTopNone | `bdt_n` | `{ border-top: none; }`
+borderBottomNone | `bdb_n` | `{ border-bottom: none; }`
+
+##### Opacity
+Ruleset Key | Default Classname | Declarations
+--- | --- | ---
+opacity0 | `op_0` | `{ opacity: 0; }`
+opacity01 | `op_01` | `{ opacity: 0.1; }`
+opacity02 | `op_02` | `{ opacity: 0.2; }`
+opacity03 | `op_03` | `{ opacity: 0.3; }`
+opacity04 | `op_04` | `{ opacity: 0.4; }`
+opacity05 | `op_05` | `{ opacity: 0.5; }`
+opacity06 | `op_06` | `{ opacity: 0.6; }`
+opacity07 | `op_07` | `{ opacity: 0.7; }`
+opacity08 | `op_08` | `{ opacity: 0.8; }`
+opacity09 | `op_09` | `{ opacity: 0.9; }`
+opacity1 | `op_1` | `{ opacity: 1; }`
+
+##### Overflow
+Ruleset Key | Default Classname | Declarations
+--- | --- | ---
+overflowVisible | `ov_v` | `{ overflow: visible; }`
+overflowHidden | `ov_h` | `{ overflow: hidden; }`
+overflowScroll | `ov_s` | `{ overflow: scroll; }`
+overflowAuto | `ov_a` | `{ overflow: auto; }`
+overflowXVisible | `ovx_v` | `{ overflow-x: visible; }`
+overflowXHidden | `ovx_h` | `{ overflow-x: hidden; }`
+overflowXScroll | `ovx_s` | `{ overflow-x: scroll; }`
+overflowXAuto | `ovx_a` | `{ overflow-x: auto; }`
+overflowYVisible | `ovy_v` | `{ overflow-y: visible; }`
+overflowYHidden | `ovy_h` | `{ overflow-y: hidden; }`
+overflowYScroll | `ovy_s` | `{ overflow-y: scroll; }`
+overflowYAuto | `ovy_a` | `{ overflow-y: auto; }`
+
+##### List Style
+Ruleset Key | Default Classname | Declarations
+--- | --- | ---
+listStyleNone | `lis_n` | `{ list-style: none; }`
+listStylePositionInside | `lisp_i` | `{ list-style-position: inside; }`
+listStylePositionOutside | `lisp_o` | `{ list-style-position: outside; }`
+listStyleTypeNone | `list_n` | `{ list-style-type: none; }`
+listStyleTypeDisc | `list_d` | `{ list-style-type: disc; }`
+listStyleTypeCircle | `list_c` | `{ list-style-type: circle; }`
+listStyleTypeSquare | `list_s` | `{ list-style-type: square; }`
+listStyleTypeDecimal | `list_dc` | `{ list-style-type: decimal; }`
+listStyleTypeDecimalLeadingZero | `list_dclz` | `{ list-style-type: decimal-leading-zero; }`
+listStyleTypeLowerRoman | `list_lr` | `{ list-style-type: lower-roman; }`
+listStyleTypeUpperRoman | `list_ur` | `{ list-style-type: upper-roman; }`
+listStyleImageNone | `lisi_n` | `{ list-style-image: none; }`
 
 ### Classnames
 Allows to overwrite any of the utility classnames:

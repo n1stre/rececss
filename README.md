@@ -4,6 +4,7 @@ Minimalistic, fully customizable CSS utilities generator
 
 ![License](https://img.shields.io/npm/l/rececss)
 ![NPM Version](https://img.shields.io/npm/v/rececss)
+[![Node.js CI](https://github.com/re-ce/rececss/actions/workflows/node.js.yml/badge.svg?branch=master)](https://github.com/re-ce/rececss/actions/workflows/node.js.yml)
 ![Code Coverage](https://codecov.io/gh/re-ce/rececss/branch/master/graph/badge.svg)
 
 ## Usage

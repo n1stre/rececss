@@ -1,5 +1,6 @@
 # Distribution
 dist
+dist_website
 out
 build
 node_modules

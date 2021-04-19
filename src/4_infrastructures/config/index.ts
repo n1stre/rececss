@@ -1,15 +1,8 @@
 import { Range } from "../utils";
-import * as IConfig from "./Config.interfaces";
-import buildConfig from "./Config";
+import Config from "./Config";
+export * as IConfig from "./Config.interfaces";
 
-const ConfigImpl = buildConfig({
+export default Config.createFactory({
   isRangeable: Range.isRangeable,
   rangeInclusive: (v: number[]) => Range.createInclusive(v[0], v[1], v[2]),
 });
-
-const Config = Object.freeze({
-  new: (...p: ConstructorParameters<typeof ConfigImpl>): IConfig.Instance =>
-    new ConfigImpl(...p),
-});
-
-export default Config;

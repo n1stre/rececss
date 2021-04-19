@@ -1,5 +1,10 @@
 import { TConfigurableRulesetsValues } from "../../2_usecases/interfaces";
 
+export interface Props {
+  isRangeable: (v: any) => boolean;
+  rangeInclusive: (v: any) => number[];
+}
+
 export type UnitRange = [number, number, number];
 
 export type UnitValue = number | UnitRange;
@@ -36,6 +41,11 @@ export interface DTO {
     filename?: string;
     extension?: string;
     splitByMedia?: boolean;
+    purge?: {
+      content: string[];
+      safelist: Array<string | RegExp>;
+      blocklist: Array<string | RegExp>;
+    };
   };
   sep?: {
     media?: string;
@@ -100,5 +110,8 @@ export interface Instance {
   getClassnameStates: () => Record<string, string>;
   getMediaSeparator: () => string | undefined;
   getStatesSeparator: () => string | undefined;
+  getPurgeContent: () => string[];
+  getPurgeSafelist: () => Array<string | RegExp>;
+  getPurgeBlocklist: () => Array<string | RegExp>;
   shouldSplitOutputByMedia: () => boolean;
 }

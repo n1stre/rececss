@@ -3,7 +3,7 @@ const dto = require("../../../rececss.config");
 
 describe("Config", () => {
   it("should parse rules to values", () => {
-    const config = Config.new(dto);
+    const config = Config.create(dto);
     const values = config.getRulesetsValues();
 
     expect(values.size).toEqual({

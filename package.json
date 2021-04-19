@@ -5,7 +5,8 @@
   "main": "index.js",
   "bin": "./dist/cli.js",
   "scripts": {
-    "start:cli": "ts-node ./src/cli.ts",
+    "dev:cli": "ts-node ./src/cli.ts",
+    "dev:website": "cd website && npm run dev",
     "build": "tsc -p .",
     "release": "npm run build && np",
     "test": "jest",
@@ -48,5 +49,8 @@
   },
   "publishConfig": {
     "registry": "https://registry.npmjs.org"
+  },
+  "dependencies": {
+    "purgecss": "^4.0.3"
   }
 }

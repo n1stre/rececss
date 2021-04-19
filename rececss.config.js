@@ -1,10 +1,15 @@
 
 module.exports = {
   output: {
-    path: "",
+    path: "./website/styles",
     filename: "rececss",
     extension: "css",
-    splitByMedia: true,
+    splitByMedia: false,
+    purge: {
+      content: [
+        './website/pages/**/*.js',
+      ]
+    }
   },
   media: {
     md: "only screen and (min-width: 768px)",

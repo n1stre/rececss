@@ -1,0 +1,1034 @@
+.w_a { width: auto; }
+.w_50, .w_50\:h:hover { width: 50px; }
+.miw_50, .miw_50\:h:hover { min-width: 50px; }
+.maw_50, .maw_50\:h:hover { max-width: 50px; }
+.w_100, .w_100\:h:hover { width: 100px; }
+.miw_100, .miw_100\:h:hover { min-width: 100px; }
+.maw_100, .maw_100\:h:hover { max-width: 100px; }
+.w_100\%, .w_100\%\:h:hover { width: 100%; }
+.miw_100\%, .miw_100\%\:h:hover { min-width: 100%; }
+.maw_100\%, .maw_100\%\:h:hover { max-width: 100%; }
+.h_a, .h_a\:h:hover { height: auto; }
+.h_50, .h_50\:h:hover { height: 50px; }
+.mih_50, .mih_50\:h:hover { min-height: 50px; }
+.mah_50, .mah_50\:h:hover { max-height: 50px; }
+.h_100, .h_100\:h:hover { height: 100px; }
+.mih_100, .mih_100\:h:hover { min-height: 100px; }
+.mah_100, .mah_100\:h:hover { max-height: 100px; }
+.m_0, .m_0\:h:hover { margin: 0px; }
+.mt_0, .mt_0\:h:hover { margin-top: 0px; }
+.mb_0, .mb_0\:h:hover { margin-bottom: 0px; }
+.mver_0, .mver_0\:h:hover { margin-top: 0px; margin-bottom: 0px; }
+.ml_0, .ml_0\:h:hover { margin-left: 0px; }
+.mr_0, .mr_0\:h:hover { margin-right: 0px; }
+.mhor_0, .mhor_0\:h:hover { margin-left: 0px; margin-right: 0px; }
+.m_5, .m_5\:h:hover { margin: 5px; }
+.mt_5, .mt_5\:h:hover { margin-top: 5px; }
+.mb_5, .mb_5\:h:hover { margin-bottom: 5px; }
+.mver_5, .mver_5\:h:hover { margin-top: 5px; margin-bottom: 5px; }
+.ml_5, .ml_5\:h:hover { margin-left: 5px; }
+.mr_5, .mr_5\:h:hover { margin-right: 5px; }
+.mhor_5, .mhor_5\:h:hover { margin-left: 5px; margin-right: 5px; }
+.m_10, .m_10\:h:hover { margin: 10px; }
+.mt_10, .mt_10\:h:hover { margin-top: 10px; }
+.mb_10, .mb_10\:h:hover { margin-bottom: 10px; }
+.mver_10, .mver_10\:h:hover { margin-top: 10px; margin-bottom: 10px; }
+.ml_10, .ml_10\:h:hover { margin-left: 10px; }
+.mr_10, .mr_10\:h:hover { margin-right: 10px; }
+.mhor_10, .mhor_10\:h:hover { margin-left: 10px; margin-right: 10px; }
+.m_15, .m_15\:h:hover { margin: 15px; }
+.mt_15, .mt_15\:h:hover { margin-top: 15px; }
+.mb_15, .mb_15\:h:hover { margin-bottom: 15px; }
+.mver_15, .mver_15\:h:hover { margin-top: 15px; margin-bottom: 15px; }
+.ml_15, .ml_15\:h:hover { margin-left: 15px; }
+.mr_15, .mr_15\:h:hover { margin-right: 15px; }
+.mhor_15, .mhor_15\:h:hover { margin-left: 15px; margin-right: 15px; }
+.m_20, .m_20\:h:hover { margin: 20px; }
+.mt_20, .mt_20\:h:hover { margin-top: 20px; }
+.mb_20, .mb_20\:h:hover { margin-bottom: 20px; }
+.mver_20, .mver_20\:h:hover { margin-top: 20px; margin-bottom: 20px; }
+.ml_20, .ml_20\:h:hover { margin-left: 20px; }
+.mr_20, .mr_20\:h:hover { margin-right: 20px; }
+.mhor_20, .mhor_20\:h:hover { margin-left: 20px; margin-right: 20px; }
+.m_25, .m_25\:h:hover { margin: 25px; }
+.mt_25, .mt_25\:h:hover { margin-top: 25px; }
+.mb_25, .mb_25\:h:hover { margin-bottom: 25px; }
+.mver_25, .mver_25\:h:hover { margin-top: 25px; margin-bottom: 25px; }
+.ml_25, .ml_25\:h:hover { margin-left: 25px; }
+.mr_25, .mr_25\:h:hover { margin-right: 25px; }
+.mhor_25, .mhor_25\:h:hover { margin-left: 25px; margin-right: 25px; }
+.m_30, .m_30\:h:hover { margin: 30px; }
+.mt_30, .mt_30\:h:hover { margin-top: 30px; }
+.mb_30, .mb_30\:h:hover { margin-bottom: 30px; }
+.mver_30, .mver_30\:h:hover { margin-top: 30px; margin-bottom: 30px; }
+.ml_30, .ml_30\:h:hover { margin-left: 30px; }
+.mr_30, .mr_30\:h:hover { margin-right: 30px; }
+.mhor_30, .mhor_30\:h:hover { margin-left: 30px; margin-right: 30px; }
+.m_35, .m_35\:h:hover { margin: 35px; }
+.mt_35, .mt_35\:h:hover { margin-top: 35px; }
+.mb_35, .mb_35\:h:hover { margin-bottom: 35px; }
+.mver_35, .mver_35\:h:hover { margin-top: 35px; margin-bottom: 35px; }
+.ml_35, .ml_35\:h:hover { margin-left: 35px; }
+.mr_35, .mr_35\:h:hover { margin-right: 35px; }
+.mhor_35, .mhor_35\:h:hover { margin-left: 35px; margin-right: 35px; }
+.m_40, .m_40\:h:hover { margin: 40px; }
+.mt_40, .mt_40\:h:hover { margin-top: 40px; }
+.mb_40, .mb_40\:h:hover { margin-bottom: 40px; }
+.mver_40, .mver_40\:h:hover { margin-top: 40px; margin-bottom: 40px; }
+.ml_40, .ml_40\:h:hover { margin-left: 40px; }
+.mr_40, .mr_40\:h:hover { margin-right: 40px; }
+.mhor_40, .mhor_40\:h:hover { margin-left: 40px; margin-right: 40px; }
+.m_45, .m_45\:h:hover { margin: 45px; }
+.mt_45, .mt_45\:h:hover { margin-top: 45px; }
+.mb_45, .mb_45\:h:hover { margin-bottom: 45px; }
+.mver_45, .mver_45\:h:hover { margin-top: 45px; margin-bottom: 45px; }
+.ml_45, .ml_45\:h:hover { margin-left: 45px; }
+.mr_45, .mr_45\:h:hover { margin-right: 45px; }
+.mhor_45, .mhor_45\:h:hover { margin-left: 45px; margin-right: 45px; }
+.m_50, .m_50\:h:hover { margin: 50px; }
+.mt_50, .mt_50\:h:hover { margin-top: 50px; }
+.mb_50, .mb_50\:h:hover { margin-bottom: 50px; }
+.mver_50, .mver_50\:h:hover { margin-top: 50px; margin-bottom: 50px; }
+.ml_50, .ml_50\:h:hover { margin-left: 50px; }
+.mr_50, .mr_50\:h:hover { margin-right: 50px; }
+.mhor_50, .mhor_50\:h:hover { margin-left: 50px; margin-right: 50px; }
+.m_-80, .m_-80\:h:hover { margin: -80px; }
+.mt_-80, .mt_-80\:h:hover { margin-top: -80px; }
+.mb_-80, .mb_-80\:h:hover { margin-bottom: -80px; }
+.mver_-80, .mver_-80\:h:hover { margin-top: -80px; margin-bottom: -80px; }
+.ml_-80, .ml_-80\:h:hover { margin-left: -80px; }
+.mr_-80, .mr_-80\:h:hover { margin-right: -80px; }
+.mhor_-80, .mhor_-80\:h:hover { margin-left: -80px; margin-right: -80px; }
+.p_0, .p_0\:h:hover { padding: 0px; }
+.pt_0, .pt_0\:h:hover { padding-top: 0px; }
+.pb_0, .pb_0\:h:hover { padding-bottom: 0px; }
+.pv_0, .pv_0\:h:hover { padding-top: 0px; padding-bottom: 0px; }
+.pl_0, .pl_0\:h:hover { padding-left: 0px; }
+.pr_0, .pr_0\:h:hover { padding-right: 0px; }
+.ph_0, .ph_0\:h:hover { padding-left: 0px; padding-right: 0px; }
+.p_5, .p_5\:h:hover { padding: 5px; }
+.pt_5, .pt_5\:h:hover { padding-top: 5px; }
+.pb_5, .pb_5\:h:hover { padding-bottom: 5px; }
+.pv_5, .pv_5\:h:hover { padding-top: 5px; padding-bottom: 5px; }
+.pl_5, .pl_5\:h:hover { padding-left: 5px; }
+.pr_5, .pr_5\:h:hover { padding-right: 5px; }
+.ph_5, .ph_5\:h:hover { padding-left: 5px; padding-right: 5px; }
+.p_10, .p_10\:h:hover { padding: 10px; }
+.pt_10, .pt_10\:h:hover { padding-top: 10px; }
+.pb_10, .pb_10\:h:hover { padding-bottom: 10px; }
+.pv_10, .pv_10\:h:hover { padding-top: 10px; padding-bottom: 10px; }
+.pl_10, .pl_10\:h:hover { padding-left: 10px; }
+.pr_10, .pr_10\:h:hover { padding-right: 10px; }
+.ph_10, .ph_10\:h:hover { padding-left: 10px; padding-right: 10px; }
+.p_15, .p_15\:h:hover { padding: 15px; }
+.pt_15, .pt_15\:h:hover { padding-top: 15px; }
+.pb_15, .pb_15\:h:hover { padding-bottom: 15px; }
+.pv_15, .pv_15\:h:hover { padding-top: 15px; padding-bottom: 15px; }
+.pl_15, .pl_15\:h:hover { padding-left: 15px; }
+.pr_15, .pr_15\:h:hover { padding-right: 15px; }
+.ph_15, .ph_15\:h:hover { padding-left: 15px; padding-right: 15px; }
+.p_20, .p_20\:h:hover { padding: 20px; }
+.pt_20, .pt_20\:h:hover { padding-top: 20px; }
+.pb_20, .pb_20\:h:hover { padding-bottom: 20px; }
+.pv_20, .pv_20\:h:hover { padding-top: 20px; padding-bottom: 20px; }
+.pl_20, .pl_20\:h:hover { padding-left: 20px; }
+.pr_20, .pr_20\:h:hover { padding-right: 20px; }
+.ph_20, .ph_20\:h:hover { padding-left: 20px; padding-right: 20px; }
+.p_25, .p_25\:h:hover { padding: 25px; }
+.pt_25, .pt_25\:h:hover { padding-top: 25px; }
+.pb_25, .pb_25\:h:hover { padding-bottom: 25px; }
+.pv_25, .pv_25\:h:hover { padding-top: 25px; padding-bottom: 25px; }
+.pl_25, .pl_25\:h:hover { padding-left: 25px; }
+.pr_25, .pr_25\:h:hover { padding-right: 25px; }
+.ph_25, .ph_25\:h:hover { padding-left: 25px; padding-right: 25px; }
+.p_30, .p_30\:h:hover { padding: 30px; }
+.pt_30, .pt_30\:h:hover { padding-top: 30px; }
+.pb_30, .pb_30\:h:hover { padding-bottom: 30px; }
+.pv_30, .pv_30\:h:hover { padding-top: 30px; padding-bottom: 30px; }
+.pl_30, .pl_30\:h:hover { padding-left: 30px; }
+.pr_30, .pr_30\:h:hover { padding-right: 30px; }
+.ph_30, .ph_30\:h:hover { padding-left: 30px; padding-right: 30px; }
+.p_35, .p_35\:h:hover { padding: 35px; }
+.pt_35, .pt_35\:h:hover { padding-top: 35px; }
+.pb_35, .pb_35\:h:hover { padding-bottom: 35px; }
+.pv_35, .pv_35\:h:hover { padding-top: 35px; padding-bottom: 35px; }
+.pl_35, .pl_35\:h:hover { padding-left: 35px; }
+.pr_35, .pr_35\:h:hover { padding-right: 35px; }
+.ph_35, .ph_35\:h:hover { padding-left: 35px; padding-right: 35px; }
+.p_40, .p_40\:h:hover { padding: 40px; }
+.pt_40, .pt_40\:h:hover { padding-top: 40px; }
+.pb_40, .pb_40\:h:hover { padding-bottom: 40px; }
+.pv_40, .pv_40\:h:hover { padding-top: 40px; padding-bottom: 40px; }
+.pl_40, .pl_40\:h:hover { padding-left: 40px; }
+.pr_40, .pr_40\:h:hover { padding-right: 40px; }
+.ph_40, .ph_40\:h:hover { padding-left: 40px; padding-right: 40px; }
+.p_45, .p_45\:h:hover { padding: 45px; }
+.pt_45, .pt_45\:h:hover { padding-top: 45px; }
+.pb_45, .pb_45\:h:hover { padding-bottom: 45px; }
+.pv_45, .pv_45\:h:hover { padding-top: 45px; padding-bottom: 45px; }
+.pl_45, .pl_45\:h:hover { padding-left: 45px; }
+.pr_45, .pr_45\:h:hover { padding-right: 45px; }
+.ph_45, .ph_45\:h:hover { padding-left: 45px; padding-right: 45px; }
+.p_50, .p_50\:h:hover { padding: 50px; }
+.pt_50, .pt_50\:h:hover { padding-top: 50px; }
+.pb_50, .pb_50\:h:hover { padding-bottom: 50px; }
+.pv_50, .pv_50\:h:hover { padding-top: 50px; padding-bottom: 50px; }
+.pl_50, .pl_50\:h:hover { padding-left: 50px; }
+.pr_50, .pr_50\:h:hover { padding-right: 50px; }
+.ph_50, .ph_50\:h:hover { padding-left: 50px; padding-right: 50px; }
+.ff_pri, .ff_pri\:h:hover { font-family: 'Archivo Black', sans-serif; }
+.ff_sec, .ff_sec\:h:hover { font-family: 'Montserrat', sans-serif; }
+.fz_8, .fz_8\:h:hover { font-size: 8px; }
+.fz_10, .fz_10\:h:hover { font-size: 10px; }
+.fz_12, .fz_12\:h:hover { font-size: 12px; }
+.fz_14, .fz_14\:h:hover { font-size: 14px; }
+.fz_16, .fz_16\:h:hover { font-size: 16px; }
+.fz_18, .fz_18\:h:hover { font-size: 18px; }
+.fz_20, .fz_20\:h:hover { font-size: 20px; }
+.fz_22, .fz_22\:h:hover { font-size: 22px; }
+.fz_24, .fz_24\:h:hover { font-size: 24px; }
+.bd_n, .bd_n\:h:hover { border: none; }
+.bdt_n, .bdt_n\:h:hover { border-top: none; }
+.bdb_n, .bdb_n\:h:hover { border-bottom: none; }
+.bdl_n, .bdl_n\:h:hover { border-left: none; }
+.bdr_n, .bdr_n\:h:hover { border-right: none; }
+.bd_sep, .bd_sep\:h:hover { border: 1px solid rgba(0,0,0,0.1); }
+.bdt_sep, .bdt_sep\:h:hover { border-top: 1px solid rgba(0,0,0,0.1); }
+.bdb_sep, .bdb_sep\:h:hover { border-bottom: 1px solid rgba(0,0,0,0.1); }
+.bdl_sep, .bdl_sep\:h:hover { border-left: 1px solid rgba(0,0,0,0.1); }
+.bdr_sep, .bdr_sep\:h:hover { border-right: 1px solid rgba(0,0,0,0.1); }
+.bd_frame, .bd_frame\:h:hover { border: 10px solid #fff; }
+.bdt_frame, .bdt_frame\:h:hover { border-top: 10px solid #fff; }
+.bdb_frame, .bdb_frame\:h:hover { border-bottom: 10px solid #fff; }
+.bdl_frame, .bdl_frame\:h:hover { border-left: 10px solid #fff; }
+.bdr_frame, .bdr_frame\:h:hover { border-right: 10px solid #fff; }
+.bdrs_15, .bdrs_15\:h:hover { border-radius: 15px; }
+.bdrs_50\%, .bdrs_50\%\:h:hover { border-radius: 50%; }
+.bgc_blue, .bgc_blue\:h:hover { background-color: #51568A; }
+.c_blue, .c_blue\:h:hover { color: #51568A; }
+.bgc_light, .bgc_light\:h:hover { background-color: #fff; }
+.bgp_b, .bgp_b\:h:hover { background-position: bottom; }
+.bgp_t, .bgp_t\:h:hover { background-position: top; }
+.bgp_l, .bgp_l\:h:hover { background-position: left; }
+.bgp_r, .bgp_r\:h:hover { background-position: right; }
+.bgp_c, .bgp_c\:h:hover { background-position: center; }
+.fx_a, .fx_a\:h:hover { flex: auto; }
+.fx_n, .fx_n\:h:hover { flex: none; }
+.fxb_a, .fxb_a\:h:hover { flex-basis: auto; }
+.ord_u, .ord_u\:h:hover { order: unset; }
+.fxd_c, .fxd_c\:h:hover { flex-direction: column; }
+.fxd_cr, .fxd_cr\:h:hover { flex-direction: column-reverse; }
+.fxd_r, .fxd_r\:h:hover { flex-direction: row; }
+.fxd_rr, .fxd_rr\:h:hover { flex-direction: row-reverse; }
+.fxw_n, .fxw_n\:h:hover { flex-wrap: nowrap; }
+.fxw_w, .fxw_w\:h:hover { flex-wrap: wrap; }
+.fxw_we, .fxw_we\:h:hover { flex-wrap: wrap-reverse; }
+.fxw_u, .fxw_u\:h:hover { flex-wrap: unset; }
+.jc_u, .jc_u\:h:hover { justify-content: unset; }
+.jc_c, .jc_c\:h:hover { justify-content: center; }
+.jc_fe, .jc_fe\:h:hover { justify-content: flex-end; }
+.jc_fs, .jc_fs\:h:hover { justify-content: flex-start; }
+.jc_sa, .jc_sa\:h:hover { justify-content: space-around; }
+.jc_sb, .jc_sb\:h:hover { justify-content: space-between; }
+.ac_c, .ac_c\:h:hover { align-content: center; }
+.ac_fe, .ac_fe\:h:hover { align-content: flex-end; }
+.ac_fs, .ac_fs\:h:hover { align-content: flex-start; }
+.ac_s, .ac_s\:h:hover { align-content: stretch; }
+.ac_sa, .ac_sa\:h:hover { align-content: space-around; }
+.ac_sb, .ac_sb\:h:hover { align-content: space-between; }
+.ai_b, .ai_b\:h:hover { align-items: baseline; }
+.ai_c, .ai_c\:h:hover { align-items: center; }
+.ai_fe, .ai_fe\:h:hover { align-items: flex-end; }
+.ai_fs, .ai_fs\:h:hover { align-items: flex-start; }
+.ai_s, .ai_s\:h:hover { align-items: stretch; }
+.z_a, .z_a\:h:hover { z-index: auto; }
+.bxsh_air, .bxsh_air\:h:hover { box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.08); }
+.bxsh_n, .bxsh_n\:h:hover { box-shadow: none; }
+.tsh_n, .tsh_n\:h:hover { text-shadow: none; }
+.d_n, .d_n\:h:hover { display: none; }
+.d_i, .d_i\:h:hover { display: inline; }
+.d_b, .d_b\:h:hover { display: block; }
+.d_ib, .d_ib\:h:hover { display: inline-block; }
+.d_f, .d_f\:h:hover { display: flex; }
+.d_if, .d_if\:h:hover { display: inline-flex; }
+.d_t, .d_t\:h:hover { display: table; }
+.d_g, .d_g\:h:hover { display: grid; }
+.d_ig, .d_ig\:h:hover { display: inline-grid; }
+.pos_s, .pos_s\:h:hover { position: static; }
+.pos_r, .pos_r\:h:hover { position: relative; }
+.pos_a, .pos_a\:h:hover { position: absolute; }
+.pos_f, .pos_f\:h:hover { position: fixed; }
+.va_sup, .va_sup\:h:hover { vertical-align: super; }
+.va_t, .va_t\:h:hover { vertical-align: top; }
+.va_tt, .va_tt\:h:hover { vertical-align: text-top; }
+.va_m, .va_m\:h:hover { vertical-align: middle; }
+.va_bl, .va_bl\:h:hover { vertical-align: baseline; }
+.va_b, .va_b\:h:hover { vertical-align: bottom; }
+.va_tb, .va_tb\:h:hover { vertical-align: text-bottom; }
+.va_sub, .va_sub\:h:hover { vertical-align: sub; }
+.ta_l, .ta_l\:h:hover { text-align: left; }
+.ta_c, .ta_c\:h:hover { text-align: center; }
+.ta_r, .ta_r\:h:hover { text-align: right; }
+.ta_j, .ta_j\:h:hover { text-align: justify; }
+.tal_a, .tal_a\:h:hover { text-align-last: auto; }
+.tal_l, .tal_l\:h:hover { text-align-last: left; }
+.tal_c, .tal_c\:h:hover { text-align-last: center; }
+.tal_r, .tal_r\:h:hover { text-align-last: right; }
+.td_n, .td_n\:h:hover { text-decoration: none; }
+.td_u, .td_u\:h:hover { text-decoration: underline; }
+.td_o, .td_o\:h:hover { text-decoration: overline; }
+.td_l, .td_l\:h:hover { text-decoration: line-through; }
+.te_n, .te_n\:h:hover { text-emphasis: none; }
+.te_ac, .te_ac\:h:hover { text-emphasis: accent; }
+.te_dt, .te_dt\:h:hover { text-emphasis: dot; }
+.te_c, .te_c\:h:hover { text-emphasis: circle; }
+.te_ds, .te_ds\:h:hover { text-emphasis: disc; }
+.te_b, .te_b\:h:hover { text-emphasis: before; }
+.te_a, .te_a\:h:hover { text-emphasis: after; }
+.tt_n, .tt_n\:h:hover { text-transform: none; }
+.tt_c, .tt_c\:h:hover { text-transform: capitalize; }
+.tt_u, .tt_u\:h:hover { text-transform: uppercase; }
+.tt_l, .tt_l\:h:hover { text-transform: lowercase; }
+.whs_n, .whs_n\:h:hover { white-space: normal; }
+.whs_p, .whs_p\:h:hover { white-space: pre; }
+.whs_nw, .whs_nw\:h:hover { white-space: nowrap; }
+.whs_pw, .whs_pw\:h:hover { white-space: pre-wrap; }
+.whs_pl, .whs_pl\:h:hover { white-space: pre-line; }
+.v_v, .v_v\:h:hover { visibility: visible; }
+.v_h, .v_h\:h:hover { visibility: hidden; }
+.v_c, .v_c\:h:hover { visibility: collapse; }
+.cur_a, .cur_a\:h:hover { cursor: auto; }
+.cur_d, .cur_d\:h:hover { cursor: default; }
+.cur_c, .cur_c\:h:hover { cursor: crosshair; }
+.cur_ha, .cur_ha\:h:hover { cursor: hand; }
+.cur_he, .cur_he\:h:hover { cursor: help; }
+.cur_m, .cur_m\:h:hover { cursor: move; }
+.cur_p, .cur_p\:h:hover { cursor: pointer; }
+.cur_t, .cur_t\:h:hover { cursor: text; }
+.lis_n, .lis_n\:h:hover { list-style: none; }
+.lisp_i, .lisp_i\:h:hover { list-style-position: inside; }
+.lisp_o, .lisp_o\:h:hover { list-style-position: outside; }
+.list_n, .list_n\:h:hover { list-style-type: none; }
+.list_d, .list_d\:h:hover { list-style-type: disc; }
+.list_c, .list_c\:h:hover { list-style-type: circle; }
+.list_s, .list_s\:h:hover { list-style-type: square; }
+.list_dc, .list_dc\:h:hover { list-style-type: decimal; }
+.list_dclz, .list_dclz\:h:hover { list-style-type: decimal-leading-zero; }
+.list_lr, .list_lr\:h:hover { list-style-type: lower-roman; }
+.list_ur, .list_ur\:h:hover { list-style-type: upper-roman; }
+.lisi_n, .lisi_n\:h:hover { list-style-image: none; }
+.ov_v, .ov_v\:h:hover { overflow: visible; }
+.ov_h, .ov_h\:h:hover { overflow: hidden; }
+.ov_s, .ov_s\:h:hover { overflow: scroll; }
+.ov_a, .ov_a\:h:hover { overflow: auto; }
+.ovx_v, .ovx_v\:h:hover { overflow-x: visible; }
+.ovx_h, .ovx_h\:h:hover { overflow-x: hidden; }
+.ovx_s, .ovx_s\:h:hover { overflow-x: scroll; }
+.ovx_a, .ovx_a\:h:hover { overflow-x: auto; }
+.ovy_v, .ovy_v\:h:hover { overflow-y: visible; }
+.ovy_h, .ovy_h\:h:hover { overflow-y: hidden; }
+.ovy_s, .ovy_s\:h:hover { overflow-y: scroll; }
+.ovy_a, .ovy_a\:h:hover { overflow-y: auto; }
+.op_0, .op_0\:h:hover { opacity: 0; }
+.op_01, .op_01\:h:hover { opacity: 0.1; }
+.op_02, .op_02\:h:hover { opacity: 0.2; }
+.op_03, .op_03\:h:hover { opacity: 0.3; }
+.op_04, .op_04\:h:hover { opacity: 0.4; }
+.op_05, .op_05\:h:hover { opacity: 0.5; }
+.op_06, .op_06\:h:hover { opacity: 0.6; }
+.op_07, .op_07\:h:hover { opacity: 0.7; }
+.op_08, .op_08\:h:hover { opacity: 0.8; }
+.op_09, .op_09\:h:hover { opacity: 0.9; }
+.op_1, .op_1\:h:hover { opacity: 1; }
+
+@media only screen and (min-width: 768px) {
+  .md\:w_a, .md\:w_a\:h:hover { width: auto; }
+  .md\:w_50, .md\:w_50\:h:hover { width: 50px; }
+  .md\:miw_50, .md\:miw_50\:h:hover { min-width: 50px; }
+  .md\:maw_50, .md\:maw_50\:h:hover { max-width: 50px; }
+  .md\:w_100, .md\:w_100\:h:hover { width: 100px; }
+  .md\:miw_100, .md\:miw_100\:h:hover { min-width: 100px; }
+  .md\:maw_100, .md\:maw_100\:h:hover { max-width: 100px; }
+  .md\:w_100\%, .md\:w_100\%\:h:hover { width: 100%; }
+  .md\:miw_100\%, .md\:miw_100\%\:h:hover { min-width: 100%; }
+  .md\:maw_100\%, .md\:maw_100\%\:h:hover { max-width: 100%; }
+  .md\:h_a, .md\:h_a\:h:hover { height: auto; }
+  .md\:h_50, .md\:h_50\:h:hover { height: 50px; }
+  .md\:mih_50, .md\:mih_50\:h:hover { min-height: 50px; }
+  .md\:mah_50, .md\:mah_50\:h:hover { max-height: 50px; }
+  .md\:h_100, .md\:h_100\:h:hover { height: 100px; }
+  .md\:mih_100, .md\:mih_100\:h:hover { min-height: 100px; }
+  .md\:mah_100, .md\:mah_100\:h:hover { max-height: 100px; }
+  .md\:m_0, .md\:m_0\:h:hover { margin: 0px; }
+  .md\:mt_0, .md\:mt_0\:h:hover { margin-top: 0px; }
+  .md\:mb_0, .md\:mb_0\:h:hover { margin-bottom: 0px; }
+  .md\:mver_0, .md\:mver_0\:h:hover { margin-top: 0px; margin-bottom: 0px; }
+  .md\:ml_0, .md\:ml_0\:h:hover { margin-left: 0px; }
+  .md\:mr_0, .md\:mr_0\:h:hover { margin-right: 0px; }
+  .md\:mhor_0, .md\:mhor_0\:h:hover { margin-left: 0px; margin-right: 0px; }
+  .md\:m_5, .md\:m_5\:h:hover { margin: 5px; }
+  .md\:mt_5, .md\:mt_5\:h:hover { margin-top: 5px; }
+  .md\:mb_5, .md\:mb_5\:h:hover { margin-bottom: 5px; }
+  .md\:mver_5, .md\:mver_5\:h:hover { margin-top: 5px; margin-bottom: 5px; }
+  .md\:ml_5, .md\:ml_5\:h:hover { margin-left: 5px; }
+  .md\:mr_5, .md\:mr_5\:h:hover { margin-right: 5px; }
+  .md\:mhor_5, .md\:mhor_5\:h:hover { margin-left: 5px; margin-right: 5px; }
+  .md\:m_10, .md\:m_10\:h:hover { margin: 10px; }
+  .md\:mt_10, .md\:mt_10\:h:hover { margin-top: 10px; }
+  .md\:mb_10, .md\:mb_10\:h:hover { margin-bottom: 10px; }
+  .md\:mver_10, .md\:mver_10\:h:hover { margin-top: 10px; margin-bottom: 10px; }
+  .md\:ml_10, .md\:ml_10\:h:hover { margin-left: 10px; }
+  .md\:mr_10, .md\:mr_10\:h:hover { margin-right: 10px; }
+  .md\:mhor_10, .md\:mhor_10\:h:hover { margin-left: 10px; margin-right: 10px; }
+  .md\:m_15, .md\:m_15\:h:hover { margin: 15px; }
+  .md\:mt_15, .md\:mt_15\:h:hover { margin-top: 15px; }
+  .md\:mb_15, .md\:mb_15\:h:hover { margin-bottom: 15px; }
+  .md\:mver_15, .md\:mver_15\:h:hover { margin-top: 15px; margin-bottom: 15px; }
+  .md\:ml_15, .md\:ml_15\:h:hover { margin-left: 15px; }
+  .md\:mr_15, .md\:mr_15\:h:hover { margin-right: 15px; }
+  .md\:mhor_15, .md\:mhor_15\:h:hover { margin-left: 15px; margin-right: 15px; }
+  .md\:m_20, .md\:m_20\:h:hover { margin: 20px; }
+  .md\:mt_20, .md\:mt_20\:h:hover { margin-top: 20px; }
+  .md\:mb_20, .md\:mb_20\:h:hover { margin-bottom: 20px; }
+  .md\:mver_20, .md\:mver_20\:h:hover { margin-top: 20px; margin-bottom: 20px; }
+  .md\:ml_20, .md\:ml_20\:h:hover { margin-left: 20px; }
+  .md\:mr_20, .md\:mr_20\:h:hover { margin-right: 20px; }
+  .md\:mhor_20, .md\:mhor_20\:h:hover { margin-left: 20px; margin-right: 20px; }
+  .md\:m_25, .md\:m_25\:h:hover { margin: 25px; }
+  .md\:mt_25, .md\:mt_25\:h:hover { margin-top: 25px; }
+  .md\:mb_25, .md\:mb_25\:h:hover { margin-bottom: 25px; }
+  .md\:mver_25, .md\:mver_25\:h:hover { margin-top: 25px; margin-bottom: 25px; }
+  .md\:ml_25, .md\:ml_25\:h:hover { margin-left: 25px; }
+  .md\:mr_25, .md\:mr_25\:h:hover { margin-right: 25px; }
+  .md\:mhor_25, .md\:mhor_25\:h:hover { margin-left: 25px; margin-right: 25px; }
+  .md\:m_30, .md\:m_30\:h:hover { margin: 30px; }
+  .md\:mt_30, .md\:mt_30\:h:hover { margin-top: 30px; }
+  .md\:mb_30, .md\:mb_30\:h:hover { margin-bottom: 30px; }
+  .md\:mver_30, .md\:mver_30\:h:hover { margin-top: 30px; margin-bottom: 30px; }
+  .md\:ml_30, .md\:ml_30\:h:hover { margin-left: 30px; }
+  .md\:mr_30, .md\:mr_30\:h:hover { margin-right: 30px; }
+  .md\:mhor_30, .md\:mhor_30\:h:hover { margin-left: 30px; margin-right: 30px; }
+  .md\:m_35, .md\:m_35\:h:hover { margin: 35px; }
+  .md\:mt_35, .md\:mt_35\:h:hover { margin-top: 35px; }
+  .md\:mb_35, .md\:mb_35\:h:hover { margin-bottom: 35px; }
+  .md\:mver_35, .md\:mver_35\:h:hover { margin-top: 35px; margin-bottom: 35px; }
+  .md\:ml_35, .md\:ml_35\:h:hover { margin-left: 35px; }
+  .md\:mr_35, .md\:mr_35\:h:hover { margin-right: 35px; }
+  .md\:mhor_35, .md\:mhor_35\:h:hover { margin-left: 35px; margin-right: 35px; }
+  .md\:m_40, .md\:m_40\:h:hover { margin: 40px; }
+  .md\:mt_40, .md\:mt_40\:h:hover { margin-top: 40px; }
+  .md\:mb_40, .md\:mb_40\:h:hover { margin-bottom: 40px; }
+  .md\:mver_40, .md\:mver_40\:h:hover { margin-top: 40px; margin-bottom: 40px; }
+  .md\:ml_40, .md\:ml_40\:h:hover { margin-left: 40px; }
+  .md\:mr_40, .md\:mr_40\:h:hover { margin-right: 40px; }
+  .md\:mhor_40, .md\:mhor_40\:h:hover { margin-left: 40px; margin-right: 40px; }
+  .md\:m_45, .md\:m_45\:h:hover { margin: 45px; }
+  .md\:mt_45, .md\:mt_45\:h:hover { margin-top: 45px; }
+  .md\:mb_45, .md\:mb_45\:h:hover { margin-bottom: 45px; }
+  .md\:mver_45, .md\:mver_45\:h:hover { margin-top: 45px; margin-bottom: 45px; }
+  .md\:ml_45, .md\:ml_45\:h:hover { margin-left: 45px; }
+  .md\:mr_45, .md\:mr_45\:h:hover { margin-right: 45px; }
+  .md\:mhor_45, .md\:mhor_45\:h:hover { margin-left: 45px; margin-right: 45px; }
+  .md\:m_50, .md\:m_50\:h:hover { margin: 50px; }
+  .md\:mt_50, .md\:mt_50\:h:hover { margin-top: 50px; }
+  .md\:mb_50, .md\:mb_50\:h:hover { margin-bottom: 50px; }
+  .md\:mver_50, .md\:mver_50\:h:hover { margin-top: 50px; margin-bottom: 50px; }
+  .md\:ml_50, .md\:ml_50\:h:hover { margin-left: 50px; }
+  .md\:mr_50, .md\:mr_50\:h:hover { margin-right: 50px; }
+  .md\:mhor_50, .md\:mhor_50\:h:hover { margin-left: 50px; margin-right: 50px; }
+  .md\:m_-80, .md\:m_-80\:h:hover { margin: -80px; }
+  .md\:mt_-80, .md\:mt_-80\:h:hover { margin-top: -80px; }
+  .md\:mb_-80, .md\:mb_-80\:h:hover { margin-bottom: -80px; }
+  .md\:mver_-80, .md\:mver_-80\:h:hover { margin-top: -80px; margin-bottom: -80px; }
+  .md\:ml_-80, .md\:ml_-80\:h:hover { margin-left: -80px; }
+  .md\:mr_-80, .md\:mr_-80\:h:hover { margin-right: -80px; }
+  .md\:mhor_-80, .md\:mhor_-80\:h:hover { margin-left: -80px; margin-right: -80px; }
+  .md\:p_0, .md\:p_0\:h:hover { padding: 0px; }
+  .md\:pt_0, .md\:pt_0\:h:hover { padding-top: 0px; }
+  .md\:pb_0, .md\:pb_0\:h:hover { padding-bottom: 0px; }
+  .md\:pv_0, .md\:pv_0\:h:hover { padding-top: 0px; padding-bottom: 0px; }
+  .md\:pl_0, .md\:pl_0\:h:hover { padding-left: 0px; }
+  .md\:pr_0, .md\:pr_0\:h:hover { padding-right: 0px; }
+  .md\:ph_0, .md\:ph_0\:h:hover { padding-left: 0px; padding-right: 0px; }
+  .md\:p_5, .md\:p_5\:h:hover { padding: 5px; }
+  .md\:pt_5, .md\:pt_5\:h:hover { padding-top: 5px; }
+  .md\:pb_5, .md\:pb_5\:h:hover { padding-bottom: 5px; }
+  .md\:pv_5, .md\:pv_5\:h:hover { padding-top: 5px; padding-bottom: 5px; }
+  .md\:pl_5, .md\:pl_5\:h:hover { padding-left: 5px; }
+  .md\:pr_5, .md\:pr_5\:h:hover { padding-right: 5px; }
+  .md\:ph_5, .md\:ph_5\:h:hover { padding-left: 5px; padding-right: 5px; }
+  .md\:p_10, .md\:p_10\:h:hover { padding: 10px; }
+  .md\:pt_10, .md\:pt_10\:h:hover { padding-top: 10px; }
+  .md\:pb_10, .md\:pb_10\:h:hover { padding-bottom: 10px; }
+  .md\:pv_10, .md\:pv_10\:h:hover { padding-top: 10px; padding-bottom: 10px; }
+  .md\:pl_10, .md\:pl_10\:h:hover { padding-left: 10px; }
+  .md\:pr_10, .md\:pr_10\:h:hover { padding-right: 10px; }
+  .md\:ph_10, .md\:ph_10\:h:hover { padding-left: 10px; padding-right: 10px; }
+  .md\:p_15, .md\:p_15\:h:hover { padding: 15px; }
+  .md\:pt_15, .md\:pt_15\:h:hover { padding-top: 15px; }
+  .md\:pb_15, .md\:pb_15\:h:hover { padding-bottom: 15px; }
+  .md\:pv_15, .md\:pv_15\:h:hover { padding-top: 15px; padding-bottom: 15px; }
+  .md\:pl_15, .md\:pl_15\:h:hover { padding-left: 15px; }
+  .md\:pr_15, .md\:pr_15\:h:hover { padding-right: 15px; }
+  .md\:ph_15, .md\:ph_15\:h:hover { padding-left: 15px; padding-right: 15px; }
+  .md\:p_20, .md\:p_20\:h:hover { padding: 20px; }
+  .md\:pt_20, .md\:pt_20\:h:hover { padding-top: 20px; }
+  .md\:pb_20, .md\:pb_20\:h:hover { padding-bottom: 20px; }
+  .md\:pv_20, .md\:pv_20\:h:hover { padding-top: 20px; padding-bottom: 20px; }
+  .md\:pl_20, .md\:pl_20\:h:hover { padding-left: 20px; }
+  .md\:pr_20, .md\:pr_20\:h:hover { padding-right: 20px; }
+  .md\:ph_20, .md\:ph_20\:h:hover { padding-left: 20px; padding-right: 20px; }
+  .md\:p_25, .md\:p_25\:h:hover { padding: 25px; }
+  .md\:pt_25, .md\:pt_25\:h:hover { padding-top: 25px; }
+  .md\:pb_25, .md\:pb_25\:h:hover { padding-bottom: 25px; }
+  .md\:pv_25, .md\:pv_25\:h:hover { padding-top: 25px; padding-bottom: 25px; }
+  .md\:pl_25, .md\:pl_25\:h:hover { padding-left: 25px; }
+  .md\:pr_25, .md\:pr_25\:h:hover { padding-right: 25px; }
+  .md\:ph_25, .md\:ph_25\:h:hover { padding-left: 25px; padding-right: 25px; }
+  .md\:p_30, .md\:p_30\:h:hover { padding: 30px; }
+  .md\:pt_30, .md\:pt_30\:h:hover { padding-top: 30px; }
+  .md\:pb_30, .md\:pb_30\:h:hover { padding-bottom: 30px; }
+  .md\:pv_30, .md\:pv_30\:h:hover { padding-top: 30px; padding-bottom: 30px; }
+  .md\:pl_30, .md\:pl_30\:h:hover { padding-left: 30px; }
+  .md\:pr_30, .md\:pr_30\:h:hover { padding-right: 30px; }
+  .md\:ph_30, .md\:ph_30\:h:hover { padding-left: 30px; padding-right: 30px; }
+  .md\:p_35, .md\:p_35\:h:hover { padding: 35px; }
+  .md\:pt_35, .md\:pt_35\:h:hover { padding-top: 35px; }
+  .md\:pb_35, .md\:pb_35\:h:hover { padding-bottom: 35px; }
+  .md\:pv_35, .md\:pv_35\:h:hover { padding-top: 35px; padding-bottom: 35px; }
+  .md\:pl_35, .md\:pl_35\:h:hover { padding-left: 35px; }
+  .md\:pr_35, .md\:pr_35\:h:hover { padding-right: 35px; }
+  .md\:ph_35, .md\:ph_35\:h:hover { padding-left: 35px; padding-right: 35px; }
+  .md\:p_40, .md\:p_40\:h:hover { padding: 40px; }
+  .md\:pt_40, .md\:pt_40\:h:hover { padding-top: 40px; }
+  .md\:pb_40, .md\:pb_40\:h:hover { padding-bottom: 40px; }
+  .md\:pv_40, .md\:pv_40\:h:hover { padding-top: 40px; padding-bottom: 40px; }
+  .md\:pl_40, .md\:pl_40\:h:hover { padding-left: 40px; }
+  .md\:pr_40, .md\:pr_40\:h:hover { padding-right: 40px; }
+  .md\:ph_40, .md\:ph_40\:h:hover { padding-left: 40px; padding-right: 40px; }
+  .md\:p_45, .md\:p_45\:h:hover { padding: 45px; }
+  .md\:pt_45, .md\:pt_45\:h:hover { padding-top: 45px; }
+  .md\:pb_45, .md\:pb_45\:h:hover { padding-bottom: 45px; }
+  .md\:pv_45, .md\:pv_45\:h:hover { padding-top: 45px; padding-bottom: 45px; }
+  .md\:pl_45, .md\:pl_45\:h:hover { padding-left: 45px; }
+  .md\:pr_45, .md\:pr_45\:h:hover { padding-right: 45px; }
+  .md\:ph_45, .md\:ph_45\:h:hover { padding-left: 45px; padding-right: 45px; }
+  .md\:p_50, .md\:p_50\:h:hover { padding: 50px; }
+  .md\:pt_50, .md\:pt_50\:h:hover { padding-top: 50px; }
+  .md\:pb_50, .md\:pb_50\:h:hover { padding-bottom: 50px; }
+  .md\:pv_50, .md\:pv_50\:h:hover { padding-top: 50px; padding-bottom: 50px; }
+  .md\:pl_50, .md\:pl_50\:h:hover { padding-left: 50px; }
+  .md\:pr_50, .md\:pr_50\:h:hover { padding-right: 50px; }
+  .md\:ph_50, .md\:ph_50\:h:hover { padding-left: 50px; padding-right: 50px; }
+  .md\:ff_pri, .md\:ff_pri\:h:hover { font-family: 'Archivo Black', sans-serif; }
+  .md\:ff_sec, .md\:ff_sec\:h:hover { font-family: 'Montserrat', sans-serif; }
+  .md\:fz_8, .md\:fz_8\:h:hover { font-size: 8px; }
+  .md\:fz_10, .md\:fz_10\:h:hover { font-size: 10px; }
+  .md\:fz_12, .md\:fz_12\:h:hover { font-size: 12px; }
+  .md\:fz_14, .md\:fz_14\:h:hover { font-size: 14px; }
+  .md\:fz_16, .md\:fz_16\:h:hover { font-size: 16px; }
+  .md\:fz_18, .md\:fz_18\:h:hover { font-size: 18px; }
+  .md\:fz_20, .md\:fz_20\:h:hover { font-size: 20px; }
+  .md\:fz_22, .md\:fz_22\:h:hover { font-size: 22px; }
+  .md\:fz_24, .md\:fz_24\:h:hover { font-size: 24px; }
+  .md\:bd_n, .md\:bd_n\:h:hover { border: none; }
+  .md\:bdt_n, .md\:bdt_n\:h:hover { border-top: none; }
+  .md\:bdb_n, .md\:bdb_n\:h:hover { border-bottom: none; }
+  .md\:bdl_n, .md\:bdl_n\:h:hover { border-left: none; }
+  .md\:bdr_n, .md\:bdr_n\:h:hover { border-right: none; }
+  .md\:bd_sep, .md\:bd_sep\:h:hover { border: 1px solid rgba(0,0,0,0.1); }
+  .md\:bdt_sep, .md\:bdt_sep\:h:hover { border-top: 1px solid rgba(0,0,0,0.1); }
+  .md\:bdb_sep, .md\:bdb_sep\:h:hover { border-bottom: 1px solid rgba(0,0,0,0.1); }
+  .md\:bdl_sep, .md\:bdl_sep\:h:hover { border-left: 1px solid rgba(0,0,0,0.1); }
+  .md\:bdr_sep, .md\:bdr_sep\:h:hover { border-right: 1px solid rgba(0,0,0,0.1); }
+  .md\:bd_frame, .md\:bd_frame\:h:hover { border: 10px solid #fff; }
+  .md\:bdt_frame, .md\:bdt_frame\:h:hover { border-top: 10px solid #fff; }
+  .md\:bdb_frame, .md\:bdb_frame\:h:hover { border-bottom: 10px solid #fff; }
+  .md\:bdl_frame, .md\:bdl_frame\:h:hover { border-left: 10px solid #fff; }
+  .md\:bdr_frame, .md\:bdr_frame\:h:hover { border-right: 10px solid #fff; }
+  .md\:bdrs_15, .md\:bdrs_15\:h:hover { border-radius: 15px; }
+  .md\:bdrs_50\%, .md\:bdrs_50\%\:h:hover { border-radius: 50%; }
+  .md\:bgc_blue, .md\:bgc_blue\:h:hover { background-color: #51568A; }
+  .md\:c_blue, .md\:c_blue\:h:hover { color: #51568A; }
+  .md\:bgc_light, .md\:bgc_light\:h:hover { background-color: #fff; }
+  .md\:bgc_blue, .md\:bgc_blue\:h:hover { background-color: #ECF0FB; }
+  .md\:bgp_b, .md\:bgp_b\:h:hover { background-position: bottom; }
+  .md\:bgp_t, .md\:bgp_t\:h:hover { background-position: top; }
+  .md\:bgp_l, .md\:bgp_l\:h:hover { background-position: left; }
+  .md\:bgp_r, .md\:bgp_r\:h:hover { background-position: right; }
+  .md\:bgp_c, .md\:bgp_c\:h:hover { background-position: center; }
+  .md\:fx_a, .md\:fx_a\:h:hover { flex: auto; }
+  .md\:fx_n, .md\:fx_n\:h:hover { flex: none; }
+  .md\:fxb_a, .md\:fxb_a\:h:hover { flex-basis: auto; }
+  .md\:ord_u, .md\:ord_u\:h:hover { order: unset; }
+  .md\:fxd_c, .md\:fxd_c\:h:hover { flex-direction: column; }
+  .md\:fxd_cr, .md\:fxd_cr\:h:hover { flex-direction: column-reverse; }
+  .md\:fxd_r, .md\:fxd_r\:h:hover { flex-direction: row; }
+  .md\:fxd_rr, .md\:fxd_rr\:h:hover { flex-direction: row-reverse; }
+  .md\:fxw_n, .md\:fxw_n\:h:hover { flex-wrap: nowrap; }
+  .md\:fxw_w, .md\:fxw_w\:h:hover { flex-wrap: wrap; }
+  .md\:fxw_we, .md\:fxw_we\:h:hover { flex-wrap: wrap-reverse; }
+  .md\:fxw_u, .md\:fxw_u\:h:hover { flex-wrap: unset; }
+  .md\:jc_u, .md\:jc_u\:h:hover { justify-content: unset; }
+  .md\:jc_c, .md\:jc_c\:h:hover { justify-content: center; }
+  .md\:jc_fe, .md\:jc_fe\:h:hover { justify-content: flex-end; }
+  .md\:jc_fs, .md\:jc_fs\:h:hover { justify-content: flex-start; }
+  .md\:jc_sa, .md\:jc_sa\:h:hover { justify-content: space-around; }
+  .md\:jc_sb, .md\:jc_sb\:h:hover { justify-content: space-between; }
+  .md\:ac_c, .md\:ac_c\:h:hover { align-content: center; }
+  .md\:ac_fe, .md\:ac_fe\:h:hover { align-content: flex-end; }
+  .md\:ac_fs, .md\:ac_fs\:h:hover { align-content: flex-start; }
+  .md\:ac_s, .md\:ac_s\:h:hover { align-content: stretch; }
+  .md\:ac_sa, .md\:ac_sa\:h:hover { align-content: space-around; }
+  .md\:ac_sb, .md\:ac_sb\:h:hover { align-content: space-between; }
+  .md\:ai_b, .md\:ai_b\:h:hover { align-items: baseline; }
+  .md\:ai_c, .md\:ai_c\:h:hover { align-items: center; }
+  .md\:ai_fe, .md\:ai_fe\:h:hover { align-items: flex-end; }
+  .md\:ai_fs, .md\:ai_fs\:h:hover { align-items: flex-start; }
+  .md\:ai_s, .md\:ai_s\:h:hover { align-items: stretch; }
+  .md\:z_a, .md\:z_a\:h:hover { z-index: auto; }
+  .md\:bxsh_air, .md\:bxsh_air\:h:hover { box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.08); }
+  .md\:bxsh_n, .md\:bxsh_n\:h:hover { box-shadow: none; }
+  .md\:tsh_n, .md\:tsh_n\:h:hover { text-shadow: none; }
+  .md\:d_n, .md\:d_n\:h:hover { display: none; }
+  .md\:d_i, .md\:d_i\:h:hover { display: inline; }
+  .md\:d_b, .md\:d_b\:h:hover { display: block; }
+  .md\:d_ib, .md\:d_ib\:h:hover { display: inline-block; }
+  .md\:d_f, .md\:d_f\:h:hover { display: flex; }
+  .md\:d_if, .md\:d_if\:h:hover { display: inline-flex; }
+  .md\:d_t, .md\:d_t\:h:hover { display: table; }
+  .md\:d_g, .md\:d_g\:h:hover { display: grid; }
+  .md\:d_ig, .md\:d_ig\:h:hover { display: inline-grid; }
+  .md\:pos_s, .md\:pos_s\:h:hover { position: static; }
+  .md\:pos_r, .md\:pos_r\:h:hover { position: relative; }
+  .md\:pos_a, .md\:pos_a\:h:hover { position: absolute; }
+  .md\:pos_f, .md\:pos_f\:h:hover { position: fixed; }
+  .md\:va_sup, .md\:va_sup\:h:hover { vertical-align: super; }
+  .md\:va_t, .md\:va_t\:h:hover { vertical-align: top; }
+  .md\:va_tt, .md\:va_tt\:h:hover { vertical-align: text-top; }
+  .md\:va_m, .md\:va_m\:h:hover { vertical-align: middle; }
+  .md\:va_bl, .md\:va_bl\:h:hover { vertical-align: baseline; }
+  .md\:va_b, .md\:va_b\:h:hover { vertical-align: bottom; }
+  .md\:va_tb, .md\:va_tb\:h:hover { vertical-align: text-bottom; }
+  .md\:va_sub, .md\:va_sub\:h:hover { vertical-align: sub; }
+  .md\:ta_l, .md\:ta_l\:h:hover { text-align: left; }
+  .md\:ta_c, .md\:ta_c\:h:hover { text-align: center; }
+  .md\:ta_r, .md\:ta_r\:h:hover { text-align: right; }
+  .md\:ta_j, .md\:ta_j\:h:hover { text-align: justify; }
+  .md\:tal_a, .md\:tal_a\:h:hover { text-align-last: auto; }
+  .md\:tal_l, .md\:tal_l\:h:hover { text-align-last: left; }
+  .md\:tal_c, .md\:tal_c\:h:hover { text-align-last: center; }
+  .md\:tal_r, .md\:tal_r\:h:hover { text-align-last: right; }
+  .md\:td_n, .md\:td_n\:h:hover { text-decoration: none; }
+  .md\:td_u, .md\:td_u\:h:hover { text-decoration: underline; }
+  .md\:td_o, .md\:td_o\:h:hover { text-decoration: overline; }
+  .md\:td_l, .md\:td_l\:h:hover { text-decoration: line-through; }
+  .md\:te_n, .md\:te_n\:h:hover { text-emphasis: none; }
+  .md\:te_ac, .md\:te_ac\:h:hover { text-emphasis: accent; }
+  .md\:te_dt, .md\:te_dt\:h:hover { text-emphasis: dot; }
+  .md\:te_c, .md\:te_c\:h:hover { text-emphasis: circle; }
+  .md\:te_ds, .md\:te_ds\:h:hover { text-emphasis: disc; }
+  .md\:te_b, .md\:te_b\:h:hover { text-emphasis: before; }
+  .md\:te_a, .md\:te_a\:h:hover { text-emphasis: after; }
+  .md\:tt_n, .md\:tt_n\:h:hover { text-transform: none; }
+  .md\:tt_c, .md\:tt_c\:h:hover { text-transform: capitalize; }
+  .md\:tt_u, .md\:tt_u\:h:hover { text-transform: uppercase; }
+  .md\:tt_l, .md\:tt_l\:h:hover { text-transform: lowercase; }
+  .md\:whs_n, .md\:whs_n\:h:hover { white-space: normal; }
+  .md\:whs_p, .md\:whs_p\:h:hover { white-space: pre; }
+  .md\:whs_nw, .md\:whs_nw\:h:hover { white-space: nowrap; }
+  .md\:whs_pw, .md\:whs_pw\:h:hover { white-space: pre-wrap; }
+  .md\:whs_pl, .md\:whs_pl\:h:hover { white-space: pre-line; }
+  .md\:v_v, .md\:v_v\:h:hover { visibility: visible; }
+  .md\:v_h, .md\:v_h\:h:hover { visibility: hidden; }
+  .md\:v_c, .md\:v_c\:h:hover { visibility: collapse; }
+  .md\:cur_a, .md\:cur_a\:h:hover { cursor: auto; }
+  .md\:cur_d, .md\:cur_d\:h:hover { cursor: default; }
+  .md\:cur_c, .md\:cur_c\:h:hover { cursor: crosshair; }
+  .md\:cur_ha, .md\:cur_ha\:h:hover { cursor: hand; }
+  .md\:cur_he, .md\:cur_he\:h:hover { cursor: help; }
+  .md\:cur_m, .md\:cur_m\:h:hover { cursor: move; }
+  .md\:cur_p, .md\:cur_p\:h:hover { cursor: pointer; }
+  .md\:cur_t, .md\:cur_t\:h:hover { cursor: text; }
+  .md\:lis_n, .md\:lis_n\:h:hover { list-style: none; }
+  .md\:lisp_i, .md\:lisp_i\:h:hover { list-style-position: inside; }
+  .md\:lisp_o, .md\:lisp_o\:h:hover { list-style-position: outside; }
+  .md\:list_n, .md\:list_n\:h:hover { list-style-type: none; }
+  .md\:list_d, .md\:list_d\:h:hover { list-style-type: disc; }
+  .md\:list_c, .md\:list_c\:h:hover { list-style-type: circle; }
+  .md\:list_s, .md\:list_s\:h:hover { list-style-type: square; }
+  .md\:list_dc, .md\:list_dc\:h:hover { list-style-type: decimal; }
+  .md\:list_dclz, .md\:list_dclz\:h:hover { list-style-type: decimal-leading-zero; }
+  .md\:list_lr, .md\:list_lr\:h:hover { list-style-type: lower-roman; }
+  .md\:list_ur, .md\:list_ur\:h:hover { list-style-type: upper-roman; }
+  .md\:lisi_n, .md\:lisi_n\:h:hover { list-style-image: none; }
+  .md\:ov_v, .md\:ov_v\:h:hover { overflow: visible; }
+  .md\:ov_h, .md\:ov_h\:h:hover { overflow: hidden; }
+  .md\:ov_s, .md\:ov_s\:h:hover { overflow: scroll; }
+  .md\:ov_a, .md\:ov_a\:h:hover { overflow: auto; }
+  .md\:ovx_v, .md\:ovx_v\:h:hover { overflow-x: visible; }
+  .md\:ovx_h, .md\:ovx_h\:h:hover { overflow-x: hidden; }
+  .md\:ovx_s, .md\:ovx_s\:h:hover { overflow-x: scroll; }
+  .md\:ovx_a, .md\:ovx_a\:h:hover { overflow-x: auto; }
+  .md\:ovy_v, .md\:ovy_v\:h:hover { overflow-y: visible; }
+  .md\:ovy_h, .md\:ovy_h\:h:hover { overflow-y: hidden; }
+  .md\:ovy_s, .md\:ovy_s\:h:hover { overflow-y: scroll; }
+  .md\:ovy_a, .md\:ovy_a\:h:hover { overflow-y: auto; }
+  .md\:op_0, .md\:op_0\:h:hover { opacity: 0; }
+  .md\:op_01, .md\:op_01\:h:hover { opacity: 0.1; }
+  .md\:op_02, .md\:op_02\:h:hover { opacity: 0.2; }
+  .md\:op_03, .md\:op_03\:h:hover { opacity: 0.3; }
+  .md\:op_04, .md\:op_04\:h:hover { opacity: 0.4; }
+  .md\:op_05, .md\:op_05\:h:hover { opacity: 0.5; }
+  .md\:op_06, .md\:op_06\:h:hover { opacity: 0.6; }
+  .md\:op_07, .md\:op_07\:h:hover { opacity: 0.7; }
+  .md\:op_08, .md\:op_08\:h:hover { opacity: 0.8; }
+  .md\:op_09, .md\:op_09\:h:hover { opacity: 0.9; }
+  .md\:op_1, .md\:op_1\:h:hover { opacity: 1; }
+}
+
+@media only screen and (min-width: 1024px) {
+.lg\:w_a, .lg\:w_a\:h:hover { width: auto; }
+.lg\:w_50, .lg\:w_50\:h:hover { width: 50px; }
+.lg\:miw_50, .lg\:miw_50\:h:hover { min-width: 50px; }
+.lg\:maw_50, .lg\:maw_50\:h:hover { max-width: 50px; }
+.lg\:w_100, .lg\:w_100\:h:hover { width: 100px; }
+.lg\:miw_100, .lg\:miw_100\:h:hover { min-width: 100px; }
+.lg\:maw_100, .lg\:maw_100\:h:hover { max-width: 100px; }
+.lg\:w_100\%, .lg\:w_100\%\:h:hover { width: 100%; }
+.lg\:miw_100\%, .lg\:miw_100\%\:h:hover { min-width: 100%; }
+.lg\:maw_100\%, .lg\:maw_100\%\:h:hover { max-width: 100%; }
+.lg\:h_a, .lg\:h_a\:h:hover { height: auto; }
+.lg\:h_50, .lg\:h_50\:h:hover { height: 50px; }
+.lg\:mih_50, .lg\:mih_50\:h:hover { min-height: 50px; }
+.lg\:mah_50, .lg\:mah_50\:h:hover { max-height: 50px; }
+.lg\:h_100, .lg\:h_100\:h:hover { height: 100px; }
+.lg\:mih_100, .lg\:mih_100\:h:hover { min-height: 100px; }
+.lg\:mah_100, .lg\:mah_100\:h:hover { max-height: 100px; }
+.lg\:m_0, .lg\:m_0\:h:hover { margin: 0px; }
+.lg\:mt_0, .lg\:mt_0\:h:hover { margin-top: 0px; }
+.lg\:mb_0, .lg\:mb_0\:h:hover { margin-bottom: 0px; }
+.lg\:mver_0, .lg\:mver_0\:h:hover { margin-top: 0px; margin-bottom: 0px; }
+.lg\:ml_0, .lg\:ml_0\:h:hover { margin-left: 0px; }
+.lg\:mr_0, .lg\:mr_0\:h:hover { margin-right: 0px; }
+.lg\:mhor_0, .lg\:mhor_0\:h:hover { margin-left: 0px; margin-right: 0px; }
+.lg\:m_5, .lg\:m_5\:h:hover { margin: 5px; }
+.lg\:mt_5, .lg\:mt_5\:h:hover { margin-top: 5px; }
+.lg\:mb_5, .lg\:mb_5\:h:hover { margin-bottom: 5px; }
+.lg\:mver_5, .lg\:mver_5\:h:hover { margin-top: 5px; margin-bottom: 5px; }
+.lg\:ml_5, .lg\:ml_5\:h:hover { margin-left: 5px; }
+.lg\:mr_5, .lg\:mr_5\:h:hover { margin-right: 5px; }
+.lg\:mhor_5, .lg\:mhor_5\:h:hover { margin-left: 5px; margin-right: 5px; }
+.lg\:m_10, .lg\:m_10\:h:hover { margin: 10px; }
+.lg\:mt_10, .lg\:mt_10\:h:hover { margin-top: 10px; }
+.lg\:mb_10, .lg\:mb_10\:h:hover { margin-bottom: 10px; }
+.lg\:mver_10, .lg\:mver_10\:h:hover { margin-top: 10px; margin-bottom: 10px; }
+.lg\:ml_10, .lg\:ml_10\:h:hover { margin-left: 10px; }
+.lg\:mr_10, .lg\:mr_10\:h:hover { margin-right: 10px; }
+.lg\:mhor_10, .lg\:mhor_10\:h:hover { margin-left: 10px; margin-right: 10px; }
+.lg\:m_15, .lg\:m_15\:h:hover { margin: 15px; }
+.lg\:mt_15, .lg\:mt_15\:h:hover { margin-top: 15px; }
+.lg\:mb_15, .lg\:mb_15\:h:hover { margin-bottom: 15px; }
+.lg\:mver_15, .lg\:mver_15\:h:hover { margin-top: 15px; margin-bottom: 15px; }
+.lg\:ml_15, .lg\:ml_15\:h:hover { margin-left: 15px; }
+.lg\:mr_15, .lg\:mr_15\:h:hover { margin-right: 15px; }
+.lg\:mhor_15, .lg\:mhor_15\:h:hover { margin-left: 15px; margin-right: 15px; }
+.lg\:m_20, .lg\:m_20\:h:hover { margin: 20px; }
+.lg\:mt_20, .lg\:mt_20\:h:hover { margin-top: 20px; }
+.lg\:mb_20, .lg\:mb_20\:h:hover { margin-bottom: 20px; }
+.lg\:mver_20, .lg\:mver_20\:h:hover { margin-top: 20px; margin-bottom: 20px; }
+.lg\:ml_20, .lg\:ml_20\:h:hover { margin-left: 20px; }
+.lg\:mr_20, .lg\:mr_20\:h:hover { margin-right: 20px; }
+.lg\:mhor_20, .lg\:mhor_20\:h:hover { margin-left: 20px; margin-right: 20px; }
+.lg\:m_25, .lg\:m_25\:h:hover { margin: 25px; }
+.lg\:mt_25, .lg\:mt_25\:h:hover { margin-top: 25px; }
+.lg\:mb_25, .lg\:mb_25\:h:hover { margin-bottom: 25px; }
+.lg\:mver_25, .lg\:mver_25\:h:hover { margin-top: 25px; margin-bottom: 25px; }
+.lg\:ml_25, .lg\:ml_25\:h:hover { margin-left: 25px; }
+.lg\:mr_25, .lg\:mr_25\:h:hover { margin-right: 25px; }
+.lg\:mhor_25, .lg\:mhor_25\:h:hover { margin-left: 25px; margin-right: 25px; }
+.lg\:m_30, .lg\:m_30\:h:hover { margin: 30px; }
+.lg\:mt_30, .lg\:mt_30\:h:hover { margin-top: 30px; }
+.lg\:mb_30, .lg\:mb_30\:h:hover { margin-bottom: 30px; }
+.lg\:mver_30, .lg\:mver_30\:h:hover { margin-top: 30px; margin-bottom: 30px; }
+.lg\:ml_30, .lg\:ml_30\:h:hover { margin-left: 30px; }
+.lg\:mr_30, .lg\:mr_30\:h:hover { margin-right: 30px; }
+.lg\:mhor_30, .lg\:mhor_30\:h:hover { margin-left: 30px; margin-right: 30px; }
+.lg\:m_35, .lg\:m_35\:h:hover { margin: 35px; }
+.lg\:mt_35, .lg\:mt_35\:h:hover { margin-top: 35px; }
+.lg\:mb_35, .lg\:mb_35\:h:hover { margin-bottom: 35px; }
+.lg\:mver_35, .lg\:mver_35\:h:hover { margin-top: 35px; margin-bottom: 35px; }
+.lg\:ml_35, .lg\:ml_35\:h:hover { margin-left: 35px; }
+.lg\:mr_35, .lg\:mr_35\:h:hover { margin-right: 35px; }
+.lg\:mhor_35, .lg\:mhor_35\:h:hover { margin-left: 35px; margin-right: 35px; }
+.lg\:m_40, .lg\:m_40\:h:hover { margin: 40px; }
+.lg\:mt_40, .lg\:mt_40\:h:hover { margin-top: 40px; }
+.lg\:mb_40, .lg\:mb_40\:h:hover { margin-bottom: 40px; }
+.lg\:mver_40, .lg\:mver_40\:h:hover { margin-top: 40px; margin-bottom: 40px; }
+.lg\:ml_40, .lg\:ml_40\:h:hover { margin-left: 40px; }
+.lg\:mr_40, .lg\:mr_40\:h:hover { margin-right: 40px; }
+.lg\:mhor_40, .lg\:mhor_40\:h:hover { margin-left: 40px; margin-right: 40px; }
+.lg\:m_45, .lg\:m_45\:h:hover { margin: 45px; }
+.lg\:mt_45, .lg\:mt_45\:h:hover { margin-top: 45px; }
+.lg\:mb_45, .lg\:mb_45\:h:hover { margin-bottom: 45px; }
+.lg\:mver_45, .lg\:mver_45\:h:hover { margin-top: 45px; margin-bottom: 45px; }
+.lg\:ml_45, .lg\:ml_45\:h:hover { margin-left: 45px; }
+.lg\:mr_45, .lg\:mr_45\:h:hover { margin-right: 45px; }
+.lg\:mhor_45, .lg\:mhor_45\:h:hover { margin-left: 45px; margin-right: 45px; }
+.lg\:m_50, .lg\:m_50\:h:hover { margin: 50px; }
+.lg\:mt_50, .lg\:mt_50\:h:hover { margin-top: 50px; }
+.lg\:mb_50, .lg\:mb_50\:h:hover { margin-bottom: 50px; }
+.lg\:mver_50, .lg\:mver_50\:h:hover { margin-top: 50px; margin-bottom: 50px; }
+.lg\:ml_50, .lg\:ml_50\:h:hover { margin-left: 50px; }
+.lg\:mr_50, .lg\:mr_50\:h:hover { margin-right: 50px; }
+.lg\:mhor_50, .lg\:mhor_50\:h:hover { margin-left: 50px; margin-right: 50px; }
+.lg\:m_-80, .lg\:m_-80\:h:hover { margin: -80px; }
+.lg\:mt_-80, .lg\:mt_-80\:h:hover { margin-top: -80px; }
+.lg\:mb_-80, .lg\:mb_-80\:h:hover { margin-bottom: -80px; }
+.lg\:mver_-80, .lg\:mver_-80\:h:hover { margin-top: -80px; margin-bottom: -80px; }
+.lg\:ml_-80, .lg\:ml_-80\:h:hover { margin-left: -80px; }
+.lg\:mr_-80, .lg\:mr_-80\:h:hover { margin-right: -80px; }
+.lg\:mhor_-80, .lg\:mhor_-80\:h:hover { margin-left: -80px; margin-right: -80px; }
+.lg\:p_0, .lg\:p_0\:h:hover { padding: 0px; }
+.lg\:pt_0, .lg\:pt_0\:h:hover { padding-top: 0px; }
+.lg\:pb_0, .lg\:pb_0\:h:hover { padding-bottom: 0px; }
+.lg\:pv_0, .lg\:pv_0\:h:hover { padding-top: 0px; padding-bottom: 0px; }
+.lg\:pl_0, .lg\:pl_0\:h:hover { padding-left: 0px; }
+.lg\:pr_0, .lg\:pr_0\:h:hover { padding-right: 0px; }
+.lg\:ph_0, .lg\:ph_0\:h:hover { padding-left: 0px; padding-right: 0px; }
+.lg\:p_5, .lg\:p_5\:h:hover { padding: 5px; }
+.lg\:pt_5, .lg\:pt_5\:h:hover { padding-top: 5px; }
+.lg\:pb_5, .lg\:pb_5\:h:hover { padding-bottom: 5px; }
+.lg\:pv_5, .lg\:pv_5\:h:hover { padding-top: 5px; padding-bottom: 5px; }
+.lg\:pl_5, .lg\:pl_5\:h:hover { padding-left: 5px; }
+.lg\:pr_5, .lg\:pr_5\:h:hover { padding-right: 5px; }
+.lg\:ph_5, .lg\:ph_5\:h:hover { padding-left: 5px; padding-right: 5px; }
+.lg\:p_10, .lg\:p_10\:h:hover { padding: 10px; }
+.lg\:pt_10, .lg\:pt_10\:h:hover { padding-top: 10px; }
+.lg\:pb_10, .lg\:pb_10\:h:hover { padding-bottom: 10px; }
+.lg\:pv_10, .lg\:pv_10\:h:hover { padding-top: 10px; padding-bottom: 10px; }
+.lg\:pl_10, .lg\:pl_10\:h:hover { padding-left: 10px; }
+.lg\:pr_10, .lg\:pr_10\:h:hover { padding-right: 10px; }
+.lg\:ph_10, .lg\:ph_10\:h:hover { padding-left: 10px; padding-right: 10px; }
+.lg\:p_15, .lg\:p_15\:h:hover { padding: 15px; }
+.lg\:pt_15, .lg\:pt_15\:h:hover { padding-top: 15px; }
+.lg\:pb_15, .lg\:pb_15\:h:hover { padding-bottom: 15px; }
+.lg\:pv_15, .lg\:pv_15\:h:hover { padding-top: 15px; padding-bottom: 15px; }
+.lg\:pl_15, .lg\:pl_15\:h:hover { padding-left: 15px; }
+.lg\:pr_15, .lg\:pr_15\:h:hover { padding-right: 15px; }
+.lg\:ph_15, .lg\:ph_15\:h:hover { padding-left: 15px; padding-right: 15px; }
+.lg\:p_20, .lg\:p_20\:h:hover { padding: 20px; }
+.lg\:pt_20, .lg\:pt_20\:h:hover { padding-top: 20px; }
+.lg\:pb_20, .lg\:pb_20\:h:hover { padding-bottom: 20px; }
+.lg\:pv_20, .lg\:pv_20\:h:hover { padding-top: 20px; padding-bottom: 20px; }
+.lg\:pl_20, .lg\:pl_20\:h:hover { padding-left: 20px; }
+.lg\:pr_20, .lg\:pr_20\:h:hover { padding-right: 20px; }
+.lg\:ph_20, .lg\:ph_20\:h:hover { padding-left: 20px; padding-right: 20px; }
+.lg\:p_25, .lg\:p_25\:h:hover { padding: 25px; }
+.lg\:pt_25, .lg\:pt_25\:h:hover { padding-top: 25px; }
+.lg\:pb_25, .lg\:pb_25\:h:hover { padding-bottom: 25px; }
+.lg\:pv_25, .lg\:pv_25\:h:hover { padding-top: 25px; padding-bottom: 25px; }
+.lg\:pl_25, .lg\:pl_25\:h:hover { padding-left: 25px; }
+.lg\:pr_25, .lg\:pr_25\:h:hover { padding-right: 25px; }
+.lg\:ph_25, .lg\:ph_25\:h:hover { padding-left: 25px; padding-right: 25px; }
+.lg\:p_30, .lg\:p_30\:h:hover { padding: 30px; }
+.lg\:pt_30, .lg\:pt_30\:h:hover { padding-top: 30px; }
+.lg\:pb_30, .lg\:pb_30\:h:hover { padding-bottom: 30px; }
+.lg\:pv_30, .lg\:pv_30\:h:hover { padding-top: 30px; padding-bottom: 30px; }
+.lg\:pl_30, .lg\:pl_30\:h:hover { padding-left: 30px; }
+.lg\:pr_30, .lg\:pr_30\:h:hover { padding-right: 30px; }
+.lg\:ph_30, .lg\:ph_30\:h:hover { padding-left: 30px; padding-right: 30px; }
+.lg\:p_35, .lg\:p_35\:h:hover { padding: 35px; }
+.lg\:pt_35, .lg\:pt_35\:h:hover { padding-top: 35px; }
+.lg\:pb_35, .lg\:pb_35\:h:hover { padding-bottom: 35px; }
+.lg\:pv_35, .lg\:pv_35\:h:hover { padding-top: 35px; padding-bottom: 35px; }
+.lg\:pl_35, .lg\:pl_35\:h:hover { padding-left: 35px; }
+.lg\:pr_35, .lg\:pr_35\:h:hover { padding-right: 35px; }
+.lg\:ph_35, .lg\:ph_35\:h:hover { padding-left: 35px; padding-right: 35px; }
+.lg\:p_40, .lg\:p_40\:h:hover { padding: 40px; }
+.lg\:pt_40, .lg\:pt_40\:h:hover { padding-top: 40px; }
+.lg\:pb_40, .lg\:pb_40\:h:hover { padding-bottom: 40px; }
+.lg\:pv_40, .lg\:pv_40\:h:hover { padding-top: 40px; padding-bottom: 40px; }
+.lg\:pl_40, .lg\:pl_40\:h:hover { padding-left: 40px; }
+.lg\:pr_40, .lg\:pr_40\:h:hover { padding-right: 40px; }
+.lg\:ph_40, .lg\:ph_40\:h:hover { padding-left: 40px; padding-right: 40px; }
+.lg\:p_45, .lg\:p_45\:h:hover { padding: 45px; }
+.lg\:pt_45, .lg\:pt_45\:h:hover { padding-top: 45px; }
+.lg\:pb_45, .lg\:pb_45\:h:hover { padding-bottom: 45px; }
+.lg\:pv_45, .lg\:pv_45\:h:hover { padding-top: 45px; padding-bottom: 45px; }
+.lg\:pl_45, .lg\:pl_45\:h:hover { padding-left: 45px; }
+.lg\:pr_45, .lg\:pr_45\:h:hover { padding-right: 45px; }
+.lg\:ph_45, .lg\:ph_45\:h:hover { padding-left: 45px; padding-right: 45px; }
+.lg\:p_50, .lg\:p_50\:h:hover { padding: 50px; }
+.lg\:pt_50, .lg\:pt_50\:h:hover { padding-top: 50px; }
+.lg\:pb_50, .lg\:pb_50\:h:hover { padding-bottom: 50px; }
+.lg\:pv_50, .lg\:pv_50\:h:hover { padding-top: 50px; padding-bottom: 50px; }
+.lg\:pl_50, .lg\:pl_50\:h:hover { padding-left: 50px; }
+.lg\:pr_50, .lg\:pr_50\:h:hover { padding-right: 50px; }
+.lg\:ph_50, .lg\:ph_50\:h:hover { padding-left: 50px; padding-right: 50px; }
+.lg\:ff_pri, .lg\:ff_pri\:h:hover { font-family: 'Archivo Black', sans-serif; }
+.lg\:ff_sec, .lg\:ff_sec\:h:hover { font-family: 'Montserrat', sans-serif; }
+.lg\:fz_8, .lg\:fz_8\:h:hover { font-size: 8px; }
+.lg\:fz_10, .lg\:fz_10\:h:hover { font-size: 10px; }
+.lg\:fz_12, .lg\:fz_12\:h:hover { font-size: 12px; }
+.lg\:fz_14, .lg\:fz_14\:h:hover { font-size: 14px; }
+.lg\:fz_16, .lg\:fz_16\:h:hover { font-size: 16px; }
+.lg\:fz_18, .lg\:fz_18\:h:hover { font-size: 18px; }
+.lg\:fz_20, .lg\:fz_20\:h:hover { font-size: 20px; }
+.lg\:fz_22, .lg\:fz_22\:h:hover { font-size: 22px; }
+.lg\:fz_24, .lg\:fz_24\:h:hover { font-size: 24px; }
+.lg\:bd_n, .lg\:bd_n\:h:hover { border: none; }
+.lg\:bdt_n, .lg\:bdt_n\:h:hover { border-top: none; }
+.lg\:bdb_n, .lg\:bdb_n\:h:hover { border-bottom: none; }
+.lg\:bdl_n, .lg\:bdl_n\:h:hover { border-left: none; }
+.lg\:bdr_n, .lg\:bdr_n\:h:hover { border-right: none; }
+.lg\:bd_sep, .lg\:bd_sep\:h:hover { border: 1px solid rgba(0,0,0,0.1); }
+.lg\:bdt_sep, .lg\:bdt_sep\:h:hover { border-top: 1px solid rgba(0,0,0,0.1); }
+.lg\:bdb_sep, .lg\:bdb_sep\:h:hover { border-bottom: 1px solid rgba(0,0,0,0.1); }
+.lg\:bdl_sep, .lg\:bdl_sep\:h:hover { border-left: 1px solid rgba(0,0,0,0.1); }
+.lg\:bdr_sep, .lg\:bdr_sep\:h:hover { border-right: 1px solid rgba(0,0,0,0.1); }
+.lg\:bd_frame, .lg\:bd_frame\:h:hover { border: 10px solid #fff; }
+.lg\:bdt_frame, .lg\:bdt_frame\:h:hover { border-top: 10px solid #fff; }
+.lg\:bdb_frame, .lg\:bdb_frame\:h:hover { border-bottom: 10px solid #fff; }
+.lg\:bdl_frame, .lg\:bdl_frame\:h:hover { border-left: 10px solid #fff; }
+.lg\:bdr_frame, .lg\:bdr_frame\:h:hover { border-right: 10px solid #fff; }
+.lg\:bdrs_15, .lg\:bdrs_15\:h:hover { border-radius: 15px; }
+.lg\:bdrs_50\%, .lg\:bdrs_50\%\:h:hover { border-radius: 50%; }
+.lg\:bgc_blue, .lg\:bgc_blue\:h:hover { background-color: #51568A; }
+.lg\:c_blue, .lg\:c_blue\:h:hover { color: #51568A; }
+.lg\:bgc_light, .lg\:bgc_light\:h:hover { background-color: #fff; }
+.lg\:bgc_blue, .lg\:bgc_blue\:h:hover { background-color: #ECF0FB; }
+.lg\:bgp_b, .lg\:bgp_b\:h:hover { background-position: bottom; }
+.lg\:bgp_t, .lg\:bgp_t\:h:hover { background-position: top; }
+.lg\:bgp_l, .lg\:bgp_l\:h:hover { background-position: left; }
+.lg\:bgp_r, .lg\:bgp_r\:h:hover { background-position: right; }
+.lg\:bgp_c, .lg\:bgp_c\:h:hover { background-position: center; }
+.lg\:fx_a, .lg\:fx_a\:h:hover { flex: auto; }
+.lg\:fx_n, .lg\:fx_n\:h:hover { flex: none; }
+.lg\:fxb_a, .lg\:fxb_a\:h:hover { flex-basis: auto; }
+.lg\:ord_u, .lg\:ord_u\:h:hover { order: unset; }
+.lg\:fxd_c, .lg\:fxd_c\:h:hover { flex-direction: column; }
+.lg\:fxd_cr, .lg\:fxd_cr\:h:hover { flex-direction: column-reverse; }
+.lg\:fxd_r, .lg\:fxd_r\:h:hover { flex-direction: row; }
+.lg\:fxd_rr, .lg\:fxd_rr\:h:hover { flex-direction: row-reverse; }
+.lg\:fxw_n, .lg\:fxw_n\:h:hover { flex-wrap: nowrap; }
+.lg\:fxw_w, .lg\:fxw_w\:h:hover { flex-wrap: wrap; }
+.lg\:fxw_we, .lg\:fxw_we\:h:hover { flex-wrap: wrap-reverse; }
+.lg\:fxw_u, .lg\:fxw_u\:h:hover { flex-wrap: unset; }
+.lg\:jc_u, .lg\:jc_u\:h:hover { justify-content: unset; }
+.lg\:jc_c, .lg\:jc_c\:h:hover { justify-content: center; }
+.lg\:jc_fe, .lg\:jc_fe\:h:hover { justify-content: flex-end; }
+.lg\:jc_fs, .lg\:jc_fs\:h:hover { justify-content: flex-start; }
+.lg\:jc_sa, .lg\:jc_sa\:h:hover { justify-content: space-around; }
+.lg\:jc_sb, .lg\:jc_sb\:h:hover { justify-content: space-between; }
+.lg\:ac_c, .lg\:ac_c\:h:hover { align-content: center; }
+.lg\:ac_fe, .lg\:ac_fe\:h:hover { align-content: flex-end; }
+.lg\:ac_fs, .lg\:ac_fs\:h:hover { align-content: flex-start; }
+.lg\:ac_s, .lg\:ac_s\:h:hover { align-content: stretch; }
+.lg\:ac_sa, .lg\:ac_sa\:h:hover { align-content: space-around; }
+.lg\:ac_sb, .lg\:ac_sb\:h:hover { align-content: space-between; }
+.lg\:ai_b, .lg\:ai_b\:h:hover { align-items: baseline; }
+.lg\:ai_c, .lg\:ai_c\:h:hover { align-items: center; }
+.lg\:ai_fe, .lg\:ai_fe\:h:hover { align-items: flex-end; }
+.lg\:ai_fs, .lg\:ai_fs\:h:hover { align-items: flex-start; }
+.lg\:ai_s, .lg\:ai_s\:h:hover { align-items: stretch; }
+.lg\:z_a, .lg\:z_a\:h:hover { z-index: auto; }
+.lg\:bxsh_air, .lg\:bxsh_air\:h:hover { box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.08); }
+.lg\:bxsh_n, .lg\:bxsh_n\:h:hover { box-shadow: none; }
+.lg\:tsh_n, .lg\:tsh_n\:h:hover { text-shadow: none; }
+.lg\:d_n, .lg\:d_n\:h:hover { display: none; }
+.lg\:d_i, .lg\:d_i\:h:hover { display: inline; }
+.lg\:d_b, .lg\:d_b\:h:hover { display: block; }
+.lg\:d_ib, .lg\:d_ib\:h:hover { display: inline-block; }
+.lg\:d_f, .lg\:d_f\:h:hover { display: flex; }
+.lg\:d_if, .lg\:d_if\:h:hover { display: inline-flex; }
+.lg\:d_t, .lg\:d_t\:h:hover { display: table; }
+.lg\:d_g, .lg\:d_g\:h:hover { display: grid; }
+.lg\:d_ig, .lg\:d_ig\:h:hover { display: inline-grid; }
+.lg\:pos_s, .lg\:pos_s\:h:hover { position: static; }
+.lg\:pos_r, .lg\:pos_r\:h:hover { position: relative; }
+.lg\:pos_a, .lg\:pos_a\:h:hover { position: absolute; }
+.lg\:pos_f, .lg\:pos_f\:h:hover { position: fixed; }
+.lg\:va_sup, .lg\:va_sup\:h:hover { vertical-align: super; }
+.lg\:va_t, .lg\:va_t\:h:hover { vertical-align: top; }
+.lg\:va_tt, .lg\:va_tt\:h:hover { vertical-align: text-top; }
+.lg\:va_m, .lg\:va_m\:h:hover { vertical-align: middle; }
+.lg\:va_bl, .lg\:va_bl\:h:hover { vertical-align: baseline; }
+.lg\:va_b, .lg\:va_b\:h:hover { vertical-align: bottom; }
+.lg\:va_tb, .lg\:va_tb\:h:hover { vertical-align: text-bottom; }
+.lg\:va_sub, .lg\:va_sub\:h:hover { vertical-align: sub; }
+.lg\:ta_l, .lg\:ta_l\:h:hover { text-align: left; }
+.lg\:ta_c, .lg\:ta_c\:h:hover { text-align: center; }
+.lg\:ta_r, .lg\:ta_r\:h:hover { text-align: right; }
+.lg\:ta_j, .lg\:ta_j\:h:hover { text-align: justify; }
+.lg\:tal_a, .lg\:tal_a\:h:hover { text-align-last: auto; }
+.lg\:tal_l, .lg\:tal_l\:h:hover { text-align-last: left; }
+.lg\:tal_c, .lg\:tal_c\:h:hover { text-align-last: center; }
+.lg\:tal_r, .lg\:tal_r\:h:hover { text-align-last: right; }
+.lg\:td_n, .lg\:td_n\:h:hover { text-decoration: none; }
+.lg\:td_u, .lg\:td_u\:h:hover { text-decoration: underline; }
+.lg\:td_o, .lg\:td_o\:h:hover { text-decoration: overline; }
+.lg\:td_l, .lg\:td_l\:h:hover { text-decoration: line-through; }
+.lg\:te_n, .lg\:te_n\:h:hover { text-emphasis: none; }
+.lg\:te_ac, .lg\:te_ac\:h:hover { text-emphasis: accent; }
+.lg\:te_dt, .lg\:te_dt\:h:hover { text-emphasis: dot; }
+.lg\:te_c, .lg\:te_c\:h:hover { text-emphasis: circle; }
+.lg\:te_ds, .lg\:te_ds\:h:hover { text-emphasis: disc; }
+.lg\:te_b, .lg\:te_b\:h:hover { text-emphasis: before; }
+.lg\:te_a, .lg\:te_a\:h:hover { text-emphasis: after; }
+.lg\:tt_n, .lg\:tt_n\:h:hover { text-transform: none; }
+.lg\:tt_c, .lg\:tt_c\:h:hover { text-transform: capitalize; }
+.lg\:tt_u, .lg\:tt_u\:h:hover { text-transform: uppercase; }
+.lg\:tt_l, .lg\:tt_l\:h:hover { text-transform: lowercase; }
+.lg\:whs_n, .lg\:whs_n\:h:hover { white-space: normal; }
+.lg\:whs_p, .lg\:whs_p\:h:hover { white-space: pre; }
+.lg\:whs_nw, .lg\:whs_nw\:h:hover { white-space: nowrap; }
+.lg\:whs_pw, .lg\:whs_pw\:h:hover { white-space: pre-wrap; }
+.lg\:whs_pl, .lg\:whs_pl\:h:hover { white-space: pre-line; }
+.lg\:v_v, .lg\:v_v\:h:hover { visibility: visible; }
+.lg\:v_h, .lg\:v_h\:h:hover { visibility: hidden; }
+.lg\:v_c, .lg\:v_c\:h:hover { visibility: collapse; }
+.lg\:cur_a, .lg\:cur_a\:h:hover { cursor: auto; }
+.lg\:cur_d, .lg\:cur_d\:h:hover { cursor: default; }
+.lg\:cur_c, .lg\:cur_c\:h:hover { cursor: crosshair; }
+.lg\:cur_ha, .lg\:cur_ha\:h:hover { cursor: hand; }
+.lg\:cur_he, .lg\:cur_he\:h:hover { cursor: help; }
+.lg\:cur_m, .lg\:cur_m\:h:hover { cursor: move; }
+.lg\:cur_p, .lg\:cur_p\:h:hover { cursor: pointer; }
+.lg\:cur_t, .lg\:cur_t\:h:hover { cursor: text; }
+.lg\:lis_n, .lg\:lis_n\:h:hover { list-style: none; }
+.lg\:lisp_i, .lg\:lisp_i\:h:hover { list-style-position: inside; }
+.lg\:lisp_o, .lg\:lisp_o\:h:hover { list-style-position: outside; }
+.lg\:list_n, .lg\:list_n\:h:hover { list-style-type: none; }
+.lg\:list_d, .lg\:list_d\:h:hover { list-style-type: disc; }
+.lg\:list_c, .lg\:list_c\:h:hover { list-style-type: circle; }
+.lg\:list_s, .lg\:list_s\:h:hover { list-style-type: square; }
+.lg\:list_dc, .lg\:list_dc\:h:hover { list-style-type: decimal; }
+.lg\:list_dclz, .lg\:list_dclz\:h:hover { list-style-type: decimal-leading-zero; }
+.lg\:list_lr, .lg\:list_lr\:h:hover { list-style-type: lower-roman; }
+.lg\:list_ur, .lg\:list_ur\:h:hover { list-style-type: upper-roman; }
+.lg\:lisi_n, .lg\:lisi_n\:h:hover { list-style-image: none; }
+.lg\:ov_v, .lg\:ov_v\:h:hover { overflow: visible; }
+.lg\:ov_h, .lg\:ov_h\:h:hover { overflow: hidden; }
+.lg\:ov_s, .lg\:ov_s\:h:hover { overflow: scroll; }
+.lg\:ov_a, .lg\:ov_a\:h:hover { overflow: auto; }
+.lg\:ovx_v, .lg\:ovx_v\:h:hover { overflow-x: visible; }
+.lg\:ovx_h, .lg\:ovx_h\:h:hover { overflow-x: hidden; }
+.lg\:ovx_s, .lg\:ovx_s\:h:hover { overflow-x: scroll; }
+.lg\:ovx_a, .lg\:ovx_a\:h:hover { overflow-x: auto; }
+.lg\:ovy_v, .lg\:ovy_v\:h:hover { overflow-y: visible; }
+.lg\:ovy_h, .lg\:ovy_h\:h:hover { overflow-y: hidden; }
+.lg\:ovy_s, .lg\:ovy_s\:h:hover { overflow-y: scroll; }
+.lg\:ovy_a, .lg\:ovy_a\:h:hover { overflow-y: auto; }
+.lg\:op_0, .lg\:op_0\:h:hover { opacity: 0; }
+.lg\:op_01, .lg\:op_01\:h:hover { opacity: 0.1; }
+.lg\:op_02, .lg\:op_02\:h:hover { opacity: 0.2; }
+.lg\:op_03, .lg\:op_03\:h:hover { opacity: 0.3; }
+.lg\:op_04, .lg\:op_04\:h:hover { opacity: 0.4; }
+.lg\:op_05, .lg\:op_05\:h:hover { opacity: 0.5; }
+.lg\:op_06, .lg\:op_06\:h:hover { opacity: 0.6; }
+.lg\:op_07, .lg\:op_07\:h:hover { opacity: 0.7; }
+.lg\:op_08, .lg\:op_08\:h:hover { opacity: 0.8; }
+.lg\:op_09, .lg\:op_09\:h:hover { opacity: 0.9; }
+.lg\:op_1, .lg\:op_1\:h:hover { opacity: 1; }
+}

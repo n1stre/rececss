@@ -1,13 +1,6 @@
-import { IInputOutput } from "../interfaces";
+import ioMock from "../../../tests/mocks/io";
+import cssProcessor from "../../../tests/mocks/cssProcessor";
 import StylesheetsController from "./index";
-
-const io: IInputOutput = {
-  getRulesetPropsInput: jest.fn(() => ({})),
-  getStylesheetPropsInput: jest.fn(() => ({})),
-  getRulesetsBuilderInput: jest.fn(() => ({})),
-  getStylesheetsAssetsInput: jest.fn(() => ({ values: {}, media: {} })),
-  outputAssets: jest.fn(),
-};
 
 describe("StylesheetsController", () => {
   beforeEach(() => {
@@ -15,9 +8,13 @@ describe("StylesheetsController", () => {
   });
 
   it("should generate assets without errors", async () => {
-    const controller = StylesheetsController.create(io);
+    const controller = StylesheetsController.create(ioMock, cssProcessor);
     const res = await controller.generateAssets();
-    expect(io.getStylesheetsAssetsInput).toBeCalledTimes(1);
-    expect(io.outputAssets).toBeCalledTimes(1);
+
+    expect.assertions(3);
+
+    expect(ioMock.getStylesheetsAssetsInput).toBeCalledTimes(1);
+    expect(cssProcessor.removeUnused).toBeCalledTimes(1);
+    expect(ioMock.outputAssets).toBeCalledTimes(1);
   });
 });

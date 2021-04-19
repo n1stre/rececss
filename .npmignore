@@ -23,6 +23,8 @@ rollup-dev.config.js
 
 # Raw source
 src/
+website/
+dist_website/
 
 # Linting
 .prettierrc

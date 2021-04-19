@@ -9,7 +9,7 @@ export default class ConfigFileSystemIO implements IInputOutput {
   constructor(configFileName: string, private fs: IFileSystem) {
     try {
       const configPath = path.resolve(process.cwd(), configFileName);
-      const config = Config.new(require(configPath));
+      const config = Config.create(require(configPath));
       this.config = config;
     } catch (err) {
       throw Error("Config does not exist");
@@ -43,6 +43,12 @@ export default class ConfigFileSystemIO implements IInputOutput {
     return {
       filename: this.config.getOutputFilename(),
       extension: this.config.getOutputExtension(),
+    };
+  }
+
+  getCSSProccesorInput() {
+    return {
+      content: this.config.getPurgeContent(),
     };
   }
 

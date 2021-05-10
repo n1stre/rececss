@@ -1,6 +1,6 @@
 import { IStylesheet } from "../../1_entities/Stylesheet";
-import { IRulesetsFactory, TConfigurableRulesetsValues } from "../interfaces";
-import * as errors from "./GenerateStylesheetAssets.errors";
+import { IRulesetsFactory, IUtilityRulesetsDTO } from "../interfaces";
+// import * as errors from "./GenerateStylesheetAssets.errors";
 
 interface IProps {
   RulesetsFactory: IRulesetsFactory;
@@ -15,7 +15,7 @@ export default class GenerateStylesheetAssets {
   }
 
   async exec(dto: {
-    values: TConfigurableRulesetsValues;
+    values: IUtilityRulesetsDTO;
     media?: Record<string, string>;
     splitByMedia?: boolean;
   }) {

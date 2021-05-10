@@ -22,7 +22,7 @@ describe("GenerateUtilityStylesheet usecase", () => {
     expect(RulesetsFactory.createAll).toBeCalledWith(values);
   });
 
-  it("should contain valid result without splitting by media", async () => {
+  it("should contain valid result", async () => {
     const md = "only screen and (min-width: 768px)";
     const lg = "only screen and (min-width: 999px)";
 
@@ -48,5 +48,41 @@ describe("GenerateUtilityStylesheet usecase", () => {
     const lgPart = contents.slice(lgIdx, -1);
     expect(lgPart).toContain(`.lg\\:w_10\\% { width: 10%; }\n`);
     expect(lgPart).toContain(`.lg\\:fz_16 { font-size: 16px; }\n`);
+  });
+
+  it("should contain valid result splitted by media", async () => {
+    const md = "only screen and (min-width: 768px)";
+    const lg = "only screen and (min-width: 999px)";
+
+    const result = await basicUsecase.exec({
+      media: { md, lg },
+      splitByMedia: true,
+      values: {},
+    });
+
+    const baseResult = result[0];
+    expect(baseResult.contents).toBe(
+      [`.w_10\\% { width: 10%; }\n`, `.fz_16 { font-size: 16px; }\n`].join(""),
+    );
+
+    const mdResult = result[1];
+    expect(mdResult.contents).toBe(
+      [
+        "@media only screen and (min-width: 768px) {\n",
+        `.md\\:w_10\\% { width: 10%; }\n`,
+        `.md\\:fz_16 { font-size: 16px; }\n`,
+        "}\n",
+      ].join(""),
+    );
+
+    const lgResult = result[2];
+    expect(lgResult.contents).toBe(
+      [
+        "@media only screen and (min-width: 999px) {\n",
+        `.lg\\:w_10\\% { width: 10%; }\n`,
+        `.lg\\:fz_16 { font-size: 16px; }\n`,
+        "}\n",
+      ].join(""),
+    );
   });
 });

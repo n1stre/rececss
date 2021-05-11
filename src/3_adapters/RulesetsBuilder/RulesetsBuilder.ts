@@ -1,56 +1,49 @@
 import Ruleset, { IRuleset } from "../../1_entities/Ruleset";
-import {
-  DTO,
-  RulesetNamesMap,
-  Instance,
-  Classname,
-  Declaration,
-} from "./RulesetsBuilder.interface";
 import classNamesMap from "./RulesetsBuilder.classnames";
 import declarationsMap from "./RulesetsBuilder.declarations";
+import * as I from "./RulesetsBuilder.interface";
 
-type TRulesetName = keyof RulesetNamesMap;
-type TRulesetNames = TRulesetName[];
-type TValues = Record<string, string>;
-
-export default class RulesetsBuilder implements Instance {
+export default class RulesetsBuilder implements I.Instance {
   private result: IRuleset.Instance[];
-  private constructor(private dto?: DTO) {
+  private constructor(private dto?: I.DTO) {
     this.result = [];
   }
 
-  static create(dto?: DTO) {
+  static create(dto?: I.DTO) {
     return new RulesetsBuilder(dto);
   }
 
   getResult() {
-    const result = this.result;
-    this.result = [];
-    return result;
+    return this.result;
   }
 
   getResultDTO() {
     return this.getResult().map((ruleset) => ruleset.toDTO());
   }
 
-  addRulesetsFromValues(values: TValues, rulesetNames: TRulesetNames) {
+  mapValuesToRulesets(
+    values: Record<string, string> | undefined,
+    rulesetNames: Array<keyof I.CSSPropertiesMap>,
+  ) {
     if (!values) return;
-    Object.entries(values).forEach((v) =>
-      this.addRulesetsFromNames(rulesetNames, v),
+    Object.entries(values).forEach((val) =>
+      rulesetNames.forEach((name) => {
+        const classname = this.getClassname(name, val?.[0]);
+        const declarations = this.getDeclaration(name, val?.[1]);
+        this.addRuleset({ classname, declarations });
+      }),
     );
   }
 
-  addRulesetsFromNames(rulesetNames: TRulesetNames, val?: [string, string]) {
-    rulesetNames.forEach((name) => {
-      const classname = this.getClassname(name, val?.[0]);
-      const declarations = this.getDeclaration(name, val?.[1]);
-      this.addRulesetWithStates({ classname, declarations });
-    });
-  }
-
-  addRulesetWithStates(dto: IRuleset.DTO) {
-    dto.classnameStates = this.classnameStates;
-    this.addRuleset(dto);
+  mapSingleValuesToRulesets(
+    values: Record<string, string> | undefined,
+    rulesetNames: Array<keyof I.CSSPropertiesMap>,
+  ) {
+    if (!values) return;
+    const filterSingleValue = ([_, v]: string[]) => v.split(" ").length === 1;
+    const filteredEntries = Object.entries(values).filter(filterSingleValue);
+    const filteredValues = Object.fromEntries(filteredEntries);
+    return this.mapValuesToRulesets(filteredValues, rulesetNames);
   }
 
   addRuleset(dto: IRuleset.DTO) {
@@ -58,12 +51,12 @@ export default class RulesetsBuilder implements Instance {
     this.result.push(ruleset);
   }
 
-  getClassname(name: Classname, value?: string) {
-    return this.interpolateRulesetData(this.classnamesMap[name], value);
+  getClassname(name: I.Classname, ...values: I.Placeholders) {
+    return this.interpolate(this.classnamesMap[name], values);
   }
 
-  getDeclaration(name: Declaration, value?: string) {
-    return this.interpolateRulesetData(declarationsMap[name], value);
+  getDeclaration(name: I.Declaration, ...values: I.Placeholders) {
+    return this.interpolate(declarationsMap[name], values);
   }
 
   private get RulesetFactory() {
@@ -78,7 +71,14 @@ export default class RulesetsBuilder implements Instance {
     return this.dto?.classnameStates;
   }
 
-  private interpolateRulesetData(data: string, value?: string) {
-    return value ? data.replace(/\$0/g, value) : data;
+  private interpolate(data: string, placeholders?: I.Placeholders) {
+    if (!placeholders || !placeholders.length) return data;
+
+    placeholders.forEach((value, idx) => {
+      if (!value) return;
+      data = data.replace(new RegExp(`\\$${idx}`, "g"), value);
+    });
+
+    return data;
   }
 }

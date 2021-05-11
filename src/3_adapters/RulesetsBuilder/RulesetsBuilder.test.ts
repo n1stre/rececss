@@ -1,38 +1,33 @@
 import RulesetsBuilder from "./index";
 
 describe("RulesetsBuilder", () => {
-  it("should add rulesets from names", () => {
+  it("should map values to rulesets", () => {
     const builder = RulesetsBuilder.create({});
-    builder.addRulesetsFromNames([
-      "displayBlock",
-      "visibilityHidden",
-      "alignContentCenter",
-    ]);
+    builder.mapValuesToRulesets({ "2": "2px", "6rem": "6rem" }, ["width"]);
+    builder.mapValuesToRulesets({ b: "block" }, ["display"]);
+    builder.mapValuesToRulesets({ h: "hidden" }, ["visibility"]);
+    builder.mapValuesToRulesets({ c: "center" }, ["alignContent"]);
 
     expect(builder.getResultDTO()).toEqual([
+      { classname: "w_2", declarations: "width: 2px;" },
+      { classname: "w_6rem", declarations: "width: 6rem;" },
       { classname: "d_b", declarations: "display: block;" },
       { classname: "v_h", declarations: "visibility: hidden;" },
       { classname: "ac_c", declarations: "align-content: center;" },
     ]);
   });
 
-  it("should add rulesets from values and names", () => {
+  it("should map single values to rulesets", () => {
     const builder = RulesetsBuilder.create({});
-    builder.addRulesetsFromValues({ "2": "2px", "6rem": "6rem" }, ["width"]);
+    builder.mapSingleValuesToRulesets(
+      { a: "2px", b: "20px 20px", c: "20px", d: "10px 20px 40px", e: "2em" },
+      ["paddingLeft"],
+    );
 
     expect(builder.getResultDTO()).toEqual([
-      { classname: "w_2", declarations: "width: 2px;" },
-      { classname: "w_6rem", declarations: "width: 6rem;" },
-    ]);
-  });
-
-  it("should add ruleset with injecteed states", () => {
-    const classnameStates = { h: "$:hover" };
-    const builder = RulesetsBuilder.create({ classnameStates });
-    builder.addRulesetsFromValues({ "2": "2px" }, ["width"]);
-
-    expect(builder.getResultDTO()).toEqual([
-      { classname: "w_2", declarations: "width: 2px;", classnameStates },
+      { classname: "pl_a", declarations: "padding-left: 2px;" },
+      { classname: "pl_c", declarations: "padding-left: 20px;" },
+      { classname: "pl_e", declarations: "padding-left: 2em;" },
     ]);
   });
 

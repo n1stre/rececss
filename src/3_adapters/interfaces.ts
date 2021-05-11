@@ -1,5 +1,5 @@
-import { TConfigurableRulesetsValues } from "../2_usecases/interfaces";
-import { RulesetNamesMap } from "./RulesetsBuilder/RulesetsBuilder.interface";
+import { IUtilityRulesetsDTO } from "../2_usecases/interfaces";
+import { ClassnamesMap } from "./RulesetsBuilder/RulesetsBuilder.interface";
 
 export interface IInputOutput {
   getRulesetPropsInput(): {
@@ -12,11 +12,11 @@ export interface IInputOutput {
   };
   getRulesetsBuilderInput(): {
     rulesetProps?: { prefixSep?: string; suffixSep?: string };
-    classnames?: Partial<RulesetNamesMap>;
+    classnames?: Partial<ClassnamesMap>;
     classnameStates?: Record<string, string>;
   };
   getStylesheetsAssetsInput(): {
-    values: TConfigurableRulesetsValues;
+    values: IUtilityRulesetsDTO;
     media?: Record<string, string>;
     splitByMedia?: boolean;
   };

@@ -1,66 +1,29 @@
 import {
   IRulesetsFactory,
-  TConfigurableRulesetsValues,
+  IUtilityRulesetsDTO,
 } from "../../2_usecases/interfaces";
 import RulesetsBuilder from "../RulesetsBuilder";
-import {
-  DTO,
-  RulesetsBuilder as IRulesetsBuilder,
-} from "./RulesetsFactory.interface";
-import * as methods from "./methods";
+import * as I from "./RulesetsFactory.interface";
+import createMappers from "./mappers";
 
 export default class RulesetsFactory implements IRulesetsFactory {
-  private builder: IRulesetsBuilder = RulesetsBuilder.create(this.dto);
+  private constructor(private dto: I.DTO) {}
+  private builder = RulesetsBuilder.create(this.dto);
+  private mappers = createMappers(this.builder);
 
-  private constructor(private dto: DTO) {}
-
-  static create(dto: DTO = {}) {
+  static create(dto: I.DTO = {}) {
     return new RulesetsFactory(dto);
   }
 
-  createSize = methods.makeCreateSize(this.builder);
-  createMargin = methods.makeCreateMargin(this.builder);
-  createPadding = methods.makeCreatePadding(this.builder);
-  createOffset = methods.makeCreateOffset(this.builder);
-  createFont = methods.makeCreateFont(this.builder);
-  createFlex = methods.makeCreateFlex(this.builder);
-  createFlexGrid = methods.makeCreateFlexGrid(this.builder);
-  createBorder = methods.makeCreateBorder(this.builder);
-  createColor = methods.makeCreateColor(this.builder);
-  createBackground = methods.makeCreateBackground(this.builder);
-  createText = methods.makeCreateText(this.builder);
-  createZIndex = methods.makeCreateZIndex(this.builder);
-  createDisplay = methods.makeCreateDisplay(this.builder);
-  createPosition = methods.makeCreatePosition(this.builder);
-  createOpacity = methods.makeCreateOpacity(this.builder);
-  createOverflow = methods.makeCreateOverflow(this.builder);
-  createVisibility = methods.makeCreateVisibility(this.builder);
-  createList = methods.makeCreateList(this.builder);
-  createCursor = methods.makeCreateCursor(this.builder);
-  createShadow = methods.makeCreateShadow(this.builder);
+  createAll(values: IUtilityRulesetsDTO) {
+    Object.entries(values).forEach((entry) => {
+      const key = entry[0] as keyof I.CSSPropertiesMap;
+      const value = entry[1] as Record<string, string>;
+      const mapper = this.mappers[key];
+      if (mapper) return mapper(value);
+      else return this.builder.mapValuesToRulesets(value, [key]);
+    });
 
-  createAll(dto: TConfigurableRulesetsValues) {
-    return [
-      this.createSize(dto.size),
-      this.createMargin(dto.margin),
-      this.createPadding(dto.padding),
-      this.createOffset(dto.offset),
-      this.createFont(dto.font),
-      this.createBorder(dto.border),
-      this.createColor(dto.color),
-      this.createBackground(dto.background),
-      this.createFlex(dto.flex),
-      this.createFlexGrid(dto.flex?.grid),
-      this.createZIndex(dto.zIndex),
-      this.createShadow(dto.shadow),
-      this.createDisplay(),
-      this.createPosition(),
-      this.createText(),
-      this.createVisibility(),
-      this.createCursor(),
-      this.createList(),
-      this.createOverflow(),
-      this.createOpacity(),
-    ].flat();
+    return this.builder.getResult();
   }
 }

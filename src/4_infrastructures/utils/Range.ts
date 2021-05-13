@@ -1,18 +1,13 @@
+import { isArray, isNumber } from "./DataTypes";
+
 export default Object.freeze({
-  isRangeable,
+  isRangeArray: isRangeArray,
   create: createRange,
-  createInclusive: createRangeInclusive,
+  createInclusive: createInclusiveRange,
+  createInclusiveFromArray: createInclusiveRangeFromArray,
 });
 
-function isNumber(v: unknown): boolean {
-  return typeof v === "number" && !isNaN(v);
-}
-
-function isArray(v: unknown): boolean {
-  return Array.isArray(v);
-}
-
-function isRangeable(v: any) {
+function isRangeArray(v: any): v is Array<number> {
   return isArray(v) && isNumber(v[0]) && isNumber(v[1]) && isNumber(v[2]);
 }
 
@@ -22,6 +17,10 @@ function createRange(start: number, stop: number, step = 1): number[] {
     .map((x, y) => parseFloat((x + y * step).toFixed(5)));
 }
 
-function createRangeInclusive(start: number, stop: number, step = 1): number[] {
+function createInclusiveRange(start: number, stop: number, step = 1): number[] {
   return createRange(start, stop + step, step);
+}
+
+function createInclusiveRangeFromArray(arr: number[]): number[] {
+  return createInclusiveRange(arr[0], arr[1], arr[2]);
 }

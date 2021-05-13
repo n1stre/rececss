@@ -1,7 +1,7 @@
 import ConfigFileSystemIO from "./ConfigFileSystemIO";
 
 const fakeFS = { writeFiles: jest.fn(() => Promise.resolve()) };
-const realConfigPath = "./rececss.config.js";
+const realConfigPath = "./tests/fixtures/rececss.config.js";
 const fakeConfigPath = "fake/path";
 
 describe("ConfigFileSystemIO", () => {

@@ -10,7 +10,7 @@ export default class Stylesheet implements Instance {
     this.dto = { ...dto };
   }
 
-  static createFactory(partialProps: Partial<Props> = {}) {
+  static createFactory(partialProps: Partial<Props>) {
     const props = { ...defaultProps, ...partialProps };
     return Object.freeze({ create: (dto: DTO) => new Stylesheet(dto, props) });
   }
@@ -21,11 +21,6 @@ export default class Stylesheet implements Instance {
 
   getRulesets() {
     return this.dto.rulesets;
-  }
-
-  addRulesets(...data: string[]) {
-    this.dto.rulesets = [...this.getRulesets(), ...data];
-    return this;
   }
 
   getName() {

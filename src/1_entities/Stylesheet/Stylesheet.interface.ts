@@ -15,7 +15,6 @@ export interface MediaDTO {
 
 export interface Instance {
   getRulesets: () => string[];
-  addRulesets: (...data: string[]) => Instance;
   getMedia: () => MediaDTO | undefined;
   getName: () => string;
   setMedia: (media: MediaDTO) => Instance;

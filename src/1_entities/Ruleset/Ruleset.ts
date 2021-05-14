@@ -19,13 +19,13 @@ export default class Ruleset implements Instance {
     return new Ruleset(dto, defaultProps);
   }
 
-  addClassnamePrefix(prefix: string) {
+  setClassnamePrefix(prefix: string) {
     this.dto.classnamePrefix = prefix;
     return this;
   }
 
   toPrefixedString(prefix: string) {
-    return this.addClassnamePrefix(prefix).toString();
+    return this.setClassnamePrefix(prefix).toString();
   }
 
   toString() {
@@ -39,20 +39,20 @@ export default class Ruleset implements Instance {
 
   private getSelectors() {
     const base = this.getClassnameSelector();
-    const states = this.getStateClassnames();
+    const states = this.getClassnameVariants();
     return states ? base + ", " + states : base;
   }
 
-  private getStateClassnames() {
-    return Object.entries(this.dto.classnameStates || {})
-      .map((entry) => this.getStateClassname(...entry))
+  private getClassnameVariants() {
+    return Object.entries(this.dto.classnameVariants || {})
+      .map((entry) => this.getClassnameVariant(...entry))
       .join(", ");
   }
 
-  private getStateClassname(stateSuffix: string, stateSelector: string) {
+  private getClassnameVariant(stateSuffix: string, stateSelector: string) {
     const suffix = this.suffixSep + stateSuffix;
     const classname = this.getClassnameSelector(suffix);
-    return stateSelector.replace(new RegExp("\\$0", "g"), classname);
+    return stateSelector.replace(new RegExp("\\&", "g"), classname);
   }
 
   private getClassnameSelector(suffix: string = "") {
@@ -69,12 +69,12 @@ export default class Ruleset implements Instance {
 
   private transformSelector(cn: string) {
     return this.dto.selectorTransform
-      ? this.dto.selectorTransform.replace("$0", cn)
+      ? this.dto.selectorTransform.replace("&", cn)
       : cn;
   }
 
   private get declarations() {
-    return this.dto.declarations || "";
+    return this.dto.declarations;
   }
 
   private get classnamePrefix() {

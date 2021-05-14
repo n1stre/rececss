@@ -7,12 +7,12 @@ export interface DTO {
   selectorTransform?: string;
   classname: string;
   classnamePrefix?: string;
-  classnameStates?: Record<string, string>;
+  classnameVariants?: Record<string, string>;
   declarations: string;
 }
 
 export interface Instance {
-  addClassnamePrefix: (prefix: string) => Instance;
+  setClassnamePrefix: (prefix: string) => Instance;
   toString: () => string;
   toPrefixedString: (prefix: string) => string;
   toDTO: () => DTO;

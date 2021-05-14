@@ -32,7 +32,7 @@ export default (builder: RulesetsBuilder) =>
       builder.addRuleset({
         classname,
         declarations: builder.getDeclaration("flexRowChild", spacing),
-        selectorTransform: "$0 > *",
+        selectorTransform: "& > *",
       });
     }
 

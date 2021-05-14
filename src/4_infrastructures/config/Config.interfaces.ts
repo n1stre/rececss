@@ -1,8 +1,11 @@
-import { TConfigurableRulesetsValues } from "../../2_usecases/interfaces";
+import {
+  IUtilityRulesetsDTO,
+  ICustomProperties,
+} from "../../2_usecases/interfaces";
+import { Sizing, Pallete } from "../utils";
 
 export interface Props {
-  isRangeable: (v: any) => boolean;
-  rangeInclusive: (v: any) => number[];
+  defaultRules: Rules;
 }
 
 export type UnitRange = [number, number, number];
@@ -31,9 +34,25 @@ export type RuleUnit =
   | "$number"
   | "$num";
 
-export type RuleUnits = Partial<Record<RuleUnit, UnitValue[]>>;
+type ValueOf<T> = T[keyof T];
 
-export type Rule = Record<string, string> & RuleUnits;
+export type RuleValue = string | boolean | UnitValue[] | Record<string, string>;
+export type RuleUnits = Partial<Record<RuleUnit, UnitValue[]>>;
+export type RuleData = {
+  $extend?: boolean;
+  $variants?: Record<string, string>;
+};
+export type RuleValues = Record<string, RuleValue> & RuleUnits & RuleData;
+export type Rules = Partial<
+  Record<keyof IUtilityRulesetsDTO, RuleValues | ValueOf<ICustomProperties>>
+>;
+
+export type GetRules = (params: {
+  Sizing: typeof Sizing;
+  Pallete: typeof Pallete;
+  defaults: Rules;
+  extend: (rule: RuleValues) => RuleValues;
+}) => Rules;
 
 export interface DTO {
   output: {
@@ -49,67 +68,23 @@ export interface DTO {
   };
   sep?: {
     media?: string;
-    state?: string;
+    variant?: string;
   };
   media?: Record<string, string>;
   classes?: Record<string, string>;
-  states?: Record<string, string>;
-  rules: Partial<{
-    width: Rule;
-    height: Rule;
-    padding: Partial<{
-      shorthand: Rule;
-      edges: Rule;
-    }>;
-    margin: Partial<{
-      shorthand: Rule;
-      edges: Rule;
-    }>;
-    offset: Rule;
-    flex: Partial<{
-      shorthand: Rule;
-      basis: Rule;
-      grow: Rule;
-      shrink: Rule;
-      order: Rule;
-      grid: {
-        cols: number;
-        gutter?: string;
-        gutters?: Record<string, string>;
-      };
-    }>;
-    font: Partial<{
-      shorthand: Rule;
-      size: Rule;
-      family: Rule;
-      lineHeight: Rule;
-    }>;
-    border: Partial<{
-      shorthand: Rule;
-      radius: Rule;
-    }>;
-    color: Rule;
-    background: Partial<{
-      shorthand: Rule;
-      color: Rule;
-    }>;
-    shadow: Partial<{
-      box: Rule;
-      text: Rule;
-    }>;
-  }>;
+  rules: GetRules | Rules;
 }
 
 export interface Instance {
-  getRulesetsValues: () => TConfigurableRulesetsValues;
+  getRulesetsValues: () => IUtilityRulesetsDTO;
   getMedia: () => Record<string, string>;
   getOutputPath: () => string;
   getOutputFilename: () => string | undefined;
   getOutputExtension: () => string | undefined;
   getClassnames: () => Record<string, string>;
-  getClassnameStates: () => Record<string, string>;
+  getRulesetsVariants: () => Record<string, string>;
   getMediaSeparator: () => string | undefined;
-  getStatesSeparator: () => string | undefined;
+  getVariantSeparator: () => string | undefined;
   getPurgeContent: () => string[];
   getPurgeSafelist: () => Array<string | RegExp>;
   getPurgeBlocklist: () => Array<string | RegExp>;

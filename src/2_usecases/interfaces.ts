@@ -10,9 +10,9 @@ export interface IRulesetsFactory {
 }
 
 export type IUtilityRulesetsDTO = Partial<ICSSProperties> &
-  Partial<ICustomProperties>;
+  Partial<ICompoundProperties>;
 
-export interface ICustomProperties {
+export interface ICompoundProperties {
   flexGrid: {
     cols: number;
     gutter?: string;
@@ -20,7 +20,18 @@ export interface ICustomProperties {
   };
 }
 
-export interface ICSSProperties<T = Record<string, string>> {
+export interface ICSSProperties<T = Record<string, string>>
+  extends ICustomCSSProperties<T>,
+    IDefaultCSSProperties<T> {}
+
+interface ICustomCSSProperties<T> {
+  paddingVertical: T;
+  paddingHorizontal: T;
+  marginVertical: T;
+  marginHorizontal: T;
+}
+
+interface IDefaultCSSProperties<T> {
   alignContent: T;
   alignItems: T;
   alignSelf: T;

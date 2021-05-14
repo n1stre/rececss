@@ -11,8 +11,8 @@ export type RulesetsValues = ValueOf<IUtilityRulesetsDTO>;
 
 export interface DTO {
   rulesetProps?: Partial<IRuleset.Props>;
+  rulesetVariants?: Partial<ICSSProperties<Record<string, string>>>;
   classnamesMap?: Partial<ClassnamesMap>;
-  classnameStates?: Record<string, string>;
 }
 
 export type Placeholders = Array<string | undefined>;
@@ -33,21 +33,18 @@ export interface Instance {
   addRuleset: (dto: IRuleset.DTO) => void;
 }
 
-export interface CSSPropertiesMap<T = string> extends ICSSProperties<T> {
-  flexRow: T;
-  flexCol: T;
-  paddingVertical: T;
-  paddingHorizontal: T;
-  marginVertical: T;
-  marginHorizontal: T;
-}
+export interface CSSPropertiesMap<T = string> extends ICSSProperties<T> {}
 
 export interface DeclarationsMap extends CSSPropertiesMap {
+  flexRow: string;
+  flexCol: string;
   flexRowChild: string;
   fontSizeWithLineHeight: string;
 }
 
 export interface ClassnamesMap extends CSSPropertiesMap {
+  flexRow: string;
+  flexCol: string;
   flexRowGuttered: string;
 }
 

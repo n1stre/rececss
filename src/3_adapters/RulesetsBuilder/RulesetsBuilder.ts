@@ -28,9 +28,10 @@ export default class RulesetsBuilder implements I.Instance {
     if (!values) return;
     Object.entries(values).forEach((val) =>
       rulesetNames.forEach((name) => {
-        const classname = this.getClassname(name, val?.[0]);
-        const declarations = this.getDeclaration(name, val?.[1]);
-        this.addRuleset({ classname, declarations });
+        const classname = this.getClassname(name, val[0]);
+        const declarations = this.getDeclaration(name, val[1]);
+        const classnameVariants = this.getVariants(name);
+        this.addRuleset({ classname, declarations, classnameVariants });
       }),
     );
   }
@@ -59,16 +60,16 @@ export default class RulesetsBuilder implements I.Instance {
     return this.interpolate(declarationsMap[name], values);
   }
 
+  getVariants(name: keyof I.CSSPropertiesMap) {
+    return this.dto?.rulesetVariants?.[name];
+  }
+
   private get RulesetFactory() {
     return Ruleset.createFactory(this.dto?.rulesetProps);
   }
 
   private get classnamesMap() {
     return Object.assign({}, classNamesMap, this.dto?.classnamesMap);
-  }
-
-  private get classnameStates() {
-    return this.dto?.classnameStates;
   }
 
   private interpolate(data: string, placeholders?: I.Placeholders) {

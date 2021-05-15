@@ -1,6 +1,6 @@
 import {
   IUtilityRulesetsDTO,
-  ICustomProperties,
+  ICompoundProperties,
 } from "../../2_usecases/interfaces";
 import { Sizing, Pallete } from "../utils";
 
@@ -44,7 +44,7 @@ export type RuleData = {
 };
 export type RuleValues = Record<string, RuleValue> & RuleUnits & RuleData;
 export type Rules = Partial<
-  Record<keyof IUtilityRulesetsDTO, RuleValues | ValueOf<ICustomProperties>>
+  Record<keyof IUtilityRulesetsDTO, RuleValues | ValueOf<ICompoundProperties>>
 >;
 
 export type GetRules = (params: {

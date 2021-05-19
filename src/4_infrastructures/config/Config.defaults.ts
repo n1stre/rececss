@@ -333,7 +333,6 @@ export function getUnits(): Record<RuleUnit, string> {
   return {
     $cm: "cm",
     $mm: "mm",
-    $Q: "Q",
     $in: "in",
     $pc: "pc",
     $pt: "pt",
@@ -342,7 +341,6 @@ export function getUnits(): Record<RuleUnit, string> {
     $ex: "ex",
     $ch: "ch",
     $rem: "rem",
-    $lh: "lh",
     $vw: "vw",
     $vh: "vh",
     $vmin: "vmin",

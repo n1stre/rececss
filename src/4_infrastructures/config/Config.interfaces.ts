@@ -2,6 +2,7 @@ import {
   IUtilityRulesetsDTO,
   ICompoundProperties,
 } from "../../2_usecases/interfaces";
+import { IRulesetsBuilder } from "../../3_adapters/RulesetsBuilder";
 import { Sizing, Pallete } from "../utils";
 
 export interface Props {
@@ -15,7 +16,6 @@ export type UnitValue = number | UnitRange;
 export type RuleUnit =
   | "$cm"
   | "$mm"
-  | "$Q"
   | "$in"
   | "$pc"
   | "$pt"
@@ -24,7 +24,6 @@ export type RuleUnit =
   | "$ex"
   | "$ch"
   | "$rem"
-  | "$lh"
   | "$vw"
   | "$vh"
   | "$vmin"
@@ -62,8 +61,8 @@ export interface DTO {
     splitByMedia?: boolean;
     purge?: {
       content: string[];
-      safelist: Array<string | RegExp>;
-      blocklist: Array<string | RegExp>;
+      safelist?: Array<string | RegExp>;
+      blocklist?: Array<string | RegExp>;
     };
   };
   sep?: {
@@ -71,7 +70,7 @@ export interface DTO {
     variant?: string;
   };
   media?: Record<string, string>;
-  classes?: Record<string, string>;
+  classes?: Partial<IRulesetsBuilder.ClassnamesMap>;
   rules: GetRules | Rules;
 }
 
@@ -81,7 +80,7 @@ export interface Instance {
   getOutputPath: () => string;
   getOutputFilename: () => string | undefined;
   getOutputExtension: () => string | undefined;
-  getClassnames: () => Record<string, string>;
+  getClassnames: () => Partial<IRulesetsBuilder.ClassnamesMap>;
   getRulesetsVariants: () => Record<string, string>;
   getMediaSeparator: () => string | undefined;
   getVariantSeparator: () => string | undefined;

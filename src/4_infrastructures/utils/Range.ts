@@ -12,7 +12,8 @@ function isRangeArray(v: any): v is Array<number> {
 }
 
 function createRange(start: number, stop: number, step = 1): number[] {
-  return Array(Math.ceil((stop - start) / step))
+  const size = parseFloat(((stop - start) / step).toFixed());
+  return Array(Math.ceil(size))
     .fill(start)
     .map((x, y) => parseFloat((x + y * step).toFixed(5)));
 }

@@ -4,7 +4,7 @@ import RulesetsFactory from "./index";
 const toString = (rs: IRuleset.Instance[]) => rs.map((rs) => rs.toString());
 
 describe("RulesetsFactory", () => {
-  it("should create size rulesets", () => {
+  it("should build size rulesets", () => {
     const width = { "20": "20px", "2em": "2em" };
     const height = { "50": "50px" };
     const rulesetsFactory = RulesetsFactory.create();
@@ -336,12 +336,18 @@ describe("RulesetsFactory", () => {
       ".ov_v { overflow: visible; }",
       ".ovx_v { overflow-x: visible; }",
       ".ovy_v { overflow-y: visible; }",
+      ".ovi_v { overflow-inline: visible; }",
+      ".ovb_v { overflow-block: visible; }",
       ".ov_h { overflow: hidden; }",
       ".ovx_h { overflow-x: hidden; }",
       ".ovy_h { overflow-y: hidden; }",
+      ".ovi_h { overflow-inline: hidden; }",
+      ".ovb_h { overflow-block: hidden; }",
       ".ov_a { overflow: auto; }",
       ".ovx_a { overflow-x: auto; }",
       ".ovy_a { overflow-y: auto; }",
+      ".ovi_a { overflow-inline: auto; }",
+      ".ovb_a { overflow-block: auto; }",
     ]);
   });
 
@@ -404,6 +410,58 @@ describe("RulesetsFactory", () => {
       ".v_v { visibility: visible; }",
       ".v_h { visibility: hidden; }",
       ".v_c { visibility: collapse; }",
+    ]);
+  });
+
+  it("should build transform rulesets", () => {});
+
+  it("should build filter rulesets", () => {
+    const rulesetsFactory = RulesetsFactory.create();
+
+    // prettier-ignore
+    const res = rulesetsFactory.createAll({
+      filter: { hero: "sepia(70%) blur(1px)", inv: "drop-shadow(16px 16px 20px red) invert(75%)" },
+      filterBlur: { sm: "1px", "0": "0", "8": "8px" },
+      filterBrightness: { "1": "1", "150%": "150%", "1.4": "1.4" },
+      filterContrast: { "1": "1", "150%": "150%", "1.4": "1.4" },
+      filterDropShadow: { cr: "0 0 0.75rem crimson", bl: "30px 10px 4px #4444dd", },
+      filterGrayscale: { "1": "1", "50%": "50%", "0.4": "0.4" },
+      filterHueRotate: { "-90deg": "-90deg", "45deg": "45deg" },
+      filterInvert: { a: "0", "0.6": "0.6" },
+      filterOpacity: { a: "1", "0.5": "0.5" },
+      filterSaturate: { a: "1", "2": "2", "3": "3"},
+      filterSepia: { a: "0", max: "1" },
+    });
+
+    expect(toString(res)).toEqual([
+      ".ftr_hero { filter: sepia(70%) blur(1px); }",
+      ".ftr_inv { filter: drop-shadow(16px 16px 20px red) invert(75%); }",
+      ".\\~bl_0 { --filterBlur: 0; }",
+      ".\\~bl_8 { --filterBlur: 8px; }",
+      ".\\~bl_sm { --filterBlur: 1px; }",
+      ".\\~br_1 { --filterBrightness: 1; }",
+      ".\\~br_150\\% { --filterBrightness: 150%; }",
+      ".\\~br_1\\.4 { --filterBrightness: 1.4; }",
+      ".\\~ctst_1 { --filterContrast: 1; }",
+      ".\\~ctst_150\\% { --filterContrast: 150%; }",
+      ".\\~ctst_1\\.4 { --filterContrast: 1.4; }",
+      ".\\~dsh_cr { --filterDropShadow: 0 0 0.75rem crimson; }",
+      ".\\~dsh_bl { --filterDropShadow: 30px 10px 4px #4444dd; }",
+      ".\\~gsc_1 { --filterGrayscale: 1; }",
+      ".\\~gsc_50\\% { --filterGrayscale: 50%; }",
+      ".\\~gsc_0\\.4 { --filterGrayscale: 0.4; }",
+      ".\\~hrt_-90deg { --filterHueRotate: -90deg; }",
+      ".\\~hrt_45deg { --filterHueRotate: 45deg; }",
+      ".\\~inv_a { --filterInvert: 0; }",
+      ".\\~inv_0\\.6 { --filterInvert: 0.6; }",
+      ".\\~op_a { --filterOpacity: 1; }",
+      ".\\~op_0\\.5 { --filterOpacity: 0.5; }",
+      ".\\~sat_2 { --filterSaturate: 2; }",
+      ".\\~sat_3 { --filterSaturate: 3; }",
+      ".\\~sat_a { --filterSaturate: 1; }",
+      ".\\~sep_a { --filterSepia: 0; }",
+      ".\\~sep_max { --filterSepia: 1; }",
+      ".ftr\\~ { filter: blur(var(--filterBlur)) brightness(var(--filterBrightness)) contrast(var(--filterContrast)) drop-shadow(var(--filterDropShadow)) grayscale(var(--filterGrayscale)) hue-rotate(var(--filterHueRotate)) invert(var(--filterInvert)) opacity(var(--filterOpacity)) saturate(var(--filterSaturate)) sepia(var(--filterSepia)); }",
     ]);
   });
 });

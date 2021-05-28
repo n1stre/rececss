@@ -94,7 +94,7 @@ const RulesetsEmmetClassnamesMap: ClassnamesMap = {
   display: "d_$0",
   emptyCells: "ec_$0",
   filter: "ftr_$0",
-  filterCompound: "ftr",
+  filterCompound: "ftr~",
   filterBlur: "~bl_$0",
   filterBrightness: "~br_$0",
   filterContrast: "~ctst_$0",

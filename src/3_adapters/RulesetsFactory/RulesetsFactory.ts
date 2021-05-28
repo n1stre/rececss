@@ -24,6 +24,25 @@ export default class RulesetsFactory implements IRulesetsFactory {
       else return this.builder.mapValuesToRulesets(value, [key]);
     });
 
+    this.createFilterCompound(values);
+
     return this.builder.getResult();
+  }
+
+  createFilterCompound(values: IUtilityRulesetsDTO) {
+    if (
+      values.filterBlur ||
+      values.filterBrightness ||
+      values.filterContrast ||
+      values.filterDropShadow ||
+      values.filterGrayscale ||
+      values.filterHueRotate ||
+      values.filterInvert ||
+      values.filterOpacity ||
+      values.filterSaturate ||
+      values.filterSepia
+    ) {
+      this.builder.mapKeywordsToRulesets(["filterCompound"]);
+    }
   }
 }

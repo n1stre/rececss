@@ -31,7 +31,11 @@ export type RuleUnit =
   | "$percent"
   | "$pct"
   | "$number"
-  | "$num";
+  | "$num"
+  | "$deg"
+  | "$grad"
+  | "$rad"
+  | "$turn";
 
 type ValueOf<T> = T[keyof T];
 

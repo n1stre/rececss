@@ -123,21 +123,74 @@ export const rules: Rules = {
   opacity: {
     $num: [0, 1, 0.1],
   },
-  transformTranslate: {
-    $px: [
-      [0, 100, 5],
-      [100, 500, 50],
-    ],
-    $pct: [[0, 100, 5]],
-  },
-  transformRotate: {
-    $deg: [[0, 360, 5]],
-  },
-  transformScale: {
-    $num: [[0, 2, 0.1]],
-  },
+  ...getTransformRules(),
+  ...getFilterRules(),
   ...getStaticRules(),
 };
+
+function getTransformRules(): Rules {
+  return {
+    transformTranslate: {
+      $pct: [[0, 100, 5]],
+      $px: [
+        [0, 100, 5],
+        [100, 500, 50],
+      ],
+    },
+    transformRotate: {
+      $deg: [
+        [0, 360, 5],
+        [-360, 0, 5],
+      ],
+    },
+    transformScale: {
+      $num: [[0, 2, 0.1]],
+    },
+  };
+}
+
+function getFilterRules(): Rules {
+  return {
+    filterBlur: {
+      $px: [[0, 10, 1]],
+    },
+    filterBrightness: {
+      a: "1",
+      $num: [[0, 2, 0.05]],
+    },
+    filterContrast: {
+      a: "1",
+      $num: [[0, 2, 0.05]],
+    },
+    filterGrayscale: {
+      a: "0",
+      $num: [[0, 1, 0.05]],
+    },
+    filterHueRotate: {
+      a: "0",
+      $deg: [
+        [0, 360, 5],
+        [-360, 0, 5],
+      ],
+    },
+    filterInvert: {
+      a: "0",
+      $num: [[0, 1, 0.05]],
+    },
+    filterOpacity: {
+      a: "1",
+      $num: [[0, 1, 0.05]],
+    },
+    filterSaturate: {
+      a: "1",
+      $num: [[0, 5, 0.25]],
+    },
+    filterSepia: {
+      a: "0",
+      $num: [[0, 1, 0.05]],
+    },
+  };
+}
 
 function getStaticRules(): Rules {
   return {
@@ -893,5 +946,9 @@ export function getUnits(): Record<RuleUnit, string> {
     $pct: "%",
     $number: "",
     $num: "",
+    $deg: "deg",
+    $grad: "grad",
+    $rad: "rad",
+    $turn: "turn",
   };
 }

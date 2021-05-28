@@ -21,30 +21,40 @@ export default class RulesetsBuilder implements I.Instance {
     return this.getResult().map((ruleset) => ruleset.toDTO());
   }
 
+  mapKeywordsToRulesets(keywords: Array<keyof I.CSSPropertiesMap>) {
+    keywords.forEach((kw) => {
+      this.addRulesetFromKeyword(kw);
+    });
+  }
+
   mapValuesToRulesets(
     values: Record<string, string> | undefined,
-    rulesetNames: Array<keyof I.CSSPropertiesMap>,
+    keywords: Array<keyof I.CSSPropertiesMap>,
   ) {
     if (!values) return;
     Object.entries(values).forEach((val) =>
-      rulesetNames.forEach((name) => {
-        const classname = this.getClassname(name, val[0]);
-        const declarations = this.getDeclaration(name, val[1]);
-        const classnameVariants = this.getVariants(name);
-        this.addRuleset({ classname, declarations, classnameVariants });
+      keywords.forEach((kw) => {
+        this.addRulesetFromKeyword(kw, val);
       }),
     );
   }
 
   mapSingleValuesToRulesets(
     values: Record<string, string> | undefined,
-    rulesetNames: Array<keyof I.CSSPropertiesMap>,
+    keywords: Array<keyof I.CSSPropertiesMap>,
   ) {
     if (!values) return;
     const filterSingleValue = ([_, v]: string[]) => v.split(" ").length === 1;
     const filteredEntries = Object.entries(values).filter(filterSingleValue);
     const filteredValues = Object.fromEntries(filteredEntries);
-    return this.mapValuesToRulesets(filteredValues, rulesetNames);
+    return this.mapValuesToRulesets(filteredValues, keywords);
+  }
+
+  addRulesetFromKeyword(kw: keyof I.CSSPropertiesMap, val?: [string, string]) {
+    const classname = this.getClassname(kw, val?.[0]);
+    const declarations = this.getDeclaration(kw, val?.[1]);
+    const classnameVariants = this.getVariants(kw);
+    this.addRuleset({ classname, declarations, classnameVariants });
   }
 
   addRuleset(dto: IRuleset.DTO) {

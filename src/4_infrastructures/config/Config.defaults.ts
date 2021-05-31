@@ -144,7 +144,7 @@ function getTransformRules(): Rules {
       ],
     },
     transformScale: {
-      $num: [[0, 2, 0.1]],
+      $num: [[0, 3, 0.1]],
     },
   };
 }

@@ -11,6 +11,7 @@ import makeMapBorderRadius from "./borderRadius";
 import makeMapBorderStyle from "./borderStyle";
 import makeMapBorderWidth from "./borderWidth";
 import makeMapOverflow from "./overflow";
+import makeMapOverscrollBehavior from "./overscrollBehavior";
 import makeTransformTranslate from "./transformTranslate";
 import makeTransformRotate from "./transformRotate";
 import makeTransformScale from "./transformScale";
@@ -29,6 +30,7 @@ export default function createMappers(builder: RulesetsBuilder): Mappers {
     borderStyle: makeMapBorderStyle(builder),
     borderWidth: makeMapBorderWidth(builder),
     overflow: makeMapOverflow(builder),
+    overscrollBehavior: makeMapOverscrollBehavior(builder),
     transformTranslate: makeTransformTranslate(builder),
     transformRotate: makeTransformRotate(builder),
     transformScale: makeTransformScale(builder),

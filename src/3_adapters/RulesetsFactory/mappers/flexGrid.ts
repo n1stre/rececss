@@ -2,12 +2,12 @@ import { RulesetsBuilder } from "../RulesetsFactory.interface";
 
 export default (builder: RulesetsBuilder) =>
   function mapFlexGrid(v?: {
-    cols?: number;
+    cols: number;
     gutter?: string;
     gutters?: Record<string, string>;
   }) {
-    if (!v) return [];
-    const { cols = 12, gutter = "20px", gutters } = v;
+    if (!v) return;
+    const { cols, gutter = "20px", gutters } = v;
     const classname = builder.getClassname("flexRow");
     createRow(classname, gutter);
 

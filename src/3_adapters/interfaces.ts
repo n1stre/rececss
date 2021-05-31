@@ -1,20 +1,12 @@
 import { IUtilityRulesetsDTO } from "../2_usecases/interfaces";
-import { ClassnamesMap } from "./RulesetsBuilder/RulesetsBuilder.interface";
+import { IRulesetsBuilder } from "./RulesetsBuilder";
 
 export interface IInputOutput {
-  getRulesetPropsInput(): {
-    prefixSep?: string;
-    suffixSep?: string;
-  };
   getStylesheetPropsInput(): {
     filename?: string;
     extension?: string;
   };
-  getRulesetsBuilderInput(): {
-    rulesetProps?: { prefixSep?: string; suffixSep?: string };
-    classnames?: Partial<ClassnamesMap>;
-    classnameStates?: Record<string, string>;
-  };
+  getRulesetsBuilderInput(): IRulesetsBuilder.DTO;
   getStylesheetsAssetsInput(): {
     values: IUtilityRulesetsDTO;
     media?: Record<string, string>;

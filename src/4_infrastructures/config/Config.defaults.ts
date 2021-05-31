@@ -196,11 +196,13 @@ function getStaticRules(): Rules {
   return {
     all: {
       u: "unset",
-      n: "none",
       inh: "inherit",
       ini: "initial",
       rv: "revert",
-      $variants: {},
+      $variants: {
+        h: "&:hover",
+        hp: "*:hover &",
+      },
     },
     alignContent: {
       c: "center",

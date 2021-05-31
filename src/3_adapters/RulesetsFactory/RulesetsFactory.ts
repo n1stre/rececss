@@ -25,6 +25,7 @@ export default class RulesetsFactory implements IRulesetsFactory {
     });
 
     this.createFilterCompound(values);
+    this.createTransformCompound(values);
 
     return this.builder.getResult();
   }
@@ -43,6 +44,34 @@ export default class RulesetsFactory implements IRulesetsFactory {
       values.filterSepia
     ) {
       this.builder.mapKeywordsToRulesets(["filterCompound"]);
+    }
+  }
+
+  createTransformCompound(values: IUtilityRulesetsDTO) {
+    if (
+      values.transformTranslate ||
+      values.transformTranslate3D ||
+      values.transformTranslateX ||
+      values.transformTranslateY ||
+      values.transformTranslateZ ||
+      values.transformRotate ||
+      values.transformRotateX ||
+      values.transformRotateY ||
+      values.transformRotateZ ||
+      values.transformScale ||
+      values.transformScale3D ||
+      values.transformScaleX ||
+      values.transformScaleY ||
+      values.transformScaleZ ||
+      values.transformSkew ||
+      values.transformSkewX ||
+      values.transformSkewY ||
+      values.transformPerspective
+    ) {
+      this.builder.mapKeywordsToRulesets([
+        "transformCompound",
+        "transformCompound3D",
+      ]);
     }
   }
 }

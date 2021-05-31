@@ -413,7 +413,77 @@ describe("RulesetsFactory", () => {
     ]);
   });
 
-  it("should build transform rulesets", () => {});
+  it("should build transform rulesets", () => {
+    const rulesetsFactory = RulesetsFactory.create();
+
+    const res = rulesetsFactory.createAll({
+      transform: {
+        custom: "translate(120px, 50%)",
+        gpu: "translate3d(0, 0, 0)",
+      },
+      transformTranslate: { 10: "10px", "10%": "10%", xy: "10px, 10px" },
+      transformTranslate3D: { xyz: "10x, 10px, 20px" },
+      transformTranslateX: { 100: "100px" },
+      transformTranslateY: { 101: "101px" },
+      transformTranslateZ: { 102: "102px" },
+      transformRotate: { "45deg": "45deg" },
+      transformRotateX: { "10deg": "10deg" },
+      transformRotateY: { "11deg": "11deg" },
+      transformRotateZ: { "12deg": "12deg" },
+      transformScale: { sm: "0.5", dblx: "2, 0.5" },
+      transformScale3D: { eff: "0.5, 2, 1.4" },
+      transformScaleX: { 1: "1" },
+      transformScaleY: { 2: "2" },
+      transformScaleZ: { 3: "3" },
+      transformSkew: { both: "20deg, 10deg", single: "40deg" },
+      transformSkewX: { 25: "25deg" },
+      transformSkewY: { 35: "35deg" },
+      transformPerspective: { 500: "500px" },
+    });
+
+    expect(toString(res)).toEqual([
+      ".trf_custom { transform: translate(120px, 50%); }",
+      ".trf_gpu { transform: translate3d(0, 0, 0); }",
+      ".\\~tra_10 { --transformTranslate: 10px; }",
+      ".\\~tra_10\\% { --transformTranslate: 10%; }",
+      ".\\~tra_xy { --transformTranslate: 10px, 10px; }",
+      ".\\~trax_10 { --transformTranslateX: 10px; }",
+      ".\\~tray_10 { --transformTranslateY: 10px; }",
+      ".\\~traz_10 { --transformTranslateZ: 10px; }",
+      ".\\~trax_10\\% { --transformTranslateX: 10%; }",
+      ".\\~tray_10\\% { --transformTranslateY: 10%; }",
+      ".\\~traz_10\\% { --transformTranslateZ: 10%; }",
+      ".\\~tra3_xyz { --transformTranslate3D: 10x, 10px, 20px; }",
+      ".\\~trax_100 { --transformTranslateX: 100px; }",
+      ".\\~tray_101 { --transformTranslateY: 101px; }",
+      ".\\~traz_102 { --transformTranslateZ: 102px; }",
+      ".\\~rot_45deg { --transformRotate: 45deg; }",
+      ".\\~rotx_45deg { --transformRotateX: 45deg; }",
+      ".\\~roty_45deg { --transformRotateY: 45deg; }",
+      ".\\~rotz_45deg { --transformRotateZ: 45deg; }",
+      ".\\~rotx_10deg { --transformRotateX: 10deg; }",
+      ".\\~roty_11deg { --transformRotateY: 11deg; }",
+      ".\\~rotz_12deg { --transformRotateZ: 12deg; }",
+      ".\\~sca_sm { --transformScale: 0.5; }",
+      ".\\~sca_dblx { --transformScale: 2, 0.5; }",
+      ".\\~scax_sm { --transformScaleX: 0.5; }",
+      ".\\~scay_sm { --transformScaleY: 0.5; }",
+      ".\\~scaz_sm { --transformScaleZ: 0.5; }",
+      ".\\~sca3_eff { --transformScale3D: 0.5, 2, 1.4; }",
+      ".\\~scax_1 { --transformScaleX: 1; }",
+      ".\\~scay_2 { --transformScaleY: 2; }",
+      ".\\~scaz_3 { --transformScaleZ: 3; }",
+      ".\\~sce_both { --transformSkew: 20deg, 10deg; }",
+      ".\\~sce_single { --transformSkew: 40deg; }",
+      ".\\~scex_single { --transformSkewX: 40deg; }",
+      ".\\~scey_single { --transformSkewY: 40deg; }",
+      ".\\~scex_25 { --transformSkewX: 25deg; }",
+      ".\\~scey_35 { --transformSkewY: 35deg; }",
+      ".\\~prs_500 { --transformPerspective: 500px; }",
+      ".trf\\~ { transform: translate(var(--transformTranslate, var(--transformTranslateX, 0), var(--transformTranslateY, 0))) rotateX(var(--transformRotate, var(--transformRotateX, 0))) rotateY(var(--transformRotate, var(--transformRotateY, 0))) rotateZ(var(--transformRotate, var(--transformRotateZ, 0))) scale(var(--transformScale, var(--transformScaleX, 1), var(--transformScaleY, 1))) skew(var(--transformSkew, var(--transformSkewX, 0), var(--transformSkewY, 0))); }",
+      ".trf3\\~ { transform: translate3d(var(--transformTranslate3D, var(--transformTranslateX, 0), var(--transformTranslateY, 0), var(--transformTranslateZ, 0))) rotateX(var(--transformRotate, var(--transformRotateX, 0))) rotateY(var(--transformRotate, var(--transformRotateY, 0))) rotateZ(var(--transformRotate, var(--transformRotateZ, 0))) scale3d(var(--transformScale3D, var(--transformScaleX, 1), var(--transformScaleY, 1), var(--transformScaleZ, 1))) skew(var(--transformSkew, var(--transformSkewX, 0), var(--transformSkewY, 0))) perspective(var(--transformPerspective, 0)); }",
+    ]);
+  });
 
   it("should build filter rulesets", () => {
     const rulesetsFactory = RulesetsFactory.create();

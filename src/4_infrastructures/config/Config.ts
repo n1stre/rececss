@@ -62,7 +62,7 @@ export default class Config implements IConfig.Instance {
     return Object.fromEntries(
       Object.entries(this.rules).map((e) => {
         const key = e[0];
-        const variants = { ...this.globalVariants, ...e[1].$variants };
+        const variants = e[1].$variants;
         return [key, variants];
       }),
     );
@@ -132,10 +132,6 @@ export default class Config implements IConfig.Instance {
 
   private get defaultRules() {
     return this.props.defaultRules || {};
-  }
-
-  private get globalVariants() {
-    return this.rules.all?.$variants || {};
   }
 
   private get globalValues() {

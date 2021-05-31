@@ -71,7 +71,9 @@ export default class RulesetsBuilder implements I.Instance {
   }
 
   getVariants(name: keyof I.CSSPropertiesMap) {
-    return this.dto?.rulesetVariants?.[name];
+    const common = this.dto?.rulesetVariants?.all;
+    const local = this.dto?.rulesetVariants?.[name];
+    if (common || local) return Object.assign({}, common, local);
   }
 
   private get RulesetFactory() {

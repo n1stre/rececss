@@ -96,14 +96,11 @@ describe("Config", () => {
     };
 
     const config = configFactory.create({ ...dto, rules });
-    const commonVariants = { h: "&:hover", js: "&.js-active", f: "&:focus" };
-
     expect(config.getRulesetsVariants()).toEqual({
-      all: commonVariants,
-      width: commonVariants,
-      color: { ...commonVariants, hp: "*:hover &" },
-      border: { ...commonVariants, a: "&:active", hp: "*:hover &" },
-      outline: { ...commonVariants, a: "&:active" },
+      all: { h: "&:hover", js: "&.js-active", f: "&:focus" },
+      color: { hp: "*:hover &" },
+      border: { a: "&:active", hp: "*:hover &" },
+      outline: { a: "&:active" },
     });
   });
 
@@ -137,13 +134,11 @@ describe("Config", () => {
     };
 
     const config = configFactory.create({ ...dto, rules });
-    const commonVariants = { h: "&:hover", js: "&.js-active", f: "&:focus" };
 
     expect(config.getRulesetsVariants()).toEqual({
-      all: commonVariants,
-      width: commonVariants,
-      color: { ...commonVariants, hp: "*:hover &" },
-      border: { ...commonVariants, a: "&:active", hp: "*:hover &" },
+      all: { h: "&:hover", js: "&.js-active", f: "&:focus" },
+      color: { hp: "*:hover &" },
+      border: { a: "&:active", hp: "*:hover &" },
     });
   });
 

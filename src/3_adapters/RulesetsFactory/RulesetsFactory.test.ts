@@ -4,6 +4,12 @@ import RulesetsFactory from "./index";
 const toString = (rs: IRuleset.Instance[]) => rs.map((rs) => rs.toString());
 
 describe("RulesetsFactory", () => {
+  it("should not crash if nothing is provided", () => {
+    const rulesetsFactory = RulesetsFactory.create();
+    const res = rulesetsFactory.createAll({});
+    expect(res).toEqual([]);
+  });
+
   it("should build size rulesets", () => {
     const width = { "20": "20px", "2em": "2em" };
     const height = { "50": "50px" };
@@ -259,6 +265,26 @@ describe("RulesetsFactory", () => {
   });
 
   it("should build flex grid rulesets", () => {
+    const rulesetsFactory = RulesetsFactory.create();
+    const res = rulesetsFactory.createAll({
+      flexGrid: {
+        cols: 6,
+      },
+    });
+    // prettier-ignore
+    expect(toString(res)).toEqual([
+      ".fxrow { display: flex; margin-left: -10px; margin-right: -10px; }",
+      ".fxrow > * { flex: 1 0 auto; padding-left: 10px; padding-right: 10px; }",
+      `.fxcol_1 { flex-basis: ${1 / 6 * 100}%; max-width: ${1 / 6 * 100}%; }`,
+      `.fxcol_2 { flex-basis: ${2 / 6 * 100}%; max-width: ${2 / 6 * 100}%; }`,
+      `.fxcol_3 { flex-basis: ${3 / 6 * 100}%; max-width: ${3 / 6 * 100}%; }`,
+      `.fxcol_4 { flex-basis: ${4 / 6 * 100}%; max-width: ${4 / 6 * 100}%; }`,
+      `.fxcol_5 { flex-basis: ${5 / 6 * 100}%; max-width: ${5 / 6 * 100}%; }`,
+      `.fxcol_6 { flex-basis: ${6 / 6 * 100}%; max-width: ${6 / 6 * 100}%; }`,
+    ])
+  });
+
+  it("should build flex grid rulesets with gutters", () => {
     const rulesetsFactory = RulesetsFactory.create();
     const res = rulesetsFactory.createAll({
       flexGrid: {

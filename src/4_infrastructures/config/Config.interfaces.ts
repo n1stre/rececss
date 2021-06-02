@@ -1,54 +1,9 @@
-import {
-  IUtilityRulesetsDTO,
-  ICompoundProperties,
-} from "../../2_usecases/interfaces";
-import { IRulesetsBuilder } from "../../3_adapters/RulesetsBuilder";
+import { IRulesetsFactory } from "../../3_adapters/RulesetsFactory";
 import { Sizing, Pallete } from "../utils";
 
 export interface Props {
   defaultRules: Rules;
 }
-
-export type UnitRange = [number, number, number];
-
-export type UnitValue = number | UnitRange;
-
-export type RuleUnit =
-  | "$cm"
-  | "$mm"
-  | "$in"
-  | "$pc"
-  | "$pt"
-  | "$px"
-  | "$em"
-  | "$ex"
-  | "$ch"
-  | "$rem"
-  | "$vw"
-  | "$vh"
-  | "$vmin"
-  | "$vmax"
-  | "$percent"
-  | "$pct"
-  | "$number"
-  | "$num"
-  | "$deg"
-  | "$grad"
-  | "$rad"
-  | "$turn";
-
-type ValueOf<T> = T[keyof T];
-
-export type RuleValue = string | boolean | UnitValue[] | Record<string, string>;
-export type RuleUnits = Partial<Record<RuleUnit, UnitValue[]>>;
-export type RuleData = {
-  $extend?: boolean;
-  $variants?: Record<string, string>;
-};
-export type RuleValues = Record<string, RuleValue> & RuleUnits & RuleData;
-export type Rules = Partial<
-  Record<keyof IUtilityRulesetsDTO, RuleValues | ValueOf<ICompoundProperties>>
->;
 
 export type GetRules = (params: {
   Sizing: typeof Sizing;
@@ -74,17 +29,17 @@ export interface DTO {
     variant?: string;
   };
   media?: Record<string, string>;
-  classes?: Partial<IRulesetsBuilder.ClassnamesMap>;
+  classes?: Partial<IRulesetsFactory.ClassnamesMap>;
   rules: GetRules | Rules;
 }
 
 export interface Instance {
-  getRulesetsValues: () => IUtilityRulesetsDTO;
+  getRulesetsValues: () => IRulesetsFactory.ConfigurableValues;
   getMedia: () => Record<string, string>;
   getOutputPath: () => string;
   getOutputFilename: () => string | undefined;
   getOutputExtension: () => string | undefined;
-  getClassnames: () => Partial<IRulesetsBuilder.ClassnamesMap>;
+  getClassnames: () => Partial<IRulesetsFactory.ClassnamesMap>;
   getRulesetsVariants: () => Record<string, string>;
   getMediaSeparator: () => string | undefined;
   getVariantSeparator: () => string | undefined;
@@ -93,3 +48,51 @@ export interface Instance {
   getPurgeBlocklist: () => Array<string | RegExp>;
   shouldSplitOutputByMedia: () => boolean;
 }
+
+type ValueOf<T> = T[keyof T];
+
+export type UnitRange = [number, number, number];
+
+export type UnitValue = number | UnitRange;
+
+export type RuleValue = string | boolean | UnitValue[] | Record<string, string>;
+
+export type RuleUnits = Partial<Record<RuleUnit, UnitValue[]>>;
+
+export type RuleData = {
+  $extend?: boolean;
+  $variants?: Record<string, string>;
+};
+
+export type RuleValues = Record<string, RuleValue> & RuleUnits & RuleData;
+
+export type Rules = Partial<
+  Record<
+    keyof IRulesetsFactory.ConfigurableValues,
+    RuleValues | ValueOf<IRulesetsFactory.ComputedProperties>
+  >
+>;
+
+export type RuleUnit =
+  | "$cm"
+  | "$mm"
+  | "$in"
+  | "$pc"
+  | "$pt"
+  | "$px"
+  | "$em"
+  | "$ex"
+  | "$ch"
+  | "$rem"
+  | "$vw"
+  | "$vh"
+  | "$vmin"
+  | "$vmax"
+  | "$percent"
+  | "$pct"
+  | "$number"
+  | "$num"
+  | "$deg"
+  | "$grad"
+  | "$rad"
+  | "$turn";

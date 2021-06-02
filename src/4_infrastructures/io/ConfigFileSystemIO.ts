@@ -1,5 +1,6 @@
 import path from "path";
 import { IInputOutput } from "../../3_adapters/interfaces";
+import RulesetsFactory from "../../3_adapters/RulesetsFactory";
 import { IConfig, IFileSystem } from "../interfaces";
 import Config from "../config";
 
@@ -16,29 +17,45 @@ export default class ConfigFileSystemIO implements IInputOutput {
     }
   }
 
-  getRulesetsBuilderInput() {
+  getAssetsGenerationInput() {
     return {
-      classnamesMap: this.config.getClassnames(),
-      rulesetVariants: this.config.getRulesetsVariants(),
-      rulesetProps: {
-        prefixSep: this.config.getMediaSeparator(),
-        suffixSep: this.config.getVariantSeparator(),
-      },
-    };
-  }
-
-  getStylesheetsAssetsInput() {
-    return {
-      values: this.config.getRulesetsValues(),
+      rulesets: this.getRulesets(),
       media: this.config.getMedia(),
       splitByMedia: this.config.shouldSplitOutputByMedia(),
     };
   }
 
-  getStylesheetPropsInput() {
+  getRulesets() {
+    const factoryDTO = this.getRulesetsFactoryInput();
+    const rulesetsFactory = RulesetsFactory.create(factoryDTO);
+    return rulesetsFactory.createAll(this.config.getRulesetsValues());
+  }
+
+  getRulesetsFactoryInput() {
+    return {
+      classnamesMap: this.config.getClassnames(),
+      variantsMap: this.config.getRulesetsVariants(),
+    };
+  }
+
+  getStylesheetProps() {
     return {
       filename: this.config.getOutputFilename(),
       extension: this.config.getOutputExtension(),
+    };
+  }
+
+  getRulesetProps() {
+    return {
+      prefixSep: this.config.getMediaSeparator(),
+      suffixSep: this.config.getVariantSeparator(),
+    };
+  }
+
+  getAssetsGenerationProps() {
+    return {
+      rulesetProps: this.getRulesetProps(),
+      stylesheetProps: this.getStylesheetProps(),
     };
   }
 

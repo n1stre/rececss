@@ -1,34 +1,25 @@
 import Ruleset from "../../1_entities/Ruleset";
 import Stylesheet from "../../1_entities/Stylesheet";
-import { IRulesetsFactory } from "../interfaces";
 import GenerateStylesheetAssets from "./index";
 
-const RulesetsFactory: IRulesetsFactory = {
-  createAll: jest.fn(() => [
-    Ruleset.create({ classname: "w_10%", declarations: "width: 10%;" }),
-    Ruleset.create({ classname: "fz_16", declarations: "font-size: 16px;" }),
-  ]),
-};
+const rulesets = [
+  { classname: "w_10%", declarations: "width: 10%;" },
+  { classname: "fz_16", declarations: "font-size: 16px;" },
+];
 
 const basicUsecase = GenerateStylesheetAssets.create({
-  RulesetsFactory,
-  StylesheetFactory: Stylesheet,
+  rulesetProps: Ruleset.defaultProps,
+  stylesheetProps: Stylesheet.defaultProps,
 });
 
 describe("GenerateUtilityStylesheet usecase", () => {
-  it("should use RulesetsFactory to create all rulesets", async () => {
-    const values = {};
-    await basicUsecase.exec({ values });
-    expect(RulesetsFactory.createAll).toBeCalledWith(values);
-  });
-
   it("should contain valid result", async () => {
     const md = "only screen and (min-width: 768px)";
     const lg = "only screen and (min-width: 999px)";
 
     const result = await basicUsecase.exec({
       media: { md, lg },
-      values: {},
+      rulesets,
     });
 
     const contents = result[0].contents;
@@ -57,7 +48,7 @@ describe("GenerateUtilityStylesheet usecase", () => {
     const result = await basicUsecase.exec({
       media: { md, lg },
       splitByMedia: true,
-      values: {},
+      rulesets,
     });
 
     const baseResult = result[0];

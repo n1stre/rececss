@@ -1,35 +1,28 @@
-import { IStylesheet } from "../../1_entities/Stylesheet";
-import { IRulesetsFactory, IUtilityRulesetsDTO } from "../interfaces";
-// import * as errors from "./GenerateStylesheetAssets.errors";
-
-interface IProps {
-  RulesetsFactory: IRulesetsFactory;
-  StylesheetFactory: IStylesheet.Factory;
-}
+import Ruleset from "../../1_entities/Ruleset";
+import Stylesheet from "../../1_entities/Stylesheet";
+import { Props, DTO } from "./GenerateStylesheetAssets.interface";
 
 export default class GenerateStylesheetAssets {
-  private constructor(private props: IProps) {}
+  private constructor(private props: Props) {}
+  private Stylesheet = Stylesheet.createFactory(this.props.stylesheetProps);
+  private Ruleset = Ruleset.createFactory(this.props.rulesetProps);
 
-  static create(props: IProps) {
+  static create(props: Props) {
     return new GenerateStylesheetAssets(props);
   }
 
-  async exec(dto: {
-    values: IUtilityRulesetsDTO;
-    media?: Record<string, string>;
-    splitByMedia?: boolean;
-  }) {
-    const { RulesetsFactory, StylesheetFactory } = this.props;
-    const baseRulesets = RulesetsFactory.createAll(dto.values);
+  async exec(dto: DTO) {
+    const { Stylesheet, Ruleset } = this;
+    const baseRulesets = dto.rulesets.map((rs) => Ruleset.create(rs));
     const rulesets = baseRulesets.map((rs) => rs.toString());
-    const stylesheet = StylesheetFactory.create({ rulesets });
+    const stylesheet = Stylesheet.create({ rulesets });
     const stylesheets = [stylesheet];
 
     if (dto.media) {
       Object.entries(dto.media).forEach(([name, query]) => {
         const media = { name, query };
         const rulesets = baseRulesets.map((rs) => rs.toPrefixedString(name));
-        stylesheets.push(StylesheetFactory.create({ rulesets, media }));
+        stylesheets.push(Stylesheet.create({ rulesets, media }));
       });
     }
 

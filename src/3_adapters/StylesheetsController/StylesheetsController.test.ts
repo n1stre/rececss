@@ -11,9 +11,10 @@ describe("StylesheetsController", () => {
     const controller = StylesheetsController.create(ioMock, cssProcessor);
     const res = await controller.generateAssets();
 
-    expect.assertions(3);
+    expect.assertions(4);
 
-    expect(ioMock.getStylesheetsAssetsInput).toBeCalledTimes(1);
+    expect(ioMock.getAssetsGenerationInput).toBeCalledTimes(1);
+    expect(ioMock.getAssetsGenerationProps).toBeCalledTimes(1);
     expect(cssProcessor.removeUnused).toBeCalledTimes(1);
     expect(ioMock.outputAssets).toBeCalledTimes(1);
   });

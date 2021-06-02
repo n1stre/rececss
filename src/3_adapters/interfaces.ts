@@ -1,17 +1,8 @@
-import { IUtilityRulesetsDTO } from "../2_usecases/interfaces";
-import { IRulesetsBuilder } from "./RulesetsBuilder";
+import { IGenerateStylesheetAssets } from "../2_usecases/GenerateStylesheetAssets";
 
 export interface IInputOutput {
-  getStylesheetPropsInput(): {
-    filename?: string;
-    extension?: string;
-  };
-  getRulesetsBuilderInput(): IRulesetsBuilder.DTO;
-  getStylesheetsAssetsInput(): {
-    values: IUtilityRulesetsDTO;
-    media?: Record<string, string>;
-    splitByMedia?: boolean;
-  };
+  getAssetsGenerationProps(): IGenerateStylesheetAssets.Props;
+  getAssetsGenerationInput(): IGenerateStylesheetAssets.DTO;
   outputAssets(assets: { name: string; contents: string }[]): Promise<void>;
 }
 

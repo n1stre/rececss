@@ -1,22 +1,22 @@
 import { DTO, Instance, MediaDTO, Props } from "./Stylesheet.interface";
 
-const defaultProps: Props = {
-  filename: "rececss",
-  extension: "css",
-};
-
 export default class Stylesheet implements Instance {
   private constructor(private dto: DTO, private props: Props) {
     this.dto = { ...dto };
   }
 
-  static createFactory(partialProps: Partial<Props>) {
-    const props = { ...defaultProps, ...partialProps };
+  static defaultProps: Props = {
+    filename: "rececss",
+    extension: "css",
+  };
+
+  static createFactory(partialProps: Partial<Props> = {}) {
+    const props = { ...Stylesheet.defaultProps, ...partialProps };
     return Object.freeze({ create: (dto: DTO) => new Stylesheet(dto, props) });
   }
 
   static create(dto: DTO) {
-    return new Stylesheet(dto, defaultProps);
+    return new Stylesheet(dto, Stylesheet.defaultProps);
   }
 
   getRulesets() {
@@ -61,10 +61,10 @@ export default class Stylesheet implements Instance {
   }
 
   private get filename() {
-    return this.props.filename || defaultProps.filename;
+    return this.props.filename || Stylesheet.defaultProps.filename;
   }
 
   private get extension() {
-    return this.props.extension || defaultProps.extension;
+    return this.props.extension || Stylesheet.defaultProps.extension;
   }
 }

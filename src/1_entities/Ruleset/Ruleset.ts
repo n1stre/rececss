@@ -1,22 +1,22 @@
 import { DTO, Factory, Instance, Props } from "./Ruleset.interface";
 
-const defaultProps: Props = {
-  prefixSep: ":",
-  suffixSep: ":",
-};
-
 export default class Ruleset implements Instance {
   private constructor(private dto: DTO, private props: Props) {
     this.dto = { ...dto };
   }
 
+  static defaultProps: Props = {
+    prefixSep: ":",
+    suffixSep: ":",
+  };
+
   static createFactory(partialProps: Partial<Props> = {}): Factory {
-    const props = { ...defaultProps, ...partialProps };
+    const props = { ...Ruleset.defaultProps, ...partialProps };
     return Object.freeze({ create: (dto: DTO) => new Ruleset(dto, props) });
   }
 
   static create(dto: DTO) {
-    return new Ruleset(dto, defaultProps);
+    return new Ruleset(dto, Ruleset.defaultProps);
   }
 
   setClassnamePrefix(prefix: string) {
@@ -83,10 +83,10 @@ export default class Ruleset implements Instance {
   }
 
   private get prefixSep() {
-    return this.props.prefixSep || defaultProps.prefixSep;
+    return this.props.prefixSep || Ruleset.defaultProps.prefixSep;
   }
 
   private get suffixSep() {
-    return this.props.suffixSep || defaultProps.suffixSep;
+    return this.props.suffixSep || Ruleset.defaultProps.suffixSep;
   }
 }

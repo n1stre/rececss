@@ -64,4 +64,14 @@ describe("Ruleset entity", () => {
       ".row .md\\:col_1 { width: 50%; }",
     );
   });
+
+  it("should be presented as dto", () => {
+    const factory = Ruleset.createFactory({ prefixSep: "", suffixSep: "" });
+    const rs = factory.create({ classname: "t_0", declarations: "top: 0;" });
+
+    expect(rs.toDTO()).toEqual({
+      classname: "t_0",
+      declarations: "top: 0;",
+    });
+  });
 });

@@ -1,4 +1,4 @@
-import { ClassnamesMap } from "./RulesetsBuilder.interface";
+import { ClassnamesMap } from "./RulesetsFactory.interface";
 
 const RulesetsEmmetClassnamesMap: ClassnamesMap = {
   alignContent: "ac_$0",

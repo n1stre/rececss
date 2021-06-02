@@ -1,77 +1,35 @@
-import {
-  IRulesetsFactory,
-  IUtilityRulesetsDTO,
-} from "../../2_usecases/interfaces";
 import RulesetsBuilder from "../RulesetsBuilder";
+import classnamesMap from "./RulesetsFactory.classnames";
+import declarationsMap from "./RulesetsFactory.declarations";
 import * as I from "./RulesetsFactory.interface";
-import createMappers from "./mappers";
+import mapperCreators from "./mappers";
 
-export default class RulesetsFactory implements IRulesetsFactory {
+export default class RulesetsFactory {
   private constructor(private dto: I.DTO) {}
-  private builder = RulesetsBuilder.create(this.dto);
-  private mappers = createMappers(this.builder);
 
-  static create(dto: I.DTO = {}) {
+  private builder: I.RulesetsBuilder = RulesetsBuilder.create({
+    classnamesMap: Object.assign({}, classnamesMap, this.dto.classnamesMap),
+    declarationsMap,
+    variantsMap: this.dto.variantsMap,
+    commonVariants: this.dto.variantsMap.all,
+  });
+
+  static create(dto: I.DTO) {
     return new RulesetsFactory(dto);
   }
 
-  createAll(values: IUtilityRulesetsDTO) {
+  createAll(values: I.ConfigurableValues) {
     Object.entries(values).forEach((entry) => {
-      const key = entry[0] as keyof I.CSSPropertiesMap;
+      const key = entry[0] as keyof I.CSSProperties;
       const value = entry[1] as Record<string, string>;
-      const mapper = this.mappers[key];
-      if (mapper) return mapper(value);
+      const mapper = mapperCreators[key]?.(this.builder);
+      if (mapper) return mapper(values);
       else return this.builder.mapValuesToRulesets(value, [key]);
     });
 
-    this.createFilterCompound(values);
-    this.createTransformCompound(values);
+    const compoundsMapper = mapperCreators.compounds?.(this.builder);
+    if (compoundsMapper) compoundsMapper(values);
 
     return this.builder.getResult();
-  }
-
-  createFilterCompound(values: IUtilityRulesetsDTO) {
-    if (
-      values.filterBlur ||
-      values.filterBrightness ||
-      values.filterContrast ||
-      values.filterDropShadow ||
-      values.filterGrayscale ||
-      values.filterHueRotate ||
-      values.filterInvert ||
-      values.filterOpacity ||
-      values.filterSaturate ||
-      values.filterSepia
-    ) {
-      this.builder.mapKeywordsToRulesets(["filterCompound"]);
-    }
-  }
-
-  createTransformCompound(values: IUtilityRulesetsDTO) {
-    if (
-      values.transformTranslate ||
-      values.transformTranslate3D ||
-      values.transformTranslateX ||
-      values.transformTranslateY ||
-      values.transformTranslateZ ||
-      values.transformRotate ||
-      values.transformRotateX ||
-      values.transformRotateY ||
-      values.transformRotateZ ||
-      values.transformScale ||
-      values.transformScale3D ||
-      values.transformScaleX ||
-      values.transformScaleY ||
-      values.transformScaleZ ||
-      values.transformSkew ||
-      values.transformSkewX ||
-      values.transformSkewY ||
-      values.transformPerspective
-    ) {
-      this.builder.mapKeywordsToRulesets([
-        "transformCompound",
-        "transformCompound3D",
-      ]);
-    }
   }
 }

@@ -1,11 +1,17 @@
-import { IRuleset } from "../../1_entities/Ruleset";
-import RulesetsFactory from "./index";
+import Ruleset, { IRuleset } from "../../1_entities/Ruleset";
+import RulesetsFactory, { IRulesetsFactory } from "./index";
 
-const toString = (rs: IRuleset.Instance[]) => rs.map((rs) => rs.toString());
+const toString = (rs: IRuleset.DTO[]) =>
+  rs.map((rs) => Ruleset.create(rs).toString());
+
+const basic: IRulesetsFactory.DTO = {
+  variantsMap: {},
+  classnamesMap: {},
+};
 
 describe("RulesetsFactory", () => {
   it("should not crash if nothing is provided", () => {
-    const rulesetsFactory = RulesetsFactory.create();
+    const rulesetsFactory = RulesetsFactory.create(basic);
     const res = rulesetsFactory.createAll({});
     expect(res).toEqual([]);
   });
@@ -13,7 +19,7 @@ describe("RulesetsFactory", () => {
   it("should build size rulesets", () => {
     const width = { "20": "20px", "2em": "2em" };
     const height = { "50": "50px" };
-    const rulesetsFactory = RulesetsFactory.create();
+    const rulesetsFactory = RulesetsFactory.create(basic);
     const res = rulesetsFactory.createAll({
       width,
       height,
@@ -38,7 +44,7 @@ describe("RulesetsFactory", () => {
 
   it("should build margin rulesets", () => {
     const margin = { "0a": "0 auto", "20": "20px", "2em": "2em" };
-    const rulesetsFactory = RulesetsFactory.create();
+    const rulesetsFactory = RulesetsFactory.create(basic);
     const res = rulesetsFactory.createAll({ margin });
 
     expect(toString(res)).toEqual([
@@ -62,7 +68,7 @@ describe("RulesetsFactory", () => {
 
   it("should build padding rulesets", () => {
     const padding = { btn: "10px 20px", "20": "20px", "2em": "2em" };
-    const rulesetsFactory = RulesetsFactory.create();
+    const rulesetsFactory = RulesetsFactory.create(basic);
     const res = rulesetsFactory.createAll({ padding });
 
     // prettier-ignore
@@ -86,7 +92,7 @@ describe("RulesetsFactory", () => {
   });
 
   it("should build inset rulesets", () => {
-    const rulesetsFactory = RulesetsFactory.create();
+    const rulesetsFactory = RulesetsFactory.create(basic);
     const res = rulesetsFactory.createAll({
       inset: { "20": "20px", "2em": "2em" },
       top: { sm: "5px" },
@@ -115,7 +121,7 @@ describe("RulesetsFactory", () => {
 
   it("should build z index rulesets", () => {
     const zIndex = { modal: "1000", toast: "200" };
-    const rulesetsFactory = RulesetsFactory.create();
+    const rulesetsFactory = RulesetsFactory.create(basic);
     const res = rulesetsFactory.createAll({ zIndex });
 
     expect(toString(res)).toEqual([
@@ -125,7 +131,7 @@ describe("RulesetsFactory", () => {
   });
 
   it("should build font rulesets", () => {
-    const rulesetsFactory = RulesetsFactory.create();
+    const rulesetsFactory = RulesetsFactory.create(basic);
     const res = rulesetsFactory.createAll({
       font: { main: "italic bold .8em/1.2 Arial, sans-serif" },
       fontSize: { "20": "20px", "2em": "2em", md: "16px/24px" },
@@ -143,7 +149,7 @@ describe("RulesetsFactory", () => {
   });
 
   it("should build border rulesets", () => {
-    const rulesetsFactory = RulesetsFactory.create();
+    const rulesetsFactory = RulesetsFactory.create(basic);
     const res = rulesetsFactory.createAll({
       border: { thin: "1px solid black", bold: "5px solid black" },
       borderRadius: { "50%": "50%", "5px": "5px" },
@@ -199,7 +205,7 @@ describe("RulesetsFactory", () => {
   });
 
   it("should build position rulesets", () => {
-    const rulesetsFactory = RulesetsFactory.create();
+    const rulesetsFactory = RulesetsFactory.create(basic);
     const res = rulesetsFactory.createAll({
       position: { s: "static", r: "relative" },
     });
@@ -211,7 +217,7 @@ describe("RulesetsFactory", () => {
   });
 
   it("should build display rulesets", () => {
-    const rulesetsFactory = RulesetsFactory.create();
+    const rulesetsFactory = RulesetsFactory.create(basic);
     const res = rulesetsFactory.createAll({
       display: { n: "none", b: "block", i: "inline" },
     });
@@ -224,7 +230,7 @@ describe("RulesetsFactory", () => {
   });
 
   it("should build flex rulesets", () => {
-    const rulesetsFactory = RulesetsFactory.create();
+    const rulesetsFactory = RulesetsFactory.create(basic);
     const res = rulesetsFactory.createAll({
       flex: { "00a": "0 0 auto", "1": "1" },
       flexGrow: { "1": "1", "2": "2", "4": "4" },
@@ -265,7 +271,7 @@ describe("RulesetsFactory", () => {
   });
 
   it("should build flex grid rulesets", () => {
-    const rulesetsFactory = RulesetsFactory.create();
+    const rulesetsFactory = RulesetsFactory.create(basic);
     const res = rulesetsFactory.createAll({
       flexGrid: {
         cols: 6,
@@ -285,7 +291,7 @@ describe("RulesetsFactory", () => {
   });
 
   it("should build flex grid rulesets with gutters", () => {
-    const rulesetsFactory = RulesetsFactory.create();
+    const rulesetsFactory = RulesetsFactory.create(basic);
     const res = rulesetsFactory.createAll({
       flexGrid: {
         cols: 12,
@@ -318,7 +324,7 @@ describe("RulesetsFactory", () => {
   });
 
   it("should build text rulesets", () => {
-    const rulesetsFactory = RulesetsFactory.create();
+    const rulesetsFactory = RulesetsFactory.create(basic);
     const res = rulesetsFactory.createAll({
       verticalAlign: { sup: "super", t: "top", m: "middle" },
       textAlign: { l: "left", c: "center" },
@@ -352,7 +358,7 @@ describe("RulesetsFactory", () => {
   });
 
   it("should build overflow rulesets", () => {
-    const rulesetsFactory = RulesetsFactory.create();
+    const rulesetsFactory = RulesetsFactory.create(basic);
     const overflow = { v: "visible", h: "hidden", a: "auto" };
     const res = rulesetsFactory.createAll({
       overflow,
@@ -377,8 +383,24 @@ describe("RulesetsFactory", () => {
     ]);
   });
 
+  it("should build overscroll behavior rulesets", () => {
+    const rulesetsFactory = RulesetsFactory.create(basic);
+    const overscrollBehavior = { a: "auto" };
+    const res = rulesetsFactory.createAll({
+      overscrollBehavior,
+    });
+
+    expect(toString(res)).toEqual([
+      ".osb_a { overscroll-behavior: auto; }",
+      ".osbi_a { overscroll-behavior-inline: auto; }",
+      ".osbb_a { overscroll-behavior-block: auto; }",
+      ".osbx_a { overscroll-behavior-x: auto; }",
+      ".osby_a { overscroll-behavior-y: auto; }",
+    ]);
+  });
+
   it("should build background rulesets", () => {
-    const rulesetsFactory = RulesetsFactory.create();
+    const rulesetsFactory = RulesetsFactory.create(basic);
     const res = rulesetsFactory.createAll({
       background: { main: "border-box #eee" },
       backgroundColor: { pink: "pink", tom: "tomato" },
@@ -395,7 +417,7 @@ describe("RulesetsFactory", () => {
   });
 
   it("should build box shadow rulesets", () => {
-    const rulesetsFactory = RulesetsFactory.create();
+    const rulesetsFactory = RulesetsFactory.create(basic);
     const res = rulesetsFactory.createAll({
       boxShadow: {
         n: "none",
@@ -414,7 +436,7 @@ describe("RulesetsFactory", () => {
   });
 
   it("should build opacity rulesets", () => {
-    const rulesetsFactory = RulesetsFactory.create();
+    const rulesetsFactory = RulesetsFactory.create(basic);
     const res = rulesetsFactory.createAll({
       opacity: { "0": "0", "0.5": "0.5", "1": "1" },
     });
@@ -427,7 +449,7 @@ describe("RulesetsFactory", () => {
   });
 
   it("should build visibility rulesets", () => {
-    const rulesetsFactory = RulesetsFactory.create();
+    const rulesetsFactory = RulesetsFactory.create(basic);
     const res = rulesetsFactory.createAll({
       visibility: { v: "visible", h: "hidden", c: "collapse" },
     });
@@ -440,7 +462,7 @@ describe("RulesetsFactory", () => {
   });
 
   it("should build transform rulesets", () => {
-    const rulesetsFactory = RulesetsFactory.create();
+    const rulesetsFactory = RulesetsFactory.create(basic);
 
     const res = rulesetsFactory.createAll({
       transform: {
@@ -512,10 +534,11 @@ describe("RulesetsFactory", () => {
   });
 
   it("should build filter rulesets", () => {
-    const rulesetsFactory = RulesetsFactory.create();
+    const rulesetsFactory = RulesetsFactory.create(basic);
 
     // prettier-ignore
     const res = rulesetsFactory.createAll({
+      filterCompound: {},
       filter: { hero: "sepia(70%) blur(1px)", inv: "drop-shadow(16px 16px 20px red) invert(75%)" },
       filterBlur: { sm: "1px", "0": "0", "8": "8px" },
       filterBrightness: { "1": "1", "150%": "150%", "1.4": "1.4" },

@@ -1,47 +1,49 @@
-import Ruleset, { IRuleset } from "../../1_entities/Ruleset";
-import classNamesMap from "./RulesetsBuilder.classnames";
-import declarationsMap from "./RulesetsBuilder.declarations";
-import * as I from "./RulesetsBuilder.interface";
+import { IRuleset } from "../../1_entities/Ruleset";
+import { DTO, Variants, Placeholders } from "./RulesetsBuilder.interface";
 
-export default class RulesetsBuilder implements I.Instance {
-  private result: IRuleset.Instance[];
-  private constructor(private dto?: I.DTO) {
-    this.result = [];
-  }
+export default class RulesetsBuilder<
+  KeywordsMap extends Record<string, string>,
+  ClassnamesMap extends KeywordsMap,
+  DeclarationsMap extends KeywordsMap,
+  VariantsMap extends Partial<Record<keyof KeywordsMap, Variants>>,
+> {
+  private constructor(
+    private dto: DTO<KeywordsMap, ClassnamesMap, DeclarationsMap, VariantsMap>,
+  ) {}
 
-  static create(dto?: I.DTO) {
-    return new RulesetsBuilder(dto);
+  private result: IRuleset.DTO[] = [];
+
+  // prettier-ignore
+  static create<K extends Record<string, string>, C extends K, D extends K, V extends Partial<Record<keyof K, Variants>>>(dto: DTO<K, C, D, V>) {
+    return new RulesetsBuilder<K, C, D, V>(dto);
   }
 
   getResult() {
     return this.result;
   }
 
-  getResultDTO() {
-    return this.getResult().map((ruleset) => ruleset.toDTO());
-  }
-
-  mapKeywordsToRulesets(keywords: Array<keyof I.CSSPropertiesMap>) {
+  mapKeywordsToRulesets(
+    keywords: Array<keyof KeywordsMap>,
+    val?: [string, string],
+  ) {
     keywords.forEach((kw) => {
-      this.addRulesetFromKeyword(kw);
+      this.addRulesetFromKeyword(kw, val);
     });
   }
 
   mapValuesToRulesets(
     values: Record<string, string> | undefined,
-    keywords: Array<keyof I.CSSPropertiesMap>,
+    keywords: Array<keyof KeywordsMap>,
   ) {
     if (!values) return;
-    Object.entries(values).forEach((val) =>
-      keywords.forEach((kw) => {
-        this.addRulesetFromKeyword(kw, val);
-      }),
-    );
+    Object.entries(values).forEach((val) => {
+      this.mapKeywordsToRulesets(keywords, val);
+    });
   }
 
   mapSingleValuesToRulesets(
     values: Record<string, string> | undefined,
-    keywords: Array<keyof I.CSSPropertiesMap>,
+    keywords: Array<keyof KeywordsMap>,
   ) {
     if (!values) return;
     const filterSingleValue = ([_, v]: string[]) => v.split(" ").length === 1;
@@ -50,7 +52,7 @@ export default class RulesetsBuilder implements I.Instance {
     return this.mapValuesToRulesets(filteredValues, keywords);
   }
 
-  addRulesetFromKeyword(kw: keyof I.CSSPropertiesMap, val?: [string, string]) {
+  addRulesetFromKeyword(kw: keyof KeywordsMap, val?: [string, string]) {
     const classname = this.getClassname(kw, val?.[0]);
     const declarations = this.getDeclaration(kw, val?.[1]);
     const classnameVariants = this.getVariants(kw);
@@ -58,33 +60,27 @@ export default class RulesetsBuilder implements I.Instance {
   }
 
   addRuleset(dto: IRuleset.DTO) {
-    const ruleset = this.RulesetFactory.create(dto);
-    this.result.push(ruleset);
+    this.result.push(dto);
   }
 
-  getClassname(name: I.Classname, ...values: I.Placeholders) {
-    return this.interpolate(this.classnamesMap[name], values);
+  getClassname(keyword: keyof ClassnamesMap, ...values: Placeholders) {
+    return this.interpolate(this.dto.classnamesMap[keyword], values);
   }
 
-  getDeclaration(name: I.Declaration, ...values: I.Placeholders) {
-    return this.interpolate(declarationsMap[name], values);
+  getDeclaration(keyword: keyof DeclarationsMap, ...values: Placeholders) {
+    return this.interpolate(this.dto.declarationsMap[keyword], values);
   }
 
-  getVariants(name: keyof I.CSSPropertiesMap) {
-    const common = this.dto?.rulesetVariants?.all;
-    const local = this.dto?.rulesetVariants?.[name];
-    if (common || local) return Object.assign({}, common, local);
+  getVariants(keyword: keyof VariantsMap) {
+    const common = this.dto.commonVariants;
+    const local = this.dto.variantsMap[keyword];
+    if (common || local) {
+      console.log(keyword, local, common);
+      return Object.assign({}, common, local);
+    }
   }
 
-  private get RulesetFactory() {
-    return Ruleset.createFactory(this.dto?.rulesetProps);
-  }
-
-  private get classnamesMap() {
-    return Object.assign({}, classNamesMap, this.dto?.classnamesMap);
-  }
-
-  private interpolate(data: string, placeholders?: I.Placeholders) {
+  private interpolate(data: string, placeholders?: Placeholders) {
     if (!placeholders || !placeholders.length) return data;
 
     placeholders.forEach((value, idx) => {

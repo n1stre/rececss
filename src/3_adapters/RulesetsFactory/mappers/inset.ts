@@ -1,9 +1,12 @@
-import { RulesetsBuilder } from "../RulesetsFactory.interface";
+import {
+  RulesetsBuilder,
+  ConfigurableValues,
+} from "../RulesetsFactory.interface";
 
 export default (builder: RulesetsBuilder) =>
-  function mapInset(values: Record<string, string>) {
-    builder.mapValuesToRulesets(values, ["inset"]);
-    builder.mapSingleValuesToRulesets(values, [
+  function mapInset(values: ConfigurableValues) {
+    builder.mapValuesToRulesets(values.inset, ["inset"]);
+    builder.mapSingleValuesToRulesets(values.inset, [
       "top",
       "bottom",
       "left",

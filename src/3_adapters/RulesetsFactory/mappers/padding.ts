@@ -1,9 +1,12 @@
-import { RulesetsBuilder } from "../RulesetsFactory.interface";
+import {
+  RulesetsBuilder,
+  ConfigurableValues,
+} from "../RulesetsFactory.interface";
 
 export default (builder: RulesetsBuilder) =>
-  function mapPadding(values: Record<string, string>) {
-    builder.mapValuesToRulesets(values, ["padding"]);
-    builder.mapSingleValuesToRulesets(values, [
+  function mapPadding(values: ConfigurableValues) {
+    builder.mapValuesToRulesets(values.padding, ["padding"]);
+    builder.mapSingleValuesToRulesets(values.padding, [
       "paddingTop",
       "paddingBottom",
       "paddingVertical",

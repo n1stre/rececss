@@ -1,9 +1,12 @@
-import { RulesetsBuilder } from "../RulesetsFactory.interface";
+import {
+  RulesetsBuilder,
+  ConfigurableValues,
+} from "../RulesetsFactory.interface";
 
 export default (builder: RulesetsBuilder) =>
-  function mapTransformSkew(values: Record<string, string>) {
-    builder.mapValuesToRulesets(values, ["transformSkew"]);
-    builder.mapSingleValuesToRulesets(values, [
+  function mapTransformSkew(values: ConfigurableValues) {
+    builder.mapValuesToRulesets(values.transformSkew, ["transformSkew"]);
+    builder.mapSingleValuesToRulesets(values.transformSkew, [
       "transformSkewX",
       "transformSkewY",
     ]);

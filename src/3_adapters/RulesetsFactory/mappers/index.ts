@@ -1,39 +1,46 @@
-import { Mappers, RulesetsBuilder } from "../RulesetsFactory.interface";
+import {
+  ConfigurableValues,
+  MapperCreator,
+} from "../RulesetsFactory.interface";
 
-import makeMapFlexGrid from "./flexGrid";
-import makeMapFontSize from "./fontSize";
-import makeMapMargin from "./margin";
-import makeMapPadding from "./padding";
-import makeMapInset from "./inset";
-import makeMapBorder from "./border";
-import makeMapBorderColor from "./borderColor";
-import makeMapBorderRadius from "./borderRadius";
-import makeMapBorderStyle from "./borderStyle";
-import makeMapBorderWidth from "./borderWidth";
-import makeMapOverflow from "./overflow";
-import makeMapOverscrollBehavior from "./overscrollBehavior";
-import makeTransformTranslate from "./transformTranslate";
-import makeTransformRotate from "./transformRotate";
-import makeTransformScale from "./transformScale";
-import makeTransformSkew from "./transformSkew";
+import flexGrid from "./flexGrid";
+import fontSize from "./fontSize";
+import margin from "./margin";
+import padding from "./padding";
+import inset from "./inset";
+import border from "./border";
+import borderColor from "./borderColor";
+import borderRadius from "./borderRadius";
+import borderStyle from "./borderStyle";
+import borderWidth from "./borderWidth";
+import overflow from "./overflow";
+import overscrollBehavior from "./overscrollBehavior";
+import transformTranslate from "./transformTranslate";
+import transformRotate from "./transformRotate";
+import transformScale from "./transformScale";
+import transformSkew from "./transformSkew";
+import compounds from "./compounds";
 
-export default function createMappers(builder: RulesetsBuilder): Mappers {
-  return Object.freeze({
-    flexGrid: makeMapFlexGrid(builder),
-    fontSize: makeMapFontSize(builder),
-    margin: makeMapMargin(builder),
-    padding: makeMapPadding(builder),
-    inset: makeMapInset(builder),
-    border: makeMapBorder(builder),
-    borderColor: makeMapBorderColor(builder),
-    borderRadius: makeMapBorderRadius(builder),
-    borderStyle: makeMapBorderStyle(builder),
-    borderWidth: makeMapBorderWidth(builder),
-    overflow: makeMapOverflow(builder),
-    overscrollBehavior: makeMapOverscrollBehavior(builder),
-    transformTranslate: makeTransformTranslate(builder),
-    transformRotate: makeTransformRotate(builder),
-    transformScale: makeTransformScale(builder),
-    transformSkew: makeTransformSkew(builder),
-  });
-}
+const mapperCreators: Partial<
+  Record<keyof ConfigurableValues | "compounds", MapperCreator>
+> = Object.freeze({
+  flexGrid,
+  fontSize,
+  margin,
+  padding,
+  inset,
+  border,
+  borderColor,
+  borderRadius,
+  borderStyle,
+  borderWidth,
+  overflow,
+  overscrollBehavior,
+  transformTranslate,
+  transformRotate,
+  transformScale,
+  transformSkew,
+  compounds,
+});
+
+export default mapperCreators;

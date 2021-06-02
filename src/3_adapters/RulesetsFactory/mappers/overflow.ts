@@ -1,8 +1,11 @@
-import { RulesetsBuilder } from "../RulesetsFactory.interface";
+import {
+  RulesetsBuilder,
+  ConfigurableValues,
+} from "../RulesetsFactory.interface";
 
 export default (builder: RulesetsBuilder) =>
-  function mapOverflow(values: Record<string, string>) {
-    builder.mapValuesToRulesets(values, [
+  function mapOverflow(values: ConfigurableValues) {
+    builder.mapValuesToRulesets(values.overflow, [
       "overflow",
       "overflowX",
       "overflowY",

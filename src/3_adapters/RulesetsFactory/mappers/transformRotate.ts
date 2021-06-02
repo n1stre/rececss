@@ -1,9 +1,12 @@
-import { RulesetsBuilder } from "../RulesetsFactory.interface";
+import {
+  RulesetsBuilder,
+  ConfigurableValues,
+} from "../RulesetsFactory.interface";
 
 export default (builder: RulesetsBuilder) =>
-  function mapTransformRotate(values: Record<string, string>) {
-    builder.mapValuesToRulesets(values, ["transformRotate"]);
-    builder.mapSingleValuesToRulesets(values, [
+  function mapTransformRotate(values: ConfigurableValues) {
+    builder.mapValuesToRulesets(values.transformRotate, ["transformRotate"]);
+    builder.mapSingleValuesToRulesets(values.transformRotate, [
       "transformRotateX",
       "transformRotateY",
       "transformRotateZ",

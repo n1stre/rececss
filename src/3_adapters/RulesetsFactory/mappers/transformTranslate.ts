@@ -1,9 +1,14 @@
-import { RulesetsBuilder } from "../RulesetsFactory.interface";
+import {
+  RulesetsBuilder,
+  ConfigurableValues,
+} from "../RulesetsFactory.interface";
 
 export default (builder: RulesetsBuilder) =>
-  function mapTransformTranslate(values: Record<string, string>) {
-    builder.mapValuesToRulesets(values, ["transformTranslate"]);
-    builder.mapSingleValuesToRulesets(values, [
+  function mapTransformTranslate(values: ConfigurableValues) {
+    builder.mapValuesToRulesets(values.transformTranslate, [
+      "transformTranslate",
+    ]);
+    builder.mapSingleValuesToRulesets(values.transformTranslate, [
       "transformTranslateX",
       "transformTranslateY",
       "transformTranslateZ",

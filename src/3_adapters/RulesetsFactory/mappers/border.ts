@@ -1,8 +1,11 @@
-import { RulesetsBuilder } from "../RulesetsFactory.interface";
+import {
+  RulesetsBuilder,
+  ConfigurableValues,
+} from "../RulesetsFactory.interface";
 
 export default (builder: RulesetsBuilder) =>
-  function mapBorder(values: Record<string, string>) {
-    builder.mapValuesToRulesets(values, [
+  function mapBorder(values: ConfigurableValues) {
+    builder.mapValuesToRulesets(values.border, [
       "border",
       "borderTop",
       "borderBottom",

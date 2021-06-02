@@ -1,9 +1,14 @@
-import { RulesetsBuilder } from "../RulesetsFactory.interface";
+import {
+  RulesetsBuilder,
+  ConfigurableValues,
+} from "../RulesetsFactory.interface";
 
 export default (builder: RulesetsBuilder) =>
-  function mapOverscrollBehavior(values: Record<string, string>) {
-    builder.mapValuesToRulesets(values, ["overscrollBehavior"]);
-    builder.mapSingleValuesToRulesets(values, [
+  function mapOverscrollBehavior(values: ConfigurableValues) {
+    builder.mapValuesToRulesets(values.overscrollBehavior, [
+      "overscrollBehavior",
+    ]);
+    builder.mapSingleValuesToRulesets(values.overscrollBehavior, [
       "overscrollBehaviorInline",
       "overscrollBehaviorBlock",
       "overscrollBehaviorX",

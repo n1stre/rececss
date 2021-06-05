@@ -1,5 +1,5 @@
-import ioMock from "../../../tests/mocks/io";
-import cssProcessor from "../../../tests/mocks/cssProcessor";
+import ioMock from "../../../tests/__mocks__/io";
+import cssProcessor from "../../../tests/__mocks__/cssProcessor";
 import StylesheetsController from "./index";
 
 describe("StylesheetsController", () => {

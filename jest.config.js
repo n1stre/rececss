@@ -1,11 +1,11 @@
 module.exports = {
   preset: "ts-jest",
   verbose: true,
-  roots: ["<rootDir>/src"],
+  roots: ["<rootDir>/src/", "<rootDir>/tests/"],
   transform: {
     "^.+\\.tsx?$": "ts-jest",
   },
-
+  clearMocks: true,
   testEnvironment: "node",
   testMatch: ["**/*.(test|spec).(js|ts|tsx)"],
   testPathIgnorePatterns: ["/node_modules/"],

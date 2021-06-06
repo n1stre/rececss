@@ -2,13 +2,22 @@ import path from "path";
 import { promises as fs } from "fs";
 import { IFileSystem } from "./interfaces";
 
+type File = {
+  path: string;
+  contents: string;
+};
+
 export default class NodeFileSystem implements IFileSystem {
-  async writeFiles(files: { path: string; contents: string }[]) {
+  static create() {
+    return new NodeFileSystem();
+  }
+
+  async writeFiles(files: File[]) {
     const failedFiles: Record<string, string> = {};
     const promises = files.map((f) => {
-      return this.writeFileRecursive(f.path, f.contents).catch(
-        (e) => (failedFiles[f.path] = e.message),
-      );
+      const handleError = (e: Error) => (failedFiles[f.path] = e.message);
+      const promise = this.writeFile(f.path, f.contents).catch(handleError);
+      return promise;
     });
 
     await Promise.all(promises);
@@ -20,21 +29,14 @@ export default class NodeFileSystem implements IFileSystem {
     }
   }
 
-  private async writeFileRecursive(filename: string, content: string) {
-    const filePathParts = filename.split(path.sep);
-    const filePathPartsSize = filePathParts.length;
-
-    if (filePathPartsSize > 1) {
-      const folderPathParts = filePathParts.slice(0, filePathPartsSize - 1);
-      const folderPath = folderPathParts.join(path.sep);
-      const folderExists = await this.folderExists(folderPath);
-      if (!folderExists) await fs.mkdir(folderPath, { recursive: true });
-    }
-
-    return fs.writeFile(filename, content);
+  private async writeFile(file: string, content: string) {
+    const dir = path.dirname(file);
+    const dirExists = await this.exists(dir);
+    if (!dirExists) await fs.mkdir(dir, { recursive: true });
+    return fs.writeFile(file, content);
   }
 
-  private async folderExists(path: string) {
+  private async exists(path: string) {
     try {
       await fs.stat(path);
       return true;

@@ -7,7 +7,7 @@ import Config from "../config";
 export default class ConfigFileSystemIO implements IInputOutput {
   private config: IConfig.Instance;
 
-  constructor(configFileName: string, private fs: IFileSystem) {
+  private constructor(configFileName: string, private fs: IFileSystem) {
     try {
       const configPath = path.resolve(process.cwd(), configFileName);
       const config = Config.create(require(configPath));
@@ -15,6 +15,10 @@ export default class ConfigFileSystemIO implements IInputOutput {
     } catch (err) {
       throw Error("Config does not exist");
     }
+  }
+
+  static create(configFileName: string, fs: IFileSystem) {
+    return new ConfigFileSystemIO(configFileName, fs);
   }
 
   getAssetsGenerationInput() {

@@ -22,44 +22,14 @@ export default class RulesetsBuilder<
     return this.result;
   }
 
-  mapKeywordsToRulesets(
-    keywords: Array<keyof KeywordsMap>,
-    val?: [string, string],
-  ) {
-    keywords.forEach((kw) => {
-      this.addRulesetFromKeyword(kw, val);
-    });
-  }
-
-  mapValuesToRulesets(
-    values: Record<string, string> | undefined,
-    keywords: Array<keyof KeywordsMap>,
-  ) {
-    if (!values) return;
-    Object.entries(values).forEach((val) => {
-      this.mapKeywordsToRulesets(keywords, val);
-    });
-  }
-
-  mapSingleValuesToRulesets(
-    values: Record<string, string> | undefined,
-    keywords: Array<keyof KeywordsMap>,
-  ) {
-    if (!values) return;
-    const filterSingleValue = ([_, v]: string[]) => v.split(" ").length === 1;
-    const filteredEntries = Object.entries(values).filter(filterSingleValue);
-    const filteredValues = Object.fromEntries(filteredEntries);
-    return this.mapValuesToRulesets(filteredValues, keywords);
-  }
-
-  addRulesetFromKeyword(kw: keyof KeywordsMap, val?: [string, string]) {
-    const classname = this.getClassname(kw, val?.[0]);
-    const declarations = this.getDeclaration(kw, val?.[1]);
+  addRulesetFromKeyword(kw: keyof KeywordsMap, values?: [string, string]) {
+    const classname = this.getClassname(kw, values?.[0]);
+    const declarations = this.getDeclaration(kw, values?.[1]);
     const classnameVariants = this.getVariants(kw);
-    this.addRuleset({ classname, declarations, classnameVariants });
+    this.addRulesetFromDTO({ classname, declarations, classnameVariants });
   }
 
-  addRuleset(dto: IRuleset.DTO) {
+  addRulesetFromDTO(dto: IRuleset.DTO) {
     this.result.push(dto);
   }
 
@@ -72,12 +42,7 @@ export default class RulesetsBuilder<
   }
 
   getVariants(keyword: keyof VariantsMap) {
-    const common = this.dto.commonVariants;
-    const local = this.dto.variantsMap[keyword];
-    if (common || local) {
-      console.log(keyword, local, common);
-      return Object.assign({}, common, local);
-    }
+    return this.dto.variantsMap[keyword];
   }
 
   private interpolate(data: string, placeholders?: Placeholders) {

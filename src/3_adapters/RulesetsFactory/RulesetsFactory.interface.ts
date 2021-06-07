@@ -1,7 +1,9 @@
 import RB from "../RulesetsBuilder";
 
-export type MapperCreator = (builder: RulesetsBuilder) => Mapper;
-export type Mapper = (values: ConfigurableValues) => void;
+export type CompoundRulesetCreator = (
+  values: ConfigurableValues,
+  builder: RulesetsBuilder,
+) => void;
 
 export type DTO = {
   classnamesMap: Partial<ClassnamesMap>;

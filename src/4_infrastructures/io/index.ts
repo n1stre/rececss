@@ -1,8 +1,2 @@
-import ConfigFileSystemIO from "./ConfigFileSystemIO";
-
-const IO = Object.freeze({
-  new: (...p: ConstructorParameters<typeof ConfigFileSystemIO>) =>
-    new ConfigFileSystemIO(...p),
-});
-
+import IO from "./ConfigFileSystemIO";
 export default IO;

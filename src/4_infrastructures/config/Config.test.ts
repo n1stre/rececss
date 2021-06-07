@@ -1,7 +1,7 @@
 import Config from "./Config";
 import { GetRules } from "./Config.interfaces";
 
-const dto = require("../../../tests/fixtures/rececss.config");
+const dto = require("../../../tests/__fixtures__/rececss.config");
 const configFactory = Config.createFactory({
   defaultRules: {
     all: {
@@ -10,7 +10,6 @@ const configFactory = Config.createFactory({
       $variants: { h: "&:hover", js: "&.js-active" },
     },
     width: { full: "100%" },
-    border: { sm: "1px solid", $variants: { a: "&:active" } },
     outline: { sm: "1px solid", $variants: { a: "&:active" } },
   },
 });
@@ -92,15 +91,16 @@ describe("Config", () => {
       all: { inh: "inherit", $variants: { f: "&:focus" } },
       width: { half: "50%" },
       color: { red: "red", $variants: { hp: "*:hover &" } },
-      border: { $variants: { hp: "*:hover &" } },
     };
 
     const config = configFactory.create({ ...dto, rules });
+    const common = { h: "&:hover", js: "&.js-active", f: "&:focus" };
+
     expect(config.getRulesetsVariants()).toEqual({
-      all: { h: "&:hover", js: "&.js-active", f: "&:focus" },
-      color: { hp: "*:hover &" },
-      border: { a: "&:active", hp: "*:hover &" },
-      outline: { a: "&:active" },
+      all: common,
+      width: common,
+      color: { ...common, hp: "*:hover &" },
+      outline: { ...common, a: "&:active" },
     });
   });
 
@@ -118,7 +118,6 @@ describe("Config", () => {
       all: commonValues,
       width: { ...commonValues, full: "100%", half: "50%" },
       color: { ...commonValues, red: "red" },
-      border: { ...commonValues, sm: "1px solid" },
       outline: { ...commonValues, sm: "1px solid" },
     });
   });
@@ -129,16 +128,16 @@ describe("Config", () => {
         all: extend({ inh: "inherit", $variants: { f: "&:focus" } }),
         width: extend({ half: "50%" }),
         color: extend({ red: "red", $variants: { hp: "*:hover &" } }),
-        border: extend({ $variants: { hp: "*:hover &" } }),
       };
     };
 
     const config = configFactory.create({ ...dto, rules });
+    const common = { h: "&:hover", js: "&.js-active", f: "&:focus" };
 
     expect(config.getRulesetsVariants()).toEqual({
-      all: { h: "&:hover", js: "&.js-active", f: "&:focus" },
-      color: { hp: "*:hover &" },
-      border: { a: "&:active", hp: "*:hover &" },
+      all: common,
+      width: common,
+      color: { ...common, hp: "*:hover &" },
     });
   });
 
@@ -158,6 +157,102 @@ describe("Config", () => {
       all: commonValues,
       width: { ...commonValues, full: "100%", half: "50%" },
       color: { ...commonValues, red: "red" },
+    });
+  });
+
+  test("rule associations values", () => {
+    const rules: GetRules = ({ defaults }) => ({
+      all: defaults.all,
+      border: { sm: "1px solid" },
+      borderColor: { dark: "#000" },
+      borderRadius: { sm: "2px" },
+      borderStyle: { s: "solid" },
+      borderWidth: { lg: "8px" },
+      inset: { s: "10px", m: "10px 20px 15px" },
+      margin: { s: "10px", m: "10px 20px 15px" },
+      overflow: { h: "hidden" },
+      overscrollBehavior: { c: "contain" },
+      padding: { s: "10px", m: "10px 20px 15px" },
+      transformRotate: { s: "30deg" },
+      transformScale: { s: "1.2", m: "1.1, 1.2" },
+      transformSkew: { s: "10px", m: "10px, 20px" },
+      transformTranslate: { s: "10px", m: "12px, 50%" },
+    });
+
+    const config = configFactory.create({ ...dto, rules });
+    const common = { u: "unset", ini: "initial" };
+
+    expect(config.getRulesetsValues()).toEqual({
+      all: common,
+      border: { sm: "1px solid", ...common },
+      borderTop: { sm: "1px solid", ...common },
+      borderBottom: { sm: "1px solid", ...common },
+      borderLeft: { sm: "1px solid", ...common },
+      borderRight: { sm: "1px solid", ...common },
+      borderColor: { dark: "#000", ...common },
+      borderTopColor: { dark: "#000", ...common },
+      borderBottomColor: { dark: "#000", ...common },
+      borderLeftColor: { dark: "#000", ...common },
+      borderRightColor: { dark: "#000", ...common },
+      borderRadius: { sm: "2px", ...common },
+      borderTopLeftRadius: { sm: "2px", ...common },
+      borderTopRightRadius: { sm: "2px", ...common },
+      borderBottomLeftRadius: { sm: "2px", ...common },
+      borderBottomRightRadius: { sm: "2px", ...common },
+      borderStyle: { s: "solid", ...common },
+      borderTopStyle: { s: "solid", ...common },
+      borderBottomStyle: { s: "solid", ...common },
+      borderLeftStyle: { s: "solid", ...common },
+      borderRightStyle: { s: "solid", ...common },
+      borderWidth: { lg: "8px", ...common },
+      borderTopWidth: { lg: "8px", ...common },
+      borderBottomWidth: { lg: "8px", ...common },
+      borderLeftWidth: { lg: "8px", ...common },
+      borderRightWidth: { lg: "8px", ...common },
+      inset: { s: "10px", m: "10px 20px 15px", ...common },
+      top: { s: "10px", ...common },
+      bottom: { s: "10px", ...common },
+      left: { s: "10px", ...common },
+      right: { s: "10px", ...common },
+      margin: { s: "10px", m: "10px 20px 15px", ...common },
+      marginTop: { s: "10px", ...common },
+      marginBottom: { s: "10px", ...common },
+      marginVertical: { s: "10px", ...common },
+      marginLeft: { s: "10px", ...common },
+      marginRight: { s: "10px", ...common },
+      marginHorizontal: { s: "10px", ...common },
+      overflow: { h: "hidden", ...common },
+      overflowX: { h: "hidden", ...common },
+      overflowY: { h: "hidden", ...common },
+      overflowInline: { h: "hidden", ...common },
+      overflowBlock: { h: "hidden", ...common },
+      overscrollBehavior: { c: "contain", ...common },
+      overscrollBehaviorInline: { c: "contain", ...common },
+      overscrollBehaviorBlock: { c: "contain", ...common },
+      overscrollBehaviorX: { c: "contain", ...common },
+      overscrollBehaviorY: { c: "contain", ...common },
+      padding: { s: "10px", m: "10px 20px 15px", ...common },
+      paddingTop: { s: "10px", ...common },
+      paddingBottom: { s: "10px", ...common },
+      paddingVertical: { s: "10px", ...common },
+      paddingLeft: { s: "10px", ...common },
+      paddingRight: { s: "10px", ...common },
+      paddingHorizontal: { s: "10px", ...common },
+      transformRotate: { s: "30deg", ...common },
+      transformRotateX: { s: "30deg", ...common },
+      transformRotateY: { s: "30deg", ...common },
+      transformRotateZ: { s: "30deg", ...common },
+      transformScale: { s: "1.2", m: "1.1, 1.2", ...common },
+      transformScaleX: { s: "1.2", ...common },
+      transformScaleY: { s: "1.2", ...common },
+      transformScaleZ: { s: "1.2", ...common },
+      transformSkew: { s: "10px", m: "10px, 20px", ...common },
+      transformSkewX: { s: "10px", ...common },
+      transformSkewY: { s: "10px", ...common },
+      transformTranslate: { s: "10px", m: "12px, 50%", ...common },
+      transformTranslateX: { s: "10px", ...common },
+      transformTranslateY: { s: "10px", ...common },
+      transformTranslateZ: { s: "10px", ...common },
     });
   });
 

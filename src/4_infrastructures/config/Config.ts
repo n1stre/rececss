@@ -1,9 +1,11 @@
 import * as IConfig from "./Config.interfaces";
 import * as defaults from "./Config.defaults";
-import { Sizing, Pallete, Range, DataTypes } from "../utils";
+import { Sizing, Pallete, DataTypes, Units } from "../utils";
 
 export default class Config implements IConfig.Instance {
   private constructor(private dto: IConfig.DTO, private props: IConfig.Props) {}
+
+  private Units = Units.create({ unitsMap: defaults.getUnits() });
 
   static createFactory(props: IConfig.Props) {
     const create = (dto: IConfig.DTO) => Config.create(dto, props);
@@ -59,83 +61,72 @@ export default class Config implements IConfig.Instance {
   }
 
   getRulesetsVariants() {
-    return Object.fromEntries(
-      Object.entries(this.rules).map((e) => {
-        const key = e[0];
-        const variants = e[1].$variants;
-        return [key, variants];
-      }),
-    );
+    const common = this.commonVariants;
+    const variants: IConfig.Variants = {};
+
+    this.forEachRule((key, values) => {
+      const prev = variants[key] || {};
+      const current = values.$variants || {};
+      const newVariants = { ...common, ...prev, ...current };
+
+      variants[key] = newVariants;
+
+      this.forEachRuleAssociation(key, ({ key, mapVariants }) => {
+        variants[key] = mapVariants(newVariants);
+      });
+    });
+
+    return variants;
   }
 
   getRulesetsValues() {
-    return Object.fromEntries(
-      Object.entries(this.rules).map((e) => {
-        const key = e[0];
-        const values = { ...this.globalValues, ...this.parseRuleValue(e[1]) };
-        return [key, values];
-      }),
-    );
+    const common = this.commonValues;
+    const values: IConfig.RulesetsValues = {};
+
+    this.forEachRule((key, ruleValue) => {
+      const prev = values[key] || {};
+      const current = this.parseRuleValue(ruleValue);
+      const newValues = { ...common, ...prev, ...current } as any;
+
+      values[key] = newValues;
+
+      this.forEachRuleAssociation(key, ({ key, mapValues }) => {
+        values[key] = mapValues(newValues) as any;
+      });
+    });
+
+    return values;
+  }
+
+  private forEachRule(
+    cb: (key: keyof IConfig.Rules, values: IConfig.RuleValues) => void,
+    rules = this.rules,
+  ) {
+    const ruleKeys = Object.keys(rules) as Array<keyof IConfig.Rules>;
+    ruleKeys.forEach((key) => cb(key, rules[key]));
+  }
+
+  private forEachRuleAssociation(
+    key: keyof IConfig.Rules,
+    cb: IConfig.RuleAssociationCallback,
+  ) {
+    const association = defaults.rulesAssociations[key];
+    const mapValues = association?.values || ((v) => v);
+    const mapVariants = association?.variants || ((v) => v);
+
+    if (association) {
+      association.with.forEach((key) => cb({ key, mapValues, mapVariants }));
+    }
   }
 
   private parseRuleValue(rule?: any): Record<string, string> {
     if (!rule) return {};
     return Object.keys(rule).reduce((acc, key) => {
-      const value = rule[key];
       let add: Record<string, string> = {};
-      if (this.isValue(key)) add[key] = value;
-      else if (this.isUnit(key)) add = this.parseUnitValue(value, key);
+      if (this.isValue(key)) add[key] = rule[key];
+      else if (this.Units.isUnit(key)) add = this.Units.parse(rule[key], key);
       return { ...acc, ...add };
     }, {});
-  }
-
-  private parseUnitValue(values: IConfig.RuleValue, key: IConfig.RuleUnit) {
-    if (!Array.isArray(values)) return {};
-    const mapped = values.map((v) => this.parseUnitValueRanges(v)).flat();
-    const sorted = mapped.sort((a, b) => a - b);
-    const parsed = sorted.map((v) => this.appendUnit(v, this.unitsMap[key]));
-    return this.mapParsedValuesToRecord(parsed);
-  }
-
-  private appendUnit(targetValue: number, unit: string) {
-    let key = String(targetValue);
-    let value = String(targetValue);
-    if (value === "0") return { key: "0", value: "0" };
-    if (unit && unit != "px") key += unit;
-    if (unit) value += unit;
-    return { key, value };
-  }
-
-  private mapParsedValuesToRecord(values: { key: string; value: string }[]) {
-    const result: Record<string, string> = {};
-    values.forEach((v) => (result[v.key] = v.value));
-    return result;
-  }
-
-  private parseUnitValueRanges(value: IConfig.UnitValue) {
-    return Range.isRangeArray(value)
-      ? Range.createInclusiveFromArray(value)
-      : value;
-  }
-
-  private isValue(key: string) {
-    return key[0] !== "$";
-  }
-
-  private isUnit(key: string): key is IConfig.RuleUnit {
-    return key in this.unitsMap;
-  }
-
-  private get unitsMap() {
-    return defaults.getUnits();
-  }
-
-  private get defaultRules() {
-    return this.props.defaultRules || {};
-  }
-
-  private get globalValues() {
-    return this.parseRuleValue(this.rules.all);
   }
 
   private get rules() {
@@ -152,19 +143,36 @@ export default class Config implements IConfig.Instance {
   private extendMarkedRulesFromDefault = (
     rules: IConfig.Rules,
   ): IConfig.Rules => {
-    return Object.fromEntries(
-      Object.entries(rules).map((e) => {
-        const key = e[0] as keyof IConfig.Rules;
-        const value = e[1] as IConfig.RuleValues;
-        const defaultValue = this.defaultRules[key] || {};
-        if (!value.$extend) return e;
-        return [key, DataTypes.deepMerge(defaultValue, value)];
-      }),
-    );
+    const extended: IConfig.Rules = {};
+
+    this.forEachRule((key, value) => {
+      if (!value.$extend) return (extended[key] = value);
+      const defaultValue = this.defaultRules[key] || {};
+      const resultValue = DataTypes.deepMerge(defaultValue, value);
+      extended[key] = resultValue;
+    }, rules);
+
+    return extended;
   };
 
   private markRuleAsExtendedFromDefault(rule: IConfig.RuleValues) {
     rule.$extend = true;
     return rule;
+  }
+
+  private isValue(key: string) {
+    return key[0] !== "$";
+  }
+
+  private get defaultRules() {
+    return this.props.defaultRules || {};
+  }
+
+  private get commonValues() {
+    return this.parseRuleValue(this.rules.all);
+  }
+
+  private get commonVariants() {
+    return this.rules.all?.$variants || {};
   }
 }

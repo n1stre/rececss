@@ -34,13 +34,13 @@ export interface DTO {
 }
 
 export interface Instance {
-  getRulesetsValues: () => IRulesetsFactory.ConfigurableValues;
+  getRulesetsValues: () => RulesetsValues;
   getMedia: () => Record<string, string>;
   getOutputPath: () => string;
   getOutputFilename: () => string | undefined;
   getOutputExtension: () => string | undefined;
-  getClassnames: () => Partial<IRulesetsFactory.ClassnamesMap>;
-  getRulesetsVariants: () => Record<string, string>;
+  getClassnames: () => Classnames;
+  getRulesetsVariants: () => Variants;
   getMediaSeparator: () => string | undefined;
   getVariantSeparator: () => string | undefined;
   getPurgeContent: () => string[];
@@ -50,6 +50,14 @@ export interface Instance {
 }
 
 type ValueOf<T> = T[keyof T];
+
+export type RulesetsValues = IRulesetsFactory.ConfigurableValues;
+
+export type RulesetsValue = ValueOf<RulesetsValues>;
+
+export type Classnames = Partial<IRulesetsFactory.ClassnamesMap>;
+
+export type Variants = IRulesetsFactory.VariantsMap;
 
 export type UnitRange = [number, number, number];
 
@@ -64,14 +72,28 @@ export type RuleData = {
   $variants?: Record<string, string>;
 };
 
-export type RuleValues = Record<string, RuleValue> & RuleUnits & RuleData;
+export type BasicRuleValues = Record<string, RuleValue> & RuleUnits & RuleData;
 
-export type Rules = Partial<
-  Record<
-    keyof IRulesetsFactory.ConfigurableValues,
-    RuleValues | ValueOf<IRulesetsFactory.ComputedProperties>
-  >
->;
+export type CustomRuleValues = ValueOf<IRulesetsFactory.ComputedProperties> &
+  RuleData;
+
+export type RuleValues = BasicRuleValues | CustomRuleValues;
+
+export type Rules = Partial<Record<keyof RulesetsValues, RuleValues>>;
+
+export type RulesAssociations = Partial<Record<keyof Rules, RuleAssociation>>;
+
+export type RuleAssociation = {
+  with: Array<keyof Rules>;
+  values?: (v: Record<string, string>) => Record<string, string>;
+  variants?: (v: Record<string, string>) => Record<string, string>;
+};
+
+export type RuleAssociationCallback = (p: {
+  key: keyof Rules;
+  mapValues: (v: Record<string, string>) => Record<string, string>;
+  mapVariants: (v: Record<string, string>) => Record<string, string>;
+}) => void;
 
 export type RuleUnit =
   | "$cm"

@@ -61,62 +61,48 @@ export default class Config implements IConfig.Instance {
   }
 
   getRulesetsVariants() {
-    const common = this.commonVariants;
-    const variants: IConfig.Variants = {};
+    const result: IConfig.Variants = {};
 
     this.forEachRule((key, values) => {
-      const prev = variants[key] || {};
       const current = values.$variants || {};
-      const newVariants = { ...common, ...prev, ...current };
-
-      variants[key] = newVariants;
-
-      this.forEachRuleAssociation(key, ({ key, mapVariants }) => {
-        variants[key] = mapVariants(newVariants);
+      const variants = { ...this.commonVariants, ...current };
+      this.composeRuleData({ key, variants }).forEach((d) => {
+        result[d.key] = Object.assign({}, result[d.key], d.variants);
       });
     });
 
-    return variants;
+    return result;
   }
 
   getRulesetsValues() {
-    const common = this.commonValues;
-    const values: IConfig.RulesetsValues = {};
+    const result: IConfig.RulesetsValues = {};
 
     this.forEachRule((key, ruleValue) => {
-      const prev = values[key] || {};
       const current = this.parseRuleValue(ruleValue);
-      const newValues = { ...common, ...prev, ...current } as any;
-
-      values[key] = newValues;
-
-      this.forEachRuleAssociation(key, ({ key, mapValues }) => {
-        values[key] = mapValues(newValues) as any;
+      const values = { ...this.commonValues, ...current };
+      this.composeRuleData({ key, values }).forEach((d) => {
+        result[d.key] = Object.assign({}, result[d.key], d.values) as any;
       });
     });
 
-    return values;
+    return result;
   }
 
-  private forEachRule(
-    cb: (key: keyof IConfig.Rules, values: IConfig.RuleValues) => void,
-    rules = this.rules,
-  ) {
-    const ruleKeys = Object.keys(rules) as Array<keyof IConfig.Rules>;
-    ruleKeys.forEach((key) => cb(key, rules[key]));
-  }
-
-  private forEachRuleAssociation(
-    key: keyof IConfig.Rules,
-    cb: IConfig.RuleAssociationCallback,
-  ) {
-    const association = defaults.rulesAssociations[key];
+  private composeRuleData(data: IConfig.RuleData) {
+    const association = defaults.rulesAssociations[data.key];
     const mapValues = association?.values || ((v) => v);
     const mapVariants = association?.variants || ((v) => v);
+    const result: IConfig.RuleData[] = [data];
 
     if (association) {
-      association.with.forEach((key) => cb({ key, mapValues, mapVariants }));
+      association.with.forEach((key) => {
+        const values = mapValues(data.values || {});
+        const variants = mapVariants(data.variants || {});
+        result.push({ key, values, variants });
+      });
     }
+
+    return result;
   }
 
   private parseRuleValue(rule?: any): Record<string, string> {
@@ -160,12 +146,17 @@ export default class Config implements IConfig.Instance {
     return rule;
   }
 
+  private forEachRule(cb: IConfig.ForEachRuleCallback, rules = this.rules) {
+    const ruleKeys = Object.keys(rules) as Array<keyof IConfig.Rules>;
+    ruleKeys.forEach((key) => cb(key, rules[key]));
+  }
+
   private isValue(key: string) {
     return key[0] !== "$";
   }
 
   private get defaultRules() {
-    return this.props.defaultRules || {};
+    return this.props.defaultRules;
   }
 
   private get commonValues() {

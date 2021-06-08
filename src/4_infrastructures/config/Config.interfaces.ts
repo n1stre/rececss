@@ -67,15 +67,15 @@ export type RuleValue = string | boolean | UnitValue[] | Record<string, string>;
 
 export type RuleUnits = Partial<Record<RuleUnit, UnitValue[]>>;
 
-export type RuleData = {
+export type RuleMeta = {
   $extend?: boolean;
   $variants?: Record<string, string>;
 };
 
-export type BasicRuleValues = Record<string, RuleValue> & RuleUnits & RuleData;
+export type BasicRuleValues = Record<string, RuleValue> & RuleUnits & RuleMeta;
 
 export type CustomRuleValues = ValueOf<IRulesetsFactory.ComputedProperties> &
-  RuleData;
+  RuleMeta;
 
 export type RuleValues = BasicRuleValues | CustomRuleValues;
 
@@ -89,11 +89,13 @@ export type RuleAssociation = {
   variants?: (v: Record<string, string>) => Record<string, string>;
 };
 
-export type RuleAssociationCallback = (p: {
+export type RuleData = {
   key: keyof Rules;
-  mapValues: (v: Record<string, string>) => Record<string, string>;
-  mapVariants: (v: Record<string, string>) => Record<string, string>;
-}) => void;
+  values?: Record<string, string>;
+  variants?: Record<string, string>;
+};
+
+export type ForEachRuleCallback = (k: keyof Rules, v: RuleValues) => void;
 
 export type RuleUnit =
   | "$cm"

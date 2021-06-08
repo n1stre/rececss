@@ -53,7 +53,7 @@ describe("Config", () => {
     expect(config.getPurgeBlocklist()).toEqual(["visibleClass"]);
   });
 
-  test("media", () => {
+  test("media getter", () => {
     const config = configFactory.create(dto);
     expect(config.getMedia()).toEqual({
       md: "only screen and (min-width: 768px)",
@@ -61,20 +61,16 @@ describe("Config", () => {
     });
   });
 
-  test("separators", () => {
+  test("separator getters", () => {
     const config = configFactory.create(dto);
     expect.assertions(2);
     expect(config.getMediaSeparator()).toBe(":");
     expect(config.getVariantSeparator()).toBe(":");
   });
 
-  test("classnames", () => {
-    const output = { path: "" };
-    const noClassesConfig = configFactory.create({ output, rules: {} });
-    expect(noClassesConfig.getClassnames()).toEqual({});
-
+  test("classnames getter", () => {
     const classesConfig = configFactory.create({
-      output,
+      output: { path: "" },
       rules: {},
       classes: {
         width: "wid_$0",
@@ -84,6 +80,18 @@ describe("Config", () => {
     expect(classesConfig.getClassnames()).toEqual({
       width: "wid_$0",
     });
+  });
+
+  test("getters fallbacks", () => {
+    const config = configFactory.create({
+      output: { path: "" },
+      rules: {},
+    });
+    expect.assertions(4);
+    expect(config.getMedia()).toMatchObject({});
+    expect(config.getClassnames()).toMatchObject({});
+    expect(config.getMediaSeparator()).toBe(undefined);
+    expect(config.getVariantSeparator()).toBe(undefined);
   });
 
   test("variants implicit extend", () => {
@@ -157,6 +165,20 @@ describe("Config", () => {
       all: commonValues,
       width: { ...commonValues, full: "100%", half: "50%" },
       color: { ...commonValues, red: "red" },
+    });
+  });
+
+  test("variants without defaults", () => {
+    const configFactory = Config.createFactory({ defaultRules: {} });
+    const config = configFactory.create({
+      output: { path: "" },
+      rules: {
+        width: { 10: "10px", $variants: { h: "&:hover" } },
+      },
+    });
+
+    expect(config.getRulesetsVariants()).toMatchObject({
+      width: { h: "&:hover" },
     });
   });
 

@@ -1,3 +1,5 @@
+import { colord } from "colord";
+
 export default class Pallete {
   private constructor(private dto: Record<string, string>) {}
 
@@ -5,8 +7,19 @@ export default class Pallete {
     return new Pallete(dto);
   }
 
-  static createShades(name: string, color: string) {
-    return new Pallete({});
+  static fromShades(name: string, color: string, step: number) {
+    return new Pallete({
+      [name]: color,
+      [name + 100]: Pallete.lighten(color, step * 4),
+      [name + 200]: Pallete.lighten(color, step * 3),
+      [name + 300]: Pallete.lighten(color, step * 2),
+      [name + 400]: Pallete.lighten(color, step),
+      [name + 500]: color,
+      [name + 600]: Pallete.darken(color, step),
+      [name + 700]: Pallete.darken(color, step * 2),
+      [name + 800]: Pallete.darken(color, step * 3),
+      [name + 900]: Pallete.darken(color, step * 4),
+    });
   }
 
   toDTO() {
@@ -19,6 +32,16 @@ export default class Pallete {
 
   mapEntries(fn: (v: [string, string]) => [string, any]) {
     return Object.fromEntries(Object.entries(this.dto).map(fn));
+  }
+
+  static lighten(color: string, pctAmount: number) {
+    const amount = pctAmount / 100;
+    return colord(color).lighten(amount).toHex();
+  }
+
+  static darken(color: string, pctAmount: number) {
+    const amount = pctAmount / 100;
+    return colord(color).darken(amount).toHex();
   }
 
   static BrowserDefaults: Pallete;

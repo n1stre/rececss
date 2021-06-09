@@ -3,8 +3,8 @@ import { Sizing, Pallete } from "../utils";
 
 export const rules: Rules = {
   width: {
-    ...Sizing.EightPx.toRemFromPx(),
-    ...Sizing.Fractions.toPctFromDecimal(),
+    ...Sizing.EightPx.pxToRem(),
+    ...Sizing.Fractions.decimalToPct(),
     $pct: [[0, 100, 5]],
     $px: [
       [0, 10, 1],
@@ -13,36 +13,36 @@ export const rules: Rules = {
     ],
   },
   maxWidth: {
-    ...Sizing.Fractions.toPctFromDecimal(),
+    ...Sizing.Fractions.decimalToPct(),
   },
   minWidth: {
-    ...Sizing.Fractions.toPctFromDecimal(),
+    ...Sizing.Fractions.decimalToPct(),
   },
   height: {
-    ...Sizing.EightPx.toRemFromPx(),
-    ...Sizing.Fractions.toPctFromDecimal(),
+    ...Sizing.EightPx.pxToRem(),
+    ...Sizing.Fractions.decimalToPct(),
     $pct: [[0, 100, 5]],
     $vh: [50, 100],
   },
   maxHeight: {
-    ...Sizing.Fractions.toPctFromDecimal(),
+    ...Sizing.Fractions.decimalToPct(),
   },
   minHeight: {
-    ...Sizing.Fractions.toPctFromDecimal(),
+    ...Sizing.Fractions.decimalToPct(),
   },
   padding: {
-    ...Sizing.EightPx.toRemFromPx(),
+    ...Sizing.EightPx.pxToRem(),
     a: "auto",
     $px: [[0, 100, 5]],
   },
   margin: {
-    ...Sizing.EightPx.toRemFromPx(),
+    ...Sizing.EightPx.pxToRem(),
     "0a": "0 auto",
     a: "auto",
     $px: [[0, 100, 5]],
   },
   inset: {
-    ...Sizing.EightPx.toRemFromPx(),
+    ...Sizing.EightPx.pxToRem(),
     $px: [[0, 100, 5]],
   },
   flex: {
@@ -55,7 +55,7 @@ export const rules: Rules = {
     $num: [[1, 10, 1]],
   },
   flexBasis: {
-    ...Sizing.Fractions.toPctFromDecimal(),
+    ...Sizing.Fractions.decimalToPct(),
     a: "auto",
     $pct: [[0, 100, 5]],
   },
@@ -93,7 +93,7 @@ export const rules: Rules = {
     ...Sizing.EightPx.map((v) => `${v / 16}rem/${(v + 8) / 16}rem`),
   },
   lineHeight: {
-    ...Sizing.EightPx.toRemFromPx(),
+    ...Sizing.EightPx.pxToRem(),
   },
   color: {
     ...Pallete.BrowserDefaults.toDTO(),

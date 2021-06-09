@@ -13,7 +13,7 @@ export default class Sizing {
     return this.map((v) => `${v}rem`);
   }
 
-  toRemFromPx() {
+  pxToRem() {
     return this.map((v) => `${v / 16}rem`);
   }
 
@@ -25,7 +25,7 @@ export default class Sizing {
     return this.map((v) => `${v}%`);
   }
 
-  toPctFromDecimal() {
+  decimalToPct() {
     return this.map((v) => `${v * 100}%`);
   }
 

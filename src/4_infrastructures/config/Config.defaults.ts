@@ -1,6 +1,14 @@
 import { Rules, RulesAssociations, RuleUnit } from "./Config.interfaces";
 import { Sizing, Pallete } from "../utils";
 
+const variants = {
+  hover: "&:hover",
+  hoverParent: ":hover > &",
+  focus: "&:focus",
+  jsActive: "&.js-active",
+  jsActiveParent: ".js-active > &",
+};
+
 export const rules: Rules = {
   width: {
     ...Sizing.EightPx.pxToRem(),
@@ -97,10 +105,18 @@ export const rules: Rules = {
   },
   color: {
     ...Pallete.BrowserDefaults.toDTO(),
+    $variants: {
+      h: variants.hover,
+      f: variants.focus,
+    },
   },
   border: {
-    n: "none",
     ...Pallete.BrowserDefaults.map((v) => `1px solid ${v}`),
+    n: "none",
+    $variants: {
+      h: variants.hover,
+      f: variants.focus,
+    },
   },
   borderColor: {
     ...Pallete.BrowserDefaults.toDTO(),
@@ -117,11 +133,26 @@ export const rules: Rules = {
     ...Sizing.EightPx.map((v) => `0 ${v}px ${v + 8}px rgba(0, 0, 0, 0.1)`),
   },
   boxShadow: {
-    n: "none",
     ...Sizing.EightPx.map((v) => `0 ${v}px ${v + 8}px rgba(0, 0, 0, 0.1)`),
+    n: "none",
+    $variants: {
+      h: variants.hover,
+      f: variants.focus,
+    },
   },
   opacity: {
     $num: [0, 1, 0.1],
+    $variants: {
+      h: variants.hover,
+      hp: variants.hoverParent,
+    },
+  },
+  transform: {
+    $variants: {
+      h: variants.hover,
+      hp: variants.hoverParent,
+      jsp: variants.jsActiveParent,
+    },
   },
   transformTranslate: {
     $pct: [[0, 100, 5]],
@@ -182,10 +213,6 @@ export const rules: Rules = {
     inh: "inherit",
     ini: "initial",
     rv: "revert",
-    $variants: {
-      h: "&:hover",
-      hp: "*:hover &",
-    },
   },
   alignContent: {
     c: "center",
@@ -538,6 +565,10 @@ export const rules: Rules = {
     t: "table",
     g: "grid",
     ig: "inline-grid",
+    $variants: {
+      hp: variants.hoverParent,
+      jsp: variants.jsActiveParent,
+    },
   },
   emptyCells: {
     s: "show",
@@ -859,6 +890,9 @@ export const rules: Rules = {
     u: "underline",
     o: "overline",
     l: "line-through",
+    $variants: {
+      h: variants.hover,
+    },
   },
   textEmphasis: {
     n: "none",
@@ -990,6 +1024,10 @@ export const rulesAssociations: RulesAssociations = {
   padding: {
     with: ["paddingTop", "paddingBottom", "paddingVertical", "paddingLeft", "paddingRight", "paddingHorizontal"],
     values: singleValues
+  },
+  transform: {
+    with: ["transformRotate", "transformScale", "transformSkew", "transformTranslate"],
+    values: () => ({})
   },
   transformRotate: {
     with: ["transformRotateX", "transformRotateY", "transformRotateZ",],

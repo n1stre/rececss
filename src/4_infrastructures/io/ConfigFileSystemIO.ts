@@ -13,7 +13,8 @@ export default class ConfigFileSystemIO implements IInputOutput {
       const config = Config.create(require(configPath));
       this.config = config;
     } catch (err) {
-      throw Error("Config does not exist");
+      if (err.code === "MODULE_NOT_FOUND") throw Error("Config not found");
+      else throw err;
     }
   }
 

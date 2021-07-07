@@ -1,6 +1,7 @@
 import Link from "next/link";
 import Image from "next/image";
 import Container from "./Container";
+import Logo from "../presentational/Logo";
 
 function Header() {
   return (
@@ -8,7 +9,13 @@ function Header() {
       <Container>
         <div className="d_f jc_sb ai_c">
           <Link href="/">
-            <img src="/rececss/rececss_long.svg" className="h_lg" alt="" />
+            <Logo
+              // width="120px"
+              // height="24px"
+              // src="/rececss/rececss_long.svg"
+              className="h_lg"
+              // alt="Rececss logo"
+            />
           </Link>
 
           <nav className="d_f">

@@ -1,0 +1,18 @@
+html,
+body {
+  padding: 0;
+  margin: 0;
+  color: #333;
+  line-height: 1.5;
+  font-family: "Poppins", Verdana, sans-serif;
+  background-color: #fff;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+* {
+  box-sizing: border-box;
+}

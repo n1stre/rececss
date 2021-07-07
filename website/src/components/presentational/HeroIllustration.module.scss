@@ -1,0 +1,58 @@
+$TIME_STEP: 0.5s;
+
+.illustration {
+  opacity: 0;
+  animation: scalefadein $TIME_STEP ease forwards;
+}
+
+.classnames text {
+  transform-origin: center;
+  opacity: 0;
+  animation: scalefadein $TIME_STEP ease forwards;
+  animation-delay: $TIME_STEP;
+}
+
+.lines {
+  opacity: 0;
+  animation: fadein $TIME_STEP ease forwards;
+  animation-delay: $TIME_STEP;
+}
+
+.arrowsInner,
+.arrowsOuter {
+  opacity: 0;
+  animation: fadein $TIME_STEP ease forwards;
+  animation-delay: $TIME_STEP;
+}
+
+.arrowsInner path {
+  opacity: 0;
+  animation: scalefadein $TIME_STEP ease forwards;
+  animation-delay: $TIME_STEP;
+}
+
+.arrowsOuter path {
+  opacity: 0;
+  animation: scalefadein $TIME_STEP ease forwards;
+  animation-delay: $TIME_STEP;
+}
+
+@keyframes scalefadein {
+  0% {
+    opacity: 0;
+    transform: scale(0);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+@keyframes fadein {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}

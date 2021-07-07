@@ -1,0 +1,3 @@
+## Border image slice
+
+Documentation in progress...

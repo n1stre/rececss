@@ -1,0 +1,3 @@
+## Image rendering
+
+Documentation in progress...

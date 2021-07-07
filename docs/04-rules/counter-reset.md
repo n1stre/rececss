@@ -1,0 +1,3 @@
+## Counter reset
+
+Documentation in progress...

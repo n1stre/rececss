@@ -1,0 +1,3 @@
+## Caret color
+
+Documentation in progress...

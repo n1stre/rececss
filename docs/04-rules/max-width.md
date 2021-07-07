@@ -1,0 +1,3 @@
+## Max width
+
+Documentation in progress...

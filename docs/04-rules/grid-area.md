@@ -1,0 +1,3 @@
+## Grid area
+
+Documentation in progress...

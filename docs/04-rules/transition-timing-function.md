@@ -1,0 +1,3 @@
+## Transition timing function
+
+Documentation in progress...

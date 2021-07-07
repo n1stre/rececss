@@ -1,0 +1,3 @@
+## Column width
+
+Documentation in progress...

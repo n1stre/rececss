@@ -1,0 +1,3 @@
+## Animation delay
+
+Documentation in progress...

@@ -8,17 +8,19 @@ function Header() {
       <Container>
         <div className="d_f jc_sb ai_c">
           <Link href="/">
-            <Logo
-              // width="120px"
-              // height="24px"
-              // src="/rececss/rececss_long.svg"
-              className="h_lg"
-              // alt="Rececss logo"
-            />
+            <a>
+              <Logo
+                // width="120px"
+                // height="24px"
+                // src="/rececss/rececss_long.svg"
+                className="h_lg"
+                // alt="Rececss logo"
+              />
+            </a>
           </Link>
 
           <nav className="d_f">
-            <Link href="/docs">
+            <Link href="/docs/getting-started/introduction">
               <a className="td_u:h mr_md">Docs</a>
             </Link>
             <Link href="/components">

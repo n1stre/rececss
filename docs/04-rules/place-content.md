@@ -1,3 +1,0 @@
-## Place content
-
-Documentation in progress...

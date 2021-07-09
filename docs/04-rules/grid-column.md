@@ -1,3 +1,0 @@
-## Grid column
-
-Documentation in progress...

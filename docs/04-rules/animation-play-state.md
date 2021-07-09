@@ -1,3 +1,0 @@
-## Animation play state
-
-Documentation in progress...

@@ -1,3 +1,0 @@
-## Column count
-
-Documentation in progress...

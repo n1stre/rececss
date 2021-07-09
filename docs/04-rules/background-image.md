@@ -1,3 +1,0 @@
-## Background image
-
-Documentation in progress...

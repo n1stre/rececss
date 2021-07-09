@@ -1,3 +1,0 @@
-## Background repeat
-
-Documentation in progress...

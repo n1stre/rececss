@@ -1,3 +1,0 @@
-## Overflow anchor
-
-Documentation in progress...

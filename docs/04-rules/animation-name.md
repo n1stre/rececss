@@ -1,3 +1,0 @@
-## Animation name
-
-Documentation in progress...

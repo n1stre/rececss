@@ -1,3 +1,0 @@
-## Overscroll behavior y
-
-Documentation in progress...

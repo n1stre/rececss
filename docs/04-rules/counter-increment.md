@@ -1,3 +1,0 @@
-## Counter increment
-
-Documentation in progress...

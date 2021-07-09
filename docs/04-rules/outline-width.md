@@ -1,3 +1,0 @@
-## Outline width
-
-Documentation in progress...

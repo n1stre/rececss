@@ -1,3 +1,0 @@
-## Justify content
-
-Documentation in progress...

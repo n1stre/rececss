@@ -1,3 +1,0 @@
-## Scroll padding block start
-
-Documentation in progress...

@@ -1,3 +1,0 @@
-## Column rule
-
-Documentation in progress...

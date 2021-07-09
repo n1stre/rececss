@@ -1,3 +1,0 @@
-## Column rule style
-
-Documentation in progress...

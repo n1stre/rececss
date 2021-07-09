@@ -1,3 +1,0 @@
-## Grid template areas
-
-Documentation in progress...

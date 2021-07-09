@@ -1,3 +1,0 @@
-## Align items
-
-Documentation in progress...

@@ -1,3 +1,0 @@
-## Font kerning
-
-Documentation in progress...

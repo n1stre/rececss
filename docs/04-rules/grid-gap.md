@@ -1,3 +1,0 @@
-## Grid gap
-
-Documentation in progress...

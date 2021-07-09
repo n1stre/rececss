@@ -1,3 +1,0 @@
-## Border bottom width
-
-Documentation in progress...

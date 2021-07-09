@@ -1,3 +1,0 @@
-## Border image outset
-
-Documentation in progress...

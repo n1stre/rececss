@@ -1,3 +1,0 @@
-## Padding horizontal
-
-Documentation in progress...

@@ -1,3 +1,0 @@
-## Text decoration style
-
-Documentation in progress...

@@ -1,3 +1,0 @@
-## Padding vertical
-
-Documentation in progress...

@@ -1,3 +1,0 @@
-## Font variation settings
-
-Documentation in progress...

@@ -1,3 +1,0 @@
-## Font variant caps
-
-Documentation in progress...

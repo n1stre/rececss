@@ -1,3 +1,0 @@
-## Border style
-
-Documentation in progress...

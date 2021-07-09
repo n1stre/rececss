@@ -1,3 +1,0 @@
-## List style position
-
-Documentation in progress...

@@ -1,3 +1,0 @@
-## Border image repeat
-
-Documentation in progress...

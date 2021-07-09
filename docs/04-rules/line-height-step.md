@@ -1,3 +1,0 @@
-## Line height step
-
-Documentation in progress...

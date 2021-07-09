@@ -1,3 +1,0 @@
-## Overflow clip margin
-
-Documentation in progress...

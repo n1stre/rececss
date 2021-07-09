@@ -1,3 +1,0 @@
-## Column fill
-
-Documentation in progress...

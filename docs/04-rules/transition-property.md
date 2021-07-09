@@ -1,3 +1,0 @@
-## Transition property
-
-Documentation in progress...

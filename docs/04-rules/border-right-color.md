@@ -1,3 +1,0 @@
-## Border right color
-
-Documentation in progress...

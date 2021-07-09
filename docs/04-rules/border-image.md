@@ -1,3 +1,0 @@
-## Border image
-
-Documentation in progress...

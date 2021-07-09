@@ -1,3 +1,0 @@
-## Border bottom right radius
-
-Documentation in progress...

@@ -1,3 +1,0 @@
-## Font optical sizing
-
-Documentation in progress...

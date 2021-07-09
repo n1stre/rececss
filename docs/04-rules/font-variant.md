@@ -1,3 +1,0 @@
-## Font variant
-
-Documentation in progress...

@@ -1,3 +1,0 @@
-## Grid row gap
-
-Documentation in progress...

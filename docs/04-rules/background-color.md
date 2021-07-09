@@ -1,3 +1,0 @@
-## Background color
-
-Documentation in progress...

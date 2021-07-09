@@ -1,3 +1,0 @@
-## Object position
-
-Documentation in progress...

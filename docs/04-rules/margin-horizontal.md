@@ -1,3 +1,0 @@
-## Margin horizontal
-
-Documentation in progress...

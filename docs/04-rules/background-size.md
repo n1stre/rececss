@@ -1,3 +1,0 @@
-## Background size
-
-Documentation in progress...

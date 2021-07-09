@@ -1,3 +1,0 @@
-## Grid template
-
-Documentation in progress...

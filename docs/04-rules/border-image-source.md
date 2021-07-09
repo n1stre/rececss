@@ -1,3 +1,0 @@
-## Border image source
-
-Documentation in progress...

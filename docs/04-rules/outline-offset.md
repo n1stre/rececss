@@ -1,3 +1,0 @@
-## Outline offset
-
-Documentation in progress...

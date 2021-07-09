@@ -1,3 +1,0 @@
-## Mask type
-
-Documentation in progress...

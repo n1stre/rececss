@@ -1,3 +1,0 @@
-## Border left width
-
-Documentation in progress...

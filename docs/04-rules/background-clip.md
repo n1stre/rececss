@@ -1,3 +1,0 @@
-## Background clip
-
-Documentation in progress...

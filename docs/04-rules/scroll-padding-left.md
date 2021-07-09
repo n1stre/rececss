@@ -1,3 +1,0 @@
-## Scroll padding left
-
-Documentation in progress...

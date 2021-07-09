@@ -1,3 +1,0 @@
-## Text orientation
-
-Documentation in progress...

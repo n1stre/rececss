@@ -1,3 +1,0 @@
-## Right
-
-Documentation in progress...

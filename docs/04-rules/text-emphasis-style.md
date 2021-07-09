@@ -1,3 +1,0 @@
-## Text emphasis style
-
-Documentation in progress...

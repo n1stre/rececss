@@ -1,3 +1,0 @@
-## Mask border
-
-Documentation in progress...

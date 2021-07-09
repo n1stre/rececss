@@ -16,7 +16,7 @@ export default function Home() {
       <LandingLayout>
         <div className="d_f h_full ai_c pos_r">
           <div className="fx_1">
-            <h1 className="fz_3xl mt_0">
+            <h1 className="fz_2xl mt_0">
               Minimalistic, fully customizable CSS utilities generator
             </h1>
             <Button>Get started</Button>

@@ -8,7 +8,7 @@ $TIME_STEP: 0.5s;
 .classnames text {
   transform-origin: center;
   opacity: 0;
-  animation: scalefadein $TIME_STEP ease forwards;
+  animation: fadein $TIME_STEP ease forwards;
   animation-delay: $TIME_STEP;
 }
 

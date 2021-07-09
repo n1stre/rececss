@@ -8,14 +8,8 @@ function Header() {
       <Container>
         <div className="d_f jc_sb ai_c">
           <Link href="/">
-            <a>
-              <Logo
-                // width="120px"
-                // height="24px"
-                // src="/rececss/rececss_long.svg"
-                className="h_lg"
-                // alt="Rececss logo"
-              />
+            <a className="d_f">
+              <Logo className="h_lg" />
             </a>
           </Link>
 

@@ -1,0 +1,3 @@
+## Animation iteration count
+
+Documentation in progress...

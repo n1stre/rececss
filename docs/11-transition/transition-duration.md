@@ -1,0 +1,3 @@
+## Transition duration
+
+Documentation in progress...

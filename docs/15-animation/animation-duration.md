@@ -1,0 +1,3 @@
+## Animation duration
+
+Documentation in progress...

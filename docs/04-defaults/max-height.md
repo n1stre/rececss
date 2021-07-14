@@ -1,3 +1,0 @@
-## Max height
-
-Documentation in progress...

@@ -1,3 +1,0 @@
-## Shape outside
-
-Documentation in progress...

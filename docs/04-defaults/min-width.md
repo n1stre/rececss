@@ -1,3 +1,0 @@
-## Min width
-
-Documentation in progress...

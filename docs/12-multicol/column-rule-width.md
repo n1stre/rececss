@@ -1,0 +1,3 @@
+## Column rule width
+
+Documentation in progress...

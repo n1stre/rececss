@@ -1,0 +1,3 @@
+## Scroll snap type
+
+Documentation in progress...

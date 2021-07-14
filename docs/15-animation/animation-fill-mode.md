@@ -1,0 +1,3 @@
+## Animation fill mode
+
+Documentation in progress...

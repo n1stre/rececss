@@ -1,0 +1,3 @@
+## Animation timing function
+
+Documentation in progress...

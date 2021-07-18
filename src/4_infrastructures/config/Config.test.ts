@@ -3,14 +3,14 @@ import { GetRules } from "./Config.interfaces";
 
 const dto = require("../../../tests/__fixtures__/rececss.config");
 const configFactory = Config.createFactory({
-  defaultRules: {
-    all: {
-      u: "unset",
-      ini: "initial",
-      $variants: { h: "&:hover", js: "&.js-active" },
-    },
+  defaultValues: {
+    all: { u: "unset", ini: "initial" },
     width: { full: "100%" },
-    outline: { sm: "1px solid", $variants: { a: "&:active" } },
+    outline: { sm: "1px solid" },
+  },
+  defaultVariants: {
+    all: { h: "&:hover", js: "&.js-active" },
+    outline: { a: "&:active" },
   },
 });
 

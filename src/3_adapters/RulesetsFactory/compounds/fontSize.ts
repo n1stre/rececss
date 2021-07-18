@@ -1,10 +1,7 @@
-import {
-  RulesetsBuilder,
-  ConfigurableValues,
-} from "../RulesetsFactory.interface";
+import { RulesetsBuilder, ValuesMap } from "../RulesetsFactory.interface";
 
 export default function createFontSizeRulesets(
-  values: ConfigurableValues,
+  values: ValuesMap,
   builder: RulesetsBuilder,
 ) {
   if (values.fontSize) {

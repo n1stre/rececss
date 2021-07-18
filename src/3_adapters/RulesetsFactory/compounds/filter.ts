@@ -1,10 +1,7 @@
-import {
-  RulesetsBuilder,
-  ConfigurableValues,
-} from "../RulesetsFactory.interface";
+import { RulesetsBuilder, ValuesMap } from "../RulesetsFactory.interface";
 
 export default function createFilterRulesets(
-  values: ConfigurableValues,
+  values: ValuesMap,
   builder: RulesetsBuilder,
 ) {
   for (let key in values.filter) {

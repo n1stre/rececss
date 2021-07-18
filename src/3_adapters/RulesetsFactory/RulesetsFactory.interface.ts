@@ -1,7 +1,7 @@
 import RB from "../RulesetsBuilder";
 
 export type CompoundRulesetCreator = (
-  values: ConfigurableValues,
+  values: ValuesMap,
   builder: RulesetsBuilder,
 ) => void;
 
@@ -36,20 +36,20 @@ export type VariantsMap = Partial<
   }
 >;
 
-export type ConfigurableValues = Partial<
-  CSSProperties<Record<string, string>> & ComputedProperties
+export type ValuesMap = Partial<
+  CSSProperties<Record<string, string>> & CustomValuesMap
 >;
 
-export type CSSProperties<T = string> = CustomCSSProperties<T> &
-  DefaultCSSProperties<T>;
-
-export type ComputedProperties = {
+export type CustomValuesMap = {
   flexGrid: {
     cols: number;
     gutter?: string;
     gutters?: Record<string, string>;
   };
 };
+
+export type CSSProperties<T = string> = CustomCSSProperties<T> &
+  DefaultCSSProperties<T>;
 
 type CustomCSSProperties<T> = {
   paddingVertical: T;

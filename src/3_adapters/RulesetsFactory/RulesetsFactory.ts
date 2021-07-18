@@ -17,7 +17,7 @@ export default class RulesetsFactory {
     return new RulesetsFactory(dto);
   }
 
-  createAll(values: I.ConfigurableValues) {
+  createAll(values: I.ValuesMap) {
     Object.entries(values).forEach((entry) => {
       const ruleName = entry[0] as keyof I.CSSProperties;
       const ruleValues = entry[1] as Record<string, string>;

@@ -1,53 +1,66 @@
-import { Rules, RulesAssociations, RuleUnit } from "./Config.interfaces";
+import { Values, Variants, Associations, RuleUnit } from "./Config.interfaces";
 import { Sizing, Pallete } from "../utils";
 
-const variants = {
+const VARIANTS = {
   hover: "&:hover",
-  hoverParent: ":hover > &",
+  hoverTarget: ".\\@:hover > &",
   focus: "&:focus",
+  focusTarget: ".\\@:focus > &",
   jsActive: "&.js-active",
-  jsActiveParent: ".js-active > &",
+  jsActiveTarget: ".\\@.js-active > &",
+  important: "&&",
 };
 
-export const rules: Rules = {
+export const variants: Variants = {
+  border: { h: VARIANTS.hover, f: VARIANTS.focus },
+  boxShadow: { h: VARIANTS.hover, f: VARIANTS.focus },
+  color: { h: VARIANTS.hover, f: VARIANTS.focus },
+  display: { ht: VARIANTS.hoverTarget, jst: VARIANTS.jsActiveTarget },
+  opacity: { h: VARIANTS.hover, ht: VARIANTS.hoverTarget },
+  textDecoration: { h: VARIANTS.hover },
+  transform: {
+    h: VARIANTS.hover,
+    ht: VARIANTS.hoverTarget,
+    jst: VARIANTS.jsActiveTarget,
+  },
+};
+
+export const values: Values = {
   width: {
     ...Sizing.EightPx.pxToRem(),
     ...Sizing.Fractions.decimalToPct(),
     $pct: [[0, 100, 5]],
+    $px: [[0, 10, 1], [10, 100, 5], [100, 1000, 50], 540, 720, 960, 1140, 1320],
+  },
+  height: {
+    ...Sizing.EightPx.pxToRem(),
+    ...Sizing.Fractions.decimalToPct(),
     $px: [
       [0, 10, 1],
       [10, 100, 5],
       [100, 1000, 50],
     ],
-  },
-  maxWidth: {
-    ...Sizing.Fractions.decimalToPct(),
-  },
-  minWidth: {
-    ...Sizing.Fractions.decimalToPct(),
-  },
-  height: {
-    ...Sizing.EightPx.pxToRem(),
-    ...Sizing.Fractions.decimalToPct(),
     $pct: [[0, 100, 5]],
     $vh: [50, 100],
-  },
-  maxHeight: {
-    ...Sizing.Fractions.decimalToPct(),
-  },
-  minHeight: {
-    ...Sizing.Fractions.decimalToPct(),
   },
   padding: {
     ...Sizing.EightPx.pxToRem(),
     a: "auto",
-    $px: [[0, 100, 5]],
+    n: "0",
+    $px: [
+      [0, 100, 5],
+      [100, 1000, 50],
+    ],
   },
   margin: {
     ...Sizing.EightPx.pxToRem(),
     "0a": "0 auto",
     a: "auto",
-    $px: [[0, 100, 5]],
+    n: "0",
+    $px: [
+      [0, 100, 5],
+      [100, 1000, 50],
+    ],
   },
   inset: {
     ...Sizing.EightPx.pxToRem(),
@@ -56,6 +69,7 @@ export const rules: Rules = {
   flex: {
     n: "none",
     a: "auto",
+    ...Sizing.Fractions.map((v) => v),
     "00a": "0 0 auto",
     "01a": "0 1 auto",
     "10a": "1 0 auto",
@@ -105,18 +119,10 @@ export const rules: Rules = {
   },
   color: {
     ...Pallete.BrowserDefaults.toDTO(),
-    $variants: {
-      h: variants.hover,
-      f: variants.focus,
-    },
   },
   border: {
     ...Pallete.BrowserDefaults.map((v) => `1px solid ${v}`),
     n: "none",
-    $variants: {
-      h: variants.hover,
-      f: variants.focus,
-    },
   },
   borderColor: {
     ...Pallete.BrowserDefaults.toDTO(),
@@ -135,25 +141,14 @@ export const rules: Rules = {
   boxShadow: {
     ...Sizing.EightPx.map((v) => `0 ${v}px ${v + 8}px rgba(0, 0, 0, 0.1)`),
     n: "none",
-    $variants: {
-      h: variants.hover,
-      f: variants.focus,
-    },
   },
   opacity: {
-    $num: [0, 1, 0.1],
-    $variants: {
-      h: variants.hover,
-      hp: variants.hoverParent,
-    },
+    $num: [[0, 1, 0.1]],
   },
-  transform: {
-    $variants: {
-      h: variants.hover,
-      hp: variants.hoverParent,
-      jsp: variants.jsActiveParent,
-    },
+  zIndex: {
+    $num: [-1, 10, 1],
   },
+  transform: {},
   transformTranslate: {
     $pct: [[0, 100, 5]],
     $px: [
@@ -565,10 +560,6 @@ export const rules: Rules = {
     t: "table",
     g: "grid",
     ig: "inline-grid",
-    $variants: {
-      hp: variants.hoverParent,
-      jsp: variants.jsActiveParent,
-    },
   },
   emptyCells: {
     s: "show",
@@ -890,9 +881,6 @@ export const rules: Rules = {
     u: "underline",
     o: "overline",
     l: "line-through",
-    $variants: {
-      h: variants.hover,
-    },
   },
   textEmphasis: {
     n: "none",
@@ -962,35 +950,39 @@ export const rules: Rules = {
   },
 };
 
-export function getUnits(): Record<RuleUnit, string> {
-  return {
-    $cm: "cm",
-    $mm: "mm",
-    $in: "in",
-    $pc: "pc",
-    $pt: "pt",
-    $px: "px",
-    $em: "em",
-    $ex: "ex",
-    $ch: "ch",
-    $rem: "rem",
-    $vw: "vw",
-    $vh: "vh",
-    $vmin: "vmin",
-    $vmax: "vmax",
-    $percent: "%",
-    $pct: "%",
-    $number: "",
-    $num: "",
-    $deg: "deg",
-    $grad: "grad",
-    $rad: "rad",
-    $turn: "turn",
-  };
-}
+export const units: Record<RuleUnit, string> = {
+  $cm: "cm",
+  $mm: "mm",
+  $in: "in",
+  $pc: "pc",
+  $pt: "pt",
+  $px: "px",
+  $em: "em",
+  $ex: "ex",
+  $ch: "ch",
+  $rem: "rem",
+  $vw: "vw",
+  $vh: "vh",
+  $vmin: "vmin",
+  $vmax: "vmax",
+  $percent: "%",
+  $pct: "%",
+  $number: "",
+  $num: "",
+  $deg: "deg",
+  $grad: "grad",
+  $rad: "rad",
+  $turn: "turn",
+};
 
 //prettier-ignore
-export const rulesAssociations: RulesAssociations = {
+export const rulesAssociations: Associations = {
+  width: {
+    with: ["maxWidth", "minWidth"],
+  },
+  height: {
+    with: ["maxHeight", "minHeight"],
+  },
   border: {
     with: ["borderTop", "borderBottom", "borderLeft", "borderRight"],
   },

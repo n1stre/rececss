@@ -4,12 +4,10 @@ import fontSize from "./fontSize";
 import transform from "./transform";
 import {
   CompoundRulesetCreator,
-  ConfigurableValues,
+  ValuesMap,
 } from "../RulesetsFactory.interface";
 
-const compounds: Partial<
-  Record<keyof ConfigurableValues, CompoundRulesetCreator>
-> = {
+const compounds: Partial<Record<keyof ValuesMap, CompoundRulesetCreator>> = {
   filter,
   flexGrid,
   fontSize,

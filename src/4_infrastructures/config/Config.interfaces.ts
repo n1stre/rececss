@@ -1,16 +1,13 @@
 import { IRulesetsFactory } from "../../3_adapters/RulesetsFactory";
-import { Sizing, Pallete } from "../utils";
 
 export interface Props {
-  defaultRules: Rules;
+  defaultValues?: Values;
+  defaultVariants?: Variants;
+  defaultAssociations?: Associations;
 }
 
-export type GetRules = (params: {
-  Sizing: typeof Sizing;
-  Pallete: typeof Pallete;
-  defaults: Rules;
-  extend: (rule: RuleValues) => RuleValues;
-}) => Rules;
+export type CreatorFn<T extends Values | Variants | Classnames | Associations> =
+  (params: { defaults: T }) => T;
 
 export interface DTO {
   output: {
@@ -29,12 +26,14 @@ export interface DTO {
     variant?: string;
   };
   media?: Record<string, string>;
-  classes?: Partial<IRulesetsFactory.ClassnamesMap>;
-  rules: GetRules | Rules;
+  classes?: Classnames;
+  values: CreatorFn<Values> | Values;
+  variants: CreatorFn<Variants> | Variants;
+  associations: CreatorFn<Associations> | Associations;
 }
 
 export interface Instance {
-  getRulesetsValues: () => RulesetsValues;
+  getRulesetsValues: () => Values;
   getMedia: () => Record<string, string>;
   getOutputPath: () => string;
   getOutputFilename: () => string | undefined;
@@ -51,51 +50,34 @@ export interface Instance {
 
 type ValueOf<T> = T[keyof T];
 
-export type RulesetsValues = IRulesetsFactory.ConfigurableValues;
-
-export type RulesetsValue = ValueOf<RulesetsValues>;
-
-export type Classnames = Partial<IRulesetsFactory.ClassnamesMap>;
-
-export type Variants = IRulesetsFactory.VariantsMap;
-
 export type UnitRange = [number, number, number];
-
 export type UnitValue = number | UnitRange;
+export type RuleUnits = Partial<Record<RuleUnit, UnitValue[]>>;
 
 export type RuleValue = string | boolean | UnitValue[] | Record<string, string>;
 
-export type RuleUnits = Partial<Record<RuleUnit, UnitValue[]>>;
+export type BasicRuleValues = Record<string, RuleValue> & RuleUnits;
+export type CustomRuleValues = ValueOf<IRulesetsFactory.CustomValuesMap>;
 
-export type RuleMeta = {
-  $extend?: boolean;
-  $variants?: Record<string, string>;
-};
+export type Values = Partial<
+  Record<keyof IRulesetsFactory.ValuesMap, BasicRuleValues | CustomRuleValues>
+>;
 
-export type BasicRuleValues = Record<string, RuleValue> & RuleUnits & RuleMeta;
+export type Variants = IRulesetsFactory.VariantsMap;
 
-export type CustomRuleValues = ValueOf<IRulesetsFactory.ComputedProperties> &
-  RuleMeta;
+export type Classnames = Partial<IRulesetsFactory.ClassnamesMap>;
 
-export type RuleValues = BasicRuleValues | CustomRuleValues;
+export type Associations = Partial<
+  Record<keyof IRulesetsFactory.ValuesMap, Association>
+>;
 
-export type Rules = Partial<Record<keyof RulesetsValues, RuleValues>>;
-
-export type RulesAssociations = Partial<Record<keyof Rules, RuleAssociation>>;
-
-export type RuleAssociation = {
-  with: Array<keyof Rules>;
+export type Association = {
+  with: Array<keyof IRulesetsFactory.ValuesMap>;
   values?: (v: Record<string, string>) => Record<string, string>;
   variants?: (v: Record<string, string>) => Record<string, string>;
 };
 
-export type RuleData = {
-  key: keyof Rules;
-  values?: Record<string, string>;
-  variants?: Record<string, string>;
-};
-
-export type ForEachRuleCallback = (k: keyof Rules, v: RuleValues) => void;
+// export type ForEachRuleCallback = (k: keyof Rules, v: RuleValues) => void;
 
 export type RuleUnit =
   | "$cm"

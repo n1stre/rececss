@@ -3,6 +3,7 @@ import fs from "fs";
 import matter from "gray-matter";
 import dirtree from "../utils/dirtree";
 import { markdownToHtml } from "../utils/markdown";
+import * as defaults from "../../../src/4_infrastructures/config/Config.defaults";
 
 const CWD = process.cwd();
 const DOCS_DIR = path.join(CWD, "../docs");
@@ -19,17 +20,22 @@ export function getDocsPaths() {
   const paths = new Set();
   const handleFile = (p) => paths.add(toNavigationSlug(p));
   dirtree(DOCS_DIR, { handleFile });
-  return [...paths];
+  return Array.from(paths);
 }
 
 export function getDocBySlug(slugArr) {
-  const doc = {};
+  const doc: Record<string, any> = {};
 
   dirtree(DOCS_DIR, {
     handleFile: async (filepath) => {
       if (!docPathMatchesSlug(filepath, slugArr)) return;
-      const fileContents = fs.readFileSync(filepath, "utf8");
-      const { data, content } = matter(fileContents);
+      const { data, orig } = matter.read(filepath);
+      const ruleName = data.name;
+      const filledDoc = fillDefaultsIntoDocContents(ruleName, orig.toString());
+      const { content } = matter(filledDoc);
+
+      fs.writeFileSync(filepath, filledDoc);
+
       doc.meta = data;
       doc.content = await markdownToHtml(content);
     },
@@ -66,7 +72,39 @@ function docPathMatchesSlug(filepath, slugArr) {
   return slugArr.every((slug, idx) => {
     const docPathPart = parts[idx];
     const isLast = idx === slugArr.length - 1;
-    const re = new RegExp(`(\\d+\\-)?${slug}` + (isLast ? "\\.md" : ""));
+    const re = new RegExp(`^(\\d+\\-)?${slug}` + (isLast ? "\\.md" : ""));
     return docPathPart.match(re);
   });
+}
+
+function fillDefaultsIntoDocContents(rulename, contents) {
+  contents = insertBetween(
+    commentString("defaults.values.start"),
+    commentString("defaults.values.end"),
+    contents,
+    defaults.values[rulename],
+  );
+
+  contents = insertBetween(
+    commentString("defaults.variants.start"),
+    commentString("defaults.variants.end"),
+    contents,
+    defaults.variants[rulename],
+  );
+
+  return contents;
+}
+
+function commentString(string) {
+  return `<!-- ${string} -->`;
+}
+
+function insertBetween(start, end, content, data) {
+  if (content.indexOf(start) === -1 || content.indexOf(end) === -1)
+    return content;
+
+  const dataString = JSON.stringify(data, null, 4);
+  const before = content.split(start)[0];
+  const after = content.split(end)[1];
+  return before + start + "\n```\n" + dataString + "\n```\n" + end + after;
 }

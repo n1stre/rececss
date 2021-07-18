@@ -21,5 +21,8 @@
     "remark-gfm": "^1.0.0",
     "remark-rehype": "^8.1.0",
     "sass": "^1.35.1"
+  },
+  "devDependencies": {
+    "@types/react": "^17.0.14"
   }
 }

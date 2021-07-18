@@ -2,6 +2,10 @@ module.exports = {
   basePath: "/rececss",
   assetPrefix: "/rececss/",
 
+  experimental: {
+    externalDir: true,
+  },
+
   async redirects() {
     return [
       {

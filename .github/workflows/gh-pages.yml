@@ -6,6 +6,7 @@ on:
       - master # Set a branch name to trigger deployment
     paths:
       - "website/**"
+      - "docs/**"
 
 jobs:
   deploy:
@@ -16,6 +17,13 @@ jobs:
         with:
           node-version: "14"
       - run: cd website && npm ci && npm run export
+
+      - name: Commit docs changes
+        uses: EndBug/add-and-commit@v7
+        with:
+          default_author: github_actions
+          message: "docs: update defaults"
+          add: "*.md"
 
       - name: Deploy
         uses: peaceiris/actions-gh-pages@v3

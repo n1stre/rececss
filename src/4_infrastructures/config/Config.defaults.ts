@@ -1,4 +1,9 @@
-import { Values, Variants, Associations, RuleUnit } from "./Config.interfaces";
+import {
+  RawValues,
+  Variants,
+  Associations,
+  RuleUnit,
+} from "./Config.interfaces";
 import { Sizing, Pallete } from "../utils";
 
 const VARIANTS = {
@@ -25,7 +30,7 @@ export const variants: Variants = {
   },
 };
 
-export const values: Values = {
+export const values: RawValues = {
   width: {
     ...Sizing.EightPx.pxToRem(),
     ...Sizing.Fractions.decimalToPct(),

@@ -1,13 +1,14 @@
 import { IRulesetsFactory } from "../../3_adapters/RulesetsFactory";
 
 export interface Props {
-  defaultValues?: Values;
+  defaultValues?: RawValues;
   defaultVariants?: Variants;
   defaultAssociations?: Associations;
 }
 
-export type CreatorFn<T extends Values | Variants | Classnames | Associations> =
-  (params: { defaults: T }) => T;
+export type CreatorFn<
+  T extends RawValues | Variants | Classnames | Associations,
+> = (params: { defaults: T }) => T;
 
 export interface DTO {
   output: {
@@ -27,9 +28,9 @@ export interface DTO {
   };
   media?: Record<string, string>;
   classes?: Classnames;
-  values: CreatorFn<Values> | Values;
-  variants: CreatorFn<Variants> | Variants;
-  associations: CreatorFn<Associations> | Associations;
+  values: CreatorFn<RawValues> | RawValues;
+  variants?: CreatorFn<Variants> | Variants;
+  associations?: CreatorFn<Associations> | Associations;
 }
 
 export interface Instance {
@@ -55,16 +56,15 @@ export type UnitValue = number | UnitRange;
 export type RuleUnits = Partial<Record<RuleUnit, UnitValue[]>>;
 
 export type RuleValue = string | boolean | UnitValue[] | Record<string, string>;
-
 export type BasicRuleValues = Record<string, RuleValue> & RuleUnits;
 export type CustomRuleValues = ValueOf<IRulesetsFactory.CustomValuesMap>;
 
-export type Values = Partial<
+export type RawValues = Partial<
   Record<keyof IRulesetsFactory.ValuesMap, BasicRuleValues | CustomRuleValues>
 >;
 
+export type Values = IRulesetsFactory.ValuesMap;
 export type Variants = IRulesetsFactory.VariantsMap;
-
 export type Classnames = Partial<IRulesetsFactory.ClassnamesMap>;
 
 export type Associations = Partial<

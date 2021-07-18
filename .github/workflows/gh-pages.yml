@@ -16,6 +16,8 @@ jobs:
       - uses: actions/setup-node@v2
         with:
           node-version: "14"
+
+      - run: npm ci
       - run: cd website && npm ci && npm run export
 
       - name: Commit docs changes

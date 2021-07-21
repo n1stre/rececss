@@ -1,11 +1,17 @@
+---
+{
+  name: "carerColor"
+}
+---
+
 ## Caret color
 
-Documentation in progress...
+### Default values
+<!-- defaults.values.start -->
+<!-- defaults.values.end -->
 
-```
-caretColor: {
-  a: "auto",
-  t: "transparent",
-  cc: "currentcolor",
-},
-```
+
+### Default variants
+<!-- defaults.variants.start -->
+<!-- defaults.variants.end -->
+

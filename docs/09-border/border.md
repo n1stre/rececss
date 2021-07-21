@@ -1,10 +1,16 @@
+---
+{
+  name: "border"
+}
+---
+
 ## Border
 
-Documentation in progress...
+### Default values
+<!-- defaults.values.start -->
+<!-- defaults.values.end -->
 
-```
-border: {
-    ...Pallete.BrowserDefaults.map((v) => `1px solid ${v}`),
-    n: "none",
-  },
-```
+
+### Default variants
+<!-- defaults.variants.start -->
+<!-- defaults.variants.end -->

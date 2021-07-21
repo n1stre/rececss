@@ -1,12 +1,16 @@
+---
+{
+  name: "columnCount"
+}
+---
+
 ## Column count
 
-Documentation in progress...
+### Default values
+<!-- defaults.values.start -->
+<!-- defaults.values.end -->
 
-```
-columnCount: {
-  a: "auto",
-  "2": "2",
-  "3": "3",
-  "4": "4",
-},
-```
+
+### Default variants
+<!-- defaults.variants.start -->
+<!-- defaults.variants.end -->

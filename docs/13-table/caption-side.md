@@ -1,14 +1,16 @@
+---
+{
+  name: "captionSide"
+}
+---
+
 ## Caption side
 
-Documentation in progress...
+### Default values
+<!-- defaults.values.start -->
+<!-- defaults.values.end -->
 
-```
-captionSide: {
-  t: "top",
-  b: "bottom",
-  bs: "block-start",
-  be: "block-end",
-  is: "inline-start",
-  ie: "inline-end",
-},
-```
+
+### Default variants
+<!-- defaults.variants.start -->
+<!-- defaults.variants.end -->

@@ -1,16 +1,16 @@
+---
+{
+  name: "cursor"
+}
+---
+
 ## Cursor
 
-Documentation in progress...
+### Default values
+<!-- defaults.values.start -->
+<!-- defaults.values.end -->
 
-```
-cursor: {
-  a: "auto",
-  d: "default",
-  c: "crosshair",
-  ha: "hand",
-  he: "help",
-  m: "move",
-  p: "pointer",
-  t: "text",
-},
-```
+
+### Default variants
+<!-- defaults.variants.start -->
+<!-- defaults.variants.end -->

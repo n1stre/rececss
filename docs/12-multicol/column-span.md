@@ -1,10 +1,16 @@
+---
+{
+  name: "columnSpan"
+}
+---
+
 ## Column span
 
-Documentation in progress...
+### Default values
+<!-- defaults.values.start -->
+<!-- defaults.values.end -->
 
-```
-columnSpan: {
-  n: "none",
-  all: "all",
-},
-```
+
+### Default variants
+<!-- defaults.variants.start -->
+<!-- defaults.variants.end -->

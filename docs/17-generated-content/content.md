@@ -1,14 +1,16 @@
+---
+{
+  name: "content"
+}
+---
+
 ## Content
 
-Documentation in progress...
+### Default values
+<!-- defaults.values.start -->
+<!-- defaults.values.end -->
 
-```
-content: {
-  nl: "normal",
-  n: "none",
-  oq: "open-quote",
-  cq: "close-quote",
-  noq: "no-open-quote",
-  ncq: "no-close-quote",
-},
-```
+
+### Default variants
+<!-- defaults.variants.start -->
+<!-- defaults.variants.end -->

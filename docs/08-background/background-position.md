@@ -1,21 +1,16 @@
+---
+{
+  name: "backgroundPosition"
+}
+---
+
 ## Background position
 
-Documentation in progress...
+### Default values
+<!-- defaults.values.start -->
+<!-- defaults.values.end -->
 
-```
-backgroundPosition: {
-  t: "top",
-  b: "bottom",
-  c: "center",
-  l: "left",
-  r: "right",
-  bl: "bottom left",
-  br: "bottom right",
-  tl: "top left",
-  tr: "top right",
-  lb: "left bottom",
-  lt: "left top",
-  rb: "right bottom",
-  rt: "right top",
-},
-```
+
+### Default variants
+<!-- defaults.variants.start -->
+<!-- defaults.variants.end -->

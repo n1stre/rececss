@@ -1,11 +1,16 @@
+---
+{
+  name: "flexGrid"
+}
+---
+
 ## Flex grid
 
-Documentation in progress...
+### Default values
+<!-- defaults.values.start -->
+<!-- defaults.values.end -->
 
-```
-flexGrid: {
-  cols: 12,
-  gutter: "20px",
-  gutters: {},
-},
-```
+
+### Default variants
+<!-- defaults.variants.start -->
+<!-- defaults.variants.end -->

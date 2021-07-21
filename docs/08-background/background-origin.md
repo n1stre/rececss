@@ -1,11 +1,16 @@
+---
+{
+  name: "backgroundOrigin"
+}
+---
+
 ## Background origin
 
-Documentation in progress...
+### Default values
+<!-- defaults.values.start -->
+<!-- defaults.values.end -->
 
-```
-backgroundOrigin: {
-  bb: "border-box",
-  pb: "padding-box",
-  cb: "content-box",
-},
-```
+
+### Default variants
+<!-- defaults.variants.start -->
+<!-- defaults.variants.end -->

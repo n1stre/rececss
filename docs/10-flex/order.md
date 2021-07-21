@@ -1,11 +1,16 @@
+---
+{
+  name: "order"
+}
+---
+
 ## Order
 
-Documentation in progress...
+### Default values
+<!-- defaults.values.start -->
+<!-- defaults.values.end -->
 
-```
-order: {
-  first: "-9999",
-  last: "9999",
-  $num: [[1, 12, 1]],
-},
-```
+
+### Default variants
+<!-- defaults.variants.start -->
+<!-- defaults.variants.end -->

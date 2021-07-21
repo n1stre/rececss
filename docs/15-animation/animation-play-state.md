@@ -1,10 +1,16 @@
+---
+{
+  name: "animationPlayState"
+}
+---
+
 ## Animation play state
 
-Documentation in progress...
+### Default values
+<!-- defaults.values.start -->
+<!-- defaults.values.end -->
 
-```
-animationPlayState: {
-  r: "running",
-  p: "paused",
-},
-```
+
+### Default variants
+<!-- defaults.variants.start -->
+<!-- defaults.variants.end -->

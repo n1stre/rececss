@@ -1,22 +1,16 @@
+---
+{
+  name: "breakAfter"
+}
+---
+
 ## Break after
 
-Documentation in progress...
+### Default values
+<!-- defaults.values.start -->
+<!-- defaults.values.end -->
 
-```
-breakAfter: {
-  a: "auto",
-  av: "avoid",
-  alw: "always",
-  all: "all",
-  avp: "avoid-page",
-  p: "page",
-  l: "left",
-  r: "right",
-  rec: "recto",
-  ver: "verso",
-  avc: "avoid-column",
-  c: "column",
-  avr: "avoid-region",
-  reg: "region",
-},
-```
+
+### Default variants
+<!-- defaults.variants.start -->
+<!-- defaults.variants.end -->

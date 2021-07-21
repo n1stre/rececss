@@ -1,9 +1,16 @@
+---
+{
+  name: "counterReset"
+}
+---
+
 ## Counter reset
 
-Documentation in progress...
+### Default values
+<!-- defaults.values.start -->
+<!-- defaults.values.end -->
 
-```
-counterReset: {
-  n: "none",
-},
-```
+
+### Default variants
+<!-- defaults.variants.start -->
+<!-- defaults.variants.end -->

@@ -1,9 +1,16 @@
+---
+{
+  name: "columnWidth"
+}
+---
+
 ## Column width
 
-Documentation in progress...
+### Default values
+<!-- defaults.values.start -->
+<!-- defaults.values.end -->
 
-```
-columnWidth: {
-  a: "auto",
-},
-```
+
+### Default variants
+<!-- defaults.variants.start -->
+<!-- defaults.variants.end -->

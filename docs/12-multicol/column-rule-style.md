@@ -1,18 +1,16 @@
+---
+{
+  name: "columnRuleStyle"
+}
+---
+
 ## Column rule style
 
-Documentation in progress...
+### Default values
+<!-- defaults.values.start -->
+<!-- defaults.values.end -->
 
-```
-columnRuleStyle: {
-  n: "none",
-  h: "hidden",
-  d: "dotted",
-  dsh: "dashed",
-  s: "solid",
-  dbl: "double",
-  g: "groove",
-  r: "ridge",
-  i: "inset",
-  o: "outset",
-},
-```
+
+### Default variants
+<!-- defaults.variants.start -->
+<!-- defaults.variants.end -->

@@ -1,9 +1,16 @@
+---
+{
+  name: "flexGrow"
+}
+---
+
 ## Flex grow
 
-Documentation in progress...
+### Default values
+<!-- defaults.values.start -->
+<!-- defaults.values.end -->
 
-```
-flexGrow: {
-  $num: [[1, 12, 1]],
-},
-```
+
+### Default variants
+<!-- defaults.variants.start -->
+<!-- defaults.variants.end -->

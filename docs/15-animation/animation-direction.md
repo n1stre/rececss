@@ -1,12 +1,16 @@
+---
+{
+  name: "animationDirection"
+}
+---
+
 ## Animation direction
 
-Documentation in progress...
+### Default values
+<!-- defaults.values.start -->
+<!-- defaults.values.end -->
 
-```
-animationDirection: {
-  n: "normal",
-  r: "reverse",
-  a: "alternate",
-  ar: "alternate-reverse",
-},
-```
+
+### Default variants
+<!-- defaults.variants.start -->
+<!-- defaults.variants.end -->

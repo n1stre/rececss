@@ -1,3 +1,16 @@
+---
+{
+  name: "whiteSpace"
+}
+---
+
 ## White space
 
-Documentation in progress...
+### Default values
+<!-- defaults.values.start -->
+<!-- defaults.values.end -->
+
+
+### Default variants
+<!-- defaults.variants.start -->
+<!-- defaults.variants.end -->

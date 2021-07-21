@@ -1,13 +1,16 @@
+---
+{
+  name: "breakInside"
+}
+---
+
 ## Break inside
 
-Documentation in progress...
+### Default values
+<!-- defaults.values.start -->
+<!-- defaults.values.end -->
 
-```
-breakInside: {
-  a: "auto",
-  av: "avoid",
-  avp: "avoid-page",
-  avc: "avoid-column",
-  avr: "avoid-region",
-},
-```
+
+### Default variants
+<!-- defaults.variants.start -->
+<!-- defaults.variants.end -->

@@ -1,13 +1,16 @@
+---
+{
+  name: "fontWeight"
+}
+---
+
 ## Font weight
 
-Documentation in progress...
+### Default values
+<!-- defaults.values.start -->
+<!-- defaults.values.end -->
 
-```
-fontWeight: {
-  n: "normal",
-  b: "bold",
-  br: "bolder",
-  lr: "lighter",
-  $num: [[100, 900, 100]],
-},
-```
+
+### Default variants
+<!-- defaults.variants.start -->
+<!-- defaults.variants.end -->

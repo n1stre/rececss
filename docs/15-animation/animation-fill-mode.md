@@ -1,12 +1,16 @@
+---
+{
+  name: "animationFillMode"
+}
+---
+
 ## Animation fill mode
 
-Documentation in progress...
+### Default values
+<!-- defaults.values.start -->
+<!-- defaults.values.end -->
 
-```
-animationFillMode: {
-  n: "none",
-  fw: "forwards",
-  bw: "backwards",
-  b: "both",
-},
-```
+
+### Default variants
+<!-- defaults.variants.start -->
+<!-- defaults.variants.end -->

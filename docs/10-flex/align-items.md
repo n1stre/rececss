@@ -1,21 +1,16 @@
+---
+{
+  name: "alignItems"
+}
+---
+
 ## Align items
 
-Documentation in progress...
+### Default values
+<!-- defaults.values.start -->
+<!-- defaults.values.end -->
 
 
-```
-alignItems: {
-  c: "center",
-  s: "start",
-  e: "end",
-  fs: "flex-start",
-  fe: "flex-end",
-  n: "normal",
-  b: "baseline",
-  fb: "first baseline",
-  lb: "last baseline",
-  str: "stretch",
-  sc: "safe center",
-  usc: "unsafe center",
-},
-```
+### Default variants
+<!-- defaults.variants.start -->
+<!-- defaults.variants.end -->

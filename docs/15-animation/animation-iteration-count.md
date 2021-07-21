@@ -1,9 +1,16 @@
+---
+{
+  name: "animationIterationCount"
+}
+---
+
 ## Animation iteration count
 
-Documentation in progress...
+### Default values
+<!-- defaults.values.start -->
+<!-- defaults.values.end -->
 
-```
-animationIterationCount: {
-  i: "infinite",
-},
-```
+
+### Default variants
+<!-- defaults.variants.start -->
+<!-- defaults.variants.end -->

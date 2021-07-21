@@ -1,12 +1,17 @@
+---
+{
+  name: "colorScheme"
+}
+---
+
 ## Color scheme
 
-Documentation in progress...
+### Default values
+<!-- defaults.values.start -->
+<!-- defaults.values.end -->
 
-```
-colorScheme: {
-  n: "normal",
-  l: "light",
-  d: "dark",
-  ld: "light dark",
-},
-```
+
+### Default variants
+<!-- defaults.variants.start -->
+<!-- defaults.variants.end -->
+

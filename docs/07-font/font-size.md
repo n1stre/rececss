@@ -1,9 +1,16 @@
+---
+{
+  name: "fontSize"
+}
+---
+
 ## Font size
 
-Documentation in progress...
+### Default values
+<!-- defaults.values.start -->
+<!-- defaults.values.end -->
 
-```
-fontSize: {
-  ...Sizing.EightPx.map((v) => `${v / 16}rem/${(v + 8) / 16}rem`),
-},
-```
+
+### Default variants
+<!-- defaults.variants.start -->
+<!-- defaults.variants.end -->

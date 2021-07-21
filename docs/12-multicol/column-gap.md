@@ -1,9 +1,16 @@
+---
+{
+  name: "columnGap"
+}
+---
+
 ## Column gap
 
-Documentation in progress...
+### Default values
+<!-- defaults.values.start -->
+<!-- defaults.values.end -->
 
-```
-columnGap: {
-  n: "normal",
-},
-```
+
+### Default variants
+<!-- defaults.variants.start -->
+<!-- defaults.variants.end -->

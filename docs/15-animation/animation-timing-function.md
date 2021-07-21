@@ -1,15 +1,16 @@
+---
+{
+  name: "animationTimingFunction"
+}
+---
+
 ## Animation timing function
 
-Documentation in progress...
+### Default values
+<!-- defaults.values.start -->
+<!-- defaults.values.end -->
 
-```
-animationTimingFunction: {
-  e: "ease",
-  ei: "ease-in",
-  eo: "ease-out",
-  eio: "ease-in-out",
-  l: "linear",
-  ss: "step-start",
-  se: "step-end",
-},
-```
+
+### Default variants
+<!-- defaults.variants.start -->
+<!-- defaults.variants.end -->

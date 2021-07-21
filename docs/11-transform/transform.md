@@ -1,23 +1,16 @@
+---
+{
+  name: "transform"
+}
+---
+
 ## Transform
 
-Documentation in progress...
+### Default values
+<!-- defaults.values.start -->
+<!-- defaults.values.end -->
 
 
-```
-transformTranslate: {
-  $pct: [[0, 100, 5]],
-  $px: [
-    [0, 100, 5],
-    [100, 500, 50],
-  ],
-},
-transformRotate: {
-  $deg: [
-    [0, 360, 5],
-    [-360, 0, 5],
-  ],
-},
-transformScale: {
-  $num: [[0, 3, 0.1]],
-},
-```
+### Default variants
+<!-- defaults.variants.start -->
+<!-- defaults.variants.end -->

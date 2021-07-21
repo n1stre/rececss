@@ -1,10 +1,16 @@
+---
+{
+  name: "borderCollapse"
+}
+---
+
 ## Border collapse
 
-Documentation in progress...
+### Default values
+<!-- defaults.values.start -->
+<!-- defaults.values.end -->
 
-```
-borderCollapse: {
-  c: "collapse",
-  s: "separate",
-},
-```
+
+### Default variants
+<!-- defaults.variants.start -->
+<!-- defaults.variants.end -->

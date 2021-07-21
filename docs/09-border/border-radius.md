@@ -1,9 +1,16 @@
+---
+{
+  name: "borderRadius"
+}
+---
+
 ## Border radius
 
-Documentation in progress...
+### Default values
+<!-- defaults.values.start -->
+<!-- defaults.values.end -->
 
-```
-borderRadius: {
-    ...Sizing.EightPx.toPx(),
-  },
-```
+
+### Default variants
+<!-- defaults.variants.start -->
+<!-- defaults.variants.end -->

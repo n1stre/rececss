@@ -1,9 +1,16 @@
+---
+{
+  name: "backgroundColor"
+}
+---
+
 ## Background color
 
-Documentation in progress...
+### Default values
+<!-- defaults.values.start -->
+<!-- defaults.values.end -->
 
-```javascript
-backgroundColor: {
-  ...Pallete.BrowserDefaults.toDTO(),
-},
-```
+
+### Default variants
+<!-- defaults.variants.start -->
+<!-- defaults.variants.end -->

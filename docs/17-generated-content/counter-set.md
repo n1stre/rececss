@@ -1,9 +1,16 @@
+---
+{
+  name: "counterSet"
+}
+---
+
 ## Counter set
 
-Documentation in progress...
+### Default values
+<!-- defaults.values.start -->
+<!-- defaults.values.end -->
 
-```
-counterSet: {
-  n: "none",
-},
-```
+
+### Default variants
+<!-- defaults.variants.start -->
+<!-- defaults.variants.end -->

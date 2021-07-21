@@ -1,11 +1,16 @@
+---
+{
+  name: "columnRuleWidth"
+}
+---
+
 ## Column rule width
 
-Documentation in progress...
+### Default values
+<!-- defaults.values.start -->
+<!-- defaults.values.end -->
 
-```
-columnRuleWidth: {
-  tn: "thin",
-  md: "medium",
-  tck: "thick",
-},
-```
+
+### Default variants
+<!-- defaults.variants.start -->
+<!-- defaults.variants.end -->

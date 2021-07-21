@@ -1,14 +1,16 @@
+---
+{
+  name: "backgroundRepeat"
+}
+---
+
 ## Background repeat
 
-Documentation in progress...
+### Default values
+<!-- defaults.values.start -->
+<!-- defaults.values.end -->
 
-```
-backgroundRepeat: {
-  rx: "repeat-x",
-  ry: "repeat-y",
-  r: "repeat",
-  s: "space",
-  rnd: "round",
-  nr: "no-repeat",
-},
-```
+
+### Default variants
+<!-- defaults.variants.start -->
+<!-- defaults.variants.end -->

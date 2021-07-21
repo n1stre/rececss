@@ -1,11 +1,16 @@
+---
+{
+  name: "columnFill"
+}
+---
+
 ## Column fill
 
-Documentation in progress...
+### Default values
+<!-- defaults.values.start -->
+<!-- defaults.values.end -->
 
-```
-columnFill: {
-  a: "auto",
-  b: "balance",
-  ba: "balance-all",
-},
-```
+
+### Default variants
+<!-- defaults.variants.start -->
+<!-- defaults.variants.end -->

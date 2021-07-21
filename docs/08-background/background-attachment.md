@@ -1,11 +1,16 @@
+---
+{
+  name: "backgroundAttachment"
+}
+---
+
 ## Background attachment
 
-Documentation in progress...
+### Default values
+<!-- defaults.values.start -->
+<!-- defaults.values.end -->
 
-```
-backgroundAttachment: {
-  s: "scroll",
-  f: "fixed",
-  l: "local",
-},
-```
+
+### Default variants
+<!-- defaults.variants.start -->
+<!-- defaults.variants.end -->

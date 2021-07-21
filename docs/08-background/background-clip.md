@@ -1,12 +1,16 @@
+---
+{
+  name: "backgroundClip"
+}
+---
+
 ## Background clip
 
-Documentation in progress...
+### Default values
+<!-- defaults.values.start -->
+<!-- defaults.values.end -->
 
-```
-backgroundClip: {
-  bb: "border-box",
-  pb: "padding-box",
-  cb: "content-box",
-  txt: "text",
-},
-```
+
+### Default variants
+<!-- defaults.variants.start -->
+<!-- defaults.variants.end -->

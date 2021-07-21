@@ -1,9 +1,16 @@
+---
+{
+  name: "font"
+}
+---
+
 ## Font
 
-Documentation in progress...
+### Default values
+<!-- defaults.values.start -->
+<!-- defaults.values.end -->
 
-```
-font: {
-  primary: "italic bold .8em/1.2 Arial, sans-serif",
-},
-```
+
+### Default variants
+<!-- defaults.variants.start -->
+<!-- defaults.variants.end -->

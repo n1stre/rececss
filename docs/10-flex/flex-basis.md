@@ -1,11 +1,16 @@
+---
+{
+  name: "flexBasis"
+}
+---
+
 ## Flex basis
 
-Documentation in progress...
+### Default values
+<!-- defaults.values.start -->
+<!-- defaults.values.end -->
 
-```
-flexBasis: {
-  ...Sizing.Fractions.decimalToPct(),
-  a: "auto",
-  $pct: [[0, 100, 5]],
-},
-```
+
+### Default variants
+<!-- defaults.variants.start -->
+<!-- defaults.variants.end -->

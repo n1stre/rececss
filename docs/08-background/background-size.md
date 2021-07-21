@@ -1,11 +1,16 @@
+---
+{
+  name: "backgroundSize"
+}
+---
+
 ## Background size
 
-Documentation in progress...
+### Default values
+<!-- defaults.values.start -->
+<!-- defaults.values.end -->
 
-```
-backgroundSize: {
-  cr: "cover",
-  cn: "contain",
-  a: "auto",
-},
-```
+
+### Default variants
+<!-- defaults.variants.start -->
+<!-- defaults.variants.end -->

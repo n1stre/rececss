@@ -2,7 +2,8 @@ import path from "path";
 import fs from "fs";
 import matter from "gray-matter";
 import dirtree from "../utils/dirtree";
-import { markdownToHtml } from "../utils/markdown";
+import markdownToHtml from "../utils/markdownToHtml";
+import createMarkdownTable from "../utils/markdownTable";
 import * as defaults from "../../../src/4_infrastructures/config/Config.defaults";
 
 const CWD = process.cwd();
@@ -78,33 +79,49 @@ function docPathMatchesSlug(filepath, slugArr) {
 }
 
 function fillDefaultsIntoDocContents(rulename, contents) {
-  contents = insertBetween(
-    commentString("defaults.values.start"),
-    commentString("defaults.values.end"),
-    contents,
-    defaults.values[rulename],
-  );
-
-  contents = insertBetween(
-    commentString("defaults.variants.start"),
-    commentString("defaults.variants.end"),
-    contents,
-    defaults.variants[rulename],
-  );
-
+  contents = insertValuesData(rulename, contents);
+  contents = insertVariantsData(rulename, contents);
   return contents;
 }
 
-function commentString(string) {
-  return `<!-- ${string} -->`;
+function insertValuesData(rulename, contents) {
+  return insertBetween(
+    contents,
+    "<!-- defaults.values.start -->",
+    "<!-- defaults.values.end -->",
+    createValuesTable(rulename),
+  );
 }
 
-function insertBetween(start, end, content, data) {
+function insertVariantsData(rulename, contents) {
+  return insertBetween(
+    contents,
+    "<!-- defaults.variants.start -->",
+    "<!-- defaults.variants.end -->",
+    createVariantsTable(rulename),
+  );
+}
+
+function createValuesTable(rulename) {
+  const parseValue = (_, v) => (Array.isArray(v) ? JSON.stringify(v) : v);
+  return createMarkdownTable(defaults.values[rulename], [
+    { head: "Classname key", calcValue: (key) => key },
+    { head: "CSS value", calcValue: parseValue },
+  ]);
+}
+
+function createVariantsTable(rulename) {
+  return createMarkdownTable(defaults.variants[rulename], [
+    { head: "Classname key", calcValue: (key) => key },
+    { head: "Variant selector", calcValue: (_, v) => v },
+  ]);
+}
+
+function insertBetween(content, start, end, data) {
   if (content.indexOf(start) === -1 || content.indexOf(end) === -1)
     return content;
 
-  const dataString = JSON.stringify(data, null, 4);
   const before = content.split(start)[0];
   const after = content.split(end)[1];
-  return before + start + "\n```\n" + dataString + "\n```\n" + end + after;
+  return before + start + "\n" + data + "\n" + end + after;
 }

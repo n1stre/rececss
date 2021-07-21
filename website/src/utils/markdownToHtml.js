@@ -8,6 +8,10 @@ import { selectAll } from "hast-util-select";
 const classNames = {
   pre: "bdrs_sm bgc_whitesmoke p_lg ovx_s",
   code: "bgc_whitesmoke px_xs bdrs_xs",
+  table: "w_full bdcl_c",
+  th: "ta_l",
+  "th, td": "py_sm pr_sm",
+  tr: "bdb_lightgray",
   "pre code": "bxsh_n bd_n px_n",
   h1: "fz_2xl mt_2xl",
   h2: "fz_xl mt_xl",
@@ -16,7 +20,7 @@ const classNames = {
   ".hljs-comment": "op_0.3",
 };
 
-export async function markdownToHtml(markdown) {
+export default async function markdownToHtml(markdown) {
   const result = await remark()
     .use(gfm)
     .use(remark2rehype)
@@ -32,10 +36,9 @@ function addClasses(classNames) {
   const adders = Object.entries(classNames).map(([selector, className]) => {
     return (node) =>
       selectAll(selector, node).forEach(({ properties }) => {
-        if (!properties.className) properties.className = className;
+        if (!properties.className) properties.className = [className];
         else properties.className = [...properties.className, className];
       });
   });
-
   return (node) => adders.forEach((a) => a(node));
 }

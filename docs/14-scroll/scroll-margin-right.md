@@ -1,16 +1,7 @@
----
-{
-  name: "scrollMarginRight"
-}
----
-
 ## Scroll margin right
 
-### Default values
-<!-- defaults.values.start -->
-<!-- defaults.values.end -->
+<!-- <values.scrollMarginRight> -->
+<!-- </values.scrollMarginRight> -->
 
-
-### Default variants
-<!-- defaults.variants.start -->
-<!-- defaults.variants.end -->
+<!-- <variants.scrollMarginRight> -->
+<!-- </variants.scrollMarginRight> -->

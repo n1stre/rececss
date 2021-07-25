@@ -1,16 +1,8 @@
----
-{
-  name: "columnRuleColor"
-}
----
-
 ## Column rule color
 
-### Default values
-<!-- defaults.values.start -->
-<!-- defaults.values.end -->
 
+<!-- <values.columnRuleColor> -->
+<!-- </values.columnRuleColor> -->
 
-### Default variants
-<!-- defaults.variants.start -->
-<!-- defaults.variants.end -->
+<!-- <variants.columnRuleColor> -->
+<!-- </variants.columnRuleColor> -->

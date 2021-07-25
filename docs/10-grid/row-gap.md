@@ -1,18 +1,9 @@
----
-{
-  name: "rowGap"
-}
----
-
 ## Row gap
 
-### Default values
-<!-- defaults.values.start -->
 
-<!-- defaults.values.end -->
+<!-- <values.rowGap> -->
+<!-- </values.rowGap> -->
 
 
-### Default variants
-<!-- defaults.variants.start -->
-
-<!-- defaults.variants.end -->
+<!-- <variants.rowGap> -->
+<!-- </variants.rowGap> -->

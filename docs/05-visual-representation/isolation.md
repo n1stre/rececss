@@ -1,16 +1,9 @@
----
-{
-  name: "isolation"
-}
----
-
 ## Isolation
 
-### Default values
-<!-- defaults.values.start -->
-<!-- defaults.values.end -->
+
+<!-- <values.isolation> -->
+<!-- </values.isolation> -->
 
 
-### Default variants
-<!-- defaults.variants.start -->
-<!-- defaults.variants.end -->
+<!-- <variants.isolation> -->
+<!-- </variants.isolation> -->

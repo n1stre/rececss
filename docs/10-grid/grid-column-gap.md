@@ -1,18 +1,9 @@
----
-{
-  name: "gridColumnGap"
-}
----
-
 ## Grid column gap
 
-### Default values
-<!-- defaults.values.start -->
 
-<!-- defaults.values.end -->
+<!-- <values.gridColumnGap> -->
+<!-- </values.gridColumnGap> -->
 
 
-### Default variants
-<!-- defaults.variants.start -->
-
-<!-- defaults.variants.end -->
+<!-- <variants.gridColumnGap> -->
+<!-- </variants.gridColumnGap> -->

@@ -1,16 +1,7 @@
----
-{
-  name: "columnWidth"
-}
----
-
 ## Column width
 
-### Default values
-<!-- defaults.values.start -->
-<!-- defaults.values.end -->
+<!-- <values.columnWidth> -->
+<!-- </values.columnWidth> -->
 
-
-### Default variants
-<!-- defaults.variants.start -->
-<!-- defaults.variants.end -->
+<!-- <variants.columnWidth> -->
+<!-- </variants.columnWidth> -->

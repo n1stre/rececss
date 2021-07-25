@@ -1,16 +1,8 @@
----
-{
-  name: "backgroundOrigin"
-}
----
-
 ## Background origin
 
-### Default values
-<!-- defaults.values.start -->
-<!-- defaults.values.end -->
 
+<!-- <values.backgroundOrigin> -->
+<!-- </values.backgroundOrigin> -->
 
-### Default variants
-<!-- defaults.variants.start -->
-<!-- defaults.variants.end -->
+<!-- <variants.backgroundOrigin> -->
+<!-- </variants.backgroundOrigin> -->

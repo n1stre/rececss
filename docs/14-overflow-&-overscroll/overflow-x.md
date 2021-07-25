@@ -1,18 +1,8 @@
----
-{
-  name: "overflowX"
-}
----
-
 ## Overflow x
 
-### Default values
-<!-- defaults.values.start -->
 
-<!-- defaults.values.end -->
+<!-- <values.overflowX> -->
+<!-- </values.overflowX> -->
 
-
-### Default variants
-<!-- defaults.variants.start -->
-
-<!-- defaults.variants.end -->
+<!-- <variants.overflowX> -->
+<!-- </variants.overflowX> -->

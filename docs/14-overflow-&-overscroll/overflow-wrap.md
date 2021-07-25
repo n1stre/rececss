@@ -1,18 +1,8 @@
----
-{
-  name: "overflowWrap"
-}
----
-
 ## Overflow wrap
 
-### Default values
-<!-- defaults.values.start -->
 
-<!-- defaults.values.end -->
+<!-- <values.overflowWrap> -->
+<!-- </values.overflowWrap> -->
 
-
-### Default variants
-<!-- defaults.variants.start -->
-
-<!-- defaults.variants.end -->
+<!-- <variants.overflowWrap> -->
+<!-- </variants.overflowWrap> -->

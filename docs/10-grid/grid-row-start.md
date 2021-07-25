@@ -1,16 +1,9 @@
----
-{
-  name: "gridRowStart"
-}
----
-
 ## Grid row start
 
-### Default values
-<!-- defaults.values.start -->
-<!-- defaults.values.end -->
+
+<!-- <values.gridRowStart> -->
+<!-- </values.gridRowStart> -->
 
 
-### Default variants
-<!-- defaults.variants.start -->
-<!-- defaults.variants.end -->
+<!-- <variants.gridRowStart> -->
+<!-- </variants.gridRowStart> -->

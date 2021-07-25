@@ -1,16 +1,8 @@
----
-{
-  name: "backgroundSize"
-}
----
-
 ## Background size
 
-### Default values
-<!-- defaults.values.start -->
-<!-- defaults.values.end -->
 
+<!-- <values.backgroundSize> -->
+<!-- </values.backgroundSize> -->
 
-### Default variants
-<!-- defaults.variants.start -->
-<!-- defaults.variants.end -->
+<!-- <variants.backgroundSize> -->
+<!-- </variants.backgroundSize> -->

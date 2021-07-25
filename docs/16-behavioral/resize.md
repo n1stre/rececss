@@ -1,16 +1,7 @@
----
-{
-  name: "resize"
-}
----
-
 ## Resize
 
-### Default values
-<!-- defaults.values.start -->
-<!-- defaults.values.end -->
+<!-- <values.resize> -->
+<!-- </values.resize> -->
 
-
-### Default variants
-<!-- defaults.variants.start -->
-<!-- defaults.variants.end -->
+<!-- <variants.resize> -->
+<!-- </variants.resize> -->

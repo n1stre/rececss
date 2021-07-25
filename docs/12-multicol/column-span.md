@@ -1,16 +1,7 @@
----
-{
-  name: "columnSpan"
-}
----
-
 ## Column span
 
-### Default values
-<!-- defaults.values.start -->
-<!-- defaults.values.end -->
+<!-- <values.columnSpan> -->
+<!-- </values.columnSpan> -->
 
-
-### Default variants
-<!-- defaults.variants.start -->
-<!-- defaults.variants.end -->
+<!-- <variants.columnSpan> -->
+<!-- </variants.columnSpan> -->

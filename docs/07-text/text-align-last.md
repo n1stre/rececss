@@ -1,27 +1,9 @@
----
-{
-  name: "textAlignLast"
-}
----
-
 ## Text align last
 
-### Default values
-<!-- defaults.values.start -->
-|Classname key|CSS value|
-|-------------|---------|
-|a            |auto     |
-|l            |left     |
-|c            |center   |
-|j            |justify  |
-|r            |right    |
-|s            |start    |
-|e            |end      |
 
-<!-- defaults.values.end -->
+<!-- <values.textAlignLast> -->
+<!-- </values.textAlignLast> -->
 
 
-### Default variants
-<!-- defaults.variants.start -->
-
-<!-- defaults.variants.end -->
+<!-- <variants.textAlignLast> -->
+<!-- </variants.textAlignLast> -->

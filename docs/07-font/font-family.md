@@ -1,16 +1,9 @@
----
-{
-  name: "fontFamily"
-}
----
-
 ## Font family
 
-### Default values
-<!-- defaults.values.start -->
-<!-- defaults.values.end -->
+
+<!-- <values.fontFamily> -->
+<!-- </values.fontFamily> -->
 
 
-### Default variants
-<!-- defaults.variants.start -->
-<!-- defaults.variants.end -->
+<!-- <variants.fontFamily> -->
+<!-- </variants.fontFamily> -->

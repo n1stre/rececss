@@ -1,16 +1,7 @@
----
-{
-  name: "scrollSnapType"
-}
----
-
 ## Scroll snap type
 
-### Default values
-<!-- defaults.values.start -->
-<!-- defaults.values.end -->
+<!-- <values.scrollSnapType> -->
+<!-- </values.scrollSnapType> -->
 
-
-### Default variants
-<!-- defaults.variants.start -->
-<!-- defaults.variants.end -->
+<!-- <variants.scrollSnapType> -->
+<!-- </variants.scrollSnapType> -->

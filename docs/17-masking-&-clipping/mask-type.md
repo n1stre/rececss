@@ -1,18 +1,7 @@
----
-{
-  name: "maskType"
-}
----
-
 ## Mask type
 
-### Default values
-<!-- defaults.values.start -->
+<!-- <values.maskType> -->
+<!-- </values.maskType> -->
 
-<!-- defaults.values.end -->
-
-
-### Default variants
-<!-- defaults.variants.start -->
-
-<!-- defaults.variants.end -->
+<!-- <variants.maskType> -->
+<!-- </variants.maskType> -->

@@ -1,16 +1,9 @@
----
-{
-  name: "flexGrow"
-}
----
-
 ## Flex grow
 
-### Default values
-<!-- defaults.values.start -->
-<!-- defaults.values.end -->
 
+<!-- <values.flexGrow> -->
+<!-- </values.flexGrow> -->
 
-### Default variants
-<!-- defaults.variants.start -->
-<!-- defaults.variants.end -->
+<!-- <variants.flexGrow> -->
+<!-- </variants.flexGrow> -->
+

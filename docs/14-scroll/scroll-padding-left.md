@@ -1,16 +1,7 @@
----
-{
-  name: "scrollPaddingLeft"
-}
----
-
 ## Scroll padding left
 
-### Default values
-<!-- defaults.values.start -->
-<!-- defaults.values.end -->
+<!-- <values.scrollPaddingLeft> -->
+<!-- </values.scrollPaddingLeft> -->
 
-
-### Default variants
-<!-- defaults.variants.start -->
-<!-- defaults.variants.end -->
+<!-- <variants.scrollPaddingLeft> -->
+<!-- </variants.scrollPaddingLeft> -->

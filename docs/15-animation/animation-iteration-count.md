@@ -1,16 +1,7 @@
----
-{
-  name: "animationIterationCount"
-}
----
-
 ## Animation iteration count
 
-### Default values
-<!-- defaults.values.start -->
-<!-- defaults.values.end -->
+<!-- <values.animationIterationCount> -->
+<!-- </values.animationIterationCount> -->
 
-
-### Default variants
-<!-- defaults.variants.start -->
-<!-- defaults.variants.end -->
+<!-- <variants.animationIterationCount> -->
+<!-- </variants.animationIterationCount> -->

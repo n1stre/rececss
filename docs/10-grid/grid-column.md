@@ -1,16 +1,9 @@
----
-{
-  name: "gridColumn"
-}
----
-
 ## Grid column
 
-### Default values
-<!-- defaults.values.start -->
-<!-- defaults.values.end -->
+
+<!-- <values.gridColumn> -->
+<!-- </values.gridColumn> -->
 
 
-### Default variants
-<!-- defaults.variants.start -->
-<!-- defaults.variants.end -->
+<!-- <variants.gridColumn> -->
+<!-- </variants.gridColumn> -->

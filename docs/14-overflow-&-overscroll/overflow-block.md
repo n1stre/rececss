@@ -1,18 +1,8 @@
----
-{
-  name: "overflowBlock"
-}
----
-
 ## Overflow block
 
-### Default values
-<!-- defaults.values.start -->
 
-<!-- defaults.values.end -->
+<!-- <values.overflowBlock> -->
+<!-- </values.overflowBlock> -->
 
-
-### Default variants
-<!-- defaults.variants.start -->
-
-<!-- defaults.variants.end -->
+<!-- <variants.overflowBlock> -->
+<!-- </variants.overflowBlock> -->

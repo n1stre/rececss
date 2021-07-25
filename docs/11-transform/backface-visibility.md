@@ -1,16 +1,7 @@
----
-{
-  name: "backfaceVisibility"
-}
----
-
 ## Backface visibility
 
-### Default values
-<!-- defaults.values.start -->
-<!-- defaults.values.end -->
+<!-- <values.backfaceVisibility> -->
+<!-- </values.backfaceVisibility> -->
 
-
-### Default variants
-<!-- defaults.variants.start -->
-<!-- defaults.variants.end -->
+<!-- <variants.backfaceVisibility> -->
+<!-- </variants.backfaceVisibility> -->

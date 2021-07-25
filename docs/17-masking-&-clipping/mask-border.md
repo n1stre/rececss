@@ -1,16 +1,7 @@
----
-{
-  name: "maskBorder"
-}
----
-
 ## Mask border
 
-### Default values
-<!-- defaults.values.start -->
-<!-- defaults.values.end -->
+<!-- <values.maskBorder> -->
+<!-- </values.maskBorder> -->
 
-
-### Default variants
-<!-- defaults.variants.start -->
-<!-- defaults.variants.end -->
+<!-- <variants.maskBorder> -->
+<!-- </variants.maskBorder> -->

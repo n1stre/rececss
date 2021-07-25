@@ -1,24 +1,8 @@
----
-{
-  name: "overflow"
-}
----
-
 ## Overflow
 
-### Default values
-<!-- defaults.values.start -->
-|Classname key|CSS value|
-|-------------|---------|
-|v            |visible  |
-|h            |hidden   |
-|s            |scroll   |
-|a            |auto     |
 
-<!-- defaults.values.end -->
+<!-- <values.overflow> -->
+<!-- </values.overflow> -->
 
-
-### Default variants
-<!-- defaults.variants.start -->
-
-<!-- defaults.variants.end -->
+<!-- <variants.overflow> -->
+<!-- </variants.overflow> -->

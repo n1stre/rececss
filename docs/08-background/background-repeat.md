@@ -1,16 +1,8 @@
----
-{
-  name: "backgroundRepeat"
-}
----
-
 ## Background repeat
 
-### Default values
-<!-- defaults.values.start -->
-<!-- defaults.values.end -->
 
+<!-- <values.backgroundRepeat> -->
+<!-- </values.backgroundRepeat> -->
 
-### Default variants
-<!-- defaults.variants.start -->
-<!-- defaults.variants.end -->
+<!-- <variants.backgroundRepeat> -->
+<!-- </variants.backgroundRepeat> -->

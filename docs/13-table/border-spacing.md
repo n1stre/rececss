@@ -1,16 +1,8 @@
----
-{
-  name: "borderSpacing"
-}
----
-
 ## Border spacing
 
-### Default values
-<!-- defaults.values.start -->
-<!-- defaults.values.end -->
 
+<!-- <values.borderSpacing> -->
+<!-- </values.borderSpacing> -->
 
-### Default variants
-<!-- defaults.variants.start -->
-<!-- defaults.variants.end -->
+<!-- <variants.borderSpacing> -->
+<!-- </variants.borderSpacing> -->

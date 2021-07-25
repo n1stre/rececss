@@ -1,16 +1,8 @@
----
-{
-  name: "backgroundBlendMode"
-}
----
-
 ## Background blend mode
 
-### Default values
-<!-- defaults.values.start -->
-<!-- defaults.values.end -->
 
+<!-- <values.backgroundBlendMode> -->
+<!-- </values.backgroundBlendMode> -->
 
-### Default variants
-<!-- defaults.variants.start -->
-<!-- defaults.variants.end -->
+<!-- <variants.backgroundBlendMode> -->
+<!-- </variants.backgroundBlendMode> -->

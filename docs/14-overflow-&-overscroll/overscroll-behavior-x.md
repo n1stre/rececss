@@ -1,16 +1,8 @@
----
-{
-  name: "overscrollBehaviorX"
-}
----
-
 ## Overscroll behavior x
 
-### Default values
-<!-- defaults.values.start -->
-<!-- defaults.values.end -->
 
+<!-- <values.overscrollBehaviorX> -->
+<!-- </values.overscrollBehaviorX> -->
 
-### Default variants
-<!-- defaults.variants.start -->
-<!-- defaults.variants.end -->
+<!-- <variants.overscrollBehaviorX> -->
+<!-- </variants.overscrollBehaviorX> -->

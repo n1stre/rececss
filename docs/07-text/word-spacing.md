@@ -1,16 +1,7 @@
----
-{
-  name: "wordSpacing"
-}
----
-
 ## Word spacing
 
-### Default values
-<!-- defaults.values.start -->
-<!-- defaults.values.end -->
+<!-- <values.wordSpacing> -->
+<!-- </values.wordSpacing> -->
 
-
-### Default variants
-<!-- defaults.variants.start -->
-<!-- defaults.variants.end -->
+<!-- <variants.wordSpacing> -->
+<!-- </variants.wordSpacing> -->

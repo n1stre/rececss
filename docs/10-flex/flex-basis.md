@@ -1,16 +1,9 @@
----
-{
-  name: "flexBasis"
-}
----
-
 ## Flex basis
 
-### Default values
-<!-- defaults.values.start -->
-<!-- defaults.values.end -->
 
+<!-- <values.flexBasis> -->
+<!-- </values.flexBasis> -->
 
-### Default variants
-<!-- defaults.variants.start -->
-<!-- defaults.variants.end -->
+<!-- <variants.flexBasis> -->
+<!-- </variants.flexBasis> -->
+

@@ -1,16 +1,8 @@
----
-{
-  name: "imageRendering"
-}
----
-
 ## Image rendering
 
-### Default values
-<!-- defaults.values.start -->
-<!-- defaults.values.end -->
+<!-- <values.imageRendering> -->
+<!-- </values.imageRendering> -->
 
 
-### Default variants
-<!-- defaults.variants.start -->
-<!-- defaults.variants.end -->
+<!-- <variants.imageRendering> -->
+<!-- </variants.imageRendering> -->

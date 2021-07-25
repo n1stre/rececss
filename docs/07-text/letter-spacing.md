@@ -1,16 +1,8 @@
----
-{
-  name: "letterSpacing"
-}
----
-
 ## Letter spacing
 
-### Default values
-<!-- defaults.values.start -->
-<!-- defaults.values.end -->
+<!-- <values.letterSpacing> -->
+<!-- </values.letterSpacing> -->
 
 
-### Default variants
-<!-- defaults.variants.start -->
-<!-- defaults.variants.end -->
+<!-- <variants.letterSpacing> -->
+<!-- </variants.letterSpacing> -->

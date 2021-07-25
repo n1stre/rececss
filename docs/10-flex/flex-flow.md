@@ -1,16 +1,9 @@
----
-{
-  name: "flexFlow"
-}
----
-
 ## Flex flow
 
-### Default values
-<!-- defaults.values.start -->
-<!-- defaults.values.end -->
 
+<!-- <values.flexFlow> -->
+<!-- </values.flexFlow> -->
 
-### Default variants
-<!-- defaults.variants.start -->
-<!-- defaults.variants.end -->
+<!-- <variants.flexFlow> -->
+<!-- </variants.flexFlow> -->
+

@@ -1,16 +1,7 @@
----
-{
-  name: "breakAfter"
-}
----
-
 ## Break after
 
-### Default values
-<!-- defaults.values.start -->
-<!-- defaults.values.end -->
+<!-- <values.breakAfter> -->
+<!-- </values.breakAfter> -->
 
-
-### Default variants
-<!-- defaults.variants.start -->
-<!-- defaults.variants.end -->
+<!-- <variants.breakAfter> -->
+<!-- </variants.breakAfter> -->

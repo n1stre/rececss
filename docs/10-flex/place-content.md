@@ -1,16 +1,9 @@
----
-{
-  name: "placeContent"
-}
----
-
 ## Place content
 
-### Default values
-<!-- defaults.values.start -->
-<!-- defaults.values.end -->
+
+<!-- <values.placeContent> -->
+<!-- </values.placeContent> -->
 
 
-### Default variants
-<!-- defaults.variants.start -->
-<!-- defaults.variants.end -->
+<!-- <variants.placeContent> -->
+<!-- </variants.placeContent> -->

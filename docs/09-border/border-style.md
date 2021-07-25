@@ -1,16 +1,9 @@
----
-{
-  name: "borderStyle"
-}
----
-
 ## Border style
 
-### Default values
-<!-- defaults.values.start -->
-<!-- defaults.values.end -->
 
+<!-- <values.borderStyle> -->
+<!-- </values.borderStyle> -->
 
-### Default variants
-<!-- defaults.variants.start -->
-<!-- defaults.variants.end -->
+<!-- <variants.borderStyle> -->
+<!-- </variants.borderStyle> -->
+

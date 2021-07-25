@@ -1,16 +1,7 @@
----
-{
-  name: "cursor"
-}
----
-
 ## Cursor
 
-### Default values
-<!-- defaults.values.start -->
-<!-- defaults.values.end -->
+<!-- <values.cursor> -->
+<!-- </values.cursor> -->
 
-
-### Default variants
-<!-- defaults.variants.start -->
-<!-- defaults.variants.end -->
+<!-- <variants.cursor> -->
+<!-- </variants.cursor> -->

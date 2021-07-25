@@ -1,16 +1,9 @@
----
-{
-  name: "fontFeatureSettings"
-}
----
-
 ## Font feature settings
 
-### Default values
-<!-- defaults.values.start -->
-<!-- defaults.values.end -->
+
+<!-- <values.fontFeatureSettings> -->
+<!-- </values.fontFeatureSettings> -->
 
 
-### Default variants
-<!-- defaults.variants.start -->
-<!-- defaults.variants.end -->
+<!-- <variants.fontFeatureSettings> -->
+<!-- </variants.fontFeatureSettings> -->

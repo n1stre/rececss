@@ -1,16 +1,7 @@
----
-{
-  name: "touchAction"
-}
----
-
 ## Touch action
 
-### Default values
-<!-- defaults.values.start -->
-<!-- defaults.values.end -->
+<!-- <values.touchAction> -->
+<!-- </values.touchAction> -->
 
-
-### Default variants
-<!-- defaults.variants.start -->
-<!-- defaults.variants.end -->
+<!-- <variants.touchAction> -->
+<!-- </variants.touchAction> -->

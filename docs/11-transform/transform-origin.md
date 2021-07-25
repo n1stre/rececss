@@ -1,16 +1,8 @@
----
-{
-  name: "transformOrigin"
-}
----
-
 ## Transform origin
 
-### Default values
-<!-- defaults.values.start -->
-<!-- defaults.values.end -->
 
+<!-- <values.transformOrigin> -->
+<!-- </values.transformOrigin> -->
 
-### Default variants
-<!-- defaults.variants.start -->
-<!-- defaults.variants.end -->
+<!-- <variants.transformOrigin> -->
+<!-- </variants.transformOrigin> -->

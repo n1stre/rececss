@@ -1,16 +1,8 @@
----
-{
-  name: "textUnderlinePosition"
-}
----
-
 ## Text underline position
 
-### Default values
-<!-- defaults.values.start -->
-<!-- defaults.values.end -->
 
+<!-- <values.textUnderlinePosition> -->
+<!-- </values.textUnderlinePosition> -->
 
-### Default variants
-<!-- defaults.variants.start -->
-<!-- defaults.variants.end -->
+<!-- <variants.textUnderlinePosition> -->
+<!-- </variants.textUnderlinePosition> -->

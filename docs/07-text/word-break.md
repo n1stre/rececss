@@ -1,16 +1,8 @@
----
-{
-  name: "wordBreak"
-}
----
-
 ## Word break
 
-### Default values
-<!-- defaults.values.start -->
-<!-- defaults.values.end -->
 
+<!-- <values.wordBreak> -->
+<!-- </values.wordBreak> -->
 
-### Default variants
-<!-- defaults.variants.start -->
-<!-- defaults.variants.end -->
+<!-- <variants.wordBreak> -->
+<!-- </variants.wordBreak> -->

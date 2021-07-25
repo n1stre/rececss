@@ -1,16 +1,9 @@
----
-{
-  name: "forcedColorAdjust"
-}
----
-
 ## Forced color adjust
 
-### Default values
-<!-- defaults.values.start -->
-<!-- defaults.values.end -->
+
+<!-- <values.forcedColorAdjust> -->
+<!-- </values.forcedColorAdjust> -->
 
 
-### Default variants
-<!-- defaults.variants.start -->
-<!-- defaults.variants.end -->
+<!-- <variants.forcedColorAdjust> -->
+<!-- </variants.forcedColorAdjust> -->

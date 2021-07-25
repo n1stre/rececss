@@ -1,16 +1,9 @@
----
-{
-  name: "order"
-}
----
-
 ## Order
 
-### Default values
-<!-- defaults.values.start -->
-<!-- defaults.values.end -->
+
+<!-- <values.order> -->
+<!-- </values.order> -->
 
 
-### Default variants
-<!-- defaults.variants.start -->
-<!-- defaults.variants.end -->
+<!-- <variants.order> -->
+<!-- </variants.order> -->

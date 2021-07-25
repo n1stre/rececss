@@ -1,16 +1,8 @@
----
-{
-  name: "listStyleType"
-}
----
-
 ## List style type
 
-### Default values
-<!-- defaults.values.start -->
-<!-- defaults.values.end -->
 
+<!-- <values.listStyleType> -->
+<!-- </values.listStyleType> -->
 
-### Default variants
-<!-- defaults.variants.start -->
-<!-- defaults.variants.end -->
+<!-- <variants.listStyleType> -->
+<!-- </variants.listStyleType> -->

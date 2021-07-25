@@ -1,16 +1,9 @@
----
-{
-  name: "alignSelf"
-}
----
-
 ## Align self
 
-### Default values
-<!-- defaults.values.start -->
-<!-- defaults.values.end -->
 
+<!-- <values.alignSelf> -->
+<!-- </values.alignSelf> -->
 
-### Default variants
-<!-- defaults.variants.start -->
-<!-- defaults.variants.end -->
+<!-- <variants.alignSelf> -->
+<!-- </variants.alignSelf> -->
+

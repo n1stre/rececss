@@ -1,16 +1,9 @@
----
-{
-  name: "outlineOffset"
-}
----
-
 ## Outline offset
 
-### Default values
-<!-- defaults.values.start -->
-<!-- defaults.values.end -->
 
+<!-- <values.outlineOffset> -->
+<!-- </values.outlineOffset> -->
 
-### Default variants
-<!-- defaults.variants.start -->
-<!-- defaults.variants.end -->
+<!-- <variants.outlineOffset> -->
+<!-- </variants.outlineOffset> -->
+

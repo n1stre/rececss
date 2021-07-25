@@ -1,16 +1,7 @@
----
-{
-  name: "content"
-}
----
-
 ## Content
 
-### Default values
-<!-- defaults.values.start -->
-<!-- defaults.values.end -->
+<!-- <values.content> -->
+<!-- </values.content> -->
 
-
-### Default variants
-<!-- defaults.variants.start -->
-<!-- defaults.variants.end -->
+<!-- <variants.content> -->
+<!-- </variants.content> -->

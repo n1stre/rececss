@@ -1,22 +1,29 @@
----
-{
-  name: "textDecoration"
-}
----
-
 ## Text decoration
+<!-- <values.textDecoration> -->
+<!-- </values.textDecoration> -->
 
-### Default values
-<!-- defaults.values.start -->
-<!-- defaults.values.end -->
+<!-- <variants.textDecoration> -->
+<!-- </variants.textDecoration> -->
+
+### Text decoration color
+<!-- <values.textDecorationColor> -->
+<!-- </values.textDecorationColor> -->
+
+<!-- <variants.textDecorationColor> -->
+<!-- </variants.textDecorationColor> -->
+
+### Text decoration line
+<!-- <values.textDecorationLine> -->
+<!-- </values.textDecorationLine> -->
+
+<!-- <variants.textDecorationLine> -->
+<!-- </variants.textDecorationLine> -->
 
 
-### Default variants
-<!-- defaults.variants.start -->
-<!-- defaults.variants.end -->
+### Text decoration style
+<!-- <values.textDecorationStyle> -->
+<!-- </values.textDecorationStyle> -->
 
-
-### text-decoration-color
-### text-decoration-line
-### text-decoration-style
+<!-- <variants.textDecorationStyle> -->
+<!-- </variants.textDecorationStyle> -->
 

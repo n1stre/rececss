@@ -1,16 +1,7 @@
----
-{
-  name: "userSelect"
-}
----
-
 ## User select
 
-### Default values
-<!-- defaults.values.start -->
-<!-- defaults.values.end -->
+<!-- <values.userSelect> -->
+<!-- </values.userSelect> -->
 
-
-### Default variants
-<!-- defaults.variants.start -->
-<!-- defaults.variants.end -->
+<!-- <variants.userSelect> -->
+<!-- </variants.userSelect> -->

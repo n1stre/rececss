@@ -1,16 +1,8 @@
----
-{
-  name: "flexDirection"
-}
----
-
 ## Flex direction
 
-### Default values
-<!-- defaults.values.start -->
-<!-- defaults.values.end -->
+<!-- <values.flexDirection> -->
+<!-- </values.flexDirection> -->
 
+<!-- <variants.flexDirection> -->
+<!-- </variants.flexDirection> -->
 
-### Default variants
-<!-- defaults.variants.start -->
-<!-- defaults.variants.end -->

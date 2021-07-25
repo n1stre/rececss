@@ -31,8 +31,7 @@ export function getDocBySlug(slugArr) {
     handleFile: async (filepath) => {
       if (!docPathMatchesSlug(filepath, slugArr)) return;
       const { data, orig } = matter.read(filepath);
-      const ruleName = data.name;
-      const filledDoc = fillDefaultsIntoDocContents(ruleName, orig.toString());
+      const filledDoc = fillDefaultsIntoDocContents(orig.toString());
       const { content } = matter(filledDoc);
 
       fs.writeFileSync(filepath, filledDoc);
@@ -78,43 +77,53 @@ function docPathMatchesSlug(filepath, slugArr) {
   });
 }
 
-function fillDefaultsIntoDocContents(rulename, contents) {
-  contents = insertValuesData(rulename, contents);
-  contents = insertVariantsData(rulename, contents);
+function fillDefaultsIntoDocContents(contents) {
+  const matches = contents.matchAll(
+    /<!-- <(?<key>values|variants).(?<rulename>(.*))> -->/g,
+  );
+
+  for (const match of matches) {
+    const key = match.groups.key;
+    const rulename = match.groups.rulename;
+    contents = insertData(key, rulename, contents);
+  }
+
   return contents;
 }
 
-function insertValuesData(rulename, contents) {
+function insertData(key, rulename, contents) {
   return insertBetween(
     contents,
-    "<!-- defaults.values.start -->",
-    "<!-- defaults.values.end -->",
-    createValuesTable(rulename),
+    `<!-- <${key}.${rulename}> -->`,
+    `<!-- </${key}.${rulename}> -->`,
+    createDataTable(key, rulename),
   );
 }
 
-function insertVariantsData(rulename, contents) {
-  return insertBetween(
-    contents,
-    "<!-- defaults.variants.start -->",
-    "<!-- defaults.variants.end -->",
-    createVariantsTable(rulename),
-  );
+function createDataTable(key, rulename) {
+  if (key === "values") return createValuesTable(rulename);
+  if (key === "variants") return createVariantsTable(rulename);
 }
 
 function createValuesTable(rulename) {
   const parseValue = (_, v) => (Array.isArray(v) ? JSON.stringify(v) : v);
-  return createMarkdownTable(defaults.values[rulename], [
+  const heading = "### Default values";
+  const table = createMarkdownTable(defaults.values[rulename], [
     { head: "Classname key", calcValue: (key) => key },
     { head: "CSS value", calcValue: parseValue },
   ]);
+
+  return heading + "\n" + table;
 }
 
 function createVariantsTable(rulename) {
-  return createMarkdownTable(defaults.variants[rulename], [
+  const heading = "### Default variants";
+  const table = createMarkdownTable(defaults.variants[rulename], [
     { head: "Classname key", calcValue: (key) => key },
     { head: "Variant selector", calcValue: (_, v) => v },
   ]);
+
+  return heading + "\n" + table;
 }
 
 function insertBetween(content, start, end, data) {

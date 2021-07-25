@@ -1,17 +1,9 @@
----
-{
-  name: "direction",
-}
----
-
-
 ## Direction
 
-### Default values
-<!-- defaults.values.start -->
-<!-- defaults.values.end -->
+
+<!-- <values.direction> -->
+<!-- </values.direction> -->
 
 
-### Default variants
-<!-- defaults.variants.start -->
-<!-- defaults.variants.end -->
+<!-- <variants.direction> -->
+<!-- </variants.direction> -->

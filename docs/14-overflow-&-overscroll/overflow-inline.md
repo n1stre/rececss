@@ -1,18 +1,8 @@
----
-{
-  name: "overflowInline"
-}
----
-
 ## Overflow inline
 
-### Default values
-<!-- defaults.values.start -->
 
-<!-- defaults.values.end -->
+<!-- <values.overflowInline> -->
+<!-- </values.overflowInline> -->
 
-
-### Default variants
-<!-- defaults.variants.start -->
-
-<!-- defaults.variants.end -->
+<!-- <variants.overflowInline> -->
+<!-- </variants.overflowInline> -->

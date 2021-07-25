@@ -1,16 +1,9 @@
----
-{
-  name: "fontSizeAdjust"
-}
----
-
 ## Font size adjust
 
-### Default values
-<!-- defaults.values.start -->
-<!-- defaults.values.end -->
+
+<!-- <values.fontSizeAdjust> -->
+<!-- </values.fontSizeAdjust> -->
 
 
-### Default variants
-<!-- defaults.variants.start -->
-<!-- defaults.variants.end -->
+<!-- <variants.fontSizeAdjust> -->
+<!-- </variants.fontSizeAdjust> -->

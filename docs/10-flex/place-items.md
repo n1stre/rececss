@@ -1,16 +1,9 @@
----
-{
-  name: "placeItems"
-}
----
-
 ## Place items
 
-### Default values
-<!-- defaults.values.start -->
-<!-- defaults.values.end -->
+
+<!-- <values.placeItems> -->
+<!-- </values.placeItems> -->
 
 
-### Default variants
-<!-- defaults.variants.start -->
-<!-- defaults.variants.end -->
+<!-- <variants.placeItems> -->
+<!-- </variants.placeItems> -->

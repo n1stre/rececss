@@ -1,18 +1,8 @@
----
-{
-  name: "filter"
-}
----
-
 ## Filter
 
-### Default values
-<!-- defaults.values.start -->
-
-<!-- defaults.values.end -->
+<!-- <values.filter> -->
+<!-- </values.filter> -->
 
 
-### Default variants
-<!-- defaults.variants.start -->
-
-<!-- defaults.variants.end -->
+<!-- <variants.filter> -->
+<!-- </variants.filter> -->

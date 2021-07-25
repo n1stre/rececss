@@ -1,16 +1,7 @@
----
-{
-  name: "scrollMarginTop"
-}
----
-
 ## Scroll margin top
 
-### Default values
-<!-- defaults.values.start -->
-<!-- defaults.values.end -->
+<!-- <values.scrollMarginTop> -->
+<!-- </values.scrollMarginTop> -->
 
-
-### Default variants
-<!-- defaults.variants.start -->
-<!-- defaults.variants.end -->
+<!-- <variants.scrollMarginTop> -->
+<!-- </variants.scrollMarginTop> -->

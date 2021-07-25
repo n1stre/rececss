@@ -1,16 +1,7 @@
----
-{
-  name: "animationName"
-}
----
-
 ## Animation name
 
-### Default values
-<!-- defaults.values.start -->
-<!-- defaults.values.end -->
+<!-- <values.animationName> -->
+<!-- </values.animationName> -->
 
-
-### Default variants
-<!-- defaults.variants.start -->
-<!-- defaults.variants.end -->
+<!-- <variants.animationName> -->
+<!-- </variants.animationName> -->

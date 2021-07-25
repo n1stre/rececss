@@ -1,16 +1,9 @@
----
-{
-  name: "outlineStyle"
-}
----
-
 ## Outline style
 
-### Default values
-<!-- defaults.values.start -->
-<!-- defaults.values.end -->
 
+<!-- <values.outlineStyle> -->
+<!-- </values.outlineStyle> -->
 
-### Default variants
-<!-- defaults.variants.start -->
-<!-- defaults.variants.end -->
+<!-- <variants.outlineStyle> -->
+<!-- </variants.outlineStyle> -->
+

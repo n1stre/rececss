@@ -1,18 +1,8 @@
----
-{
-  name: "textRendering"
-}
----
-
 ## Text rendering
 
-### Default values
-<!-- defaults.values.start -->
 
-<!-- defaults.values.end -->
+<!-- <values.textRendering> -->
+<!-- </values.textRendering> -->
 
-
-### Default variants
-<!-- defaults.variants.start -->
-
-<!-- defaults.variants.end -->
+<!-- <variants.textRendering> -->
+<!-- </variants.textRendering> -->

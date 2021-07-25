@@ -1,16 +1,7 @@
----
-{
-  name: "scrollPaddingBlockEnd"
-}
----
-
 ## Scroll padding block end
 
-### Default values
-<!-- defaults.values.start -->
-<!-- defaults.values.end -->
+<!-- <values.scrollPaddingBlockEnd> -->
+<!-- </values.scrollPaddingBlockEnd> -->
 
-
-### Default variants
-<!-- defaults.variants.start -->
-<!-- defaults.variants.end -->
+<!-- <variants.scrollPaddingBlockEnd> -->
+<!-- </variants.scrollPaddingBlockEnd> -->

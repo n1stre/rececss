@@ -1,16 +1,8 @@
----
-{
-  name: "flexGrid"
-}
----
-
 ## Flex grid
 
-### Default values
-<!-- defaults.values.start -->
-<!-- defaults.values.end -->
+<!-- <values.flexGrid> -->
+<!-- </values.flexGrid> -->
 
+<!-- <variants.flexGrid> -->
+<!-- </variants.flexGrid> -->
 
-### Default variants
-<!-- defaults.variants.start -->
-<!-- defaults.variants.end -->

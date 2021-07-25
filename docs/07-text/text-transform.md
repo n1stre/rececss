@@ -1,16 +1,8 @@
----
-{
-  name: "textTransform"
-}
----
-
 ## Text transform
 
-### Default values
-<!-- defaults.values.start -->
-<!-- defaults.values.end -->
 
+<!-- <values.textTransform> -->
+<!-- </values.textTransform> -->
 
-### Default variants
-<!-- defaults.variants.start -->
-<!-- defaults.variants.end -->
+<!-- <variants.textTransform> -->
+<!-- </variants.textTransform> -->

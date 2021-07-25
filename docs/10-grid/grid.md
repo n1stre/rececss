@@ -1,18 +1,9 @@
----
-{
-  name: "grid"
-}
----
-
 ## Outline
 
-### Default values
-<!-- defaults.values.start -->
 
-<!-- defaults.values.end -->
+<!-- <values.grid> -->
+<!-- </values.grid> -->
 
 
-### Default variants
-<!-- defaults.variants.start -->
-
-<!-- defaults.variants.end -->
+<!-- <variants.grid> -->
+<!-- </variants.grid> -->

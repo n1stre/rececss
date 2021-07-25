@@ -1,16 +1,8 @@
----
-{
-  name: "perspective"
-}
----
-
 ## Perspective
 
-### Default values
-<!-- defaults.values.start -->
-<!-- defaults.values.end -->
 
+<!-- <values.perspective> -->
+<!-- </values.perspective> -->
 
-### Default variants
-<!-- defaults.variants.start -->
-<!-- defaults.variants.end -->
+<!-- <variants.perspective> -->
+<!-- </variants.perspective> -->

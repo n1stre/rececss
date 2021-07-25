@@ -1,16 +1,8 @@
----
-{
-  name: "listStylePosition"
-}
----
-
 ## List style position
 
-### Default values
-<!-- defaults.values.start -->
-<!-- defaults.values.end -->
 
+<!-- <values.listStylePosition> -->
+<!-- </values.listStylePosition> -->
 
-### Default variants
-<!-- defaults.variants.start -->
-<!-- defaults.variants.end -->
+<!-- <variants.listStylePosition> -->
+<!-- </variants.listStylePosition> -->

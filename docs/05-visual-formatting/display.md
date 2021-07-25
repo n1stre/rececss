@@ -1,16 +1,9 @@
----
-{
-  name: "display",
-}
----
-
 ## Display
 
-### Default values
-<!-- defaults.values.start -->
-<!-- defaults.values.end -->
+
+<!-- <values.display> -->
+<!-- </values.display> -->
 
 
-### Default variants
-<!-- defaults.variants.start -->
-<!-- defaults.variants.end -->
+<!-- <variants.display> -->
+<!-- </variants.display> -->

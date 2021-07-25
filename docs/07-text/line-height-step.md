@@ -1,16 +1,9 @@
----
-{
-  name: "lineHeightStep"
-}
----
-
 ## Line height step
 
-### Default values
-<!-- defaults.values.start -->
-<!-- defaults.values.end -->
+
+<!-- <values.lineHeightStep> -->
+<!-- </values.lineHeightStep> -->
 
 
-### Default variants
-<!-- defaults.variants.start -->
-<!-- defaults.variants.end -->
+<!-- <variants.lineHeightStep> -->
+<!-- </variants.lineHeightStep> -->

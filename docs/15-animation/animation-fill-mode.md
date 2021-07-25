@@ -1,16 +1,7 @@
----
-{
-  name: "animationFillMode"
-}
----
-
 ## Animation fill mode
 
-### Default values
-<!-- defaults.values.start -->
-<!-- defaults.values.end -->
+<!-- <values.animationFillMode> -->
+<!-- </values.animationFillMode> -->
 
-
-### Default variants
-<!-- defaults.variants.start -->
-<!-- defaults.variants.end -->
+<!-- <variants.animationFillMode> -->
+<!-- </variants.animationFillMode> -->

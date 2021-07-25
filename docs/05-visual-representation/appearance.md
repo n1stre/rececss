@@ -1,16 +1,9 @@
----
-{
-  name: "appearance"
-}
----
-
 ## Appearance
 
-### Default values
-<!-- defaults.values.start -->
-<!-- defaults.values.end -->
+
+<!-- <values.appearance> -->
+<!-- </values.appearance> -->
 
 
-### Default variants
-<!-- defaults.variants.start -->
-<!-- defaults.variants.end -->
+<!-- <variants.appearance> -->
+<!-- </variants.appearance> -->

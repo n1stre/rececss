@@ -1,18 +1,7 @@
----
-{
-  name: "overflowY"
-}
----
-
 ## Overflow y
 
-### Default values
-<!-- defaults.values.start -->
+<!-- <values.overflowY> -->
+<!-- </values.overflowY> -->
 
-<!-- defaults.values.end -->
-
-
-### Default variants
-<!-- defaults.variants.start -->
-
-<!-- defaults.variants.end -->
+<!-- <variants.overflowY> -->
+<!-- </variants.overflowY> -->

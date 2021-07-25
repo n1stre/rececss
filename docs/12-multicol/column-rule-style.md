@@ -1,16 +1,7 @@
----
-{
-  name: "columnRuleStyle"
-}
----
-
 ## Column rule style
 
-### Default values
-<!-- defaults.values.start -->
-<!-- defaults.values.end -->
+<!-- <values.columnRuleStyle> -->
+<!-- </values.columnRuleStyle> -->
 
-
-### Default variants
-<!-- defaults.variants.start -->
-<!-- defaults.variants.end -->
+<!-- <variants.columnRuleStyle> -->
+<!-- </variants.columnRuleStyle> -->

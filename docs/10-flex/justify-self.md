@@ -1,16 +1,9 @@
----
-{
-  name: "justifySelf"
-}
----
-
 ## Justify self
 
-### Default values
-<!-- defaults.values.start -->
-<!-- defaults.values.end -->
+
+<!-- <values.justifySelf> -->
+<!-- </values.justifySelf> -->
 
 
-### Default variants
-<!-- defaults.variants.start -->
-<!-- defaults.variants.end -->
+<!-- <variants.justifySelf> -->
+<!-- </variants.justifySelf> -->

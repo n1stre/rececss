@@ -1,16 +1,9 @@
----
-{
-  name: "tabSize"
-}
----
-
 ## Tab size
 
-### Default values
-<!-- defaults.values.start -->
-<!-- defaults.values.end -->
+
+<!-- <values.tabSize> -->
+<!-- </values.tabSize> -->
 
 
-### Default variants
-<!-- defaults.variants.start -->
-<!-- defaults.variants.end -->
+<!-- <variants.tabSize> -->
+<!-- </variants.tabSize> -->

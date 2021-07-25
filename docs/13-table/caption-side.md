@@ -1,16 +1,8 @@
----
-{
-  name: "captionSide"
-}
----
-
 ## Caption side
 
-### Default values
-<!-- defaults.values.start -->
-<!-- defaults.values.end -->
 
+<!-- <values.captionSide> -->
+<!-- </values.captionSide> -->
 
-### Default variants
-<!-- defaults.variants.start -->
-<!-- defaults.variants.end -->
+<!-- <variants.captionSide> -->
+<!-- </variants.captionSide> -->

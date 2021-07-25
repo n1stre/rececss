@@ -1,20 +1,28 @@
----
-{
-  name: "shape"
-}
----
 ## Shape
 
 ### shape-image-threshold
+
+<!-- <values.shapeImageThreshold> -->
+<!-- </values.shapeImageThreshold> -->
+
+
+<!-- <variants.shapeImageThreshold> -->
+<!-- </variants.shapeImageThreshold> -->
+
 ### shape-margin
+
+<!-- <values.shapeMargin> -->
+<!-- </values.shapeMargin> -->
+
+
+<!-- <variants.shapeMargin> -->
+<!-- </variants.shapeMargin> -->
+
 ### shape-outside
 
-
-### Default values
-<!-- defaults.values.start -->
-<!-- defaults.values.end -->
+<!-- <values.shapeOutside> -->
+<!-- </values.shapeOutside> -->
 
 
-### Default variants
-<!-- defaults.variants.start -->
-<!-- defaults.variants.end -->
+<!-- <variants.shapeOutside> -->
+<!-- </variants.shapeOutside> -->

@@ -1,16 +1,8 @@
----
-{
-  name: "columnRuleWidth"
-}
----
-
 ## Column rule width
 
-### Default values
-<!-- defaults.values.start -->
-<!-- defaults.values.end -->
 
+<!-- <values.columnRuleWidth> -->
+<!-- </values.columnRuleWidth> -->
 
-### Default variants
-<!-- defaults.variants.start -->
-<!-- defaults.variants.end -->
+<!-- <variants.columnRuleWidth> -->
+<!-- </variants.columnRuleWidth> -->

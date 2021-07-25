@@ -1,16 +1,9 @@
----
-{
-  name: "fontVariationSettings"
-}
----
-
 ## Font variation settings
 
-### Default values
-<!-- defaults.values.start -->
-<!-- defaults.values.end -->
+
+<!-- <values.fontVariationSettings> -->
+<!-- </values.fontVariationSettings> -->
 
 
-### Default variants
-<!-- defaults.variants.start -->
-<!-- defaults.variants.end -->
+<!-- <variants.fontVariationSettings> -->
+<!-- </variants.fontVariationSettings> -->

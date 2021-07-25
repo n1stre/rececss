@@ -1,35 +1,35 @@
----
-{
-  name: "textEmphasis"
-}
----
-
 ## Text emphasis
 
-### Default values
-<!-- defaults.values.start -->
-|Classname key|CSS value|
-|-------------|---------|
-|n            |none     |
-|ac           |accent   |
-|dt           |dot      |
-|c            |circle   |
-|ds           |disc     |
-|b            |before   |
-|a            |after    |
+<!-- <values.textEmphasis> -->
+<!-- </values.textEmphasis> -->
 
-<!-- defaults.values.end -->
+<!-- <variants.textEmphasis> -->
+<!-- </variants.textEmphasis> -->
 
 
-### Default variants
-<!-- defaults.variants.start -->
+### Text emphasis color
 
-<!-- defaults.variants.end -->
+<!-- <values.textEmphasisColor> -->
+<!-- </values.textEmphasisColor> -->
+
+<!-- <variants.textEmphasisColor> -->
+<!-- </variants.textEmphasisColor> -->
 
 
+### Text emphasis position
 
-### text-emphasis-color
-### text-emphasis-position
-### text-emphasis-style
+<!-- <values.textEmphasisPosition> -->
+<!-- </values.textEmphasisPosition> -->
 
-Documentation in progress...
+<!-- <variants.textEmphasisPosition> -->
+<!-- </variants.textEmphasisPosition> -->
+
+
+### Text emphasis style
+
+<!-- <values.textEmphasisStyle> -->
+<!-- </values.textEmphasisStyle> -->
+
+<!-- <variants.textEmphasisStyle> -->
+<!-- </variants.textEmphasisStyle> -->
+

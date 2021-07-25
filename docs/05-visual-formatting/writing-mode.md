@@ -1,22 +1,9 @@
----
-{
-  name: "writingMode"
-}
----
-
 ## Writing mode
 
-### Default values
-<!-- defaults.values.start -->
-```
-undefined
-```
-<!-- defaults.values.end -->
+
+<!-- <values.writingMode> -->
+<!-- </values.writingMode> -->
 
 
-### Default variants
-<!-- defaults.variants.start -->
-```
-undefined
-```
-<!-- defaults.variants.end -->
+<!-- <variants.writingMode> -->
+<!-- </variants.writingMode> -->

@@ -1,16 +1,8 @@
----
-{
-  name: "backgroundClip"
-}
----
-
 ## Background clip
 
-### Default values
-<!-- defaults.values.start -->
-<!-- defaults.values.end -->
 
+<!-- <values.backgroundClip> -->
+<!-- </values.backgroundClip> -->
 
-### Default variants
-<!-- defaults.variants.start -->
-<!-- defaults.variants.end -->
+<!-- <variants.backgroundClip> -->
+<!-- </variants.backgroundClip> -->

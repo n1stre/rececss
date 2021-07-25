@@ -1,16 +1,7 @@
----
-{
-  name: "scrollPaddingInlineEnd"
-}
----
-
 ## Scroll padding inline end
 
-### Default values
-<!-- defaults.values.start -->
-<!-- defaults.values.end -->
+<!-- <values.scrollPaddingInlineEnd> -->
+<!-- </values.scrollPaddingInlineEnd> -->
 
-
-### Default variants
-<!-- defaults.variants.start -->
-<!-- defaults.variants.end -->
+<!-- <variants.scrollPaddingInlineEnd> -->
+<!-- </variants.scrollPaddingInlineEnd> -->

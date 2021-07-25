@@ -1,16 +1,8 @@
----
-{
-  name: "columnGap"
-}
----
-
 ## Column gap
 
-### Default values
-<!-- defaults.values.start -->
-<!-- defaults.values.end -->
 
+<!-- <values.columnGap> -->
+<!-- </values.columnGap> -->
 
-### Default variants
-<!-- defaults.variants.start -->
-<!-- defaults.variants.end -->
+<!-- <variants.columnGap> -->
+<!-- </variants.columnGap> -->

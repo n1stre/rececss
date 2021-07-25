@@ -1,16 +1,7 @@
----
-{
-  name: "borderCollapse"
-}
----
-
 ## Border collapse
 
-### Default values
-<!-- defaults.values.start -->
-<!-- defaults.values.end -->
+<!-- <values.borderCollapse> -->
+<!-- </values.borderCollapse> -->
 
-
-### Default variants
-<!-- defaults.variants.start -->
-<!-- defaults.variants.end -->
+<!-- <variants.borderCollapse> -->
+<!-- </variants.borderCollapse> -->

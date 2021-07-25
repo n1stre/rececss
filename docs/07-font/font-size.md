@@ -1,16 +1,9 @@
----
-{
-  name: "fontSize"
-}
----
-
 ## Font size
 
-### Default values
-<!-- defaults.values.start -->
-<!-- defaults.values.end -->
+
+<!-- <values.fontSize> -->
+<!-- </values.fontSize> -->
 
 
-### Default variants
-<!-- defaults.variants.start -->
-<!-- defaults.variants.end -->
+<!-- <variants.fontSize> -->
+<!-- </variants.fontSize> -->

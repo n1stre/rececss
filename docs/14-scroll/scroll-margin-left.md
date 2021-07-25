@@ -1,16 +1,7 @@
----
-{
-  name: "scrollMarginLeft"
-}
----
-
 ## Scroll margin left
 
-### Default values
-<!-- defaults.values.start -->
-<!-- defaults.values.end -->
+<!-- <values.scrollMarginLeft> -->
+<!-- </values.scrollMarginLeft> -->
 
-
-### Default variants
-<!-- defaults.variants.start -->
-<!-- defaults.variants.end -->
+<!-- <variants.scrollMarginLeft> -->
+<!-- </variants.scrollMarginLeft> -->

@@ -1,16 +1,7 @@
----
-{
-  name: "breakBefore"
-}
----
-
 ## Break before
 
-### Default values
-<!-- defaults.values.start -->
-<!-- defaults.values.end -->
+<!-- <values.breakBefore> -->
+<!-- </values.breakBefore> -->
 
-
-### Default variants
-<!-- defaults.variants.start -->
-<!-- defaults.variants.end -->
+<!-- <variants.breakBefore> -->
+<!-- </variants.breakBefore> -->

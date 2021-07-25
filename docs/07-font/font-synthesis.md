@@ -1,16 +1,9 @@
----
-{
-  name: "fontSynthesis"
-}
----
-
 ## Font synthesis
 
-### Default values
-<!-- defaults.values.start -->
-<!-- defaults.values.end -->
+
+<!-- <values.fontSynthesis> -->
+<!-- </values.fontSynthesis> -->
 
 
-### Default variants
-<!-- defaults.variants.start -->
-<!-- defaults.variants.end -->
+<!-- <variants.fontSynthesis> -->
+<!-- </variants.fontSynthesis> -->

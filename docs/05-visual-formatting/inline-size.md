@@ -1,22 +1,9 @@
----
-{
-  name: "inlineSize",
-}
----
-
 ## Inline size
 
-### Default values
-<!-- defaults.values.start -->
-```
-undefined
-```
-<!-- defaults.values.end -->
+
+<!-- <values.inlineSize> -->
+<!-- </values.inlineSize> -->
 
 
-### Default variants
-<!-- defaults.variants.start -->
-```
-undefined
-```
-<!-- defaults.variants.end -->
+<!-- <variants.inlineSize> -->
+<!-- </variants.inlineSize> -->

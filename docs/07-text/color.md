@@ -1,16 +1,8 @@
----
-{
-  name: "color"
-}
----
-
 ## Color
 
-### Default values
-<!-- defaults.values.start -->
-<!-- defaults.values.end -->
+<!-- <values.color> -->
+<!-- </values.color> -->
 
 
-### Default variants
-<!-- defaults.variants.start -->
-<!-- defaults.variants.end -->
+<!-- <variants.color> -->
+<!-- </variants.color> -->

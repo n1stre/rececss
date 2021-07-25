@@ -1,23 +1,7 @@
----
-{
-  name: "contentVisibility"
-}
----
-
 ## Animation
 
-### Default values
-<!-- defaults.values.start -->
-|Classname key|CSS value|
-|-------------|---------|
-|v            |visible  |
-|h            |hidden   |
-|a            |auto     |
+<!-- <values.contentVisibility> -->
+<!-- </values.contentVisibility> -->
 
-<!-- defaults.values.end -->
-
-
-### Default variants
-<!-- defaults.variants.start -->
-
-<!-- defaults.variants.end -->
+<!-- <variants.contentVisibility> -->
+<!-- </variants.contentVisibility> -->

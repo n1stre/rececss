@@ -1,16 +1,7 @@
----
-{
-  name: "animationDirection"
-}
----
-
 ## Animation direction
 
-### Default values
-<!-- defaults.values.start -->
-<!-- defaults.values.end -->
+<!-- <values.animationDirection> -->
+<!-- </values.animationDirection> -->
 
-
-### Default variants
-<!-- defaults.variants.start -->
-<!-- defaults.variants.end -->
+<!-- <variants.animationDirection> -->
+<!-- </variants.animationDirection> -->

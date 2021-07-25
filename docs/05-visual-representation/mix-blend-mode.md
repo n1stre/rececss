@@ -1,16 +1,9 @@
----
-{
-  name: "mixBlendMode"
-}
----
-
 ## Mix blend mode
 
-### Default values
-<!-- defaults.values.start -->
-<!-- defaults.values.end -->
+
+<!-- <values.mixBlendMode> -->
+<!-- </values.mixBlendMode> -->
 
 
-### Default variants
-<!-- defaults.variants.start -->
-<!-- defaults.variants.end -->
+<!-- <variants.mixBlendMode> -->
+<!-- </variants.mixBlendMode> -->

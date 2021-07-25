@@ -1,21 +1,9 @@
----
-{
-  name: "boxSizing",
-}
----
-
 ## Box sizing
 
-### Default values
-<!-- defaults.values.start -->
-|Classname key|CSS value  |
-|-------------|-----------|
-|cb           |content-box|
-|bb           |border-box |
 
-<!-- defaults.values.end -->
+<!-- <values.boxSizing> -->
+<!-- </values.boxSizing> -->
 
-### Default variants
-<!-- defaults.variants.start -->
 
-<!-- defaults.variants.end -->
+<!-- <variants.boxSizing> -->
+<!-- </variants.boxSizing> -->

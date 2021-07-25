@@ -1,16 +1,7 @@
----
-{
-  name: "transform"
-}
----
-
 ## Transform
 
-### Default values
-<!-- defaults.values.start -->
-<!-- defaults.values.end -->
+<!-- <values.transform> -->
+<!-- </values.transform> -->
 
-
-### Default variants
-<!-- defaults.variants.start -->
-<!-- defaults.variants.end -->
+<!-- <variants.transform> -->
+<!-- </variants.transform> -->

@@ -1,16 +1,8 @@
----
-{
-  name: "backgroundPosition"
-}
----
-
 ## Background position
 
-### Default values
-<!-- defaults.values.start -->
-<!-- defaults.values.end -->
 
+<!-- <values.backgroundPosition> -->
+<!-- </values.backgroundPosition> -->
 
-### Default variants
-<!-- defaults.variants.start -->
-<!-- defaults.variants.end -->
+<!-- <variants.backgroundPosition> -->
+<!-- </variants.backgroundPosition> -->

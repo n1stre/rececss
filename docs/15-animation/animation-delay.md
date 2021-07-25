@@ -1,16 +1,7 @@
----
-{
-  name: "animationDelay"
-}
----
-
 ## Animation delay
 
-### Default values
-<!-- defaults.values.start -->
-<!-- defaults.values.end -->
+<!-- <values.animationDelay> -->
+<!-- </values.animationDelay> -->
 
-
-### Default variants
-<!-- defaults.variants.start -->
-<!-- defaults.variants.end -->
+<!-- <variants.animationDelay> -->
+<!-- </variants.animationDelay> -->

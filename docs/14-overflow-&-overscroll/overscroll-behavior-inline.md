@@ -1,16 +1,7 @@
----
-{
-  name: "overscrollBehaviorInline"
-}
----
-
 ## Overscroll behavior inline
 
-### Default values
-<!-- defaults.values.start -->
-<!-- defaults.values.end -->
+<!-- <values.overscrollBehaviorInline> -->
+<!-- </values.overscrollBehaviorInline> -->
 
-
-### Default variants
-<!-- defaults.variants.start -->
-<!-- defaults.variants.end -->
+<!-- <variants.overscrollBehaviorInline> -->
+<!-- </variants.overscrollBehaviorInline> -->

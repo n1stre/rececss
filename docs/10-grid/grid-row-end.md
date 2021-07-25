@@ -1,16 +1,9 @@
----
-{
-  name: "gridRowEnd"
-}
----
-
 ## Grid row end
 
-### Default values
-<!-- defaults.values.start -->
-<!-- defaults.values.end -->
+
+<!-- <values.gridRowEnd> -->
+<!-- </values.gridRowEnd> -->
 
 
-### Default variants
-<!-- defaults.variants.start -->
-<!-- defaults.variants.end -->
+<!-- <variants.gridRowEnd> -->
+<!-- </variants.gridRowEnd> -->

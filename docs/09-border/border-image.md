@@ -1,24 +1,49 @@
----
-{
-  name: "borderImage"
-}
----
-
 ## Border image
 
-### Default values
-<!-- defaults.values.start -->
-<!-- defaults.values.end -->
+
+<!-- <values.borderImage> -->
+<!-- </values.borderImage> -->
+
+<!-- <variants.borderImage> -->
+<!-- </variants.borderImage> -->
 
 
-### Default variants
-<!-- defaults.variants.start -->
-<!-- defaults.variants.end -->
+### Border image outset
 
-### border-image-outset
-### border-image-repeat
-### border-image-slice
-### border-image-source
-### border-image-width
+<!-- <values.borderImageOutset> -->
+<!-- </values.borderImageOutset> -->
 
-Documentation in progress...
+<!-- <variants.borderImageOutset> -->
+<!-- </variants.borderImageOutset> -->
+
+### Border image repeat
+
+<!-- <values.borderImageRepeat> -->
+<!-- </values.borderImageRepeat> -->
+
+<!-- <variants.borderImageRepeat> -->
+<!-- </variants.borderImageRepeat> -->
+
+### Border image slice
+
+<!-- <values.borderImageSlice> -->
+<!-- </values.borderImageSlice> -->
+
+<!-- <variants.borderImageSlice> -->
+<!-- </variants.borderImageSlice> -->
+
+### Border image source
+
+<!-- <values.borderImageSource> -->
+<!-- </values.borderImageSource> -->
+
+<!-- <variants.borderImageSource> -->
+<!-- </variants.borderImageSource> -->
+
+### Border image width
+
+<!-- <values.borderImageWidth> -->
+<!-- </values.borderImageWidth> -->
+
+<!-- <variants.borderImageWidth> -->
+<!-- </variants.borderImageWidth> -->

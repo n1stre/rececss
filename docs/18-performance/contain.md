@@ -1,27 +1,7 @@
----
-{
-  name: "contain"
-}
----
-
 ## Contain
 
-### Default values
-<!-- defaults.values.start -->
-|Classname key|CSS value|
-|-------------|---------|
-|n            |none     |
-|str          |strict   |
-|c            |content  |
-|sz           |size     |
-|l            |layout   |
-|st           |style    |
-|p            |paint    |
+<!-- <values.contain> -->
+<!-- </values.contain> -->
 
-<!-- defaults.values.end -->
-
-
-### Default variants
-<!-- defaults.variants.start -->
-
-<!-- defaults.variants.end -->
+<!-- <variants.contain> -->
+<!-- </variants.contain> -->

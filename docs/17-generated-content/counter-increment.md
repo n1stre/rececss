@@ -1,16 +1,7 @@
----
-{
-  name: "counterIncrement"
-}
----
-
 ## Counter increment
 
-### Default values
-<!-- defaults.values.start -->
-<!-- defaults.values.end -->
+<!-- <values.counterIncrement> -->
+<!-- </values.counterIncrement> -->
 
-
-### Default variants
-<!-- defaults.variants.start -->
-<!-- defaults.variants.end -->
+<!-- <variants.counterIncrement> -->
+<!-- </variants.counterIncrement> -->

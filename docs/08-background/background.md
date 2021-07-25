@@ -1,16 +1,8 @@
----
-{
-  name: "background"
-}
----
-
 ## Background
 
-### Default values
-<!-- defaults.values.start -->
-<!-- defaults.values.end -->
 
+<!-- <values.background> -->
+<!-- </values.background> -->
 
-### Default variants
-<!-- defaults.variants.start -->
-<!-- defaults.variants.end -->
+<!-- <variants.background> -->
+<!-- </variants.background> -->

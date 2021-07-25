@@ -1,18 +1,9 @@
----
-{
-  name: "gridArea"
-}
----
-
 ## Grid area
 
-### Default values
-<!-- defaults.values.start -->
 
-<!-- defaults.values.end -->
+<!-- <values.gridArea> -->
+<!-- </values.gridArea> -->
 
 
-### Default variants
-<!-- defaults.variants.start -->
-
-<!-- defaults.variants.end -->
+<!-- <variants.gridArea> -->
+<!-- </variants.gridArea> -->

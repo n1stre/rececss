@@ -1,18 +1,8 @@
----
-{
-  name: "textOverflow"
-}
----
-
 ## Text overflow
 
-### Default values
-<!-- defaults.values.start -->
 
-<!-- defaults.values.end -->
+<!-- <values.textOverflow> -->
+<!-- </values.textOverflow> -->
 
-
-### Default variants
-<!-- defaults.variants.start -->
-
-<!-- defaults.variants.end -->
+<!-- <variants.textOverflow> -->
+<!-- </variants.textOverflow> -->

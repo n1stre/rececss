@@ -1,16 +1,9 @@
----
-{
-  name: "visibility"
-}
----
-
 ## Visibility
 
-### Default values
-<!-- defaults.values.start -->
-<!-- defaults.values.end -->
+
+<!-- <values.visibility> -->
+<!-- </values.visibility> -->
 
 
-### Default variants
-<!-- defaults.variants.start -->
-<!-- defaults.variants.end -->
+<!-- <variants.visibility> -->
+<!-- </variants.visibility> -->

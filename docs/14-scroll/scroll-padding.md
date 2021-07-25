@@ -1,16 +1,7 @@
----
-{
-  name: "scrollPadding"
-}
----
-
 ## Scroll padding
 
-### Default values
-<!-- defaults.values.start -->
-<!-- defaults.values.end -->
+<!-- <values.scrollPadding> -->
+<!-- </values.scrollPadding> -->
 
-
-### Default variants
-<!-- defaults.variants.start -->
-<!-- defaults.variants.end -->
+<!-- <variants.scrollPadding> -->
+<!-- </variants.scrollPadding> -->

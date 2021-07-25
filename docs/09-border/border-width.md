@@ -1,16 +1,9 @@
----
-{
-  name: "borderWidth"
-}
----
-
 ## Border width
 
-### Default values
-<!-- defaults.values.start -->
-<!-- defaults.values.end -->
 
+<!-- <values.borderWidth> -->
+<!-- </values.borderWidth> -->
 
-### Default variants
-<!-- defaults.variants.start -->
-<!-- defaults.variants.end -->
+<!-- <variants.borderWidth> -->
+<!-- </variants.borderWidth> -->
+

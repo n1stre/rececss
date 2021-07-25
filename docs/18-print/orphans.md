@@ -1,16 +1,7 @@
----
-{
-  name: "orphans"
-}
----
-
 ## Orphans
 
-### Default values
-<!-- defaults.values.start -->
-<!-- defaults.values.end -->
+<!-- <values.orphans> -->
+<!-- </values.orphans> -->
 
-
-### Default variants
-<!-- defaults.variants.start -->
-<!-- defaults.variants.end -->
+<!-- <variants.orphans> -->
+<!-- </variants.orphans> -->

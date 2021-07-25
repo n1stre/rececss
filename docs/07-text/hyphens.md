@@ -1,16 +1,8 @@
----
-{
-  name: "hyphens"
-}
----
-
 ## Hyphens
 
-### Default values
-<!-- defaults.values.start -->
-<!-- defaults.values.end -->
+<!-- <values.hyphens> -->
+<!-- </values.hyphens> -->
 
 
-### Default variants
-<!-- defaults.variants.start -->
-<!-- defaults.variants.end -->
+<!-- <variants.hyphens> -->
+<!-- </variants.hyphens> -->

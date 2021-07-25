@@ -1,16 +1,9 @@
----
-{
-  name: "fontVariant"
-}
----
-
 ## Font variant
 
-### Default values
-<!-- defaults.values.start -->
-<!-- defaults.values.end -->
+
+<!-- <values.fontVariant> -->
+<!-- </values.fontVariant> -->
 
 
-### Default variants
-<!-- defaults.variants.start -->
-<!-- defaults.variants.end -->
+<!-- <variants.fontVariant> -->
+<!-- </variants.fontVariant> -->

@@ -1,16 +1,9 @@
----
-{
-  name: "flexShrink"
-}
----
-
 ## Flex shrink
 
-### Default values
-<!-- defaults.values.start -->
-<!-- defaults.values.end -->
 
+<!-- <values.flexShrink> -->
+<!-- </values.flexShrink> -->
 
-### Default variants
-<!-- defaults.variants.start -->
-<!-- defaults.variants.end -->
+<!-- <variants.flexShrink> -->
+<!-- </variants.flexShrink> -->
+

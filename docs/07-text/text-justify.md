@@ -1,16 +1,8 @@
----
-{
-  name: "textJustify"
-}
----
-
 ## Text justify
 
-### Default values
-<!-- defaults.values.start -->
-<!-- defaults.values.end -->
 
+<!-- <values.textJustify> -->
+<!-- </values.textJustify> -->
 
-### Default variants
-<!-- defaults.variants.start -->
-<!-- defaults.variants.end -->
+<!-- <variants.textJustify> -->
+<!-- </variants.textJustify> -->

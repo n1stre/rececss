@@ -1,16 +1,7 @@
----
-{
-  name: "columns"
-}
----
-
 ## Columns
 
-### Default values
-<!-- defaults.values.start -->
-<!-- defaults.values.end -->
+<!-- <values.columns> -->
+<!-- </values.columns> -->
 
-
-### Default variants
-<!-- defaults.variants.start -->
-<!-- defaults.variants.end -->
+<!-- <variants.columns> -->
+<!-- </variants.columns> -->

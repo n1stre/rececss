@@ -1,16 +1,8 @@
----
-{
-  name: "objectPosition"
-}
----
-
 ## Object position
 
-### Default values
-<!-- defaults.values.start -->
-<!-- defaults.values.end -->
+<!-- <values.objectPosition> -->
+<!-- </values.objectPosition> -->
 
 
-### Default variants
-<!-- defaults.variants.start -->
-<!-- defaults.variants.end -->
+<!-- <variants.objectPosition> -->
+<!-- </variants.objectPosition> -->

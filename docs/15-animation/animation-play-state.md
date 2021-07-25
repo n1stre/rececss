@@ -1,16 +1,8 @@
----
-{
-  name: "animationPlayState"
-}
----
-
 ## Animation play state
 
-### Default values
-<!-- defaults.values.start -->
-<!-- defaults.values.end -->
 
+<!-- <values.animationPlayState> -->
+<!-- </values.animationPlayState> -->
 
-### Default variants
-<!-- defaults.variants.start -->
-<!-- defaults.variants.end -->
+<!-- <variants.animationPlayState> -->
+<!-- </variants.animationPlayState> -->

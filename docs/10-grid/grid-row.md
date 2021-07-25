@@ -1,18 +1,9 @@
----
-{
-  name: "gridRow"
-}
----
-
 ## Grid row
 
-### Default values
-<!-- defaults.values.start -->
 
-<!-- defaults.values.end -->
+<!-- <values.gridRow> -->
+<!-- </values.gridRow> -->
 
 
-### Default variants
-<!-- defaults.variants.start -->
-
-<!-- defaults.variants.end -->
+<!-- <variants.gridRow> -->
+<!-- </variants.gridRow> -->

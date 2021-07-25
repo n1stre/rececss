@@ -1,16 +1,8 @@
----
-{
-  name: "columnRule"
-}
----
-
 ## Column rule
 
-### Default values
-<!-- defaults.values.start -->
-<!-- defaults.values.end -->
 
+<!-- <values.columnRule> -->
+<!-- </values.columnRule> -->
 
-### Default variants
-<!-- defaults.variants.start -->
-<!-- defaults.variants.end -->
+<!-- <variants.columnRule> -->
+<!-- </variants.columnRule> -->

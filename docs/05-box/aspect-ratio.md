@@ -1,21 +1,8 @@
----
-{
-  name: "aspectRatio",
-}
----
 ## Aspect ratio
 
-### Default values
-<!-- defaults.values.start -->
-```
-undefined
-```
-<!-- defaults.values.end -->
+<!-- <values.aspectRatio> -->
+<!-- </values.aspectRatio> -->
 
 
-### Default variants
-<!-- defaults.variants.start -->
-```
-undefined
-```
-<!-- defaults.variants.end -->
+<!-- <variants.aspectRatio> -->
+<!-- </variants.aspectRatio> -->

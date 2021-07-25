@@ -1,16 +1,7 @@
----
-{
-  name: "scrollMarginBottom"
-}
----
-
 ## Scroll margin bottom
 
-### Default values
-<!-- defaults.values.start -->
-<!-- defaults.values.end -->
+<!-- <values.scrollMarginBottom> -->
+<!-- </values.scrollMarginBottom> -->
 
-
-### Default variants
-<!-- defaults.variants.start -->
-<!-- defaults.variants.end -->
+<!-- <variants.scrollMarginBottom> -->
+<!-- </variants.scrollMarginBottom> -->

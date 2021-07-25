@@ -1,18 +1,9 @@
----
-{
-  name: "gridTemplate"
-}
----
-
 ## Grid template
 
-### Default values
-<!-- defaults.values.start -->
 
-<!-- defaults.values.end -->
+<!-- <values.gridTemplate> -->
+<!-- </values.gridTemplate> -->
 
 
-### Default variants
-<!-- defaults.variants.start -->
-
-<!-- defaults.variants.end -->
+<!-- <variants.gridTemplate> -->
+<!-- </variants.gridTemplate> -->

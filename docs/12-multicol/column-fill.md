@@ -1,16 +1,8 @@
----
-{
-  name: "columnFill"
-}
----
-
 ## Column fill
 
-### Default values
-<!-- defaults.values.start -->
-<!-- defaults.values.end -->
 
+<!-- <values.columnFill> -->
+<!-- </values.columnFill> -->
 
-### Default variants
-<!-- defaults.variants.start -->
-<!-- defaults.variants.end -->
+<!-- <variants.columnFill> -->
+<!-- </variants.columnFill> -->

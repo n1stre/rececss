@@ -1,18 +1,7 @@
----
-{
-  name: "overflowAnchor"
-}
----
-
 ## Overflow anchor
 
-### Default values
-<!-- defaults.values.start -->
+<!-- <values.overflowAnchor> -->
+<!-- </values.overflowAnchor> -->
 
-<!-- defaults.values.end -->
-
-
-### Default variants
-<!-- defaults.variants.start -->
-
-<!-- defaults.variants.end -->
+<!-- <variants.overflowAnchor> -->
+<!-- </variants.overflowAnchor> -->

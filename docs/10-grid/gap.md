@@ -1,16 +1,9 @@
----
-{
-  name: "gap"
-}
----
-
 ## Gap
 
-### Default values
-<!-- defaults.values.start -->
-<!-- defaults.values.end -->
+
+<!-- <values.gap> -->
+<!-- </values.gap> -->
 
 
-### Default variants
-<!-- defaults.variants.start -->
-<!-- defaults.variants.end -->
+<!-- <variants.gap> -->
+<!-- </variants.gap> -->

@@ -1,16 +1,9 @@
----
-{
-  name: "outlineWidth"
-}
----
-
 ## Outline width
 
-### Default values
-<!-- defaults.values.start -->
-<!-- defaults.values.end -->
 
+<!-- <values.outlineWidth> -->
+<!-- </values.outlineWidth> -->
 
-### Default variants
-<!-- defaults.variants.start -->
-<!-- defaults.variants.end -->
+<!-- <variants.outlineWidth> -->
+<!-- </variants.outlineWidth> -->
+

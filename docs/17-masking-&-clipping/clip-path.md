@@ -1,16 +1,7 @@
----
-{
-  name: "clipPath"
-}
----
-
 ## Clip path
 
-### Default values
-<!-- defaults.values.start -->
-<!-- defaults.values.end -->
+<!-- <values.clipPath> -->
+<!-- </values.clipPath> -->
 
-
-### Default variants
-<!-- defaults.variants.start -->
-<!-- defaults.variants.end -->
+<!-- <variants.clipPath> -->
+<!-- </variants.clipPath> -->

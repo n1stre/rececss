@@ -1,16 +1,8 @@
----
-{
-  name: "justifyItems"
-}
----
-
 ## Justify items
 
-### Default values
-<!-- defaults.values.start -->
-<!-- defaults.values.end -->
+<!-- <values.justifyItems> -->
+<!-- </values.justifyItems> -->
 
 
-### Default variants
-<!-- defaults.variants.start -->
-<!-- defaults.variants.end -->
+<!-- <variants.justifyItems> -->
+<!-- </variants.justifyItems> -->

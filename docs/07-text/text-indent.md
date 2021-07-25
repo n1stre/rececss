@@ -1,16 +1,9 @@
----
-{
-  name: "textIndent"
-}
----
 
 ## Text indent
 
-### Default values
-<!-- defaults.values.start -->
-<!-- defaults.values.end -->
 
+<!-- <values.textIndent> -->
+<!-- </values.textIndent> -->
 
-### Default variants
-<!-- defaults.variants.start -->
-<!-- defaults.variants.end -->
+<!-- <variants.textIndent> -->
+<!-- </variants.textIndent> -->

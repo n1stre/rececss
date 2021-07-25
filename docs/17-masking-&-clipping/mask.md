@@ -1,16 +1,7 @@
----
-{
-  name: "mask"
-}
----
-
 ## Mask
 
-### Default values
-<!-- defaults.values.start -->
-<!-- defaults.values.end -->
+<!-- <values.mask> -->
+<!-- </values.mask> -->
 
-
-### Default variants
-<!-- defaults.variants.start -->
-<!-- defaults.variants.end -->
+<!-- <variants.mask> -->
+<!-- </variants.mask> -->

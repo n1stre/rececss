@@ -1,16 +1,8 @@
----
-{
-  name: "listStyleImage"
-}
----
-
 ## List style image
 
-### Default values
-<!-- defaults.values.start -->
-<!-- defaults.values.end -->
 
+<!-- <values.listStyleImage> -->
+<!-- </values.listStyleImage> -->
 
-### Default variants
-<!-- defaults.variants.start -->
-<!-- defaults.variants.end -->
+<!-- <variants.listStyleImage> -->
+<!-- </variants.listStyleImage> -->

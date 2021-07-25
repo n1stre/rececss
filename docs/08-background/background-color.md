@@ -1,16 +1,7 @@
----
-{
-  name: "backgroundColor"
-}
----
-
 ## Background color
 
-### Default values
-<!-- defaults.values.start -->
-<!-- defaults.values.end -->
+<!-- <values.backgroundColor> -->
+<!-- </values.backgroundColor> -->
 
-
-### Default variants
-<!-- defaults.variants.start -->
-<!-- defaults.variants.end -->
+<!-- <variants.backgroundColor> -->
+<!-- </variants.backgroundColor> -->

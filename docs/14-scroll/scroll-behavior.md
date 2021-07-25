@@ -1,16 +1,8 @@
----
-{
-  name: "scrollBehavior"
-}
----
-
 ## Scroll behavior
 
-### Default values
-<!-- defaults.values.start -->
-<!-- defaults.values.end -->
 
+<!-- <values.scrollBehavior> -->
+<!-- </values.scrollBehavior> -->
 
-### Default variants
-<!-- defaults.variants.start -->
-<!-- defaults.variants.end -->
+<!-- <variants.scrollBehavior> -->
+<!-- </variants.scrollBehavior> -->

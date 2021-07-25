@@ -1,18 +1,9 @@
----
-{
-  name: "gridTemplateAreas"
-}
----
-
 ## Grid template areas
 
-### Default values
-<!-- defaults.values.start -->
 
-<!-- defaults.values.end -->
+<!-- <values.gridTemplateAreas> -->
+<!-- </values.gridTemplateAreas> -->
 
 
-### Default variants
-<!-- defaults.variants.start -->
-
-<!-- defaults.variants.end -->
+<!-- <variants.gridTemplateAreas> -->
+<!-- </variants.gridTemplateAreas> -->

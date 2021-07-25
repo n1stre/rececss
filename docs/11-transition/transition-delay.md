@@ -1,18 +1,7 @@
----
-{
-  name: "transitionDelay"
-}
----
-
 ## Transition delay
 
-### Default values
-<!-- defaults.values.start -->
+<!-- <values.transitionDelay> -->
+<!-- </values.transitionDelay> -->
 
-<!-- defaults.values.end -->
-
-
-### Default variants
-<!-- defaults.variants.start -->
-
-<!-- defaults.variants.end -->
+<!-- <variants.transitionDelay> -->
+<!-- </variants.transitionDelay> -->

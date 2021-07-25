@@ -1,16 +1,7 @@
----
-{
-  name: "quotes"
-}
----
-
 ## Quotes
 
-### Default values
-<!-- defaults.values.start -->
-<!-- defaults.values.end -->
+<!-- <values.quotes> -->
+<!-- </values.quotes> -->
 
-
-### Default variants
-<!-- defaults.variants.start -->
-<!-- defaults.variants.end -->
+<!-- <variants.quotes> -->
+<!-- </variants.quotes> -->

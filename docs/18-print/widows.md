@@ -1,16 +1,7 @@
----
-{
-  name: "widows"
-}
----
-
 ## Widows
 
-### Default values
-<!-- defaults.values.start -->
-<!-- defaults.values.end -->
+<!-- <values.widows> -->
+<!-- </values.widows> -->
 
-
-### Default variants
-<!-- defaults.variants.start -->
-<!-- defaults.variants.end -->
+<!-- <variants.widows> -->
+<!-- </variants.widows> -->

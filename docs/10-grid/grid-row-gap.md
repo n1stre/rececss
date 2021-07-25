@@ -1,16 +1,8 @@
----
-{
-  name: "gridRowGap"
-}
----
-
 ## Grid row gap
 
-### Default values
-<!-- defaults.values.start -->
-<!-- defaults.values.end -->
+<!-- <values.gridRowGap> -->
+<!-- </values.gridRowGap> -->
 
 
-### Default variants
-<!-- defaults.variants.start -->
-<!-- defaults.variants.end -->
+<!-- <variants.gridRowGap> -->
+<!-- </variants.gridRowGap> -->

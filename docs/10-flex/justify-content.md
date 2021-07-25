@@ -1,16 +1,8 @@
----
-{
-  name: "jusifyContent"
-}
----
-
 ## Justify content
 
-### Default values
-<!-- defaults.values.start -->
-<!-- defaults.values.end -->
+<!-- <values.jusifyContent> -->
+<!-- </values.jusifyContent> -->
 
 
-### Default variants
-<!-- defaults.variants.start -->
-<!-- defaults.variants.end -->
+<!-- <variants.jusifyContent> -->
+<!-- </variants.jusifyContent> -->

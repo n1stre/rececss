@@ -1,16 +1,9 @@
----
-{
-  name: "fontOpticalSizing"
-}
----
-
 ## Font optical sizing
 
-### Default values
-<!-- defaults.values.start -->
-<!-- defaults.values.end -->
+
+<!-- <values.fontOpticalSizing> -->
+<!-- </values.fontOpticalSizing> -->
 
 
-### Default variants
-<!-- defaults.variants.start -->
-<!-- defaults.variants.end -->
+<!-- <variants.fontOpticalSizing> -->
+<!-- </variants.fontOpticalSizing> -->

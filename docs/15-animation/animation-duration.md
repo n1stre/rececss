@@ -1,16 +1,8 @@
----
-{
-  name: "animationDuration"
-}
----
-
 ## Animation duration
 
-### Default values
-<!-- defaults.values.start -->
-<!-- defaults.values.end -->
 
+<!-- <values.animationDuration> -->
+<!-- </values.animationDuration> -->
 
-### Default variants
-<!-- defaults.variants.start -->
-<!-- defaults.variants.end -->
+<!-- <variants.animationDuration> -->
+<!-- </variants.animationDuration> -->

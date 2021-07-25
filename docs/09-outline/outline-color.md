@@ -1,16 +1,8 @@
----
-{
-  name: "outlineColor"
-}
----
-
 ## Outline color
 
-### Default values
-<!-- defaults.values.start -->
-<!-- defaults.values.end -->
+<!-- <values.outlineColor> -->
+<!-- </values.outlineColor> -->
 
+<!-- <variants.outlineColor> -->
+<!-- </variants.outlineColor> -->
 
-### Default variants
-<!-- defaults.variants.start -->
-<!-- defaults.variants.end -->

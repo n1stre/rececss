@@ -1,16 +1,8 @@
----
-{
-  name: "overscrollBehaviorBlock"
-}
----
-
 ## Overscroll behavior block
 
-### Default values
-<!-- defaults.values.start -->
-<!-- defaults.values.end -->
 
+<!-- <values.overscrollBehaviorBlock> -->
+<!-- </values.overscrollBehaviorBlock> -->
 
-### Default variants
-<!-- defaults.variants.start -->
-<!-- defaults.variants.end -->
+<!-- <variants.overscrollBehaviorBlock> -->
+<!-- </variants.overscrollBehaviorBlock> -->

@@ -1,16 +1,8 @@
----
-{
-  name: "fontKerning"
-}
----
-
 ## Font kerning
 
-### Default values
-<!-- defaults.values.start -->
-<!-- defaults.values.end -->
+<!-- <values.fontKerning> -->
+<!-- </values.fontKerning> -->
 
 
-### Default variants
-<!-- defaults.variants.start -->
-<!-- defaults.variants.end -->
+<!-- <variants.fontKerning> -->
+<!-- </variants.fontKerning> -->

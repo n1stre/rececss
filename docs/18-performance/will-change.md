@@ -1,18 +1,7 @@
----
-{
-  name: "willChange"
-}
----
-
 ## Will change
 
-### Default values
-<!-- defaults.values.start -->
+<!-- <values.willChange> -->
+<!-- </values.willChange> -->
 
-<!-- defaults.values.end -->
-
-
-### Default variants
-<!-- defaults.variants.start -->
-
-<!-- defaults.variants.end -->
+<!-- <variants.willChange> -->
+<!-- </variants.willChange> -->

@@ -1,16 +1,9 @@
----
-{
-  name: "fontLanguageOverride"
-}
----
-
 ## Font language override
 
-### Default values
-<!-- defaults.values.start -->
-<!-- defaults.values.end -->
+
+<!-- <values.fontLanguageOverride> -->
+<!-- </values.fontLanguageOverride> -->
 
 
-### Default variants
-<!-- defaults.variants.start -->
-<!-- defaults.variants.end -->
+<!-- <variants.fontLanguageOverride> -->
+<!-- </variants.fontLanguageOverride> -->

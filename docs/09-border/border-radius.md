@@ -1,16 +1,8 @@
----
-{
-  name: "borderRadius"
-}
----
-
 ## Border radius
 
-### Default values
-<!-- defaults.values.start -->
-<!-- defaults.values.end -->
+<!-- <values.borderRadius> -->
+<!-- </values.borderRadius> -->
 
+<!-- <variants.borderRadius> -->
+<!-- </variants.borderRadius> -->
 
-### Default variants
-<!-- defaults.variants.start -->
-<!-- defaults.variants.end -->

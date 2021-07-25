@@ -1,21 +1,9 @@
----
-{
-  name: "backdropFilter"
-}
----
-
 ## Backdrop filter
 
-### Default values
-<!-- defaults.values.start -->
-|Classname key|CSS value|
-|-------------|---------|
-|n            |none     |
 
-<!-- defaults.values.end -->
+<!-- <values.backdropFilter> -->
+<!-- </values.backdropFilter> -->
 
 
-### Default variants
-<!-- defaults.variants.start -->
-
-<!-- defaults.variants.end -->
+<!-- <variants.backdropFilter> -->
+<!-- </variants.backdropFilter> -->

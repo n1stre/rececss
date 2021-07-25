@@ -1,16 +1,7 @@
----
-{
-  name: "scrollMarginInline"
-}
----
-
 ## Scroll margin inline
 
-### Default values
-<!-- defaults.values.start -->
-<!-- defaults.values.end -->
+<!-- <values.scrollMarginInline> -->
+<!-- </values.scrollMarginInline> -->
 
-
-### Default variants
-<!-- defaults.variants.start -->
-<!-- defaults.variants.end -->
+<!-- <variants.scrollMarginInline> -->
+<!-- </variants.scrollMarginInline> -->

@@ -1,16 +1,8 @@
----
-{
-  name: "backgroundAttachment"
-}
----
-
 ## Background attachment
 
-### Default values
-<!-- defaults.values.start -->
-<!-- defaults.values.end -->
 
+<!-- <values.backgroundAttachment> -->
+<!-- </values.backgroundAttachment> -->
 
-### Default variants
-<!-- defaults.variants.start -->
-<!-- defaults.variants.end -->
+<!-- <variants.backgroundAttachment> -->
+<!-- </variants.backgroundAttachment> -->

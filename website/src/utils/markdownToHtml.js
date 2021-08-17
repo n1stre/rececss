@@ -18,6 +18,15 @@ const classNames = {
   h3: "fz_lg mt_lg",
   p: "",
   ".hljs-comment": "op_0.3",
+  ".hljs-string": "fw_b",
+};
+// 90be6d
+const styles = {
+  // pre: "background: #6d6875;",
+  // "pre code": "background-color: initial; color: #e5989b",
+  ".hljs-keyword": "color: #277da1;",
+  // ".hljs-name": "color: #f94144;",
+  ".hljs-string": "color: #90be6d;",
 };
 
 export default async function markdownToHtml(markdown) {
@@ -27,6 +36,7 @@ export default async function markdownToHtml(markdown) {
     .use(html)
     .use(highlight)
     .use(addClasses, classNames)
+    .use(addStyles, styles)
     .process(markdown);
 
   return result.toString();
@@ -40,5 +50,18 @@ function addClasses(classNames) {
         else properties.className = [...properties.className, className];
       });
   });
+
+  return (node) => adders.forEach((a) => a(node));
+}
+
+function addStyles(styles) {
+  const adders = Object.entries(styles).map(([selector, style]) => {
+    return (node) =>
+      selectAll(selector, node).forEach(({ properties }) => {
+        if (!properties.style) properties.style = style;
+        else properties.style = [...properties.style, style];
+      });
+  });
+
   return (node) => adders.forEach((a) => a(node));
 }

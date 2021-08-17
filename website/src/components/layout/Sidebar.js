@@ -3,7 +3,7 @@ import Link from "next/link";
 
 export default function Sidebar({ nav = {} }) {
   return (
-    <aside className="pos_f ovy_s t_4xl w_300 b_2xl pb_xl bdr_lightgrey">
+    <aside className="pos_f ovy_s t_4xl w_250 b_2xl pb_xl bdr_lightgrey">
       <nav>
         {Object.keys(nav).map((key) => {
           return typeof nav[key] === "string" ? (

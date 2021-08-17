@@ -1,4 +1,13 @@
-export default function createMarkdownTable(data, params) {
+import { stringRepeat as repeat } from "./index";
+
+export function createMarkdownCodeblock(value) {
+  if (!value) return "";
+  const stringValue = Array.isArray(value) ? JSON.stringify(value) : value;
+  const result = "```" + stringValue + "```";
+  return result;
+}
+
+export function createMarkdownTable(data, params) {
   if (!data) return "";
 
   let result = "";
@@ -9,11 +18,9 @@ export default function createMarkdownTable(data, params) {
 
     params.forEach((param, idx) => {
       const value = param.calcValue(dataKey, dataValue);
-
       if (!colMaxLengths[idx] || colMaxLengths[idx] < value.length) {
         colMaxLengths[idx] = value.length;
       }
-
       row.push(value);
     });
 
@@ -22,11 +29,9 @@ export default function createMarkdownTable(data, params) {
 
   colMaxLengths.forEach((length, idx) => {
     const heading = params[idx].head;
-
     if (colMaxLengths[idx] < heading.length) {
       colMaxLengths[idx] = heading.length;
     }
-
     result += "|" + heading + repeat(" ", length + 1 - heading.length);
   });
 
@@ -46,11 +51,5 @@ export default function createMarkdownTable(data, params) {
     result += "|\n";
   });
 
-  return result;
-}
-
-function repeat(string, times) {
-  let result = "";
-  for (let i = 1; i < times; i++) result += string;
   return result;
 }

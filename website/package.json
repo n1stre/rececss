@@ -10,6 +10,7 @@
     "export": "next export -o ../dist_website"
   },
   "dependencies": {
+    "classnames": "^2.3.1",
     "gray-matter": "^4.0.3",
     "hast-util-select": "^4.0.2",
     "next": "^10.2.3",

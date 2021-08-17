@@ -1,10 +1,14 @@
 import path from "path";
 import fs from "fs";
 import matter from "gray-matter";
+import * as defaults from "../../../src/4_infrastructures/config/Config.defaults";
+import { isNumber, insertBetweenSubstrings, toPascalCase } from "../utils";
 import dirtree from "../utils/dirtree";
 import markdownToHtml from "../utils/markdownToHtml";
-import createMarkdownTable from "../utils/markdownTable";
-import * as defaults from "../../../src/4_infrastructures/config/Config.defaults";
+import {
+  createMarkdownTable,
+  createMarkdownCodeblock,
+} from "../utils/markdown";
 
 const CWD = process.cwd();
 const DOCS_DIR = path.join(CWD, "../docs");
@@ -50,19 +54,10 @@ function toNavigationSlug(filepath) {
   return docPath.replace(".md", "").replace(/(\/\d+\-)/g, "/");
 }
 
-function toNavigationText(string) {
-  const [head, ...tail] = string.replace(".md", "").split("-");
+function toNavigationText(filepath) {
+  const [head, ...tail] = filepath.replace(".md", "").split("-");
   const resultArr = isNumber(head) ? tail : [head, ...tail];
   return resultArr.map(toPascalCase).join(" ");
-}
-
-function toPascalCase(string) {
-  const [head, ...tail] = string.split("");
-  return [head.toUpperCase(), ...tail].join("");
-}
-
-function isNumber(n) {
-  return !isNaN(parseFloat(n)) && !isNaN(n - 0);
 }
 
 function docPathMatchesSlug(filepath, slugArr) {
@@ -92,7 +87,7 @@ function fillDefaultsIntoDocContents(contents) {
 }
 
 function insertData(key, rulename, contents) {
-  return insertBetween(
+  return insertBetweenSubstrings(
     contents,
     `<!-- <${key}.${rulename}> -->`,
     `<!-- </${key}.${rulename}> -->`,
@@ -106,31 +101,23 @@ function createDataTable(key, rulename) {
 }
 
 function createValuesTable(rulename) {
-  const parseValue = (_, v) => (Array.isArray(v) ? JSON.stringify(v) : v);
-  const heading = "### Default values";
+  const heading = "#### Default values";
   const table = createMarkdownTable(defaults.values[rulename], [
     { head: "Classname key", calcValue: (key) => key },
-    { head: "CSS value", calcValue: parseValue },
+    { head: "CSS value", calcValue: (_, v) => createMarkdownCodeblock(v) },
   ]);
 
-  return heading + "\n" + table;
+  if (table) return heading + "\n" + table;
+  return "";
 }
 
 function createVariantsTable(rulename) {
-  const heading = "### Default variants";
+  const heading = "#### Default variants";
   const table = createMarkdownTable(defaults.variants[rulename], [
     { head: "Classname key", calcValue: (key) => key },
     { head: "Variant selector", calcValue: (_, v) => v },
   ]);
 
-  return heading + "\n" + table;
-}
-
-function insertBetween(content, start, end, data) {
-  if (content.indexOf(start) === -1 || content.indexOf(end) === -1)
-    return content;
-
-  const before = content.split(start)[0];
-  const after = content.split(end)[1];
-  return before + start + "\n" + data + "\n" + end + after;
+  if (table) return heading + "\n" + table;
+  return "";
 }

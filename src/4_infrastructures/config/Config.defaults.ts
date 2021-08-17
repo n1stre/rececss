@@ -19,7 +19,9 @@ const VARIANTS = {
 export const variants: Variants = {
   border: { h: VARIANTS.hover, f: VARIANTS.focus },
   boxShadow: { h: VARIANTS.hover, f: VARIANTS.focus },
+  borderWidth: { "!": VARIANTS.important },
   color: { h: VARIANTS.hover, f: VARIANTS.focus },
+  backgroundColor: { h: VARIANTS.hover, f: VARIANTS.focus },
   display: { ht: VARIANTS.hoverTarget, jst: VARIANTS.jsActiveTarget },
   opacity: { h: VARIANTS.hover, ht: VARIANTS.hoverTarget },
   textDecoration: { h: VARIANTS.hover },
@@ -131,6 +133,12 @@ export const values: RawValues = {
   },
   borderColor: {
     ...Pallete.BrowserDefaults.toDTO(),
+    i: "initial",
+    t: "transparent",
+  },
+  borderWidth: {
+    $px: [[0, 10, 1]],
+    n: "0",
   },
   borderRadius: {
     ...Sizing.EightPx.toPx(),
@@ -138,6 +146,8 @@ export const values: RawValues = {
   background: {},
   backgroundColor: {
     ...Pallete.BrowserDefaults.toDTO(),
+    i: "initial",
+    t: "transparent",
   },
   textShadow: {
     n: "none",

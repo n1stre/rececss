@@ -122,7 +122,7 @@ export default class Config implements IConfig.Instance {
     const defaults = this.props.defaultValues || {};
     return DataTypes.isFunction(this.dto.values)
       ? this.dto.values({ defaults })
-      : DataTypes.deepMerge(defaults, this.dto.values);
+      : DataTypes.deepMerge(defaults, this.dto.values || {});
   }
 
   private get variants() {

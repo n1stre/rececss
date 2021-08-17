@@ -2,16 +2,15 @@
 
 
 <!-- <values.fontOpticalSizing> -->
-### Default values
-|Classname key|CSS value|
-|-------------|---------|
-|a            |auto     |
-|n            |none     |
+#### Default values
+|Classname key|CSS value |
+|-------------|----------|
+|a            |```auto```|
+|n            |```none```|
 
 <!-- </values.fontOpticalSizing> -->
 
 
 <!-- <variants.fontOpticalSizing> -->
-### Default variants
 
 <!-- </variants.fontOpticalSizing> -->

@@ -2,16 +2,15 @@
 
 
 <!-- <values.columnRuleWidth> -->
-### Default values
-|Classname key|CSS value|
-|-------------|---------|
-|tn           |thin     |
-|md           |medium   |
-|tck          |thick    |
+#### Default values
+|Classname key|CSS value   |
+|-------------|------------|
+|tn           |```thin```  |
+|md           |```medium```|
+|tck          |```thick``` |
 
 <!-- </values.columnRuleWidth> -->
 
 <!-- <variants.columnRuleWidth> -->
-### Default variants
 
 <!-- </variants.columnRuleWidth> -->

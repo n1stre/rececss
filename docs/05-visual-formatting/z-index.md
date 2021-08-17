@@ -2,15 +2,14 @@
 
 
 <!-- <values.zIndex> -->
-### Default values
-|Classname key|CSS value|
-|-------------|---------|
-|$num         |[-1,10,1]|
+#### Default values
+|Classname key|CSS value      |
+|-------------|---------------|
+|$num         |```[-1,10,1]```|
 
 <!-- </values.zIndex> -->
 
 
 <!-- <variants.zIndex> -->
-### Default variants
 
 <!-- </variants.zIndex> -->

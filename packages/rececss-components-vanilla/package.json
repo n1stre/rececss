@@ -1,0 +1,12 @@
+{
+  "name": "rececss-components-vanilla",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "Nikita Streletss",
+  "license": "MIT"
+}

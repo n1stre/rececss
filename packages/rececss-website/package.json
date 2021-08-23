@@ -5,11 +5,13 @@
   "scripts": {
     "dev": "next dev",
     "build": "next build",
+    "build:styles": "cd ../rececss-core && npm run dev:cli",
     "start": "next start",
     "preexport": "next build",
     "export": "next export -o ../dist_website"
   },
   "dependencies": {
+    "rececss": "^0.7.0",
     "classnames": "^2.3.1",
     "gray-matter": "^4.0.3",
     "hast-util-select": "^4.0.2",

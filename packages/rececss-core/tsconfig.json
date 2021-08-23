@@ -13,7 +13,6 @@
     "experimentalDecorators": true,
     "allowSyntheticDefaultImports": true,
     "outDir": "dist",
-    "typeRoots": ["./node_modules/@types"],
     "baseUrl": ".",
   },
   "include": ["src"],

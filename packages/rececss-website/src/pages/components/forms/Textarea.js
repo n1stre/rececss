@@ -30,7 +30,12 @@ export default function TextareaInputPage(props) {
             <Preview.Html>{props.code.html.source}</Preview.Html>
           </Preview.Render>
 
-          <Preview.Html label="Source">
+          <Preview.Html
+            label="Source"
+            label="Source"
+            label="Source"
+            label="Source"
+          >
             {props.code.html.sourceHighlighted}
           </Preview.Html>
         </Preview.Variant>

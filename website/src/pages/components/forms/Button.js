@@ -11,16 +11,6 @@ export default function ButtonPage(props) {
       <p>Simple button component</p>
 
       <Preview initialVariant="react">
-        <Preview.Variant name="html">
-          <Preview.Render>
-            <Preview.Html>{props.code.html.source}</Preview.Html>
-          </Preview.Render>
-
-          <Preview.Html label="Source">
-            {props.code.html.sourceHighlighted}
-          </Preview.Html>
-        </Preview.Variant>
-
         <Preview.Variant name="react">
           <Preview.Render>
             <Usage />
@@ -32,6 +22,16 @@ export default function ButtonPage(props) {
 
           <Preview.Html label="Source">
             {props.code.react.sourceHighlighted}
+          </Preview.Html>
+        </Preview.Variant>
+
+        <Preview.Variant name="html">
+          <Preview.Render>
+            <Preview.Html>{props.code.html.source}</Preview.Html>
+          </Preview.Render>
+
+          <Preview.Html label="Source">
+            {props.code.html.sourceHighlighted}
           </Preview.Html>
         </Preview.Variant>
       </Preview>

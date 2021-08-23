@@ -1,11 +1,9 @@
-import InputText from "./index"
+import Textarea from "./index"
 
-export default function () {
+export default function Usage() {
   return (
     <>
-      <InputText size="lg" className="mb_md" placeholder="Large" />
-      <InputText size="md" className="mb_md" placeholder="Medium" />
-      <InputText size="sm" className="mb_md" placeholder="Small" />
+      <Textarea labelText="Textarea label" placeholder="Placeholder" />
     </>
   )
 }

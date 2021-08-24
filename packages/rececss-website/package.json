@@ -11,13 +11,13 @@
     "export": "next export -o ./dist"
   },
   "dependencies": {
-    "rececss": "^0.7.0",
     "classnames": "^2.3.1",
     "gray-matter": "^4.0.3",
     "hast-util-select": "^4.0.2",
-    "next": "^10.2.3",
+    "next": "^11.1.0",
     "react": "17.0.2",
     "react-dom": "17.0.2",
+    "rececss": "^0.7.0",
     "rehype-highlight": "^4.1.0",
     "rehype-stringify": "^8.0.0",
     "remark": "^13.0.0",

@@ -4,6 +4,7 @@ module.exports = {
 
   experimental: {
     externalDir: true,
+    esmExternals: true,
   },
 
   async redirects() {

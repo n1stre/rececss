@@ -1,15 +1,17 @@
 {
-  "name": "website",
+  "name": "rececss-website",
   "version": "0.1.0",
   "private": true,
   "scripts": {
     "dev": "next dev",
     "build": "next build",
+    "build:styles": "rececss",
     "start": "next start",
     "preexport": "next build",
-    "export": "next export -o ../dist_website"
+    "export": "next export -o ./dist"
   },
   "dependencies": {
+    "rececss": "^0.7.0",
     "classnames": "^2.3.1",
     "gray-matter": "^4.0.3",
     "hast-util-select": "^4.0.2",

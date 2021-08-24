@@ -5,8 +5,11 @@ on:
     branches:
       - master # Set a branch name to trigger deployment
     paths:
-      - "website/**"
-      - "docs/**"
+      - "packages/rececss-website/**"
+      - "packages/rececss-core/docs/**"
+      - "packages/rececss-components-react/**"
+      - "packages/rececss-components-vue/**"
+      - "packages/rececss-components-vanilla/**"
 
 jobs:
   deploy:
@@ -16,9 +19,12 @@ jobs:
       - uses: actions/setup-node@v2
         with:
           node-version: "14"
-
+      - run: npm install -g npm@^7.21.0
+      - run: npm -v
       - run: npm ci
-      - run: cd website && npm ci && npm run export
+      - run: cd ./packages/rececss-website
+      - run: npm i
+      - run: npm run export
 
       - name: Commit docs changes
         uses: EndBug/add-and-commit@v7
@@ -31,4 +37,4 @@ jobs:
         uses: peaceiris/actions-gh-pages@v3
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
-          publish_dir: ./dist_website
+          publish_dir: ./packages/rececss-website/dist

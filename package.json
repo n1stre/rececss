@@ -1,57 +1,19 @@
 {
-  "name": "rececss",
-  "version": "0.7.0",
-  "description": "",
-  "main": "index.js",
-  "bin": "./dist/cli.js",
-  "scripts": {
-    "dev:cli": "ts-node ./src/cli.ts",
-    "dev:website": "cd website && npm run dev",
-    "build": "tsc -p .",
-    "release": "npm run build && np",
-    "test": "jest",
-    "test:watch": "jest --watch",
-    "test:coverage": "jest --coverage",
-    "g:e": "bystro ts__ca_entity ./src/1_entities",
-    "g:u": "bystro ts__ca_usecase ./src/2_usecases"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/re-ce/rececss.git"
-  },
-  "keywords": [
-    "css",
-    "atomic css",
-    "css utilities",
-    "css generator"
+  "name": "rececss-monorepo",
+  "private": true,
+  "workspaces": [
+    "./packages/*"
   ],
-  "author": "Nikita Streletss",
-  "license": "MIT",
-  "bugs": {
-    "url": "https://github.com/re-ce/rececss/issues"
+  "scripts": {
+    "dev": "npm run dev:website",
+    "dev:website": "npm run dev -w rececss-website",
+    "test": "npm run test:core",
+    "test:core": "npm run test -w rececss",
+    "coverage:core": "npm run test:coverage -w rececss",
+    "cleanup": "rimraf ./node_modules ./packages/rececss-core/node_modules",
+    "reinstall": "npm run cleanup && npm i"
   },
-  "homepage": "https://github.com/re-ce/rececss#readme",
   "devDependencies": {
-    "@types/jest": "^26.0.23",
-    "@types/node": "^15.6.1",
-    "@typescript-eslint/eslint-plugin": "^4.25.0",
-    "@typescript-eslint/parser": "^4.25.0",
-    "bystro": "^0.3.3",
-    "eslint": "^7.27.0",
-    "eslint-config-prettier": "^8.3.0",
-    "eslint-plugin-prettier": "^3.4.0",
-    "jest": "^27.0.3",
-    "np": "^7.5.0",
-    "prettier": "^2.3.0",
-    "ts-jest": "^27.0.2",
-    "ts-node": "^10.0.0",
-    "typescript": "^4.3.2"
-  },
-  "publishConfig": {
-    "registry": "https://registry.npmjs.org"
-  },
-  "dependencies": {
-    "colord": "^2.0.1",
-    "purgecss": "^4.0.3"
+    "rimraf": "^3.0.2"
   }
 }

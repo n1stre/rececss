@@ -1,14 +1,14 @@
 {
-  "name": "website",
+  "name": "rececss-website",
   "version": "0.1.0",
   "private": true,
   "scripts": {
     "dev": "next dev",
     "build": "next build",
-    "build:styles": "cd ../rececss-core && npm run dev:cli",
+    "build:styles": "rececss",
     "start": "next start",
     "preexport": "next build",
-    "export": "next export -o ../dist_website"
+    "export": "next export -o ./dist"
   },
   "dependencies": {
     "rececss": "^0.7.0",

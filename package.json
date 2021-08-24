@@ -1,4 +1,11 @@
 {
   "name": "rececss-monorepo",
-  "workspaces": ["./packages/*"]
+  "private": true,
+  "workspaces": ["./packages/*"],
+  "scripts": {
+    "dev": "npm run dev:website",
+    "dev:website": "npm run dev -w rececss-website",
+    "test": "npm run test:core",
+    "test:core": "npm run test -w rececss"
+  }
 }

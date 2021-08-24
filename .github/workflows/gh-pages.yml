@@ -22,9 +22,7 @@ jobs:
       - run: npm install -g npm@^7.21.0
       - run: npm -v
       - run: npm ci
-      - run: cd ./packages/rececss-website
-      - run: npm i
-      - run: npm run export
+      - run: npm run build:website
 
       - name: Commit docs changes
         uses: EndBug/add-and-commit@v7

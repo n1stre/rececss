@@ -31,7 +31,7 @@ jobs:
       - run: npm -v
       - run: npm ci
 
-      - run: npm run build -w rececss
+      - run: npm run build:core
       - run: npm test
 
       - name: Generate coverage report

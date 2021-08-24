@@ -7,6 +7,8 @@
   "scripts": {
     "dev": "npm run dev:website",
     "dev:website": "npm run dev -w rececss-website",
+    "build:core": "npm run build -w rececss",
+    "build:website": "npm run export -w rececss-website",
     "test": "npm run test:core",
     "test:core": "npm run test -w rececss",
     "coverage:core": "npm run test:coverage -w rececss",

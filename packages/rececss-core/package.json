@@ -2,11 +2,12 @@
   "name": "rececss",
   "version": "0.7.0",
   "description": "",
-  "main": "index.js",
+  "main": "./dist/index.js",
   "bin": "./dist/cli.js",
   "scripts": {
     "dev:cli": "ts-node ./src/cli.ts",
     "build": "tsc -p .",
+    "prepare": "npm run build",
     "release": "npm run build && np",
     "test": "jest",
     "test:watch": "jest --watch",

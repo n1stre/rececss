@@ -1,7 +1,7 @@
 import path from "path";
 import fs from "fs";
 import matter from "gray-matter";
-import * as defaults from "../../../src/4_infrastructures/config/Config.defaults";
+import { defaultValues, defaultVariants } from "rececss";
 import { isNumber, insertBetweenSubstrings, toPascalCase } from "../utils";
 import dirtree from "../utils/dirtree";
 import markdownToHtml from "../utils/markdownToHtml";
@@ -11,7 +11,7 @@ import {
 } from "../utils/markdown";
 
 const CWD = process.cwd();
-const DOCS_DIR = path.join(CWD, "../docs");
+const DOCS_DIR = path.join(CWD, "../rececss-core/docs");
 const DOCS_PATH_ANCHOR = path.sep + "docs" + path.sep;
 
 export function getDocsNavigation() {
@@ -102,7 +102,7 @@ function createDataTable(key, rulename) {
 
 function createValuesTable(rulename) {
   const heading = "#### Default values";
-  const table = createMarkdownTable(defaults.values[rulename], [
+  const table = createMarkdownTable(defaultValues[rulename], [
     { head: "Classname key", calcValue: (key) => key },
     { head: "CSS value", calcValue: (_, v) => createMarkdownCodeblock(v) },
   ]);
@@ -113,7 +113,7 @@ function createValuesTable(rulename) {
 
 function createVariantsTable(rulename) {
   const heading = "#### Default variants";
-  const table = createMarkdownTable(defaults.variants[rulename], [
+  const table = createMarkdownTable(defaultVariants[rulename], [
     { head: "Classname key", calcValue: (key) => key },
     { head: "Variant selector", calcValue: (_, v) => v },
   ]);

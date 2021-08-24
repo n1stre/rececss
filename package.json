@@ -1,11 +1,19 @@
 {
   "name": "rececss-monorepo",
   "private": true,
-  "workspaces": ["./packages/*"],
+  "workspaces": [
+    "./packages/*"
+  ],
   "scripts": {
     "dev": "npm run dev:website",
     "dev:website": "npm run dev -w rececss-website",
     "test": "npm run test:core",
-    "test:core": "npm run test -w rececss"
+    "test:core": "npm run test -w rececss",
+    "coverage:core": "npm run test:coverage -w rececss",
+    "cleanup": "rimraf ./node_modules ./packages/rececss-core/node_modules",
+    "reinstall": "npm run cleanup && npm i"
+  },
+  "devDependencies": {
+    "rimraf": "^3.0.2"
   }
 }

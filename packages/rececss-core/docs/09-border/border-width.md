@@ -2,12 +2,19 @@
 
 
 <!-- <values.borderWidth> -->
-### Default values
+#### Default values
+|Classname key|CSS value       |
+|-------------|----------------|
+|$px          |```[[0,10,1]]```|
+|n            |```0```         |
 
 <!-- </values.borderWidth> -->
 
 <!-- <variants.borderWidth> -->
-### Default variants
+#### Default variants
+|Classname key|Variant selector|
+|-------------|----------------|
+|!            |&&              |
 
 <!-- </variants.borderWidth> -->
 

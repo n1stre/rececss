@@ -2,18 +2,17 @@
 
 
 <!-- <values.whiteSpace> -->
-### Default values
-|Classname key|CSS value|
-|-------------|---------|
-|n            |normal   |
-|p            |pre      |
-|nw           |no-wrap  |
-|pw           |pre-wrap |
-|pl           |pre-line |
+#### Default values
+|Classname key|CSS value     |
+|-------------|--------------|
+|n            |```normal```  |
+|p            |```pre```     |
+|nw           |```no-wrap``` |
+|pw           |```pre-wrap```|
+|pl           |```pre-line```|
 
 <!-- </values.whiteSpace> -->
 
 <!-- <variants.whiteSpace> -->
-### Default variants
 
 <!-- </variants.whiteSpace> -->

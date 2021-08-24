@@ -2,13 +2,12 @@
 
 
 <!-- <values.background> -->
-### Default values
+#### Default values
 |
 |
 
 <!-- </values.background> -->
 
 <!-- <variants.background> -->
-### Default variants
 
 <!-- </variants.background> -->

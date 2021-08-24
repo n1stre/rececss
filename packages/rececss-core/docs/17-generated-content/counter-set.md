@@ -1,14 +1,13 @@
 ## Counter set
 
 <!-- <values.counterSet> -->
-### Default values
-|Classname key|CSS value|
-|-------------|---------|
-|n            |none     |
+#### Default values
+|Classname key|CSS value |
+|-------------|----------|
+|n            |```none```|
 
 <!-- </values.counterSet> -->
 
 <!-- <variants.counterSet> -->
-### Default variants
 
 <!-- </variants.counterSet> -->

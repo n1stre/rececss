@@ -7,8 +7,11 @@
   "scripts": {
     "dev": "npm run dev:website",
     "dev:website": "npm run dev -w rececss-website",
+    "dev:website-styles": "nodemon --watch ./packages/rececss-website/src -x \"npm run build:website-styles\"",
+    "build:receapp": "npm run build:core && npm run build:website-styles",
     "build:core": "npm run build -w rececss",
     "build:website": "npm run export -w rececss-website",
+    "build:website-styles": "npm run build:styles -w rececss-website",
     "test": "npm run test:core",
     "test:core": "npm run test -w rececss",
     "coverage:core": "npm run test:coverage -w rececss",
@@ -16,6 +19,7 @@
     "reinstall": "npm run cleanup && npm i"
   },
   "devDependencies": {
+    "nodemon": "^2.0.12",
     "rimraf": "^3.0.2"
   }
 }

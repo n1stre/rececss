@@ -623,6 +623,11 @@ export const values: RawValues = {
     ee: "extra-expanded",
     ue: "ultra-expanded",
   },
+  gridGap: {
+    n: "0",
+    0: "0",
+    ...Sizing.EightPx.pxToRem(),
+  },
   gridAutoColumns: {
     mic: "min-content",
     mac: "max-content",
@@ -639,6 +644,17 @@ export const values: RawValues = {
     mic: "min-content",
     mac: "max-content",
     a: "auto",
+  },
+  gridTemplateColumns: {
+    n: "none",
+    mica: "min-content auto"
+  },
+  gridTemplateRows: {
+    n: "none",
+    mica: "min-content auto"
+  },
+  gridTemplateAreas: {
+    n: "none",
   },
   hyphens: {
     n: "none",

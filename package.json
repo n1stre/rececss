@@ -1,6 +1,9 @@
 {
   "name": "rececss-monorepo",
   "private": true,
+  "workspaces": [
+    "./packages/*"
+  ],
   "scripts": {
     "dev": "npm run dev:website",
     "dev:website": "npm run dev -w rececss-website",

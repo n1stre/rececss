@@ -7,29 +7,25 @@ import {
 import { Sizing, Pallete } from "../utils";
 
 const VARIANTS = {
-  hover: "&:hover",
-  hoverTarget: ".\\@:hover > &",
-  focus: "&:focus",
-  focusTarget: ".\\@:focus > &",
-  jsActive: "&.js-active",
-  jsActiveTarget: ".\\@.js-active > &",
-  important: "&&",
+  hover: { h: "&:hover" },
+  hoverTarget: { "@h": ".\\@:hover &:not(.\\@:hover .\\@ &)" },
+  focus: { f: "&:focus" },
+  focusTarget: { "@f": ".\\@:focus &" },
+  js: { js: "&.js" },
+  jsTarget: { "@js": ".\\@.js &:not(.\\@.js .\\@ &)" },
+  important: { "!": "&&" },
 };
 
 export const variants: Variants = {
-  border: { h: VARIANTS.hover, f: VARIANTS.focus },
-  boxShadow: { h: VARIANTS.hover, f: VARIANTS.focus },
-  borderWidth: { "!": VARIANTS.important },
-  color: { h: VARIANTS.hover, f: VARIANTS.focus },
-  backgroundColor: { h: VARIANTS.hover, f: VARIANTS.focus },
-  display: { ht: VARIANTS.hoverTarget, jst: VARIANTS.jsActiveTarget },
-  opacity: { h: VARIANTS.hover, ht: VARIANTS.hoverTarget },
-  textDecoration: { h: VARIANTS.hover },
-  transform: {
-    h: VARIANTS.hover,
-    ht: VARIANTS.hoverTarget,
-    jst: VARIANTS.jsActiveTarget,
-  },
+  border: {...VARIANTS.hover, ...VARIANTS.focus },
+  boxShadow: { ...VARIANTS.hover, ...VARIANTS.focus },
+  borderWidth: { ...VARIANTS.important },
+  color: { ...VARIANTS.hover, ...VARIANTS.focus },
+  backgroundColor: { ...VARIANTS.hover, ...VARIANTS.focus },
+  display: { ...VARIANTS.hoverTarget, ...VARIANTS.jsTarget },
+  opacity: { ...VARIANTS.hover, ...VARIANTS.hoverTarget, ...VARIANTS.jsTarget },
+  textDecoration: { ...VARIANTS.hover },
+  transform: { ...VARIANTS.hover, ...VARIANTS.hoverTarget, ...VARIANTS.jsTarget },
 };
 
 export const values: RawValues = {
@@ -65,13 +61,17 @@ export const values: RawValues = {
     a: "auto",
     n: "0",
     $px: [
-      [0, 100, 5],
+      [-10, 10, 1],
+      [-100, 100, 5],
       [100, 1000, 50],
     ],
   },
   inset: {
     ...Sizing.EightPx.pxToRem(),
-    $px: [[0, 100, 5]],
+    $px: [
+      [-10, 10, 1],
+      [-100, 100, 5]
+    ],
   },
   flex: {
     n: "none",
@@ -956,6 +956,9 @@ export const values: RawValues = {
     eio: "ease-in-out",
     ss: "step-start",
     se: "step-end",
+  },
+  userSelect: {
+    n: "none"
   },
   visibility: {
     v: "visible",

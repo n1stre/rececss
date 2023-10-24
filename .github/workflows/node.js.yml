@@ -29,7 +29,7 @@ jobs:
           node-version: ${{ matrix.node-version }}
       - run: node -v
       - run: npm -v
-      - run: npm ci
+      - run: cd ./packages/rececss-core && npm ci
 
       - run: npm run build:core
       - run: npm test

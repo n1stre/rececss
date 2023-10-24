@@ -7,6 +7,7 @@ on:
   push:
     branches: [master]
     paths:
+      - ".github/workflows/node.js.yml"
       - "packages/rececss-core/**"
   pull_request:
     branches: [master]

@@ -1,20 +1,17 @@
 {
   "name": "rececss-monorepo",
   "private": true,
-  "workspaces": [
-    "./packages/*"
-  ],
   "scripts": {
     "dev": "npm run dev:website",
-    "dev:website": "npm run dev -w rececss-website",
+    "dev:website": "cd ./packages/rececss-website && npm run dev",
     "dev:website-styles": "nodemon --watch ./packages/rececss-website/src -x \"npm run build:website-styles\"",
     "build:receapp": "npm run build:core && npm run build:website-styles",
-    "build:core": "npm run build -w rececss",
-    "build:website": "npm run export -w rececss-website",
-    "build:website-styles": "npm run build:styles -w rececss-website",
+    "build:core": "cd ./packages/rececss-core && npm run build",
+    "build:website": "cd ./packages/rececss-website && npm run export",
+    "build:website-styles": "cd ./packages/rececss-website && npm run build:styles",
     "test": "npm run test:core",
-    "test:core": "npm run test -w rececss",
-    "coverage:core": "npm run test:coverage -w rececss",
+    "test:core": "cd ./packages/rececss-core && npm run test",
+    "coverage:core": "cd ./packages/rececss-core && npm run test:coverage",
     "cleanup": "rimraf ./node_modules ./packages/rececss-core/node_modules",
     "reinstall": "npm run cleanup && npm i"
   },

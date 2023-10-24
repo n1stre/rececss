@@ -1,10 +1,9 @@
 ## Justify content
 
-<!-- <values.jusifyContent> -->
+<!-- <values.justifyContent> -->
 
-<!-- </values.jusifyContent> -->
+<!-- </values.justifyContent> -->
 
+<!-- <variants.justifyContent> -->
 
-<!-- <variants.jusifyContent> -->
-
-<!-- </variants.jusifyContent> -->
+<!-- </variants.justifyContent> -->

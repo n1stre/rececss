@@ -4,6 +4,9 @@
   "description": "",
   "main": "./dist/index.js",
   "bin": "./dist/cli.js",
+  "engines": {
+    "node": ">=18"
+  },
   "scripts": {
     "dev:cli": "ts-node ./src/cli.ts",
     "build": "tsc -p .",

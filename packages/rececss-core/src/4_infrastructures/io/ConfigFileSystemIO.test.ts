@@ -1,18 +1,18 @@
 import path from "path";
 import IO from "./ConfigFileSystemIO";
 
-const fakeFS = { writeFiles: jest.fn(() => Promise.resolve()) };
+const writeFiles = jest.fn(() => Promise.resolve());
 const realConfigPath = "./tests/__fixtures__/rececss.config.js";
 const fakeConfigPath = "fake/path";
 
 describe("ConfigFileSystemIO", () => {
   it("should throw an exception if config is missing", () => {
-    const init = () => IO.create(fakeConfigPath, fakeFS);
+    const init = () => IO.create(fakeConfigPath, writeFiles);
     expect(init).toThrow();
   });
 
-  it("should return assets generation input", () => {
-    const io = IO.create(realConfigPath, fakeFS);
+  it("should return assets generation input", async () => {
+    const io = await IO.create(realConfigPath, writeFiles);
     const input = io.getAssetsGenerationInput();
     expect.assertions(3);
     expect(input.rulesets.length).not.toBe(0);
@@ -23,8 +23,8 @@ describe("ConfigFileSystemIO", () => {
     });
   });
 
-  it("should return assets generation props", () => {
-    const io = IO.create(realConfigPath, fakeFS);
+  it("should return assets generation props", async () => {
+    const io = await IO.create(realConfigPath, writeFiles);
     const input = io.getAssetsGenerationProps();
     expect(input).toEqual({
       stylesheetProps: { filename: "rececss", extension: "css" },
@@ -32,16 +32,16 @@ describe("ConfigFileSystemIO", () => {
     });
   });
 
-  it("should return css processor input", () => {
-    const io = IO.create(realConfigPath, fakeFS);
+  it("should return css processor input", async () => {
+    const io = await IO.create(realConfigPath, writeFiles);
     const input = io.getCSSProccesorInput();
     expect(input).toEqual({ content: ["./website/pages/**/*.js"] });
   });
 
-  it("should output assets by calling fs.writeFiles with proper filepaths", () => {
-    const io = IO.create(realConfigPath, fakeFS);
+  it("should output assets by calling fs.writeFiles with proper filepaths", async () => {
+    const io = await IO.create(realConfigPath, writeFiles);
     io.outputAssets([{ name: "some", contents: "contents" }]);
-    expect(fakeFS.writeFiles).toHaveBeenCalledWith([
+    expect(writeFiles).toHaveBeenCalledWith([
       { path: path.join("./website/styles", "some"), contents: "contents" },
     ]);
   });

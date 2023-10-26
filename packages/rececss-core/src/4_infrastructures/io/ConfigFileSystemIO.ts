@@ -1,25 +1,28 @@
 import path from "path";
 import { IInputOutput } from "../../3_adapters/interfaces";
 import RulesetsFactory from "../../3_adapters/RulesetsFactory";
-import { IConfig, IFileSystem } from "../interfaces";
+import { IConfig } from "../interfaces";
 import Config from "../config";
 
-export default class ConfigFileSystemIO implements IInputOutput {
-  private config: IConfig.Instance;
+type Config = IConfig.Instance;
+type File = { path: string; contents: string };
+type WriteFilesFn = (files: File[]) => Promise<void>;
 
-  private constructor(configFileName: string, private fs: IFileSystem) {
+export default class ConfigFileSystemIO implements IInputOutput {
+  private constructor(
+    private config: Config,
+    private writeFiles: WriteFilesFn,
+  ) {}
+
+  static async create(configPath: string, writeFiles: WriteFilesFn) {
     try {
-      const configPath = path.resolve(process.cwd(), configFileName);
-      const config = Config.create(require(configPath));
-      this.config = config;
+      const configDto = (await import(configPath)).default;
+      const config = Config.create(configDto);
+      return new ConfigFileSystemIO(config, writeFiles);
     } catch (err) {
       if (err.code === "MODULE_NOT_FOUND") throw Error("Config not found");
       else throw err;
     }
-  }
-
-  static create(configFileName: string, fs: IFileSystem) {
-    return new ConfigFileSystemIO(configFileName, fs);
   }
 
   getAssetsGenerationInput() {
@@ -75,6 +78,6 @@ export default class ConfigFileSystemIO implements IInputOutput {
       path: path.join(this.config.getOutputPath(), asset.name),
       contents: asset.contents,
     }));
-    return this.fs.writeFiles(files);
+    return this.writeFiles(files);
   }
 }

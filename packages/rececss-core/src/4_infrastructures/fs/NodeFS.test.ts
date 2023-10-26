@@ -1,7 +1,7 @@
 jest.mock("fs");
 
 import mockedFS from "fs";
-import NodeFS from "./NodeFS";
+import * as NodeFS from "./NodeFS";
 
 describe("NodeFileSystem", () => {
   beforeEach(() => {
@@ -15,10 +15,9 @@ describe("NodeFileSystem", () => {
   });
 
   test("writing files into non existing folder", async () => {
-    const fs = NodeFS.create();
     const file = { path: "some/unknown/file.txt", contents: "contents" };
 
-    await fs.writeFiles([file]);
+    await NodeFS.writeFiles([file]);
 
     expect(mockedFS.promises.stat).toBeCalledWith("some/unknown");
     expect(mockedFS.promises.mkdir).toBeCalledWith("some/unknown", {
@@ -31,10 +30,9 @@ describe("NodeFileSystem", () => {
   });
 
   test("writing files into existing folder", async () => {
-    const fs = NodeFS.create();
     const file = { path: "some/path/file.txt", contents: "contents" };
 
-    await fs.writeFiles([file]);
+    await NodeFS.writeFiles([file]);
 
     expect(mockedFS.promises.stat).toBeCalledWith("some/path");
     expect(mockedFS.promises.mkdir).not.toBeCalled();
@@ -45,15 +43,11 @@ describe("NodeFileSystem", () => {
   });
 
   test("writing files into invalid path with error", async () => {
-    const fs = NodeFS.create();
-    const file = {
-      path: "invalid/path/.txt",
-      contents: "contents",
-    };
-
+    const file = { path: "invalid/path/.txt", contents: "contents" };
     let error;
+
     try {
-      await fs.writeFiles([file]);
+      await NodeFS.writeFiles([file]);
     } catch (catched) {
       error = catched;
     }

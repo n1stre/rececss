@@ -1,2 +1,2 @@
-import FileSystem from "./NodeFS";
+import * as FileSystem from "./NodeFS";
 export default FileSystem;

@@ -10,8 +10,8 @@
     "build:website": "cd ./packages/rececss-website && npm run export",
     "build:website-styles": "cd ./packages/rececss-website && npm run build:styles",
     "test": "npm run test:core",
-    "test:core": "cd ./packages/rececss-core && npm run test",
-    "coverage:core": "cd ./packages/rececss-core && npm run test:coverage",
+    "test:core": "cd ./packages/rececss-core && npm run test:ci",
+    "coverage:core": "cd ./packages/rececss-core && npm run test:coverage:ci",
     "cleanup": "rimraf ./node_modules ./packages/rececss-core/node_modules",
     "reinstall": "npm run cleanup && npm i"
   },

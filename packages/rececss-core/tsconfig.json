@@ -1,9 +1,9 @@
 {
   "compilerOptions": {
-    "target": "ES2019",
+    "target": "ES6",
     // "lib": ["ES2019"],
     "module": "CommonJS",
-    "moduleResolution": "node",
+    "moduleResolution": "Node16",
     "skipLibCheck": true,
     "strictNullChecks": true,
     "noImplicitAny": true,
@@ -13,7 +13,7 @@
     "experimentalDecorators": true,
     "allowSyntheticDefaultImports": true,
     "outDir": "dist",
-    "baseUrl": ".",
+    "baseUrl": "."
   },
   "include": ["src"],
   "exclude": ["node_modules", "**/*.spec.ts", "**/*.test.ts"]

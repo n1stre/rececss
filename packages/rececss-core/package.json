@@ -12,9 +12,10 @@
     "build": "tsc -p .",
     "prepare": "npm run build",
     "release": "npm run build && np",
-    "test": "jest",
-    "test:watch": "jest --watch",
-    "test:coverage": "jest --coverage",
+    "test": "NODE_OPTIONS=--experimental-vm-modules jest --no-cache",
+    "test:watch": "NODE_OPTIONS=--experimental-vm-modules jest --no-cache --watch",
+    "test:coverage": "NODE_OPTIONS=--experimental-vm-modules jest --no-cache --coverage",
+    "test:clear-cache": "jest --clearCache",
     "g:e": "bystro ts__ca_entity ./src/1_entities",
     "g:u": "bystro ts__ca_usecase ./src/2_usecases"
   },

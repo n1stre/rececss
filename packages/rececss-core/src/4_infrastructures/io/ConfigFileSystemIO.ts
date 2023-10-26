@@ -16,7 +16,8 @@ export default class ConfigFileSystemIO implements IInputOutput {
 
   static async create(configPath: string, writeFiles: WriteFilesFn) {
     try {
-      const configDto = (await import(configPath)).default;
+      const relativePath = path.resolve(process.cwd(), configPath);
+      const configDto = (await import(relativePath)).default;
       const config = Config.create(configDto);
       return new ConfigFileSystemIO(config, writeFiles);
     } catch (err) {

@@ -1,14 +1,14 @@
 import path from "path";
 import IO from "./ConfigFileSystemIO";
-
 const writeFiles = jest.fn(() => Promise.resolve());
 const realConfigPath = "./tests/__fixtures__/rececss.config.js";
 const fakeConfigPath = "fake/path";
 
 describe("ConfigFileSystemIO", () => {
-  it("should throw an exception if config is missing", () => {
-    const init = () => IO.create(fakeConfigPath, writeFiles);
-    expect(init).toThrow();
+  it("should throw an exception if config is missing", async () => {
+    await expect(IO.create(fakeConfigPath, writeFiles)).rejects.toThrow(
+      "Config not found",
+    );
   });
 
   it("should return assets generation input", async () => {

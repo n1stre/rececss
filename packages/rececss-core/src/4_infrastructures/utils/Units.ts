@@ -27,7 +27,7 @@ export default class Units {
     let key = String(targetValue);
     let value = String(targetValue);
     if (value === "0") return { key: "0", value: "0" };
-    if (unit && unit != "px") key += unit;
+    if (unit) key += unit;
     if (unit) value += unit;
     return { key, value };
   }

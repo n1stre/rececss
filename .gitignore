@@ -3,6 +3,7 @@ dist
 dist_website
 out
 build
+tmp
 node_modules
 coverage
 

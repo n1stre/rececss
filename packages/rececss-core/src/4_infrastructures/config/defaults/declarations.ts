@@ -1,4 +1,4 @@
-import { DeclarationsMap } from "./RulesetsFactory.interface";
+import { DeclarationsMap } from "src/2_usecases/BuildRulesets/BuildRulesets.interface";
 
 const RulesetsDeclarationsMap: DeclarationsMap = {
   alignContent: "align-content: $0;",

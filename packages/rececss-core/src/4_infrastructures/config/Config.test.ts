@@ -1,22 +1,38 @@
 import Config from "./Config";
+import associations from "./defaults/associations";
 import { CreatorFn, RawValues, Variants } from "./Config.interfaces";
 
 const dto = require("../../../tests/__fixtures__/rececss.config");
-const configFactory = Config.createFactory({
-  defaultValues: {
-    all: { u: "unset", ini: "initial" },
-    width: { full: "100%" },
-    outline: { sm: "1px solid" },
+
+const basicValues = {
+  all: { u: "unset", ini: "initial" },
+  width: { full: "100%" },
+  outline: { sm: "1px solid" },
+};
+
+const basicVariants = {
+  all: { h: "&:hover", js: "&.js-active" },
+  outline: { a: "&:active" },
+};
+
+const configBasic = Config.createFactory({
+  defaults: {
+    values: basicValues,
+    variants: basicVariants,
   },
-  defaultVariants: {
-    all: { h: "&:hover", js: "&.js-active" },
-    outline: { a: "&:active" },
+});
+
+const configWithAssociations = Config.createFactory({
+  defaults: {
+    values: basicValues,
+    variants: basicVariants,
+    associations,
   },
 });
 
 describe("Config", () => {
   test("output", () => {
-    const config = configFactory.create(dto);
+    const config = configBasic.create(dto);
     expect.assertions(4);
     expect(config.getOutputPath()).toBe("./website/styles");
     expect(config.getOutputFilename()).toBe("rececss");
@@ -25,7 +41,7 @@ describe("Config", () => {
   });
 
   test("undefined purge settings", () => {
-    const config = configFactory.create({
+    const config = configBasic.create({
       output: { path: "" },
       values: {},
     });
@@ -36,7 +52,7 @@ describe("Config", () => {
   });
 
   test("defined purge settings", () => {
-    const config = configFactory.create({
+    const config = configBasic.create({
       output: {
         path: "",
         purge: {
@@ -54,7 +70,7 @@ describe("Config", () => {
   });
 
   test("media getter", () => {
-    const config = configFactory.create(dto);
+    const config = configBasic.create(dto);
     expect(config.getMedia()).toEqual({
       md: "only screen and (min-width: 768px)",
       lg: "only screen and (min-width: 1024px)",
@@ -62,34 +78,34 @@ describe("Config", () => {
   });
 
   test("separator getters", () => {
-    const config = configFactory.create(dto);
+    const config = configBasic.create(dto);
     expect.assertions(2);
     expect(config.getMediaSeparator()).toBe(":");
     expect(config.getVariantSeparator()).toBe(":");
   });
 
   test("classnames getter", () => {
-    const classesConfig = configFactory.create({
+    const classesConfig = configBasic.create({
       output: { path: "" },
       values: {},
-      classes: {
+      classnames: {
         width: "wid_$0",
       },
     });
 
-    expect(classesConfig.getClassnames()).toEqual({
+    expect(classesConfig.getRulesetsClassnames()).toEqual({
       width: "wid_$0",
     });
   });
 
   test("getters fallbacks", () => {
-    const config = configFactory.create({
+    const config = configBasic.create({
       output: { path: "" },
       values: {},
     });
     expect.assertions(4);
     expect(config.getMedia()).toMatchObject({});
-    expect(config.getClassnames()).toMatchObject({});
+    expect(config.getRulesetsClassnames()).toMatchObject({});
     expect(config.getMediaSeparator()).toBe(undefined);
     expect(config.getVariantSeparator()).toBe(undefined);
   });
@@ -100,7 +116,7 @@ describe("Config", () => {
       color: { hp: "*:hover &" },
     };
 
-    const config = configFactory.create({ ...dto, variants });
+    const config = configBasic.create({ ...dto, variants });
     const common = { h: "&:hover", js: "&.js-active", f: "&:focus" };
 
     expect(config.getRulesetsVariants()).toEqual({
@@ -118,7 +134,7 @@ describe("Config", () => {
       color: { red: "red" },
     };
 
-    const config = configFactory.create({ ...dto, values });
+    const config = configBasic.create({ ...dto, values });
     const commonValues = { u: "unset", ini: "initial", inh: "inherit" };
 
     expect(config.getRulesetsValues()).toEqual({
@@ -137,7 +153,7 @@ describe("Config", () => {
       };
     };
 
-    const config = configFactory.create({ ...dto, variants });
+    const config = configBasic.create({ ...dto, variants });
     const common = { h: "&:hover", js: "&.js-active", f: "&:focus" };
 
     expect(config.getRulesetsVariants()).toEqual({
@@ -155,7 +171,7 @@ describe("Config", () => {
       };
     };
 
-    const config = configFactory.create({ ...dto, values });
+    const config = configBasic.create({ ...dto, values });
     const commonValues = { u: "unset", ini: "initial", inh: "inherit" };
 
     expect(config.getRulesetsValues()).toEqual({
@@ -166,7 +182,7 @@ describe("Config", () => {
   });
 
   test("variants without defaults", () => {
-    const configFactory = Config.createFactory({ defaultVariants: {} });
+    const configFactory = Config.createFactory({ defaults: {} });
     const config = configFactory.create({
       output: { path: "" },
       values: {},
@@ -180,101 +196,105 @@ describe("Config", () => {
     });
   });
 
-  // test("rule associations values", () => {
-  //   const rules: GetRules = ({ defaults }) => ({
-  //     all: defaults.all,
-  //     border: { sm: "1px solid" },
-  //     borderColor: { dark: "#000" },
-  //     borderRadius: { sm: "2px" },
-  //     borderStyle: { s: "solid" },
-  //     borderWidth: { lg: "8px" },
-  //     inset: { s: "10px", m: "10px 20px 15px" },
-  //     margin: { s: "10px", m: "10px 20px 15px" },
-  //     overflow: { h: "hidden" },
-  //     overscrollBehavior: { c: "contain" },
-  //     padding: { s: "10px", m: "10px 20px 15px" },
-  //     transformRotate: { s: "30deg" },
-  //     transformScale: { s: "1.2", m: "1.1, 1.2" },
-  //     transformSkew: { s: "10px", m: "10px, 20px" },
-  //     transformTranslate: { s: "10px", m: "12px, 50%" },
-  //   });
+  test("rule associations values", () => {
+    const config = configWithAssociations.create({
+      ...dto,
+      values: ({ defaults }) => {
+        return {
+          all: defaults.all,
+          border: { sm: "1px solid" },
+          borderColor: { dark: "#000" },
+          borderRadius: { sm: "2px" },
+          borderStyle: { s: "solid" },
+          borderWidth: { lg: "8px" },
+          inset: { s: "10px", m: "10px 20px 15px" },
+          margin: { s: "10px", m: "10px 20px 15px" },
+          overflow: { h: "hidden" },
+          overscrollBehavior: { c: "contain" },
+          padding: { s: "10px", m: "10px 20px 15px" },
+          transformRotate: { s: "30deg" },
+          transformScale: { s: "1.2", m: "1.1, 1.2" },
+          transformSkew: { s: "10px", m: "10px, 20px" },
+          transformTranslate: { s: "10px", m: "12px, 50%" },
+        };
+      },
+    });
 
-  //   const config = configFactory.create({ ...dto, rules });
-  //   const common = { u: "unset", ini: "initial" };
+    const common = { u: "unset", ini: "initial" };
 
-  //   expect(config.getRulesetsValues()).toEqual({
-  //     all: common,
-  //     border: { sm: "1px solid", ...common },
-  //     borderTop: { sm: "1px solid", ...common },
-  //     borderBottom: { sm: "1px solid", ...common },
-  //     borderLeft: { sm: "1px solid", ...common },
-  //     borderRight: { sm: "1px solid", ...common },
-  //     borderColor: { dark: "#000", ...common },
-  //     borderTopColor: { dark: "#000", ...common },
-  //     borderBottomColor: { dark: "#000", ...common },
-  //     borderLeftColor: { dark: "#000", ...common },
-  //     borderRightColor: { dark: "#000", ...common },
-  //     borderRadius: { sm: "2px", ...common },
-  //     borderTopLeftRadius: { sm: "2px", ...common },
-  //     borderTopRightRadius: { sm: "2px", ...common },
-  //     borderBottomLeftRadius: { sm: "2px", ...common },
-  //     borderBottomRightRadius: { sm: "2px", ...common },
-  //     borderStyle: { s: "solid", ...common },
-  //     borderTopStyle: { s: "solid", ...common },
-  //     borderBottomStyle: { s: "solid", ...common },
-  //     borderLeftStyle: { s: "solid", ...common },
-  //     borderRightStyle: { s: "solid", ...common },
-  //     borderWidth: { lg: "8px", ...common },
-  //     borderTopWidth: { lg: "8px", ...common },
-  //     borderBottomWidth: { lg: "8px", ...common },
-  //     borderLeftWidth: { lg: "8px", ...common },
-  //     borderRightWidth: { lg: "8px", ...common },
-  //     inset: { s: "10px", m: "10px 20px 15px", ...common },
-  //     top: { s: "10px", ...common },
-  //     bottom: { s: "10px", ...common },
-  //     left: { s: "10px", ...common },
-  //     right: { s: "10px", ...common },
-  //     margin: { s: "10px", m: "10px 20px 15px", ...common },
-  //     marginTop: { s: "10px", ...common },
-  //     marginBottom: { s: "10px", ...common },
-  //     marginVertical: { s: "10px", ...common },
-  //     marginLeft: { s: "10px", ...common },
-  //     marginRight: { s: "10px", ...common },
-  //     marginHorizontal: { s: "10px", ...common },
-  //     overflow: { h: "hidden", ...common },
-  //     overflowX: { h: "hidden", ...common },
-  //     overflowY: { h: "hidden", ...common },
-  //     overflowInline: { h: "hidden", ...common },
-  //     overflowBlock: { h: "hidden", ...common },
-  //     overscrollBehavior: { c: "contain", ...common },
-  //     overscrollBehaviorInline: { c: "contain", ...common },
-  //     overscrollBehaviorBlock: { c: "contain", ...common },
-  //     overscrollBehaviorX: { c: "contain", ...common },
-  //     overscrollBehaviorY: { c: "contain", ...common },
-  //     padding: { s: "10px", m: "10px 20px 15px", ...common },
-  //     paddingTop: { s: "10px", ...common },
-  //     paddingBottom: { s: "10px", ...common },
-  //     paddingVertical: { s: "10px", ...common },
-  //     paddingLeft: { s: "10px", ...common },
-  //     paddingRight: { s: "10px", ...common },
-  //     paddingHorizontal: { s: "10px", ...common },
-  //     transformRotate: { s: "30deg", ...common },
-  //     transformRotateX: { s: "30deg", ...common },
-  //     transformRotateY: { s: "30deg", ...common },
-  //     transformRotateZ: { s: "30deg", ...common },
-  //     transformScale: { s: "1.2", m: "1.1, 1.2", ...common },
-  //     transformScaleX: { s: "1.2", ...common },
-  //     transformScaleY: { s: "1.2", ...common },
-  //     transformScaleZ: { s: "1.2", ...common },
-  //     transformSkew: { s: "10px", m: "10px, 20px", ...common },
-  //     transformSkewX: { s: "10px", ...common },
-  //     transformSkewY: { s: "10px", ...common },
-  //     transformTranslate: { s: "10px", m: "12px, 50%", ...common },
-  //     transformTranslateX: { s: "10px", ...common },
-  //     transformTranslateY: { s: "10px", ...common },
-  //     transformTranslateZ: { s: "10px", ...common },
-  //   });
-  // });
+    expect(config.getRulesetsValues()).toEqual({
+      all: common,
+      border: { sm: "1px solid", ...common },
+      borderTop: { sm: "1px solid", ...common },
+      borderBottom: { sm: "1px solid", ...common },
+      borderLeft: { sm: "1px solid", ...common },
+      borderRight: { sm: "1px solid", ...common },
+      borderColor: { dark: "#000", ...common },
+      borderTopColor: { dark: "#000", ...common },
+      borderBottomColor: { dark: "#000", ...common },
+      borderLeftColor: { dark: "#000", ...common },
+      borderRightColor: { dark: "#000", ...common },
+      borderRadius: { sm: "2px", ...common },
+      borderTopLeftRadius: { sm: "2px", ...common },
+      borderTopRightRadius: { sm: "2px", ...common },
+      borderBottomLeftRadius: { sm: "2px", ...common },
+      borderBottomRightRadius: { sm: "2px", ...common },
+      borderStyle: { s: "solid", ...common },
+      borderTopStyle: { s: "solid", ...common },
+      borderBottomStyle: { s: "solid", ...common },
+      borderLeftStyle: { s: "solid", ...common },
+      borderRightStyle: { s: "solid", ...common },
+      borderWidth: { lg: "8px", ...common },
+      borderTopWidth: { lg: "8px", ...common },
+      borderBottomWidth: { lg: "8px", ...common },
+      borderLeftWidth: { lg: "8px", ...common },
+      borderRightWidth: { lg: "8px", ...common },
+      inset: { s: "10px", m: "10px 20px 15px", ...common },
+      top: { s: "10px", ...common },
+      bottom: { s: "10px", ...common },
+      left: { s: "10px", ...common },
+      right: { s: "10px", ...common },
+      margin: { s: "10px", m: "10px 20px 15px", ...common },
+      marginTop: { s: "10px", ...common },
+      marginBottom: { s: "10px", ...common },
+      marginVertical: { s: "10px", ...common },
+      marginLeft: { s: "10px", ...common },
+      marginRight: { s: "10px", ...common },
+      marginHorizontal: { s: "10px", ...common },
+      overflow: { h: "hidden", ...common },
+      overflowX: { h: "hidden", ...common },
+      overflowY: { h: "hidden", ...common },
+      overflowInline: { h: "hidden", ...common },
+      overflowBlock: { h: "hidden", ...common },
+      overscrollBehavior: { c: "contain", ...common },
+      overscrollBehaviorInline: { c: "contain", ...common },
+      overscrollBehaviorBlock: { c: "contain", ...common },
+      overscrollBehaviorX: { c: "contain", ...common },
+      overscrollBehaviorY: { c: "contain", ...common },
+      padding: { s: "10px", m: "10px 20px 15px", ...common },
+      paddingTop: { s: "10px", ...common },
+      paddingBottom: { s: "10px", ...common },
+      paddingVertical: { s: "10px", ...common },
+      paddingLeft: { s: "10px", ...common },
+      paddingRight: { s: "10px", ...common },
+      paddingHorizontal: { s: "10px", ...common },
+      transformRotate: { s: "30deg", ...common },
+      transformRotateX: { s: "30deg", ...common },
+      transformRotateY: { s: "30deg", ...common },
+      transformRotateZ: { s: "30deg", ...common },
+      transformScale: { s: "1.2", m: "1.1, 1.2", ...common },
+      transformScaleX: { s: "1.2", ...common },
+      transformScaleY: { s: "1.2", ...common },
+      transformScaleZ: { s: "1.2", ...common },
+      transformSkew: { s: "10px", m: "10px, 20px", ...common },
+      transformSkewX: { s: "10px", ...common },
+      transformSkewY: { s: "10px", ...common },
+      transformTranslate: { s: "10px", m: "12px, 50%", ...common },
+      transformTranslateX: { s: "10px", ...common },
+      transformTranslateY: { s: "10px", ...common },
+      transformTranslateZ: { s: "10px", ...common },
+    });
+  });
 
   test("unit values", () => {
     const values: CreatorFn<RawValues> = ({ defaults }) => {
@@ -304,7 +324,7 @@ describe("Config", () => {
       };
     };
 
-    const config = configFactory.create({ ...dto, values });
+    const config = configBasic.create({ ...dto, values });
 
     expect(config.getRulesetsValues()).toEqual({
       width: {

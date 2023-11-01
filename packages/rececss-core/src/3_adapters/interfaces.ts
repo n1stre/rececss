@@ -1,8 +1,11 @@
 import { IGenerateStylesheetAssets } from "../2_usecases/GenerateStylesheetAssets";
+import { IBuildRulesets } from "../2_usecases/BuildRulesets";
 
 export interface IInputOutput {
   getAssetsGenerationProps(): IGenerateStylesheetAssets.Props;
-  getAssetsGenerationInput(): IGenerateStylesheetAssets.DTO;
+  getRulesetsBuildProps(): IBuildRulesets.Props;
+  getRulesetsValues(): IBuildRulesets.DTO["values"];
+  getMediaQueries: () => Record<string, string>;
   outputAssets(assets: { name: string; contents: string }[]): Promise<void>;
 }
 

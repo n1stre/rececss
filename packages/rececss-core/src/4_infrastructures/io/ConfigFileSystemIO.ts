@@ -1,62 +1,47 @@
 import path from "path";
 import { IInputOutput } from "../../3_adapters/interfaces";
-import RulesetsFactory from "../../3_adapters/RulesetsFactory";
-import { IConfig } from "../interfaces";
-import Config from "../config";
+import defaultConfig, { Config, IConfig } from "../config";
 
 type File = { path: string; contents: string };
 type WriteFilesFn = (files: File[]) => Promise<void>;
 
 export default class ConfigFileSystemIO implements IInputOutput {
   private constructor(
-    private config: IConfig.Instance,
+    private config: Config,
     private writeFiles: WriteFilesFn,
   ) {}
 
   static create(configDto: IConfig.DTO, writeFiles: WriteFilesFn) {
-    const config = Config.create(configDto);
-    return new ConfigFileSystemIO(config, writeFiles);
+    return new ConfigFileSystemIO(defaultConfig.create(configDto), writeFiles);
   }
 
-  getAssetsGenerationInput() {
+  getMediaQueries() {
+    return this.config.getMedia();
+  }
+
+  getRulesetsValues() {
+    return this.config.getRulesetsValues();
+  }
+
+  getRulesetsBuildProps() {
     return {
-      rulesets: this.getRulesets(),
-      media: this.config.getMedia(),
-      splitByMedia: this.config.shouldSplitOutputByMedia(),
-    };
-  }
-
-  getRulesets() {
-    const factoryDTO = this.getRulesetsFactoryInput();
-    const rulesetsFactory = RulesetsFactory.create(factoryDTO);
-    return rulesetsFactory.createAll(this.config.getRulesetsValues());
-  }
-
-  getRulesetsFactoryInput() {
-    return {
-      classnamesMap: this.config.getClassnames(),
+      classnamesMap: this.config.getRulesetsClassnames(),
+      declarationsMap: this.config.getRulesetsDeclarations(),
       variantsMap: this.config.getRulesetsVariants(),
-    };
-  }
-
-  getStylesheetProps() {
-    return {
-      filename: this.config.getOutputFilename(),
-      extension: this.config.getOutputExtension(),
-    };
-  }
-
-  getRulesetProps() {
-    return {
-      prefixSep: this.config.getMediaSeparator(),
-      suffixSep: this.config.getVariantSeparator(),
     };
   }
 
   getAssetsGenerationProps() {
     return {
-      rulesetProps: this.getRulesetProps(),
-      stylesheetProps: this.getStylesheetProps(),
+      splitByMedia: this.config.shouldSplitOutputByMedia(),
+      rulesetProps: {
+        prefixSep: this.config.getMediaSeparator(),
+        suffixSep: this.config.getVariantSeparator(),
+      },
+      stylesheetProps: {
+        filename: this.config.getOutputFilename(),
+        extension: this.config.getOutputExtension(),
+      },
     };
   }
 

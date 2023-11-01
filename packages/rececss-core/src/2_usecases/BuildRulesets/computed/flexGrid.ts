@@ -1,9 +1,6 @@
-import { RulesetsBuilder, ValuesMap } from "../RulesetsFactory.interface";
+import { ComputedRulesetCreator } from "../BuildRulesets.interface";
 
-export default function createFlexGridRulesets(
-  values: ValuesMap,
-  builder: RulesetsBuilder,
-) {
+const createFlexGridRulesets: ComputedRulesetCreator = (values, builder) => {
   if (!values.flexGrid) return;
 
   const { cols, gutter = "20px", gutters } = values.flexGrid;
@@ -22,7 +19,7 @@ export default function createFlexGridRulesets(
     createCol(col, width);
   }
 
-  function createRow(classname: string, gutter: string) {
+  function createRow(classname: string | undefined, gutter: string) {
     const spacing = getSpacing(gutter);
 
     builder.addRulesetFromDTO({
@@ -46,10 +43,12 @@ export default function createFlexGridRulesets(
       declarations: builder.getDeclaration("flexCol", width + "%"),
     });
   }
-}
+};
 
 function getSpacing(gutter: string) {
   const gutterValue = parseFloat(gutter);
   const spacingValue = gutterValue / 2;
   return gutter.replace(String(gutterValue), String(spacingValue));
 }
+
+export default createFlexGridRulesets;

@@ -1,52 +1,36 @@
-import RB from "../RulesetsBuilder";
+// DTO<KeywordsMap, ClassnamesMap, DeclarationsMap, VariantsMap>
 
-export type CompoundRulesetCreator = (
-  values: ValuesMap,
-  builder: RulesetsBuilder,
-) => void;
-
-export type DTO = {
-  classnamesMap: Partial<ClassnamesMap>;
+export interface DTO {
+  classnamesMap: ClassnamesMap;
+  declarationsMap: DeclarationsMap;
   variantsMap: VariantsMap;
-};
+}
 
-export type RulesetsBuilder = RB<
-  Record<keyof CSSProperties, string>,
-  ClassnamesMap,
-  DeclarationsMap,
-  VariantsMap
+export type Variants = Record<string, string>;
+export type Placeholders = Array<string | undefined>;
+
+export type ClassnamesMap = Partial<
+  CSSProperties & {
+    flexRow: string;
+    flexCol: string;
+    flexRowGuttered: string;
+  }
 >;
 
-export type ClassnamesMap = CSSProperties & {
-  flexRow: string;
-  flexCol: string;
-  flexRowGuttered: string;
-};
-
-export type DeclarationsMap = CSSProperties & {
-  flexRow: string;
-  flexCol: string;
-  flexRowChild: string;
-  fontSizeWithLineHeight: string;
-};
+export type DeclarationsMap = Partial<
+  CSSProperties & {
+    flexRow: string;
+    flexCol: string;
+    flexRowChild: string;
+    fontSizeWithLineHeight: string;
+  }
+>;
 
 export type VariantsMap = Partial<
   CSSProperties<Record<string, string>> & {
     flexGrid: Record<string, string>;
   }
 >;
-
-export type ValuesMap = Partial<
-  CSSProperties<Record<string, string>> & CustomValuesMap
->;
-
-export type CustomValuesMap = {
-  flexGrid: {
-    cols: number;
-    gutter?: string;
-    gutters?: Record<string, string>;
-  };
-};
 
 export type CSSProperties<T = string> = CustomCSSProperties<T> &
   DefaultCSSProperties<T>;

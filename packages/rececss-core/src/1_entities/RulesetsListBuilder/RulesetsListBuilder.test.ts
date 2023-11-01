@@ -1,4 +1,4 @@
-import RulesetsBuilder from "./index";
+import RulesetsListBuilder from "./index";
 // import { DTO } from "./RulesetsBuilder.interface";
 
 const basic = {
@@ -27,9 +27,9 @@ const basic = {
   },
 };
 
-describe("RulesetsBuilder", () => {
+describe("RulesetsListBuilder", () => {
   it("should add rulesets from keyword", () => {
-    const builder = RulesetsBuilder.create(basic);
+    const builder = RulesetsListBuilder.create(basic);
 
     builder.addRulesetFromKeyword("width", ["20", "20px"]);
     builder.addRulesetFromKeyword("display", ["b", "block"]);
@@ -59,14 +59,14 @@ describe("RulesetsBuilder", () => {
   });
 
   it("should retrieve proper variant", () => {
-    const builder = RulesetsBuilder.create(basic);
+    const builder = RulesetsListBuilder.create(basic);
 
     expect(builder.getVariants("width")).toEqual(undefined);
     expect(builder.getVariants("color")).toEqual({ h: "&:hover" });
   });
 
   it("should not interpolate empty declaration placeholders", () => {
-    const builder = RulesetsBuilder.create(basic);
+    const builder = RulesetsListBuilder.create(basic);
 
     builder.addRulesetFromKeyword("width", ["20", "20px"]);
     builder.addRulesetFromKeyword("width", ["u", ""]);
@@ -77,7 +77,7 @@ describe("RulesetsBuilder", () => {
   });
 
   it("should add ruleset from dto", () => {
-    const builder = RulesetsBuilder.create(basic);
+    const builder = RulesetsListBuilder.create(basic);
 
     builder.addRulesetFromDTO({
       classname: "w_2",

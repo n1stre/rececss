@@ -1,5 +1,1 @@
-export {
-  defaultValues,
-  defaultVariants,
-  defaultAssociations,
-} from "./4_infrastructures/config";
+export type { IConfig } from "./4_infrastructures/config";

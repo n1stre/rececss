@@ -1,9 +1,13 @@
-import { IRulesetsFactory } from "../../3_adapters/RulesetsFactory";
+import { IBuildRulesets } from "../../2_usecases/BuildRulesets";
 
 export interface Props {
-  defaultValues?: RawValues;
-  defaultVariants?: Variants;
-  defaultAssociations?: Associations;
+  defaults: {
+    values?: RawValues;
+    variants?: Variants;
+    associations?: Associations;
+    classnames?: Classnames;
+    declarations?: Declarations;
+  };
 }
 
 export type CreatorFn<
@@ -22,57 +26,41 @@ export interface DTO {
       blocklist?: Array<string | RegExp>;
     };
   };
-  sep?: {
+  separator?: {
     media?: string;
     variant?: string;
   };
   media?: Record<string, string>;
-  classes?: Classnames;
+  classnames?: Classnames;
   values: CreatorFn<RawValues> | RawValues;
   variants?: CreatorFn<Variants> | Variants;
   associations?: CreatorFn<Associations> | Associations;
-}
-
-export interface Instance {
-  getRulesetsValues: () => Values;
-  getMedia: () => Record<string, string>;
-  getOutputPath: () => string;
-  getOutputFilename: () => string | undefined;
-  getOutputExtension: () => string | undefined;
-  getClassnames: () => Classnames;
-  getRulesetsVariants: () => Variants;
-  getMediaSeparator: () => string | undefined;
-  getVariantSeparator: () => string | undefined;
-  getPurgeContent: () => string[];
-  getPurgeSafelist: () => Array<string | RegExp>;
-  getPurgeBlocklist: () => Array<string | RegExp>;
-  shouldSplitOutputByMedia: () => boolean;
 }
 
 type ValueOf<T> = T[keyof T];
 
 export type UnitRange = [number, number, number];
 export type UnitValue = number | UnitRange;
-export type RuleUnits = Partial<Record<RuleUnit, UnitValue[]>>;
 
+export type RuleUnits = Partial<Record<RuleUnit, UnitValue[]>>;
+export type RuleName = keyof IBuildRulesets.ValuesMap;
 export type RuleValue = string | boolean | UnitValue[] | Record<string, string>;
+
 export type BasicRuleValues = Record<string, RuleValue> & RuleUnits;
-export type CustomRuleValues = ValueOf<IRulesetsFactory.CustomValuesMap>;
+export type CustomRuleValues = ValueOf<IBuildRulesets.CustomValuesMap>;
 
 export type RawValues = Partial<
-  Record<keyof IRulesetsFactory.ValuesMap, BasicRuleValues | CustomRuleValues>
+  Record<RuleName, BasicRuleValues | CustomRuleValues>
 >;
 
-export type Values = IRulesetsFactory.ValuesMap;
-export type Variants = IRulesetsFactory.VariantsMap;
-export type Classnames = Partial<IRulesetsFactory.ClassnamesMap>;
-
-export type Associations = Partial<
-  Record<keyof IRulesetsFactory.ValuesMap, Association>
->;
+export type Values = IBuildRulesets.ValuesMap;
+export type Variants = IBuildRulesets.VariantsMap;
+export type Classnames = IBuildRulesets.ClassnamesMap;
+export type Declarations = IBuildRulesets.DeclarationsMap;
+export type Associations = Partial<Record<RuleName, Association>>;
 
 export type Association = {
-  with: Array<keyof IRulesetsFactory.ValuesMap>;
+  with: Array<RuleName>;
   values?: (v: Record<string, string>) => Record<string, string>;
   variants?: (v: Record<string, string>) => Record<string, string>;
 };

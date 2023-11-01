@@ -11,8 +11,8 @@ export default class GenerateStylesheetAssets {
     return new GenerateStylesheetAssets(props);
   }
 
-  async exec(dto: DTO) {
-    const { Stylesheet, Ruleset } = this;
+  exec(dto: DTO) {
+    const { Stylesheet, Ruleset, props } = this;
     const baseRulesets = dto.rulesets.map((rs) => Ruleset.create(rs));
     const rulesets = baseRulesets.map((rs) => rs.toString());
     const stylesheet = Stylesheet.create({ rulesets });
@@ -26,7 +26,7 @@ export default class GenerateStylesheetAssets {
       });
     }
 
-    if (dto.splitByMedia) {
+    if (props.splitByMedia) {
       return stylesheets.map((s) => ({
         name: s.getName(),
         contents: s.toString(),

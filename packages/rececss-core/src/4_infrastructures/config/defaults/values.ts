@@ -1,34 +1,7 @@
-import {
-  RawValues,
-  Variants,
-  Associations,
-  RuleUnit,
-} from "./Config.interfaces";
-import { Sizing, Pallete } from "../utils";
+import { Sizing, Pallete } from "../../utils";
+import { RawValues } from "../Config.interfaces";
 
-const VARIANTS = {
-  hover: { h: "&:hover" },
-  hoverTarget: { "@h": ".\\@:hover &:not(.\\@:hover .\\@ &)" },
-  focus: { f: "&:focus" },
-  focusTarget: { "@f": ".\\@:focus &" },
-  js: { js: "&.js" },
-  jsTarget: { "@js": ".\\@.js &:not(.\\@.js .\\@ &)" },
-  important: { "!": "&&" },
-};
-
-export const variants: Variants = {
-  border: {...VARIANTS.hover, ...VARIANTS.focus },
-  boxShadow: { ...VARIANTS.hover, ...VARIANTS.focus },
-  borderWidth: { ...VARIANTS.important },
-  color: { ...VARIANTS.hover, ...VARIANTS.focus },
-  backgroundColor: { ...VARIANTS.hover, ...VARIANTS.focus },
-  display: { ...VARIANTS.hoverTarget, ...VARIANTS.jsTarget },
-  opacity: { ...VARIANTS.hover, ...VARIANTS.hoverTarget, ...VARIANTS.jsTarget },
-  textDecoration: { ...VARIANTS.hover },
-  transform: { ...VARIANTS.hover, ...VARIANTS.hoverTarget, ...VARIANTS.jsTarget },
-};
-
-export const values: RawValues = {
+const values: RawValues = {
   width: {
     ...Sizing.EightPx.pxToRem(),
     ...Sizing.Fractions.decimalToPct(),
@@ -70,7 +43,7 @@ export const values: RawValues = {
     ...Sizing.EightPx.pxToRem(),
     $px: [
       [-10, 10, 1],
-      [-100, 100, 5]
+      [-100, 100, 5],
     ],
   },
   flex: {
@@ -647,11 +620,11 @@ export const values: RawValues = {
   },
   gridTemplateColumns: {
     n: "none",
-    mica: "min-content auto"
+    mica: "min-content auto",
   },
   gridTemplateRows: {
     n: "none",
-    mica: "min-content auto"
+    mica: "min-content auto",
   },
   gridTemplateAreas: {
     n: "none",
@@ -958,7 +931,7 @@ export const values: RawValues = {
     se: "step-end",
   },
   userSelect: {
-    n: "none"
+    n: "none",
   },
   visibility: {
     v: "visible",
@@ -984,96 +957,4 @@ export const values: RawValues = {
   },
 };
 
-export const units: Record<RuleUnit, string> = {
-  $cm: "cm",
-  $mm: "mm",
-  $in: "in",
-  $pc: "pc",
-  $pt: "pt",
-  $px: "px",
-  $em: "em",
-  $ex: "ex",
-  $ch: "ch",
-  $rem: "rem",
-  $vw: "vw",
-  $vh: "vh",
-  $vmin: "vmin",
-  $vmax: "vmax",
-  $percent: "%",
-  $pct: "%",
-  $number: "",
-  $num: "",
-  $deg: "deg",
-  $grad: "grad",
-  $rad: "rad",
-  $turn: "turn",
-};
-
-//prettier-ignore
-export const rulesAssociations: Associations = {
-  width: {
-    with: ["maxWidth", "minWidth"],
-  },
-  height: {
-    with: ["maxHeight", "minHeight"],
-  },
-  border: {
-    with: ["borderTop", "borderBottom", "borderLeft", "borderRight"],
-  },
-  borderColor: {
-    with: ["borderTopColor", "borderBottomColor", "borderLeftColor", "borderRightColor"],
-  },
-  borderRadius: {
-    with: ["borderTopLeftRadius", "borderTopRightRadius", "borderBottomLeftRadius", "borderBottomRightRadius"],
-  },
-  borderStyle: {
-    with: ["borderTopStyle", "borderBottomStyle", "borderLeftStyle", "borderRightStyle"]
-  },
-  borderWidth: {
-    with: ["borderTopWidth", "borderBottomWidth", "borderLeftWidth", "borderRightWidth"]
-  },
-  inset: {
-    with: ["top", "bottom", "left", "right"],
-    values: singleValues
-  },
-  margin: {
-    with: ["marginTop", "marginBottom", "marginVertical", "marginLeft", "marginRight", "marginHorizontal"],
-    values: singleValues
-  },
-  overflow: {
-    with: ["overflowX", "overflowY", "overflowInline", "overflowBlock"]
-  },
-  overscrollBehavior: {
-    with: ["overscrollBehaviorInline", "overscrollBehaviorBlock", "overscrollBehaviorX", "overscrollBehaviorY"],
-    values: singleValues
-  },
-  padding: {
-    with: ["paddingTop", "paddingBottom", "paddingVertical", "paddingLeft", "paddingRight", "paddingHorizontal"],
-    values: singleValues
-  },
-  transform: {
-    with: ["transformRotate", "transformScale", "transformSkew", "transformTranslate"],
-    values: () => ({})
-  },
-  transformRotate: {
-    with: ["transformRotateX", "transformRotateY", "transformRotateZ",],
-  },
-  transformScale: {
-    with: ["transformScaleX", "transformScaleY", "transformScaleZ",],
-    values: singleValues
-  },
-  transformSkew: {
-    with: ["transformSkewX", "transformSkewY",],
-    values: singleValues
-  },
-  transformTranslate: {
-    with: ["transformTranslateX", "transformTranslateY", "transformTranslateZ",],
-    values: singleValues
-  }
-};
-
-function singleValues(values: Record<string, string>) {
-  const filterSingleValue = ([_, v]: string[]) => v.split(" ").length === 1;
-  const filteredEntries = Object.entries(values).filter(filterSingleValue);
-  return Object.fromEntries(filteredEntries);
-}
+export default values;

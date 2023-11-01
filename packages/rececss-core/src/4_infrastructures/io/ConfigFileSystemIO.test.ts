@@ -15,7 +15,7 @@ const configDto = {
     md: "only screen and (min-width: 768px)",
     lg: "only screen and (min-width: 1024px)",
   },
-  sep: {
+  separator: {
     media: ":",
     variant: ":",
   },
@@ -23,13 +23,10 @@ const configDto = {
 };
 
 describe("ConfigFileSystemIO", () => {
-  it("should return assets generation input", () => {
+  it("should return media queries", () => {
     const io = IO.create(configDto, writeFiles);
-    const input = io.getAssetsGenerationInput();
-    expect.assertions(3);
-    expect(input.rulesets.length).not.toBe(0);
-    expect(input.splitByMedia).toBe(false);
-    expect(input.media).toEqual({
+    const mq = io.getMediaQueries();
+    expect(mq).toEqual({
       md: "only screen and (min-width: 768px)",
       lg: "only screen and (min-width: 1024px)",
     });
@@ -39,6 +36,7 @@ describe("ConfigFileSystemIO", () => {
     const io = IO.create(configDto, writeFiles);
     const input = io.getAssetsGenerationProps();
     expect(input).toEqual({
+      splitByMedia: false,
       stylesheetProps: { filename: "rececss", extension: "css" },
       rulesetProps: { prefixSep: ":", suffixSep: ":" },
     });

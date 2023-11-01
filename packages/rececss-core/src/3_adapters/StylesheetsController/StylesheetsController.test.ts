@@ -13,7 +13,7 @@ describe("StylesheetsController", () => {
 
     expect.assertions(4);
 
-    expect(ioMock.getAssetsGenerationInput).toBeCalledTimes(1);
+    expect(ioMock.getMediaQueries).toBeCalledTimes(1);
     expect(ioMock.getAssetsGenerationProps).toBeCalledTimes(1);
     expect(cssProcessor.removeUnused).toBeCalledTimes(1);
     expect(ioMock.outputAssets).toBeCalledTimes(1);

@@ -1,11 +1,14 @@
-import * as IConfig from "./Config.interfaces";
-import * as defaults from "./Config.defaults";
 import { Units, DataTypes } from "../utils";
+import * as IConfig from "./Config.interfaces";
+import unitsMap from "./defaults/units";
 
-export default class Config implements IConfig.Instance {
-  private constructor(private dto: IConfig.DTO, private props: IConfig.Props) {}
+const units = Units.create({ unitsMap });
 
-  private Units = Units.create({ unitsMap: defaults.units });
+export default class Config {
+  private constructor(
+    private dto: IConfig.DTO,
+    private props: IConfig.Props,
+  ) {}
 
   static createFactory(props: IConfig.Props) {
     const create = (dto: IConfig.DTO) => Config.create(dto, props);
@@ -33,15 +36,11 @@ export default class Config implements IConfig.Instance {
   }
 
   getMediaSeparator() {
-    return this.dto.sep?.media;
+    return this.dto.separator?.media;
   }
 
   getVariantSeparator() {
-    return this.dto.sep?.variant;
-  }
-
-  getClassnames() {
-    return this.dto.classes || {};
+    return this.dto.separator?.variant;
   }
 
   shouldSplitOutputByMedia() {
@@ -58,6 +57,14 @@ export default class Config implements IConfig.Instance {
 
   getPurgeBlocklist() {
     return this.dto.output.purge?.blocklist || [];
+  }
+
+  getRulesetsClassnames() {
+    return Object.assign({}, this.defaults.classnames, this.dto.classnames);
+  }
+
+  getRulesetsDeclarations() {
+    return this.defaults.declarations || {};
   }
 
   getRulesetsVariants() {
@@ -111,29 +118,28 @@ export default class Config implements IConfig.Instance {
   private parseRuleValue(rule?: any): Record<string, string> {
     if (!rule) return {};
     return Object.keys(rule).reduce((acc, key) => {
-      let add: Record<string, string> = {};
-      if (key[0] !== "$") add[key] = rule[key];
-      else if (this.Units.isUnit(key)) add = this.Units.parse(rule[key], key);
-      return { ...acc, ...add };
+      if (key[0] !== "$") return { ...acc, [key]: rule[key] };
+      if (units.isUnit(key)) return { ...acc, ...units.parse(rule[key], key) };
+      return acc;
     }, {});
   }
 
   private get values() {
-    const defaults = this.props.defaultValues || {};
+    const defaults = this.defaults.values || {};
     return DataTypes.isFunction(this.dto.values)
       ? this.dto.values({ defaults })
       : DataTypes.deepMerge(defaults, this.dto.values || {});
   }
 
   private get variants() {
-    const defaults = this.props.defaultVariants || {};
+    const defaults = this.defaults.variants || {};
     return DataTypes.isFunction(this.dto.variants)
       ? this.dto.variants({ defaults })
       : DataTypes.deepMerge(defaults, this.dto.variants || {});
   }
 
   private get associations() {
-    const defaults = this.props.defaultAssociations || {};
+    const defaults = this.defaults.associations || {};
     return DataTypes.isFunction(this.dto.associations)
       ? this.dto.associations({ defaults })
       : DataTypes.deepMerge(defaults, this.dto.associations || {});
@@ -145,5 +151,9 @@ export default class Config implements IConfig.Instance {
 
   private get commonVariants() {
     return this.variants.all || {};
+  }
+
+  private get defaults() {
+    return this.props.defaults;
   }
 }

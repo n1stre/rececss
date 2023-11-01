@@ -1,13 +1,12 @@
-import { RulesetsBuilder, ValuesMap } from "../RulesetsFactory.interface";
+import { ComputedRulesetCreator } from "../BuildRulesets.interface";
 
-export default function createTransformRulesets(
-  values: ValuesMap,
-  builder: RulesetsBuilder,
-) {
+const createTransformRulesets: ComputedRulesetCreator = (values, builder) => {
   for (let key in values.transform) {
     builder.addRulesetFromKeyword("transform", [key, values.transform[key]]);
   }
 
   builder.addRulesetFromKeyword("transformCompound");
   builder.addRulesetFromKeyword("transformCompound3D");
-}
+};
+
+export default createTransformRulesets;

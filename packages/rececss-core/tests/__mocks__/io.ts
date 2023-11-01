@@ -2,8 +2,10 @@ import { IInputOutput } from "../../src/3_adapters/interfaces";
 
 const ioMock: IInputOutput = {
   getAssetsGenerationProps: jest.fn(() => ({})),
-  getAssetsGenerationInput: jest.fn(() => ({ rulesets: [], media: {} })),
+  getMediaQueries: jest.fn(() => ({})),
   outputAssets: jest.fn(),
+  getRulesetsBuildProps: jest.fn(),
+  getRulesetsValues: jest.fn(() => ({})),
 };
 
 export default ioMock;

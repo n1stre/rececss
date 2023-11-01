@@ -2,22 +2,19 @@ import Ruleset from "../../1_entities/Ruleset";
 import Stylesheet from "../../1_entities/Stylesheet";
 import GenerateStylesheetAssets from "./index";
 
+const rulesetProps = Ruleset.defaultProps;
+const stylesheetProps = Stylesheet.defaultProps;
 const rulesets = [
   { classname: "w_10%", declarations: "width: 10%;" },
   { classname: "fz_16", declarations: "font-size: 16px;" },
 ];
 
-const basicUsecase = GenerateStylesheetAssets.create({
-  rulesetProps: Ruleset.defaultProps,
-  stylesheetProps: Stylesheet.defaultProps,
-});
-
 describe("GenerateUtilityStylesheet usecase", () => {
-  it("should contain valid result", async () => {
+  it("should contain valid result", () => {
     const md = "only screen and (min-width: 768px)";
     const lg = "only screen and (min-width: 999px)";
-
-    const result = await basicUsecase.exec({
+    const props = { rulesetProps, stylesheetProps };
+    const result = GenerateStylesheetAssets.create(props).exec({
       media: { md, lg },
       rulesets,
     });
@@ -41,13 +38,12 @@ describe("GenerateUtilityStylesheet usecase", () => {
     expect(lgPart).toContain(`.lg\\:fz_16 { font-size: 16px; }\n`);
   });
 
-  it("should contain valid result splitted by media", async () => {
+  it("should contain valid result splitted by media", () => {
     const md = "only screen and (min-width: 768px)";
     const lg = "only screen and (min-width: 999px)";
-
-    const result = await basicUsecase.exec({
+    const props = { rulesetProps, stylesheetProps, splitByMedia: true };
+    const result = GenerateStylesheetAssets.create(props).exec({
       media: { md, lg },
-      splitByMedia: true,
       rulesets,
     });
 

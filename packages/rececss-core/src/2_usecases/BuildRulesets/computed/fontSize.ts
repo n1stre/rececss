@@ -1,9 +1,6 @@
-import { RulesetsBuilder, ValuesMap } from "../RulesetsFactory.interface";
+import { ComputedRulesetCreator } from "../BuildRulesets.interface";
 
-export default function createFontSizeRulesets(
-  values: ValuesMap,
-  builder: RulesetsBuilder,
-) {
+const createFontSizeRulesets: ComputedRulesetCreator = (values, builder) => {
   if (values.fontSize) {
     Object.entries(values.fontSize).forEach(([key, value]) => {
       const values = value.split("/");
@@ -16,4 +13,6 @@ export default function createFontSizeRulesets(
       });
     });
   }
-}
+};
+
+export default createFontSizeRulesets;

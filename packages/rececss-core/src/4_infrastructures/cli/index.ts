@@ -1,5 +1,5 @@
-import { resolve } from "node:path";
-import { cwd } from "node:process";
+import { resolve } from "path";
+import { cwd } from "process";
 import StylesheetsController from "../../3_adapters/StylesheetsController";
 import FileSystem from "../fs";
 import IO from "../io";

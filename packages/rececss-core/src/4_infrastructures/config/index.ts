@@ -1,13 +1,19 @@
 import Config from "./Config";
-import * as defaults from "./Config.defaults";
-export * as IConfig from "./Config.interfaces";
-
-export const defaultValues = defaults.values;
-export const defaultVariants = defaults.variants;
-export const defaultAssociations = defaults.rulesAssociations;
+import classnames from "./defaults/classnames";
+import declarations from "./defaults/declarations";
+import variants from "./defaults/variants";
+import associations from "./defaults/associations";
+import values from "./defaults/values";
 
 export default Config.createFactory({
-  defaultValues,
-  defaultVariants,
-  defaultAssociations,
+  defaults: {
+    values,
+    variants,
+    associations,
+    classnames,
+    declarations,
+  },
 });
+
+export { Config };
+export * as IConfig from "./Config.interfaces";

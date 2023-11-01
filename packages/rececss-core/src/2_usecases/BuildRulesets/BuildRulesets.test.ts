@@ -7,6 +7,8 @@ const toString = (rs: IRuleset.DTO[]) =>
 const basic: IBuildRulesets.Props = {
   variantsMap: {},
   classnamesMap: {
+    width: "w-$0",
+
     filter: "ftr_$0",
     filterCompound: "ftr~",
     filterBlur: "~bl_$0",
@@ -50,6 +52,8 @@ const basic: IBuildRulesets.Props = {
     transformPerspective: "~prs_$0",
   },
   declarationsMap: {
+    width: "width: $0;",
+
     filter: "filter: $0;",
     filterCompound:
       "filter: blur(var(--filterBlur)) brightness(var(--filterBrightness)) contrast(var(--filterContrast)) drop-shadow(var(--filterDropShadow)) grayscale(var(--filterGrayscale)) hue-rotate(var(--filterHueRotate)) invert(var(--filterInvert)) opacity(var(--filterOpacity)) saturate(var(--filterSaturate)) sepia(var(--filterSepia));",
@@ -122,13 +126,27 @@ const withVariants: IBuildRulesets.Props = {
 describe("BuildRulesets usecase", () => {
   it("should not crash if nothing is provided", () => {
     const build = BuildRulesets.create(basic);
-    const res = build.exec({ values: {} });
+    const res = build.exec({ values: {}, definitions: [] });
     expect(res).toEqual([]);
+  });
+
+  it("should build from values and definitions", () => {
+    const build = BuildRulesets.create(basic);
+    const res = build.exec({
+      values: { width: { "20": "20px" } },
+      definitions: [{ classname: "height-sm", declarations: "height: 12px;" }],
+    });
+
+    expect(toString(res)).toEqual([
+      ".w-20 { width: 20px; }",
+      ".height-sm { height: 12px; }",
+    ]);
   });
 
   it("should build font size rulesets", () => {
     const build = BuildRulesets.create(basic);
     const res = build.exec({
+      definitions: [],
       values: {
         fontSize: { "20": "20px", "2em": "2em", md: "16px/24px" },
       },
@@ -144,6 +162,7 @@ describe("BuildRulesets usecase", () => {
   it("should build flex grid rulesets", () => {
     const build = BuildRulesets.create(basic);
     const res = build.exec({
+      definitions: [],
       values: {
         flexGrid: { cols: 6 },
       },
@@ -164,6 +183,7 @@ describe("BuildRulesets usecase", () => {
   it("should build flex grid rulesets with gutters", () => {
     const build = BuildRulesets.create(basic);
     const res = build.exec({
+      definitions: [],
       values: {
         flexGrid: {
           cols: 12,
@@ -172,6 +192,7 @@ describe("BuildRulesets usecase", () => {
         },
       },
     });
+
     // prettier-ignore
     expect(toString(res)).toEqual([
       ".fxrow { display: flex; margin-left: -5px; margin-right: -5px; }",
@@ -200,6 +221,7 @@ describe("BuildRulesets usecase", () => {
     const build = BuildRulesets.create(basic);
 
     const res = build.exec({
+      definitions: [],
       values: {
         transform: {
           custom: "translate(120px, 50%)",
@@ -260,6 +282,7 @@ describe("BuildRulesets usecase", () => {
     const build = BuildRulesets.create(basic);
 
     const res = build.exec({
+      definitions: [],
       values: {
         filterCompound: {},
         filter: {

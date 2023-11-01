@@ -16,6 +16,7 @@ export default class StylesheetsController {
     const rulesetsProps = this.io.getRulesetsBuildProps();
     const rulesets = BuildRulesets.create(rulesetsProps).exec({
       values: this.io.getRulesetsValues(),
+      definitions: this.io.getRulesetsDefinitions(),
     });
 
     const assetsProps = this.io.getAssetsGenerationProps();

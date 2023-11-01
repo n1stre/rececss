@@ -1,3 +1,4 @@
+import { IRuleset } from "src/1_entities/Ruleset";
 import RulesetsListBuilder, {
   IRulesetsListBuilder,
 } from "../../1_entities/RulesetsListBuilder";
@@ -6,6 +7,7 @@ export interface Props extends IRulesetsListBuilder.DTO {}
 
 export interface DTO {
   values: ValuesMap;
+  definitions: IRuleset.DTO[];
 }
 
 export type ClassnamesMap = IRulesetsListBuilder.ClassnamesMap;

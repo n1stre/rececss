@@ -15,4 +15,10 @@ module.exports = {
     variant: ":",
   },
   values: {},
+  definitions: [
+    {
+      classname: "width-20px",
+      declarations: "width: 20px;",
+    },
+  ],
 };

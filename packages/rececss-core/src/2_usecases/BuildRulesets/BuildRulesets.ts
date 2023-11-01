@@ -36,6 +36,10 @@ export default class BuildRulesets {
       );
     });
 
+    dto.definitions.forEach((dto) => {
+      this.builder.addRulesetFromDTO(dto);
+    });
+
     return this.builder.getResult();
   }
 }

@@ -84,6 +84,16 @@ describe("Config", () => {
     expect(config.getVariantSeparator()).toBe(":");
   });
 
+  test("definitions getter", () => {
+    const config = configBasic.create(dto);
+    expect(config.getRulesetDefinitions()).toEqual([
+      {
+        classname: "width-20px",
+        declarations: "width: 20px;",
+      },
+    ]);
+  });
+
   test("classnames getter", () => {
     const classesConfig = configBasic.create({
       output: { path: "" },

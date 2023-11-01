@@ -115,6 +115,10 @@ export default class Config {
     return result;
   }
 
+  getRulesetDefinitions() {
+    return this.dto.definitions || [];
+  }
+
   private parseRuleValue(rule?: any): Record<string, string> {
     if (!rule) return {};
     return Object.keys(rule).reduce((acc, key) => {

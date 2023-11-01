@@ -6,6 +6,7 @@ const ioMock: IInputOutput = {
   outputAssets: jest.fn(),
   getRulesetsBuildProps: jest.fn(),
   getRulesetsValues: jest.fn(() => ({})),
+  getRulesetsDefinitions: jest.fn(() => []),
 };
 
 export default ioMock;

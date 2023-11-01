@@ -23,6 +23,10 @@ export default class ConfigFileSystemIO implements IInputOutput {
     return this.config.getRulesetsValues();
   }
 
+  getRulesetsDefinitions() {
+    return this.config.getRulesetDefinitions();
+  }
+
   getRulesetsBuildProps() {
     return {
       classnamesMap: this.config.getRulesetsClassnames(),

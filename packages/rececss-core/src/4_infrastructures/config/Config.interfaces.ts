@@ -1,3 +1,4 @@
+import { IRuleset } from "../../1_entities/Ruleset";
 import { IBuildRulesets } from "../../2_usecases/BuildRulesets";
 
 export interface Props {
@@ -35,6 +36,7 @@ export interface DTO {
   values: CreatorFn<RawValues> | RawValues;
   variants?: CreatorFn<Variants> | Variants;
   associations?: CreatorFn<Associations> | Associations;
+  definitions?: IRuleset.DTO[];
 }
 
 type ValueOf<T> = T[keyof T];
